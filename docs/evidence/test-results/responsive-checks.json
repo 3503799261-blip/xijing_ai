@@ -1,0 +1,54 @@
+[
+  {
+    "panel": "overview",
+    "active": "overview",
+    "agentColumns": "minmax(0px, 1fr)",
+    "height": 844,
+    "overflow": false,
+    "visiblePanels": 1,
+    "width": 390
+  },
+  {
+    "panel": "qa",
+    "active": "qa",
+    "agentColumns": "minmax(0px, 1fr)",
+    "height": 844,
+    "overflow": false,
+    "visiblePanels": 1,
+    "width": 390
+  },
+  {
+    "panel": "agents",
+    "active": "agents",
+    "agentColumns": "344.688px",
+    "height": 844,
+    "overflow": false,
+    "visiblePanels": 1,
+    "width": 390
+  },
+  {
+    "panel": "create",
+    "active": "create",
+    "agentColumns": "minmax(0px, 1fr)",
+    "height": 844,
+    "overflow": false,
+    "visiblePanels": 1,
+    "width": 390
+  },
+  {
+    "panel": "model",
+    "active": "model",
+    "agentColumns": "minmax(0px, 1fr)",
+    "height": 844,
+    "overflow": false,
+    "visiblePanels": 1,
+    "width": 390
+  },
+  {
+    "panel": "agents",
+    "columns": "337.219px 337.229px",
+    "height": 1024,
+    "overflow": false,
+    "width": 768
+  }
+]

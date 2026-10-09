@@ -1,0 +1,742 @@
+{
+  "recordedAt": "2026-10-09T14:19:31.832Z",
+  "environment": {
+    "browser": "Codex In-app Browser (IAB)",
+    "viewport": {
+      "height": 1080,
+      "width": 1920
+    },
+    "transport": "HTTP 127.0.0.1:8877"
+  },
+  "method": "Actual CUA browser UI actions and read-only DOM observations. Raw attempts retained including failed assertions.",
+  "results": [
+    {
+      "name": "问答空输入校验",
+      "passed": true,
+      "details": "请先填写京剧问题，不能只输入空格。"
+    },
+    {
+      "name": "推荐问题自动填入",
+      "passed": true,
+      "details": "京剧中的生旦净丑有什么区别？"
+    },
+    {
+      "name": "真实未接入反馈，无假回答",
+      "passed": true,
+      "details": {
+        "assistantMessages": 0,
+        "citations": "暂无知识引用接入私有知识库后，此处将展示真实资料名称、引用位置及依据片段。",
+        "loading": false,
+        "notice": "京剧AI知识问答正在建设中，将在Phase 2接入私有知识库。",
+        "userMessages": 1
+      }
+    },
+    {
+      "name": "问答仅空白被拦截",
+      "passed": true,
+      "details": "请先填写京剧问题，不能只输入空格。"
+    },
+    {
+      "name": "问答600字输入上限",
+      "passed": false,
+      "details": {
+        "length": 601,
+        "maxLength": 600
+      }
+    },
+    {
+      "name": "推荐问题键盘Enter",
+      "passed": true
+    },
+    {
+      "name": "面板浏览器后退",
+      "passed": true
+    },
+    {
+      "name": "超长问答提交校验（自动化fill可越过maxlength）",
+      "passed": true,
+      "details": {
+        "error": "京剧问题最多600字，请缩短后重试。",
+        "invalid": "true",
+        "userCount": 1
+      }
+    },
+    {
+      "name": "Agent键盘展开",
+      "passed": true
+    },
+    {
+      "name": "Agent键盘收起",
+      "passed": true
+    },
+    {
+      "name": "Agent无虚假执行进度",
+      "passed": true,
+      "details": {
+        "progress": "协作服务未接入任务尚未开始进度与执行摘要将在真实任务启动后展示。",
+        "states": [
+          "pending",
+          "pending",
+          "pending",
+          "pending"
+        ]
+      }
+    },
+    {
+      "name": "执行摘要待接入提示",
+      "passed": true,
+      "details": "Agent执行服务尚未接入，当前没有真实执行摘要。"
+    },
+    {
+      "name": "创作空白校验",
+      "passed": true
+    },
+    {
+      "name": "用户草稿与安全文本渲染",
+      "passed": true,
+      "details": {
+        "images": 0,
+        "status": "已在当前页面整理需求草稿。此内容由你输入，未进行AI设计，刷新页面后不会保留。",
+        "text": "用户需求以武生为灵感，设计原创角色。\n<img src=x onerror=alert(1)>选择的风格国风幻想"
+      }
+    },
+    {
+      "name": "清空本页面草稿",
+      "passed": true
+    },
+    {
+      "name": "刷新不持久保存创作草稿",
+      "passed": true
+    },
+    {
+      "name": "修复前摘要通知无遮挡",
+      "passed": false,
+      "details": {
+        "headerBottom": 82,
+        "noticeBottom": 39.73958206176758,
+        "noticeTop": -21.916667938232425
+      }
+    },
+    {
+      "name": "首页长导航单行修复",
+      "passed": true,
+      "details": {
+        "height": 55.02083587646485,
+        "linkTop": [
+          18.15625,
+          20.15625,
+          20.15625,
+          20.15625,
+          20.15625,
+          20.15625,
+          20.15625,
+          20.15625
+        ],
+        "rules": [
+          ".home-page .nav-list { width: max-content; }"
+        ],
+        "width": 668.5416870117188
+      }
+    },
+    {
+      "name": "修复后摘要通知无遮挡",
+      "passed": false,
+      "details": {
+        "headerBottom": 82,
+        "noticeTop": 76.75,
+        "offset": "106px"
+      }
+    },
+    {
+      "name": "摘要通知滚动完成后无遮挡",
+      "passed": true,
+      "details": {
+        "headerBottom": 82,
+        "noticeTop": 106.08333587646484,
+        "scrollMargin": "106px"
+      }
+    },
+    {
+      "name": "图生3D禁用入口与真实空态",
+      "passed": true,
+      "details": {
+        "buttons": [
+          {
+            "disabled": true,
+            "text": "提交图生3D任务 · 待开放"
+          },
+          {
+            "disabled": true,
+            "text": "下载模型 · 暂不可用"
+          }
+        ],
+        "canvases": 0,
+        "images": 0,
+        "status": "图像上传、任务提交与模型查看将在Phase 4开放。"
+      }
+    },
+    {
+      "name": "回顶保留原习惯",
+      "passed": true,
+      "details": {
+        "active": "",
+        "scrollY": 0
+      }
+    },
+    {
+      "name": "桌面导航与图片 index.html",
+      "passed": true,
+      "details": {
+        "brokenImages": [],
+        "headings": [
+          "梨园风华",
+          "一桌二椅，演尽人间",
+          "选择你的梨园旅程",
+          "程式之中，自有天地",
+          "三出戏，看三重人生",
+          "先听一曲，再看一戏",
+          "传统不远，就在每一次观看"
+        ],
+        "nav": [
+          {
+            "current": "page",
+            "href": "index.html",
+            "text": "首页"
+          },
+          {
+            "current": null,
+            "href": "history.html",
+            "text": "发展历史"
+          },
+          {
+            "current": null,
+            "href": "roles.html",
+            "text": "行当介绍"
+          },
+          {
+            "current": null,
+            "href": "facial.html",
+            "text": "脸谱艺术"
+          },
+          {
+            "current": null,
+            "href": "music.html",
+            "text": "唱腔乐器"
+          },
+          {
+            "current": null,
+            "href": "video.html",
+            "text": "视频欣赏"
+          },
+          {
+            "current": null,
+            "href": "gallery.html",
+            "text": "艺术画廊"
+          },
+          {
+            "current": null,
+            "href": "about.html#ai-workshop",
+            "text": "AI戏韵工坊"
+          }
+        ],
+        "overflow": false,
+        "title": "梨园风华｜首页",
+        "url": "http://127.0.0.1:8877/index.html"
+      }
+    },
+    {
+      "name": "桌面导航与图片 history.html",
+      "passed": true,
+      "details": {
+        "brokenImages": [],
+        "headings": [
+          "京剧发展历史",
+          "多声腔汇成一脉",
+          "两百余年，四段华章",
+          "历史图片长廊",
+          "改变京剧的三个时刻",
+          "以一生功夫，拓一派天地",
+          "历史不是终点，而是新戏的序幕"
+        ],
+        "nav": [
+          {
+            "current": null,
+            "href": "index.html",
+            "text": "首页"
+          },
+          {
+            "current": "page",
+            "href": "history.html",
+            "text": "发展历史"
+          },
+          {
+            "current": null,
+            "href": "roles.html",
+            "text": "行当介绍"
+          },
+          {
+            "current": null,
+            "href": "facial.html",
+            "text": "脸谱艺术"
+          },
+          {
+            "current": null,
+            "href": "music.html",
+            "text": "唱腔乐器"
+          },
+          {
+            "current": null,
+            "href": "video.html",
+            "text": "视频欣赏"
+          },
+          {
+            "current": null,
+            "href": "gallery.html",
+            "text": "艺术画廊"
+          },
+          {
+            "current": null,
+            "href": "about.html#ai-workshop",
+            "text": "AI戏韵工坊"
+          }
+        ],
+        "overflow": false,
+        "title": "京剧发展历史｜梨园风华",
+        "url": "http://127.0.0.1:8877/history.html"
+      }
+    },
+    {
+      "name": "桌面导航与图片 roles.html",
+      "passed": true,
+      "details": {
+        "brokenImages": [],
+        "headings": [
+          "生旦净丑",
+          "四门行当，各有乾坤",
+          "生 · 正气风骨",
+          "旦 · 水袖芳华",
+          "净 · 花脸威仪",
+          "丑 · 诙谐机锋",
+          "一台戏，百样人"
+        ],
+        "nav": [
+          {
+            "current": null,
+            "href": "index.html",
+            "text": "首页"
+          },
+          {
+            "current": null,
+            "href": "history.html",
+            "text": "发展历史"
+          },
+          {
+            "current": "page",
+            "href": "roles.html",
+            "text": "行当介绍"
+          },
+          {
+            "current": null,
+            "href": "facial.html",
+            "text": "脸谱艺术"
+          },
+          {
+            "current": null,
+            "href": "music.html",
+            "text": "唱腔乐器"
+          },
+          {
+            "current": null,
+            "href": "video.html",
+            "text": "视频欣赏"
+          },
+          {
+            "current": null,
+            "href": "gallery.html",
+            "text": "艺术画廊"
+          },
+          {
+            "current": null,
+            "href": "about.html#ai-workshop",
+            "text": "AI戏韵工坊"
+          }
+        ],
+        "overflow": false,
+        "title": "行当介绍｜梨园风华",
+        "url": "http://127.0.0.1:8877/roles.html"
+      }
+    },
+    {
+      "name": "桌面导航与图片 facial.html",
+      "passed": true,
+      "details": {
+        "brokenImages": [],
+        "headings": [
+          "脸谱艺术",
+          "脸上有谱，心中有人",
+          "颜色会说话",
+          "经典脸谱图片墙",
+          "纹样不只是装饰",
+          "四步勾出人物精神",
+          "看见一张脸，读懂一个人"
+        ],
+        "nav": [
+          {
+            "current": null,
+            "href": "index.html",
+            "text": "首页"
+          },
+          {
+            "current": null,
+            "href": "history.html",
+            "text": "发展历史"
+          },
+          {
+            "current": null,
+            "href": "roles.html",
+            "text": "行当介绍"
+          },
+          {
+            "current": "page",
+            "href": "facial.html",
+            "text": "脸谱艺术"
+          },
+          {
+            "current": null,
+            "href": "music.html",
+            "text": "唱腔乐器"
+          },
+          {
+            "current": null,
+            "href": "video.html",
+            "text": "视频欣赏"
+          },
+          {
+            "current": null,
+            "href": "gallery.html",
+            "text": "艺术画廊"
+          },
+          {
+            "current": null,
+            "href": "about.html#ai-workshop",
+            "text": "AI戏韵工坊"
+          }
+        ],
+        "overflow": false,
+        "title": "脸谱艺术｜梨园风华",
+        "url": "http://127.0.0.1:8877/facial.html"
+      }
+    },
+    {
+      "name": "桌面导航与资源 music.html",
+      "passed": true,
+      "details": {
+        "title": "唱腔与乐器｜梨园风华",
+        "brokenImages": [],
+        "overflow": false,
+        "media": [
+          {
+            "controls": true,
+            "duration": 218.976,
+            "error": null,
+            "readyState": 1,
+            "tag": "AUDIO"
+          }
+        ]
+      }
+    },
+    {
+      "name": "桌面导航与资源 video.html",
+      "passed": true,
+      "details": {
+        "title": "视频欣赏｜梨园风华",
+        "brokenImages": [],
+        "overflow": false,
+        "media": [
+          {
+            "controls": true,
+            "duration": 168.066667,
+            "error": null,
+            "readyState": 4,
+            "tag": "VIDEO"
+          },
+          {
+            "controls": true,
+            "duration": 63.6,
+            "error": null,
+            "readyState": 4,
+            "tag": "VIDEO"
+          },
+          {
+            "controls": true,
+            "duration": 138.7,
+            "error": null,
+            "readyState": 4,
+            "tag": "VIDEO"
+          },
+          {
+            "controls": true,
+            "duration": 78.4,
+            "error": null,
+            "readyState": 4,
+            "tag": "VIDEO"
+          }
+        ]
+      }
+    },
+    {
+      "name": "桌面导航与资源 gallery.html",
+      "passed": true,
+      "details": {
+        "title": "艺术画廊｜梨园风华",
+        "brokenImages": [],
+        "overflow": false,
+        "media": []
+      }
+    },
+    {
+      "name": "桌面导航与资源 about.html",
+      "passed": true,
+      "details": {
+        "title": "AI戏韵工坊｜梨园风华",
+        "brokenImages": [],
+        "overflow": false,
+        "media": []
+      }
+    },
+    {
+      "name": "八页测试期间控制台无错误",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "手机面板 overview",
+      "passed": true,
+      "details": {
+        "active": "overview",
+        "agentColumns": "minmax(0px, 1fr)",
+        "height": 844,
+        "overflow": false,
+        "visiblePanels": 1,
+        "width": 390
+      }
+    },
+    {
+      "name": "手机面板 qa",
+      "passed": true,
+      "details": {
+        "active": "qa",
+        "agentColumns": "minmax(0px, 1fr)",
+        "height": 844,
+        "overflow": false,
+        "visiblePanels": 1,
+        "width": 390
+      }
+    },
+    {
+      "name": "手机面板 agents",
+      "passed": true,
+      "details": {
+        "active": "agents",
+        "agentColumns": "344.688px",
+        "height": 844,
+        "overflow": false,
+        "visiblePanels": 1,
+        "width": 390
+      }
+    },
+    {
+      "name": "手机面板 create",
+      "passed": true,
+      "details": {
+        "active": "create",
+        "agentColumns": "minmax(0px, 1fr)",
+        "height": 844,
+        "overflow": false,
+        "visiblePanels": 1,
+        "width": 390
+      }
+    },
+    {
+      "name": "手机面板 model",
+      "passed": true,
+      "details": {
+        "active": "model",
+        "agentColumns": "minmax(0px, 1fr)",
+        "height": 844,
+        "overflow": false,
+        "visiblePanels": 1,
+        "width": 390
+      }
+    },
+    {
+      "name": "平板768×1024双栏Agent",
+      "passed": true,
+      "details": {
+        "columns": "337.219px 337.229px",
+        "height": 1024,
+        "overflow": false,
+        "width": 768
+      }
+    },
+    {
+      "name": "1440×900 常见桌面布局",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "height": 900,
+        "overflow": false
+      }
+    },
+    {
+      "name": "总览问答卡片入口",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:8877/about.html#ai-workshop-qa"
+      }
+    },
+    {
+      "name": "总览角色创作卡片入口",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:8877/about.html#ai-workshop-create"
+      }
+    },
+    {
+      "name": "角色需求超过1200字提交校验",
+      "passed": true,
+      "details": {
+        "invalid": "true"
+      }
+    },
+    {
+      "name": "手机推荐问题与发送反馈",
+      "passed": true,
+      "details": {
+        "noticePresent": true,
+        "overflow": false
+      }
+    },
+    {
+      "name": "手机键盘展开Agent职责",
+      "passed": true,
+      "details": {
+        "method": "Enter on native summary"
+      }
+    },
+    {
+      "name": "原音乐页原生播放与暂停",
+      "passed": true,
+      "details": {
+        "play": {
+          "currentTime": 10.7441,
+          "error": null,
+          "paused": false
+        },
+        "pause": {
+          "currentTime": 10.770691,
+          "paused": true
+        }
+      }
+    },
+    {
+      "name": "原视频页首段实际播放与暂停",
+      "passed": true,
+      "details": {
+        "play": {
+          "error": null,
+          "paused": false,
+          "time": 12.666417
+        },
+        "pause": {
+          "paused": true,
+          "time": 12.746284
+        }
+      }
+    },
+    {
+      "name": "原行当页锚点与悬停翻转",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:8877/roles.html#sheng",
+        "computedTransform": "matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1)"
+      }
+    },
+    {
+      "name": "原画廊自动旋转与悬停暂停",
+      "passed": true,
+      "details": {
+        "initial": {
+          "name": "gallerySpin",
+          "state": "running",
+          "transform": "matrix3d(0.99939, 0, 0.0349162, 0, 0, 1, 0, 0, -0.0349162, 0, 0.99939, 0, -105, 0, 0, 1)"
+        },
+        "second": {
+          "state": "running",
+          "transform": "matrix3d(-0.838723, 0, 0.544558, 0, 0, 1, 0, 0, -0.544558, 0, -0.838723, 0, -105, 0, 0, 1)"
+        },
+        "hover": {
+          "state": "paused",
+          "transform": "matrix3d(-0.842283, 0, 0.539036, 0, 0, 1, 0, 0, -0.539036, 0, -0.842283, 0, -105, 0, 0, 1)"
+        }
+      }
+    },
+    {
+      "name": "原画廊分类锚点",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:8877/gallery.html#masks"
+      }
+    },
+    {
+      "name": "原首页手机导航与图片",
+      "passed": true,
+      "details": {
+        "images": [],
+        "links": [
+          {
+            "right": 59.1875,
+            "text": "首页"
+          },
+          {
+            "right": 128.4166717529297,
+            "text": "发展历史"
+          },
+          {
+            "right": 197.64584350585935,
+            "text": "行当介绍"
+          },
+          {
+            "right": 266.87501525878906,
+            "text": "脸谱艺术"
+          },
+          {
+            "right": 336.1041717529297,
+            "text": "唱腔乐器"
+          },
+          {
+            "right": 84.13542175292969,
+            "text": "视频欣赏"
+          },
+          {
+            "right": 153.36459350585938,
+            "text": "艺术画廊"
+          },
+          {
+            "right": 235.04167938232425,
+            "text": "AI戏韵工坊"
+          }
+        ],
+        "overflow": false,
+        "width": 390
+      }
+    },
+    {
+      "name": "手机从公共导航进入工坊",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:8877/about.html#ai-workshop"
+      }
+    }
+  ]
+}

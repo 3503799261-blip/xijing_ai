@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "scope": "Current explicitly supplied session only, from first Phase 1 user prompt to read snapshot",
+  "source": {
+    "selection": "One exact --session-log argument; no discovery or other log reads",
+    "snapshot_sha256": "dc12d2096f8069643c7338ac3597d2d50c633feb3430538dfbbda962925647a2",
+    "snapshot_bytes": 17854188,
+    "parsed_records": 1022,
+    "first_phase1_source_line": 12,
+    "last_complete_source_line": 1022,
+    "incomplete_final_line_omitted": false
+  },
+  "export": {
+    "started_at_utc": "2026-10-09T14:36:30.637715+00:00",
+    "completed_at_utc": "2026-10-09T14:36:30.799294+00:00",
+    "timezone_for_user_facing_dates": "Asia/Shanghai",
+    "local_date": "2026-10-09",
+    "records": 266,
+    "counts": {
+      "message": 19,
+      "custom_tool_call": 55,
+      "custom_tool_call_output": 54,
+      "function_call": 69,
+      "function_call_output": 69
+    },
+    "first_source_timestamp": "2026-10-09T13:15:54.620Z",
+    "last_source_timestamp": "2026-10-09T14:36:29.121Z",
+    "conversation_sha256": "637cd8515257b213b867d94ff1a91602403e08f62e56ab6776914994ab5b0f59"
+  },
+  "prompt_checks": [
+    {
+      "file": "00-original-user-request.md",
+      "source_line": 12,
+      "source_timestamp": "2026-10-09T13:15:54.620Z",
+      "characters": 11728,
+      "bytes_utf8": 25483,
+      "source_text_sha256": "66a2b0884379bc5d3b945e1f2d9af4bc3ab35135ee848cffa9bc9fdd439b8349",
+      "export_file_sha256": "66a2b0884379bc5d3b945e1f2d9af4bc3ab35135ee848cffa9bc9fdd439b8349",
+      "exact_utf8_byte_match": true,
+      "text_rule": "Exact single input_text block; no added heading or newline"
+    },
+    {
+      "file": "01-approved-development-request.md",
+      "source_line": 281,
+      "source_timestamp": "2026-10-09T13:41:43.946Z",
+      "characters": 2544,
+      "bytes_utf8": 5679,
+      "source_text_sha256": "d77ff8230010deff141695b6290090fda462e717658228deafb5279ac57126d4",
+      "export_file_sha256": "d77ff8230010deff141695b6290090fda462e717658228deafb5279ac57126d4",
+      "exact_utf8_byte_match": true,
+      "text_rule": "Exact single input_text block; no added heading or newline"
+    }
+  ],
+  "excluded": [
+    "system/developer messages",
+    "reasoning/encrypted content",
+    "session/turn metadata and identities",
+    "usage/world-state events",
+    "child-agent messages",
+    "embedded media data"
+  ],
+  "skipped_record_counts": {
+    "event_msg": 429,
+    "token_usage_record": 126,
+    "reasoning": 105,
+    "world_state": 7,
+    "inter_agent_communication_metadata": 37,
+    "agent_message": 37,
+    "turn_context": 2,
+    "private_message": 1,
+    "compacted": 1
+  },
+  "limitations": [
+    "Point-in-time snapshot, not an automatic completion transcript.",
+    "Source absolute path and session identity are omitted from metadata and redacted in tool text.",
+    "Only direct response_item records are exported; event_msg duplicates are omitted.",
+    "Tool text preserves actual operations; screenshot files are separate evidence.",
+    "A later invocation refreshes the snapshot with only events that really occurred."
+  ]
+}

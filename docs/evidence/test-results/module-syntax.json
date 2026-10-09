@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-09T22:29:22.8899581+08:00",
+  "results": [
+    {
+      "command": "node --check js/ai-workshop/main.js",
+      "exitCode": 0
+    },
+    {
+      "command": "node --check js/ai-workshop/contracts.js",
+      "exitCode": 0
+    },
+    {
+      "command": "node --check js/ai-workshop/services.js",
+      "exitCode": 0
+    }
+  ]
+}

@@ -1,0 +1,2525 @@
+{
+  "timestamp": "2026-10-09T22:16:22.914158+08:00",
+  "scope": "Static source regression only. No browser, resource decoding or runtime interaction pass is asserted.",
+  "source_root": "D:\\京剧\\京剧",
+  "backup_root": "D:\\京剧\\backups\\phase-01-original-20261009-214442",
+  "excluded_directories": [
+    ".git",
+    "docs"
+  ],
+  "execution": {
+    "script": "D:\\京剧\\京剧\\scripts\\verify_phase1_static.py",
+    "script_sha256": "964dd3d4a54cdfdc2a3e44fc7f385f86e4808d34d8ae4b446bf5615dcbd69e16",
+    "python": "C:\\Users\\35037\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "arguments": [
+      "D:\\京剧\\京剧",
+      "D:\\京剧\\backups\\phase-01-original-20261009-214442",
+      "D:\\京剧\\京剧\\docs\\evidence\\test-results\\static-regression.json"
+    ]
+  },
+  "overall_static_passed": true,
+  "checks": [
+    {
+      "name": "all_original_assets_preserved",
+      "passed": true
+    },
+    {
+      "name": "old_css_unchanged_except_approved_index_css",
+      "passed": true
+    },
+    {
+      "name": "seven_cultural_page_main_preservation",
+      "passed": true
+    },
+    {
+      "name": "local_resources_and_es_module_imports_exist",
+      "passed": true
+    },
+    {
+      "name": "ids_and_explicit_fragments_and_accessible_idrefs_valid",
+      "passed": true
+    },
+    {
+      "name": "all_eight_primary_navigation_workshop_entries_valid",
+      "passed": true
+    },
+    {
+      "name": "frontend_ai_service_boundary_and_text_rendering",
+      "passed": true
+    }
+  ],
+  "asset_preservation": [
+    {
+      "directory": "images",
+      "original_count": 60,
+      "current_count": 60,
+      "missing": [],
+      "added": [],
+      "files": [
+        {
+          "file": "images/about.jpg",
+          "original_sha256": "ce43b441eceea75b51f2fa23690027b25834d2c9e206e04f018111e976a65881",
+          "current_sha256": "ce43b441eceea75b51f2fa23690027b25834d2c9e206e04f018111e976a65881",
+          "identical": true
+        },
+        {
+          "file": "images/art1.jpg",
+          "original_sha256": "27d9c0ae8016fad3815de1f73d2e4d9456bf23fd14325aea2369210db24a665b",
+          "current_sha256": "27d9c0ae8016fad3815de1f73d2e4d9456bf23fd14325aea2369210db24a665b",
+          "identical": true
+        },
+        {
+          "file": "images/art2.jpg",
+          "original_sha256": "cf8f02ebdb6a27384077f3db6e63ac5d5b4b0bafff6c8f4855b9fa6419247fda",
+          "current_sha256": "cf8f02ebdb6a27384077f3db6e63ac5d5b4b0bafff6c8f4855b9fa6419247fda",
+          "identical": true
+        },
+        {
+          "file": "images/art3.jpg",
+          "original_sha256": "528171a258eaa6641f194c54fdc8b21a299b892fe5a428ce756bf8f9fd09b6ee",
+          "current_sha256": "528171a258eaa6641f194c54fdc8b21a299b892fe5a428ce756bf8f9fd09b6ee",
+          "identical": true
+        },
+        {
+          "file": "images/art4.jpg",
+          "original_sha256": "39245f49548c39a4e38f60f7d087baba23ea55de82a9d308ec4f7a6e6c9ea953",
+          "current_sha256": "39245f49548c39a4e38f60f7d087baba23ea55de82a9d308ec4f7a6e6c9ea953",
+          "identical": true
+        },
+        {
+          "file": "images/black.jpg",
+          "original_sha256": "e83b4570d977a103350a96ba962a06f6723b1b53ecfc54c63348babca4a72c16",
+          "current_sha256": "e83b4570d977a103350a96ba962a06f6723b1b53ecfc54c63348babca4a72c16",
+          "identical": true
+        },
+        {
+          "file": "images/black1.jpg",
+          "original_sha256": "f2d1a6c6d4b4fcd99586f27531809bcbd48bcc5b54eaa256dbf1056d0b918a5c",
+          "current_sha256": "f2d1a6c6d4b4fcd99586f27531809bcbd48bcc5b54eaa256dbf1056d0b918a5c",
+          "identical": true
+        },
+        {
+          "file": "images/blue.jpg",
+          "original_sha256": "3c1ac4a1d161b8a07c2b95938e89a0d9ab446188cabbd734cd05c3cb1cac072a",
+          "current_sha256": "3c1ac4a1d161b8a07c2b95938e89a0d9ab446188cabbd734cd05c3cb1cac072a",
+          "identical": true
+        },
+        {
+          "file": "images/blue1.jpg",
+          "original_sha256": "b0123b57792e422504ceb576889a9e8b6beac97a1be2bed3be530ae878a1a177",
+          "current_sha256": "b0123b57792e422504ceb576889a9e8b6beac97a1be2bed3be530ae878a1a177",
+          "identical": true
+        },
+        {
+          "file": "images/chou.jpg",
+          "original_sha256": "bb43da1c0eb85f45c48b4f7af772a7b276becd9617a0cadaf4f553661a427929",
+          "current_sha256": "bb43da1c0eb85f45c48b4f7af772a7b276becd9617a0cadaf4f553661a427929",
+          "identical": true
+        },
+        {
+          "file": "images/dan.jpg",
+          "original_sha256": "8c4ba58a809f3a8063fd7e6e303ed0efccc32e82a6d3454f7a22ab337fb83e37",
+          "current_sha256": "8c4ba58a809f3a8063fd7e6e303ed0efccc32e82a6d3454f7a22ab337fb83e37",
+          "identical": true
+        },
+        {
+          "file": "images/gallery1.jpg",
+          "original_sha256": "27d9c0ae8016fad3815de1f73d2e4d9456bf23fd14325aea2369210db24a665b",
+          "current_sha256": "27d9c0ae8016fad3815de1f73d2e4d9456bf23fd14325aea2369210db24a665b",
+          "identical": true
+        },
+        {
+          "file": "images/gallery10.jpg",
+          "original_sha256": "c845b11dac9b30864e66d80c81203998d33837da9181c36e6c7fa55d8a81b897",
+          "current_sha256": "c845b11dac9b30864e66d80c81203998d33837da9181c36e6c7fa55d8a81b897",
+          "identical": true
+        },
+        {
+          "file": "images/gallery11.jpg",
+          "original_sha256": "ce43b441eceea75b51f2fa23690027b25834d2c9e206e04f018111e976a65881",
+          "current_sha256": "ce43b441eceea75b51f2fa23690027b25834d2c9e206e04f018111e976a65881",
+          "identical": true
+        },
+        {
+          "file": "images/gallery12.jpg",
+          "original_sha256": "be41edd77b7506b70e334afd216a77bc85f2e7e8fc59f335e80693d57fca5a87",
+          "current_sha256": "be41edd77b7506b70e334afd216a77bc85f2e7e8fc59f335e80693d57fca5a87",
+          "identical": true
+        },
+        {
+          "file": "images/gallery2.jpg",
+          "original_sha256": "cf8f02ebdb6a27384077f3db6e63ac5d5b4b0bafff6c8f4855b9fa6419247fda",
+          "current_sha256": "cf8f02ebdb6a27384077f3db6e63ac5d5b4b0bafff6c8f4855b9fa6419247fda",
+          "identical": true
+        },
+        {
+          "file": "images/gallery3.jpg",
+          "original_sha256": "528171a258eaa6641f194c54fdc8b21a299b892fe5a428ce756bf8f9fd09b6ee",
+          "current_sha256": "528171a258eaa6641f194c54fdc8b21a299b892fe5a428ce756bf8f9fd09b6ee",
+          "identical": true
+        },
+        {
+          "file": "images/gallery4.jpg",
+          "original_sha256": "39245f49548c39a4e38f60f7d087baba23ea55de82a9d308ec4f7a6e6c9ea953",
+          "current_sha256": "39245f49548c39a4e38f60f7d087baba23ea55de82a9d308ec4f7a6e6c9ea953",
+          "identical": true
+        },
+        {
+          "file": "images/gallery5.jpg",
+          "original_sha256": "5d570708eae005b3f8106c11c1338875647edae0619f2c4ab9210bf75ae5d648",
+          "current_sha256": "5d570708eae005b3f8106c11c1338875647edae0619f2c4ab9210bf75ae5d648",
+          "identical": true
+        },
+        {
+          "file": "images/gallery6.jpg",
+          "original_sha256": "8c4ba58a809f3a8063fd7e6e303ed0efccc32e82a6d3454f7a22ab337fb83e37",
+          "current_sha256": "8c4ba58a809f3a8063fd7e6e303ed0efccc32e82a6d3454f7a22ab337fb83e37",
+          "identical": true
+        },
+        {
+          "file": "images/gallery7.jpg",
+          "original_sha256": "2e1ce7a4d0a32d301af0329a778f01c515ef3571145eba283bb87e8e97759ce0",
+          "current_sha256": "2e1ce7a4d0a32d301af0329a778f01c515ef3571145eba283bb87e8e97759ce0",
+          "identical": true
+        },
+        {
+          "file": "images/gallery8.jpg",
+          "original_sha256": "bb43da1c0eb85f45c48b4f7af772a7b276becd9617a0cadaf4f553661a427929",
+          "current_sha256": "bb43da1c0eb85f45c48b4f7af772a7b276becd9617a0cadaf4f553661a427929",
+          "identical": true
+        },
+        {
+          "file": "images/gallery9.jpg",
+          "original_sha256": "b5ac35df61c28a84dc3f7eee6b9079e74bdfae0760bf6d92b9fc44f2bd669a76",
+          "current_sha256": "b5ac35df61c28a84dc3f7eee6b9079e74bdfae0760bf6d92b9fc44f2bd669a76",
+          "identical": true
+        },
+        {
+          "file": "images/glod.jpg",
+          "original_sha256": "2a5bc22ad7dac6d492b8ecdc545c5117ff8b69870be3068fe8b8c62b89eb6621",
+          "current_sha256": "2a5bc22ad7dac6d492b8ecdc545c5117ff8b69870be3068fe8b8c62b89eb6621",
+          "identical": true
+        },
+        {
+          "file": "images/glod1.jpg",
+          "original_sha256": "c5655e8b6f7317e9ea9ee4c498443e9f9a1e3c8217b2755ecd870f117600ed17",
+          "current_sha256": "c5655e8b6f7317e9ea9ee4c498443e9f9a1e3c8217b2755ecd870f117600ed17",
+          "identical": true
+        },
+        {
+          "file": "images/home-banner.jpg",
+          "original_sha256": "ae3984bb969e0cb3accab6c5ad0806169ccd5b0a0931ddf3f7ac77634a7bfddd",
+          "current_sha256": "ae3984bb969e0cb3accab6c5ad0806169ccd5b0a0931ddf3f7ac77634a7bfddd",
+          "identical": true
+        },
+        {
+          "file": "images/home1.jpg",
+          "original_sha256": "71b312820628ab20efa142bc0e3d63b196b297bd2a13971fe8f259e891c97850",
+          "current_sha256": "71b312820628ab20efa142bc0e3d63b196b297bd2a13971fe8f259e891c97850",
+          "identical": true
+        },
+        {
+          "file": "images/home2.jpg",
+          "original_sha256": "8c4ba58a809f3a8063fd7e6e303ed0efccc32e82a6d3454f7a22ab337fb83e37",
+          "current_sha256": "8c4ba58a809f3a8063fd7e6e303ed0efccc32e82a6d3454f7a22ab337fb83e37",
+          "identical": true
+        },
+        {
+          "file": "images/home3.jpg",
+          "original_sha256": "b5ac35df61c28a84dc3f7eee6b9079e74bdfae0760bf6d92b9fc44f2bd669a76",
+          "current_sha256": "b5ac35df61c28a84dc3f7eee6b9079e74bdfae0760bf6d92b9fc44f2bd669a76",
+          "identical": true
+        },
+        {
+          "file": "images/intro1.jpg",
+          "original_sha256": "71b312820628ab20efa142bc0e3d63b196b297bd2a13971fe8f259e891c97850",
+          "current_sha256": "71b312820628ab20efa142bc0e3d63b196b297bd2a13971fe8f259e891c97850",
+          "identical": true
+        },
+        {
+          "file": "images/intro2.jpg",
+          "original_sha256": "53e50938c09d72f2b14877287116e45623d4d0482fffb2275a6bfa6e745b9071",
+          "current_sha256": "53e50938c09d72f2b14877287116e45623d4d0482fffb2275a6bfa6e745b9071",
+          "identical": true
+        },
+        {
+          "file": "images/intro3.jpg",
+          "original_sha256": "d1d2bce90e8f1fb5fa5a2539481163ff4976b865a87db5f9bdf2f245aad38a15",
+          "current_sha256": "d1d2bce90e8f1fb5fa5a2539481163ff4976b865a87db5f9bdf2f245aad38a15",
+          "identical": true
+        },
+        {
+          "file": "images/intro4.jpg",
+          "original_sha256": "2429b6610164eb9e45432bd8d1013322d1d4ad22738876236d6d92f258c11c52",
+          "current_sha256": "2429b6610164eb9e45432bd8d1013322d1d4ad22738876236d6d92f258c11c52",
+          "identical": true
+        },
+        {
+          "file": "images/jing.jpg",
+          "original_sha256": "2e1ce7a4d0a32d301af0329a778f01c515ef3571145eba283bb87e8e97759ce0",
+          "current_sha256": "2e1ce7a4d0a32d301af0329a778f01c515ef3571145eba283bb87e8e97759ce0",
+          "identical": true
+        },
+        {
+          "file": "images/mask-black.jpg",
+          "original_sha256": "c845b11dac9b30864e66d80c81203998d33837da9181c36e6c7fa55d8a81b897",
+          "current_sha256": "c845b11dac9b30864e66d80c81203998d33837da9181c36e6c7fa55d8a81b897",
+          "identical": true
+        },
+        {
+          "file": "images/mask-blue.jpg",
+          "original_sha256": "a4589a1710c2516f57d6f4f2f922656dde1e667984097fe5faebf725615380e4",
+          "current_sha256": "a4589a1710c2516f57d6f4f2f922656dde1e667984097fe5faebf725615380e4",
+          "identical": true
+        },
+        {
+          "file": "images/mask-gold.jpg",
+          "original_sha256": "00ed4a694d949d3a5b750ccd643057a93256644031a45e40da62c56c064e0d57",
+          "current_sha256": "00ed4a694d949d3a5b750ccd643057a93256644031a45e40da62c56c064e0d57",
+          "identical": true
+        },
+        {
+          "file": "images/mask-red.jpg",
+          "original_sha256": "b5ac35df61c28a84dc3f7eee6b9079e74bdfae0760bf6d92b9fc44f2bd669a76",
+          "current_sha256": "b5ac35df61c28a84dc3f7eee6b9079e74bdfae0760bf6d92b9fc44f2bd669a76",
+          "identical": true
+        },
+        {
+          "file": "images/mask-white.jpg",
+          "original_sha256": "d8034f9233d190f1e8ee9632187c9507a0f80de447d89f23e0065d8e88230129",
+          "current_sha256": "d8034f9233d190f1e8ee9632187c9507a0f80de447d89f23e0065d8e88230129",
+          "identical": true
+        },
+        {
+          "file": "images/opera1.jpg",
+          "original_sha256": "ce43b441eceea75b51f2fa23690027b25834d2c9e206e04f018111e976a65881",
+          "current_sha256": "ce43b441eceea75b51f2fa23690027b25834d2c9e206e04f018111e976a65881",
+          "identical": true
+        },
+        {
+          "file": "images/opera2.jpg",
+          "original_sha256": "be41edd77b7506b70e334afd216a77bc85f2e7e8fc59f335e80693d57fca5a87",
+          "current_sha256": "be41edd77b7506b70e334afd216a77bc85f2e7e8fc59f335e80693d57fca5a87",
+          "identical": true
+        },
+        {
+          "file": "images/opera3.jpg",
+          "original_sha256": "71047dca7a2be2d274d1c2f10e79d939633dcc8c6db905ac5a6ca4c157e097ae",
+          "current_sha256": "71047dca7a2be2d274d1c2f10e79d939633dcc8c6db905ac5a6ca4c157e097ae",
+          "identical": true
+        },
+        {
+          "file": "images/opera4.jpg",
+          "original_sha256": "73f0f9daf20143a01101e6a734ae87f0fb6154c2e462209eb08395df461e2da7",
+          "current_sha256": "73f0f9daf20143a01101e6a734ae87f0fb6154c2e462209eb08395df461e2da7",
+          "identical": true
+        },
+        {
+          "file": "images/opera5.jpg",
+          "original_sha256": "d91038474e4905dc79c8263c0c394e8faa28f08cd227e0322764bc64448b7d5d",
+          "current_sha256": "d91038474e4905dc79c8263c0c394e8faa28f08cd227e0322764bc64448b7d5d",
+          "identical": true
+        },
+        {
+          "file": "images/red.jpg",
+          "original_sha256": "eccf1a5214127826c07034a6503b56ff86a35cc5f3846d78c6cc5cd2a9dde52f",
+          "current_sha256": "eccf1a5214127826c07034a6503b56ff86a35cc5f3846d78c6cc5cd2a9dde52f",
+          "identical": true
+        },
+        {
+          "file": "images/red1.jpg",
+          "original_sha256": "93cf37ea8807c46f2d2d4931a266b6f35d37d2f673aae82465fc1f30faf2f3d2",
+          "current_sha256": "93cf37ea8807c46f2d2d4931a266b6f35d37d2f673aae82465fc1f30faf2f3d2",
+          "identical": true
+        },
+        {
+          "file": "images/sheng.jpg",
+          "original_sha256": "5d570708eae005b3f8106c11c1338875647edae0619f2c4ab9210bf75ae5d648",
+          "current_sha256": "5d570708eae005b3f8106c11c1338875647edae0619f2c4ab9210bf75ae5d648",
+          "identical": true
+        },
+        {
+          "file": "images/white.jpg",
+          "original_sha256": "1bc4756e9906dd53353ac7b857b6e121358548bfb46bd68db359e1f478118eb7",
+          "current_sha256": "1bc4756e9906dd53353ac7b857b6e121358548bfb46bd68db359e1f478118eb7",
+          "identical": true
+        },
+        {
+          "file": "images/white1.jpg",
+          "original_sha256": "a22123eae9c30749e3c97adf985f4293437ed77021918a024f433d3051ab3854",
+          "current_sha256": "a22123eae9c30749e3c97adf985f4293437ed77021918a024f433d3051ab3854",
+          "identical": true
+        },
+        {
+          "file": "images/京胡.jpg",
+          "original_sha256": "e03197ba50b95904656ee1becb6461f3770816a0f7bcbe2f1bf31a3cb49f5b2a",
+          "current_sha256": "e03197ba50b95904656ee1becb6461f3770816a0f7bcbe2f1bf31a3cb49f5b2a",
+          "identical": true
+        },
+        {
+          "file": "images/历史1.jpg",
+          "original_sha256": "be15b761922d0946506ed44e85c1eb63c728d06d2532e99539363d7af59e00ea",
+          "current_sha256": "be15b761922d0946506ed44e85c1eb63c728d06d2532e99539363d7af59e00ea",
+          "identical": true
+        },
+        {
+          "file": "images/历史2.jpg",
+          "original_sha256": "7f2d7823157621b1a23bd563c50f292df86076a8102aff99fa1e410c686bc457",
+          "current_sha256": "7f2d7823157621b1a23bd563c50f292df86076a8102aff99fa1e410c686bc457",
+          "identical": true
+        },
+        {
+          "file": "images/历史3.jpg",
+          "original_sha256": "5b1f8e827ea98df5fbe8fd675c424735394afd005f9baa628309cdb754d0b330",
+          "current_sha256": "5b1f8e827ea98df5fbe8fd675c424735394afd005f9baa628309cdb754d0b330",
+          "identical": true
+        },
+        {
+          "file": "images/历史4.jpg",
+          "original_sha256": "bddfbb5bb19d11ba684b34346fe91b4905819e2d1a160c10a52ecf90cf148612",
+          "current_sha256": "bddfbb5bb19d11ba684b34346fe91b4905819e2d1a160c10a52ecf90cf148612",
+          "identical": true
+        },
+        {
+          "file": "images/历史5.jpg",
+          "original_sha256": "4b13e993bb059818ea44aa09e113cf33ce355c122fea3bf66322a481117d7aef",
+          "current_sha256": "4b13e993bb059818ea44aa09e113cf33ce355c122fea3bf66322a481117d7aef",
+          "identical": true
+        },
+        {
+          "file": "images/生.jpg",
+          "original_sha256": "5d570708eae005b3f8106c11c1338875647edae0619f2c4ab9210bf75ae5d648",
+          "current_sha256": "5d570708eae005b3f8106c11c1338875647edae0619f2c4ab9210bf75ae5d648",
+          "identical": true
+        },
+        {
+          "file": "images/背景1.jpg",
+          "original_sha256": "c7f14bbfeba088ae977c72a0f5d721b5e98b570fc80a0a988ef77a51e37973c1",
+          "current_sha256": "c7f14bbfeba088ae977c72a0f5d721b5e98b570fc80a0a988ef77a51e37973c1",
+          "identical": true
+        },
+        {
+          "file": "images/背景2.jpg",
+          "original_sha256": "b99420667f1256f6f72d703e5c64e677e2bbc632f22196178450b4bcdde007b2",
+          "current_sha256": "b99420667f1256f6f72d703e5c64e677e2bbc632f22196178450b4bcdde007b2",
+          "identical": true
+        },
+        {
+          "file": "images/背景3.jpg",
+          "original_sha256": "99c20e5a145e6c54fb4efaad564c65a46109636a75c6a02d4ce2290b01bcff02",
+          "current_sha256": "99c20e5a145e6c54fb4efaad564c65a46109636a75c6a02d4ce2290b01bcff02",
+          "identical": true
+        },
+        {
+          "file": "images/脸谱.jpg",
+          "original_sha256": "dc04dff15b550bfbd3efae39c3a33762af5b3cd3458858d7f7204cd18d93d968",
+          "current_sha256": "dc04dff15b550bfbd3efae39c3a33762af5b3cd3458858d7f7204cd18d93d968",
+          "identical": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "directory": "audio",
+      "original_count": 1,
+      "current_count": 1,
+      "missing": [],
+      "added": [],
+      "files": [
+        {
+          "file": "audio/6月19日.mp3",
+          "original_sha256": "14a187171703d3bb852246bc4e39af6c9a27c8b080b99d6a442d7c45fed2fb16",
+          "current_sha256": "14a187171703d3bb852246bc4e39af6c9a27c8b080b99d6a442d7c45fed2fb16",
+          "identical": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "directory": "media",
+      "original_count": 5,
+      "current_count": 5,
+      "missing": [],
+      "added": [],
+      "files": [
+        {
+          "file": "media/opera-audio.mp3",
+          "original_sha256": "14a187171703d3bb852246bc4e39af6c9a27c8b080b99d6a442d7c45fed2fb16",
+          "current_sha256": "14a187171703d3bb852246bc4e39af6c9a27c8b080b99d6a442d7c45fed2fb16",
+          "identical": true
+        },
+        {
+          "file": "media/video1.mp4",
+          "original_sha256": "ba32d6ad774c15202ee7ec82f9d005d580c4d3d545ee4f01bb0d78eb459e3230",
+          "current_sha256": "ba32d6ad774c15202ee7ec82f9d005d580c4d3d545ee4f01bb0d78eb459e3230",
+          "identical": true
+        },
+        {
+          "file": "media/video2.mp4",
+          "original_sha256": "62d1105feba301b2572911adccba40b2af5a464882de426f4e2bf6bc9430f69c",
+          "current_sha256": "62d1105feba301b2572911adccba40b2af5a464882de426f4e2bf6bc9430f69c",
+          "identical": true
+        },
+        {
+          "file": "media/video3.mp4",
+          "original_sha256": "cf83baefc4b9be582354e0e2de9cbb64886800560a7ab5e362fc8c15cb23cbe0",
+          "current_sha256": "cf83baefc4b9be582354e0e2de9cbb64886800560a7ab5e362fc8c15cb23cbe0",
+          "identical": true
+        },
+        {
+          "file": "media/video4.mp4",
+          "original_sha256": "f285a84caafd832e3429862d6142bdf89a4907fac81bb1b3da5194d982c31c25",
+          "current_sha256": "f285a84caafd832e3429862d6142bdf89a4907fac81bb1b3da5194d982c31c25",
+          "identical": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "old_css_preservation": [
+    {
+      "file": "css/about.css",
+      "original_sha256": "885ea26cad372cb272ed203051af88d0e36ab6f1871e1d31c110176ebccc00bd",
+      "current_sha256": "885ea26cad372cb272ed203051af88d0e36ab6f1871e1d31c110176ebccc00bd",
+      "identical": true,
+      "change_allowed": false
+    },
+    {
+      "file": "css/facial.css",
+      "original_sha256": "aacf63ffbf44453bff688aca3eb054201d467136cd235bbbca75630e850c76fc",
+      "current_sha256": "aacf63ffbf44453bff688aca3eb054201d467136cd235bbbca75630e850c76fc",
+      "identical": true,
+      "change_allowed": false
+    },
+    {
+      "file": "css/gallery.css",
+      "original_sha256": "6f2588f7a68ccf0ae98b2d576b9f4f48c89c17873d43fad441c8109a3608579c",
+      "current_sha256": "6f2588f7a68ccf0ae98b2d576b9f4f48c89c17873d43fad441c8109a3608579c",
+      "identical": true,
+      "change_allowed": false
+    },
+    {
+      "file": "css/history.css",
+      "original_sha256": "da3e24f80f040418fbae874975dab90497f5f2af4c877ade99a9719fc0bf3528",
+      "current_sha256": "da3e24f80f040418fbae874975dab90497f5f2af4c877ade99a9719fc0bf3528",
+      "identical": true,
+      "change_allowed": false
+    },
+    {
+      "file": "css/index.css",
+      "original_sha256": "b1448aaa286445c1902e941b493279b880e15b9aaba065e693cbe40d31c167b6",
+      "current_sha256": "b0bcb5f2704b48b08c4f22711b7542923d9ac3d9d84de9bbc8f8756f3b319a54",
+      "identical": false,
+      "change_allowed": true
+    },
+    {
+      "file": "css/music.css",
+      "original_sha256": "f4609c55f017cee88f7877f453afe5fefc66e11cd8b11f2c604cea5b40aa5a54",
+      "current_sha256": "f4609c55f017cee88f7877f453afe5fefc66e11cd8b11f2c604cea5b40aa5a54",
+      "identical": true,
+      "change_allowed": false
+    },
+    {
+      "file": "css/roles.css",
+      "original_sha256": "2e4b44fa509d16d2de2e8825b129dd92d24dfa134ed4c020785af6dfc5e7b830",
+      "current_sha256": "2e4b44fa509d16d2de2e8825b129dd92d24dfa134ed4c020785af6dfc5e7b830",
+      "identical": true,
+      "change_allowed": false
+    },
+    {
+      "file": "css/style.css",
+      "original_sha256": "3cd88181cb835dbf909ba03101778b445024307e871b812832948eb0e983c7f9",
+      "current_sha256": "3cd88181cb835dbf909ba03101778b445024307e871b812832948eb0e983c7f9",
+      "identical": true,
+      "change_allowed": false
+    },
+    {
+      "file": "css/video.css",
+      "original_sha256": "9219bd165ab7778bcb49f8815becdd508190ed5d2d3e259b1f21b4e584f49523",
+      "current_sha256": "9219bd165ab7778bcb49f8815becdd508190ed5d2d3e259b1f21b4e584f49523",
+      "identical": true,
+      "change_allowed": false
+    }
+  ],
+  "cultural_main_preservation": [
+    {
+      "file": "index.html",
+      "original_main_sha256": "5c61f72064a95e8e4a4f7fa44d79d35697ce3a91c948c79b24bfb76c66cc132f",
+      "current_main_sha256": "bb16483a24d20ba3136df756e8b305d32fc6e80be8e277f712f65c6ca1a6bfa1",
+      "byte_identical": false,
+      "allowed_replacements": [
+        {
+          "old": "从历史源流到课程创作，八个主题带你读懂京剧文化。",
+          "new": "从历史源流到智能创作，八个主题带你走近京剧文化。",
+          "original_occurrences": 1
+        },
+        {
+          "old": "<a class=\"entry-card\" data-no=\"08\" href=\"about.html\">",
+          "new": "<a class=\"entry-card\" data-no=\"08\" href=\"about.html#ai-workshop\">",
+          "original_occurrences": 1
+        },
+        {
+          "old": "alt=\"关于梨园风华网站\"",
+          "new": "alt=\"AI戏韵工坊京剧文化创作入口\"",
+          "original_occurrences": 1
+        },
+        {
+          "old": "<small>课程创作</small><strong>关于我们</strong><em>制作说明与心得</em>",
+          "new": "<small>智能创作</small><strong>AI戏韵工坊</strong><em>探索知识与角色创意</em>",
+          "original_occurrences": 1
+        }
+      ],
+      "only_allowed_changes": true
+    },
+    {
+      "file": "history.html",
+      "original_main_sha256": "5a6d2a2b60e879ad5e689942d6fd937cca8250eeea5faaa62ac002772400b0b8",
+      "current_main_sha256": "5a6d2a2b60e879ad5e689942d6fd937cca8250eeea5faaa62ac002772400b0b8",
+      "byte_identical": true,
+      "allowed_replacements": [],
+      "only_allowed_changes": true
+    },
+    {
+      "file": "roles.html",
+      "original_main_sha256": "021596d95f848f7d6f7d610b56560e099b879445222b7d7198636871449bfbfc",
+      "current_main_sha256": "021596d95f848f7d6f7d610b56560e099b879445222b7d7198636871449bfbfc",
+      "byte_identical": true,
+      "allowed_replacements": [],
+      "only_allowed_changes": true
+    },
+    {
+      "file": "facial.html",
+      "original_main_sha256": "50aa5024c4b1b46e23303f27d6be03ca28ecc040419a81f9d204542e64a27eb2",
+      "current_main_sha256": "fef961c63a36ee8f18bc6f6f1dc30d02445f081c4a44004b9841b4a6b1dbe5f1",
+      "byte_identical": false,
+      "allowed_replacements": [
+        {
+          "old": "<a class=\"btn\" href=\"about.html\">了解网站制作说明</a>",
+          "new": "<a class=\"btn\" href=\"about.html#ai-workshop\">走进AI戏韵工坊</a>",
+          "original_occurrences": 1
+        }
+      ],
+      "only_allowed_changes": true
+    },
+    {
+      "file": "music.html",
+      "original_main_sha256": "8741c2871088b2abb836cc8df66b6bc9f56c9fc289d43e0ca6dd273014ca414d",
+      "current_main_sha256": "8741c2871088b2abb836cc8df66b6bc9f56c9fc289d43e0ca6dd273014ca414d",
+      "byte_identical": true,
+      "allowed_replacements": [],
+      "only_allowed_changes": true
+    },
+    {
+      "file": "video.html",
+      "original_main_sha256": "6ba051ee9ba31d62445ac5d67d9a3f58556d40859b82d1c4209d7641a6edb112",
+      "current_main_sha256": "6ba051ee9ba31d62445ac5d67d9a3f58556d40859b82d1c4209d7641a6edb112",
+      "byte_identical": true,
+      "allowed_replacements": [],
+      "only_allowed_changes": true
+    },
+    {
+      "file": "gallery.html",
+      "original_main_sha256": "4dbd1e9e0a0da7c49b8c15fa7db960581fee0d274cf469f0829fb4cfb2079450",
+      "current_main_sha256": "4dbd1e9e0a0da7c49b8c15fa7db960581fee0d274cf469f0829fb4cfb2079450",
+      "byte_identical": true,
+      "allowed_replacements": [],
+      "only_allowed_changes": true
+    }
+  ],
+  "reference_audit": {
+    "html_page_count": 8,
+    "local_file_reference_count": 212,
+    "es_module_import_count": 2,
+    "references": [
+      {
+        "file": "about.html",
+        "line": 10,
+        "ref": "css/style.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\style.css",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 11,
+        "ref": "css/ai-workshop.css?v=phase1-2",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\ai-workshop.css",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 20,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 23,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 26,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 29,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 32,
+        "ref": "facial.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\facial.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 35,
+        "ref": "music.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\music.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 38,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 41,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 44,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 263,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 266,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 269,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "about.html",
+        "line": 285,
+        "ref": "js/ai-workshop/main.js?v=phase1-2",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\js\\ai-workshop\\main.js",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 10,
+        "ref": "css/style.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\style.css",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 11,
+        "ref": "css/facial.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\facial.css",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 20,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 23,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 26,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 29,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 32,
+        "ref": "facial.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\facial.html",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 35,
+        "ref": "music.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\music.html",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 38,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 41,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 44,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 66,
+        "ref": "images/脸谱.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\脸谱.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 95,
+        "ref": "images/red.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\red.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 101,
+        "ref": "images/black.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\black.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 107,
+        "ref": "images/white.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\white.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 113,
+        "ref": "images/blue.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\blue.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 119,
+        "ref": "images/glod.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\glod.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 138,
+        "ref": "images/red1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\red1.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 141,
+        "ref": "images/black1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\black1.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 144,
+        "ref": "images/blue1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\blue1.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 147,
+        "ref": "images/white1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\white1.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 150,
+        "ref": "images/glod1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\glod1.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 178,
+        "ref": "images/jing.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\jing.jpg",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 239,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 263,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "facial.html",
+        "line": 266,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 10,
+        "ref": "css/style.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\style.css",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 11,
+        "ref": "css/gallery.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\gallery.css",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 20,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 23,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 26,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 29,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 32,
+        "ref": "facial.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\facial.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 35,
+        "ref": "music.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\music.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 38,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 41,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 44,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 77,
+        "ref": "images/gallery1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\gallery1.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 83,
+        "ref": "images/gallery2.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\gallery2.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 89,
+        "ref": "images/gallery11.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\gallery11.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 95,
+        "ref": "images/gallery12.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\gallery12.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 101,
+        "ref": "images/gallery5.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\gallery5.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 107,
+        "ref": "images/gallery6.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\gallery6.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 113,
+        "ref": "images/gallery7.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\gallery7.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 119,
+        "ref": "images/gallery8.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\gallery8.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 125,
+        "ref": "images/opera1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera1.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 131,
+        "ref": "images/opera2.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera2.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 137,
+        "ref": "images/opera4.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera4.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 143,
+        "ref": "images/opera5.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera5.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 169,
+        "ref": "images/sheng.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\sheng.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 175,
+        "ref": "images/dan.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\dan.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 181,
+        "ref": "images/jing.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\jing.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 187,
+        "ref": "images/chou.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\chou.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 206,
+        "ref": "images/mask-red.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\mask-red.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 212,
+        "ref": "images/mask-black.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\mask-black.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 218,
+        "ref": "images/mask-blue.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\mask-blue.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 224,
+        "ref": "images/mask-gold.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\mask-gold.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 243,
+        "ref": "images/opera1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera1.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 249,
+        "ref": "images/opera2.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera2.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 255,
+        "ref": "images/art4.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\art4.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 261,
+        "ref": "images/京胡.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\京胡.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 280,
+        "ref": "images/opera3.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera3.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 286,
+        "ref": "images/opera4.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera4.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 292,
+        "ref": "images/opera5.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera5.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 298,
+        "ref": "images/home-banner.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\home-banner.jpg",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 318,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 342,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "gallery.html",
+        "line": 345,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 10,
+        "ref": "css/style.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\style.css",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 11,
+        "ref": "css/history.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\history.css",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 20,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 23,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 26,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 29,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 32,
+        "ref": "facial.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\facial.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 35,
+        "ref": "music.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\music.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 38,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 41,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 44,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 66,
+        "ref": "images/intro2.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\intro2.jpg",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 104,
+        "ref": "images/intro1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\intro1.jpg",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 126,
+        "ref": "images/intro2.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\intro2.jpg",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 148,
+        "ref": "images/intro3.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\intro3.jpg",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 170,
+        "ref": "images/intro4.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\intro4.jpg",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 216,
+        "ref": "images/历史1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\历史1.jpg",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 219,
+        "ref": "images/历史2.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\历史2.jpg",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 222,
+        "ref": "images/历史3.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\历史3.jpg",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 225,
+        "ref": "images/历史4.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\历史4.jpg",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 228,
+        "ref": "images/历史5.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\历史5.jpg",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 325,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 349,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "history.html",
+        "line": 352,
+        "ref": "facial.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\facial.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 10,
+        "ref": "css/style.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\style.css",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 11,
+        "ref": "css/index.css?v=phase1",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\index.css",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 21,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 24,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 27,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 30,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 33,
+        "ref": "facial.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\facial.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 36,
+        "ref": "music.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\music.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 39,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 42,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 45,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 62,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 70,
+        "ref": "images/intro4.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\intro4.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 85,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 102,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 103,
+        "ref": "images/home1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\home1.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 106,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 107,
+        "ref": "images/intro2.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\intro2.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 110,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 111,
+        "ref": "images/sheng.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\sheng.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 114,
+        "ref": "facial.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\facial.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 115,
+        "ref": "images/red1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\red1.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 118,
+        "ref": "music.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\music.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 119,
+        "ref": "images/art1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\art1.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 122,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 123,
+        "ref": "images/opera1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera1.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 126,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 127,
+        "ref": "images/gallery7.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\gallery7.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 130,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 131,
+        "ref": "images/intro4.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\intro4.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 151,
+        "ref": "images/art3.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\art3.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 188,
+        "ref": "images/opera1.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera1.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 199,
+        "ref": "images/opera2.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera2.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 210,
+        "ref": "images/opera3.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\opera3.jpg",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 239,
+        "ref": "media/opera-audio.mp3",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\media\\opera-audio.mp3",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 246,
+        "ref": "media/video1.mp4",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\media\\video1.mp4",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 262,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 287,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 290,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "index.html",
+        "line": 293,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 10,
+        "ref": "css/style.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\style.css",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 11,
+        "ref": "css/music.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\music.css",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 20,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 23,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 26,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 29,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 32,
+        "ref": "facial.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\facial.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 35,
+        "ref": "music.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\music.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 38,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 41,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 44,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 123,
+        "ref": "images/京胡.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\京胡.jpg",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 183,
+        "ref": "media/opera-audio.mp3",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\media\\opera-audio.mp3",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 201,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 225,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "music.html",
+        "line": 228,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 10,
+        "ref": "css/style.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\style.css",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 11,
+        "ref": "css/roles.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\roles.css",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 20,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 23,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 26,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 29,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 32,
+        "ref": "facial.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\facial.html",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 35,
+        "ref": "music.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\music.html",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 38,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 41,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 44,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 82,
+        "ref": "images/sheng.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\sheng.jpg",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 114,
+        "ref": "images/dan.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\dan.jpg",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 146,
+        "ref": "images/jing.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\jing.jpg",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 178,
+        "ref": "images/chou.jpg",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\images\\chou.jpg",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 250,
+        "ref": "facial.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\facial.html",
+        "exists": true
+      },
+      {
+        "file": "roles.html",
+        "line": 253,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 10,
+        "ref": "css/style.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\style.css",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 11,
+        "ref": "css/video.css",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\css\\video.css",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 20,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 23,
+        "ref": "index.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\index.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 26,
+        "ref": "history.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\history.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 29,
+        "ref": "roles.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\roles.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 32,
+        "ref": "facial.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\facial.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 35,
+        "ref": "music.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\music.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 38,
+        "ref": "video.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\video.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 41,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 44,
+        "ref": "about.html#ai-workshop",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\about.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 84,
+        "ref": "media/video1.mp4",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\media\\video1.mp4",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 104,
+        "ref": "media/video2.mp4",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\media\\video2.mp4",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 124,
+        "ref": "media/video3.mp4",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\media\\video3.mp4",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 144,
+        "ref": "media/video4.mp4",
+        "kind": "src",
+        "target": "D:\\京剧\\京剧\\media\\video4.mp4",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 171,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 195,
+        "ref": "music.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\music.html",
+        "exists": true
+      },
+      {
+        "file": "video.html",
+        "line": 198,
+        "ref": "gallery.html",
+        "kind": "href",
+        "target": "D:\\京剧\\京剧\\gallery.html",
+        "exists": true
+      },
+      {
+        "file": "css/about.css",
+        "line": 2,
+        "ref": "../images/about.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\about.jpg",
+        "exists": true
+      },
+      {
+        "file": "css/about.css",
+        "line": 220,
+        "ref": "../images/intro4.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\intro4.jpg",
+        "exists": true
+      },
+      {
+        "file": "css/ai-workshop.css",
+        "line": 51,
+        "ref": "../images/about.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\about.jpg",
+        "exists": true
+      },
+      {
+        "file": "css/facial.css",
+        "line": 2,
+        "ref": "../images/mask-red.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\mask-red.jpg",
+        "exists": true
+      },
+      {
+        "file": "css/gallery.css",
+        "line": 2,
+        "ref": "../images/背景1.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\背景1.jpg",
+        "exists": true
+      },
+      {
+        "file": "css/history.css",
+        "line": 2,
+        "ref": "../images/背景1.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\背景1.jpg",
+        "exists": true
+      },
+      {
+        "file": "css/index.css",
+        "line": 3,
+        "ref": "../images/home-banner.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\home-banner.jpg",
+        "exists": true
+      },
+      {
+        "file": "css/index.css",
+        "line": 305,
+        "ref": "../images/intro4.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\intro4.jpg",
+        "exists": true
+      },
+      {
+        "file": "css/music.css",
+        "line": 2,
+        "ref": "../images/背景3.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\背景3.jpg",
+        "exists": true
+      },
+      {
+        "file": "css/roles.css",
+        "line": 2,
+        "ref": "../images/背景2.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\背景2.jpg",
+        "exists": true
+      },
+      {
+        "file": "css/video.css",
+        "line": 2,
+        "ref": "../images/opera3.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\opera3.jpg",
+        "exists": true
+      },
+      {
+        "file": "css/video.css",
+        "line": 118,
+        "ref": "../images/opera5.jpg",
+        "kind": "css-url",
+        "target": "D:\\京剧\\京剧\\images\\opera5.jpg",
+        "exists": true
+      },
+      {
+        "file": "js/ai-workshop/main.js",
+        "line": 1,
+        "ref": "./services.js",
+        "kind": "es-module-import",
+        "target": "D:\\京剧\\京剧\\js\\ai-workshop\\services.js",
+        "exists": true
+      },
+      {
+        "file": "js/ai-workshop/services.js",
+        "line": 1,
+        "ref": "./contracts.js",
+        "kind": "es-module-import",
+        "target": "D:\\京剧\\京剧\\js\\ai-workshop\\contracts.js",
+        "exists": true
+      }
+    ],
+    "external_references": [],
+    "missing_local_files": [],
+    "broken_explicit_anchors": [],
+    "duplicate_ids": [],
+    "broken_accessible_idrefs": []
+  },
+  "primary_navigation": [
+    {
+      "file": "about.html",
+      "workshop_links": [
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊",
+          "line": 44
+        }
+      ],
+      "passed": true
+    },
+    {
+      "file": "facial.html",
+      "workshop_links": [
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊",
+          "line": 44
+        }
+      ],
+      "passed": true
+    },
+    {
+      "file": "gallery.html",
+      "workshop_links": [
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊",
+          "line": 44
+        }
+      ],
+      "passed": true
+    },
+    {
+      "file": "history.html",
+      "workshop_links": [
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊",
+          "line": 44
+        }
+      ],
+      "passed": true
+    },
+    {
+      "file": "index.html",
+      "workshop_links": [
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊",
+          "line": 45
+        }
+      ],
+      "passed": true
+    },
+    {
+      "file": "music.html",
+      "workshop_links": [
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊",
+          "line": 44
+        }
+      ],
+      "passed": true
+    },
+    {
+      "file": "roles.html",
+      "workshop_links": [
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊",
+          "line": 44
+        }
+      ],
+      "passed": true
+    },
+    {
+      "file": "video.html",
+      "workshop_links": [
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊",
+          "line": 44
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "service_safety": {
+    "javascript_files_reviewed": [
+      "js/ai-workshop/contracts.js",
+      "js/ai-workshop/main.js",
+      "js/ai-workshop/services.js"
+    ],
+    "pattern_findings": [],
+    "all_four_capabilities_false": true,
+    "all_four_adapters_explicitly_unavailable": true,
+    "exact_qa_notice_present": true,
+    "source_review": "Reviewed main.js, contracts.js and services.js. They render user text/local drafts and unavailable notices only; no assistant answer, citation data, workflow progress or model output is generated. This is static review, not a browser execution claim."
+  },
+  "source_snapshot": [
+    {
+      "file": "about.html",
+      "sha256": "7739a985a0fa443de09b32fb445b9555289a5d9385b71840422657997fb3da9c"
+    },
+    {
+      "file": "css/about.css",
+      "sha256": "885ea26cad372cb272ed203051af88d0e36ab6f1871e1d31c110176ebccc00bd"
+    },
+    {
+      "file": "css/ai-workshop.css",
+      "sha256": "3bb20057f2cb61817e3b1b26439282349ce21e37240468e5e392a9d9f4998266"
+    },
+    {
+      "file": "css/facial.css",
+      "sha256": "aacf63ffbf44453bff688aca3eb054201d467136cd235bbbca75630e850c76fc"
+    },
+    {
+      "file": "css/gallery.css",
+      "sha256": "6f2588f7a68ccf0ae98b2d576b9f4f48c89c17873d43fad441c8109a3608579c"
+    },
+    {
+      "file": "css/history.css",
+      "sha256": "da3e24f80f040418fbae874975dab90497f5f2af4c877ade99a9719fc0bf3528"
+    },
+    {
+      "file": "css/index.css",
+      "sha256": "b0bcb5f2704b48b08c4f22711b7542923d9ac3d9d84de9bbc8f8756f3b319a54"
+    },
+    {
+      "file": "css/music.css",
+      "sha256": "f4609c55f017cee88f7877f453afe5fefc66e11cd8b11f2c604cea5b40aa5a54"
+    },
+    {
+      "file": "css/roles.css",
+      "sha256": "2e4b44fa509d16d2de2e8825b129dd92d24dfa134ed4c020785af6dfc5e7b830"
+    },
+    {
+      "file": "css/style.css",
+      "sha256": "3cd88181cb835dbf909ba03101778b445024307e871b812832948eb0e983c7f9"
+    },
+    {
+      "file": "css/video.css",
+      "sha256": "9219bd165ab7778bcb49f8815becdd508190ed5d2d3e259b1f21b4e584f49523"
+    },
+    {
+      "file": "facial.html",
+      "sha256": "3a4bc57dc1e83d16e3c594b7a6c4432cb4f8f44e7e7fe68f3761e9bcf3443d9e"
+    },
+    {
+      "file": "gallery.html",
+      "sha256": "d359e4232b9d042ede82839400cdfd63dcde6f3ec941c7102e30819135147030"
+    },
+    {
+      "file": "history.html",
+      "sha256": "e787849317758ccf549879bdec048fe24ff93bcdaf437f96f456813402f362f7"
+    },
+    {
+      "file": "index.html",
+      "sha256": "bc0ace24da3667201354787613a5653a6107e080c35b189e28d4370c85675cd4"
+    },
+    {
+      "file": "js/ai-workshop/contracts.js",
+      "sha256": "92a4a8707f8031c92454a6044e78c47cc925591394f180429c556d5aabc0d0b8"
+    },
+    {
+      "file": "js/ai-workshop/main.js",
+      "sha256": "19b10842b8b925451071becb9b474809f4ef90cd91f4d0ff729439f62d93b206"
+    },
+    {
+      "file": "js/ai-workshop/services.js",
+      "sha256": "76a8c95838db8d13fbff43eb98aaf0d4253db2e229fef0159becc42a3aa197d4"
+    },
+    {
+      "file": "music.html",
+      "sha256": "7fc8945972707e068984fecb8bdec8817974c3eb94a77b97a1a80c3ac1a24626"
+    },
+    {
+      "file": "roles.html",
+      "sha256": "25103c713ecef22784e9cd49241b157095e1c36d142c19453d2986db96a322ac"
+    },
+    {
+      "file": "video.html",
+      "sha256": "eae28dffb204a62aca0dd8aa371ce73a108bb1c5f67f5c7f0b10ca43de470abf"
+    }
+  ]
+}

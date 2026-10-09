@@ -1,0 +1,11 @@
+{
+  "exportedAt": "2026-10-09T21:36:52.9070528+08:00",
+  "originalPromptCharacters": 11728,
+  "originalPromptExactMatch": true,
+  "originalPromptSha256": "66A2B0884379BC5D3B945E1F2D9AF4BC3AB35135EE848CFFA9BC9FDD439B8349",
+  "transcriptRecords": 64,
+  "scope": "Snapshot from first original prompt to export time, visible user/assistant messages and primary tool records; excludes system/developer/reasoning.",
+  "archive_note": "Historical checkpoint-A copy sanitized for internal session identity and source-log path; untouched original retained outside the source repository.",
+  "original_archive_sha256": "8099a75c2816a60fbae926829cbc2452bbe4645aa2323d14b2bae3c77b61be4e",
+  "sanitized_archive_sha256": "4a25ad002af3b089401294ccbb99a14c2ece243d30048b152ae31447efe0c7e6"
+}

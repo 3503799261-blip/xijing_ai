@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-10-09T14:31:25.486940+00:00",
+  "raw_attempts": 50,
+  "raw_passed_attempts": 47,
+  "recorded_failed_attempts": [
+    "问答600字输入上限",
+    "修复前摘要通知无遮挡",
+    "修复后摘要通知无遮挡"
+  ],
+  "resolution_mapping": {
+    "问答600字输入上限": "超长问答提交校验（自动化fill可越过maxlength）",
+    "修复前摘要通知无遮挡": "摘要通知滚动完成后无遮挡",
+    "修复后摘要通知无遮挡": "摘要通知滚动完成后无遮挡"
+  },
+  "unresolved_failures": [],
+  "final_outcome": "PASS_WITH_RECORDED_RETESTS",
+  "screenshots": 32,
+  "static_regression_passed": true,
+  "console_warn_error_count": 0,
+  "limitations": [
+    "One IAB browser environment; simulated viewport sizes rather than real phone hardware.",
+    "No real AI API was integrated.",
+    "User checkpoint-B acceptance remains pending."
+  ]
+}

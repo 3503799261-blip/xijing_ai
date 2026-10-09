@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-10-09T21:28:04.640477+08:00",
+  "source_root": "D:\\京剧\\京剧",
+  "scope": "static code audit only; no browser or media decoding assertion",
+  "total_files": 83,
+  "total_bytes": 84380537,
+  "extension_counts": {
+    ".html": 8,
+    ".mp3": 2,
+    ".css": 9,
+    ".jpg": 60,
+    ".mp4": 4
+  },
+  "local_file_references_checked": 209,
+  "missing_local_files": [],
+  "broken_internal_anchors": [],
+  "duplicate_ids": [],
+  "script_tags": 0,
+  "inline_event_handlers": 0,
+  "javascript_files": []
+}

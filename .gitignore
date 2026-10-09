@@ -1,0 +1,15 @@
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+# Local runtime output
+__pycache__/
+*.py[cod]
+*.log
+.venv/
+node_modules/
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
