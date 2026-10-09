@@ -1,0 +1,138 @@
+.video-banner {
+  background-image: url('../images/opera3.jpg');
+}
+.cinema-intro {
+  text-align: center;
+  background: #220608;
+  color: #dfceb5;
+}
+.cinema-intro .section-title, .cinema-intro .section-desc {
+  color: #f0d07a;
+}
+.cinema-intro .tags {
+  position: relative;
+  z-index: 2;
+}
+.video-module {
+  background: linear-gradient(135deg,#f7efdf,#e6c98f);
+}
+.video-module:nth-of-type(odd) {
+  background: linear-gradient(135deg,#fffaf0,#ead8b4);
+}
+.video-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1.35fr) minmax(260px,.65fr);
+  align-items: center;
+  gap: 0;
+}
+.video-module:nth-of-type(even) .video-layout {
+  grid-template-columns: minmax(260px,.65fr) minmax(0,1.35fr);
+}
+.video-module:nth-of-type(even) .video-card {
+  order: 2;
+}
+.video-card {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  background: linear-gradient(145deg,#210507,#4b0b0f);
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  box-shadow: var(--shadow-strong);
+  transition: transform .35s,box-shadow .35s;
+}
+.video-card::before {
+  content: "";
+  position: absolute;
+  inset: -12px 30px 12px -12px;
+  z-index: -1;
+  border: 1px solid rgba(138,25,32,.35);
+  border-radius: 22px;
+}
+.video-module:nth-of-type(even) .video-card::before {
+  inset: -12px -12px 12px 30px;
+}
+.video-card video {
+  display: block;
+  width: 100%;
+  min-height: 330px;
+  background: #080808;
+  border-radius: 13px;
+  object-fit: contain;
+}
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 65px rgba(40,5,7,.4);
+}
+.video-copy {
+  position: relative;
+  z-index: 2;
+  margin-left: -34px;
+  padding: 34px 32px;
+  background: rgba(255,250,240,.88);
+  border: 1px solid rgba(201,155,69,.45);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+.video-module:nth-of-type(even) .video-copy {
+  margin-right: -34px;
+  margin-left: 0;
+}
+.video-copy::after {
+  position: absolute;
+  right: 18px;
+  bottom: -12px;
+  color: rgba(139,24,32,.08);
+  font: 5rem Georgia;
+}
+.video-module:nth-of-type(3) .video-copy::after {
+  content: "01";
+}
+.video-module:nth-of-type(4) .video-copy::after {
+  content: "02";
+}
+.video-module:nth-of-type(5) .video-copy::after {
+  content: "03";
+}
+.video-module:nth-of-type(6) .video-copy::after {
+  content: "04";
+}
+.video-copy h2 {
+  margin: 8px 0;
+  color: var(--red);
+  font-size: 2rem;
+  line-height: 1.35;
+}
+.video-copy p {
+  margin: 0;
+  color: var(--muted);
+}
+.video-copy:hover {
+  border-color: var(--gold);
+  box-shadow: 0 20px 45px rgba(70,18,14,.18);
+}
+.view-summary {
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(44,5,8,.84),rgba(44,5,8,.88)),url('../images/opera5.jpg') center/cover;
+}
+.view-summary .section-title, .view-summary .section-desc {
+  color: #f2d381;
+}
+@media(max-width:800px) {
+  .video-layout, .video-module:nth-of-type(even) .video-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .video-module:nth-of-type(even) .video-card {
+    order: 0;
+  }
+  .video-copy, .video-module:nth-of-type(even) .video-copy {
+    margin: -20px 18px 0;
+    padding: 28px;
+  }
+  .video-card video {
+    min-height: 240px;
+  }
+}

@@ -1,0 +1,185 @@
+.music-banner {
+  background-image: url('../images/背景3.jpg');
+}
+.music-banner::after {
+  content: "♪  ♫  ♪";
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  color: rgba(255,221,138,.25);
+  font-size: 5rem;
+  letter-spacing: .3em;
+  transform: rotate(-10deg);
+}
+.music-intro {
+  position: relative;
+  overflow: hidden;
+}
+.music-intro::before {
+  content: "♪";
+  position: absolute;
+  left: 3%;
+  bottom: 2%;
+  color: rgba(137,22,29,.06);
+  font-size: 15rem;
+}
+.vocal-bars {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 8px;
+  height: 170px;
+}
+.vocal-bars span {
+  width: 16px;
+  background: linear-gradient(var(--gold),var(--red));
+  border-radius: 99px;
+  transition: .35s;
+}
+.vocal-bars span:nth-child(1) {
+  height: 30%;
+}
+.vocal-bars span:nth-child(2) {
+  height: 70%;
+}
+.vocal-bars span:nth-child(3) {
+  height: 45%;
+}
+.vocal-bars span:nth-child(4) {
+  height: 90%;
+}
+.vocal-bars span:nth-child(5) {
+  height: 55%;
+}
+.vocal-bars:hover span:nth-child(odd) {
+  transform: translateY(-13px);
+}
+.vocal-bars:hover span:nth-child(even) {
+  transform: translateY(8px);
+}
+.mode-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.mode-card {
+  position: relative;
+  padding: 38px;
+  background: var(--paper);
+  border-top: 5px solid var(--red);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: .35s;
+}
+.mode-card:nth-child(2) {
+  border-color: var(--gold);
+}
+.mode-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+}
+.instrument-card {
+  overflow: visible;
+}
+.instrument-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  transition: .5s;
+}
+.instrument-card:hover img {
+  transform: scale(1.03) rotate(-1deg);
+}
+.percussion {
+  background: linear-gradient(135deg,#31080a,#7e151b);
+  color: #fff;
+}
+.percussion .section-title, .percussion .section-desc {
+  color: #f1d17b;
+}
+.beat-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+}
+.beat {
+  padding: 24px;
+  text-align: center;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(238,201,111,.28);
+  border-radius: 50% 50% 16px 16px;
+  transition: .35s;
+}
+.beat:hover {
+  transform: translateY(-9px);
+  background: rgba(255,255,255,.16);
+}
+.audio-stage {
+  padding: 35px;
+  background: linear-gradient(135deg,#fffaf0,#ead5a6);
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+.audio-stage audio {
+  width: 100%;
+}
+.music-summary {
+  text-align: center;
+}
+.music-summary .btn:hover {
+  box-shadow: 0 0 30px rgba(207,155,55,.8);
+}
+@media(max-width:720px) {
+  .mode-compare {
+    grid-template-columns: 1fr;
+  }
+  .beat-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+.mode-card:nth-child(2) {
+  transform: translateY(24px);
+}
+.mode-card:nth-child(2):hover {
+  transform: translateY(15px);
+}
+.instrument-card {
+  position: relative;
+}
+.instrument-card::after {
+  content: "京胡";
+  position: absolute;
+  right: -18px;
+  bottom: 24px;
+  padding: 13px 18px;
+  color: #f3d580;
+  background: rgba(61,8,11,.82);
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+.beat:nth-child(even) {
+  transform: translateY(18px);
+}
+.beat:nth-child(even):hover {
+  transform: translateY(8px);
+}
+.audio-stage {
+  position: relative;
+}
+.audio-stage::before {
+  content: "声";
+  position: absolute;
+  right: 24px;
+  top: -30px;
+  color: rgba(139,23,31,.09);
+  font-size: 7rem;
+  font-weight: 900;
+}
+@media(max-width:720px) {
+  .mode-card:nth-child(2), .beat:nth-child(even) {
+    transform: none;
+  }
+}
