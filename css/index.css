@@ -394,7 +394,7 @@
 /* Match the complete navigation bar to the inner-page dimensions.
    This is home-page-only; shared navigation styles remain untouched. */
 .home-page .nav-list {
-  width: 661px;
+  width: max-content;
 }
 
 @media(max-width:980px) {
