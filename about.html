@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="梨园风华网站制作说明、作者信息与课程学习心得">
+    <meta name="description" content="戏境AI戏韵工坊：探索京剧知识、多Agent协作、原创角色与图生3D的前端体验。AI服务尚未接入。">
     <title>
-      关于我们｜梨园风华
+      AI戏韵工坊｜梨园风华
     </title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
   </head>
   <body>
     <header class="site-header">
@@ -41,190 +40,207 @@
             <a href="gallery.html">艺术画廊</a>
           </li>
           <li>
-            <a href="about.html" aria-current="page">关于我们</a>
+            <a href="about.html#ai-workshop" aria-current="page">AI戏韵工坊</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
-
-      <section class="page-banner about-banner">
-        <div class="banner-content">
-          <span class="banner-label">ABOUT THE COURSE PROJECT</span>
-          <h1>
-            关于我们
-          </h1>
-          <p>
-            记录网站从构思到完成的过程，也保存一次课程学习的真实收获。
-          </p>
+    <main id="ai-workshop" class="ai-workshop">
+      <section class="ai-workshop-hero" aria-labelledby="ai-workshop-title">
+        <div class="ai-workshop-shell">
+          <div class="ai-workshop-hero-copy">
+            <span class="ai-workshop-kicker">戏境 AI · AI戏韵工坊</span>
+            <h1 id="ai-workshop-title" class="ai-workshop-title">AI赋能京剧非遗，<br>让传统文化焕发新生</h1>
+            <p class="ai-workshop-subtitle">探索京剧知识，与智能体协作，创造属于未来的国风数字角色。</p>
+            <div class="ai-workshop-hero-actions">
+              <a class="ai-workshop-button" href="#ai-workshop-qa" data-ai-workshop-target="qa">探索京剧知识 <span aria-hidden="true">→</span></a>
+              <a class="ai-workshop-button ai-workshop-button-secondary" href="#ai-workshop-create" data-ai-workshop-target="create">开启角色创作 <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="ai-workshop-hero-note">前端体验已开放 · AI服务尚未接入</p>
+          </div>
+          <div class="ai-workshop-hero-seal" aria-hidden="true"><span>戏</span><span>境</span><small>文脉新生</small></div>
         </div>
       </section>
 
-      <section class="module project-intro">
-        <div class="container split">
-          <figure>
-            <img src="images/about.jpg" alt="梨园风华京剧文化网站">
-          </figure>
-          <article class="project-copy">
-            <div class="section-head left">
-              <span class="eyebrow">网站制作说明</span>
-              <h2 class="section-title">
-                为什么制作“梨园风华”
-              </h2>
-              <p class="section-desc">
-                我选择中国京剧作为本次网站设计的主题，是因为京剧是我国的传统戏曲艺术，也是国家级非物质文化遗产。虽然以前对京剧了解不多，但在查找资料和制作网站的过程中，我逐渐认识到了京剧丰富的文化内涵和艺术价值。
-              </p>
-            </div>
-            <div class="tags">
-              <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">响应式</span><span class="tag">无框架</span>
-            </div>
-          </article>
-        </div>
-      </section>
+      <div class="ai-workshop-shell">
+        <nav class="ai-workshop-nav" aria-label="AI戏韵工坊内部导航">
+          <a href="#ai-workshop-overview" data-ai-workshop-target="overview" aria-current="true">工坊总览</a>
+          <a href="#ai-workshop-qa" data-ai-workshop-target="qa">京剧问答</a>
+          <a href="#ai-workshop-agents" data-ai-workshop-target="agents">Agent协作</a>
+          <a href="#ai-workshop-create" data-ai-workshop-target="create">角色创作</a>
+          <a href="#ai-workshop-model" data-ai-workshop-target="model">图生3D</a>
+        </nav>
+        <noscript><p class="ai-workshop-feedback">请启用 JavaScript 后使用问答输入和草稿交互。下方仍可阅读完整功能说明，AI服务尚未接入。</p></noscript>
+        <p id="ai-workshop-notice" class="ai-workshop-notice" role="status" aria-live="polite" hidden></p>
 
-      <section class="module">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">创作者档案</span>
-            <h2 class="section-title">
-              作者信息
-            </h2>
-
+        <section id="ai-workshop-overview" class="ai-workshop-panel" data-ai-workshop-panel="overview" aria-labelledby="ai-workshop-overview-heading">
+          <div class="ai-workshop-section-head">
+            <span class="ai-workshop-kicker">入戏有门 · 创作有据</span>
+            <h2 id="ai-workshop-overview-heading" class="ai-workshop-heading" tabindex="-1">一方工坊，两种探索</h2>
+            <p class="ai-workshop-description">从认识京剧，到表达你的创意。让文化依据成为每一次创作的起点。</p>
           </div>
-          <article class="author-card">
-            <div class="author-mark">
-              作
-            </div>
-            <div class="author-lines">
-              <span><strong>作者：</strong>陈雯雯</span><span><strong>班级：</strong>25计算机11班</span><span><strong>学号：</strong>28</span><span><strong>指导老师：</strong>高秀艳老师</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="module">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">制作路径</span>
-            <h2 class="section-title">
-              从内容梳理到页面成形
-            </h2>
-          </div>
-          <div class="making-grid">
-            <article class="making-card" data-step="01">
-              <h3>
-                主题策划
-              </h3>
-              <p>
-                确定京剧非遗文化方向与八页结构。
-              </p>
+          <div class="ai-workshop-entry-grid">
+            <article class="ai-workshop-entry-card">
+              <span class="ai-workshop-icon" aria-hidden="true">问</span>
+              <span class="ai-workshop-badge ai-workshop-badge-unavailable">知识服务待接入</span>
+              <h3>京剧智能问答</h3>
+              <p>探索京剧历史、行当、脸谱、服饰与经典剧目，让AI成为你的非遗文化讲解员。</p>
+              <a class="ai-workshop-text-link" href="#ai-workshop-qa" data-ai-workshop-target="qa">进入问答界面 <span aria-hidden="true">→</span></a>
             </article>
-            <article class="making-card" data-step="02">
-              <h3>
-                素材整理
-              </h3>
-              <p>
-                分类处理图片、视频与音频素材。
-              </p>
-            </article>
-            <article class="making-card" data-step="03">
-              <h3>
-                视觉设计
-              </h3>
-              <p>
-                建立红、金、米白的中国风系统。
-              </p>
-            </article>
-            <article class="making-card" data-step="04">
-              <h3>
-                响应适配
-              </h3>
-              <p>
-                调整桌面、平板与手机端布局。
-              </p>
+            <article class="ai-workshop-entry-card">
+              <span class="ai-workshop-icon" aria-hidden="true">创</span>
+              <span class="ai-workshop-badge ai-workshop-badge-unavailable">创作服务待接入</span>
+              <h3>AI角色创作</h3>
+              <p>让多个智能体协作理解传统京剧文化，辅助设计独具中国美学特色的原创角色。</p>
+              <a class="ai-workshop-text-link" href="#ai-workshop-create" data-ai-workshop-target="create">整理创作需求 <span aria-hidden="true">→</span></a>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section class="module learning">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">学习心得</span>
-            <h2 class="section-title">
-              代码之外，更重要的是表达
-            </h2>
+          <div class="ai-workshop-section-head ai-workshop-section-head-compact">
+            <h3>从文化理解，到数字表达</h3>
+            <p class="ai-workshop-description">下列是未来创作路径说明，当前未启动任何AI任务。</p>
           </div>
-          <div class="learning-notes">
-            <blockquote>
-            在制作京剧文化网站的过程中，我不仅学习了网页设计的基本知识，也更加了解了中国传统文化的魅力。从查找资料、整理内容，到设计页面和调整样式，每一个环节都需要认真完成。遇到问题时，我学会了自己查资料、分析原因并不断尝试解决。            </blockquote>
-            <div class="learning-list">
-              <div>
-                掌握 HTML5 语义化结构
+          <div class="ai-workshop-roadmap">
+            <article><span>01</span><h4>探寻文脉</h4><p>在真实资料中寻找依据</p></article>
+            <article><span>02</span><h4>协作构思</h4><p>研究、设计与文化审校</p></article>
+            <article><span>03</span><h4>描绘角色</h4><p>表达独具国风的概念</p></article>
+            <article><span>04</span><h4>走向三维</h4><p>从概念图到数字模型</p></article>
+          </div>
+          <p class="ai-workshop-feedback">现在可以切换功能、填写问题和整理创作草稿。知识问答、智能体执行、概念图与模型生成均尚未开放。</p>
+        </section>
+
+        <section id="ai-workshop-qa" class="ai-workshop-panel" data-ai-workshop-panel="qa" aria-labelledby="ai-workshop-qa-heading">
+          <div class="ai-workshop-section-head">
+            <span class="ai-workshop-kicker">问一段历史 · 识一抹脸谱</span>
+            <h2 id="ai-workshop-qa-heading" class="ai-workshop-heading" tabindex="-1">京剧AI智能问答</h2>
+            <p class="ai-workshop-description">让每一个问题，都有可以追溯的文化依据。</p>
+          </div>
+          <div class="ai-workshop-qa-layout">
+            <div class="ai-workshop-chat">
+              <div class="ai-workshop-card-header"><h3>与京剧知识相遇</h3><span class="ai-workshop-badge ai-workshop-badge-unavailable">服务未接入</span></div>
+              <div id="ai-workshop-messages" class="ai-workshop-message-list" role="log" aria-label="问题与服务通知" aria-live="polite" aria-relevant="additions">
+                <article class="ai-workshop-message" data-message-role="notice"><strong>服务说明</strong><p>这里尚未提供AI回答。你可以尝试填写问题，查看输入与操作反馈。</p></article>
               </div>
-              <div>
-                学会CSS样式设计与页面美化
+              <div class="ai-workshop-suggestions" aria-label="推荐问题">
+                <span class="ai-workshop-label">不妨从这些问题开始</span>
+                <button class="ai-workshop-question" type="button" data-ai-workshop-question="京剧中的生旦净丑有什么区别？">生旦净丑有什么区别？</button>
+                <button class="ai-workshop-question" type="button" data-ai-workshop-question="京剧脸谱的颜色有什么寓意？">脸谱颜色有什么寓意？</button>
+                <button class="ai-workshop-question" type="button" data-ai-workshop-question="京剧武生的服饰有什么特点？">武生服饰有什么特点？</button>
+                <button class="ai-workshop-question" type="button" data-ai-workshop-question="《霸王别姬》有哪些代表性人物？">《霸王别姬》有哪些人物？</button>
               </div>
-              <div>
-                学会为不同屏幕设计响应式界面
-              </div>
+              <form id="ai-workshop-question-form" class="ai-workshop-form" novalidate>
+                <label class="ai-workshop-label" for="ai-workshop-question">你的京剧问题</label>
+                <textarea id="ai-workshop-question" class="ai-workshop-input" rows="3" maxlength="600" placeholder="写下你想了解的京剧知识……" aria-describedby="ai-workshop-question-error ai-workshop-question-count"></textarea>
+                <p id="ai-workshop-question-error" class="ai-workshop-feedback ai-workshop-feedback-error" role="alert" hidden></p>
+                <div class="ai-workshop-form-footer"><span id="ai-workshop-question-count">0 / 600 字</span><button id="ai-workshop-send" class="ai-workshop-button" type="submit" disabled>发送问题 <span aria-hidden="true">↑</span></button></div>
+              </form>
+              <p id="ai-workshop-qa-status" class="ai-workshop-feedback" role="status" aria-live="polite" data-service-state="unavailable">知识问答服务尚未接入，当前不会生成AI答案。</p>
+              <p id="ai-workshop-qa-loading" class="ai-workshop-feedback" role="status" hidden>等待知识服务响应……</p>
+              <p id="ai-workshop-qa-service-error" class="ai-workshop-feedback ai-workshop-feedback-error" role="alert" hidden></p>
             </div>
+            <aside class="ai-workshop-reference" aria-labelledby="ai-workshop-reference-heading">
+              <span class="ai-workshop-icon" aria-hidden="true">据</span>
+              <h3 id="ai-workshop-reference-heading">知识来源与引用</h3>
+              <div id="ai-workshop-citations" class="ai-workshop-placeholder"><p>暂无知识引用</p><small>接入私有知识库后，此处将展示真实资料名称、引用位置及依据片段。</small></div>
+              <p class="ai-workshop-description">资料不足时，应如实说明不确定性，让文化传播有据可循。</p>
+            </aside>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="module">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">课程作业</span>
-            <h2 class="section-title">
-              作品完成情况
-            </h2>
+        <section id="ai-workshop-agents" class="ai-workshop-panel" data-ai-workshop-panel="agents" aria-labelledby="ai-workshop-agents-heading">
+          <div class="ai-workshop-section-head">
+            <span class="ai-workshop-kicker">各司其职 · 共成一戏</span>
+            <h2 id="ai-workshop-agents-heading" class="ai-workshop-heading" tabindex="-1">多Agent协作工作台</h2>
+            <p class="ai-workshop-description">规划先行、文化为据、创意表达、审校把关。当前为职责与流程说明，执行服务尚未接入。</p>
           </div>
-          <article class="assignment-card">
-            <div class="assignment-label">
-              <strong>期末作品</strong><span>京剧非遗文化专题网站</span>
+          <div class="ai-workshop-progress"><span class="ai-workshop-badge ai-workshop-badge-unavailable">协作服务未接入</span><strong>任务尚未开始</strong><span>进度与执行摘要将在真实任务启动后展示。</span></div>
+          <div class="ai-workshop-agent-grid">
+            <article class="ai-workshop-agent-card">
+              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">01 · 筹</span><span class="ai-workshop-status" data-state="pending">待执行</span></div>
+              <h3>任务规划Agent</h3><p class="ai-workshop-agent-duty">理解用户需求，制定创作任务。</p>
+              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>梳理角色定位、使用场景与风格要求，形成明确的任务目标。关键信息不足时，需要用户补充确认。</p><p>预期交接：用户确认后的创作任务。当前暂无执行摘要。</p></details>
+            </article>
+            <article class="ai-workshop-agent-card">
+              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">02 · 研</span><span class="ai-workshop-status" data-state="pending">待执行</span></div>
+              <h3>京剧研究Agent</h3><p class="ai-workshop-agent-duty">检索京剧文化知识，提取真实文化依据。</p>
+              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>围绕行当、脸谱、服饰与剧目检索资料，区分资料原意与创作延伸，保留可追溯的来源。</p><p>预期交接：文化依据与资料引用。当前暂无执行摘要。</p></details>
+            </article>
+            <article class="ai-workshop-agent-card">
+              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">03 · 绘</span><span class="ai-workshop-status" data-state="pending">待执行</span></div>
+              <h3>角色设计Agent</h3><p class="ai-workshop-agent-duty">结合文化元素生成创意角色方案。</p>
+              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>在已确认的任务与文化依据上组织角色造型、色彩和设计说明，清楚标明哪些属于原创表达。</p><p>预期交接：角色设计方案。当前暂无执行摘要。</p></details>
+            </article>
+            <article class="ai-workshop-agent-card">
+              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">04 · 校</span><span class="ai-workshop-status" data-state="pending">待执行</span></div>
+              <h3>文化审校Agent</h3><p class="ai-workshop-agent-duty">检查文化依据、设计合理性与潜在错误。</p>
+              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>核对文化来源与设计表述，对不确定内容提出修订建议。涉及关键创作选择时，交由用户最终确认。</p><p>预期交接：审校意见与待确认事项。当前暂无执行摘要。</p></details>
+            </article>
+          </div>
+          <div class="ai-workshop-card">
+            <h3>协作流程说明</h3>
+            <ol class="ai-workshop-flow"><li>你提出创作需求</li><li>任务规划</li><li>文化研究</li><li>角色设计</li><li>文化审校</li><li>你确认最终方案</li></ol>
+            <p class="ai-workshop-description">需要修改或资料不足时，流程应回到相应环节。这是未来工作流说明，并非当前任务执行记录。</p>
+            <div class="ai-workshop-state-legend" aria-label="未来状态含义示意，非实时执行记录">
+              <span class="ai-workshop-status" data-state="pending">待执行</span><span class="ai-workshop-status" data-state="running">运行中</span><span class="ai-workshop-status" data-state="completed">已完成</span><span class="ai-workshop-status" data-state="failed">执行失败</span><span class="ai-workshop-status" data-state="awaiting_confirmation">等待用户确认</span>
             </div>
-            <div class="assignment-info">
-              <ul>
-                <li>
-                  全站共 8 个相互链接的 HTML 页面
-                </li>
-                <li>
-                  使用 1 个公共样式和 8 个页面细调样式
-                </li>
-                <li>
-                  纯 HTML5 + CSS3，无 JavaScript 与外部框架
-                </li>
-                <li>
-                  包含图片、音频、视频及多种悬浮效果
-                </li>
-                <li>
-                  支持桌面端与移动端响应式浏览
-                </li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="module message-area">
-        <div class="container message-card">
-          <div>
-            <span class="eyebrow">留言交流</span>
-            <h2 class="section-title">
-              写下你的观后感
-            </h2>
-
+            <small class="ai-workshop-description">以上为状态含义示意，非实时执行记录。</small>
+            <button class="ai-workshop-text-link" type="button" data-ai-workshop-notice="Agent执行服务尚未接入，当前没有真实执行摘要。">执行摘要 · 待接入</button>
           </div>
-          <form class="message-form" action="#" method="get">
-            <label for="visitor">你的称呼</label><input id="visitor" name="visitor" type="text" placeholder="请输入称呼"><label for="message">想说的话</label><textarea id="message" name="message" placeholder="写下对网站或京剧文化的感受"></textarea><button class="btn" type="submit">完成填写</button>
-          </form>
-        </div>
-      </section>
-      <div class="back-top-wrap">
-        <a class="back-top" href="#" aria-label="回到页面最顶部"><span>↑</span> 回到顶部</a>
+        </section>
+
+        <section id="ai-workshop-create" class="ai-workshop-panel" data-ai-workshop-panel="create" aria-labelledby="ai-workshop-create-heading">
+          <div class="ai-workshop-section-head">
+            <span class="ai-workshop-kicker">以传统为灵感 · 以想象为笔</span>
+            <h2 id="ai-workshop-create-heading" class="ai-workshop-heading" tabindex="-1">AI角色创作</h2>
+            <p class="ai-workshop-description">先写下你心中的角色。当前可以整理页面内草稿，AI设计和概念图生成尚未开放。</p>
+          </div>
+          <div class="ai-workshop-create-layout">
+            <form id="ai-workshop-creation-form" class="ai-workshop-form ai-workshop-card" novalidate>
+              <h3>你的创作需求</h3>
+              <label class="ai-workshop-label" for="ai-workshop-brief">角色设想 <small>最多1200字</small></label>
+              <textarea id="ai-workshop-brief" class="ai-workshop-input" rows="7" maxlength="1200" placeholder="例如：设计一位以武生为灵感的原创国风角色，适合用于非遗文化展览。请描述用途、性格、造型与希望保留的京剧元素。" aria-describedby="ai-workshop-brief-error"></textarea>
+              <p id="ai-workshop-brief-error" class="ai-workshop-feedback ai-workshop-feedback-error" role="alert" hidden></p>
+              <label class="ai-workshop-label" for="ai-workshop-style">风格意向</label>
+              <select id="ai-workshop-style" class="ai-workshop-input"><option value="京剧写意">京剧写意</option><option value="国风幻想">国风幻想</option><option value="舞台角色">舞台角色</option></select>
+              <div class="ai-workshop-form-footer"><button id="ai-workshop-save-draft" class="ai-workshop-button" type="submit" disabled>整理我的草稿</button><button id="ai-workshop-reset-draft" class="ai-workshop-button ai-workshop-button-secondary" type="button">清空草稿</button></div>
+              <p class="ai-workshop-description">草稿仅保留在当前页面，刷新后清空；不会上传，也不是AI生成的设计。</p>
+            </form>
+            <aside class="ai-workshop-card">
+              <h3>创作草稿与设计说明</h3><span class="ai-workshop-badge">用户草稿 · 非AI输出</span>
+              <div id="ai-workshop-draft-content" class="ai-workshop-draft"><p>尚未整理草稿，请先填写左侧需求。</p></div>
+              <p id="ai-workshop-draft-status" class="ai-workshop-feedback" role="status" aria-live="polite">未来的角色设计说明将在真实服务接入后单独展示。</p>
+              <button class="ai-workshop-button" type="button" disabled aria-describedby="ai-workshop-concept-status">AI生成概念图 · 待开放</button>
+            </aside>
+          </div>
+          <div class="ai-workshop-card ai-workshop-concept-card">
+            <h3>AI概念图预览</h3>
+            <div class="ai-workshop-placeholder"><span class="ai-workshop-icon" aria-hidden="true">绘</span><p>尚无生成的概念图</p><small id="ai-workshop-concept-status">图像生成服务将在Phase 4接入。这里当前没有AI生成图片。</small></div>
+            <a class="ai-workshop-text-link" href="#ai-workshop-agents" data-ai-workshop-target="agents">了解Agent协作流程 →</a>
+            <a class="ai-workshop-text-link" href="#ai-workshop-model" data-ai-workshop-target="model">查看图生3D入口 →</a>
+          </div>
+        </section>
+
+        <section id="ai-workshop-model" class="ai-workshop-panel" data-ai-workshop-panel="model" aria-labelledby="ai-workshop-model-heading">
+          <div class="ai-workshop-section-head">
+            <span class="ai-workshop-kicker">从二维意象 · 到三维新境</span>
+            <h2 id="ai-workshop-model-heading" class="ai-workshop-heading" tabindex="-1">Neural4D图生3D</h2>
+            <p class="ai-workshop-description">未来将以角色概念图创建三维文化IP。当前仅提供入口与待接入状态。</p>
+          </div>
+          <div class="ai-workshop-model-layout">
+            <div class="ai-workshop-model-viewport" role="region" aria-label="未来3D模型查看器，目前没有模型">
+              <span class="ai-workshop-icon" aria-hidden="true">境</span><h3>3D模型查看器 · 待接入</h3><p>尚无模型可供查看</p><small>此处是空态容器，没有静态图片或可交互3D模型。</small>
+            </div>
+            <aside class="ai-workshop-card">
+              <span class="ai-workshop-badge ai-workshop-badge-unavailable">Neural4D服务未接入</span><h3>模型生成任务</h3>
+              <dl class="ai-workshop-task-info"><div><dt>概念图</dt><dd>尚未生成</dd></div><div><dt>任务状态</dt><dd>尚未提交</dd></div><div><dt>生成进度</dt><dd>暂无任务</dd></div></dl>
+              <p id="ai-workshop-model-status" class="ai-workshop-feedback">图像上传、任务提交与模型查看将在Phase 4开放。</p>
+              <button class="ai-workshop-button" type="button" disabled aria-describedby="ai-workshop-model-status">提交图生3D任务 · 待开放</button>
+              <div class="ai-workshop-download"><h4>模型下载</h4><p>真实模型生成完成后，将在此提供下载。</p><button class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>下载模型 · 暂不可用</button></div>
+              <a class="ai-workshop-text-link" href="#ai-workshop-create" data-ai-workshop-target="create">返回整理角色需求 →</a>
+            </aside>
+          </div>
+        </section>
       </div>
+      <div class="back-top-wrap"><a class="back-top" href="#" aria-label="回到页面最顶部"><span>↑</span> 回到顶部</a></div>
     </main>
     <footer class="site-footer">
       <div class="container">
@@ -234,7 +250,7 @@
               梨园风华
             </h2>
             <p>
-              一次课程实践，一场非遗文化之旅。
+              让文化有据，让创意入戏。
             </p>
           </div>
           <div>
@@ -257,7 +273,7 @@
             <h3>
               作品标签
             </h3>
-            <span class="tag">课程作业</span><span class="tag">网页设计</span><span class="tag">京剧非遗</span>
+            <span class="tag">戏境AI</span><span class="tag">文化创作</span><span class="tag">京剧非遗</span>
           </div>
         </div>
         <p class="copyright">
