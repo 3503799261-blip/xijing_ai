@@ -391,7 +391,7 @@
     padding: 22px;
   }
 }
-/* Match the complete navigation bar to the inner-page dimensions.
+/* Fit the longer workshop label without wrapping the desktop navigation.
    This is home-page-only; shared navigation styles remain untouched. */
 .home-page .nav-list {
   width: max-content;

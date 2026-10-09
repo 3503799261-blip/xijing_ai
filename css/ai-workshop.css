@@ -1064,6 +1064,7 @@ textarea.ai-workshop-input {
 }
 
 .ai-workshop-notice {
+  scroll-margin-top: var(--ai-workshop-scroll-offset, 108px);
   margin: 22px 0;
   padding: 17px 20px;
   color: #765238;
@@ -1076,6 +1077,10 @@ textarea.ai-workshop-input {
 
 .ai-workshop-notice p {
   margin: 0;
+}
+
+.ai-workshop-heading {
+  scroll-margin-top: var(--ai-workshop-scroll-offset, 108px);
 }
 
 .ai-workshop-sr-only {

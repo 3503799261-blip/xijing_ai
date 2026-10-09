@@ -43,6 +43,13 @@ function initializeWorkshop() {
   const initialDraftText = draftContent.textContent.trim();
   let activePanel = null;
 
+  function updateScrollOffset() {
+    const header = document.querySelector('.site-header');
+    root.style.setProperty('--ai-workshop-scroll-offset', `${(header?.offsetHeight ?? 82) + 24}px`);
+  }
+  updateScrollOffset();
+  window.addEventListener('resize', updateScrollOffset);
+
   const panelFromHash = () => {
     const match = window.location.hash.match(/^#ai-workshop-(overview|qa|agents|create|model)$/);
     if (match) return match[1];
