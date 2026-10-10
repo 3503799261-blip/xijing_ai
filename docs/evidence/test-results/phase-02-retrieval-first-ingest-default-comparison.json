@@ -1,0 +1,103 @@
+{
+  "status": "completed",
+  "metadata": {
+    "executionStartedAt": "2026-10-10T13:03:47.889105+08:00",
+    "runLabel": "first-ingest-default",
+    "evaluationKind": "local_embedding_retrieval_candidates",
+    "annotationScope": "assistant_source_checked_candidate",
+    "humanGoldLabels": false,
+    "llmProviderInvoked": false,
+    "topK": 5,
+    "modeOrder": "alternating per question, after one vector warmup; model loading excluded from per-query latency",
+    "thresholdSource": "Settings.retrieval_min_score",
+    "scriptSHA256": "21473309f69781016930f89b09673e14e7e00158123f0020b7a40e239c40f03b",
+    "pythonVersion": "3.11.1",
+    "dependencies": {
+      "sentence-transformers": "6.1.0",
+      "torch": "2.11.0",
+      "qdrant-client": "1.19.1",
+      "pydantic-settings": "2.15.0"
+    },
+    "questionSetSHA256": "9734e4e6484c3450e2177d91602c19e11501e3611faa82d65cc26d99e155ed1d",
+    "threshold": 0.62,
+    "modelAndIndexLoadSeconds": 13.654656,
+    "index": {
+      "generation_id": "gen-20261010T050104-5bf46e2d",
+      "corpus_hash": "156208ab5b00994be016b6d7d29b60ba4c9f462cf1d0056899f542308dda8cdb",
+      "documents": 12,
+      "chunks": 35,
+      "model_id": "BAAI/bge-small-zh-v1.5",
+      "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+      "dimension": 512,
+      "distance": "Cosine",
+      "review_scope": "assistant source-checked original facts; human review pending"
+    },
+    "annotationIndexIssues": [],
+    "warmupSeconds": 0.019169,
+    "executionFinishedAt": "2026-10-10T13:04:01.973311+08:00"
+  },
+  "summaries": {
+    "vector": {
+      "metricScope": "Assistant source-checked candidate annotations; not human gold Recall@5 or answer correctness.",
+      "questionCount": 20,
+      "completedCount": 20,
+      "failedCount": 0,
+      "supportedCandidateCount": 18,
+      "insufficientCandidateCount": 2,
+      "candidateEvidenceCoverageAt5Macro": 0.9027777777777778,
+      "candidateEvidenceCoverageAt5Micro": 0.8888888888888888,
+      "candidateSourceCoverageAt5Macro": 0.9166666666666666,
+      "allCandidateSectionsFoundCount": 15,
+      "anyCandidateSectionFoundCount": 17,
+      "candidateInsufficiencyAgreement": 0.95,
+      "supportedCandidatesWithoutEvidence": [
+        "opera-q12"
+      ],
+      "insufficientCandidatesWithAcceptedEvidence": [],
+      "candidateEvidenceMissingQuestions": [
+        "opera-q04",
+        "opera-q12",
+        "opera-q16"
+      ],
+      "canonicalEvidenceIntegrityRate": 1.0,
+      "canonicalEvidenceChecks": 32,
+      "meanRetrievalSeconds": 0.008885,
+      "minRetrievalSeconds": 0.0078,
+      "maxRetrievalSeconds": 0.0102
+    },
+    "hybrid": {
+      "metricScope": "Assistant source-checked candidate annotations; not human gold Recall@5 or answer correctness.",
+      "questionCount": 20,
+      "completedCount": 20,
+      "failedCount": 0,
+      "supportedCandidateCount": 18,
+      "insufficientCandidateCount": 2,
+      "candidateEvidenceCoverageAt5Macro": 0.9027777777777778,
+      "candidateEvidenceCoverageAt5Micro": 0.8888888888888888,
+      "candidateSourceCoverageAt5Macro": 0.9166666666666666,
+      "allCandidateSectionsFoundCount": 15,
+      "anyCandidateSectionFoundCount": 17,
+      "candidateInsufficiencyAgreement": 0.95,
+      "supportedCandidatesWithoutEvidence": [
+        "opera-q12"
+      ],
+      "insufficientCandidatesWithAcceptedEvidence": [],
+      "candidateEvidenceMissingQuestions": [
+        "opera-q04",
+        "opera-q12",
+        "opera-q16"
+      ],
+      "canonicalEvidenceIntegrityRate": 1.0,
+      "canonicalEvidenceChecks": 32,
+      "meanRetrievalSeconds": 0.010115,
+      "minRetrievalSeconds": 0.0087,
+      "maxRetrievalSeconds": 0.0136
+    }
+  },
+  "reports": {
+    "vector": "phase-02-retrieval-first-ingest-default-vector.json",
+    "hybrid": "phase-02-retrieval-first-ingest-default-hybrid.json"
+  },
+  "latencyLimitation": "Local CPU timing for this run; alternating order reduces but does not eliminate warm/cache effects. No LLM latency or API charges are measured.",
+  "hybridMinusVectorCandidateCoverageAt5": 0.0
+}

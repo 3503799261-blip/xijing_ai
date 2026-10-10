@@ -1,0 +1,121 @@
+{
+  "success": true,
+  "realEmbedding": "BAAI/bge-small-zh-v1.5",
+  "dimension": 512,
+  "scope": "isolated copy, actual CPU vectors, persistent SQLite/Qdrant; original corpus unchanged; no LLM requests",
+  "elapsedSeconds": 16.6563,
+  "checks": [
+    {
+      "step": "isolated_initial",
+      "result": {
+        "status": "built",
+        "added": 12,
+        "updated": 0,
+        "skipped": 0,
+        "failed": 0,
+        "generation_id": "gen-20261010T052132-b5f7a7f1",
+        "corpus_hash": "156208ab5b00994be016b6d7d29b60ba4c9f462cf1d0056899f542308dda8cdb",
+        "documents": 12,
+        "chunks": 35,
+        "duplicates_skipped": 0,
+        "model_id": "BAAI/bge-small-zh-v1.5",
+        "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+        "dimension": 512,
+        "distance": "Cosine",
+        "chunking": {
+          "target_chars": 350,
+          "overlap_chars": 70,
+          "max_tokens": 480,
+          "vector_text": "content"
+        },
+        "created_at": "2026-10-10T05:21:47.763558+00:00",
+        "review_scope": "assistant source-checked original facts; human review pending",
+        "elapsed_seconds": 15.3894
+      }
+    },
+    {
+      "step": "repeat",
+      "result": {
+        "status": "unchanged",
+        "added": 0,
+        "updated": 0,
+        "skipped": 12,
+        "failed": 0,
+        "generation_id": "gen-20261010T052132-b5f7a7f1",
+        "documents": 12,
+        "chunks": 35,
+        "elapsed_seconds": 0.0126
+      }
+    },
+    {
+      "step": "reopen_and_search",
+      "passed": true,
+      "evidenceCount": 2
+    },
+    {
+      "step": "concurrent_writer_rejected",
+      "passed": true,
+      "exceptionType": "AlreadyLocked"
+    },
+    {
+      "step": "content_update",
+      "result": {
+        "status": "built",
+        "added": 0,
+        "updated": 12,
+        "skipped": 0,
+        "failed": 0,
+        "generation_id": "gen-20261010T052147-a7febfbb",
+        "corpus_hash": "2bd1d01e32e1d5aff7cee4121cef93f981cc3077dbaa68f9b697a472d6e142d8",
+        "documents": 12,
+        "chunks": 35,
+        "duplicates_skipped": 0,
+        "model_id": "BAAI/bge-small-zh-v1.5",
+        "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+        "dimension": 512,
+        "distance": "Cosine",
+        "chunking": {
+          "target_chars": 350,
+          "overlap_chars": 70,
+          "max_tokens": 480,
+          "vector_text": "content"
+        },
+        "created_at": "2026-10-10T05:21:48.462395+00:00",
+        "review_scope": "assistant source-checked original facts; human review pending",
+        "elapsed_seconds": 0.5248
+      }
+    },
+    {
+      "step": "explicit_rebuild",
+      "result": {
+        "status": "built",
+        "added": 0,
+        "updated": 12,
+        "skipped": 0,
+        "failed": 0,
+        "generation_id": "gen-20261010T052148-e8cc5a80",
+        "corpus_hash": "2bd1d01e32e1d5aff7cee4121cef93f981cc3077dbaa68f9b697a472d6e142d8",
+        "documents": 12,
+        "chunks": 35,
+        "duplicates_skipped": 0,
+        "model_id": "BAAI/bge-small-zh-v1.5",
+        "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+        "dimension": 512,
+        "distance": "Cosine",
+        "chunking": {
+          "target_chars": 350,
+          "overlap_chars": 70,
+          "max_tokens": 480,
+          "vector_text": "content"
+        },
+        "created_at": "2026-10-10T05:21:48.979374+00:00",
+        "review_scope": "assistant source-checked original facts; human review pending",
+        "elapsed_seconds": 0.5169
+      }
+    },
+    {
+      "step": "invalid_update_keeps_previous_active",
+      "passed": true
+    }
+  ]
+}

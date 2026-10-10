@@ -1,0 +1,61 @@
+{
+  "source": {
+    "source_id": "cnpoc-jing",
+    "title": "京剧净行小讲堂",
+    "category": "京剧行当",
+    "author_or_organization": "国家京剧院",
+    "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/202505/1429cdcaf7384ed985ac6b90b8af2309.shtml",
+    "publication_date": "2025-05-16",
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "该院入门课堂的正净、副净、武净分类；举例适用于所列剧目人物。",
+    "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "cnpoc-jing-zheng",
+      "title": "正净与铜锤花脸",
+      "locator": "正文（1）正净",
+      "content": "正净又称大花脸、铜锤花脸，表演侧重唱功。国家京剧院课堂以《铡美案》的包拯说明这一类型。",
+      "entity_names": [
+        "正净",
+        "大花脸",
+        "铜锤花脸",
+        "铡美案",
+        "包拯"
+      ]
+    },
+    {
+      "section_id": "cnpoc-jing-fu",
+      "title": "副净与架子花脸",
+      "locator": "正文（2）副净",
+      "content": "副净也叫二花脸、架子花脸，重念白和身段，同时要求武功与唱功。该课堂以《野猪林》的鲁智深作为例子。",
+      "entity_names": [
+        "副净",
+        "二花脸",
+        "架子花脸",
+        "野猪林",
+        "鲁智深"
+      ]
+    },
+    {
+      "section_id": "cnpoc-jing-wu",
+      "title": "武净与摔打花脸",
+      "locator": "正文（3）武净",
+      "content": "武净又有武花脸、武二花、摔打花脸等称呼，侧重武打。该课堂以《艳阳楼》的高登为例，不能把这一人物例子推广为所有净角。",
+      "entity_names": [
+        "武净",
+        "武花脸",
+        "武二花",
+        "摔打花脸",
+        "艳阳楼",
+        "高登"
+      ]
+    }
+  ]
+}

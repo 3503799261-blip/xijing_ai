@@ -1,0 +1,31 @@
+{
+  "checked_at_client_date": "2026-10-10",
+  "test_kind": "corpus_schema_and_reference_validation",
+  "passed": true,
+  "documents": 12,
+  "sections": 35,
+  "summary_characters": 1960,
+  "question_count": 20,
+  "supported_questions": 18,
+  "insufficient_questions": 2,
+  "cross_source_questions": 3,
+  "human_reviewed_questions": 0,
+  "question_categories": {
+    "基础知识": 6,
+    "行当和人物": 5,
+    "脸谱与服饰": 4,
+    "跨片段": 3,
+    "资料不足": 2
+  },
+  "checks": [
+    "required source metadata",
+    "unique source and section identifiers",
+    "official source URL hosts",
+    "all manifest documents exist",
+    "no exact duplicate summary sections",
+    "question evidence IDs point to actual sections",
+    "unknown publication dates remain null",
+    "assistant-only review states preserved"
+  ],
+  "scope": "Mechanical consistency only; no Embedding, retrieval, LLM or human correctness evaluation was run by this check."
+}

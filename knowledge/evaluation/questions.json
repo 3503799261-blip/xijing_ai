@@ -1,0 +1,348 @@
+[
+  {
+    "id": "opera-q01",
+    "category": "基础知识",
+    "question": "四大徽班指哪四个戏班？它们进京与京剧形成是什么关系？",
+    "expected_facts": [
+      "三庆、四喜、春台、和春",
+      "徽班进京后与多种戏曲交流融合，不能将进京等同于剧种瞬间形成"
+    ],
+    "expected_source_ids": [
+      "ihchina-jingju"
+    ],
+    "expected_section_ids": [
+      "ihchina-jingju-history"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q02",
+    "category": "基础知识",
+    "question": "京剧主要使用哪两种声腔？",
+    "expected_facts": [
+      "西皮、二簧"
+    ],
+    "expected_source_ids": [
+      "ihchina-jingju"
+    ],
+    "expected_section_ids": [
+      "ihchina-jingju-music"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q03",
+    "category": "基础知识",
+    "question": "京剧伴奏中的文场和武场分别以哪些乐器为主？",
+    "expected_facts": [
+      "文场以京胡等丝竹乐器为主",
+      "武场以鼓板、大小锣等打击乐器为主"
+    ],
+    "expected_source_ids": [
+      "ihchina-jingju"
+    ],
+    "expected_section_ids": [
+      "ihchina-jingju-accompaniment"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q04",
+    "category": "基础知识",
+    "question": "京剧里的行当是什么意思？生、旦、净、丑分别表现什么类型的角色？",
+    "expected_facts": [
+      "行当是角色及表演程式的分类",
+      "生主要表现净、丑之外的男性角色；旦表现女性角色",
+      "净常为花脸形象；丑常承担喜剧表演"
+    ],
+    "expected_source_ids": [
+      "fujian-roles"
+    ],
+    "expected_section_ids": [
+      "fujian-roles-system",
+      "fujian-roles-sheng-dan",
+      "fujian-roles-jing",
+      "fujian-roles-chou"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q05",
+    "category": "基础知识",
+    "question": "梅派由谁开创，属于什么行当的流派？",
+    "expected_facts": [
+      "梅兰芳开创",
+      "旦角流派，流派与行当不是同一分类层级"
+    ],
+    "expected_source_ids": [
+      "cnpoc-mei"
+    ],
+    "expected_section_ids": [
+      "cnpoc-mei-founder"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q06",
+    "category": "基础知识",
+    "question": "《三岔口》中的任堂惠和刘利华为什么在夜里交手，误会怎样化解？",
+    "expected_facts": [
+      "刘利华误认任堂惠为敌",
+      "焦赞赶到后化解误会"
+    ],
+    "expected_source_ids": [
+      "cnpoc-sanchakou"
+    ],
+    "expected_section_ids": [
+      "cnpoc-sanchakou-misunderstanding"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q07",
+    "category": "行当和人物",
+    "question": "老生与小生在角色年龄和髯口使用上有什么常见区别？",
+    "expected_facts": [
+      "老生通常表现中老年男子，常戴髯口",
+      "小生多为青年男子，一般不戴髯口"
+    ],
+    "expected_source_ids": [
+      "ncfta-male-roles"
+    ],
+    "expected_section_ids": [
+      "ncfta-male-roles-laosheng",
+      "ncfta-male-roles-xiaosheng"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q08",
+    "category": "行当和人物",
+    "question": "长靠武生与短打武生的服饰和动作有什么区别？",
+    "expected_facts": [
+      "长靠武生穿大靠、厚底靴，身段稳健",
+      "短打武生穿短衣、薄底靴，动作轻捷"
+    ],
+    "expected_source_ids": [
+      "ncfta-male-roles"
+    ],
+    "expected_section_ids": [
+      "ncfta-male-roles-wusheng"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q09",
+    "category": "行当和人物",
+    "question": "正净、副净、武净分别侧重哪些表演技巧？",
+    "expected_facts": [
+      "正净重唱功",
+      "副净重念白和身段，并需武功唱功",
+      "武净侧重武打"
+    ],
+    "expected_source_ids": [
+      "cnpoc-jing"
+    ],
+    "expected_section_ids": [
+      "cnpoc-jing-zheng",
+      "cnpoc-jing-fu",
+      "cnpoc-jing-wu"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q10",
+    "category": "行当和人物",
+    "question": "青衣与花旦的表演侧重有什么常见差别？",
+    "expected_facts": [
+      "青衣常表现稳重女性，重唱功",
+      "花旦常表现年轻活泼女性，偏重做功说白",
+      "是入门概括，具体表演须结合剧目"
+    ],
+    "expected_source_ids": [
+      "cnpoc-dan"
+    ],
+    "expected_section_ids": [
+      "cnpoc-dan-qingyi-huadan"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q11",
+    "category": "行当和人物",
+    "question": "刀马旦与武旦在服饰和表演上有哪些区别？",
+    "expected_facts": [
+      "刀马旦常见硬靠、雉尾，重唱念舞蹈",
+      "武旦常着短装，更侧重武打和打出手"
+    ],
+    "expected_source_ids": [
+      "cnpoc-dan"
+    ],
+    "expected_section_ids": [
+      "cnpoc-dan-daoma-wu"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q12",
+    "category": "脸谱与服饰",
+    "question": "京剧脸谱的红色作主色和作副色，意义一定相同吗？",
+    "expected_facts": [
+      "主色常表达关羽等人物的忠勇形象",
+      "副色可有不同寓意，须结合人物与使用部位"
+    ],
+    "expected_source_ids": [
+      "cnpoc-face"
+    ],
+    "expected_section_ids": [
+      "cnpoc-face-colors"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q13",
+    "category": "脸谱与服饰",
+    "question": "三块瓦脸的名称和哪些脸部区域有关？",
+    "expected_facts": [
+      "两块眉区、一块鼻窝",
+      "在整脸基础上发展，有不同变式"
+    ],
+    "expected_source_ids": [
+      "cnpoc-face"
+    ],
+    "expected_section_ids": [
+      "cnpoc-face-three-tiles"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q14",
+    "category": "脸谱与服饰",
+    "question": "京剧中的靠是什么？靠旗还有什么名称和用途？",
+    "expected_facts": [
+      "表现男女将帅铠甲的戏服",
+      "靠旗也叫护背旗，用于装饰和辅助表演"
+    ],
+    "expected_source_ids": [
+      "cnpoc-costume"
+    ],
+    "expected_section_ids": [
+      "cnpoc-costume-kao"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q15",
+    "category": "脸谱与服饰",
+    "question": "京剧里的蟒袍一般在什么身份和场合使用？黄蟒可表示什么？",
+    "expected_facts": [
+      "帝后、贵族、高级官员的正式场合",
+      "黄蟒可表示皇帝上朝"
+    ],
+    "expected_source_ids": [
+      "cnpoc-costume"
+    ],
+    "expected_section_ids": [
+      "cnpoc-costume-mang"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q16",
+    "category": "跨片段",
+    "question": "红色和黑色脸谱能否直接判断所有角色的性格？请分别说明一种限制。",
+    "expected_facts": [
+      "红色主色与副色的寓意可能不同",
+      "黑色也可涉及肤色、勇猛或眉眼表现，不是统一人格标签"
+    ],
+    "expected_source_ids": [
+      "cnpoc-face",
+      "cnpoc-bao"
+    ],
+    "expected_section_ids": [
+      "cnpoc-face-colors",
+      "cnpoc-bao-black"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q17",
+    "category": "跨片段",
+    "question": "京剧《霸王别姬》的核心人物是谁？它与梅派及剑舞有什么关系？",
+    "expected_facts": [
+      "核心人物是项羽、虞姬",
+      "资料将该剧列为梅派代表作品，剑舞体现舞蹈化表演"
+    ],
+    "expected_source_ids": [
+      "cnpoc-bawang",
+      "cnpoc-mei"
+    ],
+    "expected_section_ids": [
+      "cnpoc-bawang-characters",
+      "cnpoc-mei-repertoire"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q18",
+    "category": "跨片段",
+    "question": "《穆桂英挂帅》的京剧版本哪一年由谁根据什么剧种改编？它与梅派有何关系？",
+    "expected_facts": [
+      "1959年梅兰芳、陆静岩、袁韵宜根据同名豫剧改编",
+      "资料将该剧列为梅派代表作品"
+    ],
+    "expected_source_ids": [
+      "cnpoc-muguiying",
+      "cnpoc-mei"
+    ],
+    "expected_section_ids": [
+      "cnpoc-muguiying-adaptation",
+      "cnpoc-mei-repertoire"
+    ],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q19",
+    "category": "资料不足",
+    "question": "请介绍京剧演员“量子星河君”在1640年首演《星际霸王》的经历。",
+    "expected_facts": [
+      "说明当前资料不足或提问前提未获证实",
+      "不得编造演员、剧目、首演经历或来源"
+    ],
+    "expected_source_ids": [],
+    "expected_section_ids": [],
+    "expect_insufficient": true,
+    "annotation_status": "assistant_source_checked_candidate"
+  },
+  {
+    "id": "opera-q20",
+    "category": "资料不足",
+    "question": "如何配置 Kubernetes 集群的 GPU 资源调度？",
+    "expected_facts": [
+      "说明该问题超出当前京剧知识库覆盖范围",
+      "不得使用京剧资料强行生成技术答案或虚构引用"
+    ],
+    "expected_source_ids": [],
+    "expected_section_ids": [],
+    "expect_insufficient": true,
+    "annotation_status": "assistant_source_checked_candidate"
+  }
+]

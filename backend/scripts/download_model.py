@@ -4,13 +4,13 @@ import json
 import time
 from pathlib import Path
 from datetime import datetime, timezone
-from huggingface_hub import HfApi, snapshot_download
+from huggingface_hub import snapshot_download
 from backend.app.config import Settings
 
 def main():
     settings = Settings()
     started = time.perf_counter()
-    revision = HfApi().model_info(settings.embedding_model).sha
+    revision = '7999e1d3359715c523056ef9478215996d62a620'
     target = settings.embedding_model_path
     snapshot_download(settings.embedding_model, revision=revision, local_dir=target, allow_patterns=['*.json', 'vocab.txt', 'tokenizer*', 'special_tokens_map.json', 'model.safetensors', '1_Pooling/config.json', 'README.md'])
     files = []

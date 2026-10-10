@@ -1,0 +1,59 @@
+{
+  "source": {
+    "source_id": "cnpoc-face",
+    "title": "二、京剧脸谱",
+    "category": "京剧脸谱",
+    "author_or_organization": "国家京剧院",
+    "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+    "publication_date": "2008-07-10",
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "脸谱谱式及常见色彩表达；主色、副色、人物与剧目语境不能混为固定人格规则。",
+    "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "cnpoc-face-colors",
+      "title": "主色与副色的语境",
+      "locator": "脸谱的色彩—红色；京剧脸谱的分类第二段",
+      "content": "红色作主色时，常用于关羽等忠勇人物；作副色时可表达其他寓意。因此单个颜色不能脱离人物、谱式和使用部位解释成绝对人格标签。",
+      "entity_names": [
+        "脸谱",
+        "红色",
+        "主色",
+        "副色",
+        "关羽"
+      ]
+    },
+    {
+      "section_id": "cnpoc-face-three-tiles",
+      "title": "三块瓦脸的结构",
+      "locator": "京剧脸谱的分类—三块瓦脸",
+      "content": "三块瓦脸在整脸基础上突出两块眉区与一块鼻窝，所以有三块瓦之称；其下还有正、尖、花、老等不同变式。",
+      "entity_names": [
+        "脸谱",
+        "整脸",
+        "三块瓦脸",
+        "三块窝脸"
+      ]
+    },
+    {
+      "section_id": "cnpoc-face-symbolic",
+      "title": "象形脸与神仙脸",
+      "locator": "京剧脸谱的分类—象形脸、神仙脸",
+      "content": "象形脸常见于神话戏，依据神怪形象组织图案，不拘统一谱式。神仙脸可借金银色或线条表现神圣感；这是舞台造型语言，不是人物历史相貌。",
+      "entity_names": [
+        "象形脸",
+        "神仙脸",
+        "神话戏",
+        "金色",
+        "银色"
+      ]
+    }
+  ]
+}

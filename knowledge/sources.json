@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-10",
+  "corpus_kind": "original_fact_summary",
+  "human_review_status": "pending",
+  "sources": [
+    {
+      "source_id": "ihchina-jingju",
+      "document": "documents/ihchina-jingju.json",
+      "title": "京剧",
+      "category": "京剧历史",
+      "source_url": "https://www.ihchina.cn/project_details/13201",
+      "section_count": 3,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    },
+    {
+      "source_id": "fujian-roles",
+      "document": "documents/fujian-roles.json",
+      "title": "京剧的行当分类是什么？",
+      "category": "京剧行当",
+      "source_url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+      "section_count": 4,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    },
+    {
+      "source_id": "ncfta-male-roles",
+      "document": "documents/ncfta-male-roles.json",
+      "title": "京劇行當",
+      "category": "京剧行当",
+      "source_url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+      "section_count": 3,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    },
+    {
+      "source_id": "cnpoc-jing",
+      "document": "documents/cnpoc-jing.json",
+      "title": "京剧净行小讲堂",
+      "category": "京剧行当",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/202505/1429cdcaf7384ed985ac6b90b8af2309.shtml",
+      "section_count": 3,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    },
+    {
+      "source_id": "cnpoc-dan",
+      "document": "documents/cnpoc-dan.json",
+      "title": "京剧旦行小讲堂",
+      "category": "京剧行当",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+      "section_count": 3,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    },
+    {
+      "source_id": "cnpoc-face",
+      "document": "documents/cnpoc-face.json",
+      "title": "二、京剧脸谱",
+      "category": "京剧脸谱",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+      "section_count": 3,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    },
+    {
+      "source_id": "cnpoc-bao",
+      "document": "documents/cnpoc-bao.json",
+      "title": "包公为什么画黑脸？",
+      "category": "角色文化",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+      "section_count": 2,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    },
+    {
+      "source_id": "cnpoc-costume",
+      "document": "documents/cnpoc-costume.json",
+      "title": "京剧服装和人物身份有什么关系？",
+      "category": "京剧服饰",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+      "section_count": 4,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    },
+    {
+      "source_id": "cnpoc-bawang",
+      "document": "documents/cnpoc-bawang.json",
+      "title": "霸王别姬",
+      "category": "经典剧目",
+      "source_url": "https://www.cnpoc.cn/cnpoc/mbb/200806/2c0fcc00d04849efa36386594e273bae.shtml",
+      "section_count": 2,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    },
+    {
+      "source_id": "cnpoc-muguiying",
+      "document": "documents/cnpoc-muguiying.json",
+      "title": "穆桂英挂帅",
+      "category": "经典剧目",
+      "source_url": "https://www.cnpoc.cn/cnpoc/mbm/200806/677c0bbf8a594b35901c47ea19f50a03.shtml",
+      "section_count": 3,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    },
+    {
+      "source_id": "cnpoc-sanchakou",
+      "document": "documents/cnpoc-sanchakou.json",
+      "title": "三岔口",
+      "category": "经典剧目",
+      "source_url": "https://www.cnpoc.cn/cnpoc/mbs/200806/aa3b20102b2548378a92ccc640c25eb2.shtml",
+      "section_count": 2,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    },
+    {
+      "source_id": "cnpoc-mei",
+      "document": "documents/cnpoc-mei.json",
+      "title": "梅(兰芳)派",
+      "category": "角色文化",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+      "section_count": 3,
+      "review_status": "source_checked_by_assistant",
+      "content_kind": "original_fact_summary"
+    }
+  ]
+}

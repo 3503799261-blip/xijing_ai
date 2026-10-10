@@ -1,0 +1,78 @@
+[
+  {
+    "id": "opera-holdout-q01",
+    "category": "角色文化",
+    "question": "包公额头的白色弯月在舞台化妆中表达什么？能把它当作历史人物真的具备的能力吗？",
+    "expected_facts": [
+      "这一脸谱的白月牙表达舞台人物在阴阳两界主持正义的寓意。",
+      "应区分戏曲中的象征造型与真实历史能力；资料不能证明包拯具有超自然能力。"
+    ],
+    "expected_source_ids": ["cnpoc-bao"],
+    "expected_section_ids": ["cnpoc-bao-moon"],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate",
+    "annotation_source_urls": ["https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml"],
+    "evaluation_scope": "Question held out from 0.57 threshold selection; shares the existing corpus and assistant annotator; small exploratory check, not human gold or corpus holdout.",
+    "annotation_notes": "2026-10-10重新打开国家京剧院页面，核对正文月牙段；该section未出现在原20题的预期证据集中。人工复核待完成。"
+  },
+  {
+    "id": "opera-holdout-q02",
+    "category": "京剧服饰",
+    "question": "戏台上的褶子只能给平民穿吗？官员贵族在什么场合也会穿？",
+    "expected_facts": [
+      "褶子可以表现普通百姓的日常衣着，也可以表现官员或贵族的便装。",
+      "不能将褶子解释成仅供平民角色使用的服装。"
+    ],
+    "expected_source_ids": ["cnpoc-costume"],
+    "expected_section_ids": ["cnpoc-costume-zhe"],
+    "expect_insufficient": false,
+    "annotation_status": "assistant_source_checked_candidate",
+    "annotation_source_urls": ["https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml"],
+    "evaluation_scope": "Question held out from 0.57 threshold selection; shares the existing corpus and assistant annotator; small exploratory check, not human gold or corpus holdout.",
+    "annotation_notes": "2026-10-10重新打开国家京剧院页面，核对正文褶子段；该section未出现在原20题的预期证据集中。人工复核待完成。"
+  },
+  {
+    "id": "opera-holdout-q03",
+    "category": "资料不足",
+    "question": "京剧演员“司雨青澜”的师承关系及1932年首演剧目有哪些？请给出引用。",
+    "expected_facts": [
+      "现有资料没有支持该人名、师承或首演经历的证据，应说明目前资料不足。",
+      "不能用其他演员的资料替代该人名的引用，也不能仅据未检索到而断言人物绝对不存在。"
+    ],
+    "expected_source_ids": [],
+    "expected_section_ids": [],
+    "expect_insufficient": true,
+    "annotation_status": "assistant_source_checked_candidate",
+    "evaluation_scope": "Question held out from 0.57 threshold selection; shares the existing corpus and assistant annotator; small exploratory check, not human gold or corpus holdout.",
+    "annotation_notes": "合成的无依据人名测试输入，属于测试数据而非知识资料或真实文化事实。检索器单独不能证明该人物不存在。"
+  },
+  {
+    "id": "opera-holdout-q04",
+    "category": "资料不足",
+    "question": "哪一份资料记载了“顾星沅”开创京剧“海霞派”？它有哪些代表剧目？",
+    "expected_facts": [
+      "现有知识库没有支持该人名与流派组合的资料，应说明目前资料不足。",
+      "不能把梅派等其他流派的来源套用到问题提出的人名或流派。"
+    ],
+    "expected_source_ids": [],
+    "expected_section_ids": [],
+    "expect_insufficient": true,
+    "annotation_status": "assistant_source_checked_candidate",
+    "evaluation_scope": "Question held out from 0.57 threshold selection; shares the existing corpus and assistant annotator; small exploratory check, not human gold or corpus holdout.",
+    "annotation_notes": "合成的无依据人名与流派测试输入，属于测试数据而非知识资料或真实文化事实；不主张已查尽所有现实人物或流派。"
+  },
+  {
+    "id": "opera-holdout-q05",
+    "category": "资料不足",
+    "question": "家用路由器怎样设置 IPv6 DNS 地址？",
+    "expected_facts": [
+      "问题超出现有京剧资料范围，应告知该知识库没有可用证据。"
+    ],
+    "expected_source_ids": [],
+    "expected_section_ids": [],
+    "expect_insufficient": true,
+    "annotation_status": "assistant_source_checked_candidate",
+    "evaluation_scope": "Question held out from 0.57 threshold selection; shares the existing corpus and assistant annotator; small exploratory check, not human gold or corpus holdout.",
+    "annotation_notes": "非京剧主题测试输入；人工复核待完成。"
+  }
+]

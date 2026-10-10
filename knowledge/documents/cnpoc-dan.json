@@ -1,0 +1,59 @@
+{
+  "source": {
+    "source_id": "cnpoc-dan",
+    "title": "京剧旦行小讲堂",
+    "category": "京剧行当",
+    "author_or_organization": "国家京剧院",
+    "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+    "publication_date": "2025-10-23",
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "该院课堂的旦行入门概括；角色应工及唱做比例须结合具体戏与流派。",
+    "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "cnpoc-dan-qingyi-huadan",
+      "title": "青衣与花旦",
+      "locator": "正文（1）正旦、（2）花旦",
+      "content": "青衣也称正旦，常表现举止稳重的中青年女性，重唱功。花旦常表现年轻、活泼的女性，更多侧重做功和说白；这属于入门概括。",
+      "entity_names": [
+        "旦",
+        "青衣",
+        "正旦",
+        "花旦"
+      ]
+    },
+    {
+      "section_id": "cnpoc-dan-daoma-wu",
+      "title": "刀马旦与武旦",
+      "locator": "正文（3）刀马旦、（5）武旦",
+      "content": "刀马旦常扮演女将帅，硬靠、雉尾是常见扮相，重唱念与舞蹈。武旦常着短装，表演更侧重武打与打出手等技巧。",
+      "entity_names": [
+        "刀马旦",
+        "武旦",
+        "硬靠",
+        "雉尾",
+        "打出手"
+      ]
+    },
+    {
+      "section_id": "cnpoc-dan-huashan-laodan",
+      "title": "花衫与老旦",
+      "locator": "正文（4）花衫、（6）老旦",
+      "content": "花衫综合青衣、花旦、刀马旦的表演特点。老旦表现老年妇女，常重唱功并用本嗓，课堂举例为《杨门女将》的佘太君。",
+      "entity_names": [
+        "花衫",
+        "老旦",
+        "本嗓",
+        "杨门女将",
+        "佘太君"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "source": {
+    "source_id": "ncfta-male-roles",
+    "title": "京劇行當",
+    "category": "京剧行当",
+    "author_or_organization": "国立传统艺术中心",
+    "source_url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+    "publication_date": null,
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "“行当介绍—生”中的通行舞台类型；繁体术语转为简体摘要，未复制原文章。",
+    "license_url": "https://www.ncfta.gov.tw/cp.aspx?n=1769",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "ncfta-male-roles-laosheng",
+      "title": "老生与髯口",
+      "locator": "行当介绍—生—老生",
+      "content": "老生通常表现中年或老年男性，常戴髯口，所以也称须生。该介绍以《四郎探母》的杨四郎为例；具体唱做侧重还可继续细分。",
+      "entity_names": [
+        "老生",
+        "须生",
+        "髯口",
+        "四郎探母",
+        "杨四郎"
+      ]
+    },
+    {
+      "section_id": "ncfta-male-roles-xiaosheng",
+      "title": "小生的舞台特点",
+      "locator": "行当介绍—生—小生",
+      "content": "小生多表现青年男子，一般不戴髯口。该介绍以《群英会》的周瑜为例，指出其唱念用嗓与老生有所区别。",
+      "entity_names": [
+        "小生",
+        "髯口",
+        "群英会",
+        "周瑜"
+      ]
+    },
+    {
+      "section_id": "ncfta-male-roles-wusheng",
+      "title": "长靠武生与短打武生",
+      "locator": "行当介绍—生—武生",
+      "content": "武生常表现武艺高强的男子。长靠武生穿大靠、厚底靴，身段稳健；短打武生穿短衣、薄底靴，动作轻捷。区分同时涉及服装与表演方式。",
+      "entity_names": [
+        "武生",
+        "长靠武生",
+        "短打武生",
+        "大靠",
+        "厚底靴",
+        "薄底靴"
+      ]
+    }
+  ]
+}

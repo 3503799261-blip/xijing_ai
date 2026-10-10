@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.0.0",
+  "reviewer_kind": "assistant",
+  "checked_at_client_date": "2026-10-10",
+  "checks": [
+    {
+      "source_id": "ihchina-jingju",
+      "source_url": "https://www.ihchina.cn/project_details/13201",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": null,
+      "locators": [
+        {
+          "section_id": "ihchina-jingju-history",
+          "locator": "项目正文第一段"
+        },
+        {
+          "section_id": "ihchina-jingju-music",
+          "locator": "项目正文第二段：唱腔"
+        },
+        {
+          "section_id": "ihchina-jingju-accompaniment",
+          "locator": "项目正文第二段：伴奏"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    },
+    {
+      "source_id": "fujian-roles",
+      "source_url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": "2021-12-08",
+      "locators": [
+        {
+          "section_id": "fujian-roles-system",
+          "locator": "正文第一段及末段"
+        },
+        {
+          "section_id": "fujian-roles-sheng-dan",
+          "locator": "正文“生”“旦”条目"
+        },
+        {
+          "section_id": "fujian-roles-jing",
+          "locator": "正文“净”条目"
+        },
+        {
+          "section_id": "fujian-roles-chou",
+          "locator": "正文“丑”条目"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    },
+    {
+      "source_id": "ncfta-male-roles",
+      "source_url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": null,
+      "locators": [
+        {
+          "section_id": "ncfta-male-roles-laosheng",
+          "locator": "行当介绍—生—老生"
+        },
+        {
+          "section_id": "ncfta-male-roles-xiaosheng",
+          "locator": "行当介绍—生—小生"
+        },
+        {
+          "section_id": "ncfta-male-roles-wusheng",
+          "locator": "行当介绍—生—武生"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    },
+    {
+      "source_id": "cnpoc-jing",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/202505/1429cdcaf7384ed985ac6b90b8af2309.shtml",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": "2025-05-16",
+      "locators": [
+        {
+          "section_id": "cnpoc-jing-zheng",
+          "locator": "正文（1）正净"
+        },
+        {
+          "section_id": "cnpoc-jing-fu",
+          "locator": "正文（2）副净"
+        },
+        {
+          "section_id": "cnpoc-jing-wu",
+          "locator": "正文（3）武净"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    },
+    {
+      "source_id": "cnpoc-dan",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": "2025-10-23",
+      "locators": [
+        {
+          "section_id": "cnpoc-dan-qingyi-huadan",
+          "locator": "正文（1）正旦、（2）花旦"
+        },
+        {
+          "section_id": "cnpoc-dan-daoma-wu",
+          "locator": "正文（3）刀马旦、（5）武旦"
+        },
+        {
+          "section_id": "cnpoc-dan-huashan-laodan",
+          "locator": "正文（4）花衫、（6）老旦"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    },
+    {
+      "source_id": "cnpoc-face",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": "2008-07-10",
+      "locators": [
+        {
+          "section_id": "cnpoc-face-colors",
+          "locator": "脸谱的色彩—红色；京剧脸谱的分类第二段"
+        },
+        {
+          "section_id": "cnpoc-face-three-tiles",
+          "locator": "京剧脸谱的分类—三块瓦脸"
+        },
+        {
+          "section_id": "cnpoc-face-symbolic",
+          "locator": "京剧脸谱的分类—象形脸、神仙脸"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    },
+    {
+      "source_id": "cnpoc-bao",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": "2009-02-13",
+      "locators": [
+        {
+          "section_id": "cnpoc-bao-black",
+          "locator": "正文第一段、第三段"
+        },
+        {
+          "section_id": "cnpoc-bao-moon",
+          "locator": "正文第二段"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    },
+    {
+      "source_id": "cnpoc-costume",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": "2009-02-13",
+      "locators": [
+        {
+          "section_id": "cnpoc-costume-zhe",
+          "locator": "正文褶子段"
+        },
+        {
+          "section_id": "cnpoc-costume-mang",
+          "locator": "正文蟒袍段"
+        },
+        {
+          "section_id": "cnpoc-costume-kao",
+          "locator": "正文靠段"
+        },
+        {
+          "section_id": "cnpoc-costume-other",
+          "locator": "正文披段、衣段"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    },
+    {
+      "source_id": "cnpoc-bawang",
+      "source_url": "https://www.cnpoc.cn/cnpoc/mbb/200806/2c0fcc00d04849efa36386594e273bae.shtml",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": "2025-10-22",
+      "locators": [
+        {
+          "section_id": "cnpoc-bawang-characters",
+          "locator": "剧目简介：开头及别姬段"
+        },
+        {
+          "section_id": "cnpoc-bawang-sword",
+          "locator": "剧目简介：虞姬拔剑作舞至结尾"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    },
+    {
+      "source_id": "cnpoc-muguiying",
+      "source_url": "https://www.cnpoc.cn/cnpoc/mbm/200806/677c0bbf8a594b35901c47ea19f50a03.shtml",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": "2008-06-23",
+      "locators": [
+        {
+          "section_id": "cnpoc-muguiying-family",
+          "locator": "剧目简介：开头至赐帅印"
+        },
+        {
+          "section_id": "cnpoc-muguiying-decision",
+          "locator": "剧目简介：穆桂英得知帅印至受印出征"
+        },
+        {
+          "section_id": "cnpoc-muguiying-adaptation",
+          "locator": "剧目简介最后两句；主创"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    },
+    {
+      "source_id": "cnpoc-sanchakou",
+      "source_url": "https://www.cnpoc.cn/cnpoc/mbs/200806/aa3b20102b2548378a92ccc640c25eb2.shtml",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": "2008-06-24",
+      "locators": [
+        {
+          "section_id": "cnpoc-sanchakou-people",
+          "locator": "剧目简介开头；主要演员"
+        },
+        {
+          "section_id": "cnpoc-sanchakou-misunderstanding",
+          "locator": "剧目简介后半段"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    },
+    {
+      "source_id": "cnpoc-mei",
+      "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+      "checked_at": "2026-10-10",
+      "method": "official_page_open_and_visible_text_comparison",
+      "result": "source_checked_by_assistant",
+      "publication_date_observed": "2008-07-10",
+      "locators": [
+        {
+          "section_id": "cnpoc-mei-founder",
+          "locator": "正文开头"
+        },
+        {
+          "section_id": "cnpoc-mei-performance",
+          "locator": "正文表演与舞蹈段"
+        },
+        {
+          "section_id": "cnpoc-mei-repertoire",
+          "locator": "正文剧目段、《别姬》舞蹈段"
+        }
+      ],
+      "original_body_archived": false,
+      "human_review_status": "pending",
+      "permission_scope": "Project original fact summaries only; no source article redistribution or cloud processing authorization inferred."
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "title": "Peking opera",
+      "source_url": "https://ich.unesco.org/en/RL/peking-opera-00418",
+      "reason": "Direct access showed human-verification challenge in preliminary research; original body and applicable license were not verified for ingestion."
+    }
+  ]
+}

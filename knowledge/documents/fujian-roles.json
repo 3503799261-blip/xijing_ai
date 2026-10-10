@@ -1,0 +1,75 @@
+{
+  "source": {
+    "source_id": "fujian-roles",
+    "title": "京剧的行当分类是什么？",
+    "category": "京剧行当",
+    "author_or_organization": "福建京剧院（福建省文化和旅游厅发布）",
+    "source_url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+    "publication_date": "2021-12-08",
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "四大行当的入门分类；具体细分体系可随教学传统和版本不同。",
+    "license_url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "fujian-roles-system",
+      "title": "行当与四大类别",
+      "locator": "正文第一段及末段",
+      "content": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+      "entity_names": [
+        "京剧",
+        "行当",
+        "生",
+        "旦",
+        "净",
+        "丑",
+        "唱念做打"
+      ]
+    },
+    {
+      "section_id": "fujian-roles-sheng-dan",
+      "title": "生行与旦行",
+      "locator": "正文“生”“旦”条目",
+      "content": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。不同分支还有各自的表演程式。",
+      "entity_names": [
+        "生",
+        "旦",
+        "老生",
+        "小生",
+        "武生",
+        "青衣",
+        "花旦"
+      ]
+    },
+    {
+      "section_id": "fujian-roles-jing",
+      "title": "净行基本特点",
+      "locator": "正文“净”条目",
+      "content": "净又称花脸，脸谱和洪亮的声音是常见表演特点，角色多为性格或形象鲜明的男性人物。净行的唱功、身段或武打侧重有不同分支。",
+      "entity_names": [
+        "净",
+        "花脸",
+        "脸谱"
+      ]
+    },
+    {
+      "section_id": "fujian-roles-chou",
+      "title": "丑行与开口跳",
+      "locator": "正文“丑”条目",
+      "content": "丑行常承担喜剧表演，鼻梁上的小块白色化妆使其有小花脸之称。文丑与武丑是常见分类，武丑另称开口跳。",
+      "entity_names": [
+        "丑",
+        "小花脸",
+        "文丑",
+        "武丑",
+        "开口跳"
+      ]
+    }
+  ]
+}

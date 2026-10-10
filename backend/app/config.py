@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     embedding_model_path: Path = WORKSPACE_ROOT / '.runtime' / 'models' / 'bge-small-zh-v1.5'
     allowed_origins: list[str] = ['http://127.0.0.1:8000', 'http://localhost:8000', 'http://127.0.0.1:8877', 'http://localhost:8877']
     request_timeout_seconds: float = Field(default=45, ge=2, le=50)
-    retrieval_min_score: float = Field(default=0.62, ge=0, le=1)
+    retrieval_min_score: float = Field(default=0.57, ge=0, le=1)
     retrieval_top_k: int = Field(default=5, ge=1, le=5)
 
     @field_validator('deepseek_base_url')

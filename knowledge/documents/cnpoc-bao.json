@@ -1,0 +1,45 @@
+{
+  "source": {
+    "source_id": "cnpoc-bao",
+    "title": "包公为什么画黑脸？",
+    "category": "角色文化",
+    "author_or_organization": "国家京剧院",
+    "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+    "publication_date": "2009-02-13",
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "京剧包拯的艺术扮相解释；有关阴阳两界的叙述是舞台文化寓意，不是历史证明。",
+    "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "cnpoc-bao-black",
+      "title": "黑脸的多种用途",
+      "locator": "正文第一段、第三段",
+      "content": "包拯的黑脸常表达刚正形象。黑色在别的扮相中还可关联勇猛、肤色或突出眉眼，不能据此判断所有黑脸角色都具有同一种性格。",
+      "entity_names": [
+        "包拯",
+        "包公",
+        "黑脸",
+        "黑色"
+      ]
+    },
+    {
+      "section_id": "cnpoc-bao-moon",
+      "title": "月牙的舞台寓意",
+      "locator": "正文第二段",
+      "content": "包拯脸上的白月牙可联系到其在阴阳两界主持正义的舞台寓意。这是在解释戏曲中的包公形象，不能当作真实历史能力或生理特征。",
+      "entity_names": [
+        "包拯",
+        "包公",
+        "白月牙",
+        "阴阳两界"
+      ]
+    }
+  ]
+}

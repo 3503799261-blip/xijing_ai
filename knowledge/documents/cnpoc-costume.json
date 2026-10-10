@@ -1,0 +1,70 @@
+{
+  "source": {
+    "source_id": "cnpoc-costume",
+    "title": "京剧服装和人物身份有什么关系？",
+    "category": "京剧服饰",
+    "author_or_organization": "国家京剧院",
+    "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+    "publication_date": "2009-02-13",
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "传统京剧戏服的舞台用途；人物同一身份也可能因剧情场合或演出版本有不同穿戴。",
+    "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "cnpoc-costume-zhe",
+      "title": "褶子的日常与便服用途",
+      "locator": "正文褶子段",
+      "content": "褶子既可表现普通人的日常衣着，也可表现官员贵族的便服。花褶、素褶等式样与人物类型相关，不能把褶子只理解为平民服装。",
+      "entity_names": [
+        "褶子",
+        "花褶子",
+        "素褶子"
+      ]
+    },
+    {
+      "section_id": "cnpoc-costume-mang",
+      "title": "蟒袍与正式身份",
+      "locator": "正文蟒袍段",
+      "content": "蟒袍常用于帝后、贵族及高级官员的正式场合。黄蟒可表示皇帝上朝，女蟒可用于后妃；这是戏服制度的基础说明。",
+      "entity_names": [
+        "蟒袍",
+        "黄蟒",
+        "女蟒",
+        "皇帝",
+        "后妃"
+      ]
+    },
+    {
+      "section_id": "cnpoc-costume-kao",
+      "title": "靠与靠旗",
+      "locator": "正文靠段",
+      "content": "靠是表现男女将帅铠甲的戏服，常见于征战场面。靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。",
+      "entity_names": [
+        "靠",
+        "靠旗",
+        "护背旗",
+        "铠甲",
+        "将帅"
+      ]
+    },
+    {
+      "section_id": "cnpoc-costume-other",
+      "title": "披与衣的区别",
+      "locator": "正文披段、衣段",
+      "content": "披常是富贵人物或官员贵族的便服。衣有短打衣、官衣等多种；短打衣可用于江湖豪杰，官衣则常表现一般官员。",
+      "entity_names": [
+        "披",
+        "衣",
+        "短打衣",
+        "官衣"
+      ]
+    }
+  ]
+}

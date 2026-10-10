@@ -1,0 +1,47 @@
+{
+  "source": {
+    "source_id": "cnpoc-bawang",
+    "title": "霸王别姬",
+    "category": "经典剧目",
+    "author_or_organization": "国家京剧院·院办",
+    "source_url": "https://www.cnpoc.cn/cnpoc/mbb/200806/2c0fcc00d04849efa36386594e273bae.shtml",
+    "publication_date": "2025-10-22",
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "国家京剧院所列《霸王别姬》剧情；舞台故事不是史实研究，未包含电影同名作品。",
+    "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "cnpoc-bawang-characters",
+      "title": "项羽与虞姬",
+      "locator": "剧目简介：开头及别姬段",
+      "content": "京剧《霸王别姬》的核心人物是项羽与虞姬。该院简介以楚汉冲突、项羽被困垓下为剧情背景，人物处境服务于舞台悲剧情节。",
+      "entity_names": [
+        "霸王别姬",
+        "项羽",
+        "虞姬",
+        "垓下",
+        "楚汉"
+      ]
+    },
+    {
+      "section_id": "cnpoc-bawang-sword",
+      "title": "剑舞与离别",
+      "locator": "剧目简介：虞姬拔剑作舞至结尾",
+      "content": "该院简介写虞姬为困境中的项羽作剑舞，随后自刎，项羽出阵后败于乌江。这是该剧简介的情节概述，不等于已核定的历史过程。",
+      "entity_names": [
+        "霸王别姬",
+        "虞姬",
+        "项羽",
+        "剑舞",
+        "乌江"
+      ]
+    }
+  ]
+}

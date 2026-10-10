@@ -1,0 +1,46 @@
+{
+  "source": {
+    "source_id": "cnpoc-sanchakou",
+    "title": "三岔口",
+    "category": "经典剧目",
+    "author_or_organization": "国家京剧院·院办",
+    "source_url": "https://www.cnpoc.cn/cnpoc/mbs/200806/aa3b20102b2548378a92ccc640c25eb2.shtml",
+    "publication_date": "2008-06-24",
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "国家京剧院该剧简介；借宿、误会与解误属于舞台剧情。",
+    "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "cnpoc-sanchakou-people",
+      "title": "焦赞与两位侠义人物",
+      "locator": "剧目简介开头；主要演员",
+      "content": "《三岔口》涉及被发配的焦赞、跟随相救的任堂惠和店主刘利华。该院演员表也分别列出任堂惠、刘利华两角色。",
+      "entity_names": [
+        "三岔口",
+        "焦赞",
+        "任堂惠",
+        "刘利华"
+      ]
+    },
+    {
+      "section_id": "cnpoc-sanchakou-misunderstanding",
+      "title": "夜间误会如何化解",
+      "locator": "剧目简介后半段",
+      "content": "刘利华夫妇误把任堂惠当作敌人，任、刘在黑夜交手。焦赞赶到后才解开误会，所以这场冲突并非两人立场真正敌对。",
+      "entity_names": [
+        "三岔口",
+        "任堂惠",
+        "刘利华",
+        "焦赞",
+        "黑夜"
+      ]
+    }
+  ]
+}

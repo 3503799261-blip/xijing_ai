@@ -1,0 +1,61 @@
+{
+  "source": {
+    "source_id": "cnpoc-mei",
+    "title": "梅(兰芳)派",
+    "category": "角色文化",
+    "author_or_organization": "国家京剧院",
+    "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+    "publication_date": "2008-07-10",
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "梅派艺术概述的历史事实；该2008年页面人物现状不作为当今状态。",
+    "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "cnpoc-mei-founder",
+      "title": "梅派的创始者",
+      "locator": "正文开头",
+      "content": "梅派是由梅兰芳开创的京剧旦角流派。流派描述的是传承的艺术风格，不能与生旦净丑这样的角色行当当作同一分类层级。",
+      "entity_names": [
+        "梅派",
+        "梅兰芳",
+        "旦角",
+        "流派",
+        "行当"
+      ]
+    },
+    {
+      "section_id": "cnpoc-mei-performance",
+      "title": "唱念做舞的综合表达",
+      "locator": "正文表演与舞蹈段",
+      "content": "梅派注重把唱、念、做与舞蹈结合，用声音、身段和神情表现人物感情。艺术风格涉及多种表演要素，不只是某一种脸谱或服装。",
+      "entity_names": [
+        "梅派",
+        "梅兰芳",
+        "唱",
+        "念",
+        "做",
+        "舞蹈"
+      ]
+    },
+    {
+      "section_id": "cnpoc-mei-repertoire",
+      "title": "代表剧目与剑舞",
+      "locator": "正文剧目段、《别姬》舞蹈段",
+      "content": "《霸王别姬》与《穆桂英挂帅》是该资料列出的梅派代表作品；《霸王别姬》的剑舞体现舞蹈化表演特色。作品来源仍须分别追溯各剧文献。",
+      "entity_names": [
+        "梅派",
+        "梅兰芳",
+        "霸王别姬",
+        "穆桂英挂帅",
+        "剑舞"
+      ]
+    }
+  ]
+}

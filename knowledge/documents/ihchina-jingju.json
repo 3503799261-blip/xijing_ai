@@ -1,0 +1,63 @@
+{
+  "source": {
+    "source_id": "ihchina-jingju",
+    "title": "京剧",
+    "category": "京剧历史",
+    "author_or_organization": "中国艺术研究院·中国非物质文化遗产保护中心",
+    "source_url": "https://www.ihchina.cn/project_details/13201",
+    "publication_date": null,
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "国家级非遗项目介绍的基础事实；形成过程与艺术体系。摘要未指定唯一形成年份。",
+    "license_url": "https://www.ihchina.cn/about/206.html",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "ihchina-jingju-history",
+      "title": "徽班进京与交流形成",
+      "locator": "项目正文第一段",
+      "content": "京剧形成于清代的剧种交流过程。三庆、四喜、春台、和春徽班进京后，与汉调艺人合作，并吸收昆曲、秦腔等艺术因素。徽班进京是发展节点，不能等同于一日完成剧种形成。",
+      "entity_names": [
+        "京剧",
+        "三庆",
+        "四喜",
+        "春台",
+        "和春",
+        "汉调",
+        "昆曲",
+        "秦腔"
+      ]
+    },
+    {
+      "section_id": "ihchina-jingju-music",
+      "title": "西皮与二簧",
+      "locator": "项目正文第二段：唱腔",
+      "content": "京剧主要使用西皮和二簧声腔。概括而言，二簧较舒缓凝重，西皮较明快起伏；这是声腔特点的基础介绍，具体情绪表达仍须结合唱段。",
+      "entity_names": [
+        "京剧",
+        "西皮",
+        "二簧"
+      ]
+    },
+    {
+      "section_id": "ihchina-jingju-accompaniment",
+      "title": "文场与武场",
+      "locator": "项目正文第二段：伴奏",
+      "content": "京剧伴奏分文场、武场。文场以京胡等丝竹乐器为主，武场以鼓板以及大小锣等打击乐器为主；两类伴奏共同服务舞台表演。",
+      "entity_names": [
+        "京剧",
+        "文场",
+        "武场",
+        "京胡",
+        "鼓板",
+        "小锣",
+        "大锣"
+      ]
+    }
+  ]
+}

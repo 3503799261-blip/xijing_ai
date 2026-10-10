@@ -1,0 +1,700 @@
+{
+  "status": "completed",
+  "metadata": {
+    "executionStartedAt": "2026-10-10T13:07:32.153746+08:00",
+    "runLabel": "threshold057-five-question-holdout",
+    "evaluationKind": "local_embedding_retrieval_candidates",
+    "annotationScope": "assistant_source_checked_candidate",
+    "humanGoldLabels": false,
+    "llmProviderInvoked": false,
+    "topK": 5,
+    "modeOrder": "alternating per question, after one vector warmup; model loading excluded from per-query latency",
+    "thresholdSource": "CLI diagnostic override",
+    "parameterSelectionDisclosure": "Threshold reruns on questions used for parameter selection are diagnostics, not independent validation.",
+    "questionSetFile": "holdout-questions.json",
+    "scriptSHA256": "f40268ce5eb64e5fe31bdc8b699fe5f056f4e8b2db0279d808f51bf61079fafb",
+    "pythonVersion": "3.11.1",
+    "dependencies": {
+      "sentence-transformers": "6.1.0",
+      "torch": "2.11.0",
+      "qdrant-client": "1.19.1",
+      "pydantic-settings": "2.15.0"
+    },
+    "questionSetSHA256": "8fb4b860692d799e5c03aa853e8ccacecdc5c3681cea57d3d96d7aaed0f4c197",
+    "threshold": 0.57,
+    "modelAndIndexLoadSeconds": 13.396254,
+    "index": {
+      "generation_id": "gen-20261010T050104-5bf46e2d",
+      "corpus_hash": "156208ab5b00994be016b6d7d29b60ba4c9f462cf1d0056899f542308dda8cdb",
+      "documents": 12,
+      "chunks": 35,
+      "model_id": "BAAI/bge-small-zh-v1.5",
+      "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+      "dimension": 512,
+      "distance": "Cosine",
+      "review_scope": "assistant source-checked original facts; human review pending"
+    },
+    "annotationIndexIssues": [],
+    "warmupSeconds": 0.018035,
+    "executionFinishedAt": "2026-10-10T13:07:45.690837+08:00"
+  },
+  "retrievalMode": "hybrid",
+  "summary": {
+    "metricScope": "Assistant source-checked candidate annotations; not human gold Recall@5 or answer correctness.",
+    "questionCount": 5,
+    "completedCount": 5,
+    "failedCount": 0,
+    "supportedCandidateCount": 2,
+    "insufficientCandidateCount": 3,
+    "candidateEvidenceCoverageAt5Macro": 1.0,
+    "candidateEvidenceCoverageAt5Micro": 1.0,
+    "candidateSourceCoverageAt5Macro": 1.0,
+    "allCandidateSectionsFoundCount": 2,
+    "anyCandidateSectionFoundCount": 2,
+    "candidateInsufficiencyAgreement": 0.8,
+    "supportedCandidatesWithoutEvidence": [],
+    "insufficientCandidatesWithAcceptedEvidence": [
+      "opera-holdout-q03"
+    ],
+    "candidateEvidenceMissingQuestions": [],
+    "canonicalEvidenceIntegrityRate": 1.0,
+    "canonicalEvidenceChecks": 4,
+    "meanRetrievalSeconds": 0.00982,
+    "minRetrievalSeconds": 0.0075,
+    "maxRetrievalSeconds": 0.0122
+  },
+  "cases": [
+    {
+      "id": "opera-holdout-q01",
+      "category": "角色文化",
+      "question": "包公额头的白色弯月在舞台化妆中表达什么？能把它当作历史人物真的具备的能力吗？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "evaluationScope": "Question held out from 0.57 threshold selection; shares the existing corpus and assistant annotator; small exploratory check, not human gold or corpus holdout.",
+      "expectedFacts": [
+        "这一脸谱的白月牙表达舞台人物在阴阳两界主持正义的寓意。",
+        "应区分戏曲中的象征造型与真实历史能力；资料不能证明包拯具有超自然能力。"
+      ],
+      "expectedSectionIds": [
+        "cnpoc-bao-moon"
+      ],
+      "expectedSourceIds": [
+        "cnpoc-bao"
+      ],
+      "expectInsufficient": false,
+      "status": "completed",
+      "retrievalMode": "hybrid",
+      "threshold": 0.57,
+      "uncertain": false,
+      "insufficiencyPredictionMatchesCandidate": true,
+      "returnedSectionIds": [
+        "cnpoc-bao-black",
+        "cnpoc-bao-moon"
+      ],
+      "returnedSourceIds": [
+        "cnpoc-bao"
+      ],
+      "matchedExpectedSectionIds": [
+        "cnpoc-bao-moon"
+      ],
+      "matchedExpectedSourceIds": [
+        "cnpoc-bao"
+      ],
+      "missingExpectedSectionIds": [],
+      "candidateEvidenceCoverageAt5": 1.0,
+      "candidateSourceCoverageAt5": 1.0,
+      "evidenceCount": 2,
+      "canonicalEvidenceChecks": [
+        true,
+        true
+      ],
+      "canonicalEvidenceIntegrity": true,
+      "evidence": [
+        {
+          "id": "chunk_51ce90e380f15460696a8b6e999b97b8b1526b4350d6aa2fc0194aab7a281ce3",
+          "chunkId": "chunk_51ce90e380f15460696a8b6e999b97b8b1526b4350d6aa2fc0194aab7a281ce3",
+          "sourceId": "cnpoc-bao",
+          "sectionId": "cnpoc-bao-moon",
+          "title": "包公为什么画黑脸？",
+          "locator": "正文第二段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+          "excerpt": "包拯脸上的白月牙可联系到其在阴阳两界主持正义的舞台寓意。\n这是在解释戏曲中的包公形象，不能当作真实历史能力或生理特征。",
+          "contentKind": "original_fact_summary",
+          "category": "角色文化",
+          "entityNames": [
+            "包拯",
+            "包公",
+            "白月牙",
+            "阴阳两界"
+          ],
+          "vectorScore": 0.7276311957548643,
+          "keywordScore": -41.0556411838801,
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "chunkId": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "sourceId": "cnpoc-bao",
+          "sectionId": "cnpoc-bao-black",
+          "title": "包公为什么画黑脸？",
+          "locator": "正文第一段、第三段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+          "excerpt": "包拯的黑脸常表达刚正形象。\n黑色在别的扮相中还可关联勇猛、肤色或突出眉眼，不能据此判断所有黑脸角色都具有同一种性格。",
+          "contentKind": "original_fact_summary",
+          "category": "角色文化",
+          "entityNames": [
+            "包拯",
+            "包公",
+            "黑脸",
+            "黑色"
+          ],
+          "vectorScore": 0.5763552502642602,
+          "keywordScore": -18.09196669627365,
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant"
+        }
+      ],
+      "candidateScores": [
+        {
+          "chunkId": "chunk_51ce90e380f15460696a8b6e999b97b8b1526b4350d6aa2fc0194aab7a281ce3",
+          "score": 0.7276311957548643
+        },
+        {
+          "chunkId": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "score": 0.5763552502642602
+        },
+        {
+          "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "score": 0.5534828833924352
+        },
+        {
+          "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+          "score": 0.49358671533399867
+        },
+        {
+          "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "score": 0.47339184085249203
+        }
+      ],
+      "canonicalCandidateScoreContexts": [
+        {
+          "chunkId": "chunk_51ce90e380f15460696a8b6e999b97b8b1526b4350d6aa2fc0194aab7a281ce3",
+          "vectorRank": 1,
+          "vectorScore": 0.7276311957548643,
+          "sourceId": "cnpoc-bao",
+          "sectionId": "cnpoc-bao-moon",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": true
+        },
+        {
+          "chunkId": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "vectorRank": 2,
+          "vectorScore": 0.5763552502642602,
+          "sourceId": "cnpoc-bao",
+          "sectionId": "cnpoc-bao-black",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "vectorRank": 3,
+          "vectorScore": 0.5534828833924352,
+          "sourceId": "cnpoc-jing",
+          "sectionId": "cnpoc-jing-zheng",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+          "vectorRank": 4,
+          "vectorScore": 0.49358671533399867,
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-chou",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "vectorRank": 5,
+          "vectorScore": 0.47339184085249203,
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-kao",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        }
+      ],
+      "elapsedSeconds": 0.0122,
+      "wallElapsedSeconds": 0.013684
+    },
+    {
+      "id": "opera-holdout-q02",
+      "category": "京剧服饰",
+      "question": "戏台上的褶子只能给平民穿吗？官员贵族在什么场合也会穿？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "evaluationScope": "Question held out from 0.57 threshold selection; shares the existing corpus and assistant annotator; small exploratory check, not human gold or corpus holdout.",
+      "expectedFacts": [
+        "褶子可以表现普通百姓的日常衣着，也可以表现官员或贵族的便装。",
+        "不能将褶子解释成仅供平民角色使用的服装。"
+      ],
+      "expectedSectionIds": [
+        "cnpoc-costume-zhe"
+      ],
+      "expectedSourceIds": [
+        "cnpoc-costume"
+      ],
+      "expectInsufficient": false,
+      "status": "completed",
+      "retrievalMode": "hybrid",
+      "threshold": 0.57,
+      "uncertain": false,
+      "insufficiencyPredictionMatchesCandidate": true,
+      "returnedSectionIds": [
+        "cnpoc-costume-zhe"
+      ],
+      "returnedSourceIds": [
+        "cnpoc-costume"
+      ],
+      "matchedExpectedSectionIds": [
+        "cnpoc-costume-zhe"
+      ],
+      "matchedExpectedSourceIds": [
+        "cnpoc-costume"
+      ],
+      "missingExpectedSectionIds": [],
+      "candidateEvidenceCoverageAt5": 1.0,
+      "candidateSourceCoverageAt5": 1.0,
+      "evidenceCount": 1,
+      "canonicalEvidenceChecks": [
+        true
+      ],
+      "canonicalEvidenceIntegrity": true,
+      "evidence": [
+        {
+          "id": "chunk_0283e45598600d99d2905403756ead620f2d2cafcd479ad8e996facf43e859ba",
+          "chunkId": "chunk_0283e45598600d99d2905403756ead620f2d2cafcd479ad8e996facf43e859ba",
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-zhe",
+          "title": "京剧服装和人物身份有什么关系？",
+          "locator": "正文褶子段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+          "excerpt": "褶子既可表现普通人的日常衣着，也可表现官员贵族的便服。\n花褶、素褶等式样与人物类型相关，不能把褶子只理解为平民服装。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧服饰",
+          "entityNames": [
+            "褶子",
+            "花褶子",
+            "素褶子"
+          ],
+          "vectorScore": 0.7621351127538786,
+          "keywordScore": -41.36648359278912,
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant"
+        }
+      ],
+      "candidateScores": [
+        {
+          "chunkId": "chunk_0283e45598600d99d2905403756ead620f2d2cafcd479ad8e996facf43e859ba",
+          "score": 0.7621351127538786
+        },
+        {
+          "chunkId": "chunk_0a31424247b1b604d612e79e68690b645cba8393729f306e1956031b2c91c4f6",
+          "score": 0.5564447463510677
+        },
+        {
+          "chunkId": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+          "score": 0.5045965169926853
+        },
+        {
+          "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "score": 0.4807456636385604
+        },
+        {
+          "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "score": 0.475984004051906
+        }
+      ],
+      "canonicalCandidateScoreContexts": [
+        {
+          "chunkId": "chunk_0283e45598600d99d2905403756ead620f2d2cafcd479ad8e996facf43e859ba",
+          "vectorRank": 1,
+          "vectorScore": 0.7621351127538786,
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-zhe",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": true
+        },
+        {
+          "chunkId": "chunk_0a31424247b1b604d612e79e68690b645cba8393729f306e1956031b2c91c4f6",
+          "vectorRank": 2,
+          "vectorScore": 0.5564447463510677,
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-other",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+          "vectorRank": 3,
+          "vectorScore": 0.5045965169926853,
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-mang",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "vectorRank": 4,
+          "vectorScore": 0.4807456636385604,
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-kao",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "vectorRank": 5,
+          "vectorScore": 0.475984004051906,
+          "sourceId": "cnpoc-jing",
+          "sectionId": "cnpoc-jing-zheng",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        }
+      ],
+      "elapsedSeconds": 0.0103,
+      "wallElapsedSeconds": 0.011626
+    },
+    {
+      "id": "opera-holdout-q03",
+      "category": "资料不足",
+      "question": "京剧演员“司雨青澜”的师承关系及1932年首演剧目有哪些？请给出引用。",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "evaluationScope": "Question held out from 0.57 threshold selection; shares the existing corpus and assistant annotator; small exploratory check, not human gold or corpus holdout.",
+      "expectedFacts": [
+        "现有资料没有支持该人名、师承或首演经历的证据，应说明目前资料不足。",
+        "不能用其他演员的资料替代该人名的引用，也不能仅据未检索到而断言人物绝对不存在。"
+      ],
+      "expectedSectionIds": [],
+      "expectedSourceIds": [],
+      "expectInsufficient": true,
+      "status": "completed",
+      "retrievalMode": "hybrid",
+      "threshold": 0.57,
+      "uncertain": false,
+      "insufficiencyPredictionMatchesCandidate": false,
+      "returnedSectionIds": [
+        "cnpoc-muguiying-adaptation"
+      ],
+      "returnedSourceIds": [
+        "cnpoc-muguiying"
+      ],
+      "matchedExpectedSectionIds": [],
+      "matchedExpectedSourceIds": [],
+      "missingExpectedSectionIds": [],
+      "candidateEvidenceCoverageAt5": null,
+      "candidateSourceCoverageAt5": null,
+      "evidenceCount": 1,
+      "canonicalEvidenceChecks": [
+        true
+      ],
+      "canonicalEvidenceIntegrity": true,
+      "evidence": [
+        {
+          "id": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "sourceId": "cnpoc-muguiying",
+          "sectionId": "cnpoc-muguiying-adaptation",
+          "title": "穆桂英挂帅",
+          "locator": "剧目简介最后两句；主创 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/mbm/200806/677c0bbf8a594b35901c47ea19f50a03.shtml",
+          "excerpt": "该京剧版本于1959年由梅兰芳、陆静岩、袁韵宜据同名豫剧改编，梅兰芳同年在北京首演。\n这里的年份是作品改编和首演时间。",
+          "contentKind": "original_fact_summary",
+          "category": "经典剧目",
+          "entityNames": [
+            "穆桂英挂帅",
+            "梅兰芳",
+            "陆静岩",
+            "袁韵宜",
+            "1959年",
+            "豫剧"
+          ],
+          "vectorScore": 0.584118537535226,
+          "keywordScore": -11.05737069838881,
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant"
+        }
+      ],
+      "candidateScores": [
+        {
+          "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "score": 0.584118537535226
+        },
+        {
+          "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+          "score": 0.5127648373350921
+        },
+        {
+          "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+          "score": 0.5018033020331989
+        },
+        {
+          "chunkId": "chunk_eba2a0b8b78f35deb139ca978314152ee74e3c66b9ec7bcc2b66c8d3377e41b2",
+          "score": 0.4682488055604934
+        },
+        {
+          "chunkId": "chunk_ed790c73e1e33ccdd8542debb88531e562e5a4bd6c3f830485287d725bc63255",
+          "score": 0.467348087158211
+        }
+      ],
+      "canonicalCandidateScoreContexts": [
+        {
+          "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "vectorRank": 1,
+          "vectorScore": 0.584118537535226,
+          "sourceId": "cnpoc-muguiying",
+          "sectionId": "cnpoc-muguiying-adaptation",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+          "vectorRank": 2,
+          "vectorScore": 0.5127648373350921,
+          "sourceId": "ihchina-jingju",
+          "sectionId": "ihchina-jingju-music",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+          "vectorRank": 3,
+          "vectorScore": 0.5018033020331989,
+          "sourceId": "ihchina-jingju",
+          "sectionId": "ihchina-jingju-history",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_eba2a0b8b78f35deb139ca978314152ee74e3c66b9ec7bcc2b66c8d3377e41b2",
+          "vectorRank": 4,
+          "vectorScore": 0.4682488055604934,
+          "sourceId": "cnpoc-dan",
+          "sectionId": "cnpoc-dan-huashan-laodan",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_ed790c73e1e33ccdd8542debb88531e562e5a4bd6c3f830485287d725bc63255",
+          "vectorRank": 5,
+          "vectorScore": 0.467348087158211,
+          "sourceId": "cnpoc-muguiying",
+          "sectionId": "cnpoc-muguiying-family",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        }
+      ],
+      "elapsedSeconds": 0.0094,
+      "wallElapsedSeconds": 0.011036
+    },
+    {
+      "id": "opera-holdout-q04",
+      "category": "资料不足",
+      "question": "哪一份资料记载了“顾星沅”开创京剧“海霞派”？它有哪些代表剧目？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "evaluationScope": "Question held out from 0.57 threshold selection; shares the existing corpus and assistant annotator; small exploratory check, not human gold or corpus holdout.",
+      "expectedFacts": [
+        "现有知识库没有支持该人名与流派组合的资料，应说明目前资料不足。",
+        "不能把梅派等其他流派的来源套用到问题提出的人名或流派。"
+      ],
+      "expectedSectionIds": [],
+      "expectedSourceIds": [],
+      "expectInsufficient": true,
+      "status": "completed",
+      "retrievalMode": "hybrid",
+      "threshold": 0.57,
+      "uncertain": true,
+      "insufficiencyPredictionMatchesCandidate": true,
+      "returnedSectionIds": [],
+      "returnedSourceIds": [],
+      "matchedExpectedSectionIds": [],
+      "matchedExpectedSourceIds": [],
+      "missingExpectedSectionIds": [],
+      "candidateEvidenceCoverageAt5": null,
+      "candidateSourceCoverageAt5": null,
+      "evidenceCount": 0,
+      "canonicalEvidenceChecks": [],
+      "canonicalEvidenceIntegrity": true,
+      "evidence": [],
+      "candidateScores": [
+        {
+          "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+          "score": 0.5412467477524641
+        },
+        {
+          "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "score": 0.5292494199725083
+        },
+        {
+          "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+          "score": 0.498292415821602
+        },
+        {
+          "chunkId": "chunk_20620832fe3d9595b1e167fa586a06d2a3319cff1d703acb00709a674645a517",
+          "score": 0.4954494087330663
+        },
+        {
+          "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "score": 0.4642803466135207
+        }
+      ],
+      "canonicalCandidateScoreContexts": [
+        {
+          "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+          "vectorRank": 1,
+          "vectorScore": 0.5412467477524641,
+          "sourceId": "cnpoc-mei",
+          "sectionId": "cnpoc-mei-founder",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "vectorRank": 2,
+          "vectorScore": 0.5292494199725083,
+          "sourceId": "cnpoc-muguiying",
+          "sectionId": "cnpoc-muguiying-adaptation",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+          "vectorRank": 3,
+          "vectorScore": 0.498292415821602,
+          "sourceId": "ihchina-jingju",
+          "sectionId": "ihchina-jingju-history",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_20620832fe3d9595b1e167fa586a06d2a3319cff1d703acb00709a674645a517",
+          "vectorRank": 4,
+          "vectorScore": 0.4954494087330663,
+          "sourceId": "cnpoc-mei",
+          "sectionId": "cnpoc-mei-performance",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "vectorRank": 5,
+          "vectorScore": 0.4642803466135207,
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-system",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        }
+      ],
+      "elapsedSeconds": 0.0097,
+      "wallElapsedSeconds": 0.010812
+    },
+    {
+      "id": "opera-holdout-q05",
+      "category": "资料不足",
+      "question": "家用路由器怎样设置 IPv6 DNS 地址？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "evaluationScope": "Question held out from 0.57 threshold selection; shares the existing corpus and assistant annotator; small exploratory check, not human gold or corpus holdout.",
+      "expectedFacts": [
+        "问题超出现有京剧资料范围，应告知该知识库没有可用证据。"
+      ],
+      "expectedSectionIds": [],
+      "expectedSourceIds": [],
+      "expectInsufficient": true,
+      "status": "completed",
+      "retrievalMode": "hybrid",
+      "threshold": 0.57,
+      "uncertain": true,
+      "insufficiencyPredictionMatchesCandidate": true,
+      "returnedSectionIds": [],
+      "returnedSourceIds": [],
+      "matchedExpectedSectionIds": [],
+      "matchedExpectedSourceIds": [],
+      "missingExpectedSectionIds": [],
+      "candidateEvidenceCoverageAt5": null,
+      "candidateSourceCoverageAt5": null,
+      "evidenceCount": 0,
+      "canonicalEvidenceChecks": [],
+      "canonicalEvidenceIntegrity": true,
+      "evidence": [],
+      "candidateScores": [
+        {
+          "chunkId": "chunk_c48ba80c09004938c4d59b77c3acb0c72bdd9f123c2428ccc325b9e7bcfdf81f",
+          "score": 0.29088945562219726
+        },
+        {
+          "chunkId": "chunk_3942e057fac7bd5aea92a1df0f858346a947634ffed663cdb01ce01b8395e360",
+          "score": 0.2518660825313417
+        },
+        {
+          "chunkId": "chunk_de43059f4209392c8a90772f064810af8e1e0f8c5907c9293000a65140c0d61c",
+          "score": 0.23849699878571418
+        },
+        {
+          "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "score": 0.2384771101541066
+        },
+        {
+          "chunkId": "chunk_0b916210ff082e5d20bee28166813380c7a563ef19b74dcfb368f321134a1735",
+          "score": 0.23736892373868657
+        }
+      ],
+      "canonicalCandidateScoreContexts": [
+        {
+          "chunkId": "chunk_c48ba80c09004938c4d59b77c3acb0c72bdd9f123c2428ccc325b9e7bcfdf81f",
+          "vectorRank": 1,
+          "vectorScore": 0.29088945562219726,
+          "sourceId": "cnpoc-sanchakou",
+          "sectionId": "cnpoc-sanchakou-people",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_3942e057fac7bd5aea92a1df0f858346a947634ffed663cdb01ce01b8395e360",
+          "vectorRank": 2,
+          "vectorScore": 0.2518660825313417,
+          "sourceId": "cnpoc-jing",
+          "sectionId": "cnpoc-jing-fu",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_de43059f4209392c8a90772f064810af8e1e0f8c5907c9293000a65140c0d61c",
+          "vectorRank": 3,
+          "vectorScore": 0.23849699878571418,
+          "sourceId": "cnpoc-muguiying",
+          "sectionId": "cnpoc-muguiying-decision",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "vectorRank": 4,
+          "vectorScore": 0.2384771101541066,
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-kao",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_0b916210ff082e5d20bee28166813380c7a563ef19b74dcfb368f321134a1735",
+          "vectorRank": 5,
+          "vectorScore": 0.23736892373868657,
+          "sourceId": "cnpoc-jing",
+          "sectionId": "cnpoc-jing-wu",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        }
+      ],
+      "elapsedSeconds": 0.0075,
+      "wallElapsedSeconds": 0.009185
+    }
+  ]
+}

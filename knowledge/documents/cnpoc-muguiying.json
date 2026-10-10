@@ -1,0 +1,60 @@
+{
+  "source": {
+    "source_id": "cnpoc-muguiying",
+    "title": "穆桂英挂帅",
+    "category": "经典剧目",
+    "author_or_organization": "国家京剧院·院办",
+    "source_url": "https://www.cnpoc.cn/cnpoc/mbm/200806/677c0bbf8a594b35901c47ea19f50a03.shtml",
+    "publication_date": "2008-06-23",
+    "collected_at": "2026-10-10",
+    "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+    "review_status": "source_checked_by_assistant",
+    "document_version": "1.0.0",
+    "content_kind": "original_fact_summary",
+    "scope": "该院介绍的1959年京剧改编版本；不与其他《穆桂英挂帅》剧种或故事版本自动合并。",
+    "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+    "redistribution_allowed": true,
+    "external_llm_allowed": true
+  },
+  "sections": [
+    {
+      "section_id": "cnpoc-muguiying-family",
+      "title": "人物与受印缘起",
+      "locator": "剧目简介：开头至赐帅印",
+      "content": "该版本中，佘太君让杨文广、杨金花进京探讯。文广比武后获赐帅印，朝廷请其母穆桂英挂帅；主要人物关系须按这一舞台版本理解。",
+      "entity_names": [
+        "穆桂英挂帅",
+        "穆桂英",
+        "佘太君",
+        "杨文广",
+        "杨金花",
+        "帅印"
+      ]
+    },
+    {
+      "section_id": "cnpoc-muguiying-decision",
+      "title": "从私怨到出征",
+      "locator": "剧目简介：穆桂英得知帅印至受印出征",
+      "content": "年过半百的穆桂英因杨家遭遇而犹豫，佘太君从国家安危劝慰，最终促成受印出征。这一转变是该版本塑造人物的关键情节。",
+      "entity_names": [
+        "穆桂英",
+        "佘太君",
+        "受印出征"
+      ]
+    },
+    {
+      "section_id": "cnpoc-muguiying-adaptation",
+      "title": "1959年改编背景",
+      "locator": "剧目简介最后两句；主创",
+      "content": "该京剧版本于1959年由梅兰芳、陆静岩、袁韵宜据同名豫剧改编，梅兰芳同年在北京首演。这里的年份是作品改编和首演时间。",
+      "entity_names": [
+        "穆桂英挂帅",
+        "梅兰芳",
+        "陆静岩",
+        "袁韵宜",
+        "1959年",
+        "豫剧"
+      ]
+    }
+  ]
+}
