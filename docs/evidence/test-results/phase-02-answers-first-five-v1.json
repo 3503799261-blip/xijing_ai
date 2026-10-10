@@ -1,0 +1,252 @@
+{
+  "status": "completed",
+  "metadata": {
+    "label": "rag-first-five-v1",
+    "runId": "d11835ca4fb445698be5b220b87e86c5",
+    "startedAt": "2026-10-10T13:25:40.114272+08:00",
+    "baseUrl": "http://127.0.0.1:8000",
+    "questionSetFile": "questions.json",
+    "questionSetSHA256": "9734e4e6484c3450e2177d91602c19e11501e3611faa82d65cc26d99e155ed1d",
+    "scriptSHA256": "9ec8ca2082940473b57da82a5fd8f84d8183d9baab7f8bc5e6b307055b224ef7",
+    "annotationScope": "assistant_source_checked_candidate",
+    "humanGoldLabels": false,
+    "automaticRetries": 0,
+    "sequentialRequests": true,
+    "httpTimeoutSeconds": 60,
+    "index": {
+      "generation_id": "gen-20261010T050104-5bf46e2d",
+      "corpus_hash": "156208ab5b00994be016b6d7d29b60ba4c9f462cf1d0056899f542308dda8cdb",
+      "documents": 12,
+      "chunks": 35,
+      "model_id": "BAAI/bge-small-zh-v1.5",
+      "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+      "dimension": 512,
+      "review_scope": "assistant source-checked original facts; human review pending"
+    },
+    "llmUsageMeasuredByThisScript": false,
+    "usageNote": "The endpoint may answer insufficient-evidence cases without an LLM call. Actual model usage/cost must be checked against the backend ledger separately.",
+    "logPolicy": "Console contains question IDs, status, HTTP status and request IDs only; arbitrary bodies, credentials and exception strings are omitted.",
+    "finishedAt": "2026-10-10T13:25:50.517676+08:00"
+  },
+  "records": [
+    {
+      "id": "opera-q01",
+      "question": "四大徽班指哪四个戏班？它们进京与京剧形成是什么关系？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-d11835ca4fb445698be5b220b87e86c5-6e72e2620751eeb8",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:25:40.201311+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "8b9eeebf-919d-4546-afa2-a9e31eb3de0f",
+      "rawResponseSHA256": "7dccbdc6d2a0d774e736d022d02eeed80a519c9144ec2dc0744a20171aed27ba",
+      "response": {
+        "answer": "四大徽班指的是三庆、四喜、春台、和春这四个徽班[chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826]。它们进京后，与汉调艺人合作，并吸收了昆曲、秦腔等艺术因素，这一过程是京剧形成的重要发展节点[chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826]。需要说明的是，徽班进京只是京剧形成过程中的一个节点，并不等于京剧在某一日就完成了剧种形成，京剧的形成是清代剧种交流的长期过程[chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826]。",
+        "citations": [
+          {
+            "id": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+            "title": "京剧",
+            "sourceId": "ihchina-jingju",
+            "locator": "项目正文第一段 · 入库片段 1/1",
+            "url": "https://www.ihchina.cn/project_details/13201",
+            "excerpt": "京剧形成于清代的剧种交流过程。\n三庆、四喜、春台、和春徽班进京后，与汉调艺人合作，并吸收昆曲、秦腔等艺术因素。\n徽班进京是发展节点，不能等同于一日完成剧种形成。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "8b9eeebf-919d-4546-afa2-a9e31eb3de0f"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "8b9eeebf-919d-4546-afa2-a9e31eb3de0f",
+      "elapsedSeconds": 2.304847,
+      "finishedAt": "2026-10-10T13:25:42.507068+08:00"
+    },
+    {
+      "id": "opera-q02",
+      "question": "京剧主要使用哪两种声腔？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-d11835ca4fb445698be5b220b87e86c5-c0570c1eec1a4359",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:25:42.508069+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "bb2d0747-b484-4a0d-bbea-560c28ebd2f7",
+      "rawResponseSHA256": "8dff55aa562df1f5f97b3cd585fb99a7957252c5af9d41221cea3d7192a5c4c4",
+      "response": {
+        "answer": "京剧主要使用西皮和二簧两种声腔[chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a]。概括来说，二簧较舒缓凝重，西皮较明快起伏；不过这只是声腔特点的基础介绍，具体情绪表达还要结合具体唱段来看[chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a]。",
+        "citations": [
+          {
+            "id": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+            "title": "京剧",
+            "sourceId": "ihchina-jingju",
+            "locator": "项目正文第二段：唱腔 · 入库片段 1/1",
+            "url": "https://www.ihchina.cn/project_details/13201",
+            "excerpt": "京剧主要使用西皮和二簧声腔。\n概括而言，二簧较舒缓凝重，西皮较明快起伏；\n这是声腔特点的基础介绍，具体情绪表达仍须结合唱段。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "bb2d0747-b484-4a0d-bbea-560c28ebd2f7"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "bb2d0747-b484-4a0d-bbea-560c28ebd2f7",
+      "elapsedSeconds": 1.725285,
+      "finishedAt": "2026-10-10T13:25:44.234540+08:00"
+    },
+    {
+      "id": "opera-q03",
+      "question": "京剧伴奏中的文场和武场分别以哪些乐器为主？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-d11835ca4fb445698be5b220b87e86c5-0b88c16bfb8676f8",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:25:44.235539+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "f5f53468-7b0b-4f98-bc20-143461ae3cbf",
+      "rawResponseSHA256": "b09d0a52822dab66b538aa644c670c25bfe67fd4a8b90b1803083203625c3770",
+      "response": {
+        "answer": "京剧伴奏分为文场和武场两类。文场以京胡等丝竹乐器为主，武场以鼓板以及大小锣等打击乐器为主，两类伴奏共同服务于舞台表演[chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9]。",
+        "citations": [
+          {
+            "id": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+            "title": "京剧",
+            "sourceId": "ihchina-jingju",
+            "locator": "项目正文第二段：伴奏 · 入库片段 1/1",
+            "url": "https://www.ihchina.cn/project_details/13201",
+            "excerpt": "京剧伴奏分文场、武场。\n文场以京胡等丝竹乐器为主，武场以鼓板以及大小锣等打击乐器为主；\n两类伴奏共同服务舞台表演。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "f5f53468-7b0b-4f98-bc20-143461ae3cbf"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "f5f53468-7b0b-4f98-bc20-143461ae3cbf",
+      "elapsedSeconds": 1.474172,
+      "finishedAt": "2026-10-10T13:25:45.711053+08:00"
+    },
+    {
+      "id": "opera-q04",
+      "question": "京剧里的行当是什么意思？生、旦、净、丑分别表现什么类型的角色？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-d11835ca4fb445698be5b220b87e86c5-aeb38ddf09de8279",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:25:45.713053+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "8d561f06-d727-4ab8-b05d-e56c263d70c3",
+      "rawResponseSHA256": "75a05e4c1487e49157c4b78ec7898bfd07e92bed97addf667dbbc52d423c7297",
+      "response": {
+        "answer": "行当是京剧对角色进行分类的专门称谓，常见的四大类就是生、旦、净、丑。它描述的是剧中角色及其表演特点，各行当都有不同的唱念做打程式[chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6]。\n\n生行主要表现净、丑之外的男性角色，常见的有老生、小生、武生等；旦行表现女性角色，常见的有青衣、花旦、刀马旦、武旦等，不同分支各有自己的表演程式[chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072]。\n\n净行方面，资料中提到的正净又称大花脸、铜锤花脸，表演侧重唱功，例如国家京剧院课堂以《铡美案》中的包拯来说明这一类型[chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f]。\n\n丑行常承担喜剧表演，因鼻梁上画一小块白色化妆而有“小花脸”之称；常见分类有文丑和武丑，武丑又称“开口跳”[chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da]。\n\n需要说明的是，行当与流派不是同一层级的分类：例如梅派是梅兰芳开创的京剧旦角流派，流派描述的是传承的艺术风格，不能和生旦净丑这样的角色行当混为一谈[chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada]。另外，本次资料对净行的介绍只涉及正净一类，净行其他分支的细节未作展开。",
+        "citations": [
+          {
+            "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+            "title": "京剧的行当分类是什么？",
+            "sourceId": "fujian-roles",
+            "locator": "正文第一段及末段 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "title": "京剧的行当分类是什么？",
+            "sourceId": "fujian-roles",
+            "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+            "title": "京剧净行小讲堂",
+            "sourceId": "cnpoc-jing",
+            "locator": "正文（1）正净 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/202505/1429cdcaf7384ed985ac6b90b8af2309.shtml",
+            "excerpt": "正净又称大花脸、铜锤花脸，表演侧重唱功。\n国家京剧院课堂以《铡美案》的包拯说明这一类型。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+            "title": "京剧的行当分类是什么？",
+            "sourceId": "fujian-roles",
+            "locator": "正文“丑”条目 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "丑行常承担喜剧表演，鼻梁上的小块白色化妆使其有小花脸之称。\n文丑与武丑是常见分类，武丑另称开口跳。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+            "title": "梅(兰芳)派",
+            "sourceId": "cnpoc-mei",
+            "locator": "正文开头 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+            "excerpt": "梅派是由梅兰芳开创的京剧旦角流派。\n流派描述的是传承的艺术风格，不能与生旦净丑这样的角色行当当作同一分类层级。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "8d561f06-d727-4ab8-b05d-e56c263d70c3"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "8d561f06-d727-4ab8-b05d-e56c263d70c3",
+      "elapsedSeconds": 3.239466,
+      "finishedAt": "2026-10-10T13:25:48.953642+08:00"
+    },
+    {
+      "id": "opera-q05",
+      "question": "梅派由谁开创，属于什么行当的流派？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-d11835ca4fb445698be5b220b87e86c5-042e610813a39c98",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:25:48.955008+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "d79b0305-0e97-4bc2-bf73-65fefc2e7f47",
+      "rawResponseSHA256": "319c39560a0df8e25957a5b79e69bbddae25f8e48eeae344bca8992b8a762f84",
+      "response": {
+        "answer": "梅派是由梅兰芳开创的京剧旦角流派[chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada]。它属于旦角这一行当的流派。需要说明的是，流派描述的是传承的艺术风格，与生、旦、净、丑这样的角色行当不是同一分类层级[chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada]。",
+        "citations": [
+          {
+            "id": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+            "title": "梅(兰芳)派",
+            "sourceId": "cnpoc-mei",
+            "locator": "正文开头 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+            "excerpt": "梅派是由梅兰芳开创的京剧旦角流派。\n流派描述的是传承的艺术风格，不能与生旦净丑这样的角色行当当作同一分类层级。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "d79b0305-0e97-4bc2-bf73-65fefc2e7f47"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "d79b0305-0e97-4bc2-bf73-65fefc2e7f47",
+      "elapsedSeconds": 1.560148,
+      "finishedAt": "2026-10-10T13:25:50.516276+08:00"
+    }
+  ],
+  "summary": {
+    "requestedQuestionCount": 5,
+    "attemptedQuestionCount": 5,
+    "responseReceivedCount": 5,
+    "failedCount": 0,
+    "apiResponseSuccessRate": 1.0,
+    "meanSuccessfulHttpSeconds": 2.0607836,
+    "candidateUncertaintyFlagAgreement": 1,
+    "failedQuestionIds": [],
+    "uncertaintyFlagDisagreements": [],
+    "humanAnswerCorrectnessRate": null,
+    "scope": "HTTP success and candidate uncertainty flags only; no human semantic scoring or per-response LLM usage is inferred."
+  }
+}

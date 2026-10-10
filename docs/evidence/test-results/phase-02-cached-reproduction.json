@@ -1,0 +1,75 @@
+{
+  "success": true,
+  "elapsedSeconds": 22.2354,
+  "conditions": [
+    "existing verified .venv dependencies",
+    "fixed BGE snapshot already downloaded",
+    "local private API configuration and previously successful provider probe",
+    "application stopped before test",
+    "network access to DeepSeek"
+  ],
+  "scope": "actual full index rebuild, fresh FastAPI process, HTTP frontend and one real RAG request; dependency installation/model download not included",
+  "ingestion": {
+    "status": "built",
+    "added": 0,
+    "updated": 12,
+    "skipped": 0,
+    "failed": 0,
+    "generation_id": "gen-20261010T101322-de3db5c3",
+    "corpus_hash": "156208ab5b00994be016b6d7d29b60ba4c9f462cf1d0056899f542308dda8cdb",
+    "documents": 12,
+    "chunks": 35,
+    "duplicates_skipped": 0,
+    "model_id": "BAAI/bge-small-zh-v1.5",
+    "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+    "dimension": 512,
+    "distance": "Cosine",
+    "chunking": {
+      "target_chars": 350,
+      "overlap_chars": 70,
+      "max_tokens": 480,
+      "vector_text": "content"
+    },
+    "created_at": "2026-10-10T10:13:31.647007+00:00",
+    "review_scope": "assistant source-checked original facts; human review pending",
+    "elapsed_seconds": 8.6834
+  },
+  "health": {
+    "status": "ready",
+    "knowledge": true,
+    "embedding": true,
+    "llmConfigured": true,
+    "llmVerified": true,
+    "diagnostic": null,
+    "documents": 12,
+    "chunks": 35,
+    "budget": {
+      "calls": 33,
+      "estimatedUpperCostCny": 0.08186912,
+      "budgetCny": 3.0,
+      "priceVerifiedAt": "2026-10-10",
+      "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap"
+    }
+  },
+  "frontend": {
+    "status": 200,
+    "bytes": 23699
+  },
+  "answer": {
+    "answer": "京剧主要使用西皮和二簧两种声腔。概括来说，二簧较舒缓凝重，西皮较明快起伏；不过具体情绪表达还要结合唱段来看。",
+    "citations": [
+      {
+        "id": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+        "title": "京剧",
+        "sourceId": "ihchina-jingju",
+        "locator": "项目正文第二段：唱腔 · 入库片段 1/1",
+        "url": "https://www.ihchina.cn/project_details/13201",
+        "excerpt": "京剧主要使用西皮和二簧声腔。\n概括而言，二簧较舒缓凝重，西皮较明快起伏；\n这是声腔特点的基础介绍，具体情绪表达仍须结合唱段。",
+        "contentKind": "original_fact_summary"
+      }
+    ],
+    "uncertain": false,
+    "requestId": "01a13265-882c-4277-ba56-33cd54f8e516"
+  }
+}

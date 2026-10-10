@@ -1,0 +1,852 @@
+{
+  "status": "completed",
+  "metadata": {
+    "label": "rag20-v2",
+    "runId": "eec82228858949858ea0db9e13ae4d59",
+    "startedAt": "2026-10-10T13:32:53.105744+08:00",
+    "baseUrl": "http://127.0.0.1:8000",
+    "questionSetFile": "questions.json",
+    "questionSetSHA256": "9734e4e6484c3450e2177d91602c19e11501e3611faa82d65cc26d99e155ed1d",
+    "scriptSHA256": "ea248d3c7c4bbf53bc40c64b150d83916a9c2f0bde7bd7f7b0ce2f2ea8975eaf",
+    "annotationScope": "assistant_source_checked_candidate",
+    "humanGoldLabels": false,
+    "automaticRetries": 0,
+    "sequentialRequests": true,
+    "httpTimeoutSeconds": 60,
+    "index": {
+      "generation_id": "gen-20261010T050104-5bf46e2d",
+      "corpus_hash": "156208ab5b00994be016b6d7d29b60ba4c9f462cf1d0056899f542308dda8cdb",
+      "documents": 12,
+      "chunks": 35,
+      "model_id": "BAAI/bge-small-zh-v1.5",
+      "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+      "dimension": 512,
+      "review_scope": "assistant source-checked original facts; human review pending"
+    },
+    "llmUsageMeasuredByThisScript": false,
+    "usageNote": "The endpoint may answer insufficient-evidence cases without an LLM call. Actual model usage/cost must be checked against the backend ledger separately.",
+    "logPolicy": "Console contains question IDs, status, HTTP status and request IDs only; arbitrary bodies, credentials and exception strings are omitted.",
+    "finishedAt": "2026-10-10T13:33:22.652909+08:00"
+  },
+  "records": [
+    {
+      "id": "opera-q01",
+      "question": "四大徽班指哪四个戏班？它们进京与京剧形成是什么关系？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-1-6e72e2620751",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:32:53.193820+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "3928e84b-f4b7-4ca4-a52b-885e801d2896",
+      "rawResponseSHA256": "9b8c255a3ef2f4047471035bb24009d58c7af343d12003d612b82b217e9ed093",
+      "response": {
+        "answer": "四大徽班指的是三庆、四喜、春台、和春这四个徽班。它们进京是京剧形成过程中的一个重要发展节点：徽班进京后，与汉调艺人合作，并吸收了昆曲、秦腔等艺术因素，逐步推动了京剧的形成。不过，徽班进京并不等于京剧在一天之内就完成了形成，京剧的形成是一个逐步交流、融合的过程。",
+        "citations": [
+          {
+            "id": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+            "title": "京剧",
+            "sourceId": "ihchina-jingju",
+            "locator": "项目正文第一段 · 入库片段 1/1",
+            "url": "https://www.ihchina.cn/project_details/13201",
+            "excerpt": "京剧形成于清代的剧种交流过程。\n三庆、四喜、春台、和春徽班进京后，与汉调艺人合作，并吸收昆曲、秦腔等艺术因素。\n徽班进京是发展节点，不能等同于一日完成剧种形成。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "3928e84b-f4b7-4ca4-a52b-885e801d2896"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "3928e84b-f4b7-4ca4-a52b-885e801d2896",
+      "elapsedSeconds": 1.753162,
+      "finishedAt": "2026-10-10T13:32:54.950701+08:00"
+    },
+    {
+      "id": "opera-q02",
+      "question": "京剧主要使用哪两种声腔？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-2-c0570c1eec1a",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:32:54.951704+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "6ee7306d-26ff-4305-8dba-f34136f95b85",
+      "rawResponseSHA256": "84e51b05b5c446a98d00e5919ac8515b69e1a21fc93a2bb510052d023d0d5b71",
+      "response": {
+        "answer": "京剧主要使用西皮和二簧两种声腔。概括来说，二簧较舒缓凝重，西皮较明快起伏；不过具体唱段的情绪表达，还要结合唱段本身来看。",
+        "citations": [
+          {
+            "id": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+            "title": "京剧",
+            "sourceId": "ihchina-jingju",
+            "locator": "项目正文第二段：唱腔 · 入库片段 1/1",
+            "url": "https://www.ihchina.cn/project_details/13201",
+            "excerpt": "京剧主要使用西皮和二簧声腔。\n概括而言，二簧较舒缓凝重，西皮较明快起伏；\n这是声腔特点的基础介绍，具体情绪表达仍须结合唱段。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "6ee7306d-26ff-4305-8dba-f34136f95b85"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "6ee7306d-26ff-4305-8dba-f34136f95b85",
+      "elapsedSeconds": 1.283509,
+      "finishedAt": "2026-10-10T13:32:56.235988+08:00"
+    },
+    {
+      "id": "opera-q03",
+      "question": "京剧伴奏中的文场和武场分别以哪些乐器为主？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-3-0b88c16bfb86",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:32:56.236986+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "c23d4104-ebdb-4211-bbe1-8ff2932a4f8c",
+      "rawResponseSHA256": "dee2de3de85bbaae515addc8bb21e88d162d90640abcc0fb15197346bc7eac5b",
+      "response": {
+        "answer": "京剧伴奏分为文场和武场两类。文场以京胡等丝竹乐器为主，武场以鼓板以及大小锣等打击乐器为主。两类伴奏共同服务于舞台表演。",
+        "citations": [
+          {
+            "id": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+            "title": "京剧",
+            "sourceId": "ihchina-jingju",
+            "locator": "项目正文第二段：伴奏 · 入库片段 1/1",
+            "url": "https://www.ihchina.cn/project_details/13201",
+            "excerpt": "京剧伴奏分文场、武场。\n文场以京胡等丝竹乐器为主，武场以鼓板以及大小锣等打击乐器为主；\n两类伴奏共同服务舞台表演。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "c23d4104-ebdb-4211-bbe1-8ff2932a4f8c"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "c23d4104-ebdb-4211-bbe1-8ff2932a4f8c",
+      "elapsedSeconds": 1.174976,
+      "finishedAt": "2026-10-10T13:32:57.413859+08:00"
+    },
+    {
+      "id": "opera-q04",
+      "question": "京剧里的行当是什么意思？生、旦、净、丑分别表现什么类型的角色？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-4-aeb38ddf09de",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:32:57.414954+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "e498e965-58d7-4e7e-8401-591e137f1779",
+      "rawResponseSHA256": "3fd93c55e158c17a21c155a694160da734e8b0bfe0df0e155c2273c9cf853e0c",
+      "response": {
+        "answer": "行当是京剧对角色进行分类的专门称谓，常见的四大类为生、旦、净、丑。各行当都有不同的唱念做打程式，所以行当既是在给剧中角色归类，也对应着不同的表演特点。\n\n具体来看：生行主要表现净、丑之外的男性角色，常见分支有老生、小生、武生等；旦行表现女性角色，常见分支有青衣、花旦、刀马旦、武旦等，不同分支各有自己的表演程式。丑行常承担喜剧表演，因鼻梁上画一小块白色化妆而有“小花脸”之称，常见分类有文丑和武丑，武丑又称“开口跳”。\n\n关于净行，现有资料只提到正净（又称大花脸、铜锤花脸）这一类型，其表演侧重唱功，并以《铡美案》中的包拯为例。至于净行整体表现哪类角色、还有哪些分支，当前资料没有给出完整说明，因此这里无法对净行作全面概括。\n\n另外需要区分的是，流派和行当不是同一层级的分类。例如梅派是梅兰芳开创的旦角流派，属于艺术风格的传承，不能与生旦净丑这样的角色行当混为一谈。",
+        "citations": [
+          {
+            "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+            "title": "京剧的行当分类是什么？",
+            "sourceId": "fujian-roles",
+            "locator": "正文第一段及末段 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "title": "京剧的行当分类是什么？",
+            "sourceId": "fujian-roles",
+            "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+            "title": "梅(兰芳)派",
+            "sourceId": "cnpoc-mei",
+            "locator": "正文开头 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+            "excerpt": "梅派是由梅兰芳开创的京剧旦角流派。\n流派描述的是传承的艺术风格，不能与生旦净丑这样的角色行当当作同一分类层级。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+            "title": "京剧的行当分类是什么？",
+            "sourceId": "fujian-roles",
+            "locator": "正文“丑”条目 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "丑行常承担喜剧表演，鼻梁上的小块白色化妆使其有小花脸之称。\n文丑与武丑是常见分类，武丑另称开口跳。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+            "title": "京剧净行小讲堂",
+            "sourceId": "cnpoc-jing",
+            "locator": "正文（1）正净 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/202505/1429cdcaf7384ed985ac6b90b8af2309.shtml",
+            "excerpt": "正净又称大花脸、铜锤花脸，表演侧重唱功。\n国家京剧院课堂以《铡美案》的包拯说明这一类型。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": true,
+        "requestId": "e498e965-58d7-4e7e-8401-591e137f1779"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "e498e965-58d7-4e7e-8401-591e137f1779",
+      "elapsedSeconds": 2.218309,
+      "finishedAt": "2026-10-10T13:32:59.634013+08:00"
+    },
+    {
+      "id": "opera-q05",
+      "question": "梅派由谁开创，属于什么行当的流派？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-5-042e610813a3",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:32:59.636013+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "8a4346d4-d316-4bb0-97ce-0af88ea8bd52",
+      "rawResponseSHA256": "c1768b7f85a5e608ee2ac30c55ab0a2ea6354b551b73cd4681053c5796bbaa55",
+      "response": {
+        "answer": "梅派是由梅兰芳开创的京剧旦角流派。需要说明的是，流派描述的是传承的艺术风格，与生旦净丑这样的角色行当并不属于同一分类层级，因此“旦角流派”是指它所属的行当范围，而不是把流派等同于行当。",
+        "citations": [
+          {
+            "id": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+            "title": "梅(兰芳)派",
+            "sourceId": "cnpoc-mei",
+            "locator": "正文开头 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+            "excerpt": "梅派是由梅兰芳开创的京剧旦角流派。\n流派描述的是传承的艺术风格，不能与生旦净丑这样的角色行当当作同一分类层级。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "8a4346d4-d316-4bb0-97ce-0af88ea8bd52"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "8a4346d4-d316-4bb0-97ce-0af88ea8bd52",
+      "elapsedSeconds": 1.620618,
+      "finishedAt": "2026-10-10T13:33:01.257881+08:00"
+    },
+    {
+      "id": "opera-q06",
+      "question": "《三岔口》中的任堂惠和刘利华为什么在夜里交手，误会怎样化解？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-6-604960af5f1a",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:01.258881+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "77e3863c-53c8-425c-ac34-b82418745317",
+      "rawResponseSHA256": "bc1685f7f647ab3fa685422b2506404905bac2a5837771f84ce31e190d76234c",
+      "response": {
+        "answer": "《三岔口》里，任堂惠和刘利华夜里交手，是因为刘利华夫妇误把任堂惠当成了敌人。这场冲突并不是两人真正立场敌对，后来焦赞赶到，才把误会解开。",
+        "citations": [
+          {
+            "id": "chunk_97a45b71a7ef0f438300dea22d63f927734f2fdf9863b22aba3faeac2510b838",
+            "title": "三岔口",
+            "sourceId": "cnpoc-sanchakou",
+            "locator": "剧目简介后半段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/mbs/200806/aa3b20102b2548378a92ccc640c25eb2.shtml",
+            "excerpt": "刘利华夫妇误把任堂惠当作敌人，任、刘在黑夜交手。\n焦赞赶到后才解开误会，所以这场冲突并非两人立场真正敌对。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_c48ba80c09004938c4d59b77c3acb0c72bdd9f123c2428ccc325b9e7bcfdf81f",
+            "title": "三岔口",
+            "sourceId": "cnpoc-sanchakou",
+            "locator": "剧目简介开头；主要演员 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/mbs/200806/aa3b20102b2548378a92ccc640c25eb2.shtml",
+            "excerpt": "《三岔口》涉及被发配的焦赞、跟随相救的任堂惠和店主刘利华。\n该院演员表也分别列出任堂惠、刘利华两角色。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "77e3863c-53c8-425c-ac34-b82418745317"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "77e3863c-53c8-425c-ac34-b82418745317",
+      "elapsedSeconds": 1.481035,
+      "finishedAt": "2026-10-10T13:33:02.741125+08:00"
+    },
+    {
+      "id": "opera-q07",
+      "question": "老生与小生在角色年龄和髯口使用上有什么常见区别？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-7-0d6033f1814c",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:02.743147+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "3ef805e7-1576-4914-8387-272dae6f221c",
+      "rawResponseSHA256": "5690c2d80bb9f1fcbe9d3ddc9aa74b126b9d901e99c738b9e9baf590646b1b2e",
+      "response": {
+        "answer": "老生和小生都属于京剧“生”行，但在角色年龄和髯口使用上常见区别是：老生通常表现中年或老年男性，常戴髯口，因此也叫“须生”，例如《四郎探母》中的杨四郎；小生多表现青年男子，一般不戴髯口，例如《群英会》中的周瑜。此外，小生的唱念用嗓与老生有所区别。需要说明的是，这些是常见情况，具体到不同剧目和人物仍可能有细分或例外。",
+        "citations": [
+          {
+            "id": "chunk_20330747660d1bdd808616344eadef0a69b807b765c22bf1f62a3ba318361498",
+            "title": "京劇行當",
+            "sourceId": "ncfta-male-roles",
+            "locator": "行当介绍—生—小生 · 入库片段 1/1",
+            "url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+            "excerpt": "小生多表现青年男子，一般不戴髯口。\n该介绍以《群英会》的周瑜为例，指出其唱念用嗓与老生有所区别。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_ef3abbfbfcbac0f86d4f47955bf29bba01eb214a76fe47c155efcbba3859945c",
+            "title": "京劇行當",
+            "sourceId": "ncfta-male-roles",
+            "locator": "行当介绍—生—老生 · 入库片段 1/1",
+            "url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+            "excerpt": "老生通常表现中年或老年男性，常戴髯口，所以也称须生。\n该介绍以《四郎探母》的杨四郎为例；\n具体唱做侧重还可继续细分。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "3ef805e7-1576-4914-8387-272dae6f221c"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "3ef805e7-1576-4914-8387-272dae6f221c",
+      "elapsedSeconds": 2.151267,
+      "finishedAt": "2026-10-10T13:33:04.895543+08:00"
+    },
+    {
+      "id": "opera-q08",
+      "question": "长靠武生与短打武生的服饰和动作有什么区别？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-8-f0dfb8c42a4e",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:04.896864+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "58359cc5-17a7-440c-95a3-50c306f1f86e",
+      "rawResponseSHA256": "b4a2029f254bbee5cde81d17a49ddfba7b26df6b1c3000b84c874a2ec95cb4fc",
+      "response": {
+        "answer": "根据现有资料，长靠武生与短打武生的区别同时体现在服饰和动作风格上。长靠武生穿大靠、厚底靴，身段稳健；短打武生穿短衣、薄底靴，动作轻捷。",
+        "citations": [
+          {
+            "id": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+            "title": "京劇行當",
+            "sourceId": "ncfta-male-roles",
+            "locator": "行当介绍—生—武生 · 入库片段 1/1",
+            "url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+            "excerpt": "武生常表现武艺高强的男子。\n长靠武生穿大靠、厚底靴，身段稳健；\n短打武生穿短衣、薄底靴，动作轻捷。\n区分同时涉及服装与表演方式。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "58359cc5-17a7-440c-95a3-50c306f1f86e"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "58359cc5-17a7-440c-95a3-50c306f1f86e",
+      "elapsedSeconds": 1.373064,
+      "finishedAt": "2026-10-10T13:33:06.271366+08:00"
+    },
+    {
+      "id": "opera-q09",
+      "question": "正净、副净、武净分别侧重哪些表演技巧？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-9-12375431fef1",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:06.272371+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "f4d4faf6-d98f-4a19-8781-c73d4bcb6765",
+      "rawResponseSHA256": "ba80097df1427749b388dce79fb7eac2594080d891ffa9fb4ad89d785d36e3c8",
+      "response": {
+        "answer": "根据现有资料，京剧净行内部可按表演侧重分为正净、副净、武净三类。正净又称大花脸、铜锤花脸，表演侧重唱功，课堂以《铡美案》的包拯为例说明这一类型。副净也叫二花脸、架子花脸，重念白和身段，同时要求武功与唱功，课堂以《野猪林》的鲁智深为例。武净又有武花脸、武二花、摔打花脸等称呼，侧重武打，课堂以《艳阳楼》的高登为例。需要说明的是，这些剧目人物只是课堂用来举例说明该类型的例子，不能把某一个人物的特点推广为所有净角；净行整体上脸谱和洪亮的声音是常见表演特点，但唱功、身段或武打的具体侧重因分支而异。",
+        "citations": [
+          {
+            "id": "chunk_0b916210ff082e5d20bee28166813380c7a563ef19b74dcfb368f321134a1735",
+            "title": "京剧净行小讲堂",
+            "sourceId": "cnpoc-jing",
+            "locator": "正文（3）武净 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/202505/1429cdcaf7384ed985ac6b90b8af2309.shtml",
+            "excerpt": "武净又有武花脸、武二花、摔打花脸等称呼，侧重武打。\n该课堂以《艳阳楼》的高登为例，不能把这一人物例子推广为所有净角。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "title": "京剧的行当分类是什么？",
+            "sourceId": "fujian-roles",
+            "locator": "正文“净”条目 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "净又称花脸，脸谱和洪亮的声音是常见表演特点，角色多为性格或形象鲜明的男性人物。\n净行的唱功、身段或武打侧重有不同分支。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_3942e057fac7bd5aea92a1df0f858346a947634ffed663cdb01ce01b8395e360",
+            "title": "京剧净行小讲堂",
+            "sourceId": "cnpoc-jing",
+            "locator": "正文（2）副净 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/202505/1429cdcaf7384ed985ac6b90b8af2309.shtml",
+            "excerpt": "副净也叫二花脸、架子花脸，重念白和身段，同时要求武功与唱功。\n该课堂以《野猪林》的鲁智深作为例子。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+            "title": "京剧净行小讲堂",
+            "sourceId": "cnpoc-jing",
+            "locator": "正文（1）正净 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/202505/1429cdcaf7384ed985ac6b90b8af2309.shtml",
+            "excerpt": "正净又称大花脸、铜锤花脸，表演侧重唱功。\n国家京剧院课堂以《铡美案》的包拯说明这一类型。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "f4d4faf6-d98f-4a19-8781-c73d4bcb6765"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "f4d4faf6-d98f-4a19-8781-c73d4bcb6765",
+      "elapsedSeconds": 2.135519,
+      "finishedAt": "2026-10-10T13:33:08.409017+08:00"
+    },
+    {
+      "id": "opera-q10",
+      "question": "青衣与花旦的表演侧重有什么常见差别？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-10-00253145bd09",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:08.411014+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "e5c08f8a-20c8-4df8-8ce7-39cb9420f167",
+      "rawResponseSHA256": "8d1d642624069689ce17f25b53744bd09d56f9fa2104070a197a1c80650054eb",
+      "response": {
+        "answer": "青衣也称正旦，常表现举止稳重的中青年女性，表演上更重唱功。花旦则常表现年轻、活泼的女性，表演上更多侧重做功和说白。这些属于入门层面的概括，实际剧目中不同流派、不同人物的处理会有所变化。",
+        "citations": [
+          {
+            "id": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+            "title": "京剧旦行小讲堂",
+            "sourceId": "cnpoc-dan",
+            "locator": "正文（1）正旦、（2）花旦 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+            "excerpt": "青衣也称正旦，常表现举止稳重的中青年女性，重唱功。\n花旦常表现年轻、活泼的女性，更多侧重做功和说白；\n这属于入门概括。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "e5c08f8a-20c8-4df8-8ce7-39cb9420f167"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "e5c08f8a-20c8-4df8-8ce7-39cb9420f167",
+      "elapsedSeconds": 1.581833,
+      "finishedAt": "2026-10-10T13:33:09.994371+08:00"
+    },
+    {
+      "id": "opera-q11",
+      "question": "刀马旦与武旦在服饰和表演上有哪些区别？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-11-63810dc100f5",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:09.996388+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "2cc85cf2-7d4f-40ea-a7f3-b29f088c35b3",
+      "rawResponseSHA256": "c8cfd736f7cb031a3d0a29cca4950ce84c2e0015049aac03a866e4580629e664",
+      "response": {
+        "answer": "根据现有资料，刀马旦与武旦的区别主要体现在扮相和表演侧重上：刀马旦常扮演女将帅，常见扮相是硬靠、雉尾，表演上更重唱念与舞蹈；武旦则常着短装，表演更侧重武打和打出手等技巧。两者都属于旦行中表现女性角色的分支，但具体程式各有侧重。需要说明的是，这里讲的是常见、一般性的区别，并非所有剧目和人物都完全按此划分。",
+        "citations": [
+          {
+            "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "title": "京剧旦行小讲堂",
+            "sourceId": "cnpoc-dan",
+            "locator": "正文（3）刀马旦、（5）武旦 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+            "excerpt": "刀马旦常扮演女将帅，硬靠、雉尾是常见扮相，重唱念与舞蹈。\n武旦常着短装，表演更侧重武打与打出手等技巧。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "title": "京剧的行当分类是什么？",
+            "sourceId": "fujian-roles",
+            "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "2cc85cf2-7d4f-40ea-a7f3-b29f088c35b3"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "2cc85cf2-7d4f-40ea-a7f3-b29f088c35b3",
+      "elapsedSeconds": 1.87825,
+      "finishedAt": "2026-10-10T13:33:11.876319+08:00"
+    },
+    {
+      "id": "opera-q12",
+      "question": "京剧脸谱的红色作主色和作副色，意义一定相同吗？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-12-b12f915c51bf",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:11.878324+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "2302c46c-3f3d-4693-a880-0d48d08355cb",
+      "rawResponseSHA256": "e63663caa728eb3a7b54652bf7e2d03fe2b517b379431a5ec1d2618474b01fb8",
+      "response": {
+        "answer": "不一定相同。按现有资料，红色作主色时，常用于关羽等忠勇人物；作副色时，则可表达其他寓意。因此，不能把某一种颜色脱离人物、谱式和使用部位，解释成绝对的人格标签。",
+        "citations": [
+          {
+            "id": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+            "title": "二、京剧脸谱",
+            "sourceId": "cnpoc-face",
+            "locator": "脸谱的色彩—红色；京剧脸谱的分类第二段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+            "excerpt": "红色作主色时，常用于关羽等忠勇人物；\n作副色时可表达其他寓意。\n因此单个颜色不能脱离人物、谱式和使用部位解释成绝对人格标签。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "2302c46c-3f3d-4693-a880-0d48d08355cb"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "2302c46c-3f3d-4693-a880-0d48d08355cb",
+      "elapsedSeconds": 1.422361,
+      "finishedAt": "2026-10-10T13:33:13.302148+08:00"
+    },
+    {
+      "id": "opera-q13",
+      "question": "三块瓦脸的名称和哪些脸部区域有关？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-13-e60e0735b420",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:13.304152+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "00e4994c-81be-4eff-81d3-f71f86dc23db",
+      "rawResponseSHA256": "06c3784f432b19b37839073f2b40681efb2e036cb8824c41997346221a4bed44",
+      "response": {
+        "answer": "三块瓦脸的得名与脸部三个区域有关：两块眉区和一块鼻窝。它是在整脸的基础上，把这两块眉区和一块鼻窝加以突出，因此称为“三块瓦”。此外，三块瓦脸下面还有正、尖、花、老等不同变式。",
+        "citations": [
+          {
+            "id": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "title": "二、京剧脸谱",
+            "sourceId": "cnpoc-face",
+            "locator": "京剧脸谱的分类—三块瓦脸 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+            "excerpt": "三块瓦脸在整脸基础上突出两块眉区与一块鼻窝，所以有三块瓦之称；\n其下还有正、尖、花、老等不同变式。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "00e4994c-81be-4eff-81d3-f71f86dc23db"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "00e4994c-81be-4eff-81d3-f71f86dc23db",
+      "elapsedSeconds": 1.521489,
+      "finishedAt": "2026-10-10T13:33:14.826558+08:00"
+    },
+    {
+      "id": "opera-q14",
+      "question": "京剧中的靠是什么？靠旗还有什么名称和用途？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-14-891304dffaf2",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:14.828558+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "b66129aa-5965-4918-a5bc-690e3f9b08de",
+      "rawResponseSHA256": "748454a79cf18479f7320ebb831ab5f8b2638a9d74a292b7374862440268d153",
+      "response": {
+        "answer": "在京剧中，靠是表现男女将帅铠甲的戏服，常见于征战场面。靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。",
+        "citations": [
+          {
+            "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "title": "京剧服装和人物身份有什么关系？",
+            "sourceId": "cnpoc-costume",
+            "locator": "正文靠段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+            "excerpt": "靠是表现男女将帅铠甲的戏服，常见于征战场面。\n靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "b66129aa-5965-4918-a5bc-690e3f9b08de"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "b66129aa-5965-4918-a5bc-690e3f9b08de",
+      "elapsedSeconds": 1.096859,
+      "finishedAt": "2026-10-10T13:33:15.927904+08:00"
+    },
+    {
+      "id": "opera-q15",
+      "question": "京剧里的蟒袍一般在什么身份和场合使用？黄蟒可表示什么？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-15-df1265b32e6c",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:15.929152+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "8241bb57-fe94-4e60-8eee-6b8a0b8ea6ab",
+      "rawResponseSHA256": "918ca19c7a6fa6a69ed099d1986a43cbf944ae7f213fee2ae104bdb6e2946e7e",
+      "response": {
+        "answer": "蟒袍在京剧里常用于帝后、贵族以及高级官员的正式场合。黄蟒可以表示皇帝上朝，女蟒则可用于后妃。",
+        "citations": [
+          {
+            "id": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+            "title": "京剧服装和人物身份有什么关系？",
+            "sourceId": "cnpoc-costume",
+            "locator": "正文蟒袍段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+            "excerpt": "蟒袍常用于帝后、贵族及高级官员的正式场合。\n黄蟒可表示皇帝上朝，女蟒可用于后妃；\n这是戏服制度的基础说明。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "8241bb57-fe94-4e60-8eee-6b8a0b8ea6ab"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "8241bb57-fe94-4e60-8eee-6b8a0b8ea6ab",
+      "elapsedSeconds": 1.320931,
+      "finishedAt": "2026-10-10T13:33:17.252111+08:00"
+    },
+    {
+      "id": "opera-q16",
+      "question": "红色和黑色脸谱能否直接判断所有角色的性格？请分别说明一种限制。",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-16-0372e545877c",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:17.254116+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "18945f9b-77b9-47b9-b666-aea986ca773a",
+      "rawResponseSHA256": "60b33ea9c3548b0b6e5116c0070e079ab791e312c6aac52bbd8d71a3474b06ec",
+      "response": {
+        "answer": "不能。红色和黑色脸谱都不能脱离具体人物、谱式和使用部位，被当成判断所有角色性格的绝对标签。\n\n红色的限制：红色作主色时，常用于关羽等忠勇人物；但它作副色时还可以表达其他寓意，所以不能仅凭“脸是红色”就断定角色一定忠勇。\n\n黑色的限制：包拯的黑脸常表达刚正形象，但黑色在别的扮相中还可关联勇猛、肤色或突出眉眼，因此不能据此判断所有黑脸角色都具有同一种性格。",
+        "citations": [
+          {
+            "id": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+            "title": "二、京剧脸谱",
+            "sourceId": "cnpoc-face",
+            "locator": "脸谱的色彩—红色；京剧脸谱的分类第二段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+            "excerpt": "红色作主色时，常用于关羽等忠勇人物；\n作副色时可表达其他寓意。\n因此单个颜色不能脱离人物、谱式和使用部位解释成绝对人格标签。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+            "title": "包公为什么画黑脸？",
+            "sourceId": "cnpoc-bao",
+            "locator": "正文第一段、第三段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+            "excerpt": "包拯的黑脸常表达刚正形象。\n黑色在别的扮相中还可关联勇猛、肤色或突出眉眼，不能据此判断所有黑脸角色都具有同一种性格。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "18945f9b-77b9-47b9-b666-aea986ca773a"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "18945f9b-77b9-47b9-b666-aea986ca773a",
+      "elapsedSeconds": 1.825417,
+      "finishedAt": "2026-10-10T13:33:19.081257+08:00"
+    },
+    {
+      "id": "opera-q17",
+      "question": "京剧《霸王别姬》的核心人物是谁？它与梅派及剑舞有什么关系？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-17-af2b5fcde9a4",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:19.083261+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "381082c1-4408-4106-a2b4-4df43aaa8847",
+      "rawResponseSHA256": "198fc00a8758481639b6a895332bb4a58f68f35dba29c441c54989d6ec518f1b",
+      "response": {
+        "answer": "京剧《霸王别姬》的核心人物是项羽与虞姬，剧情以楚汉冲突、项羽被困垓下为背景，人物处境服务于舞台悲剧情节。\n\n它与梅派的关系是：《霸王别姬》被列为梅派代表作品之一。梅派是由梅兰芳开创的京剧旦角流派，属于传承的艺术风格，与生旦净丑这类角色行当不是同一分类层级。\n\n它与剑舞的关系是：《霸王别姬》中的剑舞体现了舞蹈化的表演特色。梅派注重把唱、念、做与舞蹈结合，用声音、身段和神情表现人物感情，艺术风格涉及多种表演要素，并不只是某一种脸谱或服装。",
+        "citations": [
+          {
+            "id": "chunk_1f7ad02c39b66e2d03d46f72d99dbb84a09722881807fd1144c68f6c02a2634e",
+            "title": "梅(兰芳)派",
+            "sourceId": "cnpoc-mei",
+            "locator": "正文剧目段、《别姬》舞蹈段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+            "excerpt": "《霸王别姬》与《穆桂英挂帅》是该资料列出的梅派代表作品；\n《霸王别姬》的剑舞体现舞蹈化表演特色。\n作品来源仍须分别追溯各剧文献。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_0652cb950585663562cea7354b521e68ca10244e5dc68aa035ba53c4c726ab5e",
+            "title": "霸王别姬",
+            "sourceId": "cnpoc-bawang",
+            "locator": "剧目简介：开头及别姬段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/mbb/200806/2c0fcc00d04849efa36386594e273bae.shtml",
+            "excerpt": "京剧《霸王别姬》的核心人物是项羽与虞姬。\n该院简介以楚汉冲突、项羽被困垓下为剧情背景，人物处境服务于舞台悲剧情节。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+            "title": "梅(兰芳)派",
+            "sourceId": "cnpoc-mei",
+            "locator": "正文开头 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+            "excerpt": "梅派是由梅兰芳开创的京剧旦角流派。\n流派描述的是传承的艺术风格，不能与生旦净丑这样的角色行当当作同一分类层级。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_20620832fe3d9595b1e167fa586a06d2a3319cff1d703acb00709a674645a517",
+            "title": "梅(兰芳)派",
+            "sourceId": "cnpoc-mei",
+            "locator": "正文表演与舞蹈段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+            "excerpt": "梅派注重把唱、念、做与舞蹈结合，用声音、身段和神情表现人物感情。\n艺术风格涉及多种表演要素，不只是某一种脸谱或服装。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "381082c1-4408-4106-a2b4-4df43aaa8847"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "381082c1-4408-4106-a2b4-4df43aaa8847",
+      "elapsedSeconds": 2.028509,
+      "finishedAt": "2026-10-10T13:33:21.113506+08:00"
+    },
+    {
+      "id": "opera-q18",
+      "question": "《穆桂英挂帅》的京剧版本哪一年由谁根据什么剧种改编？它与梅派有何关系？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": false,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-18-1a0f4531eb87",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:21.115501+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "b93d522a-27d2-43a0-9f19-65469f73e554",
+      "rawResponseSHA256": "f0d5e6e0bec95a780c0364031273846edcf02bfe54582e1ed4d2e957a11e9680",
+      "response": {
+        "answer": "《穆桂英挂帅》的京剧版本于1959年由梅兰芳、陆静岩、袁韵宜根据同名豫剧改编，梅兰芳同年在北京首演。它与梅派的关系是：该剧被列为梅派代表作品之一，而梅派是由梅兰芳开创的京剧旦角流派。",
+        "citations": [
+          {
+            "id": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+            "title": "穆桂英挂帅",
+            "sourceId": "cnpoc-muguiying",
+            "locator": "剧目简介最后两句；主创 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/mbm/200806/677c0bbf8a594b35901c47ea19f50a03.shtml",
+            "excerpt": "该京剧版本于1959年由梅兰芳、陆静岩、袁韵宜据同名豫剧改编，梅兰芳同年在北京首演。\n这里的年份是作品改编和首演时间。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_1f7ad02c39b66e2d03d46f72d99dbb84a09722881807fd1144c68f6c02a2634e",
+            "title": "梅(兰芳)派",
+            "sourceId": "cnpoc-mei",
+            "locator": "正文剧目段、《别姬》舞蹈段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+            "excerpt": "《霸王别姬》与《穆桂英挂帅》是该资料列出的梅派代表作品；\n《霸王别姬》的剑舞体现舞蹈化表演特色。\n作品来源仍须分别追溯各剧文献。",
+            "contentKind": "original_fact_summary"
+          },
+          {
+            "id": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+            "title": "梅(兰芳)派",
+            "sourceId": "cnpoc-mei",
+            "locator": "正文开头 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+            "excerpt": "梅派是由梅兰芳开创的京剧旦角流派。\n流派描述的是传承的艺术风格，不能与生旦净丑这样的角色行当当作同一分类层级。",
+            "contentKind": "original_fact_summary"
+          }
+        ],
+        "uncertain": false,
+        "requestId": "b93d522a-27d2-43a0-9f19-65469f73e554"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "b93d522a-27d2-43a0-9f19-65469f73e554",
+      "elapsedSeconds": 1.495841,
+      "finishedAt": "2026-10-10T13:33:22.613566+08:00"
+    },
+    {
+      "id": "opera-q19",
+      "question": "请介绍京剧演员“量子星河君”在1640年首演《星际霸王》的经历。",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": true,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-19-6c658589c103",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:22.616058+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "6ddfdda8-8c04-499f-906a-36a4492508be",
+      "rawResponseSHA256": "7153e77fd512b071bc7bcd11b627be49fd8646d6f82078ae0a9213bba53807c9",
+      "response": {
+        "answer": "当前京剧知识库没有足够资料支持这个问题，请调整提问方向或补充可信资料。",
+        "citations": [],
+        "uncertain": true,
+        "requestId": "6ddfdda8-8c04-499f-906a-36a4492508be"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "6ddfdda8-8c04-499f-906a-36a4492508be",
+      "elapsedSeconds": 0.012017,
+      "finishedAt": "2026-10-10T13:33:22.629795+08:00"
+    },
+    {
+      "id": "opera-q20",
+      "question": "如何配置 Kubernetes 集群的 GPU 资源调度？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "expectInsufficient": true,
+      "idempotencyKey": "eval-eec82228858949858ea0db9e13ae4d59-20-67c6593e5835",
+      "attempts": 1,
+      "status": "response_received",
+      "startedAt": "2026-10-10T13:33:22.633174+08:00",
+      "httpStatus": 200,
+      "headerRequestId": "5262d63c-7250-42b9-85da-cd5080243ac9",
+      "rawResponseSHA256": "cd527a5d8587c6ecdfd01c00ce487412f771d8b8fe974e17ccc9034d71942039",
+      "response": {
+        "answer": "当前京剧知识库没有足够资料支持这个问题，请调整提问方向或补充可信资料。",
+        "citations": [],
+        "uncertain": true,
+        "requestId": "5262d63c-7250-42b9-85da-cd5080243ac9"
+      },
+      "responseSchemaValid": true,
+      "redactionApplied": false,
+      "requestId": "5262d63c-7250-42b9-85da-cd5080243ac9",
+      "elapsedSeconds": 0.013869,
+      "finishedAt": "2026-10-10T13:33:22.649907+08:00"
+    }
+  ],
+  "summary": {
+    "requestedQuestionCount": 20,
+    "attemptedQuestionCount": 20,
+    "responseReceivedCount": 20,
+    "failedCount": 0,
+    "apiResponseSuccessRate": 1.0,
+    "meanSuccessfulHttpSeconds": 1.46944175,
+    "candidateUncertaintyFlagAgreement": 0.95,
+    "failedQuestionIds": [],
+    "uncertaintyFlagDisagreements": [
+      "opera-q04"
+    ],
+    "humanAnswerCorrectnessRate": null,
+    "scope": "HTTP success and candidate uncertainty flags only; no human semantic scoring or per-response LLM usage is inferred."
+  }
+}

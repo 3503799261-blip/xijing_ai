@@ -8,7 +8,7 @@ import uuid
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, Response
 from starlette.exceptions import HTTPException
 from .config import Settings
 from .errors import ServiceError
@@ -18,6 +18,11 @@ from .services.chat import grounded_answer
 from .static_frontend import public_file
 
 logger = logging.getLogger('xijing.requests')
+logger.setLevel(logging.INFO)
+if not logger.handlers:
+    handler = logging.StreamHandler()
+    handler.setFormatter(logging.Formatter('%(message)s'))
+    logger.addHandler(handler)
 
 def create_app(settings=None):
     settings = settings or Settings()
@@ -40,10 +45,15 @@ def create_app(settings=None):
             body = await request.body()
             if len(body) > 8192:
                 error = ServiceError('BODY_TOO_LARGE', '请求内容过长，请缩短问题。', 413)
-                return JSONResponse(error.public(request.state.request_id), status_code=413)
-        try: response = await call_next(request)
-        except Exception:
-            response = JSONResponse(ServiceError('INTERNAL_ERROR', '服务出现内部错误，请稍后重试。', 500).public(request.state.request_id), status_code=500)
+                response = JSONResponse(error.public(request.state.request_id), status_code=413)
+            else:
+                response = None
+        else:
+            response = None
+        if response is None:
+            try: response = await call_next(request)
+            except Exception:
+                response = JSONResponse(ServiceError('INTERNAL_ERROR', '服务出现内部错误，请稍后重试。', 500).public(request.state.request_id), status_code=500)
         response.headers['X-Request-ID'] = request.state.request_id
         logger.info('request_id=%s method=%s status=%s elapsed_ms=%.1f', request.state.request_id, request.method, response.status_code, (time.perf_counter()-started)*1000)
         return response
@@ -78,7 +88,8 @@ def create_app(settings=None):
     @app.get('/api/v1/knowledge/sources')
     async def sources():
         rows = await runtime.knowledge(runtime.store.sources if runtime.store else lambda: [])
-        return {'sources': rows}
+        public_fields = {'source_id', 'title', 'category', 'author_or_organization', 'source_url', 'publication_date', 'collected_at', 'license_status', 'review_status', 'document_version', 'content_hash', 'content_kind', 'scope', 'license_url'}
+        return {'sources': [{key: value for key, value in row.items() if key in public_fields} for row in rows]}
 
     @app.post('/api/v1/chat', response_model=QuestionAnswer)
     async def chat(data: QuestionRequest, request: Request):
@@ -110,7 +121,9 @@ def create_app(settings=None):
         finally: pending.pop(slot, None)
 
     @app.get('/{path:path}')
-    async def frontend(path: str): return public_file(path)
+    async def frontend(path: str):
+        if path == 'favicon.ico': return Response(status_code=204)
+        return public_file(path)
     return app
 
 app = create_app()

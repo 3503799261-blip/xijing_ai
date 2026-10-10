@@ -1,0 +1,2009 @@
+{
+  "runnerAttempts": [
+    {
+      "kind": "sandbox launcher attempt",
+      "result": "No stdout from asynchronous TestClient runner; interrupted explicitly, no test outcomes inferred; plain venv version command passed.",
+      "sessionId": 16507
+    }
+  ],
+  "runs": [
+    {
+      "startedAtUtc": "2026-10-10T05:05:55.499907+00:00",
+      "finishedAtUtc": "2026-10-10T05:05:59.255092+00:00",
+      "kind": "OFFLINE unit/API fault injection; fake encoders, synthetic evidence, MockTransport; no real API requests or acceptance metrics",
+      "exitCode": 1,
+      "testFileHashes": {
+        "backend/tests/test_api.py": "f740dfef3f13fec1deea3e7e4dbe11153d847b85458957cc702672799b0b602d",
+        "backend/tests/test_provider.py": "3256007302aafd31f074f20a3463f23cb43e1719127d2a35bb8b4525b57919ec",
+        "backend/tests/test_ingestion.py": "1ab4621cbc5d36ddef782623b2db82e4ce1f7220af47e8e95b1c0707c2536410"
+      },
+      "results": [
+        {
+          "test": "backend/tests/test_api.py::test_health_uninitialized_and_all_future_capabilities_disabled",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.025772,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/.env]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.012337,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/.env.example]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.010809,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/.git/config]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.009383,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/backend/app/config.py]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.010331,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/docs/reports/phase-01.md]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.009888,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/README.md]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.010477,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/knowledge/documents/unit.json]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.009436,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/images/%2e%2e/.env]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.010881,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/css/%2e%2e/backend/app/main.py]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.010613,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/images/..%5c.env]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.013495,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_original_eight_pages_and_public_module_still_load",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.228741,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_cors_allows_only_explicit_local_origin_and_required_headers",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.011786,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.010909,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[  ]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.0112,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.011238,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.011079,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[bad\\x00input]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.010873,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_exact_utf16_boundary_and_unpaired_surrogates",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.000238,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_oversized_body_returns_request_identifier_without_internal_details",
+          "phase": "call",
+          "outcome": "failed",
+          "durationSeconds": 0.010673,
+          "failure": "tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Temp/pytest-of-35037/pytest-108/test_oversized_body_returns_re0')\n\n    def test_oversized_body_returns_request_identifier_without_internal_details(tmp_path):\n        app = create_app(settings_for_test(tmp_path))\n        with TestClient(app) as client:\n            response = client.post(\"/api/v1/chat\", content=b\"x\" * 8193, headers={\"Content-Type\": \"application/json\"})\n            assert response.status_code == 413\n            assert response.json()[\"error\"][\"code\"] == \"BODY_TOO_LARGE\"\n            uuid.UUID(response.json()[\"requestId\"])\n>           assert response.headers[\"X-Request-ID\"] == response.json()[\"requestId\"]\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nbackend\\tests\\test_api.py:147: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = Headers({'content-length': '156', 'content-type': 'application/json'})\nkey = 'X-Request-ID'\n\n    def __getitem__(self, key: str) -> str:\n        \"\"\"\n        Return a single header value.\n    \n        If there are multiple headers with the same key, then we concatenate\n        them with commas. See: https://tools.ietf.org/html/rfc7230#section-3.2.2\n        \"\"\"\n        normalized_key = key.lower().encode(self.encoding)\n    \n        items = [\n            header_value.decode(self.encoding)\n            for _, header_key, header_value in self._list\n            if header_key == normalized_key\n        ]\n    \n        if items:\n            return \", \".join(items)\n    \n>       raise KeyError(key)\nE       KeyError: 'X-Request-ID'\n\n.venv\\Lib\\site-packages\\httpx\\_models.py:302: KeyError"
+        },
+        {
+          "test": "backend/tests/test_api.py::test_ready_retrieval_without_key_returns_honest_error_and_no_cost",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.015478,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_insufficient_retrieval_does_not_require_model_key",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.012356,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_completed_idempotency_key_reuses_one_call_and_rejects_conflicting_question",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.013006,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_invalid_idempotency_key_rejected_before_any_model_call[bad key]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.010954,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_invalid_idempotency_key_rejected_before_any_model_call[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]",
+          "phase": "call",
+          "outcome": "failed",
+          "durationSeconds": 0.027888,
+          "failure": "tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Temp/pytest-of-35037/pytest-108/test_invalid_idempotency_key_r1')\nkey = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'\n\n    @pytest.mark.parametrize(\"key\", [\"bad key\", \"x\" * 101, \"../../config\"])\n    def test_invalid_idempotency_key_rejected_before_any_model_call(tmp_path, key):\n        app = create_app(settings_for_test(tmp_path))\n        with TestClient(app) as client:\n            provider = fake_ready(app.state.runtime)\n            response = client.post(\"/api/v1/chat\", json={\"question\": \"单元测试\"}, headers={\"X-Idempotency-Key\": key})\n>           assert response.status_code == 400\nE           assert 200 == 400\nE            +  where 200 = <Response [200 OK]>.status_code\n\nbackend\\tests\\test_api.py:192: AssertionError"
+        },
+        {
+          "test": "backend/tests/test_api.py::test_invalid_idempotency_key_rejected_before_any_model_call[../../config]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.010981,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_in_progress_duplicate_key_and_third_concurrent_request_are_blocked",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.018108,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_total_request_timeout_is_a_controlled_504[/api/v1/knowledge/search]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.012345,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_total_request_timeout_is_a_controlled_504[/api/v1/chat]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.011357,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_failed_model_fixture_does_not_expose_raw_upstream_information",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.0218,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_api.py::test_cancelled_request_retains_executor_slot_until_worker_finishes",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.007647,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[400-LLM_PARAMETERS-False]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.015434,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[401-LLM_AUTH_FAILED-False]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.015267,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[402-LLM_BALANCE-False]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.015792,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[404-LLM_MODEL-False]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.015937,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[429-LLM_RATE_LIMIT-True]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.016074,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[500-LLM_UPSTREAM-True]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.017284,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[502-LLM_UPSTREAM-True]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.015307,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[503-LLM_UPSTREAM-True]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.01441,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_transport_failure_keeps_conservative_reservation[exception0-LLM_TIMEOUT]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.017242,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_transport_failure_keeps_conservative_reservation[exception1-LLM_NETWORK]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.015344,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body0]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.013789,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[123]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.01548,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[invalid envelope]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.01313,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body3]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.013654,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body4]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.012375,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body5]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.012402,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body6]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.0118,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body7]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.01371,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body8]",
+          "phase": "call",
+          "outcome": "failed",
+          "durationSeconds": 0.015127,
+          "failure": "tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Temp/pytest-of-35037/pytest-108/test_malformed_response_return8')\nbody = {'model': 'offline-fixture', 'choices': [{'message': {'content': 'unit test text'}, 'finish_reason': 'stop'}], 'usage': ['invalid usage']}\n\n    @pytest.mark.parametrize(\"body\", [[], 123, \"invalid envelope\", {}, {\"choices\": []}, envelope(\"\"), envelope(\"  \"), envelope(\"truncated\", finish_reason=\"length\"), envelope(usage=[\"invalid usage\"]), envelope(usage=123)])\n    def test_malformed_response_returns_controlled_error(tmp_path, body):\n        provider = DeepSeekProvider(settings_for_test(tmp_path), transport=httpx.MockTransport(lambda request: httpx.Response(200, json=body)))\n>       with pytest.raises(ServiceError) as caught:\nE       Failed: DID NOT RAISE ServiceError\n\nbackend\\tests\\test_provider.py:85: Failed"
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body9]",
+          "phase": "call",
+          "outcome": "failed",
+          "durationSeconds": 0.013542,
+          "failure": "tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Temp/pytest-of-35037/pytest-108/test_malformed_response_return9')\nbody = {'model': 'offline-fixture', 'choices': [{'message': {'content': 'unit test text'}, 'finish_reason': 'stop'}], 'usage': 123}\n\n    @pytest.mark.parametrize(\"body\", [[], 123, \"invalid envelope\", {}, {\"choices\": []}, envelope(\"\"), envelope(\"  \"), envelope(\"truncated\", finish_reason=\"length\"), envelope(usage=[\"invalid usage\"]), envelope(usage=123)])\n    def test_malformed_response_returns_controlled_error(tmp_path, body):\n        provider = DeepSeekProvider(settings_for_test(tmp_path), transport=httpx.MockTransport(lambda request: httpx.Response(200, json=body)))\n>       with pytest.raises(ServiceError) as caught:\nE       Failed: DID NOT RAISE ServiceError\n\nbackend\\tests\\test_provider.py:85: Failed"
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_invalid_http_json_returns_controlled_error",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.012065,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_missing_key_does_not_reserve_or_call",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.006064,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[0]",
+          "phase": "call",
+          "outcome": "failed",
+          "durationSeconds": 0.012814,
+          "failure": "tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Temp/pytest-of-35037/pytest-108/test_call_cannot_bypass_output0')\nlimit = 0\n\n    @pytest.mark.parametrize(\"limit\", [0, -1, 801, True])\n    def test_call_cannot_bypass_output_budget_limit(tmp_path, limit):\n        calls = []\n    \n        def handler(request):\n            calls.append(request)\n            return httpx.Response(200, json=envelope())\n    \n        provider = DeepSeekProvider(settings_for_test(tmp_path), transport=httpx.MockTransport(handler))\n>       with pytest.raises((ServiceError, ValueError)):\nE       Failed: DID NOT RAISE any of (ServiceError, ValueError)\n\nbackend\\tests\\test_provider.py:117: Failed"
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[-1]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.00664,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[801]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.006625,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[True]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.007098,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_valid_payload_disables_thinking_and_records_only_final_output",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.0192,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_unexpected_reasoning_is_not_labeled_success",
+          "phase": "call",
+          "outcome": "failed",
+          "durationSeconds": 0.015082,
+          "failure": "tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Temp/pytest-of-35037/pytest-108/test_unexpected_reasoning_is_n0')\n\n    def test_unexpected_reasoning_is_not_labeled_success(tmp_path):\n        body = envelope()\n        body[\"choices\"][0][\"message\"][\"reasoning_content\"] = \"offline hidden reasoning fixture\"\n        provider = DeepSeekProvider(settings_for_test(tmp_path), transport=httpx.MockTransport(lambda request: httpx.Response(200, json=body)))\n        with pytest.raises(ServiceError) as caught:\n            asyncio.run(provider.generate([], \"unit-thinking-mismatch\"))\n        assert caught.value.code == \"LLM_MODE_MISMATCH\"\n        assert provider.verified is False\n>       assert provider.ledger.records()[0][\"status\"] != \"success\"\nE       AssertionError: assert 'success' != 'success'\n\nbackend\\tests\\test_provider.py:152: AssertionError"
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_budget_prevents_a_call_before_transport_and_persists",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.009106,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{}]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.00015,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{bad-json]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.000132,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"\\\\u5355\\\\u5143\\\\u6d4b\\\\u8bd5\", \"usedCitationIds\": [\"unknown\"], \"uncertain\": false}]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.000129,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"\\\\u5355\\\\u5143\\\\u6d4b\\\\u8bd5\", \"usedCitationIds\": [], \"uncertain\": false}]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.000131,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"   \", \"usedCitationIds\": [\"unit_chunk\"], \"uncertain\": false}]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.000116,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_citations_are_canonical_and_uncertainty_can_be_explicit",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.000133,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_provider.py::test_retrieval_insufficiency_never_calls_model",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.000708,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_source_provenance_and_content_hash_are_actual",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.007292,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[source_url-123]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.007481,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[source_url-https://]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.007127,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[source_url-https://user:password@example.invalid]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.007119,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[title-123]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.007241,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[category-value4]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.00652,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[redistribution_allowed-False]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.006791,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[external_llm_allowed-true]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.006412,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[review_status-unreviewed]",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.006875,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_duplicate_source_and_missing_provenance_are_rejected",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.010676,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_idempotent_rebuild_restart_and_actual_id_association_with_fake_encoder",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.732539,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_updated_document_activates_new_index_and_keeps_old_generation",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.095647,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_failed_generation_does_not_replace_active_manifest_and_releases_lock",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.106397,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_empty_or_repeated_content_does_not_grow_active_evidence",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.097362,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_shared_lock_prevents_builder_and_live_owner_overlap",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.005916,
+          "failure": null
+        },
+        {
+          "test": "backend/tests/test_ingestion.py::test_equal_count_wrong_vector_mapping_is_rejected_before_activation",
+          "phase": "call",
+          "outcome": "passed",
+          "durationSeconds": 0.036194,
+          "failure": null
+        }
+      ],
+      "totals": {
+        "passed": 77,
+        "failed": 6,
+        "skipped": 0
+      },
+      "equivalentPytestCommand": ".venv/Scripts/python -m pytest -q backend/tests/test_api.py backend/tests/test_provider.py backend/tests/test_ingestion.py",
+      "executedCommand": "PowerShell here-string piped to .venv/Scripts/python.exe - ; Python called pytest.main([the three test files, -q], plugins=[Recorder])",
+      "commandClarification": "The original command label described the equivalent pytest invocation; the first run was a stdin Python recorder harness rather than python -m pytest.",
+      "failureClarifications": [
+        {
+          "case": "idempotency key x repeated 101 times",
+          "classification": "stale test assumption",
+          "resolution": "The implementation allows up to 128 characters; the test was corrected to use 129."
+        },
+        {
+          "case": "body over 8192 bytes lacked X-Request-ID header",
+          "classification": "implementation defect",
+          "resolution": "Shared response handling now applies request ID headers and logs on the 413 path."
+        },
+        {
+          "case": "non-dict usage accepted, max_output=0 defaulted, reasoning mismatch recorded success",
+          "classification": "implementation defects",
+          "resolution": "Malformed usage returns controlled 502; zero output limit is rejected; reasoning mode mismatch is recorded invalid_mode."
+        }
+      ]
+    },
+    {
+      "startedAtUtc": "2026-10-10T05:22:21.8555211Z",
+      "finishedAtUtc": "2026-10-10T05:22:25.8511051Z",
+      "exitCode": 0,
+      "command": ".venv/Scripts/python.exe -X utf8 -m pytest -q backend/tests/test_api.py backend/tests/test_provider.py backend/tests/test_ingestion.py --junitxml=D:/京剧/.runtime/test-evidence/phase02-offline-rerun.xml",
+      "kind": "OFFLINE fault injection: fake credentials, fake retrieval/provider fixtures, MockTransport, real temporary SQLite/Qdrant; no real model API or acceptance metrics.",
+      "permissions": "require_escalated for Windows asynchronous loop/local socket compatibility",
+      "testFileHashes": {
+        "backend/tests/test_api.py": "37775518db83100350355728ee64332e72e2a1065ea0f9fce9718e605101e938",
+        "backend/tests/test_provider.py": "d1b38ac17a4d006370ca6e5078739691f083ce95131709c7fa918bf719e0a4c1",
+        "backend/tests/test_ingestion.py": "1ab4621cbc5d36ddef782623b2db82e4ce1f7220af47e8e95b1c0707c2536410"
+      },
+      "results": [
+        {
+          "nodeid": "backend/tests/test_api.py::test_health_uninitialized_and_all_future_capabilities_disabled",
+          "outcome": "passed",
+          "duration": 0.028
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/.env]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/.env.example]",
+          "outcome": "passed",
+          "duration": 0.011
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/.git/config]",
+          "outcome": "passed",
+          "duration": 0.011
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/backend/app/config.py]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/docs/reports/phase-01.md]",
+          "outcome": "passed",
+          "duration": 0.011
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/README.md]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/knowledge/documents/unit.json]",
+          "outcome": "passed",
+          "duration": 0.011
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/images/%2e%2e/.env]",
+          "outcome": "passed",
+          "duration": 0.013
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/css/%2e%2e/backend/app/main.py]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/images/..%5c.env]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_original_eight_pages_and_public_module_still_load",
+          "outcome": "passed",
+          "duration": 0.184
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_cors_allows_only_explicit_local_origin_and_required_headers",
+          "outcome": "passed",
+          "duration": 0.027
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[  ]",
+          "outcome": "passed",
+          "duration": 0.013
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac]",
+          "outcome": "passed",
+          "duration": 0.013
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[bad\\x00input]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_exact_utf16_boundary_and_unpaired_surrogates",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_oversized_body_returns_request_identifier_without_internal_details",
+          "outcome": "passed",
+          "duration": 0.011
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_ready_retrieval_without_key_returns_honest_error_and_no_cost",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_insufficient_retrieval_does_not_require_model_key",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_completed_idempotency_key_reuses_one_call_and_rejects_conflicting_question",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_invalid_idempotency_key_rejected_before_any_model_call[bad key]",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_invalid_idempotency_key_rejected_before_any_model_call[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_invalid_idempotency_key_rejected_before_any_model_call[../../config]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_in_progress_duplicate_key_and_third_concurrent_request_are_blocked",
+          "outcome": "passed",
+          "duration": 0.02
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_total_request_timeout_is_a_controlled_504[/api/v1/knowledge/search]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_total_request_timeout_is_a_controlled_504[/api/v1/chat]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_failed_model_fixture_does_not_expose_raw_upstream_information",
+          "outcome": "passed",
+          "duration": 0.021
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_source_endpoint_only_displays_public_metadata",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_search_category_is_validated_before_retrieval",
+          "outcome": "passed",
+          "duration": 0.011
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_cancelled_request_retains_executor_slot_until_worker_finishes",
+          "outcome": "passed",
+          "duration": 0.009
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[400-LLM_PARAMETERS-False]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[401-LLM_AUTH_FAILED-False]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[402-LLM_BALANCE-False]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[404-LLM_MODEL-False]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[429-LLM_RATE_LIMIT-True]",
+          "outcome": "passed",
+          "duration": 0.02
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[500-LLM_UPSTREAM-True]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[502-LLM_UPSTREAM-True]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[503-LLM_UPSTREAM-True]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_transport_failure_keeps_conservative_reservation[exception0-LLM_TIMEOUT]",
+          "outcome": "passed",
+          "duration": 0.019
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_transport_failure_keeps_conservative_reservation[exception1-LLM_NETWORK]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body0]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[123]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[invalid envelope]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body3]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body4]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body5]",
+          "outcome": "passed",
+          "duration": 0.021
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body6]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body7]",
+          "outcome": "passed",
+          "duration": 0.023
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body8]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body9]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_http_json_returns_controlled_error",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage0]",
+          "outcome": "passed",
+          "duration": 0.02
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage1]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage2]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage3]",
+          "outcome": "passed",
+          "duration": 0.019
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[deepseek-v4-pro]",
+          "outcome": "passed",
+          "duration": 0.004
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[deepseek-chat]",
+          "outcome": "passed",
+          "duration": 0.004
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[]",
+          "outcome": "passed",
+          "duration": 0.004
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[deepseek-flash ]",
+          "outcome": "passed",
+          "duration": 0.003
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[deepseek-v4-pro]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[unapproved]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[None]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[123]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_missing_key_does_not_reserve_or_call",
+          "outcome": "passed",
+          "duration": 0.01
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[0]",
+          "outcome": "passed",
+          "duration": 0.009
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[-1]",
+          "outcome": "passed",
+          "duration": 0.011
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[801]",
+          "outcome": "passed",
+          "duration": 0.009
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[True]",
+          "outcome": "passed",
+          "duration": 0.009
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_valid_payload_disables_thinking_and_records_only_final_output",
+          "outcome": "passed",
+          "duration": 0.023
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_unexpected_reasoning_is_not_labeled_success",
+          "outcome": "passed",
+          "duration": 0.019
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_budget_prevents_a_call_before_transport_and_persists",
+          "outcome": "passed",
+          "duration": 0.013
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{}]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{bad-json]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"\\\\u5355\\\\u5143\\\\u6d4b\\\\u8bd5\", \"usedCitationIds\": [\"unknown\"], \"uncertain\": false}]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"\\\\u5355\\\\u5143\\\\u6d4b\\\\u8bd5\", \"usedCitationIds\": [], \"uncertain\": false}]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"   \", \"usedCitationIds\": [\"unit_chunk\"], \"uncertain\": false}]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_citations_are_canonical_and_uncertainty_can_be_explicit",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_retrieval_insufficiency_never_calls_model",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_source_provenance_and_content_hash_are_actual",
+          "outcome": "passed",
+          "duration": 0.005
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[source_url-123]",
+          "outcome": "passed",
+          "duration": 0.005
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[source_url-https://]",
+          "outcome": "passed",
+          "duration": 0.005
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[source_url-https://user:password@example.invalid]",
+          "outcome": "passed",
+          "duration": 0.005
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[title-123]",
+          "outcome": "passed",
+          "duration": 0.01
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[category-value4]",
+          "outcome": "passed",
+          "duration": 0.005
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[redistribution_allowed-False]",
+          "outcome": "passed",
+          "duration": 0.005
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[external_llm_allowed-true]",
+          "outcome": "passed",
+          "duration": 0.005
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[review_status-unreviewed]",
+          "outcome": "passed",
+          "duration": 0.005
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_duplicate_source_and_missing_provenance_are_rejected",
+          "outcome": "passed",
+          "duration": 0.008
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_idempotent_rebuild_restart_and_actual_id_association_with_fake_encoder",
+          "outcome": "passed",
+          "duration": 0.738
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_updated_document_activates_new_index_and_keeps_old_generation",
+          "outcome": "passed",
+          "duration": 0.089
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_failed_generation_does_not_replace_active_manifest_and_releases_lock",
+          "outcome": "passed",
+          "duration": 0.126
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_empty_or_repeated_content_does_not_grow_active_evidence",
+          "outcome": "passed",
+          "duration": 0.089
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_shared_lock_prevents_builder_and_live_owner_overlap",
+          "outcome": "passed",
+          "duration": 0.008
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_equal_count_wrong_vector_mapping_is_rejected_before_activation",
+          "outcome": "passed",
+          "duration": 0.04
+        }
+      ],
+      "totals": {
+        "passed": 97,
+        "failed": 0,
+        "skipped": 0
+      },
+      "pytestReportedDurationSeconds": 3.23,
+      "dependencies": {
+        "pytest": "9.1.1",
+        "fastapi": "0.143.0",
+        "starlette": "1.7.0",
+        "httpx": "0.28.1",
+        "qdrant-client": "1.19.1",
+        "pydantic": "2.14.0"
+      },
+      "warnings": [
+        {
+          "category": "StarletteDeprecationWarning",
+          "message": "Using httpx with starlette.testclient is deprecated; install httpx2 instead.",
+          "effect": "Non-blocking; tests ran against installed dependencies. No dependency was changed during this run."
+        }
+      ]
+    },
+    {
+      "finishedAtUtc": "2026-10-10T05:29:43.5587442Z",
+      "startedAtUtc": "2026-10-10T05:29:41.7746362Z",
+      "exitCode": 0,
+      "command": ".venv/Scripts/python.exe -X utf8 -m pytest -q backend/tests/test_provider.py --junitxml=D:/京剧/.runtime/test-evidence/phase02-alias-v2.xml",
+      "kind": "OFFLINE v2 citation alias regression: fake credentials, stub model answer, MockTransport; no paid API calls or cultural-answer acceptance metrics.",
+      "permissions": "require_escalated for Windows asynchronous loop/local socket compatibility",
+      "testFileHashes": {
+        "backend/tests/test_provider.py": "18e7d0c7778310f47cd7654b95202323f147c139eba003bc8e189965b5700318"
+      },
+      "sourceFileHashes": {
+        "backend/app/services/chat.py": "769df319c8572a19eb0d72c99b335301e285e6e70216a6940e99ebb78b76f611",
+        "backend/prompts/rag_answer_v2.txt": "b5f030da75a3eaaa9127ac6026520ad42adb114b2fdd6fc73083876aea0f3c04"
+      },
+      "junitSha256": "0d870dff661d528a7d1c994ef358d26bcfdfd4a642450f0546e2a66da5843f86",
+      "results": [
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[400-LLM_PARAMETERS-False]",
+          "outcome": "passed",
+          "duration": 0.028
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[401-LLM_AUTH_FAILED-False]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[402-LLM_BALANCE-False]",
+          "outcome": "passed",
+          "duration": 0.02
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[404-LLM_MODEL-False]",
+          "outcome": "passed",
+          "duration": 0.019
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[429-LLM_RATE_LIMIT-True]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[500-LLM_UPSTREAM-True]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[502-LLM_UPSTREAM-True]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[503-LLM_UPSTREAM-True]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_transport_failure_keeps_conservative_reservation[exception0-LLM_TIMEOUT]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_transport_failure_keeps_conservative_reservation[exception1-LLM_NETWORK]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body0]",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[123]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[invalid envelope]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body3]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body4]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body5]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body6]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body7]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body8]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body9]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_http_json_returns_controlled_error",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage0]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage1]",
+          "outcome": "passed",
+          "duration": 0.02
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage2]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage3]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[deepseek-v4-pro]",
+          "outcome": "passed",
+          "duration": 0.004
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[deepseek-chat]",
+          "outcome": "passed",
+          "duration": 0.003
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[]",
+          "outcome": "passed",
+          "duration": 0.003
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[deepseek-flash ]",
+          "outcome": "passed",
+          "duration": 0.003
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[deepseek-v4-pro]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[unapproved]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[None]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[123]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_missing_key_does_not_reserve_or_call",
+          "outcome": "passed",
+          "duration": 0.009
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[0]",
+          "outcome": "passed",
+          "duration": 0.01
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[-1]",
+          "outcome": "passed",
+          "duration": 0.01
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[801]",
+          "outcome": "passed",
+          "duration": 0.009
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[True]",
+          "outcome": "passed",
+          "duration": 0.009
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_valid_payload_disables_thinking_and_records_only_final_output",
+          "outcome": "passed",
+          "duration": 0.024
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_unexpected_reasoning_is_not_labeled_success",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_budget_prevents_a_call_before_transport_and_persists",
+          "outcome": "passed",
+          "duration": 0.013
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{}]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{bad-json]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"\\\\u5355\\\\u5143\\\\u6d4b\\\\u8bd5\", \"usedCitationIds\": [\"unknown\"], \"uncertain\": false}]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"\\\\u5355\\\\u5143\\\\u6d4b\\\\u8bd5\", \"usedCitationIds\": [], \"uncertain\": false}]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"   \", \"usedCitationIds\": [\"unit_chunk\"], \"uncertain\": false}]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_citations_are_canonical_and_uncertainty_can_be_explicit",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_retrieval_insufficiency_never_calls_model",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_alias_maps_to_canonical_citation_and_payload_omits_hash",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[E0]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[E2]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[E6]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[e1]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[unit_chunk]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[chunk_0000000000000000000000000000000000000000000000000000000000000000]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_limits_alias_evidence_to_five_and_keeps_uncertainty",
+          "outcome": "passed",
+          "duration": 0.001
+        }
+      ],
+      "totals": {
+        "passed": 56,
+        "failed": 0,
+        "skipped": 0
+      },
+      "pytestReportedDurationSeconds": 1.21,
+      "fixtureEvolution": "API FakeProvider was updated from canonical unit_chunk to model-facing alias E1 before the full v2 run. No stale-fixture run or production failure is claimed."
+    },
+    {
+      "finishedAtUtc": "2026-10-10T05:30:04.5633391Z",
+      "exitCode": 0,
+      "startedAtUtc": "2026-10-10T05:30:00.7148977Z",
+      "command": ".venv/Scripts/python.exe -X utf8 -m pytest -q backend/tests/test_api.py backend/tests/test_provider.py backend/tests/test_ingestion.py --junitxml=D:/京剧/.runtime/test-evidence/phase02-v2-full.xml",
+      "kind": "OFFLINE v2 citation alias regression: fake credentials, stub model answer, MockTransport; no paid API calls or cultural-answer acceptance metrics.",
+      "permissions": "require_escalated for Windows asynchronous loop/local socket compatibility",
+      "testFileHashes": {
+        "backend/tests/test_api.py": "0f01f41f466228f47c825a6bc2a32f6b3ca05ebb42ec67f17b77ca796d861323",
+        "backend/tests/test_provider.py": "18e7d0c7778310f47cd7654b95202323f147c139eba003bc8e189965b5700318",
+        "backend/tests/test_ingestion.py": "1ab4621cbc5d36ddef782623b2db82e4ce1f7220af47e8e95b1c0707c2536410"
+      },
+      "sourceFileHashes": {
+        "backend/app/services/chat.py": "769df319c8572a19eb0d72c99b335301e285e6e70216a6940e99ebb78b76f611",
+        "backend/prompts/rag_answer_v2.txt": "b5f030da75a3eaaa9127ac6026520ad42adb114b2fdd6fc73083876aea0f3c04"
+      },
+      "junitSha256": "5ccbbd8ec0651492a03f524f6baac77472c6f02e16b3b28de88cfc76b4ec8e60",
+      "results": [
+        {
+          "nodeid": "backend/tests/test_api.py::test_health_uninitialized_and_all_future_capabilities_disabled",
+          "outcome": "passed",
+          "duration": 0.03
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/.env]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/.env.example]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/.git/config]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/backend/app/config.py]",
+          "outcome": "passed",
+          "duration": 0.013
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/docs/reports/phase-01.md]",
+          "outcome": "passed",
+          "duration": 0.011
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/README.md]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/knowledge/documents/unit.json]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/images/%2e%2e/.env]",
+          "outcome": "passed",
+          "duration": 0.011
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/css/%2e%2e/backend/app/main.py]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_static_private_and_traversal_paths_are_refused[/images/..%5c.env]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_original_eight_pages_and_public_module_still_load",
+          "outcome": "passed",
+          "duration": 0.162
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_cors_allows_only_explicit_local_origin_and_required_headers",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[]",
+          "outcome": "passed",
+          "duration": 0.013
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[  ]",
+          "outcome": "passed",
+          "duration": 0.013
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac\\u4eac]",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600\\U0001f600]",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_overlong_utf16_and_control_input_rejected[bad\\x00input]",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_exact_utf16_boundary_and_unpaired_surrogates",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_oversized_body_returns_request_identifier_without_internal_details",
+          "outcome": "passed",
+          "duration": 0.011
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_ready_retrieval_without_key_returns_honest_error_and_no_cost",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_insufficient_retrieval_does_not_require_model_key",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_completed_idempotency_key_reuses_one_call_and_rejects_conflicting_question",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_invalid_idempotency_key_rejected_before_any_model_call[bad key]",
+          "outcome": "passed",
+          "duration": 0.013
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_invalid_idempotency_key_rejected_before_any_model_call[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_invalid_idempotency_key_rejected_before_any_model_call[../../config]",
+          "outcome": "passed",
+          "duration": 0.013
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_in_progress_duplicate_key_and_third_concurrent_request_are_blocked",
+          "outcome": "passed",
+          "duration": 0.019
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_total_request_timeout_is_a_controlled_504[/api/v1/knowledge/search]",
+          "outcome": "passed",
+          "duration": 0.013
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_total_request_timeout_is_a_controlled_504[/api/v1/chat]",
+          "outcome": "passed",
+          "duration": 0.031
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_failed_model_fixture_does_not_expose_raw_upstream_information",
+          "outcome": "passed",
+          "duration": 0.024
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_source_endpoint_only_displays_public_metadata",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_empty_search_category_is_validated_before_retrieval",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_api.py::test_cancelled_request_retains_executor_slot_until_worker_finishes",
+          "outcome": "passed",
+          "duration": 0.008
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[400-LLM_PARAMETERS-False]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[401-LLM_AUTH_FAILED-False]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[402-LLM_BALANCE-False]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[404-LLM_MODEL-False]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[429-LLM_RATE_LIMIT-True]",
+          "outcome": "passed",
+          "duration": 0.018
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[500-LLM_UPSTREAM-True]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[502-LLM_UPSTREAM-True]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_http_failures_are_sanitized_and_never_automatically_retried[503-LLM_UPSTREAM-True]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_transport_failure_keeps_conservative_reservation[exception0-LLM_TIMEOUT]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_transport_failure_keeps_conservative_reservation[exception1-LLM_NETWORK]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body0]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[123]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[invalid envelope]",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body3]",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body4]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body5]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body6]",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body7]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body8]",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_malformed_response_returns_controlled_error[body9]",
+          "outcome": "passed",
+          "duration": 0.014
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_http_json_returns_controlled_error",
+          "outcome": "passed",
+          "duration": 0.015
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage0]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage1]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage2]",
+          "outcome": "passed",
+          "duration": 0.019
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_invalid_usage_values_keep_reservation_and_return_controlled_error[usage3]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[deepseek-v4-pro]",
+          "outcome": "passed",
+          "duration": 0.004
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[deepseek-chat]",
+          "outcome": "passed",
+          "duration": 0.003
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[]",
+          "outcome": "passed",
+          "duration": 0.003
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_configuration_rejects_models_outside_approved_budget[deepseek-flash ]",
+          "outcome": "passed",
+          "duration": 0.003
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[deepseek-v4-pro]",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[unapproved]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[None]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_returned_model_mismatch_is_not_verified_as_success[123]",
+          "outcome": "passed",
+          "duration": 0.017
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_missing_key_does_not_reserve_or_call",
+          "outcome": "passed",
+          "duration": 0.009
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[0]",
+          "outcome": "passed",
+          "duration": 0.01
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[-1]",
+          "outcome": "passed",
+          "duration": 0.009
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[801]",
+          "outcome": "passed",
+          "duration": 0.008
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_call_cannot_bypass_output_budget_limit[True]",
+          "outcome": "passed",
+          "duration": 0.009
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_valid_payload_disables_thinking_and_records_only_final_output",
+          "outcome": "passed",
+          "duration": 0.023
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_unexpected_reasoning_is_not_labeled_success",
+          "outcome": "passed",
+          "duration": 0.016
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_budget_prevents_a_call_before_transport_and_persists",
+          "outcome": "passed",
+          "duration": 0.012
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{}]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{bad-json]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"\\\\u5355\\\\u5143\\\\u6d4b\\\\u8bd5\", \"usedCitationIds\": [\"unknown\"], \"uncertain\": false}]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"\\\\u5355\\\\u5143\\\\u6d4b\\\\u8bd5\", \"usedCitationIds\": [], \"uncertain\": false}]",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_model_answer_rejects_missing_or_illegal_evidence_and_blank_text[{\"answer\": \"   \", \"usedCitationIds\": [\"unit_chunk\"], \"uncertain\": false}]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_citations_are_canonical_and_uncertainty_can_be_explicit",
+          "outcome": "passed",
+          "duration": 0.0
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_retrieval_insufficiency_never_calls_model",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_alias_maps_to_canonical_citation_and_payload_omits_hash",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[E0]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[E2]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[E6]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[e1]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[unit_chunk]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_rejects_unknown_or_canonical_id_in_alias_response[chunk_0000000000000000000000000000000000000000000000000000000000000000]",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_provider.py::test_grounded_answer_limits_alias_evidence_to_five_and_keeps_uncertainty",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_source_provenance_and_content_hash_are_actual",
+          "outcome": "passed",
+          "duration": 0.005
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[source_url-123]",
+          "outcome": "passed",
+          "duration": 0.004
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[source_url-https://]",
+          "outcome": "passed",
+          "duration": 0.006
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[source_url-https://user:password@example.invalid]",
+          "outcome": "passed",
+          "duration": 0.005
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[title-123]",
+          "outcome": "passed",
+          "duration": 0.004
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[category-value4]",
+          "outcome": "passed",
+          "duration": 0.004
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[redistribution_allowed-False]",
+          "outcome": "passed",
+          "duration": 0.004
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[external_llm_allowed-true]",
+          "outcome": "passed",
+          "duration": 0.005
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_invalid_source_metadata_is_rejected_as_validation_failure[review_status-unreviewed]",
+          "outcome": "passed",
+          "duration": 0.01
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_duplicate_source_and_missing_provenance_are_rejected",
+          "outcome": "passed",
+          "duration": 0.007
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_idempotent_rebuild_restart_and_actual_id_association_with_fake_encoder",
+          "outcome": "passed",
+          "duration": 0.756
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_updated_document_activates_new_index_and_keeps_old_generation",
+          "outcome": "passed",
+          "duration": 0.092
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_failed_generation_does_not_replace_active_manifest_and_releases_lock",
+          "outcome": "passed",
+          "duration": 0.113
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_empty_or_repeated_content_does_not_grow_active_evidence",
+          "outcome": "passed",
+          "duration": 0.095
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_shared_lock_prevents_builder_and_live_owner_overlap",
+          "outcome": "passed",
+          "duration": 0.008
+        },
+        {
+          "nodeid": "backend/tests/test_ingestion.py::test_equal_count_wrong_vector_mapping_is_rejected_before_activation",
+          "outcome": "passed",
+          "duration": 0.041
+        }
+      ],
+      "totals": {
+        "passed": 105,
+        "failed": 0,
+        "skipped": 0
+      },
+      "pytestReportedDurationSeconds": 3.13,
+      "fixtureEvolution": "API FakeProvider was updated from canonical unit_chunk to model-facing alias E1 before the full v2 run. No stale-fixture run or production failure is claimed."
+    }
+  ],
+  "scope": "Offline engineering tests only. Fake answer/evidence/vector fixtures cannot establish cultural correctness, real Embedding readiness, LLM availability, browser regression, Recall@5, or paid API acceptance."
+}

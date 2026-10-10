@@ -16,7 +16,7 @@ class QuestionRequest(BaseModel):
 
 class SearchRequest(QuestionRequest):
     topK: int = Field(default=5, ge=1, le=10)
-    category: str | None = Field(default=None, max_length=30)
+    category: str | None = Field(default=None, min_length=1, max_length=30)
 
 class Citation(BaseModel):
     id: str

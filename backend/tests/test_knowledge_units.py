@@ -51,7 +51,7 @@ class FakeSentenceTransformer:
         self.calls: list[list[str]] = []
         self.instances.append(self)
 
-    def get_sentence_embedding_dimension(self) -> int:
+    def get_embedding_dimension(self) -> int:
         return 512
 
     def encode(self, texts: list[str], **kwargs: object) -> FakeArray:

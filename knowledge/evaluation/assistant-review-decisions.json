@@ -1,0 +1,30 @@
+{
+  "reviewer": "Codex primary assistant; independent of the tested DeepSeek provider",
+  "reviewScope": "Assistant semantic source check of actual responses and canonical excerpts; not human gold evaluation",
+  "reviewedAt": "2026-10-10",
+  "cases": {
+    "opera-q01": {"status":"supported", "notes":"四班名称、融合形成与非瞬间形成均有history片段支持。"},
+    "opera-q02": {"status":"supported", "notes":"西皮、二簧及通用情绪概括由music片段支持，保留唱段限制。"},
+    "opera-q03": {"status":"supported", "notes":"文场京胡与武场鼓板锣由accompaniment片段支持。"},
+    "opera-q04": {"status":"partial", "partialFactIndexes":[2], "notes":"行当、生旦、丑行有支持；未检得通用净行片段，只取到正净。明确说明净行缺口且uncertain=true，不能算完整正确。"},
+    "opera-q05": {"status":"supported", "notes":"梅兰芳开创、旦角流派及流派与行当的区别均有founder片段支持。"},
+    "opera-q06": {"status":"supported", "notes":"刘利华夫妇误认、任刘夜战、焦赞解误会均见实际片段。"},
+    "opera-q07": {"status":"supported", "notes":"年龄、髯口、例角与唱念差别由老生、小生两片段支持，保留一般性范围。"},
+    "opera-q08": {"status":"supported", "notes":"长靠与短打服装、鞋底及动作差别均见wusheng片段。"},
+    "opera-q09": {"status":"supported", "notes":"正净、副净、武净侧重及三个例角有对应四片段支持，无推广为所有人物。"},
+    "opera-q10": {"status":"supported", "notes":"青衣与花旦的角色与表演侧重见qingyi-huadan片段，版本差异语句是限制说明。"},
+    "opera-q11": {"status":"supported", "notes":"刀马旦与武旦扮相、表演重点见daoma-wu片段，所属女性角色有行当片段支持。"},
+    "opera-q12": {"status":"supported", "notes":"红色主色/副色区分及颜色不能绝对化均有colors片段支持。"},
+    "opera-q13": {"status":"supported", "notes":"两眉区、一鼻窝及整脸发展和变式见three-tiles片段。"},
+    "opera-q14": {"status":"supported", "notes":"靠、靠旗、舞台用途与非战争装备复原见kao片段。"},
+    "opera-q15": {"status":"supported", "notes":"蟒袍使用人物与黄蟒、女蟒场合见mang片段。"},
+    "opera-q16": {"status":"supported", "notes":"红色主副色与黑色多种关联分别有colors与bao-black片段支持，不做统一人格标签。"},
+    "opera-q17": {"status":"supported", "notes":"项羽虞姬、悲剧背景与梅派剑舞由bawang和mei两个文档实际片段支持。"},
+    "opera-q18": {"status":"supported", "notes":"1959年、三位改编者、豫剧来源、北京首演和梅派关联都有对应片段。"},
+    "opera-q19": {"status":"controlled_insufficient", "notes":"无有效证据，后端明确资料不足，无LLM调用、引用或编造人物经历。"},
+    "opera-q20": {"status":"controlled_insufficient", "notes":"资料外技术题无有效证据，后端资料不足响应，无虚构文化引用。"}
+  },
+  "humanReviewStatus": "pending",
+  "humanAnswerCorrectnessRate": null,
+  "limitations": "Assistant review is not independent human evaluation or proof against all hallucinations; the 20 questions were also used for retrieval calibration."
+}

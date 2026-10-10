@@ -1,0 +1,115 @@
+{
+  "scope": "real direct DeepSeek without retrieval; comparison only, not RAG production data",
+  "startedAt": "2026-10-10T05:30:42.245821+00:00",
+  "records": [
+    {
+      "id": "opera-q01",
+      "question": "四大徽班指哪四个戏班？它们进京与京剧形成是什么关系？",
+      "requestId": "baseline-824b5a4a-0322-4d1e-a151-e510f74ce8a6",
+      "attempts": 1,
+      "success": true,
+      "answer": "四大徽班指的是**三庆班、四喜班、和春班、春台班**。\n\n它们进京与京剧形成的关系，可以概括为：**徽班进京是京剧形成的关键起点，但京剧并不是徽班一进京就立刻诞生的，而是在徽班进京后，经过与其他声腔、剧种的长期交流融合，逐步演变而成。**\n\n具体来说：\n\n1. **徽班进京**\n   1790年，徽班“三庆班”为给乾隆皇帝祝寿进入北京演出，随后四喜、和春、春台等徽班也陆续进京。这就是通常所说的“四大徽班进京”。\n\n2. **徽班带来的是徽调等声腔**\n   徽班并不是一开始就唱后来意义上的“京剧”。它们主要演唱徽调，同时也吸收昆曲、秦腔、汉调等多种声腔和表演成分。\n\n3. **在北京不断融合**\n   徽班进京后，长期在北京演出，与来自湖北的汉调艺人等交流融合。徽调的二黄与汉调的西皮逐渐结合，形成“皮黄戏”的基础。与此同时，还吸收了昆曲、秦腔以及北京本地的语言、审美和舞台表演特点。\n\n4. **逐步形成京剧**\n   到道光年间以后，这种以皮黄为主、融合多种声腔和表演艺术的戏曲形式逐渐成熟，后来被称为“京剧”。因此，四大徽班进京通常被视为京剧形成的重要开端，但京剧的真正形成经历了一个较长的融合演变过程。\n\n简单说：**四大徽班进京不是京剧的“诞生瞬间”，而是京剧形成的重要起点和推动力量。**",
+      "model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 45,
+        "completion_tokens": 346,
+        "total_tokens": 391,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 45
+      },
+      "elapsedSeconds": 3.0136
+    },
+    {
+      "id": "opera-q02",
+      "question": "京剧主要使用哪两种声腔？",
+      "requestId": "baseline-fdb50299-5c6c-4e88-a2cd-4c115943a5b7",
+      "attempts": 1,
+      "success": true,
+      "answer": "京剧主要使用**西皮**和**二黄**这两种声腔，合称“皮黄”。\n\n- **西皮**：音调比较明快、活泼，常用来表现欢快、激昂或流畅的情绪。\n- **二黄**：音调比较沉稳、柔和，常用来表现沉思、悲凉、庄重等情绪。\n\n京剧虽然也吸收了一些其他腔调和曲调，但最核心、最有代表性的声腔体系就是西皮和二黄。",
+      "model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 99,
+        "total_tokens": 134,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 35
+      },
+      "elapsedSeconds": 1.7565
+    },
+    {
+      "id": "opera-q03",
+      "question": "京剧伴奏中的文场和武场分别以哪些乐器为主？",
+      "requestId": "baseline-30c222ff-f6d7-4253-b923-a0a247f76820",
+      "attempts": 1,
+      "success": true,
+      "answer": "京剧伴奏分为**文场**和**武场**，合称“场面”。\n\n**文场**以管弦乐器为主，主要负责旋律和唱腔伴奏，主要乐器包括：\n\n- **京胡**：文场的主奏乐器，音色高亢明亮，是京剧唱腔的核心伴奏乐器。\n- **京二胡**：辅助京胡，音色较柔和，常用于旦角戏。\n- **月琴**：弹拨乐器，与京胡、京二胡合称“文场三大件”。\n- **三弦**：弹拨乐器，也常参与文场伴奏。\n- 此外还有**笛子、笙、唢呐**等，用于特定曲牌或场景。\n\n**武场**以打击乐器为主，主要负责节奏、烘托气氛和配合身段动作，主要乐器包括：\n\n- **板鼓**（单皮鼓）：武场的指挥乐器，鼓师通过它掌控全剧节奏。\n- **大锣**：音色洪亮，用于烘托气势。\n- **小锣**：音色清脆，常用于文戏或轻巧动作。\n- **铙钹**：与锣配合，增强节奏层次。\n- 有时还用**堂鼓、梆子**等。\n\n简单说：**文场管旋律，武场管节奏**；文场以京胡为首，武场以板鼓为指挥。",
+      "model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 294,
+        "total_tokens": 335,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 41
+      },
+      "elapsedSeconds": 2.5973
+    },
+    {
+      "id": "opera-q04",
+      "question": "京剧里的行当是什么意思？生、旦、净、丑分别表现什么类型的角色？",
+      "requestId": "baseline-45ab68cd-3880-44e1-9ad4-cfd2a7e9acef",
+      "attempts": 1,
+      "success": true,
+      "answer": "“行当”可以理解为京剧里对角色的一种分类系统。它不只是按性别分，还综合了人物的年龄、身份、性格、扮相、表演方式和嗓音特点。观众一看角色属于哪个行当，往往就能大致判断这是怎样一个人物。\n\n京剧最基本的四大行当是：生、旦、净、丑。\n\n**生**\n主要扮演男性正面角色，一般不画脸谱，扮相比较干净。生行内部还分：\n- 老生：中年或老年男性，常戴胡须，如诸葛亮、刘备一类角色。\n- 小生：年轻男性，扮相清秀，唱腔用假嗓成分较多，如书生、年轻将领。\n- 武生：擅长武打的男性角色，如赵云、武松一类人物。\n\n**旦**\n主要扮演女性角色。旦行内部也分：\n- 青衣：端庄稳重的成年女性，多穿青色或素色衣服，如王宝钏。\n- 花旦：活泼、伶俐或性格鲜明的年轻女性，如丫鬟、少女。\n- 武旦：擅长武艺的女性，如女将、女侠。\n- 老旦：老年女性，唱腔和扮相都偏稳重苍老。\n\n**净**\n俗称“花脸”，主要扮演性格强烈、气质粗犷或威严的男性角色。净角通常要勾画脸谱，不同颜色有不同象征，比如红脸多表示忠勇，黑脸多表示刚直，白脸多表示奸诈。净行里也有偏重唱功、偏重做功、偏重武打等不同路数。\n\n**丑**\n俗称“小花脸”，多在鼻梁上画一块白粉。丑角不一定是坏人，更多是滑稽、机灵、幽默或市井气较重的人物，也常起插科打诨、调节气氛的作用。丑行可分文丑和武丑：文丑偏重念白和滑稽表演，武丑则擅长轻巧敏捷的武打。\n\n简单说：\n- 生：男性正面角色，一般不画脸谱。\n- 旦：女性角色。\n- 净：性格强烈的男性角色，多画脸谱。\n- 丑：滑稽、机敏或市井类角色，鼻梁画白粉。\n\n需要注意的是，行当只是大分类，具体人物还要结合剧情、扮相、唱念做打来理解，不能简单等同于“好人坏人”。",
+      "model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 46,
+        "completion_tokens": 507,
+        "total_tokens": 553,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 46
+      },
+      "elapsedSeconds": 5.6731
+    },
+    {
+      "id": "opera-q05",
+      "question": "梅派由谁开创，属于什么行当的流派？",
+      "requestId": "baseline-1ffcfcab-5916-478e-9c0b-8df603911b0a",
+      "attempts": 1,
+      "success": true,
+      "answer": "梅派由**梅兰芳**开创，属于**京剧旦行**（旦角）流派。\n\n梅兰芳是京剧“四大名旦”之首，他在继承传统青衣、花旦、刀马旦等表演的基础上，融合唱、念、做、打与舞蹈、音乐、扮相等，形成了风格典雅大方、唱腔圆润流畅、表演细腻传神的“梅派”艺术。",
+      "model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 86,
+        "total_tokens": 126,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 40
+      },
+      "elapsedSeconds": 1.8563
+    }
+  ],
+  "finishedAt": "2026-10-10T05:30:57.145250+00:00",
+  "budget": {
+    "calls": 15,
+    "estimatedUpperCostCny": 0.04798184,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-10",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap"
+  }
+}
