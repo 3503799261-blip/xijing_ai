@@ -1,5 +1,5 @@
 /**
- * 前端数据约定。这里只定义未来服务的数据形状，不生成执行记录或 AI 内容。
+ * 前端数据约定与真实后端响应校验；不生成执行记录或 AI 内容。
  * 状态只能由未来已验证的后端事件驱动，不能用计时器模拟工作流。
  */
 
@@ -24,10 +24,11 @@ export const SERVICE_CAPABILITIES = Object.freeze({
   agentWorkflow: false,
   conceptImage: false,
   imageToModel: false,
+  knowledgeSearch: false,
 });
 
 export const SERVICE_MESSAGES = Object.freeze({
-  questionAnswering: '京剧AI知识问答正在建设中，将在Phase 2接入私有知识库。',
+  questionAnswering: '知识问答服务尚未就绪，请检查后端配置与知识库后重试。',
   agentWorkflow: '多Agent协作尚未接入；当前仅展示职责与流程，不执行真实任务。',
   conceptImage: 'AI概念图生成尚未接入；当前仅支持整理本页面内的用户需求草稿。',
   imageToModel: 'Neural4D图生3D尚未接入，模型生成、预览与下载暂未开放。',
@@ -53,6 +54,7 @@ export const SERVICE_MESSAGES = Object.freeze({
  * @property {string} [locator] 页码、章节或片段位置
  * @property {string} [url] 后端提供的可访问资料地址
  * @property {string} [excerpt]
+ * @property {string} [contentKind] 入库事实笔记或获准资料摘录
  */
 
 /**
@@ -68,6 +70,78 @@ export const SERVICE_MESSAGES = Object.freeze({
  * @property {boolean} uncertain
  * @property {string} requestId
  */
+
+/**
+ * @typedef {Object} ServiceErrorResponse
+ * @property {{code: string, message: string, retryable: boolean}} error
+ * @property {string} requestId
+ */
+
+const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
+const isText = (value, maximum) => typeof value === 'string' && value.trim().length > 0 && value.length <= maximum;
+const optionalText = (value, maximum) => value === undefined || value === null || (typeof value === 'string' && value.length <= maximum);
+
+/** 校验后端真实能力；本阶段不会因服务器意外开启而显示其他三项已接入。 */
+export function validateCapabilities(value) {
+  if (!isObject(value) || Object.keys(SERVICE_CAPABILITIES).some((key) => typeof value[key] !== 'boolean')) {
+    throw new TypeError('Invalid capabilities response');
+  }
+  return Object.freeze({
+    questionAnswering: value.questionAnswering,
+    knowledgeSearch: value.knowledgeSearch,
+    agentWorkflow: false,
+    conceptImage: false,
+    imageToModel: false,
+  });
+}
+
+/** @returns {QuestionAnswer} */
+export function validateQuestionAnswer(value) {
+  if (!isObject(value) || !isText(value.answer, 16000) || !isText(value.requestId, 128)
+      || typeof value.uncertain !== 'boolean' || !Array.isArray(value.citations) || value.citations.length > 12) {
+    throw new TypeError('Invalid question answer response');
+  }
+  const seenIds = new Set();
+  const citations = value.citations.map((citation) => {
+    if (!isObject(citation) || !isText(citation.id, 128) || !isText(citation.title, 500)
+        || !isText(citation.sourceId, 128) || !optionalText(citation.locator, 500)
+        || !optionalText(citation.url, 2048) || !optionalText(citation.excerpt, 6000)
+        || !optionalText(citation.contentKind, 100) || seenIds.has(citation.id)) {
+      throw new TypeError('Invalid citation response');
+    }
+    seenIds.add(citation.id);
+    return Object.freeze({
+      id: citation.id,
+      title: citation.title,
+      sourceId: citation.sourceId,
+      locator: citation.locator || '',
+      url: citation.url || '',
+      excerpt: citation.excerpt || '',
+      contentKind: citation.contentKind || '',
+    });
+  });
+  if (!value.uncertain && citations.length === 0) throw new TypeError('Missing evidence for a certain answer');
+  return Object.freeze({ answer: value.answer, citations: Object.freeze(citations), uncertain: value.uncertain, requestId: value.requestId });
+}
+
+/** @returns {ServiceErrorResponse|null} */
+export function validateServiceError(value) {
+  if (!isObject(value) || !isObject(value.error) || !isText(value.error.code, 100)
+      || !isText(value.error.message, 2000) || typeof value.error.retryable !== 'boolean'
+      || !isText(value.requestId, 128)) return null;
+  return { error: { code: value.error.code, message: value.error.message, retryable: value.error.retryable }, requestId: value.requestId };
+}
+
+/** 引用只接受绝对HTTP(S)网址，不接受可执行协议、用户凭证或相对服务器路径。 */
+export function safeCitationUrl(value) {
+  try {
+    const url = new URL(value);
+    if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password) return null;
+    return url.href;
+  } catch {
+    return null;
+  }
+}
 
 /**
  * @typedef {Object} CreationBrief

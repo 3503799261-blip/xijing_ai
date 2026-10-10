@@ -1,0 +1,110 @@
+{
+  "kind": "OFFLINE_TEST_DOUBLES_AND_STATIC_CHECKS",
+  "disclaimer": "Not a real LLM, RAG, browser, CSS layout or API availability test.",
+  "executedAt": "2026-10-10T05:35:44.690Z",
+  "nodeVersion": "v24.15.0",
+  "command": "node scripts/phase2_frontend_test.mjs --output docs/evidence/test-results/phase-02-frontend-network-regression-before.json",
+  "results": [
+    {
+      "name": "grounded response and original fact-summary metadata",
+      "passed": true
+    },
+    {
+      "name": "reject certain answer without evidence",
+      "passed": true
+    },
+    {
+      "name": "explicit insufficient evidence may have no citations",
+      "passed": true
+    },
+    {
+      "name": "reject duplicate citation identifiers",
+      "passed": true
+    },
+    {
+      "name": "reject malformed answer fields",
+      "passed": true
+    },
+    {
+      "name": "future capabilities stay disabled",
+      "passed": true
+    },
+    {
+      "name": "reject incomplete capabilities",
+      "passed": true
+    },
+    {
+      "name": "source URL protocol and credential validation",
+      "passed": true
+    },
+    {
+      "name": "concurrent capability requests coalesce",
+      "passed": true
+    },
+    {
+      "name": "same-origin chat and idempotency header",
+      "passed": true
+    },
+    {
+      "name": "one-argument askOperaQuestion remains compatible",
+      "passed": true
+    },
+    {
+      "name": "capability cache recovers after network failure",
+      "passed": true
+    },
+    {
+      "name": "failed chat immediately invalidates cached ready capabilities",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "earlier capability request cannot restore readiness after a chat connection failure",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "typed backend error preserves real request identifier",
+      "passed": true
+    },
+    {
+      "name": "service rejects malformed successful response",
+      "passed": true
+    },
+    {
+      "name": "55-second budget aborts with no automatic retry (accelerated test clock)",
+      "passed": true
+    },
+    {
+      "name": "other three services return unavailable without a network request",
+      "passed": true
+    },
+    {
+      "name": "UI capabilities and status are driven by fetched state (DOM double)",
+      "passed": true
+    },
+    {
+      "name": "UI pending lock blocks duplicate submissions and preserves a newer input (DOM double)",
+      "passed": true
+    },
+    {
+      "name": "UI keeps each answer citation identity and uses text nodes (DOM double)",
+      "passed": true
+    },
+    {
+      "name": "UI free capability recheck preserves the error, retry and history; manual retry reuses its key (DOM double)",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n0 !== 1\n"
+    },
+    {
+      "name": "UI trims whole turns to twelve and rejects overlong input (DOM double)",
+      "passed": true
+    },
+    {
+      "name": "HTML bindings, safe rendering and complete import version chain (static)",
+      "passed": true
+    }
+  ],
+  "passed": 21,
+  "failed": 3
+}

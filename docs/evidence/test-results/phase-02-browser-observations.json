@@ -1,0 +1,438 @@
+[
+  {
+    "page": "index.html",
+    "dom": {
+      "brokenImages": [],
+      "headings": [
+        "梨园风华",
+        "一桌二椅，演尽人间",
+        "选择你的梨园旅程",
+        "程式之中，自有天地",
+        "三出戏，看三重人生",
+        "先听一曲，再看一戏",
+        "传统不远，就在每一次观看",
+        "梨园风华"
+      ],
+      "height": 1080,
+      "images": 13,
+      "navigation": [
+        {
+          "href": "index.html",
+          "text": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "text": "首页"
+        },
+        {
+          "href": "history.html",
+          "text": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "text": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "text": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "text": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "text": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "text": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊"
+        }
+      ],
+      "overflow": false,
+      "title": "梨园风华｜首页",
+      "width": 1920
+    },
+    "logs": []
+  },
+  {
+    "page": "history.html",
+    "dom": {
+      "brokenImages": [],
+      "headings": [
+        "京剧发展历史",
+        "多声腔汇成一脉",
+        "两百余年，四段华章",
+        "历史图片长廊",
+        "改变京剧的三个时刻",
+        "以一生功夫，拓一派天地",
+        "历史不是终点，而是新戏的序幕",
+        "梨园风华"
+      ],
+      "height": 1080,
+      "images": 10,
+      "navigation": [
+        {
+          "href": "index.html",
+          "text": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "text": "首页"
+        },
+        {
+          "href": "history.html",
+          "text": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "text": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "text": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "text": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "text": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "text": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊"
+        }
+      ],
+      "overflow": false,
+      "title": "京剧发展历史｜梨园风华",
+      "width": 1920
+    },
+    "logs": []
+  },
+  {
+    "page": "roles.html",
+    "dom": {
+      "brokenImages": [],
+      "headings": [
+        "生旦净丑",
+        "四门行当，各有乾坤",
+        "生 · 正气风骨",
+        "旦 · 水袖芳华",
+        "净 · 花脸威仪",
+        "丑 · 诙谐机锋",
+        "一台戏，百样人",
+        "梨园风华"
+      ],
+      "height": 1080,
+      "images": 4,
+      "navigation": [
+        {
+          "href": "index.html",
+          "text": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "text": "首页"
+        },
+        {
+          "href": "history.html",
+          "text": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "text": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "text": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "text": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "text": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "text": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊"
+        }
+      ],
+      "overflow": false,
+      "title": "行当介绍｜梨园风华",
+      "width": 1920
+    },
+    "logs": []
+  },
+  {
+    "page": "facial.html",
+    "dom": {
+      "brokenImages": [],
+      "headings": [
+        "脸谱艺术",
+        "脸上有谱，心中有人",
+        "颜色会说话",
+        "经典脸谱图片墙",
+        "纹样不只是装饰",
+        "四步勾出人物精神",
+        "看见一张脸，读懂一个人",
+        "梨园风华"
+      ],
+      "height": 1080,
+      "images": 12,
+      "navigation": [
+        {
+          "href": "index.html",
+          "text": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "text": "首页"
+        },
+        {
+          "href": "history.html",
+          "text": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "text": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "text": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "text": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "text": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "text": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊"
+        }
+      ],
+      "overflow": false,
+      "title": "脸谱艺术｜梨园风华",
+      "width": 1920
+    },
+    "logs": []
+  },
+  {
+    "page": "music.html",
+    "dom": {
+      "brokenImages": [],
+      "headings": [
+        "唱腔与乐器",
+        "字正腔圆，声情相生",
+        "西皮明快，二黄深沉",
+        "京胡 · 一弓一弦托唱腔",
+        "锣鼓经 · 舞台的脉搏",
+        "京剧唱段欣赏",
+        "音乐不是背景，而是戏的一部分",
+        "梨园风华"
+      ],
+      "height": 1080,
+      "images": 1,
+      "navigation": [
+        {
+          "href": "index.html",
+          "text": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "text": "首页"
+        },
+        {
+          "href": "history.html",
+          "text": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "text": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "text": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "text": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "text": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "text": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊"
+        }
+      ],
+      "overflow": false,
+      "title": "唱腔与乐器｜梨园风华",
+      "width": 1920
+    },
+    "logs": []
+  },
+  {
+    "page": "video.html",
+    "dom": {
+      "brokenImages": [],
+      "headings": [
+        "视频欣赏",
+        "请把屏幕交给一场好戏",
+        "开场 · 锣鼓催征",
+        "唱段 · 声腔传情",
+        "好戏 · 人物风骨",
+        "功法 · 动静相宜",
+        "好戏落幕，余味未尽",
+        "梨园风华"
+      ],
+      "height": 1080,
+      "images": 0,
+      "navigation": [
+        {
+          "href": "index.html",
+          "text": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "text": "首页"
+        },
+        {
+          "href": "history.html",
+          "text": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "text": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "text": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "text": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "text": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "text": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊"
+        }
+      ],
+      "overflow": false,
+      "title": "视频欣赏｜梨园风华",
+      "width": 1920
+    },
+    "logs": []
+  },
+  {
+    "page": "gallery.html",
+    "dom": {
+      "brokenImages": [],
+      "headings": [
+        "京剧艺术画廊",
+        "旋转中的梨园风华",
+        "演员风采",
+        "脸谱图鉴",
+        "戏服道具",
+        "好戏定格",
+        "一帧一景，皆有戏韵",
+        "梨园风华"
+      ],
+      "height": 1080,
+      "images": 28,
+      "navigation": [
+        {
+          "href": "index.html",
+          "text": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "text": "首页"
+        },
+        {
+          "href": "history.html",
+          "text": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "text": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "text": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "text": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "text": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "text": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "text": "AI戏韵工坊"
+        },
+        {
+          "href": "#actors",
+          "text": "演员风采"
+        },
+        {
+          "href": "#masks",
+          "text": "脸谱艺术"
+        },
+        {
+          "href": "#costumes",
+          "text": "戏服道具"
+        },
+        {
+          "href": "#stage",
+          "text": "舞台剧照"
+        }
+      ],
+      "overflow": false,
+      "title": "艺术画廊｜梨园风华",
+      "width": 1920
+    },
+    "logs": []
+  }
+]

@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="戏境AI戏韵工坊：探索京剧知识、多Agent协作、原创角色与图生3D的前端体验。AI服务尚未接入。">
+    <meta name="description" content="戏境AI戏韵工坊：基于京剧私有知识库探索有据可查的智能问答。Agent协作、概念图与图生3D仍待接入。">
+    <meta name="ai-workshop-api-base" content="/api/v1">
     <title>
       AI戏韵工坊｜梨园风华
     </title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/ai-workshop.css?v=phase1-2">
+    <link rel="stylesheet" href="css/ai-workshop.css?v=phase2-1">
   </head>
   <body>
     <header class="site-header">
@@ -57,7 +58,7 @@
               <a class="ai-workshop-button" href="#ai-workshop-qa" data-ai-workshop-target="qa">探索京剧知识 <span aria-hidden="true">→</span></a>
               <a class="ai-workshop-button ai-workshop-button-secondary" href="#ai-workshop-create" data-ai-workshop-target="create">开启角色创作 <span aria-hidden="true">↗</span></a>
             </div>
-            <p class="ai-workshop-hero-note">前端体验已开放 · AI服务尚未接入</p>
+            <p id="ai-workshop-hero-service-note" class="ai-workshop-hero-note">京剧问答服务状态待检查 · 其余AI能力待接入</p>
           </div>
           <div class="ai-workshop-hero-seal" aria-hidden="true"><span>戏</span><span>境</span><small>文脉新生</small></div>
         </div>
@@ -71,7 +72,7 @@
           <a href="#ai-workshop-create" data-ai-workshop-target="create">角色创作</a>
           <a href="#ai-workshop-model" data-ai-workshop-target="model">图生3D</a>
         </nav>
-        <noscript><p class="ai-workshop-feedback">请启用 JavaScript 后使用问答输入和草稿交互。下方仍可阅读完整功能说明，AI服务尚未接入。</p></noscript>
+        <noscript><p class="ai-workshop-feedback">请启用 JavaScript 后连接知识问答服务及使用草稿交互。下方仍可阅读功能说明，其余AI能力待接入。</p></noscript>
         <p id="ai-workshop-notice" class="ai-workshop-notice" role="status" aria-live="polite" hidden></p>
 
         <section id="ai-workshop-overview" class="ai-workshop-panel" data-ai-workshop-panel="overview" aria-labelledby="ai-workshop-overview-heading">
@@ -83,7 +84,7 @@
           <div class="ai-workshop-entry-grid">
             <article class="ai-workshop-entry-card">
               <span class="ai-workshop-icon" aria-hidden="true">问</span>
-              <span class="ai-workshop-badge ai-workshop-badge-unavailable">知识服务待接入</span>
+              <span class="ai-workshop-badge ai-workshop-badge-unavailable" data-ai-workshop-qa-capability>知识服务待检查</span>
               <h3>京剧智能问答</h3>
               <p>探索京剧历史、行当、脸谱、服饰与经典剧目，让AI成为你的非遗文化讲解员。</p>
               <a class="ai-workshop-text-link" href="#ai-workshop-qa" data-ai-workshop-target="qa">进入问答界面 <span aria-hidden="true">→</span></a>
@@ -106,7 +107,7 @@
             <article><span>03</span><h4>描绘角色</h4><p>表达独具国风的概念</p></article>
             <article><span>04</span><h4>走向三维</h4><p>从概念图到数字模型</p></article>
           </div>
-          <p class="ai-workshop-feedback">现在可以切换功能、填写问题和整理创作草稿。知识问答、智能体执行、概念图与模型生成均尚未开放。</p>
+          <p class="ai-workshop-feedback">京剧问答连接项目后端，结合经来源核对的项目摘要提供回答与引用；是否可用以实际服务状态为准。智能体执行、概念图与模型生成仍未开放。</p>
         </section>
 
         <section id="ai-workshop-qa" class="ai-workshop-panel" data-ai-workshop-panel="qa" aria-labelledby="ai-workshop-qa-heading">
@@ -117,9 +118,9 @@
           </div>
           <div class="ai-workshop-qa-layout">
             <div class="ai-workshop-chat">
-              <div class="ai-workshop-card-header"><h3>与京剧知识相遇</h3><span class="ai-workshop-badge ai-workshop-badge-unavailable">服务未接入</span></div>
-              <div id="ai-workshop-messages" class="ai-workshop-message-list" role="log" aria-label="问题与服务通知" aria-live="polite" aria-relevant="additions">
-                <article class="ai-workshop-message" data-message-role="notice"><strong>服务说明</strong><p>这里尚未提供AI回答。你可以尝试填写问题，查看输入与操作反馈。</p></article>
+              <div class="ai-workshop-card-header"><h3>与京剧知识相遇</h3><span class="ai-workshop-badge ai-workshop-badge-unavailable" data-ai-workshop-qa-capability>服务状态待检查</span></div>
+              <div id="ai-workshop-messages" class="ai-workshop-message-list" role="log" aria-label="京剧问答与服务通知" aria-live="polite" aria-relevant="additions" aria-busy="false">
+                <article class="ai-workshop-message" data-message-role="notice"><strong>问答说明</strong><p>问题将发送到本项目后端，由经来源核对的项目摘要支持回答；资料不足会如实说明。每次提问独立检索，当前不提供跨问题的对话记忆。</p></article>
               </div>
               <div class="ai-workshop-suggestions" aria-label="推荐问题">
                 <span class="ai-workshop-label">不妨从这些问题开始</span>
@@ -130,18 +131,20 @@
               </div>
               <form id="ai-workshop-question-form" class="ai-workshop-form" novalidate>
                 <label class="ai-workshop-label" for="ai-workshop-question">你的京剧问题</label>
-                <textarea id="ai-workshop-question" class="ai-workshop-input" rows="3" maxlength="600" placeholder="写下你想了解的京剧知识……" aria-describedby="ai-workshop-question-error ai-workshop-question-count"></textarea>
+                <textarea id="ai-workshop-question" class="ai-workshop-input" rows="3" maxlength="600" placeholder="写下你想了解的京剧知识……" aria-describedby="ai-workshop-question-error ai-workshop-question-count ai-workshop-question-help"></textarea>
+                <p id="ai-workshop-question-help" class="ai-workshop-description ai-workshop-question-help">最多600字；较长问题还受检索模型长度限制，请尽量一次说明一个问题。</p>
                 <p id="ai-workshop-question-error" class="ai-workshop-feedback ai-workshop-feedback-error" role="alert" hidden></p>
                 <div class="ai-workshop-form-footer"><span id="ai-workshop-question-count">0 / 600 字</span><button id="ai-workshop-send" class="ai-workshop-button" type="submit" disabled>发送问题 <span aria-hidden="true">↑</span></button></div>
               </form>
-              <p id="ai-workshop-qa-status" class="ai-workshop-feedback" role="status" aria-live="polite" data-service-state="unavailable">知识问答服务尚未接入，当前不会生成AI答案。</p>
-              <p id="ai-workshop-qa-loading" class="ai-workshop-feedback" role="status" hidden>等待知识服务响应……</p>
+              <p id="ai-workshop-qa-status" class="ai-workshop-feedback" role="status" aria-live="polite" data-service-state="checking">正在检查知识服务状态……</p>
+              <p id="ai-workshop-qa-loading" class="ai-workshop-feedback" role="status" hidden>正在等待知识服务返回回答与资料依据……</p>
               <p id="ai-workshop-qa-service-error" class="ai-workshop-feedback ai-workshop-feedback-error" role="alert" hidden></p>
+              <div class="ai-workshop-service-actions"><button id="ai-workshop-retry-question" class="ai-workshop-button ai-workshop-button-secondary" type="button" hidden>重试这次提问</button><button id="ai-workshop-refresh-service" class="ai-workshop-text-link" type="button">重新检查服务</button></div>
             </div>
             <aside class="ai-workshop-reference" aria-labelledby="ai-workshop-reference-heading">
               <span class="ai-workshop-icon" aria-hidden="true">据</span>
               <h3 id="ai-workshop-reference-heading">知识来源与引用</h3>
-              <div id="ai-workshop-citations" class="ai-workshop-placeholder"><p>暂无知识引用</p><small>接入私有知识库后，此处将展示真实资料名称、引用位置及依据片段。</small></div>
+              <div id="ai-workshop-citations" class="ai-workshop-citation-list"><p class="ai-workshop-reference-empty">暂无知识引用。发送问题后，此处展示对应回答的真实资料依据。</p></div>
               <p class="ai-workshop-description">资料不足时，应如实说明不确定性，让文化传播有据可循。</p>
             </aside>
           </div>
@@ -282,6 +285,6 @@
         </p>
       </div>
     </footer>
-    <script type="module" src="js/ai-workshop/main.js?v=phase1-2"></script>
+    <script type="module" src="js/ai-workshop/main.js?v=phase2-1"></script>
   </body>
 </html>

@@ -1,0 +1,132 @@
+- banner:
+  - navigation "主导航":
+    - link "京 梨园 风华":
+      - /url: index.html
+      - text: 京 梨园
+      - generic: 风华
+    - list:
+      - link "首页":
+        - /url: index.html
+      - link "发展历史":
+        - /url: history.html
+      - link "行当介绍":
+        - /url: roles.html
+      - link "脸谱艺术":
+        - /url: facial.html
+      - link "唱腔乐器":
+        - /url: music.html
+      - link "视频欣赏":
+        - /url: video.html
+      - link "艺术画廊":
+        - /url: gallery.html
+      - link "AI戏韵工坊":
+        - /url: about.html#ai-workshop
+- main:
+  - region "AI赋能京剧非遗， 让传统文化焕发新生":
+    - generic: 戏境 AI · AI戏韵工坊
+    - heading "AI赋能京剧非遗， 让传统文化焕发新生" [level=1]:
+      - text: AI赋能京剧非遗，
+      - text: 让传统文化焕发新生
+    - paragraph: 探索京剧知识，与智能体协作，创造属于未来的国风数字角色。
+    - link "探索京剧知识":
+      - /url: "#ai-workshop-qa"
+      - text: 探索京剧知识
+      - generic: →
+    - link "开启角色创作":
+      - /url: "#ai-workshop-create"
+      - text: 开启角色创作
+      - generic: ↗
+    - paragraph: 京剧RAG问答已就绪 · Agent、概念图与图生3D待接入
+    - generic: 戏
+    - generic: 境
+    - generic: 文脉新生
+  - navigation "AI戏韵工坊内部导航":
+    - link "工坊总览":
+      - /url: "#ai-workshop-overview"
+    - link "京剧问答":
+      - /url: "#ai-workshop-qa"
+    - link "Agent协作":
+      - /url: "#ai-workshop-agents"
+    - link "角色创作":
+      - /url: "#ai-workshop-create"
+    - link "图生3D":
+      - /url: "#ai-workshop-model"
+  - region "京剧AI智能问答":
+    - generic: 问一段历史 · 识一抹脸谱
+    - heading "京剧AI智能问答" [level=2]
+    - paragraph: 让每一个问题，都有可以追溯的文化依据。
+    - heading "与京剧知识相遇" [level=3]
+    - generic: 京剧RAG问答已就绪
+    - log "京剧问答与服务通知":
+      - article:
+        - strong: 问答说明
+        - paragraph: 问题将发送到本项目后端，由经来源核对的项目摘要支持回答；资料不足会如实说明。每次提问独立检索，当前不提供跨问题的对话记忆。
+      - article:
+        - paragraph: 你的提问
+        - paragraph: 京剧脸谱的颜色有什么寓意？
+      - article:
+        - paragraph: 京剧AI助手 · 基于检索证据
+        - paragraph: 京剧脸谱的颜色并不是一套可以简单套用的“性格对照表”，它的寓意要结合具体人物、谱式和使用部位来看。 以红色为例，当红色作为脸谱主色时，常用于关羽这类忠勇人物；但红色作为副色时，又可以表达其他寓意。所以不能把某一种颜色单独拎出来，解释成绝对的人格标签。 黑色也是如此。包拯的黑脸常用来表达刚正的形象；但在别的扮相中，黑色还可能关联勇猛、肤色，或用于突出眉眼，不能据此认为所有黑脸角色都是同一种性格。 此外，脸谱中还会用到金银色等。比如神仙脸可以借金银色或线条来表现神圣感，这属于舞台造型语言，并不等于人物的历史相貌。 总的来说，脸谱颜色是配合人物和剧情的一种舞台表现手段，具体寓意需要放回具体剧目和扮相中理解。
+        - generic "本次参考资料（3）"
+        - generic "二、京剧脸谱"
+        - generic "包公为什么画黑脸？"
+        - generic "二、京剧脸谱"
+        - button "在资料区查看本次依据"
+        - generic: 请求ID：8d3e74ee-2f51-446b-a9ca-179ee24278eb
+      - article:
+        - paragraph: 你的提问
+        - paragraph: 京剧中的生旦净丑有什么区别？
+      - article:
+        - paragraph: 京剧AI助手 · 基于检索证据
+        - paragraph: 京剧里的生、旦、净、丑是常见的四大行当，也就是把剧中角色按性别、性格、表演特点等做的分类。各行当在唱、念、做、打上都有不同的程式。 生行主要表现净、丑之外的男性角色，常见的有老生、小生、武生等。旦行表现女性角色，常见的有青衣、花旦、刀马旦、武旦等。比如青衣也叫正旦，常演举止稳重的中青年女性，重唱功；花旦常演年轻活泼的女性，更侧重做功和说白。 净又称花脸，脸谱和洪亮的声音是常见表演特点，角色多为性格或形象鲜明的男性人物，唱功、身段或武打侧重不同，还有不同分支。丑行常承担喜剧表演，鼻梁上画一小块白色，所以也叫小花脸，常见分类有文丑和武丑，武丑又叫开口跳。 需要说明的是，这些只是行当的基本区分，具体到每个剧目、流派和人物，扮相和表演还会有更细的差别。
+        - generic "本次参考资料（5）"
+        - button "在资料区查看本次依据"
+        - generic: 请求ID：b31d2595-b069-4b5b-a6ab-de8d50944d3c
+    - generic "推荐问题":
+      - generic: 不妨从这些问题开始
+      - button "生旦净丑有什么区别？"
+      - button "脸谱颜色有什么寓意？"
+      - button "武生服饰有什么特点？"
+      - button "《霸王别姬》有哪些人物？"
+    - generic: 你的京剧问题
+    - textbox "你的京剧问题":
+      - /placeholder: 写下你想了解的京剧知识……
+    - paragraph: 最多600字；较长问题还受检索模型长度限制，请尽量一次说明一个问题。
+    - generic: 0 / 600 字
+    - button "发送问题":
+      - text: 发送问题
+      - generic: ↑
+    - status: 此次问答已返回。可展开本回合资料，也可在资料区查看依据。
+    - button "重新检查服务"
+    - complementary "知识来源与引用":
+      - generic: 据
+      - heading "知识来源与引用" [level=3]
+      - paragraph: 对应提问：京剧中的生旦净丑有什么区别？
+      - paragraph: 请求ID：b31d2595-b069-4b5b-a6ab-de8d50944d3c
+      - generic "京剧的行当分类是什么？"
+      - generic "京剧的行当分类是什么？"
+      - generic "京剧的行当分类是什么？"
+      - generic "京剧旦行小讲堂"
+      - generic "京剧的行当分类是什么？"
+      - paragraph: 资料不足时，应如实说明不确定性，让文化传播有据可循。
+  - text: › › › › ›
+  - link "回到页面最顶部":
+    - /url: "#"
+    - generic: ↑
+    - text: 回到顶部
+- contentinfo:
+  - heading "梨园风华" [level=2]
+  - paragraph: 让文化有据，让创意入戏。
+  - heading "返回浏览" [level=3]
+  - list:
+    - link "文化首页":
+      - /url: index.html
+    - link "发展历史":
+      - /url: history.html
+    - link "艺术画廊":
+      - /url: gallery.html
+  - heading "作品标签" [level=3]
+  - generic: 戏境AI
+  - generic: 文化创作
+  - generic: 京剧非遗
+  - paragraph: © 2026 梨园风华 · 中国京剧非遗文化专题网站

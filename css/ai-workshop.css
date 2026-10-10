@@ -1,6 +1,7 @@
 /* 戏境 AI · Phase 1
    Scoped to the workshop; shared navigation and cultural pages keep their styles. */
 .ai-workshop {
+  scroll-margin-top: var(--ai-workshop-scroll-offset, 108px);
   --ai-workshop-border: rgba(151, 91, 36, .24);
   --ai-workshop-shadow: 0 14px 34px rgba(58, 17, 14, .08);
   color: var(--ink, #241918);
@@ -565,6 +566,115 @@
 .ai-workshop-message[data-message-role="notice"] {
   background: #f1e3c5;
   border-color: rgba(151, 91, 36, .24);
+}
+
+.ai-workshop-turn {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.ai-workshop-message--assistant {
+  color: #513c30;
+  background: #fffaf0;
+  border-left: 3px solid var(--gold, #c99b45);
+}
+
+.ai-workshop-badge-ready {
+  color: #41542d;
+  background: #eef1df;
+  border-color: #c2caa3;
+}
+
+.ai-workshop-question-help {
+  margin: 0;
+  font-size: .86rem;
+}
+
+.ai-workshop-service-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.ai-workshop-answer-references {
+  margin: 15px 0 8px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(151, 91, 36, .2);
+}
+
+.ai-workshop-answer-references > summary,
+.ai-workshop-citation > summary {
+  cursor: pointer;
+  color: var(--red, #8d1820);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.ai-workshop-answer-references > summary:focus-visible,
+.ai-workshop-citation > summary:focus-visible {
+  outline: 2px solid var(--red, #8d1820);
+  outline-offset: 4px;
+}
+
+.ai-workshop-citation-list {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+  margin-top: 18px;
+}
+
+.ai-workshop-citation {
+  margin-top: 10px;
+  padding: 12px;
+  background: #f8f0e0;
+  border: 1px solid rgba(151, 91, 36, .2);
+  border-radius: 9px;
+  font-size: .9rem;
+  overflow-wrap: anywhere;
+}
+
+.ai-workshop-citation-body {
+  display: grid;
+  gap: 8px;
+  padding-top: 12px;
+}
+
+.ai-workshop-citation-meta,
+.ai-workshop-message .ai-workshop-request-id {
+  margin: 0;
+  color: var(--muted, #705d57);
+  font-size: .82rem;
+  overflow-wrap: anywhere;
+}
+
+.ai-workshop-citation-excerpt {
+  margin: 0;
+  padding: 10px 12px;
+  white-space: pre-wrap;
+  color: #604a3f;
+  background: #fffaf0;
+  border-left: 2px solid var(--gold, #c99b45);
+  overflow-wrap: anywhere;
+}
+
+.ai-workshop-reference-empty,
+.ai-workshop-reference-question {
+  margin: 0;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.ai-workshop-message .ai-workshop-uncertain {
+  margin-top: 12px;
+  padding: 9px 12px;
+  color: #7b531d;
+  background: #f5e8c8;
+  border-radius: 6px;
+  font-size: .88rem;
 }
 
 .ai-workshop-form {

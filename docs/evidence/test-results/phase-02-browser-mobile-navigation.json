@@ -1,0 +1,82 @@
+[
+  {
+    "name": "首页",
+    "url": "http://127.0.0.1:8000/index.html",
+    "dom": {
+      "brokenImages": [],
+      "overflow": false,
+      "title": "梨园风华｜首页"
+    },
+    "console": []
+  },
+  {
+    "name": "发展历史",
+    "url": "http://127.0.0.1:8000/history.html",
+    "dom": {
+      "brokenImages": [],
+      "overflow": false,
+      "title": "京剧发展历史｜梨园风华"
+    },
+    "console": []
+  },
+  {
+    "name": "行当介绍",
+    "url": "http://127.0.0.1:8000/roles.html",
+    "dom": {
+      "brokenImages": [],
+      "overflow": false,
+      "title": "行当介绍｜梨园风华"
+    },
+    "console": []
+  },
+  {
+    "name": "脸谱艺术",
+    "url": "http://127.0.0.1:8000/facial.html",
+    "dom": {
+      "brokenImages": [],
+      "overflow": false,
+      "title": "脸谱艺术｜梨园风华"
+    },
+    "console": []
+  },
+  {
+    "name": "唱腔乐器",
+    "url": "http://127.0.0.1:8000/music.html",
+    "dom": {
+      "brokenImages": [],
+      "overflow": false,
+      "title": "唱腔与乐器｜梨园风华"
+    },
+    "console": []
+  },
+  {
+    "name": "视频欣赏",
+    "url": "http://127.0.0.1:8000/video.html",
+    "dom": {
+      "brokenImages": [],
+      "overflow": false,
+      "title": "视频欣赏｜梨园风华"
+    },
+    "console": []
+  },
+  {
+    "name": "艺术画廊",
+    "url": "http://127.0.0.1:8000/gallery.html",
+    "dom": {
+      "brokenImages": [],
+      "overflow": false,
+      "title": "艺术画廊｜梨园风华"
+    },
+    "console": []
+  },
+  {
+    "name": "AI戏韵工坊",
+    "url": "http://127.0.0.1:8000/about.html#ai-workshop",
+    "dom": {
+      "brokenImages": [],
+      "overflow": false,
+      "title": "AI戏韵工坊｜梨园风华"
+    },
+    "console": []
+  }
+]

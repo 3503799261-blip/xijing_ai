@@ -1,0 +1,114 @@
+- banner:
+  - navigation "主导航":
+    - link "京 梨园 风华":
+      - /url: index.html
+      - text: 京 梨园
+      - generic: 风华
+    - list:
+      - link "首页":
+        - /url: index.html
+      - link "发展历史":
+        - /url: history.html
+      - link "行当介绍":
+        - /url: roles.html
+      - link "脸谱艺术":
+        - /url: facial.html
+      - link "唱腔乐器":
+        - /url: music.html
+      - link "视频欣赏":
+        - /url: video.html
+      - link "艺术画廊":
+        - /url: gallery.html
+      - link "AI戏韵工坊":
+        - /url: about.html#ai-workshop
+- main:
+  - region "AI赋能京剧非遗， 让传统文化焕发新生":
+    - generic: 戏境 AI · AI戏韵工坊
+    - heading "AI赋能京剧非遗， 让传统文化焕发新生" [level=1]:
+      - text: AI赋能京剧非遗，
+      - text: 让传统文化焕发新生
+    - paragraph: 探索京剧知识，与智能体协作，创造属于未来的国风数字角色。
+    - link "探索京剧知识":
+      - /url: "#ai-workshop-qa"
+      - text: 探索京剧知识
+      - generic: →
+    - link "开启角色创作":
+      - /url: "#ai-workshop-create"
+      - text: 开启角色创作
+      - generic: ↗
+    - paragraph: 后端暂时无法连接 · Agent、概念图与图生3D待接入
+    - generic: 戏
+    - generic: 境
+    - generic: 文脉新生
+  - navigation "AI戏韵工坊内部导航":
+    - link "工坊总览":
+      - /url: "#ai-workshop-overview"
+    - link "京剧问答":
+      - /url: "#ai-workshop-qa"
+    - link "Agent协作":
+      - /url: "#ai-workshop-agents"
+    - link "角色创作":
+      - /url: "#ai-workshop-create"
+    - link "图生3D":
+      - /url: "#ai-workshop-model"
+  - region "京剧AI智能问答":
+    - generic: 问一段历史 · 识一抹脸谱
+    - heading "京剧AI智能问答" [level=2]
+    - paragraph: 让每一个问题，都有可以追溯的文化依据。
+    - heading "与京剧知识相遇" [level=3]
+    - generic: 后端连接不可用
+    - log "京剧问答与服务通知":
+      - article:
+        - strong: 问答说明
+        - paragraph: 问题将发送到本项目后端，由经来源核对的项目摘要支持回答；资料不足会如实说明。每次提问独立检索，当前不提供跨问题的对话记忆。
+      - article:
+        - paragraph: 你的提问
+        - paragraph: 京剧脸谱的颜色有什么寓意？
+      - article:
+        - paragraph: 请求未完成 · 非AI回答
+        - paragraph: 无法连接知识服务。请确认后端已启动、网络正常，再手动重试。
+    - generic "推荐问题":
+      - generic: 不妨从这些问题开始
+      - button "生旦净丑有什么区别？"
+      - button "脸谱颜色有什么寓意？"
+      - button "武生服饰有什么特点？"
+      - button "《霸王别姬》有哪些人物？"
+    - generic: 你的京剧问题
+    - textbox "你的京剧问题":
+      - /placeholder: 写下你想了解的京剧知识……
+      - text: 京剧脸谱的颜色有什么寓意？
+    - paragraph: 最多600字；较长问题还受检索模型长度限制，请尽量一次说明一个问题。
+    - generic: 13 / 600 字
+    - button "发送问题":
+      - text: 发送问题
+      - generic: ↑
+    - status: 此次请求未完成；页面不会自动重发或生成替代答案。
+    - alert: 无法连接知识服务。请确认后端已启动、网络正常，再手动重试。
+    - button "重试这次提问"
+    - button "重新检查服务"
+    - complementary "知识来源与引用":
+      - generic: 据
+      - heading "知识来源与引用" [level=3]
+      - paragraph: 此次请求未返回可展示的回答或引用。历史依据仍保留在对应回合。
+      - paragraph: 资料不足时，应如实说明不确定性，让文化传播有据可循。
+  - text: › › › › ›
+  - link "回到页面最顶部":
+    - /url: "#"
+    - generic: ↑
+    - text: 回到顶部
+- contentinfo:
+  - heading "梨园风华" [level=2]
+  - paragraph: 让文化有据，让创意入戏。
+  - heading "返回浏览" [level=3]
+  - list:
+    - link "文化首页":
+      - /url: index.html
+    - link "发展历史":
+      - /url: history.html
+    - link "艺术画廊":
+      - /url: gallery.html
+  - heading "作品标签" [level=3]
+  - generic: 戏境AI
+  - generic: 文化创作
+  - generic: 京剧非遗
+  - paragraph: © 2026 梨园风华 · 中国京剧非遗文化专题网站

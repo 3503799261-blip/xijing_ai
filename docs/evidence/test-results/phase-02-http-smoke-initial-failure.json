@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "command": ".\\.venv\\Scripts\\python.exe scripts\\phase2_http_smoke.py",
+  "errorType": "UnicodeEncodeError",
+  "cause": "The new test harness passed existing Chinese image filenames directly to urllib's ASCII HTTP request encoding.",
+  "scope": "Test harness failure; browsers had already loaded these images successfully. No website asset was changed.",
+  "fix": "Percent-encode HTTP URL paths before requesting local resources; rerun results are archived separately."
+}
