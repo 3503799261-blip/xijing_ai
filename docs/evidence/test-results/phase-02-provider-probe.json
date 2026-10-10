@@ -1,0 +1,17 @@
+{
+  "requestId": "probe-b9971711-2877-47b5-a3fb-041949f9d0c3",
+  "success": false,
+  "error": {
+    "code": "LLM_KEY_MISSING",
+    "message": "尚未配置DeepSeek密钥，请在本机私有.env填写后重启后端。",
+    "retryable": false
+  },
+  "budget": {
+    "calls": 0,
+    "estimatedUpperCostCny": 0,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-10",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap"
+  }
+}

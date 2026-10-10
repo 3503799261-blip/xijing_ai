@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "scope": "Actual public Phase 2 architecture and approved development, point-in-time snapshot",
+  "source": {
+    "snapshot_sha256": "4a769a42e1126a6667283a6697c190c76bdb205a0f32458342b9b82726a1b2b3",
+    "parsed_records": 1675,
+    "first_source_line": 1127,
+    "last_complete_source_line": 1675,
+    "partial_final_line_omitted": false,
+    "selection": "One explicit current log; no other sessions scanned"
+  },
+  "export": {
+    "completed_at_utc": "2026-10-10T04:56:16.257150+00:00",
+    "records": 127,
+    "counts": {
+      "message": 18,
+      "custom_tool_call": 39,
+      "custom_tool_call_output": 38,
+      "function_call": 16,
+      "function_call_output": 16
+    },
+    "conversation_sha256": "92124e7c8b6ca0cd3300a279240863cd296d12b3d29bd3ca83ff2d05707e716f"
+  },
+  "prompt_checks": [
+    {
+      "file": "00-original-user-request.md",
+      "source_line": 1127,
+      "source_timestamp": "2026-10-09T15:20:21.411Z",
+      "characters": 15443,
+      "sha256": "a1ce0b06daff50ad35772e6bcdf80773c3a59ed5bac0d9c7768b2ce26a10e1b7",
+      "exact_utf8_byte_match": true
+    },
+    {
+      "file": "03-approved-development-v3.md",
+      "source_line": 1438,
+      "source_timestamp": "2026-10-10T04:38:44.678Z",
+      "characters": 16836,
+      "sha256": "7e4914998a05c8bdd9c211f77d6573e63278fadf0d4333810050d8f9abd547f5",
+      "exact_utf8_byte_match": true
+    }
+  ],
+  "redactions": {
+    "credential_occurrences": 1
+  },
+  "excluded": [
+    "hidden reasoning",
+    "system/developer",
+    "session identity",
+    "embedded media",
+    "private child-agent records",
+    "credential values"
+  ],
+  "limitations": [
+    "Snapshot contains only events already recorded; no future tests or replies are invented.",
+    "Credential disclosure is retained only as redacted public evidence; exposed value is never copied into project files."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "requestId": "probe-c0d16b4c-434b-4f60-85f6-a35f0f78b3fc",
+  "success": true,
+  "content": "接口连通。",
+  "model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 11,
+    "completion_tokens": 3,
+    "total_tokens": 14,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 11
+  },
+  "elapsedSeconds": 1.5959,
+  "thinkingRequested": "disabled",
+  "reasoningContentPresent": false,
+  "httpStatus": 200,
+  "budget": {
+    "calls": 1,
+    "estimatedUpperCostCny": 4.6e-05,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-10",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap"
+  }
+}

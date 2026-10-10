@@ -1,0 +1,64 @@
+{
+  "scope": "Actual local HTTP before knowledge initialization",
+  "results": [
+    {
+      "url": "/api/v1/health",
+      "status": 200,
+      "json": {
+        "status": "degraded",
+        "knowledge": false,
+        "embedding": false,
+        "llmConfigured": true,
+        "llmVerified": true,
+        "diagnostic": "KNOWLEDGE_NOT_INITIALIZED",
+        "documents": 0,
+        "chunks": 0,
+        "budget": {
+          "calls": 1,
+          "estimatedUpperCostCny": 4.6e-05,
+          "budgetCny": 3.0,
+          "priceVerifiedAt": "2026-10-10",
+          "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+          "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap"
+        }
+      }
+    },
+    {
+      "url": "/api/v1/capabilities",
+      "status": 200,
+      "json": {
+        "questionAnswering": false,
+        "knowledgeSearch": false,
+        "agentWorkflow": false,
+        "conceptImage": false,
+        "imageToModel": false,
+        "checkedAt": "2026-10-10T05:01:02.018521+00:00"
+      }
+    },
+    {
+      "url": "/index.html",
+      "status": 200,
+      "json": null
+    },
+    {
+      "url": "/about.html",
+      "status": 200,
+      "json": null
+    },
+    {
+      "url": "/.env",
+      "status": 404,
+      "json": null
+    },
+    {
+      "url": "/.git/config",
+      "status": 404,
+      "json": null
+    },
+    {
+      "url": "/backend/app/config.py",
+      "status": 404,
+      "json": null
+    }
+  ]
+}

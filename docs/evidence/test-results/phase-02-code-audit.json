@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "scope": "Phase 2 checkpoint A: read-only code and environment audit; not RAG or browser test results",
+  "recorded_at_utc": "2026-10-09T15:46:30.455294+00:00",
+  "source_project": "D:\\京剧\\京剧",
+  "expected_phase1_commit": "04b2c571e068ec0b26205fcce0c075395caeebce",
+  "git": {
+    "head": "04b2c571e068ec0b26205fcce0c075395caeebce",
+    "branch": "feature/ai-workshop-phase1",
+    "origin": "https://github.com/3503799261-blip/xijing_ai.git",
+    "last_six_commits": [
+      "04b2c57 docs: archive Phase 1 evidence and verified reproduction guide",
+      "ad66d49 fix: keep workshop notices visible and refresh changed styles",
+      "98b9ac3 feat: add workshop interactions and unavailable service contracts",
+      "7f4d008 feat: style AI workshop and fit longer navigation label",
+      "24520e9 feat: replace about page with AI workshop structure",
+      "7f0ebad chore: preserve original opera website baseline"
+    ],
+    "tracked_files_unchanged_since_phase1": true,
+    "status_before_evidence_export": [
+      "?? docs/reports/phase-02-architecture-proposal.md"
+    ]
+  },
+  "remote_observations": {
+    "earlier_successful_checkpoint_query": {
+      "main": "04b2c571e068ec0b26205fcce0c075395caeebce",
+      "feature/ai-workshop-phase1": "04b2c571e068ec0b26205fcce0c075395caeebce"
+    },
+    "final_repeat_query_result": "fatal: unable to access 'https://github.com/3503799261-blip/xijing_ai.git/': Recv failure: Connection was reset",
+    "limitations": "Remote connectivity is intermittent. No fetch/pull/push was run; provider API availability is not established by GitHub access."
+  },
+  "inspected_files": [
+    {
+      "file": "about.html",
+      "bytes": 22769,
+      "sha256": "7739a985a0fa443de09b32fb445b9555289a5d9385b71840422657997fb3da9c",
+      "phase1_sha256": "7739a985a0fa443de09b32fb445b9555289a5d9385b71840422657997fb3da9c",
+      "byte_identical_to_phase1": true
+    },
+    {
+      "file": "css/ai-workshop.css",
+      "bytes": 26703,
+      "sha256": "3bb20057f2cb61817e3b1b26439282349ce21e37240468e5e392a9d9f4998266",
+      "phase1_sha256": "3bb20057f2cb61817e3b1b26439282349ce21e37240468e5e392a9d9f4998266",
+      "byte_identical_to_phase1": true
+    },
+    {
+      "file": "js/ai-workshop/main.js",
+      "bytes": 8994,
+      "sha256": "19b10842b8b925451071becb9b474809f4ef90cd91f4d0ff729439f62d93b206",
+      "phase1_sha256": "19b10842b8b925451071becb9b474809f4ef90cd91f4d0ff729439f62d93b206",
+      "byte_identical_to_phase1": true
+    },
+    {
+      "file": "js/ai-workshop/contracts.js",
+      "bytes": 3338,
+      "sha256": "92a4a8707f8031c92454a6044e78c47cc925591394f180429c556d5aabc0d0b8",
+      "phase1_sha256": "92a4a8707f8031c92454a6044e78c47cc925591394f180429c556d5aabc0d0b8",
+      "byte_identical_to_phase1": true
+    },
+    {
+      "file": "js/ai-workshop/services.js",
+      "bytes": 1383,
+      "sha256": "76a8c95838db8d13fbff43eb98aaf0d4253db2e229fef0159becc42a3aa197d4",
+      "phase1_sha256": "76a8c95838db8d13fbff43eb98aaf0d4253db2e229fef0159becc42a3aa197d4",
+      "byte_identical_to_phase1": true
+    },
+    {
+      "file": "docs/architecture/ai-workshop-contracts.md",
+      "bytes": 3922,
+      "sha256": "15fbaa4ab48ade8e0381b10b87b6ba4ec28226a5872d01a0b1c7a665fe930ba1",
+      "phase1_sha256": "15fbaa4ab48ade8e0381b10b87b6ba4ec28226a5872d01a0b1c7a665fe930ba1",
+      "byte_identical_to_phase1": true
+    },
+    {
+      "file": "docs/reports/phase-01.md",
+      "bytes": 13962,
+      "sha256": "65859a0bb214f0d670aaada4f5e33c213906f62a85a2e2a9eac3443b05768ff3",
+      "phase1_sha256": "65859a0bb214f0d670aaada4f5e33c213906f62a85a2e2a9eac3443b05768ff3",
+      "byte_identical_to_phase1": true
+    },
+    {
+      "file": "README.md",
+      "bytes": 6916,
+      "sha256": "731fb434ebd0cb7a72ca8c574fc6ddd570a014ffb1c9bb84b3142e0a02e20a5b",
+      "phase1_sha256": "731fb434ebd0cb7a72ca8c574fc6ddd570a014ffb1c9bb84b3142e0a02e20a5b",
+      "byte_identical_to_phase1": true
+    },
+    {
+      "file": ".env.example",
+      "bytes": 293,
+      "sha256": "6042e48346de5d69838d35972d727f6d5b4d927bf3b6beeff9f1289980249676",
+      "phase1_sha256": "6042e48346de5d69838d35972d727f6d5b4d927bf3b6beeff9f1289980249676",
+      "byte_identical_to_phase1": true
+    },
+    {
+      "file": ".gitignore",
+      "bytes": 199,
+      "sha256": "71b5dc7680fe959088231be938d72287a7b02d27f9ffb6bb1a062b5c4c5b5603",
+      "phase1_sha256": "71b5dc7680fe959088231be938d72287a7b02d27f9ffb6bb1a062b5c4c5b5603",
+      "byte_identical_to_phase1": true
+    }
+  ],
+  "environment": {
+    "python": "3.11.1",
+    "sqlite": "3.39.4",
+    "sqlite_fts5_compile_enabled": true,
+    "node": "v24.15.0",
+    "git": "git version 2.56.0.windows.1",
+    "cpu_logical_count": 32,
+    "ram_total_bytes": 34142187520,
+    "ram_available_bytes_at_audit": 16864161792,
+    "drive_d_free_bytes": 224617754624,
+    "package_metadata_only": {
+      "fastapi": null,
+      "uvicorn": null,
+      "pydantic": null,
+      "pydantic-settings": null,
+      "httpx": null,
+      "qdrant-client": null,
+      "chromadb": null,
+      "sentence-transformers": null,
+      "huggingface-hub": null,
+      "torch": "2.11.0"
+    },
+    "gpu": "not verified",
+    "model_inference": "not run"
+  },
+  "readiness": {
+    "dependencies_installed_this_phase": false,
+    "models_downloaded": false,
+    "embedding_test_run": false,
+    "rag_index_created": false,
+    "llm_api_call_run": false,
+    "phase2_browser_test_run": false,
+    "phase2_development_branch_created": false
+  },
+  "limitations": [
+    "Environment query uses default Python only; package presence is not inference validation.",
+    "SQLite inspection used an in-memory PRAGMA query; no persistent knowledge database was created.",
+    "Windows CIM queries failed with sandbox access error; CPU and memory were read through standard-library OS calls.",
+    "All Phase 2 performance and evaluation metrics in the proposal are plans, not measured results."
+  ]
+}
