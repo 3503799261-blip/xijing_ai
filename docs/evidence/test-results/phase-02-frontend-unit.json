@@ -1,7 +1,7 @@
 {
   "kind": "OFFLINE_TEST_DOUBLES_AND_STATIC_CHECKS",
   "disclaimer": "Not a real LLM, RAG, browser, CSS layout or API availability test.",
-  "executedAt": "2026-10-10T10:36:59.270Z",
+  "executedAt": "2026-10-10T10:49:38.953Z",
   "nodeVersion": "v24.15.0",
   "command": "node scripts/phase2_frontend_test.mjs --output docs/evidence/test-results/phase-02-frontend-unit.json",
   "results": [

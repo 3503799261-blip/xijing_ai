@@ -1,49 +1,67 @@
 # AI戏韵工坊前端边界与数据约定
 
-状态：Phase 1 前端约定；尚未接入任何 AI 后端。本文依据 `js/ai-workshop/contracts.js`、`services.js` 和 `main.js` 的实际结构编写，具体后端地址与协议留待获准阶段确定。
+更新日期：2026-10-10（Asia/Shanghai）。本文根据当前前端和FastAPI实现更新。Phase 2前端已接实际项目后端；真实问答/浏览器验收结果以阶段证据为准，不由协议文档宣布通过。RAG内部实现见 [Phase 2架构](phase-02-rag.md)。
 
-## 结构
+## Phase 1继承与历史边界
 
-`about.html` 保留原页面地址，仅在工坊加载 `css/ai-workshop.css` 与 ES Module 入口 `js/ai-workshop/main.js`。其他七页继续使用原静态页面与资源。
+Phase 1基准 `04b2c571e068ec0b26205fcce0c075395caeebce` 的所有AI服务仅返回 `UnavailableResult`，四能力false；有效问答只追加用户文字并说明未接入，最多保留12条用户提问。它没有网络、助手回复、RAG索引或真实引用，这是当时的真实交付事实。[Phase 1报告](../reports/phase-01.md)与该提交保存原始约定。
 
-- `main.js`：面板与锚点切换、焦点、问答校验、推荐填入、用户消息显示、当前页面需求草稿及服务提示。
-- `contracts.js`：Agent 状态、服务能力、JSDoc 数据形状。
-- `services.js`：单一服务边界。当前所有方法只返回明确的 `UnavailableResult`，不请求服务器，也不生成内容。
-- Agent 卡片使用原生 `details/summary` 展开职责；没有模拟计时器、任务进度或 AI 摘要。
+Phase 2保留8页结构、about地址、原文化导航及酒红/金/米白。工坊样式仍限定 `ai-workshop-*`，三个模块只在about加载。Agent使用原生details；草稿最多1200字符单位、页面内暂存、刷新清空；概念图及3D入口仍未接入。新增RAG不会把这些未来功能标为已完成。
 
-新增样式限定 `ai-workshop-*`，复用原网站的酒红、金色、米白与字体。工坊内部通过 `#ai-workshop-overview/qa/agents/create/model` 定位面板；页面级导航仍是独立 HTML 链接。
+## 模块与服务签名
 
-## 已有前端服务签名
+| 文件 | 当前职责 |
+|---|---|
+| about.html | 稳定问答DOM ID、服务重查/手动重试、内部面板及缓存版本入口 |
+| main.js | 面板/焦点、校验、请求锁/加载、安全消息与每回合引用、能力反馈；保留草稿与通知 |
+| contracts.js | 原Agent状态/JSDoc；真实能力、QuestionAnswer及错误结构的运行时校验；安全引用URL |
+| services.js | 只调用项目API，55秒聊天超时、错误映射、幂等头、能力缓存及异步恢复 |
 
-| 方法 | 输入 | Phase 1 返回 |
+| 方法 | 输入 | 当前返回 |
 |---|---|---|
-| `getServiceCapabilities()` | 无 | 四项能力均为 `false` |
-| `askOperaQuestion(request)` | `QuestionRequest` | `Promise<UnavailableResult>` |
-| `startAgentWorkflow(brief)` | `CreationBrief` | `Promise<UnavailableResult>` |
-| `generateConceptImage(brief)` | `CreationBrief` | `Promise<UnavailableResult>` |
-| `submitModelTask(request)` | `{ imageId }` | `Promise<UnavailableResult>` |
+| getServiceCapabilities() | 无 | 同步只读缓存；初始false，绝不为显示效果自行变true |
+| loadServiceCapabilities() | 无 | Promise，GET真实capabilities；同时查询合并，失败置回false |
+| askOperaQuestion(request, options?) | QuestionRequest；可选idempotencyKey | Promise<QuestionAnswer>，失败抛ServiceError；保留单参数调用兼容 |
+| startAgentWorkflow(brief) | CreationBrief | Promise<UnavailableResult> |
+| generateConceptImage(brief) | CreationBrief | Promise<UnavailableResult> |
+| submitModelTask(request) | imageId | Promise<UnavailableResult> |
 
-`UnavailableResult` 包含 `available: false`、`status: 'unavailable'`、`capability`、`message`。问答有效提交只追加用户自己的提问，并显示“京剧AI知识问答正在建设中，将在Phase 2接入私有知识库。”；通知不伪装成 AI 回答。
+能力顶层字段为questionAnswering、knowledgeSearch、agentWorkflow、conceptImage、imageToModel，均boolean。questionAnswering由后端真实索引/Embedding及同配置的成功LLM连通记录决定；capabilities自身不发起付费探测。其他三个AI能力始终false，即使意外收到true，前端也不展示其已接入。
 
-输入由 `textContent` 渲染；问题最多 600 字，角色需求最多 1200 字，拒绝空白。问答区最多保留 12 条当前页面内用户提问。草稿不进入本地持久存储，刷新后清空。
+初次、进入未就绪问答面板、网络恢复或用户“重新检查服务”可查询能力，无定时器假进度、自动模型重试或无限轮询。未就绪并不伪造回答；用户仍可发送并获得准确的配置/索引错误或真实资料不足状态。
 
-## 后续数据形状（未实现能力）
+## 同源请求与响应
 
-| 约定 | 必要字段 | 使用条件 |
+默认meta `ai-workshop-api-base=/api/v1`。FastAPI在8000同时白名单提供页面与API；可选跨端口调试地址仅为公开API地址，绝不包含供应商Key。服务配置拒绝可执行协议和带凭证URL。主入口、services及contracts整条import链有相同缓存版本，静态后端同时采用no-store。
+
+聊天POST `/api/v1/chat` 输入question及可选conversationId；输出保留Phase 1约定的answer、citations、uncertain、requestId。每次提问独立检索，没有服务器语义对话记忆。客户端提交标识由客户端生成用于 `X-Idempotency-Key`，不冒充后端真实requestId。
+
+Citation字段为id、title、sourceId、locator、url、excerpt，可加contentKind。后端必须从本次真实检索证据映射来源，不采用模型生成的来源标题/URL。前端校验类型/长度及重复引用ID；确定答案无引用会被拒绝显示。`uncertain=true`的资料不足说明可有空引用。
+
+`contentKind=original_fact_summary`显示“本项目原创事实摘要（据所列来源核对）”，不称官方逐字原文。来源网页只是核查依据。来源标题、位置、摘要与模型正文均用textContent创建；没有Markdown/HTML注入。引用链接仅允许绝对HTTP(S)，拒绝credentials和可执行协议，新窗口设noopener noreferrer。
+
+错误结构为 `{error:{code,message,retryable},requestId}`。浏览器不显示原始第三方错误、栈或内部配置。网络/超时/HTTP/非法JSON/无效引用有分别处理；只有retryable错误提供原回合重试按钮。聊天55秒、能力检查8秒；AbortController结束本次等待，不会自行重复付费调用。
+
+## 状态、消息与引用归属
+
+问题拒绝空白及超过600个UTF-16字符单位；服务器还检查加检索指令后的512-token限制，不能静默截断。pending锁在发出请求前设置，禁用发送/重试并更新aria-busy；finally恢复。等待期间编辑的新问题不会被旧请求完成时清掉。
+
+当前最多保留12个**完整页面内问答回合**，与Phase 1仅保留用户节点不同。每个回合存用户问题、助手结果、独立引用details及真实requestId。资料区明确对应的问题/请求，允许从旧答案选择其依据。新请求及错误时不会把上一次引用当成新题证据；刷新后消息清空。
+
+服务徽章、hero文案、data-service-state与ARIA依据真实检查/请求变化，分别支持checking/ready/unavailable/loading/answered/uncertain/error。加载只反映真实请求；没有真实返回就没有助手答案和生成完成动画。
+
+## 留给后续阶段的协议
+
+| 约定 | 字段 | 当前状态 |
 |---|---|---|
-| `QuestionRequest` | `question`；可选 `conversationId` | Phase 2 接入真实问答 |
-| `QuestionAnswer` | `answer, citations, uncertain, requestId` | 内容和引用来自真实后端 |
-| `Citation` | `id, title, sourceId`；可选 `locator, url, excerpt` | 资料必须可核查，不填样例来源 |
-| `CreationBrief` | `requirements, style, styleLabel` | 当前为用户草稿，之后才作为任务输入 |
-| `WorkflowEvent` | `runId, agentId, sequence, state, occurredAt` | Phase 3 真实执行事件 |
-| `ModelTask` | `taskId, status`；可选 `progress, modelUrl, downloadUrl, errorCode` | Phase 4 真实模型任务 |
+| CreationBrief | requirements、style、styleLabel | 用户临时草稿，非AI角色设计 |
+| WorkflowEvent | runId、agentId、sequence、state、occurredAt；可选summary/confirmationId/errorCode | 仅未来类型，没有实际事件流 |
+| ModelTask | taskId、status；可选progress/modelUrl/downloadUrl/errorCode | 仅未来类型，没有模型任务 |
 
-Agent 的 `state` 支持 `pending/running/completed/failed/awaiting_confirmation`，对应待执行、运行中、已完成、执行失败、等待用户确认。当前四个 Agent 均为待执行且服务未接入；状态图例仅解释未来状态。
+Agent状态仍为pending/running/completed/failed/awaiting_confirmation；四卡当前待执行，图例非实时。未来真实事件使用runId/递增sequence，summary只能来自实际执行。模型状态queued/processing/succeeded/failed仅预留，不生成伪taskId或百分比。
 
-未来工作流使用 `runId` 与递增 `sequence` 处理重复或乱序事件；`summary` 必须来自实际执行；`confirmationId` 标识待人工确认项。模型状态支持 `queued/processing/succeeded/failed`；当前没有真实 `taskId`，不可创建伪任务或百分比。
+Phase 3研究Agent可复用独立SearchService或 `/api/v1/knowledge/search`，不依赖浏览器聊天DOM。其他Agent/图像/3D执行须在对应阶段另行批准，本阶段不开发它们。
 
-## 安全与扩展
+## 验证边界
 
-Phase 1 没有 API、RAG 索引、Agent 后端、生成图片、Neural4D 请求、3D SDK 或密钥，也不需要环境变量。后续由服务适配层访问项目后端；第三方密钥只保存在后端环境，不能放进 HTML、JS 或前端可读环境配置。
-
-本阶段不预设未验证的 API URL、SSE 协议或模型格式。具体方案在用户批准对应阶段后，结合真实服务、引用来源、错误及取消行为确定；模型预览容器须接入真实查看器，下载须对应真实产物。
+[前端25项离线检查](../evidence/test-results/phase-02-frontend-unit.json)是服务/DOM test double和静态检查。真实浏览器8页、桌面/手机、四推荐题、连续问答、展开来源、空输入、停机恢复与安全文字已分别验证，见 [实测报告](../evidence/test-results/phase-02-browser-test-report.md)。没有以Phase 1旧截图代替真实后端证据。网络故障立即失效ready能力，旧异步检查不会恢复过期状态；免费重查保留历史与手动重试。只在工坊根元素补充锚点滚动偏移，避免手机固定导航遮挡标题。

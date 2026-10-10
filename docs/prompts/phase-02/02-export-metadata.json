@@ -2,24 +2,24 @@
   "schema_version": 2,
   "scope": "Actual public Phase 2 architecture and approved development, point-in-time snapshot",
   "source": {
-    "snapshot_sha256": "4a769a42e1126a6667283a6697c190c76bdb205a0f32458342b9b82726a1b2b3",
-    "parsed_records": 1675,
+    "snapshot_sha256": "371e76cad6848d7c69772c23cf98188c5f286698f5f47d0cdaff8692b3e47a67",
+    "parsed_records": 2905,
     "first_source_line": 1127,
-    "last_complete_source_line": 1675,
+    "last_complete_source_line": 2905,
     "partial_final_line_omitted": false,
     "selection": "One explicit current log; no other sessions scanned"
   },
   "export": {
-    "completed_at_utc": "2026-10-10T04:56:16.257150+00:00",
-    "records": 127,
+    "completed_at_utc": "2026-10-10T10:59:42.310353+00:00",
+    "records": 445,
     "counts": {
-      "message": 18,
-      "custom_tool_call": 39,
-      "custom_tool_call_output": 38,
-      "function_call": 16,
-      "function_call_output": 16
+      "message": 38,
+      "custom_tool_call": 120,
+      "custom_tool_call_output": 119,
+      "function_call": 84,
+      "function_call_output": 84
     },
-    "conversation_sha256": "92124e7c8b6ca0cd3300a279240863cd296d12b3d29bd3ca83ff2d05707e716f"
+    "conversation_sha256": "82d8bcb6d5a53b1521772e2d3d3e3205dc6fe17403deda889e5e869ce893c6a7"
   },
   "prompt_checks": [
     {

@@ -1,0 +1,11 @@
+INFO:     Started server process [3176]
+INFO:     Waiting for application startup.
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|��������������������| 71/71 [00:00<00:00, 1684.27it/s]
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+request_id=74600f45-38dc-45ae-b617-f4d2a52e4ea6 method=GET status=200 elapsed_ms=8.2
+INFO:     127.0.0.1:54035 - "GET /api/v1/health HTTP/1.1" 200 OK
+request_id=807073d2-7b6c-4af1-95c0-54d97e831772 method=GET status=200 elapsed_ms=163.0
+INFO:     127.0.0.1:54036 - "GET /about.html HTTP/1.1" 200 OK
+request_id=a4a0ca22-d15f-4270-af2b-e0d8d860907a method=POST status=200 elapsed_ms=1172.3
+INFO:     127.0.0.1:54038 - "POST /api/v1/chat HTTP/1.1" 200 OK

@@ -1,0 +1,887 @@
+{
+  "exportedAt": "2026-10-10T10:49:37.316286+00:00",
+  "summary": {
+    "calls": 62,
+    "estimatedUpperCostCny": 0.13343424,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-10",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap"
+  },
+  "records": [
+    {
+      "requestId": "probe-c0d16b4c-434b-4f60-85f6-a35f0f78b3fc",
+      "createdAt": "2026-10-10T04:53:22.264994+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.000894,
+      "estimatedUpperCny": 4.6e-05,
+      "usage": {
+        "prompt_tokens": 11,
+        "completion_tokens": 3,
+        "total_tokens": 14,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 11
+      }
+    },
+    {
+      "requestId": "261e5e67-a61a-4d96-81a7-dd152ebbd85b",
+      "createdAt": "2026-10-10T05:23:30.239685+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.017144,
+      "estimatedUpperCny": 0.008136,
+      "usage": {
+        "prompt_tokens": 1568,
+        "completion_tokens": 625,
+        "total_tokens": 2193,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1568
+      }
+    },
+    {
+      "requestId": "8b9eeebf-919d-4546-afa2-a9e31eb3de0f",
+      "createdAt": "2026-10-10T05:25:40.219256+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.015498,
+      "estimatedUpperCny": 0.00442112,
+      "usage": {
+        "prompt_tokens": 1252,
+        "completion_tokens": 271,
+        "total_tokens": 1523,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1124
+      }
+    },
+    {
+      "requestId": "bb2d0747-b484-4a0d-bbea-560c28ebd2f7",
+      "createdAt": "2026-10-10T05:25:42.521069+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.017138,
+      "estimatedUpperCny": 0.00418112,
+      "usage": {
+        "prompt_tokens": 1520,
+        "completion_tokens": 174,
+        "total_tokens": 1694,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1392
+      }
+    },
+    {
+      "requestId": "f5f53468-7b0b-4f98-bc20-143461ae3cbf",
+      "createdAt": "2026-10-10T05:25:44.250298+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013368,
+      "estimatedUpperCny": 0.0026731199999999997,
+      "usage": {
+        "prompt_tokens": 894,
+        "completion_tokens": 142,
+        "total_tokens": 1036,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 766
+      }
+    },
+    {
+      "requestId": "8d561f06-d727-4ab8-b05d-e56c263d70c3",
+      "createdAt": "2026-10-10T05:25:45.726919+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.019012,
+      "estimatedUpperCny": 0.00892112,
+      "usage": {
+        "prompt_tokens": 1878,
+        "completion_tokens": 677,
+        "total_tokens": 2555,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1750
+      }
+    },
+    {
+      "requestId": "d79b0305-0e97-4bc2-bf73-65fefc2e7f47",
+      "createdAt": "2026-10-10T05:25:48.972121+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013404,
+      "estimatedUpperCny": 0.00306112,
+      "usage": {
+        "prompt_tokens": 928,
+        "completion_tokens": 182,
+        "total_tokens": 1110,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 800
+      }
+    },
+    {
+      "requestId": "3cdf9eb9-db5b-4d91-8693-93a12848ca60",
+      "createdAt": "2026-10-10T05:29:26.835451+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.012024,
+      "estimatedUpperCny": 0.002384,
+      "usage": {
+        "prompt_tokens": 580,
+        "completion_tokens": 153,
+        "total_tokens": 733,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 580
+      }
+    },
+    {
+      "requestId": "7d4f55f9-9fd1-4281-ada9-133f14aa2f32",
+      "createdAt": "2026-10-10T05:29:29.171993+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011346,
+      "estimatedUpperCny": 0.0015271199999999999,
+      "usage": {
+        "prompt_tokens": 493,
+        "completion_tokens": 99,
+        "total_tokens": 592,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 365
+      }
+    },
+    {
+      "requestId": "d265da5e-e762-45bb-b742-94e626d6f035",
+      "createdAt": "2026-10-10T05:29:30.604433+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011344,
+      "estimatedUpperCny": 0.0015611199999999998,
+      "usage": {
+        "prompt_tokens": 506,
+        "completion_tokens": 100,
+        "total_tokens": 606,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 378
+      }
+    },
+    {
+      "requestId": "baseline-824b5a4a-0322-4d1e-a151-e510f74ce8a6",
+      "createdAt": "2026-10-10T05:30:42.245821+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.007432,
+      "estimatedUpperCny": 0.002858,
+      "usage": {
+        "prompt_tokens": 45,
+        "completion_tokens": 346,
+        "total_tokens": 391,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 45
+      }
+    },
+    {
+      "requestId": "baseline-fdb50299-5c6c-4e88-a2cd-4c115943a5b7",
+      "createdAt": "2026-10-10T05:30:45.259569+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.007348,
+      "estimatedUpperCny": 0.000862,
+      "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 99,
+        "total_tokens": 134,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 35
+      }
+    },
+    {
+      "requestId": "baseline-30c222ff-f6d7-4253-b923-a0a247f76820",
+      "createdAt": "2026-10-10T05:30:47.017309+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.007402,
+      "estimatedUpperCny": 0.002434,
+      "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 294,
+        "total_tokens": 335,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 41
+      }
+    },
+    {
+      "requestId": "baseline-45ab68cd-3880-44e1-9ad4-cfd2a7e9acef",
+      "createdAt": "2026-10-10T05:30:49.615435+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.007462,
+      "estimatedUpperCny": 0.004148,
+      "usage": {
+        "prompt_tokens": 46,
+        "completion_tokens": 507,
+        "total_tokens": 553,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 46
+      }
+    },
+    {
+      "requestId": "baseline-1ffcfcab-5916-478e-9c0b-8df603911b0a",
+      "createdAt": "2026-10-10T05:30:55.289217+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.007378,
+      "estimatedUpperCny": 0.000768,
+      "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 86,
+        "total_tokens": 126,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 40
+      }
+    },
+    {
+      "requestId": "3928e84b-f4b7-4ca4-a52b-885e801d2896",
+      "createdAt": "2026-10-10T05:32:53.223475+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.012678,
+      "estimatedUpperCny": 0.0019191199999999999,
+      "usage": {
+        "prompt_tokens": 681,
+        "completion_tokens": 101,
+        "total_tokens": 782,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 553
+      }
+    },
+    {
+      "requestId": "6ee7306d-26ff-4305-8dba-f34136f95b85",
+      "createdAt": "2026-10-10T05:32:54.964367+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013224,
+      "estimatedUpperCny": 0.00174312,
+      "usage": {
+        "prompt_tokens": 757,
+        "completion_tokens": 60,
+        "total_tokens": 817,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 629
+      }
+    },
+    {
+      "requestId": "c23d4104-ebdb-4211-bbe1-8ff2932a4f8c",
+      "createdAt": "2026-10-10T05:32:56.253003+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011886,
+      "estimatedUpperCny": 0.00138712,
+      "usage": {
+        "prompt_tokens": 575,
+        "completion_tokens": 61,
+        "total_tokens": 636,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 447
+      }
+    },
+    {
+      "requestId": "e498e965-58d7-4e7e-8401-591e137f1779",
+      "createdAt": "2026-10-10T05:32:57.428360+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013806,
+      "estimatedUpperCny": 0.0038391199999999997,
+      "usage": {
+        "prompt_tokens": 833,
+        "completion_tokens": 303,
+        "total_tokens": 1136,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 705
+      }
+    },
+    {
+      "requestId": "8a4346d4-d316-4bb0-97ce-0af88ea8bd52",
+      "createdAt": "2026-10-10T05:32:59.651013+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.01181,
+      "estimatedUpperCny": 0.00151312,
+      "usage": {
+        "prompt_tokens": 566,
+        "completion_tokens": 79,
+        "total_tokens": 645,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 438
+      }
+    },
+    {
+      "requestId": "77e3863c-53c8-425c-ac34-b82418745317",
+      "createdAt": "2026-10-10T05:33:01.276392+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.01185,
+      "estimatedUpperCny": 0.00145112,
+      "usage": {
+        "prompt_tokens": 575,
+        "completion_tokens": 69,
+        "total_tokens": 644,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 447
+      }
+    },
+    {
+      "requestId": "3ef805e7-1576-4914-8387-272dae6f221c",
+      "createdAt": "2026-10-10T05:33:02.757115+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011838,
+      "estimatedUpperCny": 0.00202712,
+      "usage": {
+        "prompt_tokens": 583,
+        "completion_tokens": 139,
+        "total_tokens": 722,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 455
+      }
+    },
+    {
+      "requestId": "58359cc5-17a7-440c-95a3-50c306f1f86e",
+      "createdAt": "2026-10-10T05:33:04.910949+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011304,
+      "estimatedUpperCny": 0.00135312,
+      "usage": {
+        "prompt_tokens": 506,
+        "completion_tokens": 74,
+        "total_tokens": 580,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 378
+      }
+    },
+    {
+      "requestId": "f4d4faf6-d98f-4a19-8781-c73d4bcb6765",
+      "createdAt": "2026-10-10T05:33:06.287068+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013728,
+      "estimatedUpperCny": 0.00312512,
+      "usage": {
+        "prompt_tokens": 844,
+        "completion_tokens": 211,
+        "total_tokens": 1055,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 716
+      }
+    },
+    {
+      "requestId": "e5c08f8a-20c8-4df8-8ce7-39cb9420f167",
+      "createdAt": "2026-10-10T05:33:08.425821+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011912,
+      "estimatedUpperCny": 0.00154712,
+      "usage": {
+        "prompt_tokens": 587,
+        "completion_tokens": 78,
+        "total_tokens": 665,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 459
+      }
+    },
+    {
+      "requestId": "2cc85cf2-7d4f-40ea-a7f3-b29f088c35b3",
+      "createdAt": "2026-10-10T05:33:10.012592+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.012608,
+      "estimatedUpperCny": 0.00215912,
+      "usage": {
+        "prompt_tokens": 693,
+        "completion_tokens": 128,
+        "total_tokens": 821,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 565
+      }
+    },
+    {
+      "requestId": "2302c46c-3f3d-4693-a880-0d48d08355cb",
+      "createdAt": "2026-10-10T05:33:11.893177+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011376,
+      "estimatedUpperCny": 0.0013111199999999998,
+      "usage": {
+        "prompt_tokens": 501,
+        "completion_tokens": 70,
+        "total_tokens": 571,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 373
+      }
+    },
+    {
+      "requestId": "00e4994c-81be-4eff-81d3-f71f86dc23db",
+      "createdAt": "2026-10-10T05:33:13.318343+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.01122,
+      "estimatedUpperCny": 0.0013911199999999998,
+      "usage": {
+        "prompt_tokens": 489,
+        "completion_tokens": 83,
+        "total_tokens": 572,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 361
+      }
+    },
+    {
+      "requestId": "b66129aa-5965-4918-a5bc-690e3f9b08de",
+      "createdAt": "2026-10-10T05:33:14.844203+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011298,
+      "estimatedUpperCny": 0.00121912,
+      "usage": {
+        "prompt_tokens": 487,
+        "completion_tokens": 62,
+        "total_tokens": 549,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 359
+      }
+    },
+    {
+      "requestId": "8241bb57-fe94-4e60-8eee-6b8a0b8ea6ab",
+      "createdAt": "2026-10-10T05:33:15.944224+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011316,
+      "estimatedUpperCny": 0.00089624,
+      "usage": {
+        "prompt_tokens": 491,
+        "completion_tokens": 52,
+        "total_tokens": 543,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 235
+      }
+    },
+    {
+      "requestId": "18945f9b-77b9-47b9-b666-aea986ca773a",
+      "createdAt": "2026-10-10T05:33:17.269324+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.012066,
+      "estimatedUpperCny": 0.00205712,
+      "usage": {
+        "prompt_tokens": 586,
+        "completion_tokens": 142,
+        "total_tokens": 728,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 458
+      }
+    },
+    {
+      "requestId": "381082c1-4408-4106-a2b4-4df43aaa8847",
+      "createdAt": "2026-10-10T05:33:19.099883+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013176,
+      "estimatedUpperCny": 0.00270712,
+      "usage": {
+        "prompt_tokens": 751,
+        "completion_tokens": 182,
+        "total_tokens": 933,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 623
+      }
+    },
+    {
+      "requestId": "b93d522a-27d2-43a0-9f19-65469f73e554",
+      "createdAt": "2026-10-10T05:33:21.131981+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013906,
+      "estimatedUpperCny": 0.00224112,
+      "usage": {
+        "prompt_tokens": 870,
+        "completion_tokens": 94,
+        "total_tokens": 964,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 742
+      }
+    },
+    {
+      "requestId": "01a13265-882c-4277-ba56-33cd54f8e516",
+      "createdAt": "2026-10-10T10:13:41.676272+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013224,
+      "estimatedUpperCny": 0.00095848,
+      "usage": {
+        "prompt_tokens": 757,
+        "completion_tokens": 56,
+        "total_tokens": 813,
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 245
+      }
+    },
+    {
+      "requestId": "4e98c4d9-a1e7-4b37-9345-5f856ac6bbf9",
+      "createdAt": "2026-10-10T10:15:26.582934+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011138,
+      "estimatedUpperCny": 0.00117624,
+      "usage": {
+        "prompt_tokens": 479,
+        "completion_tokens": 90,
+        "total_tokens": 569,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 223
+      }
+    },
+    {
+      "requestId": "5e9879a5-431e-4166-9fde-79d44c6bb746",
+      "createdAt": "2026-10-10T10:36:18.601098+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.012678,
+      "estimatedUpperCny": 0.00115848,
+      "usage": {
+        "prompt_tokens": 681,
+        "completion_tokens": 100,
+        "total_tokens": 781,
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 169
+      }
+    },
+    {
+      "requestId": "4b7d43d6-44ba-4b3e-b38b-e71dd1d31e69",
+      "createdAt": "2026-10-10T10:36:19.756449+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013224,
+      "estimatedUpperCny": 0.00100648,
+      "usage": {
+        "prompt_tokens": 757,
+        "completion_tokens": 62,
+        "total_tokens": 819,
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 245
+      }
+    },
+    {
+      "requestId": "20ec8555-6fcf-4c87-ac60-10b9c42bc17e",
+      "createdAt": "2026-10-10T10:36:20.533144+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011886,
+      "estimatedUpperCny": 0.00088536,
+      "usage": {
+        "prompt_tokens": 575,
+        "completion_tokens": 61,
+        "total_tokens": 636,
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 191
+      }
+    },
+    {
+      "requestId": "76b13279-2306-48ad-b925-f80a602ec750",
+      "createdAt": "2026-10-10T10:36:21.355584+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.014008,
+      "estimatedUpperCny": 0.00344536,
+      "usage": {
+        "prompt_tokens": 851,
+        "completion_tokens": 312,
+        "total_tokens": 1163,
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 467
+      }
+    },
+    {
+      "requestId": "8b5fad62-0d59-407c-823f-d52510368a95",
+      "createdAt": "2026-10-10T10:36:23.428010+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.012486,
+      "estimatedUpperCny": 0.00124536,
+      "usage": {
+        "prompt_tokens": 663,
+        "completion_tokens": 84,
+        "total_tokens": 747,
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 279
+      }
+    },
+    {
+      "requestId": "233eb61a-7817-4b9d-9161-fcf4134c6254",
+      "createdAt": "2026-10-10T10:36:24.518533+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.01185,
+      "estimatedUpperCny": 0.00099736,
+      "usage": {
+        "prompt_tokens": 575,
+        "completion_tokens": 75,
+        "total_tokens": 650,
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 191
+      }
+    },
+    {
+      "requestId": "3b84bd05-808a-4d15-9675-f95e3e2752bf",
+      "createdAt": "2026-10-10T10:36:25.518813+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.01257,
+      "estimatedUpperCny": 0.00164936,
+      "usage": {
+        "prompt_tokens": 681,
+        "completion_tokens": 130,
+        "total_tokens": 811,
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 297
+      }
+    },
+    {
+      "requestId": "2fc94ed7-8e92-489f-ae78-68b4a78be490",
+      "createdAt": "2026-10-10T10:36:27.122312+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.01396,
+      "estimatedUpperCny": 0.00282024,
+      "usage": {
+        "prompt_tokens": 869,
+        "completion_tokens": 198,
+        "total_tokens": 1067,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 613
+      }
+    },
+    {
+      "requestId": "fc6750aa-16b7-4bea-8812-dc3603de452d",
+      "createdAt": "2026-10-10T10:36:28.607349+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013728,
+      "estimatedUpperCny": 0.00277824,
+      "usage": {
+        "prompt_tokens": 844,
+        "completion_tokens": 199,
+        "total_tokens": 1043,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 588
+      }
+    },
+    {
+      "requestId": "74f8e357-1fbe-4d3c-bbe4-b04521634d72",
+      "createdAt": "2026-10-10T10:36:30.112239+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013946,
+      "estimatedUpperCny": 0.00193624,
+      "usage": {
+        "prompt_tokens": 859,
+        "completion_tokens": 90,
+        "total_tokens": 949,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 603
+      }
+    },
+    {
+      "requestId": "51f194d2-7fad-4e0c-9f73-a3dc7d6737af",
+      "createdAt": "2026-10-10T10:36:31.144594+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.012608,
+      "estimatedUpperCny": 0.00208648,
+      "usage": {
+        "prompt_tokens": 693,
+        "completion_tokens": 213,
+        "total_tokens": 906,
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 181
+      }
+    },
+    {
+      "requestId": "f33e7e53-1e1d-4e81-87b8-2d8a362a794d",
+      "createdAt": "2026-10-10T10:36:32.749352+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013956,
+      "estimatedUpperCny": 0.0016693600000000002,
+      "usage": {
+        "prompt_tokens": 851,
+        "completion_tokens": 90,
+        "total_tokens": 941,
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 467
+      }
+    },
+    {
+      "requestId": "2c2afc6e-2689-4869-bc21-4c49d7262278",
+      "createdAt": "2026-10-10T10:36:33.845476+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.01122,
+      "estimatedUpperCny": 0.00104424,
+      "usage": {
+        "prompt_tokens": 489,
+        "completion_tokens": 71,
+        "total_tokens": 560,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 233
+      }
+    },
+    {
+      "requestId": "6c0442f4-4628-4241-a1bf-a7eb078a4587",
+      "createdAt": "2026-10-10T10:36:34.910757+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011298,
+      "estimatedUpperCny": 0.00097624,
+      "usage": {
+        "prompt_tokens": 487,
+        "completion_tokens": 63,
+        "total_tokens": 550,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 231
+      }
+    },
+    {
+      "requestId": "3196219f-9c68-4b7e-bb87-ade68f943cbd",
+      "createdAt": "2026-10-10T10:36:35.811813+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011316,
+      "estimatedUpperCny": 0.00088824,
+      "usage": {
+        "prompt_tokens": 491,
+        "completion_tokens": 51,
+        "total_tokens": 542,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 235
+      }
+    },
+    {
+      "requestId": "5145d9f7-af58-4cbe-82fc-bd1dda3af250",
+      "createdAt": "2026-10-10T10:36:36.794847+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.014004,
+      "estimatedUpperCny": 0.00227736,
+      "usage": {
+        "prompt_tokens": 851,
+        "completion_tokens": 166,
+        "total_tokens": 1017,
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 467
+      }
+    },
+    {
+      "requestId": "6cc1930d-6f59-439a-91cd-844b47c21b1f",
+      "createdAt": "2026-10-10T10:36:38.130963+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013818,
+      "estimatedUpperCny": 0.00244136,
+      "usage": {
+        "prompt_tokens": 841,
+        "completion_tokens": 189,
+        "total_tokens": 1030,
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 457
+      }
+    },
+    {
+      "requestId": "9c1108e1-170c-4059-ba6d-e5b0cf0d97b1",
+      "createdAt": "2026-10-10T10:36:39.586548+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013862,
+      "estimatedUpperCny": 0.0023702399999999996,
+      "usage": {
+        "prompt_tokens": 864,
+        "completion_tokens": 143,
+        "total_tokens": 1007,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 608
+      }
+    },
+    {
+      "requestId": "653a2874-0015-49ac-aa1d-1244588aca42",
+      "createdAt": "2026-10-10T10:36:41.384829+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.012024,
+      "estimatedUpperCny": 0.00156736,
+      "usage": {
+        "prompt_tokens": 580,
+        "completion_tokens": 145,
+        "total_tokens": 725,
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 196
+      }
+    },
+    {
+      "requestId": "f2a149ab-a601-4051-92d8-d1d5f9b15f70",
+      "createdAt": "2026-10-10T10:36:42.619596+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011346,
+      "estimatedUpperCny": 0.00099624,
+      "usage": {
+        "prompt_tokens": 493,
+        "completion_tokens": 64,
+        "total_tokens": 557,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 237
+      }
+    },
+    {
+      "requestId": "5e511fe4-0e1c-4c49-8e5e-c149e690494b",
+      "createdAt": "2026-10-10T10:36:43.495151+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011344,
+      "estimatedUpperCny": 0.00125424,
+      "usage": {
+        "prompt_tokens": 506,
+        "completion_tokens": 93,
+        "total_tokens": 599,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 250
+      }
+    },
+    {
+      "requestId": "8d3e74ee-2f51-446b-a9ca-179ee24278eb",
+      "createdAt": "2026-10-10T10:36:47.395716+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013896,
+      "estimatedUpperCny": 0.00270336,
+      "usage": {
+        "prompt_tokens": 840,
+        "completion_tokens": 222,
+        "total_tokens": 1062,
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 456
+      }
+    },
+    {
+      "requestId": "b31d2595-b069-4b5b-a6ab-de8d50944d3c",
+      "createdAt": "2026-10-10T10:37:54.714591+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013906,
+      "estimatedUpperCny": 0.00305536,
+      "usage": {
+        "prompt_tokens": 840,
+        "completion_tokens": 266,
+        "total_tokens": 1106,
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 456
+      }
+    },
+    {
+      "requestId": "dd4a5931-029c-4047-93f3-c1bf56cfa385",
+      "createdAt": "2026-10-10T10:38:30.980755+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.011988,
+      "estimatedUpperCny": 0.00208712,
+      "usage": {
+        "prompt_tokens": 597,
+        "completion_tokens": 143,
+        "total_tokens": 740,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 469
+      }
+    },
+    {
+      "requestId": "9c9ee603-a8d4-45f3-8e24-8aff721c6175",
+      "createdAt": "2026-10-10T10:40:07.832920+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.012556,
+      "estimatedUpperCny": 0.00211512,
+      "usage": {
+        "prompt_tokens": 671,
+        "completion_tokens": 128,
+        "total_tokens": 799,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 543
+      }
+    },
+    {
+      "requestId": "7ebc5e86-04d3-463f-8a54-ef108088ff60",
+      "createdAt": "2026-10-10T10:46:13.580686+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.014028,
+      "estimatedUpperCny": 0.00302512,
+      "usage": {
+        "prompt_tokens": 846,
+        "completion_tokens": 198,
+        "total_tokens": 1044,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 718
+      }
+    },
+    {
+      "requestId": "a4a0ca22-d15f-4270-af2b-e0d8d860907a",
+      "createdAt": "2026-10-10T10:47:26.172126+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.013224,
+      "estimatedUpperCny": 0.00095048,
+      "usage": {
+        "prompt_tokens": 757,
+        "completion_tokens": 55,
+        "total_tokens": 812,
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 245
+      }
+    }
+  ],
+  "measuredTotals": {
+    "prompt_tokens": 41500,
+    "completion_tokens": 9503,
+    "total_tokens": 51003
+  },
+  "scope": "actual backend ledger, failed/unknown reservations included; estimate is not official billing"
+}

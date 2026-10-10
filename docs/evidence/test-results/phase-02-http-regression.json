@@ -442,8 +442,8 @@
     "documents": 12,
     "chunks": 35,
     "budget": {
-      "calls": 57,
-      "estimatedUpperCostCny": 0.12220104,
+      "calls": 62,
+      "estimatedUpperCostCny": 0.13343424,
       "budgetCny": 3.0,
       "priceVerifiedAt": "2026-10-10",
       "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
@@ -456,7 +456,7 @@
     "agentWorkflow": false,
     "conceptImage": false,
     "imageToModel": false,
-    "checkedAt": "2026-10-10T10:36:59.155242+00:00"
+    "checkedAt": "2026-10-10T10:49:38.810693+00:00"
   },
   "success": true,
   "scope": "actual loopback HTTP; public local resource GET with Range; remote embedded video playback not included"

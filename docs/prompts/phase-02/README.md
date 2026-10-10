@@ -1,6 +1,6 @@
 # Phase 2 AI 协作证据
 
-当前状态：**用户于2026-10-10通过V3.0明确批准检查点A，Phase 2正式开发进行中。** 初始方案的待批准状态保留为历史记录。
+当前状态：**用户已通过V3.0批准检查点A；Phase 2工程实现、真实测试与证据归档完成，等待检查点B验收。** 初始方案的待批准状态保留为历史记录。
 
 | 文件 | 实际内容 |
 |---|---|
@@ -8,6 +8,7 @@
 | 01-checkpoint-a-public-conversation.jsonl | 从该 Prompt 开始的公开消息、实际工具调用和对应结果的时间点快照 |
 | 02-export-metadata.json | 来源快照 Hash、实际导出时间、记录数、原 Prompt 的 UTF-8 字节一致性与排除规则 |
 | 03-approved-development-v3.md | 用户实际提交的完整V3.0开发批准与3元测试预算要求，原文字节保存 |
+| 04-development-evolution.md | 已发生的设计、代码、Prompt v1/v2、检索调优、失败修复和真实Commit索引；说明文档而非逐字对话 |
 | ../../reports/phase-02-architecture-proposal.md | 本次架构选择、代码审查、实施与测试计划；状态为待批准 |
 | ../../evidence/test-results/phase-02-code-audit.json | 10 个重点文件与 Phase 1 提交的字节比较、实际环境及 Git 查询，明确未执行的测试 |
 

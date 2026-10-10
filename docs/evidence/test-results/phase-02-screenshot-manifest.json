@@ -1,0 +1,138 @@
+[
+  {
+    "file": "agents-desktop.jpg",
+    "size": [
+      1905,
+      1072
+    ],
+    "bytes": 80154
+  },
+  {
+    "file": "agents-mobile.jpg",
+    "size": [
+      375,
+      812
+    ],
+    "bytes": 39777
+  },
+  {
+    "file": "agents-tablet.jpg",
+    "size": [
+      473,
+      1024
+    ],
+    "bytes": 47366
+  },
+  {
+    "file": "home-desktop.jpg",
+    "size": [
+      1905,
+      1072
+    ],
+    "bytes": 139775
+  },
+  {
+    "file": "home-mobile.jpg",
+    "size": [
+      375,
+      812
+    ],
+    "bytes": 38727
+  },
+  {
+    "file": "network-error-desktop.jpg",
+    "size": [
+      1905,
+      1072
+    ],
+    "bytes": 67015
+  },
+  {
+    "file": "qa-citations-desktop.jpg",
+    "size": [
+      1905,
+      1072
+    ],
+    "bytes": 142301
+  },
+  {
+    "file": "qa-final-demonstration.jpg",
+    "size": [
+      1905,
+      1072
+    ],
+    "bytes": 144080
+  },
+  {
+    "file": "qa-final-desktop.jpg",
+    "size": [
+      1905,
+      1072
+    ],
+    "bytes": 119075
+  },
+  {
+    "file": "qa-first-raw-citation-id.jpg",
+    "size": [
+      1905,
+      1072
+    ],
+    "bytes": 65158
+  },
+  {
+    "file": "qa-mobile-insufficient.jpg",
+    "size": [
+      375,
+      812
+    ],
+    "bytes": 36318
+  },
+  {
+    "file": "qa-mobile.jpg",
+    "size": [
+      375,
+      812
+    ],
+    "bytes": 48215
+  },
+  {
+    "file": "qa-vector-missed-colours.jpg",
+    "size": [
+      1905,
+      1072
+    ],
+    "bytes": 84050
+  },
+  {
+    "file": "workshop-desktop.jpg",
+    "size": [
+      1905,
+      1072
+    ],
+    "bytes": 109657
+  },
+  {
+    "file": "workshop-mobile-after-anchor-fix.jpg",
+    "size": [
+      375,
+      812
+    ],
+    "bytes": 40432
+  },
+  {
+    "file": "workshop-mobile-final.jpg",
+    "size": [
+      375,
+      812
+    ],
+    "bytes": 50989
+  },
+  {
+    "file": "workshop-mobile.jpg",
+    "size": [
+      375,
+      812
+    ],
+    "bytes": 50867
+  }
+]
