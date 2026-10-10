@@ -1,0 +1,977 @@
+{
+  "status": "completed",
+  "metadata": {
+    "executionStartedAt": "2026-10-10T18:19:37.082268+08:00",
+    "runLabel": "expanded-hybrid052-recommended-four",
+    "evaluationKind": "local_embedding_retrieval_candidates",
+    "annotationScope": "assistant_source_checked_candidate",
+    "humanGoldLabels": false,
+    "llmProviderInvoked": false,
+    "topK": 5,
+    "modeOrder": "alternating per question, after one vector warmup; model loading excluded from per-query latency",
+    "thresholdSource": "CLI diagnostic override",
+    "parameterSelectionDisclosure": "Threshold reruns on questions used for parameter selection are diagnostics, not independent validation.",
+    "questionSetFile": "recommended-questions.json",
+    "scriptSHA256": "f40268ce5eb64e5fe31bdc8b699fe5f056f4e8b2db0279d808f51bf61079fafb",
+    "pythonVersion": "3.11.1",
+    "dependencies": {
+      "sentence-transformers": "6.1.0",
+      "torch": "2.11.0",
+      "qdrant-client": "1.19.1",
+      "pydantic-settings": "2.15.0"
+    },
+    "questionSetSHA256": "750859347a9e2cc962172a5f69fe0a431e935f154c24f76b4ad8cc2ebf962c3d",
+    "threshold": 0.52,
+    "modelAndIndexLoadSeconds": 15.626541,
+    "index": {
+      "generation_id": "gen-20261010T101322-de3db5c3",
+      "corpus_hash": "156208ab5b00994be016b6d7d29b60ba4c9f462cf1d0056899f542308dda8cdb",
+      "documents": 12,
+      "chunks": 35,
+      "model_id": "BAAI/bge-small-zh-v1.5",
+      "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+      "dimension": 512,
+      "distance": "Cosine",
+      "review_scope": "assistant source-checked original facts; human review pending"
+    },
+    "annotationIndexIssues": [],
+    "warmupSeconds": 0.02039,
+    "executionFinishedAt": "2026-10-10T18:19:52.849693+08:00"
+  },
+  "retrievalMode": "vector",
+  "summary": {
+    "metricScope": "Assistant source-checked candidate annotations; not human gold Recall@5 or answer correctness.",
+    "questionCount": 4,
+    "completedCount": 4,
+    "failedCount": 0,
+    "supportedCandidateCount": 4,
+    "insufficientCandidateCount": 0,
+    "candidateEvidenceCoverageAt5Macro": 0.6875,
+    "candidateEvidenceCoverageAt5Micro": 0.625,
+    "candidateSourceCoverageAt5Macro": 0.75,
+    "allCandidateSectionsFoundCount": 2,
+    "anyCandidateSectionFoundCount": 3,
+    "candidateInsufficiencyAgreement": 1,
+    "supportedCandidatesWithoutEvidence": [],
+    "insufficientCandidatesWithAcceptedEvidence": [],
+    "candidateEvidenceMissingQuestions": [
+      "recommended-q01",
+      "recommended-q02"
+    ],
+    "canonicalEvidenceIntegrityRate": 1.0,
+    "canonicalEvidenceChecks": 17,
+    "meanRetrievalSeconds": 0.0093,
+    "minRetrievalSeconds": 0.0086,
+    "maxRetrievalSeconds": 0.0098
+  },
+  "cases": [
+    {
+      "id": "recommended-q01",
+      "category": null,
+      "question": "京剧中的生旦净丑有什么区别？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "evaluationScope": "assistant candidate questions; human review pending",
+      "expectedFacts": [
+        "四大行当的分类及主要特点"
+      ],
+      "expectedSectionIds": [
+        "fujian-roles-system",
+        "fujian-roles-sheng-dan",
+        "fujian-roles-jing",
+        "fujian-roles-chou"
+      ],
+      "expectedSourceIds": [
+        "fujian-roles"
+      ],
+      "expectInsufficient": false,
+      "status": "completed",
+      "retrievalMode": "vector",
+      "threshold": 0.52,
+      "uncertain": false,
+      "insufficiencyPredictionMatchesCandidate": true,
+      "returnedSectionIds": [
+        "cnpoc-jing-zheng",
+        "cnpoc-mei-founder",
+        "fujian-roles-chou",
+        "fujian-roles-sheng-dan",
+        "fujian-roles-system"
+      ],
+      "returnedSourceIds": [
+        "cnpoc-jing",
+        "cnpoc-mei",
+        "fujian-roles"
+      ],
+      "matchedExpectedSectionIds": [
+        "fujian-roles-chou",
+        "fujian-roles-sheng-dan",
+        "fujian-roles-system"
+      ],
+      "matchedExpectedSourceIds": [
+        "fujian-roles"
+      ],
+      "missingExpectedSectionIds": [
+        "fujian-roles-jing"
+      ],
+      "candidateEvidenceCoverageAt5": 0.75,
+      "candidateSourceCoverageAt5": 1.0,
+      "evidenceCount": 5,
+      "canonicalEvidenceChecks": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "canonicalEvidenceIntegrity": true,
+      "evidence": [
+        {
+          "id": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+          "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+          "sourceId": "cnpoc-mei",
+          "sectionId": "cnpoc-mei-founder",
+          "title": "梅(兰芳)派",
+          "locator": "正文开头 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+          "excerpt": "梅派是由梅兰芳开创的京剧旦角流派。\n流派描述的是传承的艺术风格，不能与生旦净丑这样的角色行当当作同一分类层级。",
+          "contentKind": "original_fact_summary",
+          "category": "角色文化",
+          "entityNames": [
+            "梅派",
+            "梅兰芳",
+            "旦角",
+            "流派",
+            "行当"
+          ],
+          "vectorScore": 0.6633353131464425,
+          "keywordScore": null,
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-sheng-dan",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "生",
+            "旦",
+            "老生",
+            "小生",
+            "武生",
+            "青衣",
+            "花旦"
+          ],
+          "vectorScore": 0.6628829060321113,
+          "keywordScore": null,
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-system",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文第一段及末段 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "京剧",
+            "行当",
+            "生",
+            "旦",
+            "净",
+            "丑",
+            "唱念做打"
+          ],
+          "vectorScore": 0.6178295880648705,
+          "keywordScore": null,
+          "rank": 3,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "sourceId": "cnpoc-jing",
+          "sectionId": "cnpoc-jing-zheng",
+          "title": "京剧净行小讲堂",
+          "locator": "正文（1）正净 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/202505/1429cdcaf7384ed985ac6b90b8af2309.shtml",
+          "excerpt": "正净又称大花脸、铜锤花脸，表演侧重唱功。\n国家京剧院课堂以《铡美案》的包拯说明这一类型。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "正净",
+            "大花脸",
+            "铜锤花脸",
+            "铡美案",
+            "包拯"
+          ],
+          "vectorScore": 0.5761139590243101,
+          "keywordScore": null,
+          "rank": 4,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+          "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-chou",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文“丑”条目 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "丑行常承担喜剧表演，鼻梁上的小块白色化妆使其有小花脸之称。\n文丑与武丑是常见分类，武丑另称开口跳。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "丑",
+            "小花脸",
+            "文丑",
+            "武丑",
+            "开口跳"
+          ],
+          "vectorScore": 0.5582386316000005,
+          "keywordScore": null,
+          "rank": 5,
+          "reviewStatus": "source_checked_by_assistant"
+        }
+      ],
+      "candidateScores": [
+        {
+          "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+          "score": 0.6633353131464425
+        },
+        {
+          "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "score": 0.6628829060321113
+        },
+        {
+          "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "score": 0.6178295880648705
+        },
+        {
+          "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "score": 0.5761139590243101
+        },
+        {
+          "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+          "score": 0.5582386316000005
+        }
+      ],
+      "canonicalCandidateScoreContexts": [
+        {
+          "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+          "vectorRank": 1,
+          "vectorScore": 0.6633353131464425,
+          "sourceId": "cnpoc-mei",
+          "sectionId": "cnpoc-mei-founder",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "vectorRank": 2,
+          "vectorScore": 0.6628829060321113,
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-sheng-dan",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": true
+        },
+        {
+          "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "vectorRank": 3,
+          "vectorScore": 0.6178295880648705,
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-system",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": true
+        },
+        {
+          "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "vectorRank": 4,
+          "vectorScore": 0.5761139590243101,
+          "sourceId": "cnpoc-jing",
+          "sectionId": "cnpoc-jing-zheng",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+          "vectorRank": 5,
+          "vectorScore": 0.5582386316000005,
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-chou",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": true
+        }
+      ],
+      "elapsedSeconds": 0.0098,
+      "wallElapsedSeconds": 0.012341
+    },
+    {
+      "id": "recommended-q02",
+      "category": null,
+      "question": "京剧脸谱的颜色有什么寓意？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "evaluationScope": "assistant candidate questions; human review pending",
+      "expectedFacts": [
+        "颜色解释需结合角色及主色副色",
+        "至少说明已入库的红色、黑色或神仙脸案例，不编造全色谱"
+      ],
+      "expectedSectionIds": [
+        "cnpoc-face-colors",
+        "cnpoc-bao-black"
+      ],
+      "expectedSourceIds": [
+        "cnpoc-face",
+        "cnpoc-bao"
+      ],
+      "expectInsufficient": false,
+      "status": "completed",
+      "retrievalMode": "vector",
+      "threshold": 0.52,
+      "uncertain": false,
+      "insufficiencyPredictionMatchesCandidate": true,
+      "returnedSectionIds": [
+        "cnpoc-jing-zheng",
+        "cnpoc-mei-founder",
+        "cnpoc-muguiying-adaptation",
+        "ihchina-jingju-history",
+        "ihchina-jingju-music"
+      ],
+      "returnedSourceIds": [
+        "cnpoc-jing",
+        "cnpoc-mei",
+        "cnpoc-muguiying",
+        "ihchina-jingju"
+      ],
+      "matchedExpectedSectionIds": [],
+      "matchedExpectedSourceIds": [],
+      "missingExpectedSectionIds": [
+        "cnpoc-bao-black",
+        "cnpoc-face-colors"
+      ],
+      "candidateEvidenceCoverageAt5": 0.0,
+      "candidateSourceCoverageAt5": 0.0,
+      "evidenceCount": 5,
+      "canonicalEvidenceChecks": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "canonicalEvidenceIntegrity": true,
+      "evidence": [
+        {
+          "id": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "sourceId": "cnpoc-jing",
+          "sectionId": "cnpoc-jing-zheng",
+          "title": "京剧净行小讲堂",
+          "locator": "正文（1）正净 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/202505/1429cdcaf7384ed985ac6b90b8af2309.shtml",
+          "excerpt": "正净又称大花脸、铜锤花脸，表演侧重唱功。\n国家京剧院课堂以《铡美案》的包拯说明这一类型。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "正净",
+            "大花脸",
+            "铜锤花脸",
+            "铡美案",
+            "包拯"
+          ],
+          "vectorScore": 0.5852949999485214,
+          "keywordScore": null,
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+          "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+          "sourceId": "cnpoc-mei",
+          "sectionId": "cnpoc-mei-founder",
+          "title": "梅(兰芳)派",
+          "locator": "正文开头 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+          "excerpt": "梅派是由梅兰芳开创的京剧旦角流派。\n流派描述的是传承的艺术风格，不能与生旦净丑这样的角色行当当作同一分类层级。",
+          "contentKind": "original_fact_summary",
+          "category": "角色文化",
+          "entityNames": [
+            "梅派",
+            "梅兰芳",
+            "旦角",
+            "流派",
+            "行当"
+          ],
+          "vectorScore": 0.5517905873655851,
+          "keywordScore": null,
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+          "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+          "sourceId": "ihchina-jingju",
+          "sectionId": "ihchina-jingju-history",
+          "title": "京剧",
+          "locator": "项目正文第一段 · 入库片段 1/1",
+          "url": "https://www.ihchina.cn/project_details/13201",
+          "excerpt": "京剧形成于清代的剧种交流过程。\n三庆、四喜、春台、和春徽班进京后，与汉调艺人合作，并吸收昆曲、秦腔等艺术因素。\n徽班进京是发展节点，不能等同于一日完成剧种形成。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧历史",
+          "entityNames": [
+            "京剧",
+            "三庆",
+            "四喜",
+            "春台",
+            "和春",
+            "汉调",
+            "昆曲",
+            "秦腔"
+          ],
+          "vectorScore": 0.5500905365220001,
+          "keywordScore": null,
+          "rank": 3,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "sourceId": "cnpoc-muguiying",
+          "sectionId": "cnpoc-muguiying-adaptation",
+          "title": "穆桂英挂帅",
+          "locator": "剧目简介最后两句；主创 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/mbm/200806/677c0bbf8a594b35901c47ea19f50a03.shtml",
+          "excerpt": "该京剧版本于1959年由梅兰芳、陆静岩、袁韵宜据同名豫剧改编，梅兰芳同年在北京首演。\n这里的年份是作品改编和首演时间。",
+          "contentKind": "original_fact_summary",
+          "category": "经典剧目",
+          "entityNames": [
+            "穆桂英挂帅",
+            "梅兰芳",
+            "陆静岩",
+            "袁韵宜",
+            "1959年",
+            "豫剧"
+          ],
+          "vectorScore": 0.543141812076438,
+          "keywordScore": null,
+          "rank": 4,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+          "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+          "sourceId": "ihchina-jingju",
+          "sectionId": "ihchina-jingju-music",
+          "title": "京剧",
+          "locator": "项目正文第二段：唱腔 · 入库片段 1/1",
+          "url": "https://www.ihchina.cn/project_details/13201",
+          "excerpt": "京剧主要使用西皮和二簧声腔。\n概括而言，二簧较舒缓凝重，西皮较明快起伏；\n这是声腔特点的基础介绍，具体情绪表达仍须结合唱段。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧历史",
+          "entityNames": [
+            "京剧",
+            "西皮",
+            "二簧"
+          ],
+          "vectorScore": 0.5353240357321658,
+          "keywordScore": null,
+          "rank": 5,
+          "reviewStatus": "source_checked_by_assistant"
+        }
+      ],
+      "candidateScores": [
+        {
+          "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "score": 0.5852949999485214
+        },
+        {
+          "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+          "score": 0.5517905873655851
+        },
+        {
+          "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+          "score": 0.5500905365220001
+        },
+        {
+          "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "score": 0.543141812076438
+        },
+        {
+          "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+          "score": 0.5353240357321658
+        }
+      ],
+      "canonicalCandidateScoreContexts": [
+        {
+          "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+          "vectorRank": 1,
+          "vectorScore": 0.5852949999485214,
+          "sourceId": "cnpoc-jing",
+          "sectionId": "cnpoc-jing-zheng",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+          "vectorRank": 2,
+          "vectorScore": 0.5517905873655851,
+          "sourceId": "cnpoc-mei",
+          "sectionId": "cnpoc-mei-founder",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+          "vectorRank": 3,
+          "vectorScore": 0.5500905365220001,
+          "sourceId": "ihchina-jingju",
+          "sectionId": "ihchina-jingju-history",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "vectorRank": 4,
+          "vectorScore": 0.543141812076438,
+          "sourceId": "cnpoc-muguiying",
+          "sectionId": "cnpoc-muguiying-adaptation",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+          "vectorRank": 5,
+          "vectorScore": 0.5353240357321658,
+          "sourceId": "ihchina-jingju",
+          "sectionId": "ihchina-jingju-music",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        }
+      ],
+      "elapsedSeconds": 0.0091,
+      "wallElapsedSeconds": 0.011793
+    },
+    {
+      "id": "recommended-q03",
+      "category": null,
+      "question": "京剧武生的服饰有什么特点？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "evaluationScope": "assistant candidate questions; human review pending",
+      "expectedFacts": [
+        "长靠与短打的服装鞋底区别"
+      ],
+      "expectedSectionIds": [
+        "ncfta-male-roles-wusheng"
+      ],
+      "expectedSourceIds": [
+        "ncfta-male-roles"
+      ],
+      "expectInsufficient": false,
+      "status": "completed",
+      "retrievalMode": "vector",
+      "threshold": 0.52,
+      "uncertain": false,
+      "insufficiencyPredictionMatchesCandidate": true,
+      "returnedSectionIds": [
+        "cnpoc-dan-daoma-wu",
+        "fujian-roles-sheng-dan",
+        "fujian-roles-system",
+        "ihchina-jingju-accompaniment",
+        "ncfta-male-roles-wusheng"
+      ],
+      "returnedSourceIds": [
+        "cnpoc-dan",
+        "fujian-roles",
+        "ihchina-jingju",
+        "ncfta-male-roles"
+      ],
+      "matchedExpectedSectionIds": [
+        "ncfta-male-roles-wusheng"
+      ],
+      "matchedExpectedSourceIds": [
+        "ncfta-male-roles"
+      ],
+      "missingExpectedSectionIds": [],
+      "candidateEvidenceCoverageAt5": 1.0,
+      "candidateSourceCoverageAt5": 1.0,
+      "evidenceCount": 5,
+      "canonicalEvidenceChecks": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "canonicalEvidenceIntegrity": true,
+      "evidence": [
+        {
+          "id": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+          "chunkId": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+          "sourceId": "ncfta-male-roles",
+          "sectionId": "ncfta-male-roles-wusheng",
+          "title": "京劇行當",
+          "locator": "行当介绍—生—武生 · 入库片段 1/1",
+          "url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+          "excerpt": "武生常表现武艺高强的男子。\n长靠武生穿大靠、厚底靴，身段稳健；\n短打武生穿短衣、薄底靴，动作轻捷。\n区分同时涉及服装与表演方式。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "武生",
+            "长靠武生",
+            "短打武生",
+            "大靠",
+            "厚底靴",
+            "薄底靴"
+          ],
+          "vectorScore": 0.6088442734970105,
+          "keywordScore": null,
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-sheng-dan",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "生",
+            "旦",
+            "老生",
+            "小生",
+            "武生",
+            "青衣",
+            "花旦"
+          ],
+          "vectorScore": 0.5481498511378993,
+          "keywordScore": null,
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+          "chunkId": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+          "sourceId": "ihchina-jingju",
+          "sectionId": "ihchina-jingju-accompaniment",
+          "title": "京剧",
+          "locator": "项目正文第二段：伴奏 · 入库片段 1/1",
+          "url": "https://www.ihchina.cn/project_details/13201",
+          "excerpt": "京剧伴奏分文场、武场。\n文场以京胡等丝竹乐器为主，武场以鼓板以及大小锣等打击乐器为主；\n两类伴奏共同服务舞台表演。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧历史",
+          "entityNames": [
+            "京剧",
+            "文场",
+            "武场",
+            "京胡",
+            "鼓板",
+            "小锣",
+            "大锣"
+          ],
+          "vectorScore": 0.540071399909001,
+          "keywordScore": null,
+          "rank": 3,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "sourceId": "cnpoc-dan",
+          "sectionId": "cnpoc-dan-daoma-wu",
+          "title": "京剧旦行小讲堂",
+          "locator": "正文（3）刀马旦、（5）武旦 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+          "excerpt": "刀马旦常扮演女将帅，硬靠、雉尾是常见扮相，重唱念与舞蹈。\n武旦常着短装，表演更侧重武打与打出手等技巧。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "刀马旦",
+            "武旦",
+            "硬靠",
+            "雉尾",
+            "打出手"
+          ],
+          "vectorScore": 0.5387640930950807,
+          "keywordScore": null,
+          "rank": 4,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-system",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文第一段及末段 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "京剧",
+            "行当",
+            "生",
+            "旦",
+            "净",
+            "丑",
+            "唱念做打"
+          ],
+          "vectorScore": 0.5239820289607628,
+          "keywordScore": null,
+          "rank": 5,
+          "reviewStatus": "source_checked_by_assistant"
+        }
+      ],
+      "candidateScores": [
+        {
+          "chunkId": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+          "score": 0.6088442734970105
+        },
+        {
+          "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "score": 0.5481498511378993
+        },
+        {
+          "chunkId": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+          "score": 0.540071399909001
+        },
+        {
+          "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "score": 0.5387640930950807
+        },
+        {
+          "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "score": 0.5239820289607628
+        }
+      ],
+      "canonicalCandidateScoreContexts": [
+        {
+          "chunkId": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+          "vectorRank": 1,
+          "vectorScore": 0.6088442734970105,
+          "sourceId": "ncfta-male-roles",
+          "sectionId": "ncfta-male-roles-wusheng",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": true
+        },
+        {
+          "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "vectorRank": 2,
+          "vectorScore": 0.5481498511378993,
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-sheng-dan",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+          "vectorRank": 3,
+          "vectorScore": 0.540071399909001,
+          "sourceId": "ihchina-jingju",
+          "sectionId": "ihchina-jingju-accompaniment",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "vectorRank": 4,
+          "vectorScore": 0.5387640930950807,
+          "sourceId": "cnpoc-dan",
+          "sectionId": "cnpoc-dan-daoma-wu",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "vectorRank": 5,
+          "vectorScore": 0.5239820289607628,
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-system",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        }
+      ],
+      "elapsedSeconds": 0.0097,
+      "wallElapsedSeconds": 0.012525
+    },
+    {
+      "id": "recommended-q04",
+      "category": null,
+      "question": "《霸王别姬》有哪些代表性人物？",
+      "annotationStatus": "assistant_source_checked_candidate",
+      "evaluationScope": "assistant candidate questions; human review pending",
+      "expectedFacts": [
+        "项羽、虞姬"
+      ],
+      "expectedSectionIds": [
+        "cnpoc-bawang-characters"
+      ],
+      "expectedSourceIds": [
+        "cnpoc-bawang"
+      ],
+      "expectInsufficient": false,
+      "status": "completed",
+      "retrievalMode": "vector",
+      "threshold": 0.52,
+      "uncertain": false,
+      "insufficiencyPredictionMatchesCandidate": true,
+      "returnedSectionIds": [
+        "cnpoc-bawang-characters",
+        "cnpoc-mei-repertoire"
+      ],
+      "returnedSourceIds": [
+        "cnpoc-bawang",
+        "cnpoc-mei"
+      ],
+      "matchedExpectedSectionIds": [
+        "cnpoc-bawang-characters"
+      ],
+      "matchedExpectedSourceIds": [
+        "cnpoc-bawang"
+      ],
+      "missingExpectedSectionIds": [],
+      "candidateEvidenceCoverageAt5": 1.0,
+      "candidateSourceCoverageAt5": 1.0,
+      "evidenceCount": 2,
+      "canonicalEvidenceChecks": [
+        true,
+        true
+      ],
+      "canonicalEvidenceIntegrity": true,
+      "evidence": [
+        {
+          "id": "chunk_0652cb950585663562cea7354b521e68ca10244e5dc68aa035ba53c4c726ab5e",
+          "chunkId": "chunk_0652cb950585663562cea7354b521e68ca10244e5dc68aa035ba53c4c726ab5e",
+          "sourceId": "cnpoc-bawang",
+          "sectionId": "cnpoc-bawang-characters",
+          "title": "霸王别姬",
+          "locator": "剧目简介：开头及别姬段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/mbb/200806/2c0fcc00d04849efa36386594e273bae.shtml",
+          "excerpt": "京剧《霸王别姬》的核心人物是项羽与虞姬。\n该院简介以楚汉冲突、项羽被困垓下为剧情背景，人物处境服务于舞台悲剧情节。",
+          "contentKind": "original_fact_summary",
+          "category": "经典剧目",
+          "entityNames": [
+            "霸王别姬",
+            "项羽",
+            "虞姬",
+            "垓下",
+            "楚汉"
+          ],
+          "vectorScore": 0.6922430967737376,
+          "keywordScore": null,
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant"
+        },
+        {
+          "id": "chunk_1f7ad02c39b66e2d03d46f72d99dbb84a09722881807fd1144c68f6c02a2634e",
+          "chunkId": "chunk_1f7ad02c39b66e2d03d46f72d99dbb84a09722881807fd1144c68f6c02a2634e",
+          "sourceId": "cnpoc-mei",
+          "sectionId": "cnpoc-mei-repertoire",
+          "title": "梅(兰芳)派",
+          "locator": "正文剧目段、《别姬》舞蹈段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+          "excerpt": "《霸王别姬》与《穆桂英挂帅》是该资料列出的梅派代表作品；\n《霸王别姬》的剑舞体现舞蹈化表演特色。\n作品来源仍须分别追溯各剧文献。",
+          "contentKind": "original_fact_summary",
+          "category": "角色文化",
+          "entityNames": [
+            "梅派",
+            "梅兰芳",
+            "霸王别姬",
+            "穆桂英挂帅",
+            "剑舞"
+          ],
+          "vectorScore": 0.6228190035045622,
+          "keywordScore": null,
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant"
+        }
+      ],
+      "candidateScores": [
+        {
+          "chunkId": "chunk_0652cb950585663562cea7354b521e68ca10244e5dc68aa035ba53c4c726ab5e",
+          "score": 0.6922430967737376
+        },
+        {
+          "chunkId": "chunk_1f7ad02c39b66e2d03d46f72d99dbb84a09722881807fd1144c68f6c02a2634e",
+          "score": 0.6228190035045622
+        },
+        {
+          "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "score": 0.43893424043583057
+        },
+        {
+          "chunkId": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+          "score": 0.4331337104367549
+        },
+        {
+          "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "score": 0.4311322659387469
+        }
+      ],
+      "canonicalCandidateScoreContexts": [
+        {
+          "chunkId": "chunk_0652cb950585663562cea7354b521e68ca10244e5dc68aa035ba53c4c726ab5e",
+          "vectorRank": 1,
+          "vectorScore": 0.6922430967737376,
+          "sourceId": "cnpoc-bawang",
+          "sectionId": "cnpoc-bawang-characters",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": true
+        },
+        {
+          "chunkId": "chunk_1f7ad02c39b66e2d03d46f72d99dbb84a09722881807fd1144c68f6c02a2634e",
+          "vectorRank": 2,
+          "vectorScore": 0.6228190035045622,
+          "sourceId": "cnpoc-mei",
+          "sectionId": "cnpoc-mei-repertoire",
+          "acceptedAsEvidence": true,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "vectorRank": 3,
+          "vectorScore": 0.43893424043583057,
+          "sourceId": "cnpoc-dan",
+          "sectionId": "cnpoc-dan-daoma-wu",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+          "vectorRank": 4,
+          "vectorScore": 0.4331337104367549,
+          "sourceId": "cnpoc-face",
+          "sectionId": "cnpoc-face-colors",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        },
+        {
+          "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "vectorRank": 5,
+          "vectorScore": 0.4311322659387469,
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-jing",
+          "acceptedAsEvidence": false,
+          "matchesCandidateSection": false
+        }
+      ],
+      "elapsedSeconds": 0.0086,
+      "wallElapsedSeconds": 0.010445
+    }
+  ]
+}

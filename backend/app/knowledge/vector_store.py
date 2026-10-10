@@ -85,18 +85,20 @@ class VectorStore:
             self._client.upsert(collection_name=COLLECTION_NAME, points=points, wait=True)
 
     def search(
-        self, vector: list[float], limit: int = 5, category: str | None = None
+        self, vector: list[float], limit: int = 5, category: str | None = None, candidate_ids: list[str] | None = None
     ) -> list[dict[str, Any]]:
         self._ensure_open()
         if not isinstance(limit, int) or isinstance(limit, bool) or not 1 <= limit <= 10:
             raise ValueError("检索数量必须在 1 到 10 之间。")
-        query_filter = None
+        conditions = []
         if category is not None:
             if not isinstance(category, str) or not category.strip():
                 raise ValueError("检索分类不能为空。")
-            query_filter = self._models.Filter(
-                must=[self._models.FieldCondition(key="category", match=self._models.MatchValue(value=category))]
-            )
+            conditions.append(self._models.FieldCondition(key="category", match=self._models.MatchValue(value=category)))
+        if candidate_ids is not None:
+            if not candidate_ids: return []
+            conditions.append(self._models.HasIdCondition(has_id=[point_id(cid) for cid in candidate_ids]))
+        query_filter = self._models.Filter(must=conditions) if conditions else None
         response = self._client.query_points(
             collection_name=COLLECTION_NAME,
             query=self._vector(vector),

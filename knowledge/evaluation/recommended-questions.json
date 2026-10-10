@@ -1,0 +1,6 @@
+[
+ {"id":"recommended-q01","question":"京剧中的生旦净丑有什么区别？","expected_facts":["四大行当的分类及主要特点"],"expected_source_ids":["fujian-roles"],"expected_section_ids":["fujian-roles-system","fujian-roles-sheng-dan","fujian-roles-jing","fujian-roles-chou"],"expect_insufficient":false,"annotation_status":"assistant_source_checked_candidate"},
+ {"id":"recommended-q02","question":"京剧脸谱的颜色有什么寓意？","expected_facts":["颜色解释需结合角色及主色副色","至少说明已入库的红色、黑色或神仙脸案例，不编造全色谱"],"expected_source_ids":["cnpoc-face","cnpoc-bao"],"expected_section_ids":["cnpoc-face-colors","cnpoc-bao-black"],"expect_insufficient":false,"annotation_status":"assistant_source_checked_candidate"},
+ {"id":"recommended-q03","question":"京剧武生的服饰有什么特点？","expected_facts":["长靠与短打的服装鞋底区别"],"expected_source_ids":["ncfta-male-roles"],"expected_section_ids":["ncfta-male-roles-wusheng"],"expect_insufficient":false,"annotation_status":"assistant_source_checked_candidate"},
+ {"id":"recommended-q04","question":"《霸王别姬》有哪些代表性人物？","expected_facts":["项羽、虞姬"],"expected_source_ids":["cnpoc-bawang"],"expected_section_ids":["cnpoc-bawang-characters"],"expect_insufficient":false,"annotation_status":"assistant_source_checked_candidate"}
+]

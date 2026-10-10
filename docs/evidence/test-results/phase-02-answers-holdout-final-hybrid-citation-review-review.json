@@ -1,0 +1,341 @@
+{
+  "status": "review_template_prepared",
+  "metadata": {
+    "label": "holdout-final-hybrid-citation-review",
+    "preparedAt": "2026-10-10T18:38:05.856949+08:00",
+    "originalArchiveFile": "phase-02-answers-holdout-final-hybrid.json",
+    "originalArchiveSHA256": "67d9958fb63b180a7a44440b94c1bbc51fa3d9614181f7dd58611c058425ae00",
+    "questionSetSHA256": "8fb4b860692d799e5c03aa853e8ccacecdc5c3681cea57d3d96d7aaed0f4c197",
+    "originalDocumentSHA256": {
+      "cnpoc-bao.json": "839271092155e855d4c2157139130c6c22d965c040fd20eeb7020ac529442c60",
+      "cnpoc-bawang.json": "ba65e1e171694d51bc3ba74cb7e3c1e2f22423126e71c000e834a192ad3850e2",
+      "cnpoc-costume.json": "5c5cb7c82fe91869305a61cd5b9a5dd479869a5143f4d989af3a84d222613af6",
+      "cnpoc-dan.json": "b5a9bfc4d380a309b8c5ea0ecbbe8d2f31eecd3efa2a13c129675dcfd66c28a1",
+      "cnpoc-face.json": "068e0a26d08378a87fda70c56fec81b1ec445b10f9921efe593bc28f29b77601",
+      "cnpoc-jing.json": "6f478ad19de6266ba3d2a1e5d9caa95fdf0dd75fd618bb6ca3857927e7043be3",
+      "cnpoc-mei.json": "ae3c512640ad1ae7a0127d44bc05956e79e559d1e0d4d258581d2c2e5587bd83",
+      "cnpoc-muguiying.json": "1fa381a704cfe4475759285edbe47d524585acd3bd9cd799d434e6614dda044a",
+      "cnpoc-sanchakou.json": "29b59e975d08a7e9cc6718296fc835c628d2f7ba3be366785c9ed24eb589aecb",
+      "fujian-roles.json": "4530b827d8258a20cdacd14da4198c84710a714a6f9ef222e7de2816026e92dc",
+      "ihchina-jingju.json": "5e800c4cb23db8c88bfbaf6499bc8d257eaf9e070805a83d53b4b147fe4cdbc7",
+      "ncfta-male-roles.json": "d933a1c5c6214cf3ed54934f3bab1f852f24ad1ef2bf960519ca4f12e6e67377"
+    },
+    "index": {
+      "generation_id": "gen-20261010T102847-791ed93a",
+      "corpus_hash": "12a8e8511e6e6c46b887442fbea1833dd577d996b42aa4122f032b706056f934",
+      "documents": 12,
+      "chunks": 35,
+      "model_id": "BAAI/bge-small-zh-v1.5",
+      "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+      "dimension": 512,
+      "review_scope": "assistant source-checked original facts; human review pending"
+    },
+    "sqliteMode": "read-only; no Qdrant, embedding, HTTP or LLM operation",
+    "humanGoldLabels": false,
+    "annotationScope": "assistant_source_checked_candidate",
+    "scope": "Citation identity/provenance checks are structural. Fact support, omissions and answer correctness remain explicit review tasks; no human accuracy is claimed."
+  },
+  "cases": [
+    {
+      "id": "opera-holdout-q01",
+      "question": "包公额头的白色弯月在舞台化妆中表达什么？能把它当作历史人物真的具备的能力吗？",
+      "requestId": "653a2874-0015-49ac-aa1d-1244588aca42",
+      "captureStatus": "response_received",
+      "answer": "在京剧等戏曲舞台上，包公额头上的白色弯月（白月牙）是一种化妆符号，常被用来联系他在阴阳两界主持正义的舞台寓意，属于戏曲形象塑造的一部分。它表达的是角色在戏中的象征意义，而不是说历史上真实的包拯真的具备某种超自然能力或生理特征。因此，不能把舞台化妆当作历史人物真实能力的证据。另外，包公的黑脸常用来表达刚正形象，但脸谱颜色并非所有人物的绝对性格标签，黑色在别的扮相中也可能关联勇猛、肤色或突出眉眼等不同含义。",
+      "uncertain": false,
+      "expectInsufficient": false,
+      "candidateUncertaintyFlagAgreement": true,
+      "citations": [
+        {
+          "id": "chunk_51ce90e380f15460696a8b6e999b97b8b1526b4350d6aa2fc0194aab7a281ce3",
+          "title": "包公为什么画黑脸？",
+          "sourceId": "cnpoc-bao",
+          "locator": "正文第二段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+          "excerpt": "包拯脸上的白月牙可联系到其在阴阳两界主持正义的舞台寓意。\n这是在解释戏曲中的包公形象，不能当作真实历史能力或生理特征。",
+          "contentKind": "original_fact_summary"
+        },
+        {
+          "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "title": "包公为什么画黑脸？",
+          "sourceId": "cnpoc-bao",
+          "locator": "正文第一段、第三段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+          "excerpt": "包拯的黑脸常表达刚正形象。\n黑色在别的扮相中还可关联勇猛、肤色或突出眉眼，不能据此判断所有黑脸角色都具有同一种性格。",
+          "contentKind": "original_fact_summary"
+        }
+      ],
+      "citationChecks": [
+        {
+          "citationId": "chunk_51ce90e380f15460696a8b6e999b97b8b1526b4350d6aa2fc0194aab7a281ce3",
+          "canonicalChunkFound": true,
+          "canonicalFieldsMatch": true,
+          "originalSourceMetadataMatches": true,
+          "originalSectionContainsExcerpt": true,
+          "mismatchedFields": [],
+          "sectionId": "cnpoc-bao-moon",
+          "sourceId": "cnpoc-bao",
+          "canonicalExcerpt": "包拯脸上的白月牙可联系到其在阴阳两界主持正义的舞台寓意。\n这是在解释戏曲中的包公形象，不能当作真实历史能力或生理特征。",
+          "structuralProvenanceValid": true,
+          "claimActuallySupported": "not_reviewed"
+        },
+        {
+          "citationId": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "canonicalChunkFound": true,
+          "canonicalFieldsMatch": true,
+          "originalSourceMetadataMatches": true,
+          "originalSectionContainsExcerpt": true,
+          "mismatchedFields": [],
+          "sectionId": "cnpoc-bao-black",
+          "sourceId": "cnpoc-bao",
+          "canonicalExcerpt": "包拯的黑脸常表达刚正形象。\n黑色在别的扮相中还可关联勇猛、肤色或突出眉眼，不能据此判断所有黑脸角色都具有同一种性格。",
+          "structuralProvenanceValid": true,
+          "claimActuallySupported": "not_reviewed"
+        }
+      ],
+      "expectedSectionIds": [
+        "cnpoc-bao-moon"
+      ],
+      "citedExpectedSectionIds": [
+        "cnpoc-bao-moon"
+      ],
+      "expectedFactReviewTemplate": [
+        {
+          "expectedFact": "这一脸谱的白月牙表达舞台人物在阴阳两界主持正义的寓意。",
+          "assistantAssessment": "not_reviewed",
+          "supportingCitationIds": [],
+          "reason": null,
+          "humanAssessment": "pending"
+        },
+        {
+          "expectedFact": "应区分戏曲中的象征造型与真实历史能力；资料不能证明包拯具有超自然能力。",
+          "assistantAssessment": "not_reviewed",
+          "supportingCitationIds": [],
+          "reason": null,
+          "humanAssessment": "pending"
+        }
+      ],
+      "assistantReview": {
+        "status": "not_reviewed",
+        "unsupportedAssertions": null,
+        "missingExpectedFacts": null,
+        "sourceSupportNotes": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "humanReview": {
+        "status": "pending",
+        "answerCorrect": null,
+        "reviewer": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "opera-holdout-q02",
+      "question": "戏台上的褶子只能给平民穿吗？官员贵族在什么场合也会穿？",
+      "requestId": "f2a149ab-a601-4051-92d8-d1d5f9b15f70",
+      "captureStatus": "response_received",
+      "answer": "不是只能给平民穿。褶子既可以表现普通人的日常衣着，也可以表现官员贵族的便服；花褶、素褶等式样与人物类型相关，不能把褶子只理解为平民服装。",
+      "uncertain": false,
+      "expectInsufficient": false,
+      "candidateUncertaintyFlagAgreement": true,
+      "citations": [
+        {
+          "id": "chunk_0283e45598600d99d2905403756ead620f2d2cafcd479ad8e996facf43e859ba",
+          "title": "京剧服装和人物身份有什么关系？",
+          "sourceId": "cnpoc-costume",
+          "locator": "正文褶子段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+          "excerpt": "褶子既可表现普通人的日常衣着，也可表现官员贵族的便服。\n花褶、素褶等式样与人物类型相关，不能把褶子只理解为平民服装。",
+          "contentKind": "original_fact_summary"
+        }
+      ],
+      "citationChecks": [
+        {
+          "citationId": "chunk_0283e45598600d99d2905403756ead620f2d2cafcd479ad8e996facf43e859ba",
+          "canonicalChunkFound": true,
+          "canonicalFieldsMatch": true,
+          "originalSourceMetadataMatches": true,
+          "originalSectionContainsExcerpt": true,
+          "mismatchedFields": [],
+          "sectionId": "cnpoc-costume-zhe",
+          "sourceId": "cnpoc-costume",
+          "canonicalExcerpt": "褶子既可表现普通人的日常衣着，也可表现官员贵族的便服。\n花褶、素褶等式样与人物类型相关，不能把褶子只理解为平民服装。",
+          "structuralProvenanceValid": true,
+          "claimActuallySupported": "not_reviewed"
+        }
+      ],
+      "expectedSectionIds": [
+        "cnpoc-costume-zhe"
+      ],
+      "citedExpectedSectionIds": [
+        "cnpoc-costume-zhe"
+      ],
+      "expectedFactReviewTemplate": [
+        {
+          "expectedFact": "褶子可以表现普通百姓的日常衣着，也可以表现官员或贵族的便装。",
+          "assistantAssessment": "not_reviewed",
+          "supportingCitationIds": [],
+          "reason": null,
+          "humanAssessment": "pending"
+        },
+        {
+          "expectedFact": "不能将褶子解释成仅供平民角色使用的服装。",
+          "assistantAssessment": "not_reviewed",
+          "supportingCitationIds": [],
+          "reason": null,
+          "humanAssessment": "pending"
+        }
+      ],
+      "assistantReview": {
+        "status": "not_reviewed",
+        "unsupportedAssertions": null,
+        "missingExpectedFacts": null,
+        "sourceSupportNotes": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "humanReview": {
+        "status": "pending",
+        "answerCorrect": null,
+        "reviewer": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "opera-holdout-q03",
+      "question": "京剧演员“司雨青澜”的师承关系及1932年首演剧目有哪些？请给出引用。",
+      "requestId": "5e511fe4-0e1c-4c49-8e5e-c149e690494b",
+      "captureStatus": "response_received",
+      "answer": "当前知识库中没有关于京剧演员“司雨青澜”的任何资料，因此无法提供其师承关系，也无法说明其1932年首演剧目。现有材料只涉及1959年由梅兰芳等人改编并首演的《穆桂英挂帅》，与“司雨青澜”及1932年首演无关，不能用来回答该问题。",
+      "uncertain": true,
+      "expectInsufficient": true,
+      "candidateUncertaintyFlagAgreement": true,
+      "citations": [],
+      "citationChecks": [],
+      "expectedSectionIds": [],
+      "citedExpectedSectionIds": [],
+      "expectedFactReviewTemplate": [
+        {
+          "expectedFact": "现有资料没有支持该人名、师承或首演经历的证据，应说明目前资料不足。",
+          "assistantAssessment": "not_reviewed",
+          "supportingCitationIds": [],
+          "reason": null,
+          "humanAssessment": "pending"
+        },
+        {
+          "expectedFact": "不能用其他演员的资料替代该人名的引用，也不能仅据未检索到而断言人物绝对不存在。",
+          "assistantAssessment": "not_reviewed",
+          "supportingCitationIds": [],
+          "reason": null,
+          "humanAssessment": "pending"
+        }
+      ],
+      "assistantReview": {
+        "status": "not_reviewed",
+        "unsupportedAssertions": null,
+        "missingExpectedFacts": null,
+        "sourceSupportNotes": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "humanReview": {
+        "status": "pending",
+        "answerCorrect": null,
+        "reviewer": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "opera-holdout-q04",
+      "question": "哪一份资料记载了“顾星沅”开创京剧“海霞派”？它有哪些代表剧目？",
+      "requestId": "ab56fd94-6cb7-4bde-b2ed-771a9b13be4e",
+      "captureStatus": "response_received",
+      "answer": "当前京剧知识库没有足够资料支持这个问题，请调整提问方向或补充可信资料。",
+      "uncertain": true,
+      "expectInsufficient": true,
+      "candidateUncertaintyFlagAgreement": true,
+      "citations": [],
+      "citationChecks": [],
+      "expectedSectionIds": [],
+      "citedExpectedSectionIds": [],
+      "expectedFactReviewTemplate": [
+        {
+          "expectedFact": "现有知识库没有支持该人名与流派组合的资料，应说明目前资料不足。",
+          "assistantAssessment": "not_reviewed",
+          "supportingCitationIds": [],
+          "reason": null,
+          "humanAssessment": "pending"
+        },
+        {
+          "expectedFact": "不能把梅派等其他流派的来源套用到问题提出的人名或流派。",
+          "assistantAssessment": "not_reviewed",
+          "supportingCitationIds": [],
+          "reason": null,
+          "humanAssessment": "pending"
+        }
+      ],
+      "assistantReview": {
+        "status": "not_reviewed",
+        "unsupportedAssertions": null,
+        "missingExpectedFacts": null,
+        "sourceSupportNotes": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "humanReview": {
+        "status": "pending",
+        "answerCorrect": null,
+        "reviewer": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "opera-holdout-q05",
+      "question": "家用路由器怎样设置 IPv6 DNS 地址？",
+      "requestId": "3ca666c6-d7a2-496f-9505-e43b9d0b6fd5",
+      "captureStatus": "response_received",
+      "answer": "当前京剧知识库没有足够资料支持这个问题，请调整提问方向或补充可信资料。",
+      "uncertain": true,
+      "expectInsufficient": true,
+      "candidateUncertaintyFlagAgreement": true,
+      "citations": [],
+      "citationChecks": [],
+      "expectedSectionIds": [],
+      "citedExpectedSectionIds": [],
+      "expectedFactReviewTemplate": [
+        {
+          "expectedFact": "问题超出现有京剧资料范围，应告知该知识库没有可用证据。",
+          "assistantAssessment": "not_reviewed",
+          "supportingCitationIds": [],
+          "reason": null,
+          "humanAssessment": "pending"
+        }
+      ],
+      "assistantReview": {
+        "status": "not_reviewed",
+        "unsupportedAssertions": null,
+        "missingExpectedFacts": null,
+        "sourceSupportNotes": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "humanReview": {
+        "status": "pending",
+        "answerCorrect": null,
+        "reviewer": null,
+        "reviewedAt": null
+      }
+    }
+  ],
+  "summary": {
+    "capturedCaseCount": 5,
+    "citationCount": 3,
+    "canonicalCitationMappingRate": 1,
+    "structuralSourceTraceabilityRate": 1,
+    "failedStructuralCitationIds": [],
+    "assistantSemanticReviewsCompleted": 0,
+    "humanReviewsCompleted": 0,
+    "humanAnswerCorrectnessRate": null
+  }
+}

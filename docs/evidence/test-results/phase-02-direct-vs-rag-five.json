@@ -1,0 +1,199 @@
+{
+  "createdAt": "2026-10-10T10:39:57.795909+00:00",
+  "scope": "Actual five direct DeepSeek calls versus the same five final hybrid RAG questions; not all twenty questions, human grading or statistically controlled latency benchmark. Runs occurred at different times.",
+  "promptVersion": "rag_answer_v2",
+  "records": [
+    {
+      "id": "opera-q01",
+      "question": "四大徽班指哪四个戏班？它们进京与京剧形成是什么关系？",
+      "direct": {
+        "requestId": "baseline-824b5a4a-0322-4d1e-a151-e510f74ce8a6",
+        "answer": "四大徽班指的是**三庆班、四喜班、和春班、春台班**。\n\n它们进京与京剧形成的关系，可以概括为：**徽班进京是京剧形成的关键起点，但京剧并不是徽班一进京就立刻诞生的，而是在徽班进京后，经过与其他声腔、剧种的长期交流融合，逐步演变而成。**\n\n具体来说：\n\n1. **徽班进京**\n   1790年，徽班“三庆班”为给乾隆皇帝祝寿进入北京演出，随后四喜、和春、春台等徽班也陆续进京。这就是通常所说的“四大徽班进京”。\n\n2. **徽班带来的是徽调等声腔**\n   徽班并不是一开始就唱后来意义上的“京剧”。它们主要演唱徽调，同时也吸收昆曲、秦腔、汉调等多种声腔和表演成分。\n\n3. **在北京不断融合**\n   徽班进京后，长期在北京演出，与来自湖北的汉调艺人等交流融合。徽调的二黄与汉调的西皮逐渐结合，形成“皮黄戏”的基础。与此同时，还吸收了昆曲、秦腔以及北京本地的语言、审美和舞台表演特点。\n\n4. **逐步形成京剧**\n   到道光年间以后，这种以皮黄为主、融合多种声腔和表演艺术的戏曲形式逐渐成熟，后来被称为“京剧”。因此，四大徽班进京通常被视为京剧形成的重要开端，但京剧的真正形成经历了一个较长的融合演变过程。\n\n简单说：**四大徽班进京不是京剧的“诞生瞬间”，而是京剧形成的重要起点和推动力量。**",
+        "seconds": 3.0136,
+        "usage": {
+          "prompt_tokens": 45,
+          "completion_tokens": 346,
+          "total_tokens": 391,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 45
+        },
+        "estimatedCostCNY": 0.002858,
+        "projectCitations": 0
+      },
+      "rag": {
+        "requestId": "5e9879a5-431e-4166-9fde-79d44c6bb746",
+        "answer": "四大徽班指的是三庆、四喜、春台、和春这四个戏班。它们进京是京剧形成过程中的一个重要发展节点：徽班进京后，与汉调艺人合作，并吸收了昆曲、秦腔等艺术因素，逐步推动了京剧的形成。不过，徽班进京并不等于京剧在一天之内就完成了，京剧的形成是一个逐步交流、融合的过程。",
+        "seconds": 1.188835,
+        "usage": {
+          "prompt_tokens": 681,
+          "completion_tokens": 100,
+          "total_tokens": 781,
+          "prompt_cache_hit_tokens": 512,
+          "prompt_cache_miss_tokens": 169
+        },
+        "estimatedCostCNY": 0.00115848,
+        "citationCount": 1
+      },
+      "assistantAssessment": "两组均包含四班与逐渐融合。直接回答增加1790、乾隆、道光等当前证据之外的细节，本次不将未核查细节判作错误。RAG回答限制在已检得历史摘要。"
+    },
+    {
+      "id": "opera-q02",
+      "question": "京剧主要使用哪两种声腔？",
+      "direct": {
+        "requestId": "baseline-fdb50299-5c6c-4e88-a2cd-4c115943a5b7",
+        "answer": "京剧主要使用**西皮**和**二黄**这两种声腔，合称“皮黄”。\n\n- **西皮**：音调比较明快、活泼，常用来表现欢快、激昂或流畅的情绪。\n- **二黄**：音调比较沉稳、柔和，常用来表现沉思、悲凉、庄重等情绪。\n\n京剧虽然也吸收了一些其他腔调和曲调，但最核心、最有代表性的声腔体系就是西皮和二黄。",
+        "seconds": 1.7565,
+        "usage": {
+          "prompt_tokens": 35,
+          "completion_tokens": 99,
+          "total_tokens": 134,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 35
+        },
+        "estimatedCostCNY": 0.000862,
+        "projectCitations": 0
+      },
+      "rag": {
+        "requestId": "4b7d43d6-44ba-4b3e-b38b-e71dd1d31e69",
+        "answer": "京剧主要使用西皮和二簧两种声腔。概括来说，二簧较舒缓凝重，西皮较明快起伏；不过这只是声腔特点的基础介绍，具体情绪表达还要结合唱段来看。",
+        "seconds": 0.773387,
+        "usage": {
+          "prompt_tokens": 757,
+          "completion_tokens": 62,
+          "total_tokens": 819,
+          "prompt_cache_hit_tokens": 512,
+          "prompt_cache_miss_tokens": 245
+        },
+        "estimatedCostCNY": 0.00100648,
+        "citationCount": 1
+      },
+      "assistantAssessment": "两组核心声腔名称一致（二黄/二簧异写）。RAG额外的概括及适用限制有music摘要支持；直接组没有本项目来源引用。"
+    },
+    {
+      "id": "opera-q03",
+      "question": "京剧伴奏中的文场和武场分别以哪些乐器为主？",
+      "direct": {
+        "requestId": "baseline-30c222ff-f6d7-4253-b923-a0a247f76820",
+        "answer": "京剧伴奏分为**文场**和**武场**，合称“场面”。\n\n**文场**以管弦乐器为主，主要负责旋律和唱腔伴奏，主要乐器包括：\n\n- **京胡**：文场的主奏乐器，音色高亢明亮，是京剧唱腔的核心伴奏乐器。\n- **京二胡**：辅助京胡，音色较柔和，常用于旦角戏。\n- **月琴**：弹拨乐器，与京胡、京二胡合称“文场三大件”。\n- **三弦**：弹拨乐器，也常参与文场伴奏。\n- 此外还有**笛子、笙、唢呐**等，用于特定曲牌或场景。\n\n**武场**以打击乐器为主，主要负责节奏、烘托气氛和配合身段动作，主要乐器包括：\n\n- **板鼓**（单皮鼓）：武场的指挥乐器，鼓师通过它掌控全剧节奏。\n- **大锣**：音色洪亮，用于烘托气势。\n- **小锣**：音色清脆，常用于文戏或轻巧动作。\n- **铙钹**：与锣配合，增强节奏层次。\n- 有时还用**堂鼓、梆子**等。\n\n简单说：**文场管旋律，武场管节奏**；文场以京胡为首，武场以板鼓为指挥。",
+        "seconds": 2.5973,
+        "usage": {
+          "prompt_tokens": 41,
+          "completion_tokens": 294,
+          "total_tokens": 335,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 41
+        },
+        "estimatedCostCNY": 0.002434,
+        "projectCitations": 0
+      },
+      "rag": {
+        "requestId": "20ec8555-6fcf-4c87-ac60-10b9c42bc17e",
+        "answer": "京剧伴奏分为文场和武场两类。文场以京胡等丝竹乐器为主；武场以鼓板以及大小锣等打击乐器为主。两类伴奏共同服务于舞台表演。",
+        "seconds": 0.815459,
+        "usage": {
+          "prompt_tokens": 575,
+          "completion_tokens": 61,
+          "total_tokens": 636,
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 191
+        },
+        "estimatedCostCNY": 0.00088536,
+        "citationCount": 1
+      },
+      "assistantAssessment": "两组核心文武场区分一致。直接组增加许多乐器名称，未在本次语料中逐项核查；RAG使用有依据的京胡/鼓板/锣概述。"
+    },
+    {
+      "id": "opera-q04",
+      "question": "京剧里的行当是什么意思？生、旦、净、丑分别表现什么类型的角色？",
+      "direct": {
+        "requestId": "baseline-45ab68cd-3880-44e1-9ad4-cfd2a7e9acef",
+        "answer": "“行当”可以理解为京剧里对角色的一种分类系统。它不只是按性别分，还综合了人物的年龄、身份、性格、扮相、表演方式和嗓音特点。观众一看角色属于哪个行当，往往就能大致判断这是怎样一个人物。\n\n京剧最基本的四大行当是：生、旦、净、丑。\n\n**生**\n主要扮演男性正面角色，一般不画脸谱，扮相比较干净。生行内部还分：\n- 老生：中年或老年男性，常戴胡须，如诸葛亮、刘备一类角色。\n- 小生：年轻男性，扮相清秀，唱腔用假嗓成分较多，如书生、年轻将领。\n- 武生：擅长武打的男性角色，如赵云、武松一类人物。\n\n**旦**\n主要扮演女性角色。旦行内部也分：\n- 青衣：端庄稳重的成年女性，多穿青色或素色衣服，如王宝钏。\n- 花旦：活泼、伶俐或性格鲜明的年轻女性，如丫鬟、少女。\n- 武旦：擅长武艺的女性，如女将、女侠。\n- 老旦：老年女性，唱腔和扮相都偏稳重苍老。\n\n**净**\n俗称“花脸”，主要扮演性格强烈、气质粗犷或威严的男性角色。净角通常要勾画脸谱，不同颜色有不同象征，比如红脸多表示忠勇，黑脸多表示刚直，白脸多表示奸诈。净行里也有偏重唱功、偏重做功、偏重武打等不同路数。\n\n**丑**\n俗称“小花脸”，多在鼻梁上画一块白粉。丑角不一定是坏人，更多是滑稽、机灵、幽默或市井气较重的人物，也常起插科打诨、调节气氛的作用。丑行可分文丑和武丑：文丑偏重念白和滑稽表演，武丑则擅长轻巧敏捷的武打。\n\n简单说：\n- 生：男性正面角色，一般不画脸谱。\n- 旦：女性角色。\n- 净：性格强烈的男性角色，多画脸谱。\n- 丑：滑稽、机敏或市井类角色，鼻梁画白粉。\n\n需要注意的是，行当只是大分类，具体人物还要结合剧情、扮相、唱念做打来理解，不能简单等同于“好人坏人”。",
+        "seconds": 5.6731,
+        "usage": {
+          "prompt_tokens": 46,
+          "completion_tokens": 507,
+          "total_tokens": 553,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 46
+        },
+        "estimatedCostCNY": 0.004148,
+        "projectCitations": 0
+      },
+      "rag": {
+        "requestId": "76b13279-2306-48ad-b925-f80a602ec750",
+        "answer": "行当是京剧对角色进行分类的专门称谓，常见的四大类为生、旦、净、丑。不同行当各有自己的唱、念、做、打程式，所以行当既是对剧中角色的归类，也对应着不同的表演特点。\n\n生行主要表现净、丑之外的男性角色，常见分支有老生、小生、武生等。旦行表现女性角色，常见分支有青衣、花旦、刀马旦、武旦等，各分支的表演程式也不相同。例如青衣也称正旦，常表现举止稳重的中青年女性，偏重唱功；花旦常表现年轻、活泼的女性，更侧重做功和说白。\n\n净又称花脸，常见表演特点是脸谱和洪亮的声音，角色多为性格或形象鲜明的男性人物；净行内部按唱功、身段或武打的侧重还有不同分支。丑行常承担喜剧表演，因鼻梁上画一小块白色，有“小花脸”之称，常见分类为文丑和武丑，武丑又称“开口跳”。\n\n需要说明的是，以上是行当分类和各行当常见角色类型的概括，具体到某一剧目、某一人物属于哪个行当的哪个分支，还要看具体戏码和流派处理，不能一概而论。",
+        "seconds": 2.06985,
+        "usage": {
+          "prompt_tokens": 851,
+          "completion_tokens": 312,
+          "total_tokens": 1163,
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 467
+        },
+        "estimatedCostCNY": 0.00344536,
+        "citationCount": 5
+      },
+      "assistantAssessment": "直接组“生主要男性正面角色”是过宽概括，与资料“净丑之外的男性角色”不完全一致。最终RAG四行当完整且有本次五条引用；旧向量版明确资料不足，不能算完整回答。"
+    },
+    {
+      "id": "opera-q05",
+      "question": "梅派由谁开创，属于什么行当的流派？",
+      "direct": {
+        "requestId": "baseline-1ffcfcab-5916-478e-9c0b-8df603911b0a",
+        "answer": "梅派由**梅兰芳**开创，属于**京剧旦行**（旦角）流派。\n\n梅兰芳是京剧“四大名旦”之首，他在继承传统青衣、花旦、刀马旦等表演的基础上，融合唱、念、做、打与舞蹈、音乐、扮相等，形成了风格典雅大方、唱腔圆润流畅、表演细腻传神的“梅派”艺术。",
+        "seconds": 1.8563,
+        "usage": {
+          "prompt_tokens": 40,
+          "completion_tokens": 86,
+          "total_tokens": 126,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 40
+        },
+        "estimatedCostCNY": 0.000768,
+        "projectCitations": 0
+      },
+      "rag": {
+        "requestId": "8b5fad62-0d59-407c-823f-d52510368a95",
+        "answer": "梅派是由梅兰芳开创的京剧旦角流派。需要说明的是，流派描述的是传承的艺术风格，与生、旦、净、丑这样的角色行当并不属于同一分类层级，因此“梅派属于旦角流派”是指它归在旦角这一行当的艺术风格脉络中。",
+        "seconds": 1.089237,
+        "usage": {
+          "prompt_tokens": 663,
+          "completion_tokens": 84,
+          "total_tokens": 747,
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 279
+        },
+        "estimatedCostCNY": 0.00124536,
+        "citationCount": 1
+      },
+      "assistantAssessment": "两组均为梅兰芳开创的旦角流派。直接组增加“四大名旦之首”等评价，本次不以缺少当前证据直接判定错误；RAG区分流派和行当层级。"
+    }
+  ],
+  "summary": {
+    "pairCount": 5,
+    "directMeanSeconds": 2.97936,
+    "ragMeanSeconds": 1.1873536,
+    "directEstimatedCostCNY": 0.011069999999999998,
+    "ragEstimatedCostCNY": 0.00774104,
+    "directMeasuredTokens": 1539,
+    "ragMeasuredTokens": 4146,
+    "ragCanonicalCitationMappingRate": 1,
+    "humanAnswerCorrectnessRate": null
+  },
+  "conclusion": "RAG supplies traceable project evidence and constrains answer scope in this sample. Direct responses are not all wrong, RAG is not assumed universally better, and missing evidence is not itself proof of a false assertion."
+}

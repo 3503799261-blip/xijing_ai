@@ -8,8 +8,17 @@ import time
 import urllib.request
 import urllib.error
 import uuid
+import argparse
+import re
 
-def run():
+def run(label=''):
+    if label and not re.fullmatch(r'[A-Za-z0-9_-]{1,60}', label):
+        raise ValueError('Invalid evidence label.')
+    suffix = '-' + label if label else ''
+    output = Path('docs/evidence/test-results/phase-02-cached-reproduction' + suffix + '.json')
+    log_output = output.with_name(output.stem + '-server.txt')
+    if output.exists() or log_output.exists():
+        raise FileExistsError('Choose a new label; prior evidence is never overwritten.')
     started=time.perf_counter()
     with socket.socket() as sock:
         if sock.connect_ex(('127.0.0.1',8000)) == 0:
@@ -34,7 +43,7 @@ def run():
         with urllib.request.urlopen(request,timeout=55) as response: answer=json.load(response)
         assert answer['answer'] and answer['citations'] and not answer['uncertain']
         result={'success':True,'elapsedSeconds':round(time.perf_counter()-started,4),'conditions':['existing verified .venv dependencies','fixed BGE snapshot already downloaded','local private API configuration and previously successful provider probe','application stopped before test','network access to DeepSeek'],'scope':'actual full index rebuild, fresh FastAPI process, HTTP frontend and one real RAG request; dependency installation/model download not included','ingestion':index,'health':health,'frontend':frontend,'answer':answer}
-        Path('docs/evidence/test-results/phase-02-cached-reproduction.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         print(json.dumps({'success':True,'elapsedSeconds':result['elapsedSeconds'],'documents':index['documents'],'chunks':index['chunks'],'realAnswerRequestId':answer['requestId']},ensure_ascii=True))
     finally:
         process.terminate()
@@ -42,6 +51,9 @@ def run():
         except subprocess.TimeoutExpired: process.kill(); process.wait(timeout=5)
         # All server log fields are status/request ID/timing, never headers or config.
         logs=process.stdout.read().decode('utf-8',errors='replace')
-        Path('docs/evidence/test-results/phase-02-cached-reproduction-server.txt').write_text(logs,encoding='utf-8')
+        log_output.write_text(logs,encoding='utf-8')
 
-if __name__=='__main__': run()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--label',default='')
+    run(parser.parse_args().label)

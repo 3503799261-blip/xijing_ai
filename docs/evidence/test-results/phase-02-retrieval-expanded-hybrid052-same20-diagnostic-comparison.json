@@ -1,0 +1,97 @@
+{
+  "status": "completed",
+  "metadata": {
+    "executionStartedAt": "2026-10-10T18:19:07.129992+08:00",
+    "runLabel": "expanded-hybrid052-same20-diagnostic",
+    "evaluationKind": "local_embedding_retrieval_candidates",
+    "annotationScope": "assistant_source_checked_candidate",
+    "humanGoldLabels": false,
+    "llmProviderInvoked": false,
+    "topK": 5,
+    "modeOrder": "alternating per question, after one vector warmup; model loading excluded from per-query latency",
+    "thresholdSource": "CLI diagnostic override",
+    "parameterSelectionDisclosure": "Threshold reruns on questions used for parameter selection are diagnostics, not independent validation.",
+    "questionSetFile": "questions.json",
+    "scriptSHA256": "f40268ce5eb64e5fe31bdc8b699fe5f056f4e8b2db0279d808f51bf61079fafb",
+    "pythonVersion": "3.11.1",
+    "dependencies": {
+      "sentence-transformers": "6.1.0",
+      "torch": "2.11.0",
+      "qdrant-client": "1.19.1",
+      "pydantic-settings": "2.15.0"
+    },
+    "questionSetSHA256": "9734e4e6484c3450e2177d91602c19e11501e3611faa82d65cc26d99e155ed1d",
+    "threshold": 0.52,
+    "modelAndIndexLoadSeconds": 15.474785,
+    "index": {
+      "generation_id": "gen-20261010T101322-de3db5c3",
+      "corpus_hash": "156208ab5b00994be016b6d7d29b60ba4c9f462cf1d0056899f542308dda8cdb",
+      "documents": 12,
+      "chunks": 35,
+      "model_id": "BAAI/bge-small-zh-v1.5",
+      "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+      "dimension": 512,
+      "distance": "Cosine",
+      "review_scope": "assistant source-checked original facts; human review pending"
+    },
+    "annotationIndexIssues": [],
+    "warmupSeconds": 0.021165,
+    "executionFinishedAt": "2026-10-10T18:19:23.190421+08:00"
+  },
+  "summaries": {
+    "vector": {
+      "metricScope": "Assistant source-checked candidate annotations; not human gold Recall@5 or answer correctness.",
+      "questionCount": 20,
+      "completedCount": 20,
+      "failedCount": 0,
+      "supportedCandidateCount": 18,
+      "insufficientCandidateCount": 2,
+      "candidateEvidenceCoverageAt5Macro": 0.9861111111111112,
+      "candidateEvidenceCoverageAt5Micro": 0.9629629629629629,
+      "candidateSourceCoverageAt5Macro": 1.0,
+      "allCandidateSectionsFoundCount": 17,
+      "anyCandidateSectionFoundCount": 18,
+      "candidateInsufficiencyAgreement": 1,
+      "supportedCandidatesWithoutEvidence": [],
+      "insufficientCandidatesWithAcceptedEvidence": [],
+      "candidateEvidenceMissingQuestions": [
+        "opera-q04"
+      ],
+      "canonicalEvidenceIntegrityRate": 1.0,
+      "canonicalEvidenceChecks": 63,
+      "meanRetrievalSeconds": 0.00997,
+      "minRetrievalSeconds": 0.0083,
+      "maxRetrievalSeconds": 0.0125
+    },
+    "hybrid": {
+      "metricScope": "Assistant source-checked candidate annotations; not human gold Recall@5 or answer correctness.",
+      "questionCount": 20,
+      "completedCount": 20,
+      "failedCount": 0,
+      "supportedCandidateCount": 18,
+      "insufficientCandidateCount": 2,
+      "candidateEvidenceCoverageAt5Macro": 0.9861111111111112,
+      "candidateEvidenceCoverageAt5Micro": 0.9629629629629629,
+      "candidateSourceCoverageAt5Macro": 1.0,
+      "allCandidateSectionsFoundCount": 17,
+      "anyCandidateSectionFoundCount": 18,
+      "candidateInsufficiencyAgreement": 1,
+      "supportedCandidatesWithoutEvidence": [],
+      "insufficientCandidatesWithAcceptedEvidence": [],
+      "candidateEvidenceMissingQuestions": [
+        "opera-q04"
+      ],
+      "canonicalEvidenceIntegrityRate": 1.0,
+      "canonicalEvidenceChecks": 63,
+      "meanRetrievalSeconds": 0.01183,
+      "minRetrievalSeconds": 0.0097,
+      "maxRetrievalSeconds": 0.0144
+    }
+  },
+  "reports": {
+    "vector": "phase-02-retrieval-expanded-hybrid052-same20-diagnostic-vector.json",
+    "hybrid": "phase-02-retrieval-expanded-hybrid052-same20-diagnostic-hybrid.json"
+  },
+  "latencyLimitation": "Local CPU timing for this run; alternating order reduces but does not eliminate warm/cache effects. No LLM latency or API charges are measured.",
+  "hybridMinusVectorCandidateCoverageAt5": 0.0
+}

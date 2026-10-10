@@ -9,7 +9,7 @@
     "collected_at": "2026-10-10",
     "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
     "review_status": "source_checked_by_assistant",
-    "document_version": "1.0.0",
+    "document_version": "1.0.1",
     "content_kind": "original_fact_summary",
     "scope": "脸谱谱式及常见色彩表达；主色、副色、人物与剧目语境不能混为固定人格规则。",
     "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
@@ -52,7 +52,8 @@
         "神仙脸",
         "神话戏",
         "金色",
-        "银色"
+        "银色",
+        "脸谱"
       ]
     }
   ]

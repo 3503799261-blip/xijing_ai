@@ -1,0 +1,25 @@
+{
+  "status": "built",
+  "added": 0,
+  "updated": 12,
+  "skipped": 0,
+  "failed": 0,
+  "generation_id": "gen-20261010T102847-791ed93a",
+  "corpus_hash": "12a8e8511e6e6c46b887442fbea1833dd577d996b42aa4122f032b706056f934",
+  "documents": 12,
+  "chunks": 35,
+  "duplicates_skipped": 0,
+  "model_id": "BAAI/bge-small-zh-v1.5",
+  "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+  "dimension": 512,
+  "distance": "Cosine",
+  "chunking": {
+    "target_chars": 350,
+    "overlap_chars": 70,
+    "max_tokens": 480,
+    "vector_text": "content"
+  },
+  "created_at": "2026-10-10T10:29:04.698060+00:00",
+  "review_scope": "assistant source-checked original facts; human review pending",
+  "elapsed_seconds": 16.8379
+}

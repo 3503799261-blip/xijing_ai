@@ -1,0 +1,76 @@
+{
+  "scope": "Actual pytest JUnit counts; HTTP mocks and declared synthetic vectors are offline only. Real BGE and provider checks are separately archived.",
+  "command": "python -m pytest backend/tests -q",
+  "runs": [
+    {
+      "label": "pre-hybrid",
+      "totals": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "5",
+        "skipped": "0",
+        "tests": "120",
+        "time": "3.998",
+        "timestamp": "2026-10-10T18:26:02.769506+08:00",
+        "hostname": "wenwen"
+      },
+      "failures": [
+        {
+          "test": "test_document_budget_and_empty_validation",
+          "type": null,
+          "message": "AttributeError: 'FakeSentenceTransformer' object has no attribute 'get_embedding_dimension'"
+        },
+        {
+          "test": "test_local_cpu_revision_and_query_prefix",
+          "type": null,
+          "message": "AttributeError: 'FakeSentenceTransformer' object has no attribute 'get_embedding_dimension'"
+        },
+        {
+          "test": "test_missing_revision_is_not_silently_invented",
+          "type": null,
+          "message": "AttributeError: 'FakeSentenceTransformer' object has no attribute 'get_embedding_dimension'"
+        },
+        {
+          "test": "test_non_finite_and_non_normalized_vectors_are_rejected",
+          "type": null,
+          "message": "AttributeError: 'FakeSentenceTransformer' object has no attribute 'get_embedding_dimension'"
+        },
+        {
+          "test": "test_query_over_budget_is_rejected_before_encoding",
+          "type": null,
+          "message": "AttributeError: 'FakeSentenceTransformer' object has no attribute 'get_embedding_dimension'"
+        }
+      ]
+    },
+    {
+      "label": "post-fixture",
+      "totals": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "120",
+        "time": "3.417",
+        "timestamp": "2026-10-10T18:28:15.722480+08:00",
+        "hostname": "wenwen"
+      },
+      "failures": []
+    },
+    {
+      "label": "final-hybrid",
+      "totals": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "124",
+        "time": "3.753",
+        "timestamp": "2026-10-10T18:35:30.968721+08:00",
+        "hostname": "wenwen"
+      },
+      "failures": []
+    }
+  ],
+  "warning": "Starlette/httpx TestClient deprecation; all final cases passed.",
+  "fixedTestHarnessBug": "The real SentenceTransformer API uses get_embedding_dimension; five fake-encoder tests initially used the obsolete method. The fake was corrected and all tests rerun."
+}

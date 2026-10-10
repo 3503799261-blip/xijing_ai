@@ -39,8 +39,8 @@ class KnowledgeStore:
         chunk, source = json.loads(row['data_json']), json.loads(row['source_json'])
         return {**chunk, 'source': source}
 
-    def lexical_search(self, question: str, limit=10) -> list[dict]:
-        terms = lexical_tokens(question).split()
+    def lexical_search(self, question: str, limit=10, entity_terms=None) -> list[dict]:
+        terms = lexical_tokens(question).split() if entity_terms is None else list(dict.fromkeys(token for entity in entity_terms for token in ([entity] if len(entity) <= 2 else [entity[i:i+2] for i in range(len(entity)-1)])))
         if not terms: return []
         # Tokens are generated alphanumerics/Chinese, quoted and bound; no user MATCH syntax.
         expression = ' OR '.join('"' + term + '"' for term in terms[:100])

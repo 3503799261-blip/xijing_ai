@@ -80,7 +80,7 @@ def create_app(settings=None):
     async def search(data: SearchRequest, request: Request):
         try:
             async with asyncio.timeout(settings.request_timeout_seconds):
-                result = await runtime.knowledge(lambda: runtime.search_service.search(data.question, data.topK, data.category))
+                result = await runtime.knowledge(lambda: runtime.search_service.search(data.question, data.topK, data.category, settings.retrieval_mode))
         except TimeoutError:
             raise ServiceError('SEARCH_TIMEOUT', '检索超时，请稍后重试。', 504, True)
         return {**result, 'requestId': request.state.request_id}
@@ -110,7 +110,7 @@ def create_app(settings=None):
         pending[slot] = signature
         try:
             async with asyncio.timeout(settings.request_timeout_seconds):
-                retrieval = await runtime.knowledge(lambda: runtime.search_service.search(data.question, settings.retrieval_top_k))
+                retrieval = await runtime.knowledge(lambda: runtime.search_service.search(data.question, settings.retrieval_top_k, None, settings.retrieval_mode))
                 answer = await grounded_answer(data.question, retrieval, runtime.provider, request.state.request_id)
             if key:
                 cache[key] = (signature, answer, time.monotonic())

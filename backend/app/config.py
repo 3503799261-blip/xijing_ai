@@ -1,6 +1,7 @@
 """Backend-only configuration; private env stays outside the static site."""
 from pathlib import Path
 import os
+from typing import Literal
 from pydantic import Field, SecretStr, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -24,6 +25,7 @@ class Settings(BaseSettings):
     request_timeout_seconds: float = Field(default=45, ge=2, le=50)
     retrieval_min_score: float = Field(default=0.57, ge=0, le=1)
     retrieval_top_k: int = Field(default=5, ge=1, le=5)
+    retrieval_mode: Literal['vector', 'hybrid'] = 'hybrid'
 
     @field_validator('deepseek_base_url')
     @classmethod
