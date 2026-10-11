@@ -1,0 +1,24 @@
+{
+  "exportedAt": "2026-10-11T10:04:13.170495+00:00",
+  "sourceSnapshotSha256": "b17d8d82f16879093f99360c73ad5fd9676d0c96e90233c8ad8671135bd5848d",
+  "publicRecords": 129,
+  "omittedPartialLine": false,
+  "skipped": {
+    "event_msg": 239,
+    "token_usage_record": 57,
+    "reasoning": 48,
+    "world_state": 8,
+    "compacted": 2,
+    "turn_context": 4,
+    "inter_agent_communication_metadata": 23,
+    "agent_message": 23,
+    "private_message": 2
+  },
+  "files": {
+    "00-original-user-request.txt": "8325c4d5895bfb71dde386815ef767d82bd143d0925cb4037476bdec66cfa6ee",
+    "01-final-architecture-revision.txt": "cef19cdf3f6c56ec718f6d00ab892f3256f56b6819acadf29384fd712fe20c51",
+    "02-approved-development-request.txt": "820b6839f3317b4d8e0ecedcb587e923713cacfb96c1db94b0aa3bc71f524b15",
+    "03-public-conversation.jsonl": "9bb7d91c15fcf6d242c55cd3e71d7587750560867f3d770e671d07680390f7a5"
+  },
+  "scope": "Actual public user messages, assistant commentary/final and matched tool evidence. No hidden reasoning, system/developer content or child internal messages. Snapshot; future records not included."
+}

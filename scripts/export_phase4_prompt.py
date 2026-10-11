@@ -1,0 +1,52 @@
+"""Export the current session's PUBLIC Phase 4 evidence; never hidden reasoning."""
+import argparse
+import json
+import re
+from pathlib import Path
+from export_phase_prompt import read_snapshot, public_text, export_public, source_path_redactions, stamp, digest
+
+
+def redact(text):
+    text = re.sub(r'\b(?:sk-|ghp_|github_pat_)[A-Za-z0-9_-]{16,}', '[credential redacted]', text)
+    text = re.sub(r'Bearer\s+(?!YOUR|<)[A-Za-z0-9._-]{16,}', 'Bearer [credential redacted]', text)
+    return text
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--session-log', type=Path, required=True)
+    parser.add_argument('--output', type=Path, required=True)
+    args = parser.parse_args()
+    raw, records, partial = read_snapshot(args.session_log)
+    found = {}
+    for line, record in records:
+        payload = record.get('payload', {})
+        if record.get('type') != 'response_item' or payload.get('type') != 'message' or payload.get('role') != 'user':
+            continue
+        for block in public_text(payload):
+            text = block['text']
+            if '执行 Phase 4 检查点A' in text and '你现在继续开发' in text:
+                found.setdefault('00-original-user-request.txt', (line, text))
+            if text.startswith('# 戏境 AI — Phase 4 检查点A最终修订'):
+                found['01-final-architecture-revision.txt'] = (line, text)
+            if text.startswith('Phase 4检查点A批准，开始正式开发。'):
+                found['02-approved-development-request.txt'] = (line, text)
+    if len(found) != 3:
+        raise ValueError('Missing exact public Phase 4 user requests; do not invent evidence.')
+    args.output.mkdir(parents=True, exist_ok=True)
+    hashes = {}
+    for filename, (_, text) in found.items():
+        data = redact(text).encode('utf-8')
+        (args.output / filename).write_bytes(data)
+        hashes[filename] = digest(data)
+    public, skipped = export_public(records, min(item[0] for item in found.values()), source_path_redactions(args.session_log))
+    data = redact(''.join(json.dumps(item, ensure_ascii=False) + '\n' for item in public)).encode('utf-8')
+    (args.output / '03-public-conversation.jsonl').write_bytes(data)
+    hashes['03-public-conversation.jsonl'] = digest(data)
+    meta = {'exportedAt': stamp(), 'sourceSnapshotSha256': digest(raw), 'publicRecords': len(public), 'omittedPartialLine': partial, 'skipped': dict(skipped), 'files': hashes, 'scope': 'Actual public user messages, assistant commentary/final and matched tool evidence. No hidden reasoning, system/developer content or child internal messages. Snapshot; future records not included.'}
+    (args.output / '04-export-metadata.json').write_text(json.dumps(meta, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    print(json.dumps({'publicRecords': len(public), 'files': list(hashes)}, ensure_ascii=False))
+
+
+if __name__ == '__main__':
+    main()

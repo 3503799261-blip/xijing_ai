@@ -1,0 +1,7 @@
+Phase 4检查点A批准，开始正式开发。
+请严格按照已修订的 `docs/reports/phase-04-neural4d-architecture-proposal.md` 执行。
+必须保留整个项目最多3次Neural4D真实建模HTTP提交尝试的硬限制，采用SQLite原子预留、幂等和并发保护。任何真实建模任务必须经过我单独明确批准。
+开发优先完成资产层、服务层、Mock、3D Viewer和前端整合。Viewer必须支持至少260°连续拖拽、鼠标与触摸交互、缩放、重置视角、Loading/Ready/Error状态，并进行真实GLB浏览器测试。
+保留Phase 1～3成果，创建独立Phase 4开发分支，持续记录真实Git提交、Prompt演进、测试与失败案例。
+在准备首次真实建模调用时必须停止，向我报告已完成的测试、API参数、预计费用、当前额度和风险，等待单独授权。不得自行调用。
+完成本阶段开发与验证后，停在检查点B，不得提前进入Phase 5。
