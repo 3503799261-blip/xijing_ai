@@ -143,8 +143,7 @@ class ModelService:
         return json.loads(row[0])
 
     async def submit(self, data, key):
-        if (data.get('modelCount') != 1 or not self.settings.neural4d_generation_enabled or not self.verified()
-                or not self.settings.neural4d_expected_credits or self.balance < self.settings.neural4d_expected_credits):
+        if data.get('modelCount') != 1 or not self.settings.neural4d_generation_enabled or not self.verified():
             raise ServiceError('NEURAL4D_GENERATION_DISABLED', '真实建模未获有效单次授权，未发出请求。', 403)
         payload = self.approval_payload(data['approvalId'])
         # Never silently reinterpret an older one-shot approval using a new
@@ -156,6 +155,10 @@ class ModelService:
             # Replay is a read of the original task, never a new send. Its old
             # version remains valid provenance after later prompt edits.
             return self.public(previous)
+        if self.usage.approval_estimated_credits(data['approvalId']) != self.settings.neural4d_expected_credits:
+            raise ServiceError('NEURAL4D_COST_CHANGED', '本次预计Credit费用已变化，请重新核实费用并明确确认；未发出建模请求。', 409)
+        if not self.settings.neural4d_expected_credits or self.balance < self.settings.neural4d_expected_credits:
+            raise ServiceError('NEURAL4D_GENERATION_DISABLED', '本次预计费用或已核验余额不满足条件，未发出请求。', 403)
         current = self.freeze({**payload, 'assetVersion': payload['assetVersion']})
         if current != payload:
             raise ServiceError('NEURAL4D_INPUT_CHANGED', '批准后资产已变化。', 409)

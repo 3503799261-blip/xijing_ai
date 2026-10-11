@@ -202,6 +202,50 @@ try {
     assert.match(elements.get('#ai-workshop-viewer-error').textContent, /加载失败/);
     assert.equal(elements.get('#ai-workshop-viewer-zoom-in').disabled, true); assert.equal(calls.length, before);
   });
+  await check('explicit retry bypasses only the failed registered GLB cache key, without automatic retries or provider requests', async () => {
+    const before = calls.length;
+    const host = elements.get('#ai-workshop-viewer-host');
+    const failedSource = host.children[0].src;
+    const originalMetadataUrl = model.fileUrl;
+    const loadersBeforeRetry = loaderCount;
+    elements.get('#ai-workshop-viewer-reload').fire('click');
+    assert.equal(controller.diagnostics().state, 'loading');
+    await new Promise((resolve) => setImmediate(resolve));
+    const retried = host.children[0];
+    assert.equal(loaderCount, loadersBeforeRetry + 1);
+    const canonical = new URL(failedSource);
+    const retryUrl = new URL(retried.src);
+    assert.notEqual(retried.src, failedSource);
+    assert.equal(retryUrl.origin, canonical.origin); assert.equal(retryUrl.pathname, canonical.pathname);
+    assert.deepEqual([...retryUrl.searchParams.keys()], ['__viewer_reload']);
+    assert.match(retryUrl.searchParams.get('__viewer_reload'), /^\d+-\d+$/);
+    assert.equal(retryUrl.hash, ''); assert.equal(retryUrl.username, ''); assert.equal(retryUrl.password, '');
+    assert.equal(model.fileUrl, originalMetadataUrl);
+    retried.fire('load'); assert.equal(controller.diagnostics().state, 'ready');
+    assert.equal(controller.diagnostics().modelHash, hash);
+    assert.equal(controller.diagnostics().modelId, model.modelId);
+    // Repeated clicks while loading cannot create extra loads. A later actual
+    // failure may be manually retried with a fresh key, still the same file.
+    retried.fire('error'); const loadersBeforeDoubleClick = loaderCount;
+    elements.get('#ai-workshop-viewer-reload').fire('click');
+    elements.get('#ai-workshop-viewer-reload').fire('click');
+    await new Promise((resolve) => setImmediate(resolve));
+    const second = host.children[0]; assert.notEqual(second.src, retried.src);
+    assert.equal(loaderCount, loadersBeforeDoubleClick + 1);
+    assert.equal(new URL(second.src).pathname, canonical.pathname);
+    second.fire('load'); assert.equal(controller.diagnostics().state, 'ready');
+    assert.equal(calls.length, before);
+  });
+  await check('retry strategy does not weaken canonical model URL validation for external or caller-supplied query URLs', async () => {
+    const before = calls.length;
+    const failed = viewerModule.initializeModelViewer({ root, loader: async () => { throw new Error('must never load unregistered URL'); } });
+    await failed.load({ ...model, fileUrl: `https://example.org/api/v1/assets/models/${model.modelId}/file` }, true);
+    assert.equal(failed.diagnostics().state, 'error');
+    await failed.load({ ...model, fileUrl: `${model.fileUrl}?__viewer_reload=user_supplied` }, true);
+    assert.equal(failed.diagnostics().state, 'error');
+    assert.match(elements.get('#ai-workshop-viewer-error').textContent, /受控GLB路径/);
+    assert.equal(calls.length, before); failed.dispose();
+  });
   await check('old model callbacks cannot mark a replacement ready; diagnostics retain actual file hash', async () => {
     await controller.load(model);
     const old = elements.get('#ai-workshop-viewer-host').children[0];

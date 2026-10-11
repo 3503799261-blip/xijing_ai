@@ -1,6 +1,7 @@
 import { safeAssetFileUrl } from './contracts.js?v=phase4-1';
 
 let viewerModule;
+let reloadSequence = 0;
 const DEFAULT_ORBIT = '0deg 75deg auto';
 const DEFAULT_FOV = '35deg';
 const TAU = Math.PI * 2;
@@ -104,9 +105,14 @@ export function initializeModelViewer({ root, loader = ensureViewer }) {
   const diagnostics = () => ({ state, modelId: activeModel?.modelId || null, modelHash: activeModel?.hash || null,
     touchEnabled, lastError, orbit: element?.getCameraOrbit ? { ...element.getCameraOrbit() } : null, ...tracker.snapshot() });
 
-  async function load(model) {
+  async function load(model, refreshFailedCache = false) {
     const safeUrl = safeAssetFileUrl(model?.fileUrl, 'models', model?.modelId);
     if (!safeUrl || model?.format !== 'glb') { fail('模型资源未通过受控GLB路径检查，请重新选择已登记模型。'); return; }
+    // model-viewer caches failed loads by full URL. Its public component API has
+    // no per-URL eviction method. Only an explicit retry varies the cache key,
+    // after validating the canonical registered file; origin/path stay fixed.
+    const resourceUrl = new URL(safeUrl);
+    if (refreshFailedCache === true) resourceUrl.searchParams.set('__viewer_reload', `${Date.now()}-${++reloadSequence}`);
     generation += 1;
     const currentGeneration = generation;
     cancelTimeout(); activeModel = model; tracker = createOrbitTracker(); lastError = '';
@@ -155,7 +161,7 @@ export function initializeModelViewer({ root, loader = ensureViewer }) {
         publishCamera();
       });
       host.append(viewer);
-      viewer.src = safeUrl;
+      viewer.src = resourceUrl.href;
     } catch { if (currentGeneration === generation) fail('3D查看器组件无法加载，请检查本地组件资源与浏览器支持后重试。'); }
   }
   function zoom(factor) {
@@ -180,7 +186,7 @@ export function initializeModelViewer({ root, loader = ensureViewer }) {
       ? '交互已开启：单指旋转，双指缩放。退出后可在模型区域上下滑动页面。'
       : '桌面拖拽旋转、滚轮缩放；手机点击“进入触摸交互”后可自由拖拽和双指缩放。';
   });
-  reload?.addEventListener('click', () => { if (activeModel && state === 'error') void load(activeModel); });
+  reload?.addEventListener('click', () => { if (activeModel && state === 'error') void load(activeModel, true); });
   setState('idle', '选择一个已登记的GLB模型开始查看');
   function clear(message = '当前风格尚未生成3D模型') {
     generation += 1; cancelTimeout(); host.replaceChildren(); element = null; activeModel = null;

@@ -765,3 +765,27 @@ def test_switching_mock_provider_to_real_transport_rechecks_canonical_before_sen
     assert context.usage.get_attempt(reserved['attemptId'])['state'] == 'RESERVED'
     assert context.usage.get_attempt(reserved['attemptId'])['startedAt'] is None
     assert sum(r.url.path.endswith('generateModelWithImage') for r in context.calls) == 0
+
+
+@pytest.mark.parametrize('new_price', [81, 1000, None])
+def test_unsent_approval_rejects_changed_or_unverified_cost_before_reserve_and_send(setup, new_price):
+    context = setup(enabled=True, protocol=True)
+    confirmation = approve(context, prepared(context))
+    context.settings.neural4d_expected_credits = new_price
+    with pytest.raises(ServiceError, match='NEURAL4D_COST_CHANGED'):
+        asyncio.run(context.models.submit({'approvalId': confirmation['approvalId'], 'modelCount': 1}, 'offline-changed-price'))
+    assert context.usage.approval_estimated_credits(confirmation['approvalId']) == 80
+    assert context.usage.summary()['occupied_attempts'] == 0
+    assert sum(r.url.path.endswith('generateModelWithImage') for r in context.calls) == 0
+
+
+def test_sent_same_key_replay_after_price_change_only_reads_original_task(setup):
+    context = setup(enabled=True, protocol=True)
+    confirmation = approve(context, prepared(context))
+    request = {'approvalId': confirmation['approvalId'], 'modelCount': 1}
+    original = asyncio.run(context.models.submit(request, 'offline-price-replay'))
+    context.settings.neural4d_expected_credits = 1000  # exceeds known fixture balance
+    replay = asyncio.run(context.models.submit(request, 'offline-price-replay'))
+    assert replay['attemptId'] == original['attemptId'] and replay['estimatedCredits'] == 80
+    assert not replay['newlyReserved'] and context.usage.summary()['occupied_attempts'] == 1
+    assert sum(r.url.path.endswith('generateModelWithImage') for r in context.calls) == 1
