@@ -1,0 +1,515 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-10-11T06:10:13.164060+00:00",
+  "scope": "Real HTTP workflow and real backend RAG/LLM; no automatic retry",
+  "case": "uncovered",
+  "brief": {
+    "requirements": "按京剧量子星舰行当的真实传统规范设计角色。必须查到量子星舰行当的专业来源，没有资料不能把幻想设定当作传统事实。",
+    "style": "国风幻想"
+  },
+  "budgetBefore": {
+    "calls": 80,
+    "estimatedUpperCostCny": 0.18398216,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 18,
+        "estimatedUpperCostCny": 0.05054792,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "pollSamples": [
+    {
+      "taskId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+      "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+      "state": "running",
+      "currentAgent": "planner",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:10:13.269852+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 0,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:10:13.260923+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:10:13.265621+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:10:13.270853+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 3,
+      "sequence": 3,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:10:13.258451+00:00",
+      "updatedAt": "2026-10-11T06:10:13.270853+00:00",
+      "requestId": "1282a86e-af46-4902-9e98-61a37e35da44"
+    },
+    {
+      "taskId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+      "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+      "state": "awaiting_confirmation",
+      "currentAgent": "researcher",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧量子星舰行当」及2项需求。",
+          "startedAt": "2026-10-11T06:10:13.269852+00:00",
+          "finishedAt": "2026-10-11T06:10:14.234497+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "awaiting_confirmation",
+          "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧 量子星舰 行当 传统规范；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：量子星舰行当；相似人物不能替代。",
+          "startedAt": "2026-10-11T06:10:14.238552+00:00",
+          "finishedAt": "2026-10-11T06:10:14.261841+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 1,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:10:13.260923+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:10:13.265621+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:10:13.270853+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:10:14.235532+00:00",
+          "summary": "已整理主题「京剧量子星舰行当」及2项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:10:14.239672+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:10:14.263986+00:00",
+          "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧 量子星舰 行当 传统规范；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：量子星舰行当；相似人物不能替代。",
+          "agentId": "researcher",
+          "state": "awaiting_confirmation"
+        },
+        {
+          "kind": "task",
+          "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:10:14.268193+00:00",
+          "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+          "taskState": "awaiting_confirmation",
+          "confirmationId": "7e436833-121c-432e-98a2-63c9ac280f14"
+        }
+      ],
+      "lastSequence": 7,
+      "sequence": 7,
+      "confirmation": {
+        "id": "7e436833-121c-432e-98a2-63c9ac280f14",
+        "reason": "insufficient_evidence",
+        "canAccept": false
+      },
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:10:13.258451+00:00",
+      "updatedAt": "2026-10-11T06:10:14.268193+00:00",
+      "requestId": "bb7a88f9-4a1d-44f5-a76d-a52c36f2c914"
+    }
+  ],
+  "createHttpStatus": 202,
+  "created": {
+    "taskId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+    "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/8317c2f1-1bf2-4927-b811-047da0e320b1",
+    "resultUrl": "/api/v1/agent/result/8317c2f1-1bf2-4927-b811-047da0e320b1",
+    "requestId": "12f9d86a-016a-45e9-8719-4f3d3c843f91"
+  },
+  "finalStatus": {
+    "taskId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+    "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+    "state": "awaiting_confirmation",
+    "currentAgent": "researcher",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "completed",
+        "summary": "已整理主题「京剧量子星舰行当」及2项需求。",
+        "startedAt": "2026-10-11T06:10:13.269852+00:00",
+        "finishedAt": "2026-10-11T06:10:14.234497+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "researcher",
+        "state": "awaiting_confirmation",
+        "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧 量子星舰 行当 传统规范；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：量子星舰行当；相似人物不能替代。",
+        "startedAt": "2026-10-11T06:10:14.238552+00:00",
+        "finishedAt": "2026-10-11T06:10:14.261841+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      },
+      {
+        "id": "reviewer",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 1,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T06:10:13.260923+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T06:10:13.265621+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T06:10:13.270853+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T06:10:14.235532+00:00",
+        "summary": "已整理主题「京剧量子星舰行当」及2项需求。",
+        "agentId": "planner",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T06:10:14.239672+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "researcher",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+        "sequence": 6,
+        "occurredAt": "2026-10-11T06:10:14.263986+00:00",
+        "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧 量子星舰 行当 传统规范；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：量子星舰行当；相似人物不能替代。",
+        "agentId": "researcher",
+        "state": "awaiting_confirmation"
+      },
+      {
+        "kind": "task",
+        "runId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+        "sequence": 7,
+        "occurredAt": "2026-10-11T06:10:14.268193+00:00",
+        "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+        "taskState": "awaiting_confirmation",
+        "confirmationId": "7e436833-121c-432e-98a2-63c9ac280f14"
+      }
+    ],
+    "lastSequence": 7,
+    "sequence": 7,
+    "confirmation": {
+      "id": "7e436833-121c-432e-98a2-63c9ac280f14",
+      "reason": "insufficient_evidence",
+      "canAccept": false
+    },
+    "resultReady": false,
+    "cancelRequested": false,
+    "createdAt": "2026-10-11T06:10:13.258451+00:00",
+    "updatedAt": "2026-10-11T06:10:14.268193+00:00",
+    "requestId": "bb7a88f9-4a1d-44f5-a76d-a52c36f2c914"
+  },
+  "outcome": "awaiting_confirmation",
+  "elapsedSeconds": 1.1351,
+  "budgetAfter": {
+    "calls": 81,
+    "estimatedUpperCostCny": 0.18527728,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 19,
+        "estimatedUpperCostCny": 0.05184304,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "providerCalls": [
+    {
+      "requestId": "8317c2f1-1bf2-4927-b811-047da0e320b1:planner",
+      "createdAt": "2026-10-11T06:10:13.272935+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.005386,
+      "estimatedUpperCny": 0.0012951199999999999,
+      "usage": {
+        "prompt_tokens": 329,
+        "completion_tokens": 111,
+        "total_tokens": 440,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 201
+      },
+      "scope": "phase3"
+    }
+  ],
+  "modelCallCount": 1,
+  "measuredTokens": 440,
+  "estimatedCostCny": 0.00129512,
+  "artifacts": {
+    "planner": {
+      "theme": "京剧量子星舰行当",
+      "target": "角色设计",
+      "style": "国风幻想",
+      "requirements": [
+        {
+          "id": "R1",
+          "text": "按京剧传统规范设计量子星舰行当角色"
+        },
+        {
+          "id": "R2",
+          "text": "须查到该行当专业来源，无资料不称传统"
+        }
+      ],
+      "researchQueries": [
+        "京剧 量子星舰 行当 传统规范",
+        "京剧 行当 分类 传统规范"
+      ],
+      "clarificationQuestions": [],
+      "requiredEntities": [
+        "量子星舰行当"
+      ],
+      "execution": {
+        "requestId": "8317c2f1-1bf2-4927-b811-047da0e320b1:planner",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 329,
+          "completion_tokens": 111,
+          "total_tokens": 440,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 201
+        },
+        "elapsedSeconds": 0.9529,
+        "promptVersion": "agent_planner_v2",
+        "promptHash": "b12dc4d03282fce3e7cd3e5c7e92fc42d6e25a4cc846552b0421da99db95df12"
+      }
+    },
+    "researcher": {
+      "queries": [
+        {
+          "question": "京剧 量子星舰 行当 传统规范",
+          "evidenceIds": [],
+          "uncertain": true,
+          "retrievalUncertain": true,
+          "missingYears": [],
+          "elapsedSeconds": 0.0092,
+          "retrievalMode": "hybrid",
+          "missingEntities": [
+            "量子星舰行当"
+          ]
+        },
+        {
+          "question": "京剧 行当 分类 传统规范",
+          "evidenceIds": [
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+          ],
+          "uncertain": false,
+          "retrievalUncertain": false,
+          "missingYears": [],
+          "elapsedSeconds": 0.0075,
+          "retrievalMode": "hybrid"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-system",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文第一段及末段 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "京剧",
+            "行当",
+            "生",
+            "旦",
+            "净",
+            "丑",
+            "唱念做打"
+          ],
+          "vectorScore": 0.6947864158067978,
+          "keywordScore": null,
+          "entityMatchCount": 0,
+          "acceptedBy": "vector_threshold",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "68fcdede51c3d7d66090f2c38fef4f7c14ad83419ee634ae511e0a8572142eae",
+          "chunkContentHash": "fc83f0c55b048c90bebd8abd984d408fba192d35e8d5c4c470491efd3b70fb07"
+        }
+      ],
+      "requirementCoverage": [
+        {
+          "requirementId": "R1",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+          ]
+        },
+        {
+          "requirementId": "R2",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+          ]
+        }
+      ],
+      "limitations": [
+        "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+        "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。",
+        "部分研究问题没有有效资料；设计和审校不得补造这些文化事实。",
+        "未找到指定人物或传统名称的精确依据：量子星舰行当；相似人物不能替代。"
+      ],
+      "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+      "policyVersion": "agent_research_v2"
+    }
+  },
+  "citationMappingChecks": []
+}

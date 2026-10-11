@@ -1,0 +1,905 @@
+{
+  "generatedAt": "2026-10-11T06:56:22.731Z",
+  "scope": "Actual in-app browser DOM observations and UI actions; no simulated model output",
+  "browserChecks": [
+    {
+      "name": "empty brief rejected before create",
+      "passed": true,
+      "evidence": "visible error after empty submit"
+    },
+    {
+      "name": "local draft identified as non-AI",
+      "passed": true,
+      "evidence": "visible draft text before explicit create"
+    },
+    {
+      "name": "real four-stage task and confirmation",
+      "passed": true,
+      "taskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "evidence": "four completed stages, actual citations, confirm response"
+    },
+    {
+      "name": "confirmed JSON downloaded",
+      "passed": true,
+      "evidence": "xijing-character-0a808e2b-182e-4457-b0bb-5e4f39a66263.json"
+    },
+    {
+      "name": "reload restores task without create",
+      "passed": true,
+      "evidence": "completed task ID unchanged, download enabled"
+    },
+    {
+      "name": "Phase 2 actual RAG answer and references",
+      "passed": true,
+      "requestId": "23ab1a7e-3e80-498b-9e05-76a910c1e521"
+    },
+    {
+      "name": "actual backend stop preserves last stage and pauses",
+      "passed": true,
+      "evidence": "network error visible, completed cards remain"
+    },
+    {
+      "name": "actual backend restart restores same persisted task",
+      "passed": true,
+      "evidence": "completed task preserved after process replacement"
+    },
+    {
+      "name": "mobile v3 true workflow and reference",
+      "passed": true,
+      "taskId": "174e97bf-4df1-4970-83e0-108afc81ec73",
+      "layout": {
+        "downloadDisabled": true,
+        "overflow": false,
+        "progress": "真实已完成阶段：4 / 4",
+        "result": "待确认草案 · 不可作为最终方案银翎云将用于非遗互动展的原创年轻女性刀马旦幻想角色，非真实演员或固定传统规范服饰设计原创演绎银青硬靠式幻想铠甲，缀云纹披风原创演绎雉尾式长翎头饰，可随舞动摆动颜色设计原创演绎银青主色配月白与淡金点缀视觉元素据资料设计硬靠雉尾扮相与重唱念舞蹈气质依据：chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b据资料设计靠旗作装饰与辅助表演元素依据：chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e原创表达角色名银翎云将为原创银青配色与云纹为原创设计，不称传统规范适用范围与限制资料为项目原创事实摘要，未经京剧专家审核硬靠雉尾仅作灵感，具体形制由文化审校核查查看角色视觉提示词（文字，尚未生成图片）国风幻想年轻女性刀马旦，银青硬靠式铠甲，雉尾长翎头饰，云纹披风，靠旗装饰，重唱念舞蹈气质，银青月白淡金配色，舞台光影。以上铠甲、配色、云纹与头饰细节为原创设计，非传统规范。文化审校：辅助审校通过这是AI辅助审校，仍需要你结合资料核查；不代表专业人员审核。本次文化依据（2）京剧旦行小讲堂项目入库事实摘要 · 证据ID：chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b · 来源ID：cnpoc-dan位置：正文（3）刀马旦、（5）武旦 · 入库片段 1/1刀马旦常扮演女将帅，硬靠、雉尾是常见扮相，重唱念与舞蹈。\n武旦常着短装，表演更侧重武打与打出手等技巧。查看来源网页 ↗京剧服装和人物身份有什么关系？项目入库事实摘要 · 证据ID：chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e · 来源ID：cnpoc-costume位置：正文靠段 · 入库片段 1/1靠是表现男女将帅铠甲的戏服，常见于征战场面。\n靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。查看来源网页 ↗任务：174e97bf-4df1-4970-83e0-108afc81ec73 · 知识版本：gen-20261010T104704-f628d57b",
+        "task": "任务ID：174e97bf-4df1-4970-83e0-108afc81ec73"
+      }
+    },
+    {
+      "name": "unsupported tradition stops actual workflow without accept/export",
+      "passed": true,
+      "evidence": {
+        "confirmVisible": false,
+        "downloadDisabled": true,
+        "research": "资料不足，尚未生成角色。 未覆盖查询：量子星舰行当 京剧 文化来源；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。",
+        "state": "等待用户确认",
+        "task": "任务ID：75783c7e-d83a-4129-8e7d-5d9482df05f9"
+      }
+    },
+    {
+      "test": "cancelled restored task shows final cancellation rather than pending cancellation",
+      "observedAt": "2026-10-11T06:52:11.726Z",
+      "state": "已取消",
+      "feedback": "任务已取消，未继续启动后续阶段。"
+    },
+    {
+      "name": "final Planner v4 and Research v4 desktop real workflow",
+      "observedAt": "2026-10-11T06:54:03.297Z",
+      "evidence": {
+        "downloadDisabled": true,
+        "overflow": false,
+        "progress": "真实已完成阶段：4 / 4",
+        "result": "待确认草案 · 不可作为最终方案蓝云京剧科普展展厅互动说明用原创青年男性长靠武生角色，非真实演员或传统固定形象服饰设计据资料设计大靠配靠旗，表现将帅铠甲依据：chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1、chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e据资料设计厚底靴，身段稳健依据：chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1颜色设计原创演绎蓝金主色，云纹点缀视觉元素据资料设计靠旗作装饰与辅助表演依据：chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e据资料设计生行武生，男性武将角色依据：chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6、chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072原创表达角色姓名蓝云为原创蓝金配色与云纹装饰为原创，非传统统一配色适用范围与限制依据为项目原创事实摘要，未经京剧专家审核蓝金配色与云纹为原创，不声称传统统一配色查看角色视觉提示词（文字，尚未生成图片）京剧写意风格，原创青年男性长靠武生蓝云，穿大靠、厚底靴，背靠旗，身段稳健；蓝金配色配云纹装饰，展厅互动说明用。蓝金云纹与姓名为原创，非传统规范。文化审校：辅助审校通过这是AI辅助审校，仍需要你结合资料核查；不代表专业人员审核。本次文化依据（4）京劇行當项目入库事实摘要 · 证据ID：chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1 · 来源ID：ncfta-male-roles位置：行当介绍—生—武生 · 入库片段 1/1武生常表现武艺高强的男子。\n长靠武生穿大靠、厚底靴，身段稳健；\n短打武生穿短衣、薄底靴，动作轻捷。\n区分同时涉及服装与表演方式。查看来源网页 ↗京剧服装和人物身份有什么关系？项目入库事实摘要 · 证据ID：chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e · 来源ID：cnpoc-costume位置：正文靠段 · 入库片段 1/1靠是表现男女将帅铠甲的戏服，常见于征战场面。\n靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。查看来源网页 ↗京剧的行当分类是什么？项目入库事实摘要 · 证据ID：chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6 · 来源ID：fujian-roles位置：正文第一段及末段 · 入库片段 1/1行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。查看来源网页 ↗京剧的行当分类是什么？项目入库事实摘要 · 证据ID：chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072 · 来源ID：fujian-roles位置：正文“生”“旦”条目 · 入库片段 1/1生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。查看来源网页 ↗任务：1a18ff2c-93bb-47fb-8060-3de45378a721 · 知识版本：gen-20261010T104704-f628d57b",
+        "state": "等待用户确认",
+        "task": "任务ID：1a18ff2c-93bb-47fb-8060-3de45378a721"
+      }
+    },
+    {
+      "name": "final workflow mobile reload retains task and export gate",
+      "observedAt": "2026-10-11T06:56:22.690Z",
+      "evidence": {
+        "downloadDisabled": true,
+        "scrollWidth": 375,
+        "state": "等待用户确认",
+        "task": "任务ID：1a18ff2c-93bb-47fb-8060-3de45378a721",
+        "width": 375
+      }
+    }
+  ],
+  "pageChecks": [
+    {
+      "headings": [
+        "梨园风华",
+        "一桌二椅，演尽人间",
+        "选择你的梨园旅程",
+        "程式之中，自有天地"
+      ],
+      "images": [
+        {
+          "loaded": true,
+          "src": "images/intro4.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/home1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/intro2.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/sheng.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/red1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/art1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/gallery7.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/intro4.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/art3.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera2.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera3.jpg"
+        }
+      ],
+      "navigation": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "scrollWidth": 1905,
+      "title": "梨园风华｜首页",
+      "width": 1905,
+      "page": "index.html"
+    },
+    {
+      "headings": [
+        "京剧发展历史",
+        "多声腔汇成一脉",
+        "两百余年，四段华章",
+        "历史图片长廊"
+      ],
+      "images": [
+        {
+          "loaded": true,
+          "src": "images/intro2.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/intro1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/intro2.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/intro3.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/intro4.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/历史1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/历史2.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/历史3.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/历史4.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/历史5.jpg"
+        }
+      ],
+      "navigation": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "scrollWidth": 1905,
+      "title": "京剧发展历史｜梨园风华",
+      "width": 1905,
+      "page": "history.html"
+    },
+    {
+      "headings": [
+        "生旦净丑",
+        "四门行当，各有乾坤",
+        "生 · 正气风骨",
+        "旦 · 水袖芳华"
+      ],
+      "images": [
+        {
+          "loaded": true,
+          "src": "images/sheng.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/dan.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/jing.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/chou.jpg"
+        }
+      ],
+      "navigation": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "scrollWidth": 1905,
+      "title": "行当介绍｜梨园风华",
+      "width": 1905,
+      "page": "roles.html"
+    },
+    {
+      "headings": [
+        "脸谱艺术",
+        "脸上有谱，心中有人",
+        "颜色会说话",
+        "经典脸谱图片墙"
+      ],
+      "images": [
+        {
+          "loaded": true,
+          "src": "images/脸谱.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/red.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/black.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/white.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/blue.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/glod.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/red1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/black1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/blue1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/white1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/glod1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/jing.jpg"
+        }
+      ],
+      "navigation": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "scrollWidth": 1905,
+      "title": "脸谱艺术｜梨园风华",
+      "width": 1905,
+      "page": "facial.html"
+    },
+    {
+      "headings": [
+        "唱腔与乐器",
+        "字正腔圆，声情相生",
+        "西皮明快，二黄深沉",
+        "京胡 · 一弓一弦托唱腔"
+      ],
+      "images": [
+        {
+          "loaded": true,
+          "src": "images/京胡.jpg"
+        }
+      ],
+      "navigation": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "scrollWidth": 1905,
+      "title": "唱腔与乐器｜梨园风华",
+      "width": 1905,
+      "page": "music.html"
+    },
+    {
+      "headings": [
+        "视频欣赏",
+        "请把屏幕交给一场好戏",
+        "开场 · 锣鼓催征",
+        "唱段 · 声腔传情"
+      ],
+      "images": [],
+      "navigation": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "scrollWidth": 1905,
+      "title": "视频欣赏｜梨园风华",
+      "width": 1905,
+      "page": "video.html"
+    },
+    {
+      "headings": [
+        "京剧艺术画廊",
+        "旋转中的梨园风华",
+        "演员风采",
+        "脸谱图鉴"
+      ],
+      "images": [
+        {
+          "loaded": true,
+          "src": "images/gallery1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/gallery2.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/gallery11.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/gallery12.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/gallery5.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/gallery6.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/gallery7.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/gallery8.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera2.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera4.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera5.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/sheng.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/dan.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/jing.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/chou.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/mask-red.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/mask-black.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/mask-blue.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/mask-gold.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera1.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera2.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/art4.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/京胡.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera3.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera4.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/opera5.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "images/home-banner.jpg"
+        }
+      ],
+      "navigation": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        },
+        {
+          "href": "#actors",
+          "label": "演员风采"
+        },
+        {
+          "href": "#masks",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "#costumes",
+          "label": "戏服道具"
+        },
+        {
+          "href": "#stage",
+          "label": "舞台剧照"
+        }
+      ],
+      "scrollWidth": 1905,
+      "title": "艺术画廊｜梨园风华",
+      "width": 1905,
+      "page": "gallery.html"
+    },
+    {
+      "headings": [
+        "AI赋能京剧非遗，让传统文化焕发新生",
+        "一方工坊，两种探索",
+        "京剧AI智能问答",
+        "多Agent协作工作台"
+      ],
+      "images": [],
+      "navigation": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        },
+        {
+          "href": "#ai-workshop-overview",
+          "label": "工坊总览"
+        },
+        {
+          "href": "#ai-workshop-qa",
+          "label": "京剧问答"
+        },
+        {
+          "href": "#ai-workshop-agents",
+          "label": "Agent协作"
+        },
+        {
+          "href": "#ai-workshop-create",
+          "label": "角色创作"
+        },
+        {
+          "href": "#ai-workshop-model",
+          "label": "图生3D"
+        }
+      ],
+      "scrollWidth": 1905,
+      "title": "AI戏韵工坊｜梨园风华",
+      "width": 1905,
+      "page": "about.html"
+    }
+  ],
+  "navChecks": [
+    {
+      "label": "首页",
+      "expected": "index.html",
+      "url": "http://127.0.0.1:8000/index.html"
+    },
+    {
+      "label": "发展历史",
+      "expected": "history.html",
+      "url": "http://127.0.0.1:8000/history.html"
+    },
+    {
+      "label": "行当介绍",
+      "expected": "roles.html",
+      "url": "http://127.0.0.1:8000/roles.html"
+    },
+    {
+      "label": "脸谱艺术",
+      "expected": "facial.html",
+      "url": "http://127.0.0.1:8000/facial.html"
+    },
+    {
+      "label": "唱腔乐器",
+      "expected": "music.html",
+      "url": "http://127.0.0.1:8000/music.html"
+    },
+    {
+      "label": "视频欣赏",
+      "expected": "video.html",
+      "url": "http://127.0.0.1:8000/video.html"
+    },
+    {
+      "label": "艺术画廊",
+      "expected": "gallery.html",
+      "url": "http://127.0.0.1:8000/gallery.html"
+    },
+    {
+      "label": "AI戏韵工坊",
+      "expected": "about.html",
+      "url": "http://127.0.0.1:8000/about.html#ai-workshop"
+    }
+  ],
+  "qaEvidence": {
+    "messages": "\n                问答说明问题将发送到本项目后端，由经来源核对的项目摘要支持回答；资料不足会如实说明。每次提问独立检索，当前不提供跨问题的对话记忆。\n              你的提问京剧武生的服饰有什么特点？京剧AI助手 · 基于检索证据京剧武生的服饰特点，可以从武生内部的两个常见分支来看。长靠武生通常穿大靠、配厚底靴，整体显得身段稳健；短打武生则穿短衣、配薄底靴，便于动作轻捷。也就是说，武生的服装和表演方式（靠功、打斗、身段）是相互配合的，不能只看衣服一项。需要说明的是，这里讲的是武生行当中长靠、短打两类的基本区分，并不是所有武生角色的统一固定装扮；具体到某一出戏、某一个人物，服饰还会随剧情和扮相要求变化。本次参考资料（2）京劇行當本项目原创事实摘要（据所列来源核对） · 来源ID：ncfta-male-roles位置：行当介绍—生—武生 · 入库片段 1/1武生常表现武艺高强的男子。\n长靠武生穿大靠、厚底靴，身段稳健；\n短打武生穿短衣、薄底靴，动作轻捷。\n区分同时涉及服装与表演方式。查看来源网页 ↗京剧的行当分类是什么？本项目原创事实摘要（据所列来源核对） · 来源ID：fujian-roles位置：正文“生”“旦”条目 · 入库片段 1/1生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。查看来源网页 ↗在资料区查看本次依据请求ID：23ab1a7e-3e80-498b-9e05-76a910c1e521",
+    "reference": "对应提问：京剧武生的服饰有什么特点？请求ID：23ab1a7e-3e80-498b-9e05-76a910c1e521京劇行當本项目原创事实摘要（据所列来源核对） · 来源ID：ncfta-male-roles位置：行当介绍—生—武生 · 入库片段 1/1武生常表现武艺高强的男子。\n长靠武生穿大靠、厚底靴，身段稳健；\n短打武生穿短衣、薄底靴，动作轻捷。\n区分同时涉及服装与表演方式。查看来源网页 ↗京剧的行当分类是什么？本项目原创事实摘要（据所列来源核对） · 来源ID：fujian-roles位置：正文“生”“旦”条目 · 入库片段 1/1生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。查看来源网页 ↗"
+  },
+  "mobileLayout": {
+    "agent": 344.6875,
+    "oversized": [],
+    "page": 375,
+    "viewport": 375
+  },
+  "mobileResult": {
+    "downloadDisabled": true,
+    "overflow": false,
+    "progress": "真实已完成阶段：4 / 4",
+    "result": "待确认草案 · 不可作为最终方案银翎云将用于非遗互动展的原创年轻女性刀马旦幻想角色，非真实演员或固定传统规范服饰设计原创演绎银青硬靠式幻想铠甲，缀云纹披风原创演绎雉尾式长翎头饰，可随舞动摆动颜色设计原创演绎银青主色配月白与淡金点缀视觉元素据资料设计硬靠雉尾扮相与重唱念舞蹈气质依据：chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b据资料设计靠旗作装饰与辅助表演元素依据：chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e原创表达角色名银翎云将为原创银青配色与云纹为原创设计，不称传统规范适用范围与限制资料为项目原创事实摘要，未经京剧专家审核硬靠雉尾仅作灵感，具体形制由文化审校核查查看角色视觉提示词（文字，尚未生成图片）国风幻想年轻女性刀马旦，银青硬靠式铠甲，雉尾长翎头饰，云纹披风，靠旗装饰，重唱念舞蹈气质，银青月白淡金配色，舞台光影。以上铠甲、配色、云纹与头饰细节为原创设计，非传统规范。文化审校：辅助审校通过这是AI辅助审校，仍需要你结合资料核查；不代表专业人员审核。本次文化依据（2）京剧旦行小讲堂项目入库事实摘要 · 证据ID：chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b · 来源ID：cnpoc-dan位置：正文（3）刀马旦、（5）武旦 · 入库片段 1/1刀马旦常扮演女将帅，硬靠、雉尾是常见扮相，重唱念与舞蹈。\n武旦常着短装，表演更侧重武打与打出手等技巧。查看来源网页 ↗京剧服装和人物身份有什么关系？项目入库事实摘要 · 证据ID：chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e · 来源ID：cnpoc-costume位置：正文靠段 · 入库片段 1/1靠是表现男女将帅铠甲的戏服，常见于征战场面。\n靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。查看来源网页 ↗任务：174e97bf-4df1-4970-83e0-108afc81ec73 · 知识版本：gen-20261010T104704-f628d57b",
+    "task": "任务ID：174e97bf-4df1-4970-83e0-108afc81ec73"
+  },
+  "held": {
+    "confirmVisible": false,
+    "downloadDisabled": true,
+    "research": "资料不足，尚未生成角色。 未覆盖查询：量子星舰行当 京剧 文化来源；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。",
+    "state": "等待用户确认",
+    "task": "任务ID：75783c7e-d83a-4129-8e7d-5d9482df05f9"
+  },
+  "finalBrowserResult": {
+    "downloadDisabled": true,
+    "overflow": false,
+    "progress": "真实已完成阶段：4 / 4",
+    "result": "待确认草案 · 不可作为最终方案蓝云京剧科普展展厅互动说明用原创青年男性长靠武生角色，非真实演员或传统固定形象服饰设计据资料设计大靠配靠旗，表现将帅铠甲依据：chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1、chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e据资料设计厚底靴，身段稳健依据：chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1颜色设计原创演绎蓝金主色，云纹点缀视觉元素据资料设计靠旗作装饰与辅助表演依据：chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e据资料设计生行武生，男性武将角色依据：chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6、chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072原创表达角色姓名蓝云为原创蓝金配色与云纹装饰为原创，非传统统一配色适用范围与限制依据为项目原创事实摘要，未经京剧专家审核蓝金配色与云纹为原创，不声称传统统一配色查看角色视觉提示词（文字，尚未生成图片）京剧写意风格，原创青年男性长靠武生蓝云，穿大靠、厚底靴，背靠旗，身段稳健；蓝金配色配云纹装饰，展厅互动说明用。蓝金云纹与姓名为原创，非传统规范。文化审校：辅助审校通过这是AI辅助审校，仍需要你结合资料核查；不代表专业人员审核。本次文化依据（4）京劇行當项目入库事实摘要 · 证据ID：chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1 · 来源ID：ncfta-male-roles位置：行当介绍—生—武生 · 入库片段 1/1武生常表现武艺高强的男子。\n长靠武生穿大靠、厚底靴，身段稳健；\n短打武生穿短衣、薄底靴，动作轻捷。\n区分同时涉及服装与表演方式。查看来源网页 ↗京剧服装和人物身份有什么关系？项目入库事实摘要 · 证据ID：chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e · 来源ID：cnpoc-costume位置：正文靠段 · 入库片段 1/1靠是表现男女将帅铠甲的戏服，常见于征战场面。\n靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。查看来源网页 ↗京剧的行当分类是什么？项目入库事实摘要 · 证据ID：chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6 · 来源ID：fujian-roles位置：正文第一段及末段 · 入库片段 1/1行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。查看来源网页 ↗京剧的行当分类是什么？项目入库事实摘要 · 证据ID：chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072 · 来源ID：fujian-roles位置：正文“生”“旦”条目 · 入库片段 1/1生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。查看来源网页 ↗任务：1a18ff2c-93bb-47fb-8060-3de45378a721 · 知识版本：gen-20261010T104704-f628d57b",
+    "state": "等待用户确认",
+    "task": "任务ID：1a18ff2c-93bb-47fb-8060-3de45378a721"
+  },
+  "finalPhoneLayout": {
+    "downloadDisabled": true,
+    "scrollWidth": 375,
+    "state": "等待用户确认",
+    "task": "任务ID：1a18ff2c-93bb-47fb-8060-3de45378a721",
+    "width": 375
+  },
+  "consoleWarningsAndErrors": []
+}

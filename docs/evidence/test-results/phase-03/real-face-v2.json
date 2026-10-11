@@ -1,0 +1,1341 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-10-11T06:10:04.761369+00:00",
+  "scope": "Real HTTP workflow and real backend RAG/LLM; no automatic retry",
+  "case": "face",
+  "brief": {
+    "requirements": "设计一位原创角色，以京剧净行和脸谱为灵感。希望借鉴黑色脸谱的舞台视觉；必须说明颜色意义取决于角色和使用语境，不把所有黑脸都说成同一种性格。",
+    "style": "国风幻想"
+  },
+  "budgetBefore": {
+    "calls": 76,
+    "estimatedUpperCostCny": 0.17014992,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 14,
+        "estimatedUpperCostCny": 0.03671568,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "pollSamples": [
+    {
+      "taskId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+      "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+      "state": "running",
+      "currentAgent": "planner",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:10:04.865443+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 0,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:10:04.858450+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:10:04.862449+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:10:04.866445+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 3,
+      "sequence": 3,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:10:04.855444+00:00",
+      "updatedAt": "2026-10-11T06:10:04.866445+00:00",
+      "requestId": "56d261b8-eddc-44a2-b602-c41cbe97d43b"
+    },
+    {
+      "taskId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+      "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+      "state": "running",
+      "currentAgent": "designer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧净行黑脸原创角色」及3项需求。",
+          "startedAt": "2026-10-11T06:10:04.865443+00:00",
+          "finishedAt": "2026-10-11T06:10:06.016515+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "startedAt": "2026-10-11T06:10:06.020954+00:00",
+          "finishedAt": "2026-10-11T06:10:06.057139+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:10:06.063139+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 2,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:10:04.858450+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:10:04.862449+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:10:04.866445+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:10:06.017515+00:00",
+          "summary": "已整理主题「京剧净行黑脸原创角色」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:10:06.021964+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:10:06.059139+00:00",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:10:06.064139+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 7,
+      "sequence": 7,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:10:04.855444+00:00",
+      "updatedAt": "2026-10-11T06:10:06.064139+00:00",
+      "requestId": "4242d995-d648-4602-994f-293414900772"
+    },
+    {
+      "taskId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+      "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+      "state": "running",
+      "currentAgent": "reviewer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧净行黑脸原创角色」及3项需求。",
+          "startedAt": "2026-10-11T06:10:04.865443+00:00",
+          "finishedAt": "2026-10-11T06:10:06.016515+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "startedAt": "2026-10-11T06:10:06.020954+00:00",
+          "finishedAt": "2026-10-11T06:10:06.057139+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "completed",
+          "summary": "已生成原创角色「墨面玄甲将」草案，尚待文化审校。",
+          "startedAt": "2026-10-11T06:10:06.063139+00:00",
+          "finishedAt": "2026-10-11T06:10:08.769564+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:10:08.775564+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 3,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:10:04.858450+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:10:04.862449+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:10:04.866445+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:10:06.017515+00:00",
+          "summary": "已整理主题「京剧净行黑脸原创角色」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:10:06.021964+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:10:06.059139+00:00",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:10:06.064139+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 8,
+          "occurredAt": "2026-10-11T06:10:08.770563+00:00",
+          "summary": "已生成原创角色「墨面玄甲将」草案，尚待文化审校。",
+          "agentId": "designer",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 9,
+          "occurredAt": "2026-10-11T06:10:08.775564+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "reviewer",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 9,
+      "sequence": 9,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:10:04.855444+00:00",
+      "updatedAt": "2026-10-11T06:10:08.775564+00:00",
+      "requestId": "f114f814-09ce-4df0-a46c-fc64bc83f45b"
+    },
+    {
+      "taskId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+      "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+      "state": "awaiting_confirmation",
+      "currentAgent": "reviewer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧净行黑脸原创角色」及3项需求。",
+          "startedAt": "2026-10-11T06:10:04.865443+00:00",
+          "finishedAt": "2026-10-11T06:10:06.016515+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "startedAt": "2026-10-11T06:10:06.020954+00:00",
+          "finishedAt": "2026-10-11T06:10:06.057139+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "completed",
+          "summary": "已生成原创角色「墨面玄甲将」草案，尚待文化审校。",
+          "startedAt": "2026-10-11T06:10:06.063139+00:00",
+          "finishedAt": "2026-10-11T06:10:08.769564+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "completed",
+          "summary": "辅助文化审校发现需修订内容，不能直接接受为最终方案。 visualElements[0].description：三块瓦式脸谱标为原创，但未说明与传统谱式关系，易被误读为规范；visualPrompt：将原创三块瓦式幻想脸谱与净行灵感并置，未标注非传统规范",
+          "startedAt": "2026-10-11T06:10:08.775564+00:00",
+          "finishedAt": "2026-10-11T06:10:10.130316+00:00",
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 4,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:10:04.858450+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:10:04.862449+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:10:04.866445+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:10:06.017515+00:00",
+          "summary": "已整理主题「京剧净行黑脸原创角色」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:10:06.021964+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:10:06.059139+00:00",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:10:06.064139+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 8,
+          "occurredAt": "2026-10-11T06:10:08.770563+00:00",
+          "summary": "已生成原创角色「墨面玄甲将」草案，尚待文化审校。",
+          "agentId": "designer",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 9,
+          "occurredAt": "2026-10-11T06:10:08.775564+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "reviewer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 10,
+          "occurredAt": "2026-10-11T06:10:10.131313+00:00",
+          "summary": "辅助文化审校发现需修订内容，不能直接接受为最终方案。 visualElements[0].description：三块瓦式脸谱标为原创，但未说明与传统谱式关系，易被误读为规范；visualPrompt：将原创三块瓦式幻想脸谱与净行灵感并置，未标注非传统规范",
+          "agentId": "reviewer",
+          "state": "completed"
+        },
+        {
+          "kind": "task",
+          "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+          "sequence": 11,
+          "occurredAt": "2026-10-11T06:10:10.136463+00:00",
+          "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+          "taskState": "awaiting_confirmation",
+          "confirmationId": "e19453f8-cb2d-49c5-b829-aa4615be4085"
+        }
+      ],
+      "lastSequence": 11,
+      "sequence": 11,
+      "confirmation": {
+        "id": "e19453f8-cb2d-49c5-b829-aa4615be4085",
+        "reason": "needs_revision",
+        "canAccept": false
+      },
+      "resultReady": true,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:10:04.855444+00:00",
+      "updatedAt": "2026-10-11T06:10:10.136463+00:00",
+      "requestId": "07f61f42-0a78-4a15-83f6-e68e3963978f"
+    }
+  ],
+  "createHttpStatus": 202,
+  "created": {
+    "taskId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+    "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/5dc6d493-5607-4964-b62f-23675ddb6503",
+    "resultUrl": "/api/v1/agent/result/5dc6d493-5607-4964-b62f-23675ddb6503",
+    "requestId": "4ea17b47-1249-4032-a8fb-7ef70927d844"
+  },
+  "finalStatus": {
+    "taskId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+    "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+    "state": "awaiting_confirmation",
+    "currentAgent": "reviewer",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "completed",
+        "summary": "已整理主题「京剧净行黑脸原创角色」及3项需求。",
+        "startedAt": "2026-10-11T06:10:04.865443+00:00",
+        "finishedAt": "2026-10-11T06:10:06.016515+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "researcher",
+        "state": "completed",
+        "summary": "完成2条真实检索，保留5条候选依据。",
+        "startedAt": "2026-10-11T06:10:06.020954+00:00",
+        "finishedAt": "2026-10-11T06:10:06.057139+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "completed",
+        "summary": "已生成原创角色「墨面玄甲将」草案，尚待文化审校。",
+        "startedAt": "2026-10-11T06:10:06.063139+00:00",
+        "finishedAt": "2026-10-11T06:10:08.769564+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "reviewer",
+        "state": "completed",
+        "summary": "辅助文化审校发现需修订内容，不能直接接受为最终方案。 visualElements[0].description：三块瓦式脸谱标为原创，但未说明与传统谱式关系，易被误读为规范；visualPrompt：将原创三块瓦式幻想脸谱与净行灵感并置，未标注非传统规范",
+        "startedAt": "2026-10-11T06:10:08.775564+00:00",
+        "finishedAt": "2026-10-11T06:10:10.130316+00:00",
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 4,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T06:10:04.858450+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T06:10:04.862449+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T06:10:04.866445+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T06:10:06.017515+00:00",
+        "summary": "已整理主题「京剧净行黑脸原创角色」及3项需求。",
+        "agentId": "planner",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T06:10:06.021964+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "researcher",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+        "sequence": 6,
+        "occurredAt": "2026-10-11T06:10:06.059139+00:00",
+        "summary": "完成2条真实检索，保留5条候选依据。",
+        "agentId": "researcher",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+        "sequence": 7,
+        "occurredAt": "2026-10-11T06:10:06.064139+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "designer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+        "sequence": 8,
+        "occurredAt": "2026-10-11T06:10:08.770563+00:00",
+        "summary": "已生成原创角色「墨面玄甲将」草案，尚待文化审校。",
+        "agentId": "designer",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+        "sequence": 9,
+        "occurredAt": "2026-10-11T06:10:08.775564+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "reviewer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+        "sequence": 10,
+        "occurredAt": "2026-10-11T06:10:10.131313+00:00",
+        "summary": "辅助文化审校发现需修订内容，不能直接接受为最终方案。 visualElements[0].description：三块瓦式脸谱标为原创，但未说明与传统谱式关系，易被误读为规范；visualPrompt：将原创三块瓦式幻想脸谱与净行灵感并置，未标注非传统规范",
+        "agentId": "reviewer",
+        "state": "completed"
+      },
+      {
+        "kind": "task",
+        "runId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+        "sequence": 11,
+        "occurredAt": "2026-10-11T06:10:10.136463+00:00",
+        "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+        "taskState": "awaiting_confirmation",
+        "confirmationId": "e19453f8-cb2d-49c5-b829-aa4615be4085"
+      }
+    ],
+    "lastSequence": 11,
+    "sequence": 11,
+    "confirmation": {
+      "id": "e19453f8-cb2d-49c5-b829-aa4615be4085",
+      "reason": "needs_revision",
+      "canAccept": false
+    },
+    "resultReady": true,
+    "cancelRequested": false,
+    "createdAt": "2026-10-11T06:10:04.855444+00:00",
+    "updatedAt": "2026-10-11T06:10:10.136463+00:00",
+    "requestId": "07f61f42-0a78-4a15-83f6-e68e3963978f"
+  },
+  "resultHttpStatus": 200,
+  "result": {
+    "schemaVersion": "1.0",
+    "design": {
+      "schemaVersion": "1.0",
+      "name": "墨面玄甲将",
+      "positioning": "以京剧净行与脸谱为灵感的国风幻想原创角色，用于插画与角色设定展示",
+      "costume": [
+        {
+          "description": "净行角色多为性格或形象鲜明的男性人物",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871"
+          ]
+        },
+        {
+          "description": "脸谱与洪亮声音是净行常见表演特点",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871"
+          ]
+        }
+      ],
+      "colors": [
+        {
+          "description": "原创墨黑主色配玄青与暗金点缀",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "原创银白勾边，用于幻想化纹样",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "visualElements": [
+        {
+          "description": "原创三块瓦式幻想脸谱，眉区鼻窝分区",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "原创象形云雷纹披风与玄甲肩饰",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "creativeElements": [
+        "黑脸仅作舞台视觉借鉴，不绑定固定性格；颜色意义随角色、谱式与部位变化",
+        "加入国风幻想云雷纹与玄甲结构，属原创设计，非传统规范"
+      ],
+      "visualPrompt": "国风幻想原创角色，净行灵感，墨黑主色配玄青暗金，原创三块瓦式幻想脸谱，眉区鼻窝分区，云雷纹披风与玄甲肩饰，银白勾边，舞台感光影，半身立绘。以上脸谱与服饰细节均为原创设计，非传统规范。",
+      "usedEvidenceIds": [
+        "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871"
+      ],
+      "limitations": [
+        "黑色脸谱含义依角色、谱式与部位而定，本设计不宣称所有黑脸同一性格",
+        "证据为项目原创事实摘要，未经京剧专家审核，服饰细节多为原创"
+      ],
+      "execution": {
+        "requestId": "5dc6d493-5607-4964-b62f-23675ddb6503:designer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1177,
+          "completion_tokens": 501,
+          "total_tokens": 1678,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1177
+        },
+        "elapsedSeconds": 2.6938,
+        "promptVersion": "agent_designer_v2",
+        "promptHash": "5cb882839982cfb45bd600bce085defc97484a8efb9583dbb8af9d95a3820c35"
+      }
+    },
+    "review": {
+      "verdict": "needs_revision",
+      "issues": [
+        {
+          "field": "visualElements[0].description",
+          "reason": "三块瓦式脸谱标为原创，但未说明与传统谱式关系，易被误读为规范",
+          "evidenceIds": [
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445"
+          ]
+        },
+        {
+          "field": "visualPrompt",
+          "reason": "将原创三块瓦式幻想脸谱与净行灵感并置，未标注非传统规范",
+          "evidenceIds": [
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445"
+          ]
+        }
+      ],
+      "suggestions": [
+        "在脸谱描述中注明为幻想化演绎，非传统三块瓦规范",
+        "颜色说明可补充引用E1/E3以强化语境依赖"
+      ],
+      "checkedEvidenceIds": [
+        "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+        "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+        "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+        "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+        "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2"
+      ],
+      "needsHumanReview": true,
+      "programmaticChecks": {
+        "garmentReferenceGuard": "conservative_literal_absence",
+        "issuesFound": 0
+      },
+      "execution": {
+        "requestId": "5dc6d493-5607-4964-b62f-23675ddb6503:reviewer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1611,
+          "completion_tokens": 160,
+          "total_tokens": 1771,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1611
+        },
+        "elapsedSeconds": 1.3426,
+        "promptVersion": "agent_reviewer_v2",
+        "promptHash": "642f11b00079aaf377cafd9482499d16bd5d484f1468316d782cb717d2b15644"
+      }
+    },
+    "citations": [
+      {
+        "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+        "title": "京剧的行当分类是什么？",
+        "sourceId": "fujian-roles",
+        "locator": "正文“净”条目 · 入库片段 1/1",
+        "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+        "excerpt": "净又称花脸，脸谱和洪亮的声音是常见表演特点，角色多为性格或形象鲜明的男性人物。\n净行的唱功、身段或武打侧重有不同分支。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+        "title": "包公为什么画黑脸？",
+        "sourceId": "cnpoc-bao",
+        "locator": "正文第一段、第三段 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+        "excerpt": "包拯的黑脸常表达刚正形象。\n黑色在别的扮相中还可关联勇猛、肤色或突出眉眼，不能据此判断所有黑脸角色都具有同一种性格。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+        "title": "二、京剧脸谱",
+        "sourceId": "cnpoc-face",
+        "locator": "脸谱的色彩—红色；京剧脸谱的分类第二段 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+        "excerpt": "红色作主色时，常用于关羽等忠勇人物；\n作副色时可表达其他寓意。\n因此单个颜色不能脱离人物、谱式和使用部位解释成绝对人格标签。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+        "title": "二、京剧脸谱",
+        "sourceId": "cnpoc-face",
+        "locator": "京剧脸谱的分类—三块瓦脸 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+        "excerpt": "三块瓦脸在整脸基础上突出两块眉区与一块鼻窝，所以有三块瓦之称；\n其下还有正、尖、花、老等不同变式。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+        "title": "二、京剧脸谱",
+        "sourceId": "cnpoc-face",
+        "locator": "京剧脸谱的分类—象形脸、神仙脸 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+        "excerpt": "象形脸常见于神话戏，依据神怪形象组织图案，不拘统一谱式。\n神仙脸可借金银色或线条表现神圣感；\n这是舞台造型语言，不是人物历史相貌。",
+        "contentKind": "original_fact_summary"
+      }
+    ],
+    "uncertain": true,
+    "publicationAllowed": false,
+    "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+    "promptVersions": {
+      "planner": "agent_planner_v2",
+      "researcher": "agent_research_v2",
+      "designer": "agent_designer_v2",
+      "reviewer": "agent_reviewer_v2"
+    },
+    "limitations": [
+      "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+      "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。",
+      "黑色脸谱含义依角色、谱式与部位而定，本设计不宣称所有黑脸同一性格",
+      "证据为项目原创事实摘要，未经京剧专家审核，服饰细节多为原创"
+    ],
+    "confirmationReason": "needs_revision",
+    "taskId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+    "userConfirmed": false,
+    "requestId": "dc3a1a64-0824-445a-8bf4-f35be86023a4"
+  },
+  "outcome": "awaiting_confirmation",
+  "elapsedSeconds": 5.6853,
+  "budgetAfter": {
+    "calls": 79,
+    "estimatedUpperCostCny": 0.18252104,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 17,
+        "estimatedUpperCostCny": 0.0490868,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "providerCalls": [
+    {
+      "requestId": "5dc6d493-5607-4964-b62f-23675ddb6503:planner",
+      "createdAt": "2026-10-11T06:10:04.869859+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.00547,
+      "estimatedUpperCny": 0.0015071199999999998,
+      "usage": {
+        "prompt_tokens": 339,
+        "completion_tokens": 135,
+        "total_tokens": 474,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 211
+      },
+      "scope": "phase3"
+    },
+    {
+      "requestId": "5dc6d493-5607-4964-b62f-23675ddb6503:designer",
+      "createdAt": "2026-10-11T06:10:06.067140+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.016482,
+      "estimatedUpperCny": 0.006362,
+      "usage": {
+        "prompt_tokens": 1177,
+        "completion_tokens": 501,
+        "total_tokens": 1678,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1177
+      },
+      "scope": "phase3"
+    },
+    {
+      "requestId": "5dc6d493-5607-4964-b62f-23675ddb6503:reviewer",
+      "createdAt": "2026-10-11T06:10:08.778565+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.016656,
+      "estimatedUpperCny": 0.004502,
+      "usage": {
+        "prompt_tokens": 1611,
+        "completion_tokens": 160,
+        "total_tokens": 1771,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1611
+      },
+      "scope": "phase3"
+    }
+  ],
+  "modelCallCount": 3,
+  "measuredTokens": 3923,
+  "estimatedCostCny": 0.01237112,
+  "artifacts": {
+    "designer": {
+      "schemaVersion": "1.0",
+      "name": "墨面玄甲将",
+      "positioning": "以京剧净行与脸谱为灵感的国风幻想原创角色，用于插画与角色设定展示",
+      "costume": [
+        {
+          "description": "净行角色多为性格或形象鲜明的男性人物",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871"
+          ]
+        },
+        {
+          "description": "脸谱与洪亮声音是净行常见表演特点",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871"
+          ]
+        }
+      ],
+      "colors": [
+        {
+          "description": "原创墨黑主色配玄青与暗金点缀",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "原创银白勾边，用于幻想化纹样",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "visualElements": [
+        {
+          "description": "原创三块瓦式幻想脸谱，眉区鼻窝分区",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "原创象形云雷纹披风与玄甲肩饰",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "creativeElements": [
+        "黑脸仅作舞台视觉借鉴，不绑定固定性格；颜色意义随角色、谱式与部位变化",
+        "加入国风幻想云雷纹与玄甲结构，属原创设计，非传统规范"
+      ],
+      "visualPrompt": "国风幻想原创角色，净行灵感，墨黑主色配玄青暗金，原创三块瓦式幻想脸谱，眉区鼻窝分区，云雷纹披风与玄甲肩饰，银白勾边，舞台感光影，半身立绘。以上脸谱与服饰细节均为原创设计，非传统规范。",
+      "usedEvidenceIds": [
+        "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871"
+      ],
+      "limitations": [
+        "黑色脸谱含义依角色、谱式与部位而定，本设计不宣称所有黑脸同一性格",
+        "证据为项目原创事实摘要，未经京剧专家审核，服饰细节多为原创"
+      ],
+      "execution": {
+        "requestId": "5dc6d493-5607-4964-b62f-23675ddb6503:designer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1177,
+          "completion_tokens": 501,
+          "total_tokens": 1678,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1177
+        },
+        "elapsedSeconds": 2.6938,
+        "promptVersion": "agent_designer_v2",
+        "promptHash": "5cb882839982cfb45bd600bce085defc97484a8efb9583dbb8af9d95a3820c35"
+      }
+    },
+    "planner": {
+      "theme": "京剧净行黑脸原创角色",
+      "target": "国风幻想角色设计",
+      "style": "国风幻想",
+      "requirements": [
+        {
+          "id": "R1",
+          "text": "以京剧净行与脸谱为灵感设计原创角色"
+        },
+        {
+          "id": "R2",
+          "text": "借鉴黑色脸谱舞台视觉，不套用固定性格"
+        },
+        {
+          "id": "R3",
+          "text": "说明颜色意义取决于角色与使用语境"
+        }
+      ],
+      "researchQueries": [
+        "京剧净行黑色脸谱 颜色象征 角色语境",
+        "京剧脸谱 黑色 性格 不同角色差异"
+      ],
+      "clarificationQuestions": [],
+      "requiredEntities": [
+        "净行",
+        "脸谱"
+      ],
+      "execution": {
+        "requestId": "5dc6d493-5607-4964-b62f-23675ddb6503:planner",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 339,
+          "completion_tokens": 135,
+          "total_tokens": 474,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 211
+        },
+        "elapsedSeconds": 1.14,
+        "promptVersion": "agent_planner_v2",
+        "promptHash": "b12dc4d03282fce3e7cd3e5c7e92fc42d6e25a4cc846552b0421da99db95df12"
+      }
+    },
+    "researcher": {
+      "queries": [
+        {
+          "question": "京剧净行黑色脸谱 颜色象征 角色语境",
+          "evidenceIds": [
+            "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2"
+          ],
+          "uncertain": false,
+          "retrievalUncertain": false,
+          "missingYears": [],
+          "elapsedSeconds": 0.0197,
+          "retrievalMode": "hybrid"
+        },
+        {
+          "question": "京剧脸谱 黑色 性格 不同角色差异",
+          "evidenceIds": [
+            "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+            "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2"
+          ],
+          "uncertain": false,
+          "retrievalUncertain": false,
+          "missingYears": [],
+          "elapsedSeconds": 0.0103,
+          "retrievalMode": "hybrid"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "chunkId": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "sourceId": "cnpoc-bao",
+          "sectionId": "cnpoc-bao-black",
+          "title": "包公为什么画黑脸？",
+          "locator": "正文第一段、第三段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+          "excerpt": "包拯的黑脸常表达刚正形象。\n黑色在别的扮相中还可关联勇猛、肤色或突出眉眼，不能据此判断所有黑脸角色都具有同一种性格。",
+          "contentKind": "original_fact_summary",
+          "category": "角色文化",
+          "entityNames": [
+            "包拯",
+            "包公",
+            "黑脸",
+            "黑色",
+            "脸谱"
+          ],
+          "vectorScore": 0.4708626576505347,
+          "keywordScore": -4.366540704758796,
+          "entityMatchCount": 2,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.1",
+          "sourceContentHash": "cfc19d010abfe4b8d09074c3f9f910eba369f0c7e96fc0ed05452456f4d4cbee",
+          "chunkContentHash": "96c68128b36bbd26b118ab8f0b155987c809b210f68ceb332330f6ff4b4716f0"
+        },
+        {
+          "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-jing",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文“净”条目 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "净又称花脸，脸谱和洪亮的声音是常见表演特点，角色多为性格或形象鲜明的男性人物。\n净行的唱功、身段或武打侧重有不同分支。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "净",
+            "花脸",
+            "脸谱"
+          ],
+          "vectorScore": 0.5825814000553304,
+          "keywordScore": -1.4405874437927428,
+          "entityMatchCount": 1,
+          "acceptedBy": "vector_threshold",
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "68fcdede51c3d7d66090f2c38fef4f7c14ad83419ee634ae511e0a8572142eae",
+          "chunkContentHash": "3e20913efa3fe5896108c21d4f989cc24910771e6694cb865edd9f981e8e7611"
+        },
+        {
+          "id": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+          "chunkId": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+          "sourceId": "cnpoc-face",
+          "sectionId": "cnpoc-face-colors",
+          "title": "二、京剧脸谱",
+          "locator": "脸谱的色彩—红色；京剧脸谱的分类第二段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+          "excerpt": "红色作主色时，常用于关羽等忠勇人物；\n作副色时可表达其他寓意。\n因此单个颜色不能脱离人物、谱式和使用部位解释成绝对人格标签。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧脸谱",
+          "entityNames": [
+            "脸谱",
+            "红色",
+            "主色",
+            "副色",
+            "关羽"
+          ],
+          "vectorScore": 0.499808541993239,
+          "keywordScore": -1.4339877980039053,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 3,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.1",
+          "sourceContentHash": "071cbed6767407f9ccac2bbbaa381703c06707a61d74d5ccdcea0b92fd566e6e",
+          "chunkContentHash": "67c9ccd87e150ce60d73a6001479516e83a258cf097ceac153fdd8f6b04b9ba0"
+        },
+        {
+          "id": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+          "chunkId": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+          "sourceId": "cnpoc-face",
+          "sectionId": "cnpoc-face-three-tiles",
+          "title": "二、京剧脸谱",
+          "locator": "京剧脸谱的分类—三块瓦脸 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+          "excerpt": "三块瓦脸在整脸基础上突出两块眉区与一块鼻窝，所以有三块瓦之称；\n其下还有正、尖、花、老等不同变式。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧脸谱",
+          "entityNames": [
+            "脸谱",
+            "整脸",
+            "三块瓦脸",
+            "三块窝脸"
+          ],
+          "vectorScore": 0.41497940387910637,
+          "keywordScore": -1.6028801086411306,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 3,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.1",
+          "sourceContentHash": "071cbed6767407f9ccac2bbbaa381703c06707a61d74d5ccdcea0b92fd566e6e",
+          "chunkContentHash": "e9e39e4b0bc926355d021cda5e919dc4fbbf328e54b916defde611adf631003d"
+        },
+        {
+          "id": "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+          "chunkId": "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+          "sourceId": "cnpoc-face",
+          "sectionId": "cnpoc-face-symbolic",
+          "title": "二、京剧脸谱",
+          "locator": "京剧脸谱的分类—象形脸、神仙脸 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+          "excerpt": "象形脸常见于神话戏，依据神怪形象组织图案，不拘统一谱式。\n神仙脸可借金银色或线条表现神圣感；\n这是舞台造型语言，不是人物历史相貌。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧脸谱",
+          "entityNames": [
+            "象形脸",
+            "神仙脸",
+            "神话戏",
+            "金色",
+            "银色",
+            "脸谱"
+          ],
+          "vectorScore": 0.4333911643787114,
+          "keywordScore": -1.3956257980006868,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 5,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.1",
+          "sourceContentHash": "071cbed6767407f9ccac2bbbaa381703c06707a61d74d5ccdcea0b92fd566e6e",
+          "chunkContentHash": "361a9ee3286821897e650084ff89d4b170ff8cc0d9414003bee041eec94acb42"
+        }
+      ],
+      "requirementCoverage": [
+        {
+          "requirementId": "R1",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2"
+          ]
+        },
+        {
+          "requirementId": "R2",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2"
+          ]
+        },
+        {
+          "requirementId": "R3",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2"
+          ]
+        }
+      ],
+      "limitations": [
+        "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+        "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。"
+      ],
+      "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+      "policyVersion": "agent_research_v2"
+    },
+    "reviewer": {
+      "verdict": "needs_revision",
+      "issues": [
+        {
+          "field": "visualElements[0].description",
+          "reason": "三块瓦式脸谱标为原创，但未说明与传统谱式关系，易被误读为规范",
+          "evidenceIds": [
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445"
+          ]
+        },
+        {
+          "field": "visualPrompt",
+          "reason": "将原创三块瓦式幻想脸谱与净行灵感并置，未标注非传统规范",
+          "evidenceIds": [
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445"
+          ]
+        }
+      ],
+      "suggestions": [
+        "在脸谱描述中注明为幻想化演绎，非传统三块瓦规范",
+        "颜色说明可补充引用E1/E3以强化语境依赖"
+      ],
+      "checkedEvidenceIds": [
+        "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+        "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+        "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+        "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+        "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2"
+      ],
+      "needsHumanReview": true,
+      "programmaticChecks": {
+        "garmentReferenceGuard": "conservative_literal_absence",
+        "issuesFound": 0
+      },
+      "execution": {
+        "requestId": "5dc6d493-5607-4964-b62f-23675ddb6503:reviewer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1611,
+          "completion_tokens": 160,
+          "total_tokens": 1771,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1611
+        },
+        "elapsedSeconds": 1.3426,
+        "promptVersion": "agent_reviewer_v2",
+        "promptHash": "642f11b00079aaf377cafd9482499d16bd5d484f1468316d782cb717d2b15644"
+      }
+    }
+  },
+  "citationMappingChecks": [
+    {
+      "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+      "valid": true
+    },
+    {
+      "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+      "valid": true
+    },
+    {
+      "id": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+      "valid": true
+    },
+    {
+      "id": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+      "valid": true
+    },
+    {
+      "id": "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+      "valid": true
+    }
+  ]
+}

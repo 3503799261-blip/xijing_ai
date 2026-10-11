@@ -1,0 +1,315 @@
+{
+  "scope": "Actual HTTP cancellation of the semantically invalid v1 face test; original evidence retained",
+  "taskId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+  "before": {
+    "taskId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+    "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+    "state": "awaiting_confirmation",
+    "currentAgent": "reviewer",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "completed",
+        "summary": "已整理主题「京剧净行黑脸角色」及3项需求。",
+        "startedAt": "2026-10-11T05:47:04.367532+00:00",
+        "finishedAt": "2026-10-11T05:47:05.667308+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "researcher",
+        "state": "completed",
+        "summary": "完成3条真实检索，保留5条候选依据。",
+        "startedAt": "2026-10-11T05:47:05.671656+00:00",
+        "finishedAt": "2026-10-11T05:47:05.709798+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "completed",
+        "summary": "已生成原创角色「墨垣」草案，尚待文化审校。",
+        "startedAt": "2026-10-11T05:47:05.717231+00:00",
+        "finishedAt": "2026-10-11T05:47:07.931489+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "reviewer",
+        "state": "completed",
+        "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+        "startedAt": "2026-10-11T05:47:07.935990+00:00",
+        "finishedAt": "2026-10-11T05:47:08.846015+00:00",
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 4,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T05:47:04.358810+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T05:47:04.363534+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T05:47:04.367532+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T05:47:05.668308+00:00",
+        "summary": "已整理主题「京剧净行黑脸角色」及3项需求。",
+        "agentId": "planner",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T05:47:05.672663+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "researcher",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 6,
+        "occurredAt": "2026-10-11T05:47:05.712195+00:00",
+        "summary": "完成3条真实检索，保留5条候选依据。",
+        "agentId": "researcher",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 7,
+        "occurredAt": "2026-10-11T05:47:05.717231+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "designer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 8,
+        "occurredAt": "2026-10-11T05:47:07.932490+00:00",
+        "summary": "已生成原创角色「墨垣」草案，尚待文化审校。",
+        "agentId": "designer",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 9,
+        "occurredAt": "2026-10-11T05:47:07.936999+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "reviewer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 10,
+        "occurredAt": "2026-10-11T05:47:08.846015+00:00",
+        "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+        "agentId": "reviewer",
+        "state": "completed"
+      },
+      {
+        "kind": "task",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 11,
+        "occurredAt": "2026-10-11T05:47:08.851443+00:00",
+        "summary": "设计与辅助审校已返回，等待你确认。",
+        "taskState": "awaiting_confirmation",
+        "confirmationId": "663c1e58-fd8f-4b3b-b3ca-8c41195ea917"
+      }
+    ],
+    "lastSequence": 11,
+    "sequence": 11,
+    "confirmation": {
+      "id": "663c1e58-fd8f-4b3b-b3ca-8c41195ea917",
+      "reason": "final_acceptance",
+      "canAccept": true
+    },
+    "resultReady": true,
+    "cancelRequested": false,
+    "createdAt": "2026-10-11T05:47:04.356780+00:00",
+    "updatedAt": "2026-10-11T05:47:08.851443+00:00",
+    "requestId": "01bd93db-5153-436e-9bd4-34cfda3ad188"
+  },
+  "responseStatus": 200,
+  "after": {
+    "taskId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+    "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+    "state": "cancelled",
+    "currentAgent": "reviewer",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "completed",
+        "summary": "已整理主题「京剧净行黑脸角色」及3项需求。",
+        "startedAt": "2026-10-11T05:47:04.367532+00:00",
+        "finishedAt": "2026-10-11T05:47:05.667308+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "researcher",
+        "state": "completed",
+        "summary": "完成3条真实检索，保留5条候选依据。",
+        "startedAt": "2026-10-11T05:47:05.671656+00:00",
+        "finishedAt": "2026-10-11T05:47:05.709798+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "completed",
+        "summary": "已生成原创角色「墨垣」草案，尚待文化审校。",
+        "startedAt": "2026-10-11T05:47:05.717231+00:00",
+        "finishedAt": "2026-10-11T05:47:07.931489+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "reviewer",
+        "state": "completed",
+        "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+        "startedAt": "2026-10-11T05:47:07.935990+00:00",
+        "finishedAt": "2026-10-11T05:47:08.846015+00:00",
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 4,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T05:47:04.358810+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T05:47:04.363534+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T05:47:04.367532+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T05:47:05.668308+00:00",
+        "summary": "已整理主题「京剧净行黑脸角色」及3项需求。",
+        "agentId": "planner",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T05:47:05.672663+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "researcher",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 6,
+        "occurredAt": "2026-10-11T05:47:05.712195+00:00",
+        "summary": "完成3条真实检索，保留5条候选依据。",
+        "agentId": "researcher",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 7,
+        "occurredAt": "2026-10-11T05:47:05.717231+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "designer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 8,
+        "occurredAt": "2026-10-11T05:47:07.932490+00:00",
+        "summary": "已生成原创角色「墨垣」草案，尚待文化审校。",
+        "agentId": "designer",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 9,
+        "occurredAt": "2026-10-11T05:47:07.936999+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "reviewer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 10,
+        "occurredAt": "2026-10-11T05:47:08.846015+00:00",
+        "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+        "agentId": "reviewer",
+        "state": "completed"
+      },
+      {
+        "kind": "task",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 11,
+        "occurredAt": "2026-10-11T05:47:08.851443+00:00",
+        "summary": "设计与辅助审校已返回，等待你确认。",
+        "taskState": "awaiting_confirmation",
+        "confirmationId": "663c1e58-fd8f-4b3b-b3ca-8c41195ea917"
+      },
+      {
+        "kind": "task",
+        "runId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+        "sequence": 12,
+        "occurredAt": "2026-10-11T06:08:01.976565+00:00",
+        "summary": "用户取消任务，未继续执行。",
+        "taskState": "cancelled"
+      }
+    ],
+    "lastSequence": 12,
+    "sequence": 12,
+    "confirmation": null,
+    "resultReady": true,
+    "cancelRequested": true,
+    "createdAt": "2026-10-11T05:47:04.356780+00:00",
+    "updatedAt": "2026-10-11T06:08:01.976565+00:00",
+    "requestId": "6949c2f4-aa1f-4d7e-8877-1dee3b1fc496"
+  }
+}

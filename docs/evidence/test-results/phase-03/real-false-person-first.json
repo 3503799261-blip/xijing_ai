@@ -1,0 +1,768 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-10-11T05:47:09.506928+00:00",
+  "scope": "Real HTTP workflow and real backend RAG/LLM; no automatic retry",
+  "case": "false-person",
+  "brief": {
+    "requirements": "以京剧演员司雨青澜在1932年首演的代表作为历史依据设计角色。必须核实此人和剧目，找不到资料就停止，不用相似人物替代。",
+    "style": "京剧写意"
+  },
+  "budgetBefore": {
+    "calls": 69,
+    "estimatedUpperCostCny": 0.15376384,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 7,
+        "estimatedUpperCostCny": 0.0203296,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "pollSamples": [
+    {
+      "taskId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "state": "running",
+      "currentAgent": "planner",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T05:47:09.632387+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 0,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T05:47:09.623379+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T05:47:09.628380+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T05:47:09.633381+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 3,
+      "sequence": 3,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T05:47:09.621380+00:00",
+      "updatedAt": "2026-10-11T05:47:09.633381+00:00",
+      "requestId": "da168164-0678-4432-a543-967244279ff7"
+    },
+    {
+      "taskId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "state": "running",
+      "currentAgent": "researcher",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧演员司雨青澜」及3项需求。",
+          "startedAt": "2026-10-11T05:47:09.632387+00:00",
+          "finishedAt": "2026-10-11T05:47:10.656948+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T05:47:10.661832+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 1,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T05:47:09.623379+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T05:47:09.628380+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T05:47:09.633381+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T05:47:10.658359+00:00",
+          "summary": "已整理主题「京剧演员司雨青澜」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T05:47:10.662830+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 5,
+      "sequence": 5,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T05:47:09.621380+00:00",
+      "updatedAt": "2026-10-11T05:47:10.662830+00:00",
+      "requestId": "07b22552-0274-4c98-b8f3-bb3a2d9c80fc"
+    },
+    {
+      "taskId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "state": "running",
+      "currentAgent": "designer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧演员司雨青澜」及3项需求。",
+          "startedAt": "2026-10-11T05:47:09.632387+00:00",
+          "finishedAt": "2026-10-11T05:47:10.656948+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成2条真实检索，保留1条候选依据。",
+          "startedAt": "2026-10-11T05:47:10.661832+00:00",
+          "finishedAt": "2026-10-11T05:47:10.687311+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T05:47:10.693311+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 2,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T05:47:09.623379+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T05:47:09.628380+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T05:47:09.633381+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T05:47:10.658359+00:00",
+          "summary": "已整理主题「京剧演员司雨青澜」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T05:47:10.662830+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T05:47:10.688311+00:00",
+          "summary": "完成2条真实检索，保留1条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T05:47:10.693311+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 7,
+      "sequence": 7,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T05:47:09.621380+00:00",
+      "updatedAt": "2026-10-11T05:47:10.693311+00:00",
+      "requestId": "7e8a2f36-9aa1-4529-924e-a5a729da7027"
+    },
+    {
+      "taskId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "state": "failed",
+      "currentAgent": "designer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧演员司雨青澜」及3项需求。",
+          "startedAt": "2026-10-11T05:47:09.632387+00:00",
+          "finishedAt": "2026-10-11T05:47:10.656948+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成2条真实检索，保留1条候选依据。",
+          "startedAt": "2026-10-11T05:47:10.661832+00:00",
+          "finishedAt": "2026-10-11T05:47:10.687311+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "failed",
+          "summary": "角色方案格式或文化引用未通过校验，未交付最终方案。",
+          "startedAt": "2026-10-11T05:47:10.693311+00:00",
+          "finishedAt": "2026-10-11T05:47:12.793854+00:00",
+          "errorCode": "AGENT_DESIGN_INVALID"
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 2,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T05:47:09.623379+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T05:47:09.628380+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T05:47:09.633381+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T05:47:10.658359+00:00",
+          "summary": "已整理主题「京剧演员司雨青澜」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T05:47:10.662830+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T05:47:10.688311+00:00",
+          "summary": "完成2条真实检索，保留1条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T05:47:10.693311+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 8,
+          "occurredAt": "2026-10-11T05:47:12.793854+00:00",
+          "summary": "角色方案格式或文化引用未通过校验，未交付最终方案。",
+          "agentId": "designer",
+          "state": "failed",
+          "errorCode": "AGENT_DESIGN_INVALID"
+        },
+        {
+          "kind": "task",
+          "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+          "sequence": 9,
+          "occurredAt": "2026-10-11T05:47:12.797961+00:00",
+          "summary": "角色方案格式或文化引用未通过校验，未交付最终方案。",
+          "taskState": "failed",
+          "errorCode": "AGENT_DESIGN_INVALID"
+        }
+      ],
+      "lastSequence": 9,
+      "sequence": 9,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T05:47:09.621380+00:00",
+      "updatedAt": "2026-10-11T05:47:12.797961+00:00",
+      "requestId": "f9f42cbf-b153-4612-ae9c-b79a6a7deb00"
+    }
+  ],
+  "createHttpStatus": 202,
+  "created": {
+    "taskId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+    "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/92ec4d81-7853-4b54-9ca3-978bab642f11",
+    "resultUrl": "/api/v1/agent/result/92ec4d81-7853-4b54-9ca3-978bab642f11",
+    "requestId": "73a68cdf-3b3e-410d-a141-4da04803d55e"
+  },
+  "finalStatus": {
+    "taskId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+    "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+    "state": "failed",
+    "currentAgent": "designer",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "completed",
+        "summary": "已整理主题「京剧演员司雨青澜」及3项需求。",
+        "startedAt": "2026-10-11T05:47:09.632387+00:00",
+        "finishedAt": "2026-10-11T05:47:10.656948+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "researcher",
+        "state": "completed",
+        "summary": "完成2条真实检索，保留1条候选依据。",
+        "startedAt": "2026-10-11T05:47:10.661832+00:00",
+        "finishedAt": "2026-10-11T05:47:10.687311+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "failed",
+        "summary": "角色方案格式或文化引用未通过校验，未交付最终方案。",
+        "startedAt": "2026-10-11T05:47:10.693311+00:00",
+        "finishedAt": "2026-10-11T05:47:12.793854+00:00",
+        "errorCode": "AGENT_DESIGN_INVALID"
+      },
+      {
+        "id": "reviewer",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 2,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T05:47:09.623379+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T05:47:09.628380+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T05:47:09.633381+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T05:47:10.658359+00:00",
+        "summary": "已整理主题「京剧演员司雨青澜」及3项需求。",
+        "agentId": "planner",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T05:47:10.662830+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "researcher",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+        "sequence": 6,
+        "occurredAt": "2026-10-11T05:47:10.688311+00:00",
+        "summary": "完成2条真实检索，保留1条候选依据。",
+        "agentId": "researcher",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+        "sequence": 7,
+        "occurredAt": "2026-10-11T05:47:10.693311+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "designer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+        "sequence": 8,
+        "occurredAt": "2026-10-11T05:47:12.793854+00:00",
+        "summary": "角色方案格式或文化引用未通过校验，未交付最终方案。",
+        "agentId": "designer",
+        "state": "failed",
+        "errorCode": "AGENT_DESIGN_INVALID"
+      },
+      {
+        "kind": "task",
+        "runId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+        "sequence": 9,
+        "occurredAt": "2026-10-11T05:47:12.797961+00:00",
+        "summary": "角色方案格式或文化引用未通过校验，未交付最终方案。",
+        "taskState": "failed",
+        "errorCode": "AGENT_DESIGN_INVALID"
+      }
+    ],
+    "lastSequence": 9,
+    "sequence": 9,
+    "confirmation": null,
+    "resultReady": false,
+    "cancelRequested": false,
+    "createdAt": "2026-10-11T05:47:09.621380+00:00",
+    "updatedAt": "2026-10-11T05:47:12.797961+00:00",
+    "requestId": "f9f42cbf-b153-4612-ae9c-b79a6a7deb00"
+  },
+  "outcome": "failed",
+  "elapsedSeconds": 3.7788,
+  "budgetAfter": {
+    "calls": 71,
+    "estimatedUpperCostCny": 0.1584792,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 9,
+        "estimatedUpperCostCny": 0.02504496,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "providerCalls": [
+    {
+      "requestId": "92ec4d81-7853-4b54-9ca3-978bab642f11:planner",
+      "createdAt": "2026-10-11T05:47:09.635440+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.005286,
+      "estimatedUpperCny": 0.0012771199999999999,
+      "usage": {
+        "prompt_tokens": 316,
+        "completion_tokens": 112,
+        "total_tokens": 428,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 188
+      },
+      "scope": "phase3"
+    },
+    {
+      "requestId": "92ec4d81-7853-4b54-9ca3-978bab642f11:designer",
+      "createdAt": "2026-10-11T05:47:10.697311+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.01296,
+      "estimatedUpperCny": 0.00343824,
+      "usage": {
+        "prompt_tokens": 726,
+        "completion_tokens": 311,
+        "total_tokens": 1037,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 470
+      },
+      "scope": "phase3"
+    }
+  ],
+  "modelCallCount": 2,
+  "measuredTokens": 1465,
+  "estimatedCostCny": 0.00471536,
+  "artifacts": {
+    "planner": {
+      "theme": "京剧演员司雨青澜",
+      "target": "原创非遗展览角色",
+      "style": "京剧写意",
+      "requirements": [
+        {
+          "id": "R1",
+          "text": "核实司雨青澜1932年首演剧目"
+        },
+        {
+          "id": "R2",
+          "text": "无资料则停止，不替代"
+        },
+        {
+          "id": "R3",
+          "text": "以核实结果设计角色"
+        }
+      ],
+      "researchQueries": [
+        "京剧演员司雨青澜生平与1932年首演剧目",
+        "1932年京剧首演剧目记录"
+      ],
+      "clarificationQuestions": [],
+      "execution": {
+        "requestId": "92ec4d81-7853-4b54-9ca3-978bab642f11:planner",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 316,
+          "completion_tokens": 112,
+          "total_tokens": 428,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 188
+        },
+        "elapsedSeconds": 1.0141,
+        "promptVersion": "agent_planner_v1",
+        "promptHash": "f4b912bd3b65703aeec6f5c7c12564a72ed258c50e5bfdeb2e7eaf39e4e5c239"
+      }
+    },
+    "researcher": {
+      "queries": [
+        {
+          "question": "京剧演员司雨青澜生平与1932年首演剧目",
+          "evidenceIds": [
+            "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7"
+          ],
+          "uncertain": false,
+          "elapsedSeconds": 0.0113,
+          "retrievalMode": "hybrid"
+        },
+        {
+          "question": "1932年京剧首演剧目记录",
+          "evidenceIds": [
+            "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7"
+          ],
+          "uncertain": false,
+          "elapsedSeconds": 0.0083,
+          "retrievalMode": "hybrid"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "sourceId": "cnpoc-muguiying",
+          "sectionId": "cnpoc-muguiying-adaptation",
+          "title": "穆桂英挂帅",
+          "locator": "剧目简介最后两句；主创 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/mbm/200806/677c0bbf8a594b35901c47ea19f50a03.shtml",
+          "excerpt": "该京剧版本于1959年由梅兰芳、陆静岩、袁韵宜据同名豫剧改编，梅兰芳同年在北京首演。\n这里的年份是作品改编和首演时间。",
+          "contentKind": "original_fact_summary",
+          "category": "经典剧目",
+          "entityNames": [
+            "穆桂英挂帅",
+            "梅兰芳",
+            "陆静岩",
+            "袁韵宜",
+            "1959年",
+            "豫剧"
+          ],
+          "vectorScore": 0.5830205760281939,
+          "keywordScore": null,
+          "entityMatchCount": 0,
+          "acceptedBy": "vector_threshold",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "fa86624a9075110847f1b94bfaeb1295e85574c5d0d161f41b0454ac013f6d10",
+          "chunkContentHash": "60d677c36aeb19789c4f6a4ee34b9975acd65e8ffb261e4700f0c49bededf246"
+        }
+      ],
+      "requirementCoverage": [
+        {
+          "requirementId": "R1",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7"
+          ]
+        },
+        {
+          "requirementId": "R2",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7"
+          ]
+        },
+        {
+          "requirementId": "R3",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7"
+          ]
+        }
+      ],
+      "limitations": [
+        "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+        "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。"
+      ],
+      "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+      "policyVersion": "agent_research_v1"
+    }
+  },
+  "citationMappingChecks": []
+}

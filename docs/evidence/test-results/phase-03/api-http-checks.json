@@ -1,0 +1,685 @@
+{
+  "executedAt": "2026-10-11T06:23:28.616669+00:00",
+  "scope": "Read/boundary HTTP checks and replay of an existing task; no new paid task.",
+  "checks": [
+    {
+      "name": "real capabilities",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "response": {
+        "questionAnswering": true,
+        "knowledgeSearch": true,
+        "agentWorkflow": true,
+        "conceptImage": false,
+        "imageToModel": false,
+        "checkedAt": "2026-10-11T06:23:28.717319+00:00"
+      }
+    },
+    {
+      "name": "real published sources",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "response": {
+        "sources": [
+          {
+            "source_id": "cnpoc-bao",
+            "title": "包公为什么画黑脸？",
+            "category": "角色文化",
+            "author_or_organization": "国家京剧院",
+            "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+            "publication_date": "2009-02-13",
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.1",
+            "content_kind": "original_fact_summary",
+            "scope": "京剧包拯的艺术扮相解释；有关阴阳两界的叙述是舞台文化寓意，不是历史证明。",
+            "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+            "content_hash": "cfc19d010abfe4b8d09074c3f9f910eba369f0c7e96fc0ed05452456f4d4cbee"
+          },
+          {
+            "source_id": "cnpoc-bawang",
+            "title": "霸王别姬",
+            "category": "经典剧目",
+            "author_or_organization": "国家京剧院·院办",
+            "source_url": "https://www.cnpoc.cn/cnpoc/mbb/200806/2c0fcc00d04849efa36386594e273bae.shtml",
+            "publication_date": "2025-10-22",
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.0",
+            "content_kind": "original_fact_summary",
+            "scope": "国家京剧院所列《霸王别姬》剧情；舞台故事不是史实研究，未包含电影同名作品。",
+            "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+            "content_hash": "733e7c77fed01a49f3a0f7101b8d8c2e554b48b506a3f1392705e037e59d8170"
+          },
+          {
+            "source_id": "cnpoc-costume",
+            "title": "京剧服装和人物身份有什么关系？",
+            "category": "京剧服饰",
+            "author_or_organization": "国家京剧院",
+            "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+            "publication_date": "2009-02-13",
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.0",
+            "content_kind": "original_fact_summary",
+            "scope": "传统京剧戏服的舞台用途；人物同一身份也可能因剧情场合或演出版本有不同穿戴。",
+            "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+            "content_hash": "70a5e6fd9bd22f9eed0d57a426d7e00b10d99010b29016441a2001218c9808e6"
+          },
+          {
+            "source_id": "cnpoc-dan",
+            "title": "京剧旦行小讲堂",
+            "category": "京剧行当",
+            "author_or_organization": "国家京剧院",
+            "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+            "publication_date": "2025-10-23",
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.0",
+            "content_kind": "original_fact_summary",
+            "scope": "该院课堂的旦行入门概括；角色应工及唱做比例须结合具体戏与流派。",
+            "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+            "content_hash": "97c698746dd732cb438331fce7d1114296e531bb70b94a4af4179659ec3e8ad6"
+          },
+          {
+            "source_id": "cnpoc-face",
+            "title": "二、京剧脸谱",
+            "category": "京剧脸谱",
+            "author_or_organization": "国家京剧院",
+            "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+            "publication_date": "2008-07-10",
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.1",
+            "content_kind": "original_fact_summary",
+            "scope": "脸谱谱式及常见色彩表达；主色、副色、人物与剧目语境不能混为固定人格规则。",
+            "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+            "content_hash": "071cbed6767407f9ccac2bbbaa381703c06707a61d74d5ccdcea0b92fd566e6e"
+          },
+          {
+            "source_id": "cnpoc-jing",
+            "title": "京剧净行小讲堂",
+            "category": "京剧行当",
+            "author_or_organization": "国家京剧院",
+            "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/202505/1429cdcaf7384ed985ac6b90b8af2309.shtml",
+            "publication_date": "2025-05-16",
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.0",
+            "content_kind": "original_fact_summary",
+            "scope": "该院入门课堂的正净、副净、武净分类；举例适用于所列剧目人物。",
+            "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+            "content_hash": "f9ff22dfe5f59486020ec62fbc7abedd210a2fff1252769ddedb831bd6846cce"
+          },
+          {
+            "source_id": "cnpoc-mei",
+            "title": "梅(兰芳)派",
+            "category": "角色文化",
+            "author_or_organization": "国家京剧院",
+            "source_url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+            "publication_date": "2008-07-10",
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.0",
+            "content_kind": "original_fact_summary",
+            "scope": "梅派艺术概述的历史事实；该2008年页面人物现状不作为当今状态。",
+            "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+            "content_hash": "cc2a001df6141d58c916ce868fb79c240e14ac22f36335e053c1692996866485"
+          },
+          {
+            "source_id": "cnpoc-muguiying",
+            "title": "穆桂英挂帅",
+            "category": "经典剧目",
+            "author_or_organization": "国家京剧院·院办",
+            "source_url": "https://www.cnpoc.cn/cnpoc/mbm/200806/677c0bbf8a594b35901c47ea19f50a03.shtml",
+            "publication_date": "2008-06-23",
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.0",
+            "content_kind": "original_fact_summary",
+            "scope": "该院介绍的1959年京剧改编版本；不与其他《穆桂英挂帅》剧种或故事版本自动合并。",
+            "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+            "content_hash": "fa86624a9075110847f1b94bfaeb1295e85574c5d0d161f41b0454ac013f6d10"
+          },
+          {
+            "source_id": "cnpoc-sanchakou",
+            "title": "三岔口",
+            "category": "经典剧目",
+            "author_or_organization": "国家京剧院·院办",
+            "source_url": "https://www.cnpoc.cn/cnpoc/mbs/200806/aa3b20102b2548378a92ccc640c25eb2.shtml",
+            "publication_date": "2008-06-24",
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.0",
+            "content_kind": "original_fact_summary",
+            "scope": "国家京剧院该剧简介；借宿、误会与解误属于舞台剧情。",
+            "license_url": "https://www.cnpoc.cn/cnpoc/bqsm/public_detail_1.shtml",
+            "content_hash": "2ac46edf89427079842e06a07d85c73ca08e2f1cd9c00cb55c6b07895ce95425"
+          },
+          {
+            "source_id": "fujian-roles",
+            "title": "京剧的行当分类是什么？",
+            "category": "京剧行当",
+            "author_or_organization": "福建京剧院（福建省文化和旅游厅发布）",
+            "source_url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "publication_date": "2021-12-08",
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.0",
+            "content_kind": "original_fact_summary",
+            "scope": "四大行当的入门分类；具体细分体系可随教学传统和版本不同。",
+            "license_url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "content_hash": "68fcdede51c3d7d66090f2c38fef4f7c14ad83419ee634ae511e0a8572142eae"
+          },
+          {
+            "source_id": "ihchina-jingju",
+            "title": "京剧",
+            "category": "京剧历史",
+            "author_or_organization": "中国艺术研究院·中国非物质文化遗产保护中心",
+            "source_url": "https://www.ihchina.cn/project_details/13201",
+            "publication_date": null,
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.0",
+            "content_kind": "original_fact_summary",
+            "scope": "国家级非遗项目介绍的基础事实；形成过程与艺术体系。摘要未指定唯一形成年份。",
+            "license_url": "https://www.ihchina.cn/about/206.html",
+            "content_hash": "41b092c3b4032a9bc12963fa53cbe343e180398f0f60f3845ef4e89cc7485aea"
+          },
+          {
+            "source_id": "ncfta-male-roles",
+            "title": "京劇行當",
+            "category": "京剧行当",
+            "author_or_organization": "国立传统艺术中心",
+            "source_url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+            "publication_date": null,
+            "collected_at": "2026-10-10",
+            "license_status": "original_fact_summary_project_authorized; source_text_rights_reserved",
+            "review_status": "source_checked_by_assistant",
+            "document_version": "1.0.0",
+            "content_kind": "original_fact_summary",
+            "scope": "“行当介绍—生”中的通行舞台类型；繁体术语转为简体摘要，未复制原文章。",
+            "license_url": "https://www.ncfta.gov.tw/cp.aspx?n=1769",
+            "content_hash": "4d79587b4bffd3d58d78ee1394d879c4d8aaea193c9ef16fb44339e80bbbaf3c"
+          }
+        ]
+      }
+    },
+    {
+      "name": "real BGE search",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "response": {
+        "question": "刀马旦的扮相有哪些特点？",
+        "evidence": [
+          {
+            "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "sourceId": "cnpoc-dan",
+            "sectionId": "cnpoc-dan-daoma-wu",
+            "title": "京剧旦行小讲堂",
+            "locator": "正文（3）刀马旦、（5）武旦 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+            "excerpt": "刀马旦常扮演女将帅，硬靠、雉尾是常见扮相，重唱念与舞蹈。\n武旦常着短装，表演更侧重武打与打出手等技巧。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧行当",
+            "entityNames": [
+              "刀马旦",
+              "武旦",
+              "硬靠",
+              "雉尾",
+              "打出手"
+            ],
+            "vectorScore": 0.7383972898087527,
+            "keywordScore": -4.747316446317664,
+            "entityMatchCount": 1,
+            "acceptedBy": "vector_threshold",
+            "rank": 1,
+            "reviewStatus": "source_checked_by_assistant"
+          },
+          {
+            "id": "chunk_eba2a0b8b78f35deb139ca978314152ee74e3c66b9ec7bcc2b66c8d3377e41b2",
+            "chunkId": "chunk_eba2a0b8b78f35deb139ca978314152ee74e3c66b9ec7bcc2b66c8d3377e41b2",
+            "sourceId": "cnpoc-dan",
+            "sectionId": "cnpoc-dan-huashan-laodan",
+            "title": "京剧旦行小讲堂",
+            "locator": "正文（4）花衫、（6）老旦 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+            "excerpt": "花衫综合青衣、花旦、刀马旦的表演特点。\n老旦表现老年妇女，常重唱功并用本嗓，课堂举例为《杨门女将》的佘太君。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧行当",
+            "entityNames": [
+              "花衫",
+              "老旦",
+              "本嗓",
+              "杨门女将",
+              "佘太君"
+            ],
+            "vectorScore": 0.6314420680711563,
+            "keywordScore": -4.675125823863843,
+            "entityMatchCount": 0,
+            "acceptedBy": "vector_threshold",
+            "rank": 2,
+            "reviewStatus": "source_checked_by_assistant"
+          },
+          {
+            "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "sourceId": "fujian-roles",
+            "sectionId": "fujian-roles-sheng-dan",
+            "title": "京剧的行当分类是什么？",
+            "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧行当",
+            "entityNames": [
+              "生",
+              "旦",
+              "老生",
+              "小生",
+              "武生",
+              "青衣",
+              "花旦"
+            ],
+            "vectorScore": 0.5577548683398698,
+            "keywordScore": -4.5371368210356176,
+            "entityMatchCount": 0,
+            "acceptedBy": "exact_entity_keyword",
+            "rank": 3,
+            "reviewStatus": "source_checked_by_assistant"
+          }
+        ],
+        "uncertain": false,
+        "retrievalMode": "hybrid",
+        "matchedEntities": [
+          "刀马旦"
+        ],
+        "elapsedSeconds": 0.0092,
+        "threshold": 0.57,
+        "candidateScores": [
+          {
+            "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "score": 0.7383972898087527
+          },
+          {
+            "chunkId": "chunk_eba2a0b8b78f35deb139ca978314152ee74e3c66b9ec7bcc2b66c8d3377e41b2",
+            "score": 0.6314420680711563
+          },
+          {
+            "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "score": 0.5577548683398698
+          },
+          {
+            "chunkId": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+            "score": 0.5327339739144558
+          },
+          {
+            "chunkId": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+            "score": 0.5067064440138536
+          },
+          {
+            "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "score": 0.4983910398608071
+          },
+          {
+            "chunkId": "chunk_20620832fe3d9595b1e167fa586a06d2a3319cff1d703acb00709a674645a517",
+            "score": 0.48905282405364114
+          },
+          {
+            "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+            "score": 0.48508039886826104
+          },
+          {
+            "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+            "score": 0.47940548634760766
+          },
+          {
+            "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+            "score": 0.4627121592162573
+          }
+        ],
+        "requestId": "ea15d50f-3dde-488d-9fe6-ab52180e6205"
+      }
+    },
+    {
+      "name": "existing task status",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "response": {
+        "taskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+        "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+        "state": "completed",
+        "currentAgent": "reviewer",
+        "agents": [
+          {
+            "id": "planner",
+            "state": "completed",
+            "summary": "已整理主题「京剧非遗展览原创将帅」及3项需求。",
+            "startedAt": "2026-10-11T05:51:58.362240+00:00",
+            "finishedAt": "2026-10-11T05:51:59.560892+00:00",
+            "errorCode": null
+          },
+          {
+            "id": "researcher",
+            "state": "completed",
+            "summary": "完成3条真实检索，保留5条候选依据。",
+            "startedAt": "2026-10-11T05:51:59.565399+00:00",
+            "finishedAt": "2026-10-11T05:51:59.607712+00:00",
+            "errorCode": null
+          },
+          {
+            "id": "designer",
+            "state": "completed",
+            "summary": "已生成原创角色「青旌将·霄羽」草案，尚待文化审校。",
+            "startedAt": "2026-10-11T05:51:59.614262+00:00",
+            "finishedAt": "2026-10-11T05:52:01.520460+00:00",
+            "errorCode": null
+          },
+          {
+            "id": "reviewer",
+            "state": "completed",
+            "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+            "startedAt": "2026-10-11T05:52:01.525973+00:00",
+            "finishedAt": "2026-10-11T05:52:02.331440+00:00",
+            "errorCode": null
+          }
+        ],
+        "completedSteps": 4,
+        "totalSteps": 4,
+        "events": [
+          {
+            "kind": "task",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 1,
+            "occurredAt": "2026-10-11T05:51:58.349913+00:00",
+            "summary": "任务已保存，等待真实工作流调度。",
+            "taskState": "waiting"
+          },
+          {
+            "kind": "task",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 2,
+            "occurredAt": "2026-10-11T05:51:58.356572+00:00",
+            "summary": "工作流已实际开始。",
+            "taskState": "running"
+          },
+          {
+            "kind": "agent",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 3,
+            "occurredAt": "2026-10-11T05:51:58.363237+00:00",
+            "summary": "正在执行此阶段；结果将在校验后展示。",
+            "agentId": "planner",
+            "state": "running"
+          },
+          {
+            "kind": "agent",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 4,
+            "occurredAt": "2026-10-11T05:51:59.562070+00:00",
+            "summary": "已整理主题「京剧非遗展览原创将帅」及3项需求。",
+            "agentId": "planner",
+            "state": "completed"
+          },
+          {
+            "kind": "agent",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 5,
+            "occurredAt": "2026-10-11T05:51:59.566467+00:00",
+            "summary": "正在执行此阶段；结果将在校验后展示。",
+            "agentId": "researcher",
+            "state": "running"
+          },
+          {
+            "kind": "agent",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 6,
+            "occurredAt": "2026-10-11T05:51:59.609066+00:00",
+            "summary": "完成3条真实检索，保留5条候选依据。",
+            "agentId": "researcher",
+            "state": "completed"
+          },
+          {
+            "kind": "agent",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 7,
+            "occurredAt": "2026-10-11T05:51:59.614262+00:00",
+            "summary": "正在执行此阶段；结果将在校验后展示。",
+            "agentId": "designer",
+            "state": "running"
+          },
+          {
+            "kind": "agent",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 8,
+            "occurredAt": "2026-10-11T05:52:01.521934+00:00",
+            "summary": "已生成原创角色「青旌将·霄羽」草案，尚待文化审校。",
+            "agentId": "designer",
+            "state": "completed"
+          },
+          {
+            "kind": "agent",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 9,
+            "occurredAt": "2026-10-11T05:52:01.525973+00:00",
+            "summary": "正在执行此阶段；结果将在校验后展示。",
+            "agentId": "reviewer",
+            "state": "running"
+          },
+          {
+            "kind": "agent",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 10,
+            "occurredAt": "2026-10-11T05:52:02.332440+00:00",
+            "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+            "agentId": "reviewer",
+            "state": "completed"
+          },
+          {
+            "kind": "task",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 11,
+            "occurredAt": "2026-10-11T05:52:02.336440+00:00",
+            "summary": "设计与辅助审校已返回，等待你确认。",
+            "taskState": "awaiting_confirmation",
+            "confirmationId": "a6b0bb16-1c3e-4c80-8ff4-dbe589570cb9"
+          },
+          {
+            "kind": "task",
+            "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "sequence": 12,
+            "occurredAt": "2026-10-11T05:54:18.901780+00:00",
+            "summary": "用户已明确接受最终设计；图像与3D生成仍未接入。",
+            "taskState": "completed"
+          }
+        ],
+        "lastSequence": 12,
+        "sequence": 12,
+        "confirmation": null,
+        "resultReady": true,
+        "cancelRequested": false,
+        "createdAt": "2026-10-11T05:51:58.347908+00:00",
+        "updatedAt": "2026-10-11T05:54:18.901780+00:00",
+        "requestId": "8c1f3958-8c24-4849-af8e-105b2ed1880b"
+      }
+    },
+    {
+      "name": "persistent exact-key replay",
+      "status": 202,
+      "expected": 202,
+      "passed": true,
+      "response": {
+        "taskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+        "runId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+        "state": "completed",
+        "sequence": 12,
+        "statusUrl": "/api/v1/agent/status/0a808e2b-182e-4457-b0bb-5e4f39a66263",
+        "resultUrl": "/api/v1/agent/result/0a808e2b-182e-4457-b0bb-5e4f39a66263",
+        "requestId": "c89dabf8-89fe-449f-bf82-66989a8f4cab"
+      }
+    },
+    {
+      "name": "replay retains task ID",
+      "passed": true
+    },
+    {
+      "name": "different brief same key",
+      "status": 409,
+      "expected": 409,
+      "passed": true,
+      "response": {
+        "error": {
+          "code": "IDEMPOTENCY_CONFLICT",
+          "message": "同一提交标识不能用于不同创作需求。",
+          "retryable": false
+        },
+        "requestId": "9ade227d-8f65-449a-8fb1-d3dd3fc941a1"
+      }
+    },
+    {
+      "name": "empty brief",
+      "status": 422,
+      "expected": 422,
+      "passed": true,
+      "response": {
+        "error": {
+          "code": "INVALID_REQUEST",
+          "message": "创作请求格式不正确：需求不能为空且最多1200个字符单位，风格与任务操作参数也须有效。",
+          "retryable": false
+        },
+        "requestId": "c3b74c0b-c92d-4845-b70d-357cbeafa35a"
+      }
+    },
+    {
+      "name": "overlong brief",
+      "status": 422,
+      "expected": 422,
+      "passed": true,
+      "response": {
+        "error": {
+          "code": "INVALID_REQUEST",
+          "message": "创作请求格式不正确：需求不能为空且最多1200个字符单位，风格与任务操作参数也须有效。",
+          "retryable": false
+        },
+        "requestId": "33d5f69e-339e-4184-9f54-c1d8fc941db8"
+      }
+    },
+    {
+      "name": "unknown task",
+      "status": 404,
+      "expected": 404,
+      "passed": true,
+      "response": {
+        "error": {
+          "code": "AGENT_TASK_NOT_FOUND",
+          "message": "未找到这个创作任务，请检查任务标识。",
+          "retryable": false
+        },
+        "requestId": "49212c02-8070-49b1-a260-10f0c207d262"
+      }
+    },
+    {
+      "name": "out-of-range cursor",
+      "status": 422,
+      "expected": 422,
+      "passed": true,
+      "response": {
+        "error": {
+          "code": "INVALID_REQUEST",
+          "message": "创作请求格式不正确：需求不能为空且最多1200个字符单位，风格与任务操作参数也须有效。",
+          "retryable": false
+        },
+        "requestId": "18b28aa3-e461-444d-8b7d-1cc6eda72bee"
+      }
+    },
+    {
+      "name": "out-of-range mutation sequence",
+      "status": 422,
+      "expected": 422,
+      "passed": true,
+      "response": {
+        "error": {
+          "code": "INVALID_REQUEST",
+          "message": "创作请求格式不正确：需求不能为空且最多1200个字符单位，风格与任务操作参数也须有效。",
+          "retryable": false
+        },
+        "requestId": "dec1a366-9ee9-48ba-a158-c876684e6a2e"
+      }
+    },
+    {
+      "name": "invalid confirmation",
+      "status": 409,
+      "expected": 409,
+      "passed": true,
+      "response": {
+        "error": {
+          "code": "AGENT_CONFIRMATION_INVALID",
+          "message": "这个任务不能直接接受，请先解决需求或文化依据问题。",
+          "retryable": false
+        },
+        "requestId": "4eb43606-d3f0-46c2-8fd7-8b95855c499a"
+      }
+    },
+    {
+      "name": "all checks generate zero new model calls",
+      "passed": true,
+      "before": 94,
+      "after": 94
+    }
+  ],
+  "healthAfter": {
+    "status": "ready",
+    "knowledge": true,
+    "embedding": true,
+    "llmConfigured": true,
+    "llmVerified": true,
+    "diagnostic": null,
+    "documents": 12,
+    "chunks": 35,
+    "budget": {
+      "calls": 94,
+      "estimatedUpperCostCny": 0.21980032,
+      "budgetCny": 3.0,
+      "priceVerifiedAt": "2026-10-11",
+      "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+      "activeScope": {
+        "name": "phase3",
+        "calls": 32,
+        "estimatedUpperCostCny": 0.08636608,
+        "budgetCny": 0.5
+      },
+      "scopes": {
+        "phase3": {
+          "name": "phase3",
+          "calls": 32,
+          "estimatedUpperCostCny": 0.08636608,
+          "budgetCny": 0.5
+        }
+      }
+    },
+    "agents": {
+      "supervisorReady": true,
+      "activeTaskId": null,
+      "enabled": true,
+      "diagnostic": null
+    }
+  },
+  "passed": true
+}

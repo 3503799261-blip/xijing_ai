@@ -1,0 +1,1258 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-10-11T06:17:44.816152+00:00",
+  "scope": "Real HTTP workflow and real backend RAG/LLM; no automatic retry",
+  "case": "dan",
+  "brief": {
+    "requirements": "设计一位用于国风游戏角色设定展示的原创年轻女性角色，以京剧刀马旦的硬靠、雉尾扮相为文化灵感。服装与表演依据须引用资料；银青配色、云纹与角色姓名明确属于原创，不使用真实演员姓名。",
+    "style": "国风幻想"
+  },
+  "budgetBefore": {
+    "calls": 86,
+    "estimatedUpperCostCny": 0.19897176,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 24,
+        "estimatedUpperCostCny": 0.06553752,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "pollSamples": [
+    {
+      "taskId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "state": "running",
+      "currentAgent": "planner",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:17:44.918648+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 0,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:17:44.910600+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:17:44.914604+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:17:44.918648+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 3,
+      "sequence": 3,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:17:44.908601+00:00",
+      "updatedAt": "2026-10-11T06:17:44.918648+00:00",
+      "requestId": "fba29e73-aa6a-4c58-81c8-5601b3b6feaf"
+    },
+    {
+      "taskId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "state": "running",
+      "currentAgent": "designer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧刀马旦角色设定」及3项需求。",
+          "startedAt": "2026-10-11T06:17:44.918648+00:00",
+          "finishedAt": "2026-10-11T06:17:46.059725+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "startedAt": "2026-10-11T06:17:46.063524+00:00",
+          "finishedAt": "2026-10-11T06:17:46.097634+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:17:46.103208+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 2,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:17:44.910600+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:17:44.914604+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:17:44.918648+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:17:46.059725+00:00",
+          "summary": "已整理主题「京剧刀马旦角色设定」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:17:46.065003+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:17:46.099634+00:00",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:17:46.104208+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 7,
+      "sequence": 7,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:17:44.908601+00:00",
+      "updatedAt": "2026-10-11T06:17:46.104208+00:00",
+      "requestId": "e9b58d71-0dd3-4b83-8003-d7765a25bff7"
+    },
+    {
+      "taskId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "state": "running",
+      "currentAgent": "reviewer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧刀马旦角色设定」及3项需求。",
+          "startedAt": "2026-10-11T06:17:44.918648+00:00",
+          "finishedAt": "2026-10-11T06:17:46.059725+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "startedAt": "2026-10-11T06:17:46.063524+00:00",
+          "finishedAt": "2026-10-11T06:17:46.097634+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "completed",
+          "summary": "已生成原创角色「银翎」草案，尚待文化审校。",
+          "startedAt": "2026-10-11T06:17:46.103208+00:00",
+          "finishedAt": "2026-10-11T06:17:48.239325+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:17:48.244417+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 3,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:17:44.910600+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:17:44.914604+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:17:44.918648+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:17:46.059725+00:00",
+          "summary": "已整理主题「京剧刀马旦角色设定」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:17:46.065003+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:17:46.099634+00:00",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:17:46.104208+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 8,
+          "occurredAt": "2026-10-11T06:17:48.240357+00:00",
+          "summary": "已生成原创角色「银翎」草案，尚待文化审校。",
+          "agentId": "designer",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 9,
+          "occurredAt": "2026-10-11T06:17:48.244417+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "reviewer",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 9,
+      "sequence": 9,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:17:44.908601+00:00",
+      "updatedAt": "2026-10-11T06:17:48.244417+00:00",
+      "requestId": "2564f44a-8bbc-4095-897f-04bb7b2aacf9"
+    },
+    {
+      "taskId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "state": "awaiting_confirmation",
+      "currentAgent": "reviewer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧刀马旦角色设定」及3项需求。",
+          "startedAt": "2026-10-11T06:17:44.918648+00:00",
+          "finishedAt": "2026-10-11T06:17:46.059725+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "startedAt": "2026-10-11T06:17:46.063524+00:00",
+          "finishedAt": "2026-10-11T06:17:46.097634+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "completed",
+          "summary": "已生成原创角色「银翎」草案，尚待文化审校。",
+          "startedAt": "2026-10-11T06:17:46.103208+00:00",
+          "finishedAt": "2026-10-11T06:17:48.239325+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "completed",
+          "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+          "startedAt": "2026-10-11T06:17:48.244417+00:00",
+          "finishedAt": "2026-10-11T06:17:49.321319+00:00",
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 4,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:17:44.910600+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:17:44.914604+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:17:44.918648+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:17:46.059725+00:00",
+          "summary": "已整理主题「京剧刀马旦角色设定」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:17:46.065003+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:17:46.099634+00:00",
+          "summary": "完成2条真实检索，保留5条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:17:46.104208+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 8,
+          "occurredAt": "2026-10-11T06:17:48.240357+00:00",
+          "summary": "已生成原创角色「银翎」草案，尚待文化审校。",
+          "agentId": "designer",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 9,
+          "occurredAt": "2026-10-11T06:17:48.244417+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "reviewer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 10,
+          "occurredAt": "2026-10-11T06:17:49.322321+00:00",
+          "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+          "agentId": "reviewer",
+          "state": "completed"
+        },
+        {
+          "kind": "task",
+          "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+          "sequence": 11,
+          "occurredAt": "2026-10-11T06:17:49.325983+00:00",
+          "summary": "设计与辅助审校已返回，等待你确认。",
+          "taskState": "awaiting_confirmation",
+          "confirmationId": "0e698960-0b76-4bcc-8e8a-f0f6b8ac09e6"
+        }
+      ],
+      "lastSequence": 11,
+      "sequence": 11,
+      "confirmation": {
+        "id": "0e698960-0b76-4bcc-8e8a-f0f6b8ac09e6",
+        "reason": "final_acceptance",
+        "canAccept": true
+      },
+      "resultReady": true,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:17:44.908601+00:00",
+      "updatedAt": "2026-10-11T06:17:49.325983+00:00",
+      "requestId": "f2617833-d6e3-4670-a4e4-9d7e6fc03c29"
+    }
+  ],
+  "createHttpStatus": 202,
+  "created": {
+    "taskId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+    "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/0b771020-036f-4e68-96e8-1d9289e00bf3",
+    "resultUrl": "/api/v1/agent/result/0b771020-036f-4e68-96e8-1d9289e00bf3",
+    "requestId": "7059c512-31ee-41b0-a77e-100c40ca4a61"
+  },
+  "finalStatus": {
+    "taskId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+    "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+    "state": "awaiting_confirmation",
+    "currentAgent": "reviewer",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "completed",
+        "summary": "已整理主题「京剧刀马旦角色设定」及3项需求。",
+        "startedAt": "2026-10-11T06:17:44.918648+00:00",
+        "finishedAt": "2026-10-11T06:17:46.059725+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "researcher",
+        "state": "completed",
+        "summary": "完成2条真实检索，保留5条候选依据。",
+        "startedAt": "2026-10-11T06:17:46.063524+00:00",
+        "finishedAt": "2026-10-11T06:17:46.097634+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "completed",
+        "summary": "已生成原创角色「银翎」草案，尚待文化审校。",
+        "startedAt": "2026-10-11T06:17:46.103208+00:00",
+        "finishedAt": "2026-10-11T06:17:48.239325+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "reviewer",
+        "state": "completed",
+        "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+        "startedAt": "2026-10-11T06:17:48.244417+00:00",
+        "finishedAt": "2026-10-11T06:17:49.321319+00:00",
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 4,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T06:17:44.910600+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T06:17:44.914604+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T06:17:44.918648+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T06:17:46.059725+00:00",
+        "summary": "已整理主题「京剧刀马旦角色设定」及3项需求。",
+        "agentId": "planner",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T06:17:46.065003+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "researcher",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+        "sequence": 6,
+        "occurredAt": "2026-10-11T06:17:46.099634+00:00",
+        "summary": "完成2条真实检索，保留5条候选依据。",
+        "agentId": "researcher",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+        "sequence": 7,
+        "occurredAt": "2026-10-11T06:17:46.104208+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "designer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+        "sequence": 8,
+        "occurredAt": "2026-10-11T06:17:48.240357+00:00",
+        "summary": "已生成原创角色「银翎」草案，尚待文化审校。",
+        "agentId": "designer",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+        "sequence": 9,
+        "occurredAt": "2026-10-11T06:17:48.244417+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "reviewer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+        "sequence": 10,
+        "occurredAt": "2026-10-11T06:17:49.322321+00:00",
+        "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+        "agentId": "reviewer",
+        "state": "completed"
+      },
+      {
+        "kind": "task",
+        "runId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+        "sequence": 11,
+        "occurredAt": "2026-10-11T06:17:49.325983+00:00",
+        "summary": "设计与辅助审校已返回，等待你确认。",
+        "taskState": "awaiting_confirmation",
+        "confirmationId": "0e698960-0b76-4bcc-8e8a-f0f6b8ac09e6"
+      }
+    ],
+    "lastSequence": 11,
+    "sequence": 11,
+    "confirmation": {
+      "id": "0e698960-0b76-4bcc-8e8a-f0f6b8ac09e6",
+      "reason": "final_acceptance",
+      "canAccept": true
+    },
+    "resultReady": true,
+    "cancelRequested": false,
+    "createdAt": "2026-10-11T06:17:44.908601+00:00",
+    "updatedAt": "2026-10-11T06:17:49.325983+00:00",
+    "requestId": "f2617833-d6e3-4670-a4e4-9d7e6fc03c29"
+  },
+  "resultHttpStatus": 200,
+  "result": {
+    "schemaVersion": "1.0",
+    "design": {
+      "schemaVersion": "1.0",
+      "name": "银翎",
+      "positioning": "国风幻想游戏角色展示用原创年轻女性角色，以京剧刀马旦硬靠雉尾扮相为文化灵感",
+      "costume": [
+        {
+          "description": "银青硬靠式铠甲，缀原创云纹披风",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "雉尾双翎头饰，翎尾加长幻想化",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "colors": [
+        {
+          "description": "银白为主、青碧为辅的原创配色",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "visualElements": [
+        {
+          "description": "旦行女将帅，硬靠雉尾常见扮相",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b"
+          ]
+        },
+        {
+          "description": "靠为将帅铠甲戏服，靠旗兼装饰表演",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+          ]
+        }
+      ],
+      "creativeElements": [
+        "角色名银翎为原创",
+        "云纹装饰与银青配色为原创设定"
+      ],
+      "visualPrompt": "国风幻想年轻女将，银白青碧配色，硬靠式铠甲配云纹披风，雉尾双翎头饰，舞台感姿态，非传统规范，新增细节均为原创。",
+      "usedEvidenceIds": [
+        "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+      ],
+      "limitations": [
+        "资料为原创事实摘要，未经京剧专家审核",
+        "硬靠雉尾具体形制未在资料中详述，造型细节属原创"
+      ],
+      "execution": {
+        "requestId": "0b771020-036f-4e68-96e8-1d9289e00bf3:designer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1213,
+          "completion_tokens": 316,
+          "total_tokens": 1529,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 957
+        },
+        "elapsedSeconds": 2.1248,
+        "promptVersion": "agent_designer_v3",
+        "promptHash": "b62062858884ae34ca53d84bbb3272afe049fee9aa52eaecf573f6bdfbd301ca"
+      }
+    },
+    "review": {
+      "verdict": "pass",
+      "issues": [],
+      "suggestions": [],
+      "checkedEvidenceIds": [
+        "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+      ],
+      "needsHumanReview": true,
+      "programmaticChecks": {
+        "garmentReferenceGuard": "conservative_literal_absence",
+        "issuesFound": 0
+      },
+      "execution": {
+        "requestId": "0b771020-036f-4e68-96e8-1d9289e00bf3:reviewer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1605,
+          "completion_tokens": 35,
+          "total_tokens": 1640,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 1349
+        },
+        "elapsedSeconds": 1.0653,
+        "promptVersion": "agent_reviewer_v3",
+        "promptHash": "05fb0e2791700446715e98c5180454035ed8d9cfc08e4dcda0fc3f19212e6ce4"
+      }
+    },
+    "citations": [
+      {
+        "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+        "title": "京剧旦行小讲堂",
+        "sourceId": "cnpoc-dan",
+        "locator": "正文（3）刀马旦、（5）武旦 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+        "excerpt": "刀马旦常扮演女将帅，硬靠、雉尾是常见扮相，重唱念与舞蹈。\n武旦常着短装，表演更侧重武打与打出手等技巧。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+        "title": "京剧服装和人物身份有什么关系？",
+        "sourceId": "cnpoc-costume",
+        "locator": "正文靠段 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+        "excerpt": "靠是表现男女将帅铠甲的戏服，常见于征战场面。\n靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。",
+        "contentKind": "original_fact_summary"
+      }
+    ],
+    "uncertain": false,
+    "publicationAllowed": false,
+    "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+    "promptVersions": {
+      "planner": "agent_planner_v3",
+      "researcher": "agent_research_v3",
+      "designer": "agent_designer_v3",
+      "reviewer": "agent_reviewer_v3"
+    },
+    "limitations": [
+      "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+      "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。",
+      "资料为原创事实摘要，未经京剧专家审核",
+      "硬靠雉尾具体形制未在资料中详述，造型细节属原创"
+    ],
+    "confirmationReason": "final_acceptance",
+    "taskId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+    "userConfirmed": false,
+    "requestId": "9c5be720-6dbc-468f-a527-f379294fca4d"
+  },
+  "outcome": "awaiting_confirmation",
+  "elapsedSeconds": 4.6749,
+  "budgetAfter": {
+    "calls": 89,
+    "estimatedUpperCostCny": 0.20798936,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 27,
+        "estimatedUpperCostCny": 0.07455512,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "providerCalls": [
+    {
+      "requestId": "0b771020-036f-4e68-96e8-1d9289e00bf3:planner",
+      "createdAt": "2026-10-11T06:17:44.921444+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.006636,
+      "estimatedUpperCny": 0.00157712,
+      "usage": {
+        "prompt_tokens": 370,
+        "completion_tokens": 136,
+        "total_tokens": 506,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 242
+      },
+      "scope": "phase3"
+    },
+    {
+      "requestId": "0b771020-036f-4e68-96e8-1d9289e00bf3:designer",
+      "createdAt": "2026-10-11T06:17:46.107717+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.016594,
+      "estimatedUpperCny": 0.00445224,
+      "usage": {
+        "prompt_tokens": 1213,
+        "completion_tokens": 316,
+        "total_tokens": 1529,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 957
+      },
+      "scope": "phase3"
+    },
+    {
+      "requestId": "0b771020-036f-4e68-96e8-1d9289e00bf3:reviewer",
+      "createdAt": "2026-10-11T06:17:48.247752+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.016346,
+      "estimatedUpperCny": 0.0029882399999999996,
+      "usage": {
+        "prompt_tokens": 1605,
+        "completion_tokens": 35,
+        "total_tokens": 1640,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1349
+      },
+      "scope": "phase3"
+    }
+  ],
+  "modelCallCount": 3,
+  "measuredTokens": 3675,
+  "estimatedCostCny": 0.0090176,
+  "artifacts": {
+    "designer": {
+      "schemaVersion": "1.0",
+      "name": "银翎",
+      "positioning": "国风幻想游戏角色展示用原创年轻女性角色，以京剧刀马旦硬靠雉尾扮相为文化灵感",
+      "costume": [
+        {
+          "description": "银青硬靠式铠甲，缀原创云纹披风",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "雉尾双翎头饰，翎尾加长幻想化",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "colors": [
+        {
+          "description": "银白为主、青碧为辅的原创配色",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "visualElements": [
+        {
+          "description": "旦行女将帅，硬靠雉尾常见扮相",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b"
+          ]
+        },
+        {
+          "description": "靠为将帅铠甲戏服，靠旗兼装饰表演",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+          ]
+        }
+      ],
+      "creativeElements": [
+        "角色名银翎为原创",
+        "云纹装饰与银青配色为原创设定"
+      ],
+      "visualPrompt": "国风幻想年轻女将，银白青碧配色，硬靠式铠甲配云纹披风，雉尾双翎头饰，舞台感姿态，非传统规范，新增细节均为原创。",
+      "usedEvidenceIds": [
+        "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+      ],
+      "limitations": [
+        "资料为原创事实摘要，未经京剧专家审核",
+        "硬靠雉尾具体形制未在资料中详述，造型细节属原创"
+      ],
+      "execution": {
+        "requestId": "0b771020-036f-4e68-96e8-1d9289e00bf3:designer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1213,
+          "completion_tokens": 316,
+          "total_tokens": 1529,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 957
+        },
+        "elapsedSeconds": 2.1248,
+        "promptVersion": "agent_designer_v3",
+        "promptHash": "b62062858884ae34ca53d84bbb3272afe049fee9aa52eaecf573f6bdfbd301ca"
+      }
+    },
+    "planner": {
+      "theme": "京剧刀马旦角色设定",
+      "target": "国风游戏角色展示",
+      "style": "国风幻想",
+      "requirements": [
+        {
+          "id": "R1",
+          "text": "原创年轻女性，硬靠雉尾扮相"
+        },
+        {
+          "id": "R2",
+          "text": "服装表演依据须引用资料"
+        },
+        {
+          "id": "R3",
+          "text": "银青配色云纹姓名原创"
+        }
+      ],
+      "researchQueries": [
+        "京剧刀马旦硬靠雉尾的扮相与表演规范",
+        "刀马旦靠旗雉尾的舞台用途与象征"
+      ],
+      "clarificationQuestions": [],
+      "requiredEntities": [
+        "刀马旦",
+        "硬靠",
+        "雉尾"
+      ],
+      "execution": {
+        "requestId": "0b771020-036f-4e68-96e8-1d9289e00bf3:planner",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 370,
+          "completion_tokens": 136,
+          "total_tokens": 506,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 242
+        },
+        "elapsedSeconds": 1.1306,
+        "promptVersion": "agent_planner_v3",
+        "promptHash": "914d01e192dd31e4e62bdc04eef1c9515f0da97d7632a23ecf6b0fd4d7e59e29"
+      }
+    },
+    "researcher": {
+      "queries": [
+        {
+          "question": "京剧刀马旦硬靠雉尾的扮相与表演规范",
+          "evidenceIds": [
+            "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+          ],
+          "uncertain": false,
+          "retrievalUncertain": false,
+          "missingYears": [],
+          "elapsedSeconds": 0.0132,
+          "retrievalMode": "hybrid"
+        },
+        {
+          "question": "刀马旦靠旗雉尾的舞台用途与象征",
+          "evidenceIds": [
+            "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+            "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+          ],
+          "uncertain": false,
+          "retrievalUncertain": false,
+          "missingYears": [],
+          "elapsedSeconds": 0.0133,
+          "retrievalMode": "hybrid"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "sourceId": "cnpoc-dan",
+          "sectionId": "cnpoc-dan-daoma-wu",
+          "title": "京剧旦行小讲堂",
+          "locator": "正文（3）刀马旦、（5）武旦 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+          "excerpt": "刀马旦常扮演女将帅，硬靠、雉尾是常见扮相，重唱念与舞蹈。\n武旦常着短装，表演更侧重武打与打出手等技巧。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "刀马旦",
+            "武旦",
+            "硬靠",
+            "雉尾",
+            "打出手"
+          ],
+          "vectorScore": 0.786556097624187,
+          "keywordScore": -15.411636590783475,
+          "entityMatchCount": 3,
+          "acceptedBy": "vector_threshold",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "97c698746dd732cb438331fce7d1114296e531bb70b94a4af4179659ec3e8ad6",
+          "chunkContentHash": "1db0cbb229e2d340790b92978c37ce4a32e30b1504336a6937bf555805a20e98"
+        },
+        {
+          "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-sheng-dan",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "生",
+            "旦",
+            "老生",
+            "小生",
+            "武生",
+            "青衣",
+            "花旦"
+          ],
+          "vectorScore": 0.5029757785371322,
+          "keywordScore": -6.076937036592205,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "68fcdede51c3d7d66090f2c38fef4f7c14ad83419ee634ae511e0a8572142eae",
+          "chunkContentHash": "4959ee55eae520b4f2d3bbdb688ce14d60f7d54a9ca2173801a84fc67b6187ed"
+        },
+        {
+          "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-kao",
+          "title": "京剧服装和人物身份有什么关系？",
+          "locator": "正文靠段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+          "excerpt": "靠是表现男女将帅铠甲的戏服，常见于征战场面。\n靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧服饰",
+          "entityNames": [
+            "靠",
+            "靠旗",
+            "护背旗",
+            "铠甲",
+            "将帅"
+          ],
+          "vectorScore": 0.554957115218897,
+          "keywordScore": -5.253716313950401,
+          "entityMatchCount": 2,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "70a5e6fd9bd22f9eed0d57a426d7e00b10d99010b29016441a2001218c9808e6",
+          "chunkContentHash": "cbe9fdabcb7947dfc40efe2e8547aa54f0ffa4879087496c627f4739e2fd70f5"
+        },
+        {
+          "id": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+          "chunkId": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+          "sourceId": "cnpoc-dan",
+          "sectionId": "cnpoc-dan-qingyi-huadan",
+          "title": "京剧旦行小讲堂",
+          "locator": "正文（1）正旦、（2）花旦 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+          "excerpt": "青衣也称正旦，常表现举止稳重的中青年女性，重唱功。\n花旦常表现年轻、活泼的女性，更多侧重做功和说白；\n这属于入门概括。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "旦",
+            "青衣",
+            "正旦",
+            "花旦"
+          ],
+          "vectorScore": 0.45892105461903526,
+          "keywordScore": -1.562864635720181,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 3,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "97c698746dd732cb438331fce7d1114296e531bb70b94a4af4179659ec3e8ad6",
+          "chunkContentHash": "f2537424062528cd27c6d8e89044baa5c4f2e94c8c02d1850e1d766a3a48b314"
+        },
+        {
+          "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-system",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文第一段及末段 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "京剧",
+            "行当",
+            "生",
+            "旦",
+            "净",
+            "丑",
+            "唱念做打"
+          ],
+          "vectorScore": 0.4903423618326178,
+          "keywordScore": -1.4956551028904574,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 5,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "68fcdede51c3d7d66090f2c38fef4f7c14ad83419ee634ae511e0a8572142eae",
+          "chunkContentHash": "fc83f0c55b048c90bebd8abd984d408fba192d35e8d5c4c470491efd3b70fb07"
+        }
+      ],
+      "requirementCoverage": [
+        {
+          "requirementId": "R1",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+          ]
+        },
+        {
+          "requirementId": "R2",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+          ]
+        },
+        {
+          "requirementId": "R3",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+          ]
+        }
+      ],
+      "limitations": [
+        "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+        "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。"
+      ],
+      "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+      "policyVersion": "agent_research_v3"
+    },
+    "reviewer": {
+      "verdict": "pass",
+      "issues": [],
+      "suggestions": [],
+      "checkedEvidenceIds": [
+        "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+      ],
+      "needsHumanReview": true,
+      "programmaticChecks": {
+        "garmentReferenceGuard": "conservative_literal_absence",
+        "issuesFound": 0
+      },
+      "execution": {
+        "requestId": "0b771020-036f-4e68-96e8-1d9289e00bf3:reviewer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1605,
+          "completion_tokens": 35,
+          "total_tokens": 1640,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 1349
+        },
+        "elapsedSeconds": 1.0653,
+        "promptVersion": "agent_reviewer_v3",
+        "promptHash": "05fb0e2791700446715e98c5180454035ed8d9cfc08e4dcda0fc3f19212e6ce4"
+      }
+    }
+  },
+  "citationMappingChecks": [
+    {
+      "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+      "valid": true
+    },
+    {
+      "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+      "valid": true
+    }
+  ]
+}

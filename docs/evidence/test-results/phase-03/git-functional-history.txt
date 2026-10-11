@@ -1,0 +1,7 @@
+b6041be91fb26f39c002182ca45eca7b5ff772d8 docs: approve phase 3 agent architecture and preserve request
+381d62e746306d66193de1c3e62db1be25ae1b1a feat: persist agent tasks with bounded lifecycle and shared budget
+903fe1d94a6b927f13aca52460c30a858e2399ea feat: coordinate grounded opera planning design and culture review
+81dd4516a5d42854ef488488f8aec83c24b555b0 feat: connect workshop to persisted agent creation and confirmation
+63ce099081bc46a370e765b13de0c166fb2df2fd fix: guard unsupported cultural claims and exclusive task ownership
+3d50f70f68137a19de604690bf7de5930d11a1ee fix: preserve research uncertainty and validate compact cultural plans
+d96ee0c3f29e4782675df23f16b1470a522df25e fix: clarify incomplete briefs and recheck missing opera entities

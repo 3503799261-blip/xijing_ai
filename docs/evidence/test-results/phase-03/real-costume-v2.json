@@ -1,0 +1,349 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-10-11T06:10:02.532934+00:00",
+  "scope": "Real HTTP workflow and real backend RAG/LLM; no automatic retry",
+  "case": "costume",
+  "brief": {
+    "requirements": "设计一位原创国风舞台角色，以京剧服装表达身份与人物气质为依据，明确蟒与靠各自的适用语境。颜色与未来装饰可原创，不把创意说成传统规范。",
+    "style": "舞台角色"
+  },
+  "budgetBefore": {
+    "calls": 75,
+    "estimatedUpperCostCny": 0.16858992,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 13,
+        "estimatedUpperCostCny": 0.03515568,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "pollSamples": [
+    {
+      "taskId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+      "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+      "state": "running",
+      "currentAgent": "planner",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:10:02.665322+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 0,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:10:02.642383+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:10:02.648614+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:10:02.666322+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 3,
+      "sequence": 3,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:10:02.641383+00:00",
+      "updatedAt": "2026-10-11T06:10:02.666322+00:00",
+      "requestId": "a805c944-7815-4b15-9d49-52cc3fc0604e"
+    },
+    {
+      "taskId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+      "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+      "state": "failed",
+      "currentAgent": "planner",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "failed",
+          "summary": "任务计划格式或用户风格约束未通过校验，未继续创作。",
+          "startedAt": "2026-10-11T06:10:02.665322+00:00",
+          "finishedAt": "2026-10-11T06:10:03.887245+00:00",
+          "errorCode": "AGENT_PLAN_INVALID"
+        },
+        {
+          "id": "researcher",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 0,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:10:02.642383+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:10:02.648614+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:10:02.666322+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:10:03.887245+00:00",
+          "summary": "任务计划格式或用户风格约束未通过校验，未继续创作。",
+          "agentId": "planner",
+          "state": "failed",
+          "errorCode": "AGENT_PLAN_INVALID"
+        },
+        {
+          "kind": "task",
+          "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:10:03.890238+00:00",
+          "summary": "任务计划格式或用户风格约束未通过校验，未继续创作。",
+          "taskState": "failed",
+          "errorCode": "AGENT_PLAN_INVALID"
+        }
+      ],
+      "lastSequence": 5,
+      "sequence": 5,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:10:02.641383+00:00",
+      "updatedAt": "2026-10-11T06:10:03.890238+00:00",
+      "requestId": "7ffc9e67-9327-4628-89bc-a5f72124af53"
+    }
+  ],
+  "createHttpStatus": 202,
+  "created": {
+    "taskId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+    "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/5e33473b-ab53-4e38-a578-3206d1d6ef37",
+    "resultUrl": "/api/v1/agent/result/5e33473b-ab53-4e38-a578-3206d1d6ef37",
+    "requestId": "46a3e90e-bb64-41bf-a0ab-664c6cd50923"
+  },
+  "finalStatus": {
+    "taskId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+    "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+    "state": "failed",
+    "currentAgent": "planner",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "failed",
+        "summary": "任务计划格式或用户风格约束未通过校验，未继续创作。",
+        "startedAt": "2026-10-11T06:10:02.665322+00:00",
+        "finishedAt": "2026-10-11T06:10:03.887245+00:00",
+        "errorCode": "AGENT_PLAN_INVALID"
+      },
+      {
+        "id": "researcher",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      },
+      {
+        "id": "reviewer",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 0,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T06:10:02.642383+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T06:10:02.648614+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T06:10:02.666322+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T06:10:03.887245+00:00",
+        "summary": "任务计划格式或用户风格约束未通过校验，未继续创作。",
+        "agentId": "planner",
+        "state": "failed",
+        "errorCode": "AGENT_PLAN_INVALID"
+      },
+      {
+        "kind": "task",
+        "runId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T06:10:03.890238+00:00",
+        "summary": "任务计划格式或用户风格约束未通过校验，未继续创作。",
+        "taskState": "failed",
+        "errorCode": "AGENT_PLAN_INVALID"
+      }
+    ],
+    "lastSequence": 5,
+    "sequence": 5,
+    "confirmation": null,
+    "resultReady": false,
+    "cancelRequested": false,
+    "createdAt": "2026-10-11T06:10:02.641383+00:00",
+    "updatedAt": "2026-10-11T06:10:03.890238+00:00",
+    "requestId": "7ffc9e67-9327-4628-89bc-a5f72124af53"
+  },
+  "outcome": "failed",
+  "elapsedSeconds": 1.6749,
+  "budgetAfter": {
+    "calls": 76,
+    "estimatedUpperCostCny": 0.17014992,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 14,
+        "estimatedUpperCostCny": 0.03671568,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "providerCalls": [
+    {
+      "requestId": "5e33473b-ab53-4e38-a578-3206d1d6ef37:planner",
+      "createdAt": "2026-10-11T06:10:02.669361+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.005452,
+      "estimatedUpperCny": 0.00156,
+      "usage": {
+        "prompt_tokens": 336,
+        "completion_tokens": 111,
+        "total_tokens": 447,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 336
+      },
+      "scope": "phase3"
+    }
+  ],
+  "modelCallCount": 1,
+  "measuredTokens": 447,
+  "estimatedCostCny": 0.00156,
+  "artifacts": {},
+  "citationMappingChecks": []
+}

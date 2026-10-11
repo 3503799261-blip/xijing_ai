@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-10-11T06:57:12.198736+00:00",
+  "scope": "Offline pytest with explicit test doubles, not real model evidence",
+  "command": ".venv/Scripts/python.exe -m pytest -q backend/tests --junitxml=<private-runtime-path>",
+  "tests": 213,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "suiteSeconds": 6.653,
+  "warning": "Existing Starlette TestClient/httpx deprecation; no blocking failure"
+}

@@ -1,0 +1,651 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-10-11T05:47:13.832146+00:00",
+  "scope": "Real HTTP workflow and real backend RAG/LLM; no automatic retry",
+  "case": "uncovered",
+  "brief": {
+    "requirements": "按京剧量子星舰行当的真实传统规范设计角色。必须查到量子星舰行当的专业来源，没有资料不能把幻想设定当作传统事实。",
+    "style": "国风幻想"
+  },
+  "budgetBefore": {
+    "calls": 71,
+    "estimatedUpperCostCny": 0.1584792,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 9,
+        "estimatedUpperCostCny": 0.02504496,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "pollSamples": [
+    {
+      "taskId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+      "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+      "state": "running",
+      "currentAgent": "planner",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T05:47:13.938284+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 0,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T05:47:13.929428+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T05:47:13.934035+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T05:47:13.938284+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 3,
+      "sequence": 3,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T05:47:13.926424+00:00",
+      "updatedAt": "2026-10-11T05:47:13.938284+00:00",
+      "requestId": "c3438979-6335-43c9-9e5e-d104b74aaeaf"
+    },
+    {
+      "taskId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+      "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+      "state": "awaiting_confirmation",
+      "currentAgent": "researcher",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧量子星舰角色」及3项需求。",
+          "startedAt": "2026-10-11T05:47:13.938284+00:00",
+          "finishedAt": "2026-10-11T05:47:15.023504+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "awaiting_confirmation",
+          "summary": "部分必需文化研究缺少有效资料，请调整要求或补充获准资料。",
+          "startedAt": "2026-10-11T05:47:15.027919+00:00",
+          "finishedAt": "2026-10-11T05:47:15.059464+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 1,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T05:47:13.929428+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T05:47:13.934035+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T05:47:13.938284+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T05:47:15.023504+00:00",
+          "summary": "已整理主题「京剧量子星舰角色」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T05:47:15.028944+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T05:47:15.061701+00:00",
+          "summary": "部分必需文化研究缺少有效资料，请调整要求或补充获准资料。",
+          "agentId": "researcher",
+          "state": "awaiting_confirmation"
+        },
+        {
+          "kind": "task",
+          "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T05:47:15.067228+00:00",
+          "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+          "taskState": "awaiting_confirmation",
+          "confirmationId": "50c50b57-db67-4184-aec9-5fb3d8347b24"
+        }
+      ],
+      "lastSequence": 7,
+      "sequence": 7,
+      "confirmation": {
+        "id": "50c50b57-db67-4184-aec9-5fb3d8347b24",
+        "reason": "insufficient_evidence",
+        "canAccept": false
+      },
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T05:47:13.926424+00:00",
+      "updatedAt": "2026-10-11T05:47:15.067228+00:00",
+      "requestId": "062be83e-2a42-4fbb-838e-67d98bbeb577"
+    }
+  ],
+  "createHttpStatus": 202,
+  "created": {
+    "taskId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+    "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/3658476f-6e36-4b23-9f3b-7f1488d043cf",
+    "resultUrl": "/api/v1/agent/result/3658476f-6e36-4b23-9f3b-7f1488d043cf",
+    "requestId": "ce559d8f-a4ba-4c56-bb0a-3d3f8e623e66"
+  },
+  "finalStatus": {
+    "taskId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+    "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+    "state": "awaiting_confirmation",
+    "currentAgent": "researcher",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "completed",
+        "summary": "已整理主题「京剧量子星舰角色」及3项需求。",
+        "startedAt": "2026-10-11T05:47:13.938284+00:00",
+        "finishedAt": "2026-10-11T05:47:15.023504+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "researcher",
+        "state": "awaiting_confirmation",
+        "summary": "部分必需文化研究缺少有效资料，请调整要求或补充获准资料。",
+        "startedAt": "2026-10-11T05:47:15.027919+00:00",
+        "finishedAt": "2026-10-11T05:47:15.059464+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      },
+      {
+        "id": "reviewer",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 1,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T05:47:13.929428+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T05:47:13.934035+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T05:47:13.938284+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T05:47:15.023504+00:00",
+        "summary": "已整理主题「京剧量子星舰角色」及3项需求。",
+        "agentId": "planner",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T05:47:15.028944+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "researcher",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+        "sequence": 6,
+        "occurredAt": "2026-10-11T05:47:15.061701+00:00",
+        "summary": "部分必需文化研究缺少有效资料，请调整要求或补充获准资料。",
+        "agentId": "researcher",
+        "state": "awaiting_confirmation"
+      },
+      {
+        "kind": "task",
+        "runId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+        "sequence": 7,
+        "occurredAt": "2026-10-11T05:47:15.067228+00:00",
+        "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+        "taskState": "awaiting_confirmation",
+        "confirmationId": "50c50b57-db67-4184-aec9-5fb3d8347b24"
+      }
+    ],
+    "lastSequence": 7,
+    "sequence": 7,
+    "confirmation": {
+      "id": "50c50b57-db67-4184-aec9-5fb3d8347b24",
+      "reason": "insufficient_evidence",
+      "canAccept": false
+    },
+    "resultReady": false,
+    "cancelRequested": false,
+    "createdAt": "2026-10-11T05:47:13.926424+00:00",
+    "updatedAt": "2026-10-11T05:47:15.067228+00:00",
+    "requestId": "062be83e-2a42-4fbb-838e-67d98bbeb577"
+  },
+  "outcome": "awaiting_confirmation",
+  "elapsedSeconds": 1.6394,
+  "budgetAfter": {
+    "calls": 72,
+    "estimatedUpperCostCny": 0.15971832,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 10,
+        "estimatedUpperCostCny": 0.02628408,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "providerCalls": [
+    {
+      "requestId": "3658476f-6e36-4b23-9f3b-7f1488d043cf:planner",
+      "createdAt": "2026-10-11T05:47:13.940431+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.005278,
+      "estimatedUpperCny": 0.0012391199999999998,
+      "usage": {
+        "prompt_tokens": 313,
+        "completion_tokens": 108,
+        "total_tokens": 421,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 185
+      },
+      "scope": "phase3"
+    }
+  ],
+  "modelCallCount": 1,
+  "measuredTokens": 421,
+  "estimatedCostCny": 0.00123912,
+  "artifacts": {
+    "planner": {
+      "theme": "京剧量子星舰角色",
+      "target": "非遗展览原创角色",
+      "style": "国风幻想",
+      "requirements": [
+        {
+          "id": "R1",
+          "text": "按真实传统规范设计角色"
+        },
+        {
+          "id": "R2",
+          "text": "无资料不将幻想当传统事实"
+        },
+        {
+          "id": "R3",
+          "text": "保留国风幻想风格"
+        }
+      ],
+      "researchQueries": [
+        "京剧行当分类的真实传统规范",
+        "京剧脸谱与服饰的传统依据",
+        "量子星舰是否见于京剧传统资料"
+      ],
+      "clarificationQuestions": [],
+      "execution": {
+        "requestId": "3658476f-6e36-4b23-9f3b-7f1488d043cf:planner",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 313,
+          "completion_tokens": 108,
+          "total_tokens": 421,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 185
+        },
+        "elapsedSeconds": 1.0756,
+        "promptVersion": "agent_planner_v1",
+        "promptHash": "f4b912bd3b65703aeec6f5c7c12564a72ed258c50e5bfdeb2e7eaf39e4e5c239"
+      }
+    },
+    "researcher": {
+      "queries": [
+        {
+          "question": "京剧行当分类的真实传统规范",
+          "evidenceIds": [
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+          ],
+          "uncertain": false,
+          "elapsedSeconds": 0.0091,
+          "retrievalMode": "hybrid"
+        },
+        {
+          "question": "京剧脸谱与服饰的传统依据",
+          "evidenceIds": [
+            "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+            "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641"
+          ],
+          "uncertain": false,
+          "elapsedSeconds": 0.009,
+          "retrievalMode": "hybrid"
+        },
+        {
+          "question": "量子星舰是否见于京剧传统资料",
+          "evidenceIds": [],
+          "uncertain": true,
+          "elapsedSeconds": 0.0067,
+          "retrievalMode": "hybrid"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-system",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文第一段及末段 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "京剧",
+            "行当",
+            "生",
+            "旦",
+            "净",
+            "丑",
+            "唱念做打"
+          ],
+          "vectorScore": 0.6954359280266382,
+          "keywordScore": null,
+          "entityMatchCount": 0,
+          "acceptedBy": "vector_threshold",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "68fcdede51c3d7d66090f2c38fef4f7c14ad83419ee634ae511e0a8572142eae",
+          "chunkContentHash": "fc83f0c55b048c90bebd8abd984d408fba192d35e8d5c4c470491efd3b70fb07"
+        },
+        {
+          "id": "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+          "chunkId": "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+          "sourceId": "cnpoc-face",
+          "sectionId": "cnpoc-face-symbolic",
+          "title": "二、京剧脸谱",
+          "locator": "京剧脸谱的分类—象形脸、神仙脸 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+          "excerpt": "象形脸常见于神话戏，依据神怪形象组织图案，不拘统一谱式。\n神仙脸可借金银色或线条表现神圣感；\n这是舞台造型语言，不是人物历史相貌。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧脸谱",
+          "entityNames": [
+            "象形脸",
+            "神仙脸",
+            "神话戏",
+            "金色",
+            "银色",
+            "脸谱"
+          ],
+          "vectorScore": 0.4972701656261788,
+          "keywordScore": -1.3956257980006868,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.1",
+          "sourceContentHash": "071cbed6767407f9ccac2bbbaa381703c06707a61d74d5ccdcea0b92fd566e6e",
+          "chunkContentHash": "361a9ee3286821897e650084ff89d4b170ff8cc0d9414003bee041eec94acb42"
+        },
+        {
+          "id": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+          "chunkId": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+          "sourceId": "cnpoc-face",
+          "sectionId": "cnpoc-face-three-tiles",
+          "title": "二、京剧脸谱",
+          "locator": "京剧脸谱的分类—三块瓦脸 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+          "excerpt": "三块瓦脸在整脸基础上突出两块眉区与一块鼻窝，所以有三块瓦之称；\n其下还有正、尖、花、老等不同变式。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧脸谱",
+          "entityNames": [
+            "脸谱",
+            "整脸",
+            "三块瓦脸",
+            "三块窝脸"
+          ],
+          "vectorScore": 0.3687480697881367,
+          "keywordScore": -1.6028801086411306,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.1",
+          "sourceContentHash": "071cbed6767407f9ccac2bbbaa381703c06707a61d74d5ccdcea0b92fd566e6e",
+          "chunkContentHash": "e9e39e4b0bc926355d021cda5e919dc4fbbf328e54b916defde611adf631003d"
+        },
+        {
+          "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-jing",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文“净”条目 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "净又称花脸，脸谱和洪亮的声音是常见表演特点，角色多为性格或形象鲜明的男性人物。\n净行的唱功、身段或武打侧重有不同分支。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "净",
+            "花脸",
+            "脸谱"
+          ],
+          "vectorScore": 0.44384112911947127,
+          "keywordScore": -1.4405874437927428,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 3,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "68fcdede51c3d7d66090f2c38fef4f7c14ad83419ee634ae511e0a8572142eae",
+          "chunkContentHash": "3e20913efa3fe5896108c21d4f989cc24910771e6694cb865edd9f981e8e7611"
+        },
+        {
+          "id": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+          "chunkId": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+          "sourceId": "cnpoc-face",
+          "sectionId": "cnpoc-face-colors",
+          "title": "二、京剧脸谱",
+          "locator": "脸谱的色彩—红色；京剧脸谱的分类第二段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+          "excerpt": "红色作主色时，常用于关羽等忠勇人物；\n作副色时可表达其他寓意。\n因此单个颜色不能脱离人物、谱式和使用部位解释成绝对人格标签。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧脸谱",
+          "entityNames": [
+            "脸谱",
+            "红色",
+            "主色",
+            "副色",
+            "关羽"
+          ],
+          "vectorScore": 0.36549661364425917,
+          "keywordScore": -1.4339877980039053,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 4,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.1",
+          "sourceContentHash": "071cbed6767407f9ccac2bbbaa381703c06707a61d74d5ccdcea0b92fd566e6e",
+          "chunkContentHash": "67c9ccd87e150ce60d73a6001479516e83a258cf097ceac153fdd8f6b04b9ba0"
+        }
+      ],
+      "requirementCoverage": [
+        {
+          "requirementId": "R1",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+            "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4"
+          ]
+        },
+        {
+          "requirementId": "R2",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+            "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4"
+          ]
+        },
+        {
+          "requirementId": "R3",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+            "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4"
+          ]
+        }
+      ],
+      "limitations": [
+        "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+        "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。",
+        "部分研究问题没有有效资料；设计和审校不得补造这些文化事实。"
+      ],
+      "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+      "policyVersion": "agent_research_v1"
+    }
+  },
+  "citationMappingChecks": []
+}

@@ -1,0 +1,528 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-10-11T06:10:10.981771+00:00",
+  "scope": "Real HTTP workflow and real backend RAG/LLM; no automatic retry",
+  "case": "false-person",
+  "brief": {
+    "requirements": "以京剧演员司雨青澜在1932年首演的代表作为历史依据设计角色。必须核实此人和剧目，找不到资料就停止，不用相似人物替代。",
+    "style": "京剧写意"
+  },
+  "budgetBefore": {
+    "calls": 79,
+    "estimatedUpperCostCny": 0.18252104,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 17,
+        "estimatedUpperCostCny": 0.0490868,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "pollSamples": [
+    {
+      "taskId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+      "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+      "state": "running",
+      "currentAgent": "planner",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:10:11.089218+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 0,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:10:11.080800+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:10:11.085261+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:10:11.089218+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 3,
+      "sequence": 3,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:10:11.078563+00:00",
+      "updatedAt": "2026-10-11T06:10:11.089218+00:00",
+      "requestId": "c95b3d90-6aa9-46db-a784-3573412a519e"
+    },
+    {
+      "taskId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+      "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+      "state": "awaiting_confirmation",
+      "currentAgent": "researcher",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧演员司雨青澜1932年首演」及3项需求。",
+          "startedAt": "2026-10-11T06:10:11.089218+00:00",
+          "finishedAt": "2026-10-11T06:10:12.253483+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "awaiting_confirmation",
+          "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧演员司雨青澜 1932年首演剧目；司雨青澜 京剧 代表作品；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：司雨青澜；相似人物不能替代。；候选资料未记载指定年份：1932年；其他首演年份不能替代。",
+          "startedAt": "2026-10-11T06:10:12.258298+00:00",
+          "finishedAt": "2026-10-11T06:10:12.282133+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 1,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:10:11.080800+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:10:11.085261+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:10:11.089218+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:10:12.253483+00:00",
+          "summary": "已整理主题「京剧演员司雨青澜1932年首演」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:10:12.259547+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:10:12.284134+00:00",
+          "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧演员司雨青澜 1932年首演剧目；司雨青澜 京剧 代表作品；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：司雨青澜；相似人物不能替代。；候选资料未记载指定年份：1932年；其他首演年份不能替代。",
+          "agentId": "researcher",
+          "state": "awaiting_confirmation"
+        },
+        {
+          "kind": "task",
+          "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:10:12.289138+00:00",
+          "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+          "taskState": "awaiting_confirmation",
+          "confirmationId": "8ec5be19-d51b-44a6-95db-4f89282ab926"
+        }
+      ],
+      "lastSequence": 7,
+      "sequence": 7,
+      "confirmation": {
+        "id": "8ec5be19-d51b-44a6-95db-4f89282ab926",
+        "reason": "insufficient_evidence",
+        "canAccept": false
+      },
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:10:11.078563+00:00",
+      "updatedAt": "2026-10-11T06:10:12.289138+00:00",
+      "requestId": "3d78cf43-d156-4b0b-aa4a-edca5e67871a"
+    }
+  ],
+  "createHttpStatus": 202,
+  "created": {
+    "taskId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+    "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+    "resultUrl": "/api/v1/agent/result/fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+    "requestId": "4f534077-597e-435c-af99-8a80dab5ed29"
+  },
+  "finalStatus": {
+    "taskId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+    "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+    "state": "awaiting_confirmation",
+    "currentAgent": "researcher",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "completed",
+        "summary": "已整理主题「京剧演员司雨青澜1932年首演」及3项需求。",
+        "startedAt": "2026-10-11T06:10:11.089218+00:00",
+        "finishedAt": "2026-10-11T06:10:12.253483+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "researcher",
+        "state": "awaiting_confirmation",
+        "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧演员司雨青澜 1932年首演剧目；司雨青澜 京剧 代表作品；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：司雨青澜；相似人物不能替代。；候选资料未记载指定年份：1932年；其他首演年份不能替代。",
+        "startedAt": "2026-10-11T06:10:12.258298+00:00",
+        "finishedAt": "2026-10-11T06:10:12.282133+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      },
+      {
+        "id": "reviewer",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 1,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T06:10:11.080800+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T06:10:11.085261+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T06:10:11.089218+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T06:10:12.253483+00:00",
+        "summary": "已整理主题「京剧演员司雨青澜1932年首演」及3项需求。",
+        "agentId": "planner",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T06:10:12.259547+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "researcher",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+        "sequence": 6,
+        "occurredAt": "2026-10-11T06:10:12.284134+00:00",
+        "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧演员司雨青澜 1932年首演剧目；司雨青澜 京剧 代表作品；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：司雨青澜；相似人物不能替代。；候选资料未记载指定年份：1932年；其他首演年份不能替代。",
+        "agentId": "researcher",
+        "state": "awaiting_confirmation"
+      },
+      {
+        "kind": "task",
+        "runId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+        "sequence": 7,
+        "occurredAt": "2026-10-11T06:10:12.289138+00:00",
+        "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+        "taskState": "awaiting_confirmation",
+        "confirmationId": "8ec5be19-d51b-44a6-95db-4f89282ab926"
+      }
+    ],
+    "lastSequence": 7,
+    "sequence": 7,
+    "confirmation": {
+      "id": "8ec5be19-d51b-44a6-95db-4f89282ab926",
+      "reason": "insufficient_evidence",
+      "canAccept": false
+    },
+    "resultReady": false,
+    "cancelRequested": false,
+    "createdAt": "2026-10-11T06:10:11.078563+00:00",
+    "updatedAt": "2026-10-11T06:10:12.289138+00:00",
+    "requestId": "3d78cf43-d156-4b0b-aa4a-edca5e67871a"
+  },
+  "outcome": "awaiting_confirmation",
+  "elapsedSeconds": 1.6432,
+  "budgetAfter": {
+    "calls": 80,
+    "estimatedUpperCostCny": 0.18398216,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 18,
+        "estimatedUpperCostCny": 0.05054792,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "providerCalls": [
+    {
+      "requestId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44:planner",
+      "createdAt": "2026-10-11T06:10:11.092242+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.005394,
+      "estimatedUpperCny": 0.00146112,
+      "usage": {
+        "prompt_tokens": 332,
+        "completion_tokens": 131,
+        "total_tokens": 463,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 204
+      },
+      "scope": "phase3"
+    }
+  ],
+  "modelCallCount": 1,
+  "measuredTokens": 463,
+  "estimatedCostCny": 0.00146112,
+  "artifacts": {
+    "planner": {
+      "theme": "京剧演员司雨青澜1932年首演",
+      "target": "角色设计",
+      "style": "京剧写意",
+      "requirements": [
+        {
+          "id": "R1",
+          "text": "以司雨青澜1932年首演代表作为历史依据"
+        },
+        {
+          "id": "R2",
+          "text": "必须核实此人和剧目，无资料则停止"
+        },
+        {
+          "id": "R3",
+          "text": "不得用相似人物替代"
+        }
+      ],
+      "researchQueries": [
+        "京剧演员司雨青澜 1932年首演剧目",
+        "司雨青澜 京剧 代表作品"
+      ],
+      "clarificationQuestions": [],
+      "requiredEntities": [
+        "司雨青澜"
+      ],
+      "execution": {
+        "requestId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44:planner",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 332,
+          "completion_tokens": 131,
+          "total_tokens": 463,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 204
+        },
+        "elapsedSeconds": 1.1551,
+        "promptVersion": "agent_planner_v2",
+        "promptHash": "b12dc4d03282fce3e7cd3e5c7e92fc42d6e25a4cc846552b0421da99db95df12"
+      }
+    },
+    "researcher": {
+      "queries": [
+        {
+          "question": "京剧演员司雨青澜 1932年首演剧目",
+          "evidenceIds": [
+            "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7"
+          ],
+          "uncertain": true,
+          "retrievalUncertain": false,
+          "missingYears": [
+            "1932"
+          ],
+          "elapsedSeconds": 0.0097,
+          "retrievalMode": "hybrid",
+          "missingEntities": [
+            "司雨青澜"
+          ]
+        },
+        {
+          "question": "司雨青澜 京剧 代表作品",
+          "evidenceIds": [],
+          "uncertain": true,
+          "retrievalUncertain": true,
+          "missingYears": [],
+          "elapsedSeconds": 0.0082,
+          "retrievalMode": "hybrid"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+          "sourceId": "cnpoc-muguiying",
+          "sectionId": "cnpoc-muguiying-adaptation",
+          "title": "穆桂英挂帅",
+          "locator": "剧目简介最后两句；主创 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/mbm/200806/677c0bbf8a594b35901c47ea19f50a03.shtml",
+          "excerpt": "该京剧版本于1959年由梅兰芳、陆静岩、袁韵宜据同名豫剧改编，梅兰芳同年在北京首演。\n这里的年份是作品改编和首演时间。",
+          "contentKind": "original_fact_summary",
+          "category": "经典剧目",
+          "entityNames": [
+            "穆桂英挂帅",
+            "梅兰芳",
+            "陆静岩",
+            "袁韵宜",
+            "1959年",
+            "豫剧"
+          ],
+          "vectorScore": 0.5808160168736549,
+          "keywordScore": null,
+          "entityMatchCount": 0,
+          "acceptedBy": "vector_threshold",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "fa86624a9075110847f1b94bfaeb1295e85574c5d0d161f41b0454ac013f6d10",
+          "chunkContentHash": "60d677c36aeb19789c4f6a4ee34b9975acd65e8ffb261e4700f0c49bededf246"
+        }
+      ],
+      "requirementCoverage": [
+        {
+          "requirementId": "R1",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7"
+          ]
+        },
+        {
+          "requirementId": "R2",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7"
+          ]
+        },
+        {
+          "requirementId": "R3",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7"
+          ]
+        }
+      ],
+      "limitations": [
+        "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+        "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。",
+        "部分研究问题没有有效资料；设计和审校不得补造这些文化事实。",
+        "未找到指定人物或传统名称的精确依据：司雨青澜；相似人物不能替代。",
+        "候选资料未记载指定年份：1932年；其他首演年份不能替代。"
+      ],
+      "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+      "policyVersion": "agent_research_v2"
+    }
+  },
+  "citationMappingChecks": []
+}

@@ -30,7 +30,7 @@ def fetch(url, partial=False):
     except urllib.error.HTTPError as exc: return {'status':exc.code}
     except (urllib.error.URLError,TimeoutError): return {'status':None,'error':'NETWORK_FAILURE'}
 
-def run():
+def run(output=None):
     root=Path(__file__).resolve().parents[1]
     resources=set(); report={'pages':[],'assets':[],'protectedPaths':[],'cultureIntegrity':[]}
     for page in PAGES:
@@ -53,8 +53,13 @@ def run():
     report['capabilities']=json.load(urllib.request.urlopen(BASE+'api/v1/capabilities',timeout=15))
     report['success']=all(r['status']==200 and r['linkTargetsExist'] for r in report['pages']) and all(r['status'] in (200,206) for r in report['assets']) and all(r['status']==404 for r in report['protectedPaths']) and all(r['byteIdenticalToPhase1'] for r in report['cultureIntegrity'])
     report['scope']='actual loopback HTTP; public local resource GET with Range; remote embedded video playback not included'
-    (root/'docs/evidence/test-results/phase-02-http-regression.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (output or root/'docs/evidence/test-results/phase-02-http-regression.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({'success':report['success'],'pages':len(report['pages']),'assets':len(report['assets']),'protectedPaths':len(report['protectedPaths']),'cultureByteIdentical':all(r['byteIdenticalToPhase1'] for r in report['cultureIntegrity'])}))
     return report['success']
 
-if __name__=='__main__': raise SystemExit(0 if run() else 1)
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser(description='Actual local HTTP resources and culture integrity, no paid calls')
+    parser.add_argument('--output',type=Path)
+    args=parser.parse_args()
+    raise SystemExit(0 if run(args.output) else 1)

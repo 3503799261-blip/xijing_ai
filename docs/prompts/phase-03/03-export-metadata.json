@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "scope": "Real public Phase 3 request, architecture, approval and development snapshot",
+  "exportedAt": "2026-10-11T07:06:27.040827+00:00",
+  "sourceSnapshotSha256": "17639b10d581b89b83a99b1e849a3b07532ee8fdb7e061a165c0e9d766850bde",
+  "firstSourceLine": 2966,
+  "lastCompleteSourceLine": 4310,
+  "partialFinalLineOmitted": false,
+  "records": 336,
+  "counts": {
+    "message": 23,
+    "custom_tool_call": 86,
+    "custom_tool_call_output": 85,
+    "function_call": 71,
+    "function_call_output": 71
+  },
+  "conversationSha256": "cc0eb94dbc215ed326a45166a0bc19ce494980e6616197467c18f38ace9b9498",
+  "originalRequestSha256": "d847a24b5b7ab7585592e4bcfc247bccffbab7d7189eb1f4cb62625ce5761069",
+  "redactions": {
+    "credential_occurrences": 0
+  },
+  "skipped": {
+    "event_msg": 579,
+    "token_usage_record": 161,
+    "compacted": 3,
+    "world_state": 9,
+    "turn_context": 5,
+    "reasoning": 139,
+    "inter_agent_communication_metadata": 56,
+    "agent_message": 56,
+    "private_message": 1
+  },
+  "excluded": [
+    "hidden reasoning",
+    "system/developer messages",
+    "credential values",
+    "embedded media",
+    "private child-agent records"
+  ],
+  "limitations": [
+    "Only one explicit current session was read.",
+    "Point-in-time snapshot; future replies are not invented."
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "generatedAt": "2026-10-11T06:57:12.198736+00:00",
+  "scope": "All saved single-case real runs, including failures; not a blind accuracy metric",
+  "cases": [
+    {
+      "file": "real-clarify-v3.json",
+      "case": "clarify",
+      "outcome": "failed",
+      "reason": null,
+      "canAccept": false,
+      "reviewVerdict": null,
+      "modelCallCount": 1,
+      "tokens": 411,
+      "estimatedCostCny": 0.00106312,
+      "elapsedSeconds": 1.6398,
+      "mappingChecks": [],
+      "promptVersions": null
+    },
+    {
+      "file": "real-clarify-v4.json",
+      "case": "clarify",
+      "outcome": "awaiting_confirmation",
+      "reason": "clarification",
+      "canAccept": false,
+      "reviewVerdict": null,
+      "modelCallCount": 1,
+      "tokens": 483,
+      "estimatedCostCny": 0.00088424,
+      "elapsedSeconds": 1.6444,
+      "mappingChecks": [],
+      "promptVersions": null
+    },
+    {
+      "file": "real-costume-first.json",
+      "case": "costume",
+      "outcome": "awaiting_confirmation",
+      "reason": "insufficient_evidence",
+      "canAccept": false,
+      "reviewVerdict": null,
+      "modelCallCount": 1,
+      "tokens": 431,
+      "estimatedCostCny": 0.00127712,
+      "elapsedSeconds": 1.6549,
+      "mappingChecks": [],
+      "promptVersions": null
+    },
+    {
+      "file": "real-costume-v2.json",
+      "case": "costume",
+      "outcome": "failed",
+      "reason": null,
+      "canAccept": false,
+      "reviewVerdict": null,
+      "modelCallCount": 1,
+      "tokens": 447,
+      "estimatedCostCny": 0.00156,
+      "elapsedSeconds": 1.6749,
+      "mappingChecks": [],
+      "promptVersions": null
+    },
+    {
+      "file": "real-costume-v3.json",
+      "case": "costume",
+      "outcome": "awaiting_confirmation",
+      "reason": "insufficient_evidence",
+      "canAccept": false,
+      "reviewVerdict": null,
+      "modelCallCount": 1,
+      "tokens": 465,
+      "estimatedCostCny": 0.001614,
+      "elapsedSeconds": 1.1546,
+      "mappingChecks": [],
+      "promptVersions": null
+    },
+    {
+      "file": "real-costume-v4-research-v4.json",
+      "case": "costume",
+      "outcome": "awaiting_confirmation",
+      "reason": "needs_revision",
+      "canAccept": false,
+      "reviewVerdict": "needs_revision",
+      "modelCallCount": 3,
+      "tokens": 3653,
+      "estimatedCostCny": 0.00943072,
+      "elapsedSeconds": 5.7197,
+      "mappingChecks": [
+        {
+          "id": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+          "valid": true
+        },
+        {
+          "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "valid": true
+        },
+        {
+          "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "valid": true
+        },
+        {
+          "id": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+          "valid": true
+        }
+      ],
+      "promptVersions": {
+        "planner": "agent_planner_v4",
+        "researcher": "agent_research_v4",
+        "designer": "agent_designer_v3",
+        "reviewer": "agent_reviewer_v3"
+      }
+    },
+    {
+      "file": "real-costume-v4.json",
+      "case": "costume",
+      "outcome": "awaiting_confirmation",
+      "reason": "insufficient_evidence",
+      "canAccept": false,
+      "reviewVerdict": null,
+      "modelCallCount": 1,
+      "tokens": 540,
+      "estimatedCostCny": 0.00171,
+      "elapsedSeconds": 1.6636,
+      "mappingChecks": [],
+      "promptVersions": null
+    },
+    {
+      "file": "real-dan-v3.json",
+      "case": "dan",
+      "outcome": "awaiting_confirmation",
+      "reason": "final_acceptance",
+      "canAccept": true,
+      "reviewVerdict": "pass",
+      "modelCallCount": 3,
+      "tokens": 3675,
+      "estimatedCostCny": 0.0090176,
+      "elapsedSeconds": 4.6749,
+      "mappingChecks": [
+        {
+          "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "valid": true
+        },
+        {
+          "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "valid": true
+        }
+      ],
+      "promptVersions": {
+        "planner": "agent_planner_v3",
+        "researcher": "agent_research_v3",
+        "designer": "agent_designer_v3",
+        "reviewer": "agent_reviewer_v3"
+      }
+    },
+    {
+      "file": "real-face-first.json",
+      "case": "face",
+      "outcome": "awaiting_confirmation",
+      "reason": "final_acceptance",
+      "canAccept": true,
+      "reviewVerdict": "pass",
+      "modelCallCount": 3,
+      "tokens": 3404,
+      "estimatedCostCny": 0.00860048,
+      "elapsedSeconds": 4.7078,
+      "mappingChecks": [
+        {
+          "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "valid": true
+        },
+        {
+          "id": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+          "valid": true
+        },
+        {
+          "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "valid": true
+        }
+      ],
+      "promptVersions": {
+        "planner": "agent_planner_v1",
+        "researcher": "agent_research_v1",
+        "designer": "agent_designer_v1",
+        "reviewer": "agent_reviewer_v1"
+      }
+    },
+    {
+      "file": "real-face-v2.json",
+      "case": "face",
+      "outcome": "awaiting_confirmation",
+      "reason": "needs_revision",
+      "canAccept": false,
+      "reviewVerdict": "needs_revision",
+      "modelCallCount": 3,
+      "tokens": 3923,
+      "estimatedCostCny": 0.01237112,
+      "elapsedSeconds": 5.6853,
+      "mappingChecks": [
+        {
+          "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "valid": true
+        },
+        {
+          "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "valid": true
+        },
+        {
+          "id": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+          "valid": true
+        },
+        {
+          "id": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+          "valid": true
+        },
+        {
+          "id": "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+          "valid": true
+        }
+      ],
+      "promptVersions": {
+        "planner": "agent_planner_v2",
+        "researcher": "agent_research_v2",
+        "designer": "agent_designer_v2",
+        "reviewer": "agent_reviewer_v2"
+      }
+    },
+    {
+      "file": "real-face-v3.json",
+      "case": "face",
+      "outcome": "awaiting_confirmation",
+      "reason": "final_acceptance",
+      "canAccept": true,
+      "reviewVerdict": "pass",
+      "modelCallCount": 3,
+      "tokens": 3699,
+      "estimatedCostCny": 0.01042312,
+      "elapsedSeconds": 4.6922,
+      "mappingChecks": [
+        {
+          "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "valid": true
+        },
+        {
+          "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "valid": true
+        },
+        {
+          "id": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+          "valid": true
+        },
+        {
+          "id": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+          "valid": true
+        },
+        {
+          "id": "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+          "valid": true
+        }
+      ],
+      "promptVersions": {
+        "planner": "agent_planner_v3",
+        "researcher": "agent_research_v3",
+        "designer": "agent_designer_v3",
+        "reviewer": "agent_reviewer_v3"
+      }
+    },
+    {
+      "file": "real-false-person-first.json",
+      "case": "false-person",
+      "outcome": "failed",
+      "reason": null,
+      "canAccept": false,
+      "reviewVerdict": null,
+      "modelCallCount": 2,
+      "tokens": 1465,
+      "estimatedCostCny": 0.00471536,
+      "elapsedSeconds": 3.7788,
+      "mappingChecks": [],
+      "promptVersions": null
+    },
+    {
+      "file": "real-false-person-v2.json",
+      "case": "false-person",
+      "outcome": "awaiting_confirmation",
+      "reason": "insufficient_evidence",
+      "canAccept": false,
+      "reviewVerdict": null,
+      "modelCallCount": 1,
+      "tokens": 463,
+      "estimatedCostCny": 0.00146112,
+      "elapsedSeconds": 1.6432,
+      "mappingChecks": [],
+      "promptVersions": null
+    },
+    {
+      "file": "real-sheng-first.json",
+      "case": "sheng",
+      "outcome": "awaiting_confirmation",
+      "reason": "final_acceptance",
+      "canAccept": true,
+      "reviewVerdict": "pass",
+      "modelCallCount": 3,
+      "tokens": 3567,
+      "estimatedCostCny": 0.010452,
+      "elapsedSeconds": 5.7593,
+      "mappingChecks": [
+        {
+          "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "valid": true
+        },
+        {
+          "id": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+          "valid": true
+        },
+        {
+          "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "valid": true
+        },
+        {
+          "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "valid": true
+        },
+        {
+          "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "valid": true
+        }
+      ],
+      "promptVersions": {
+        "planner": "agent_planner_v1",
+        "researcher": "agent_research_v1",
+        "designer": "agent_designer_v1",
+        "reviewer": "agent_reviewer_v1"
+      }
+    },
+    {
+      "file": "real-uncovered-first.json",
+      "case": "uncovered",
+      "outcome": "awaiting_confirmation",
+      "reason": "insufficient_evidence",
+      "canAccept": false,
+      "reviewVerdict": null,
+      "modelCallCount": 1,
+      "tokens": 421,
+      "estimatedCostCny": 0.00123912,
+      "elapsedSeconds": 1.6394,
+      "mappingChecks": [],
+      "promptVersions": null
+    },
+    {
+      "file": "real-uncovered-v2.json",
+      "case": "uncovered",
+      "outcome": "awaiting_confirmation",
+      "reason": "insufficient_evidence",
+      "canAccept": false,
+      "reviewVerdict": null,
+      "modelCallCount": 1,
+      "tokens": 440,
+      "estimatedCostCny": 0.00129512,
+      "elapsedSeconds": 1.1351,
+      "mappingChecks": [],
+      "promptVersions": null
+    }
+  ]
+}
