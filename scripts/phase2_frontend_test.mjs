@@ -8,8 +8,8 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname } from 'node:path';
 
 const root = new URL('../', import.meta.url);
-const c = await import(new URL('js/ai-workshop/contracts.js?v=phase2-1', root));
-const s = await import(new URL('js/ai-workshop/services.js?v=phase2-1', root));
+const c = await import(new URL('js/ai-workshop/contracts.js?v=phase3-1', root));
+const s = await import(new URL('js/ai-workshop/services.js?v=phase3-1', root));
 const results = [];
 const check = async (name, operation) => {
   try { await operation(); results.push({ name, passed: true }); }
@@ -30,7 +30,7 @@ await check('reject certain answer without evidence', () => assert.throws(() => 
 await check('explicit insufficient evidence may have no citations', () => assert.equal(c.validateQuestionAnswer({ ...answer, uncertain: true, citations: [] }).uncertain, true));
 await check('reject duplicate citation identifiers', () => assert.throws(() => c.validateQuestionAnswer({ ...answer, citations: [citation, citation] })));
 await check('reject malformed answer fields', () => assert.throws(() => c.validateQuestionAnswer({ ...answer, requestId: null })));
-await check('future capabilities stay disabled', () => assert.equal(c.validateCapabilities({ ...enabled, agentWorkflow: true }).agentWorkflow, false));
+await check('Agent capability follows backend; image and model remain disabled', () => { const caps = c.validateCapabilities({ ...enabled, agentWorkflow: true, conceptImage: true, imageToModel: true }); assert.equal(caps.agentWorkflow, true); assert.equal(caps.conceptImage, false); assert.equal(caps.imageToModel, false); });
 await check('reject incomplete capabilities', () => assert.throws(() => c.validateCapabilities({ questionAnswering: true })));
 await check('source URL protocol and credential validation', () => {
   for (const url of ['javascript:alert(1)', 'data:text/html,a', 'https://user:secret@example.org', '/backend/file']) assert.equal(c.safeCitationUrl(url), null);
@@ -108,9 +108,9 @@ await check('55-second budget aborts with no automatic retry (accelerated test c
     assert.deepEqual(budgets, [55000]); assert.equal(calls, 1); assert.equal(s.getServiceCapabilities().questionAnswering, false);
   } finally { globalThis.setTimeout = originalTimeout; }
 });
-await check('other three services return unavailable without a network request', async () => {
+await check('image and model services return unavailable without a network request', async () => {
   let calls = 0; globalThis.fetch = () => { calls += 1; throw new Error('must not call'); };
-  for (const value of [await s.startAgentWorkflow({}), await s.generateConceptImage({}), await s.submitModelTask({})]) assert.equal(value.available, false);
+  for (const value of [await s.generateConceptImage({}), await s.submitModelTask({})]) assert.equal(value.available, false);
   assert.equal(calls, 0);
 });
 
@@ -155,7 +155,7 @@ globalThis.fetch = async (url) => reply(url.endsWith('/capabilities') ? enabled 
 const flush = async () => { await new Promise((resolve) => originalTimeout(resolve, 0)); };
 const descendants = (element) => element.children.flatMap((child) => [child, ...descendants(child)]);
 const turns = () => byId('messages').children.filter((element) => element.className === 'ai-workshop-turn');
-await import(new URL('js/ai-workshop/main.js?v=phase2-1', root));
+await import(new URL('js/ai-workshop/main.js?v=phase3-1', root));
 await flush();
 
 await check('UI capabilities and status are driven by fetched state (DOM double)', () => {
@@ -221,8 +221,8 @@ await check('HTML bindings, safe rendering and complete import version chain (st
   const requiredIds = [...main.matchAll(/required\('#([^']+)'\)/g)].map((match) => match[1]);
   for (const id of requiredIds) assert.ok(html.includes(`id="${id}"`), `missing HTML binding: ${id}`);
   for (const code of [main, services]) assert.equal(/(?:innerHTML|outerHTML)\s*=|insertAdjacentHTML|eval\s*\(/.test(code), false);
-  assert.ok(main.includes("from './services.js?v=phase2-1'")); assert.ok(main.includes("from './contracts.js?v=phase2-1'"));
-  assert.ok(services.includes("from './contracts.js?v=phase2-1'")); assert.ok(html.includes('main.js?v=phase2-1')); assert.ok(html.includes('ai-workshop.css?v=phase2-1'));
+  assert.ok(main.includes("from './services.js?v=phase3-1'")); assert.ok(main.includes("from './contracts.js?v=phase3-1'"));
+  assert.ok(services.includes("from './contracts.js?v=phase3-1'")); assert.ok(html.includes('main.js?v=phase3-1')); assert.ok(html.includes('ai-workshop.css?v=phase3-1'));
   assert.ok(css.includes('.ai-workshop-citation')); assert.ok(css.includes('prefers-reduced-motion'));
 });
 

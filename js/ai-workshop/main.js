@@ -1,5 +1,6 @@
-import { askOperaQuestion, getServiceCapabilities, loadServiceCapabilities, requiresCapabilityRecheck, ServiceError, createSubmissionKey } from './services.js?v=phase2-1';
-import { safeCitationUrl } from './contracts.js?v=phase2-1';
+import { askOperaQuestion, getServiceCapabilities, loadServiceCapabilities, requiresCapabilityRecheck, ServiceError, createSubmissionKey } from './services.js?v=phase3-1';
+import { safeCitationUrl } from './contracts.js?v=phase3-1';
+import { initializeAgentWorkflow } from './agent-workflow.js?v=phase3-1';
 
 const PANEL_NAMES = ['overview', 'qa', 'agents', 'create', 'model'];
 const MAX_QUESTION_LENGTH = 600;
@@ -52,6 +53,7 @@ function initializeWorkshop() {
   let capabilityLoading = false;
   let capabilityRefreshId = 0;
   let lastFailedTurn = null;
+  let agentController = null;
   const turns = [];
 
   function updateScrollOffset() {
@@ -166,9 +168,9 @@ function initializeWorkshop() {
       badge.classList.toggle('ai-workshop-badge-unavailable', !capability.questionAnswering);
       badge.classList.toggle('ai-workshop-badge-ready', capability.questionAnswering);
     });
-    heroServiceNote.textContent = capability.questionAnswering
-      ? '京剧RAG问答已就绪 · Agent、概念图与图生3D待接入'
-      : failed ? '后端暂时无法连接 · Agent、概念图与图生3D待接入' : '京剧问答尚未就绪 · Agent、概念图与图生3D待接入';
+    heroServiceNote.textContent = [capability.questionAnswering ? '京剧RAG问答已就绪' : failed ? '后端暂时无法连接' : '京剧问答尚未就绪',
+      capability.agentWorkflow ? 'Agent协作已就绪' : 'Agent协作尚未就绪', '概念图与图生3D待接入'].join(' · ');
+    agentController?.setCapability(capability);
   }
 
   async function refreshCapabilities({ afterRequestFailure = false } = {}) {
@@ -392,6 +394,12 @@ function initializeWorkshop() {
   root.classList.add('ai-workshop-ready');
   sendButton.disabled = false;
   saveDraftButton.disabled = false;
+  try {
+    agentController = initializeAgentWorkflow({ root, selectPanel, refreshCapabilities });
+  } catch {
+    notice.textContent = 'Agent界面未能初始化，请刷新后重试。京剧问答和页面内草稿仍可使用。';
+    notice.hidden = false;
+  }
   void refreshCapabilities();
 }
 

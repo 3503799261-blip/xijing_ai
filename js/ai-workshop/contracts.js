@@ -81,7 +81,7 @@ const isObject = (value) => value !== null && typeof value === 'object' && !Arra
 const isText = (value, maximum) => typeof value === 'string' && value.trim().length > 0 && value.length <= maximum;
 const optionalText = (value, maximum) => value === undefined || value === null || (typeof value === 'string' && value.length <= maximum);
 
-/** 校验后端真实能力；本阶段不会因服务器意外开启而显示其他三项已接入。 */
+/** 校验后端真实能力；图像和3D仍保持未接入。 */
 export function validateCapabilities(value) {
   if (!isObject(value) || Object.keys(SERVICE_CAPABILITIES).some((key) => typeof value[key] !== 'boolean')) {
     throw new TypeError('Invalid capabilities response');
@@ -89,7 +89,7 @@ export function validateCapabilities(value) {
   return Object.freeze({
     questionAnswering: value.questionAnswering,
     knowledgeSearch: value.knowledgeSearch,
-    agentWorkflow: false,
+    agentWorkflow: value.agentWorkflow,
     conceptImage: false,
     imageToModel: false,
   });
@@ -141,6 +141,99 @@ export function safeCitationUrl(value) {
   } catch {
     return null;
   }
+}
+
+export const WORKFLOW_STATES = Object.freeze(['waiting', 'running', 'awaiting_confirmation', 'completed', 'failed', 'cancelled']);
+export const WORKFLOW_STATE_LABELS = Object.freeze({ waiting: '等待调度', running: '协作运行中', awaiting_confirmation: '等待用户确认', completed: '已确认完成', failed: '执行失败', cancelled: '已取消' });
+export const WORKFLOW_AGENT_IDS = Object.freeze(['planner', 'researcher', 'designer', 'reviewer']);
+export const CREATION_STYLES = Object.freeze(['京剧写意', '国风幻想', '舞台角色']);
+const isSequence = (value) => Number.isSafeInteger(value) && value >= 0;
+const isIdentifier = (value) => isText(value, 128) && /^[A-Za-z0-9_-]{8,128}$/.test(value);
+const isTime = (value) => value === null || value === undefined || (isText(value, 80) && Number.isFinite(Date.parse(value)));
+const agentStateValues = Object.values(AGENT_STATES);
+const textArray = (value, maximum = 1600, count = 24) => Array.isArray(value) && value.length <= count && value.every((item) => isText(item, maximum));
+const idArray = (value, allowed = null) => textArray(value, 128, 24) && new Set(value).size === value.length && (!allowed || value.every((item) => allowed.has(item)));
+
+/** URL path identifiers are validated before interpolation; task URLs from responses are never followed. */
+export function validateWorkflowTaskId(value) {
+  if (!isIdentifier(value)) throw new TypeError('Invalid workflow task identifier');
+  return value;
+}
+
+export function validateWorkflowCreated(value) {
+  if (!isObject(value) || !isIdentifier(value.taskId) || !isIdentifier(value.runId) || !WORKFLOW_STATES.includes(value.state)
+      || !isSequence(value.sequence) || !isText(value.requestId, 128)) throw new TypeError('Invalid workflow creation response');
+  return Object.freeze({ taskId: value.taskId, runId: value.runId, state: value.state, sequence: value.sequence, requestId: value.requestId });
+}
+
+/** Agent states and task states are separate; cancelled is never painted as an executed Agent. */
+export function validateWorkflowStatus(value) {
+  if (!isObject(value) || !isIdentifier(value.taskId) || !isIdentifier(value.runId) || !WORKFLOW_STATES.includes(value.state)
+      || !isSequence(value.lastSequence) || !Number.isInteger(value.completedSteps) || value.completedSteps < 0 || value.completedSteps > 4
+      || value.totalSteps !== 4 || !Array.isArray(value.agents) || value.agents.length !== 4
+      || !Array.isArray(value.events) || value.events.length > 50 || typeof value.resultReady !== 'boolean'
+      || typeof value.cancelRequested !== 'boolean' || !isText(value.requestId, 128)
+      || (value.currentAgent !== null && value.currentAgent !== undefined && !WORKFLOW_AGENT_IDS.includes(value.currentAgent))) {
+    throw new TypeError('Invalid workflow status response');
+  }
+  const ids = new Set();
+  const agents = value.agents.map((agent) => {
+    if (!isObject(agent) || !WORKFLOW_AGENT_IDS.includes(agent.id) || ids.has(agent.id) || !agentStateValues.includes(agent.state)
+        || !optionalText(agent.summary, 3000) || !optionalText(agent.errorCode, 100) || !isTime(agent.startedAt) || !isTime(agent.finishedAt)) {
+      throw new TypeError('Invalid workflow Agent response');
+    }
+    ids.add(agent.id);
+    return Object.freeze({ ...agent, summary: agent.summary || '', errorCode: agent.errorCode || '' });
+  });
+  let previousSequence = 0;
+  const events = value.events.map((event) => {
+    if (!isObject(event) || event.runId !== value.runId || !isSequence(event.sequence) || event.sequence <= previousSequence
+        || event.sequence > value.lastSequence || !isText(event.occurredAt, 80) || !isTime(event.occurredAt)
+        || !optionalText(event.summary, 3000) || !optionalText(event.errorCode, 100)) throw new TypeError('Invalid workflow event response');
+    if (event.kind === 'agent') {
+      if (!WORKFLOW_AGENT_IDS.includes(event.agentId) || !agentStateValues.includes(event.state)) throw new TypeError('Invalid Agent event');
+    } else if (event.kind === 'task') {
+      if (!WORKFLOW_STATES.includes(event.taskState)) throw new TypeError('Invalid task event');
+    } else throw new TypeError('Invalid workflow event kind');
+    previousSequence = event.sequence;
+    return Object.freeze({ ...event });
+  });
+  const confirmation = value.confirmation;
+  if (confirmation !== null && confirmation !== undefined) {
+    if (!isObject(confirmation) || !isIdentifier(confirmation.id) || !['final_acceptance', 'needs_revision', 'insufficient_evidence', 'clarification'].includes(confirmation.reason)
+        || typeof confirmation.canAccept !== 'boolean' || (confirmation.canAccept && (value.state !== 'awaiting_confirmation' || confirmation.reason !== 'final_acceptance'))) {
+      throw new TypeError('Invalid workflow confirmation');
+    }
+  }
+  return Object.freeze({ ...value, agents: Object.freeze(agents), events: Object.freeze(events), confirmation: confirmation ? Object.freeze({ ...confirmation }) : null });
+}
+
+/** References in the design/review must be a subset of the real backend citation package. */
+export function validateWorkflowResult(value) {
+  if (!isObject(value) || !isIdentifier(value.taskId) || value.schemaVersion !== '1.0' || !isObject(value.design) || !isObject(value.review)
+      || typeof value.uncertain !== 'boolean' || typeof value.publicationAllowed !== 'boolean' || typeof value.userConfirmed !== 'boolean'
+      || !isText(value.knowledgeGeneration, 200) || !isObject(value.promptVersions) || !isText(value.requestId, 128)
+      || !Array.isArray(value.citations) || value.citations.length > 12) throw new TypeError('Invalid workflow result response');
+  // Reuse the Phase 2 citation validator without fabricating an answer or sources.
+  const citations = validateQuestionAnswer({ answer: '资料包结构校验', citations: value.citations, uncertain: true, requestId: value.requestId }).citations;
+  const allowedIds = new Set(citations.map((citation) => citation.id));
+  const design = value.design;
+  if (design.schemaVersion !== '1.0' || !isText(design.name, 200) || !isText(design.positioning, 2000) || !isText(design.visualPrompt, 6000)
+      || !textArray(design.creativeElements) || !textArray(design.limitations) || !idArray(design.usedEvidenceIds, allowedIds)) throw new TypeError('Invalid character design');
+  for (const field of ['costume', 'colors', 'visualElements']) {
+    if (!Array.isArray(design[field]) || design[field].length > 16 || !design[field].every((item) => isObject(item)
+        && isText(item.description, 2000) && ['evidence_based', 'creative'].includes(item.interpretation)
+        && idArray(item.evidenceIds, allowedIds) && (item.interpretation !== 'evidence_based' || item.evidenceIds.length > 0)
+        && item.evidenceIds.every((id) => design.usedEvidenceIds.includes(id)))) throw new TypeError('Invalid design evidence mapping');
+  }
+  const review = value.review;
+  if (!['pass', 'needs_revision', 'insufficient_evidence'].includes(review.verdict) || !Array.isArray(review.issues) || review.issues.length > 24
+      || !review.issues.every((issue) => isObject(issue) && isText(issue.field, 200) && isText(issue.reason, 2400) && idArray(issue.evidenceIds, allowedIds))
+      || !textArray(review.suggestions) || !idArray(review.checkedEvidenceIds, allowedIds) || review.needsHumanReview !== true) throw new TypeError('Invalid culture review');
+  if (value.publicationAllowed && (!value.userConfirmed || value.uncertain || review.verdict !== 'pass' || !citations.length)) {
+    throw new TypeError('Unconfirmed or uncertain design cannot be published');
+  }
+  return Object.freeze({ ...value, citations });
 }
 
 /**

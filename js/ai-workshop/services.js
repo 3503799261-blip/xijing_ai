@@ -1,7 +1,8 @@
-import { SERVICE_CAPABILITIES, SERVICE_MESSAGES, validateCapabilities, validateQuestionAnswer, validateServiceError } from './contracts.js?v=phase2-1';
+import { SERVICE_CAPABILITIES, SERVICE_MESSAGES, CREATION_STYLES, validateCapabilities, validateQuestionAnswer, validateServiceError, validateWorkflowCreated, validateWorkflowStatus, validateWorkflowResult, validateWorkflowTaskId } from './contracts.js?v=phase3-1';
 
 const CHAT_TIMEOUT_MS = 55000;
 const CAPABILITY_TIMEOUT_MS = 8000;
+const WORKFLOW_TIMEOUT_MS = 10000;
 let capabilities = SERVICE_CAPABILITIES;
 let capabilityRequest = null;
 let capabilityGeneration = 0;
@@ -146,8 +147,59 @@ function unavailable(capability) {
   return Object.freeze({ available: false, status: 'unavailable', capability, message: SERVICE_MESSAGES[capability] });
 }
 
-/** @param {import('./contracts.js').CreationBrief} _brief */
-export async function startAgentWorkflow(_brief) { return unavailable('agentWorkflow'); }
+function workflowIdentifier(value) {
+  try { return validateWorkflowTaskId(value); }
+  catch { throw new ServiceError('INVALID_TASK_ID', '任务标识无效，请重新提交或检查本页面保存的任务。'); }
+}
+
+async function workflowRequest(path, options, validator) {
+  let body;
+  try { body = await requestJson(`agent/${path}`, options, WORKFLOW_TIMEOUT_MS); }
+  catch (error) {
+    if (requiresCapabilityRecheck(error)) invalidateCapabilities();
+    throw error;
+  }
+  try { return validator(body); }
+  catch { throw new ServiceError('INVALID_WORKFLOW_RESPONSE', '协作服务返回的任务结构或证据未通过校验。页面保留上次状态，请重新查询。', true); }
+}
+
+/** A POST creates a persistent task. A manual retry of this logical submission must reuse its key and body. */
+export async function startAgentWorkflow(brief, { idempotencyKey = createSubmissionKey() } = {}) {
+  if (!brief || typeof brief.requirements !== 'string' || !brief.requirements.trim() || brief.requirements.length > 1200
+      || !CREATION_STYLES.includes(brief.style)) throw new ServiceError('INVALID_CREATION_BRIEF', '请填写不超过1200字的创作需求，并选择现有风格。');
+  if (typeof idempotencyKey !== 'string' || !/^[A-Za-z0-9_-]{8,128}$/.test(idempotencyKey)) throw new ServiceError('INVALID_REQUEST_ID', '本次提交标识无效，请明确开始一次新创作。');
+  const payload = { requirements: brief.requirements.trim(), style: brief.style };
+  if (brief.parentTaskId !== undefined) payload.parentTaskId = workflowIdentifier(brief.parentTaskId);
+  return workflowRequest('create', {
+    method: 'POST', headers: { Accept: 'application/json', 'Content-Type': 'application/json', 'X-Idempotency-Key': idempotencyKey }, body: JSON.stringify(payload),
+  }, validateWorkflowCreated);
+}
+
+export async function getAgentWorkflowStatus(taskId, { afterSequence = 0 } = {}) {
+  if (!Number.isSafeInteger(afterSequence) || afterSequence < 0) throw new ServiceError('INVALID_TASK_SEQUENCE', '任务查询序号无效，请重新查询。');
+  return workflowRequest(`status/${workflowIdentifier(taskId)}?afterSequence=${afterSequence}`, {
+    method: 'GET', headers: { Accept: 'application/json' },
+  }, validateWorkflowStatus);
+}
+
+export async function getAgentWorkflowResult(taskId) {
+  return workflowRequest(`result/${workflowIdentifier(taskId)}`, { method: 'GET', headers: { Accept: 'application/json' } }, validateWorkflowResult);
+}
+
+export async function confirmAgentWorkflow(taskId, { confirmationId, expectedSequence } = {}) {
+  if (!Number.isSafeInteger(expectedSequence) || expectedSequence < 0) throw new ServiceError('INVALID_TASK_SEQUENCE', '任务已变化，请先重新查询再确认。');
+  return workflowRequest(`confirm/${workflowIdentifier(taskId)}`, {
+    method: 'POST', headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ confirmationId: workflowIdentifier(confirmationId), expectedSequence, action: 'accept' }),
+  }, validateWorkflowStatus);
+}
+
+export async function cancelAgentWorkflow(taskId, { expectedSequence } = {}) {
+  if (!Number.isSafeInteger(expectedSequence) || expectedSequence < 0) throw new ServiceError('INVALID_TASK_SEQUENCE', '任务已变化，请先重新查询再取消。');
+  return workflowRequest(`cancel/${workflowIdentifier(taskId)}`, {
+    method: 'POST', headers: { Accept: 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify({ expectedSequence }),
+  }, validateWorkflowStatus);
+}
 
 /** @param {import('./contracts.js').CreationBrief} _brief */
 export async function generateConceptImage(_brief) { return unavailable('conceptImage'); }

@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="戏境AI戏韵工坊：基于京剧私有知识库探索有据可查的智能问答。Agent协作、概念图与图生3D仍待接入。">
+    <meta name="description" content="戏境AI戏韵工坊：京剧私有知识库问答与四Agent协作文化角色设计，提供真实文化依据、辅助审校及用户确认。概念图与图生3D待接入。">
     <meta name="ai-workshop-api-base" content="/api/v1">
     <title>
       AI戏韵工坊｜梨园风华
     </title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/ai-workshop.css?v=phase2-1">
+    <link rel="stylesheet" href="css/ai-workshop.css?v=phase3-1">
   </head>
   <body>
     <header class="site-header">
@@ -91,15 +91,15 @@
             </article>
             <article class="ai-workshop-entry-card">
               <span class="ai-workshop-icon" aria-hidden="true">创</span>
-              <span class="ai-workshop-badge ai-workshop-badge-unavailable">创作服务待接入</span>
+              <span class="ai-workshop-badge ai-workshop-badge-unavailable" data-ai-workshop-agent-capability>协作服务待检查</span>
               <h3>AI角色创作</h3>
               <p>让多个智能体协作理解传统京剧文化，辅助设计独具中国美学特色的原创角色。</p>
-              <a class="ai-workshop-text-link" href="#ai-workshop-create" data-ai-workshop-target="create">整理创作需求 <span aria-hidden="true">→</span></a>
+              <a class="ai-workshop-text-link" href="#ai-workshop-create" data-ai-workshop-target="create">提出创作需求 <span aria-hidden="true">→</span></a>
             </article>
           </div>
           <div class="ai-workshop-section-head ai-workshop-section-head-compact">
             <h3>从文化理解，到数字表达</h3>
-            <p class="ai-workshop-description">下列是未来创作路径说明，当前未启动任何AI任务。</p>
+            <p class="ai-workshop-description">从文化检索到角色文字方案，经过辅助审校和你的确认。概念图与三维生成将在后续阶段开放。</p>
           </div>
           <div class="ai-workshop-roadmap">
             <article><span>01</span><h4>探寻文脉</h4><p>在真实资料中寻找依据</p></article>
@@ -107,7 +107,7 @@
             <article><span>03</span><h4>描绘角色</h4><p>表达独具国风的概念</p></article>
             <article><span>04</span><h4>走向三维</h4><p>从概念图到数字模型</p></article>
           </div>
-          <p class="ai-workshop-feedback">京剧问答连接项目后端，结合经来源核对的项目摘要提供回答与引用；是否可用以实际服务状态为准。智能体执行、概念图与模型生成仍未开放。</p>
+          <p class="ai-workshop-feedback">京剧问答与Agent文化研究复用有来源的项目知识库。协作任务只在你明确提交后启动，是否可用以实际服务状态为准。概念图与模型生成仍未开放。</p>
         </section>
 
         <section id="ai-workshop-qa" class="ai-workshop-panel" data-ai-workshop-panel="qa" aria-labelledby="ai-workshop-qa-heading">
@@ -154,40 +154,68 @@
           <div class="ai-workshop-section-head">
             <span class="ai-workshop-kicker">各司其职 · 共成一戏</span>
             <h2 id="ai-workshop-agents-heading" class="ai-workshop-heading" tabindex="-1">多Agent协作工作台</h2>
-            <p class="ai-workshop-description">规划先行、文化为据、创意表达、审校把关。当前为职责与流程说明，执行服务尚未接入。</p>
+            <p class="ai-workshop-description">规划先行、文化为据、创意表达、审校把关。每个阶段交接结构化产物，状态和摘要来自后端真实任务。</p>
           </div>
-          <div class="ai-workshop-progress"><span class="ai-workshop-badge ai-workshop-badge-unavailable">协作服务未接入</span><strong>任务尚未开始</strong><span>进度与执行摘要将在真实任务启动后展示。</span></div>
+          <div class="ai-workshop-progress ai-workshop-agent-progress">
+            <span id="ai-workshop-agent-service-state" class="ai-workshop-badge ai-workshop-badge-unavailable" data-ai-workshop-agent-capability>协作服务待检查</span>
+            <strong id="ai-workshop-agent-task-state">任务尚未开始</strong>
+            <span id="ai-workshop-agent-progress">真实已完成阶段：0 / 4</span>
+            <small id="ai-workshop-agent-task-id">暂无任务ID</small>
+          </div>
+          <div class="ai-workshop-agent-toolbar">
+            <button id="ai-workshop-agent-query" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>重新查询任务</button>
+            <button id="ai-workshop-agent-cancel" class="ai-workshop-text-link" type="button" disabled>取消当前任务</button>
+            <button id="ai-workshop-agent-service-refresh" class="ai-workshop-text-link" type="button">重新检查协作服务</button>
+            <button id="ai-workshop-agent-new" class="ai-workshop-text-link" type="button">填写新创作需求 →</button>
+          </div>
+          <p id="ai-workshop-agent-feedback" class="ai-workshop-feedback ai-workshop-agent-feedback" role="status" aria-live="polite">尚未提交创作任务。可前往角色创作区填写需求；本页面不会自动启动模型。</p>
           <div class="ai-workshop-agent-grid">
-            <article class="ai-workshop-agent-card">
-              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">01 · 筹</span><span class="ai-workshop-status" data-state="pending">待执行</span></div>
+            <article class="ai-workshop-agent-card" data-agent-id="planner">
+              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">01 · 筹</span><span class="ai-workshop-status" data-agent-status data-state="pending">待执行</span></div>
               <h3>任务规划Agent</h3><p class="ai-workshop-agent-duty">理解用户需求，制定创作任务。</p>
-              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>梳理角色定位、使用场景与风格要求，形成明确的任务目标。关键信息不足时，需要用户补充确认。</p><p>预期交接：用户确认后的创作任务。当前暂无执行摘要。</p></details>
+              <p class="ai-workshop-agent-summary" data-agent-summary>暂无执行摘要。</p><small class="ai-workshop-agent-timing" data-agent-timing>尚无执行时间。</small>
+              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>梳理主题、定位、风格与约束，形成结构化计划；信息不足时暂停并请你补充。</p><p>交接给研究Agent：创作计划、文化检索问题。不会自行编造文化事实。</p></details>
             </article>
-            <article class="ai-workshop-agent-card">
-              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">02 · 研</span><span class="ai-workshop-status" data-state="pending">待执行</span></div>
+            <article class="ai-workshop-agent-card" data-agent-id="researcher">
+              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">02 · 研</span><span class="ai-workshop-status" data-agent-status data-state="pending">待执行</span></div>
               <h3>京剧研究Agent</h3><p class="ai-workshop-agent-duty">检索京剧文化知识，提取真实文化依据。</p>
-              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>围绕行当、脸谱、服饰与剧目检索资料，区分资料原意与创作延伸，保留可追溯的来源。</p><p>预期交接：文化依据与资料引用。当前暂无执行摘要。</p></details>
+              <p class="ai-workshop-agent-summary" data-agent-summary>暂无执行摘要。</p><small class="ai-workshop-agent-timing" data-agent-timing>尚无执行时间。</small>
+              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>调用真实RAG检索，围绕行当、脸谱、服饰与剧目寻找资料。资料不足时停止后续设计。</p><p>交接给设计Agent：来源、定位、实际命中片段与文化适用范围。</p></details>
             </article>
-            <article class="ai-workshop-agent-card">
-              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">03 · 绘</span><span class="ai-workshop-status" data-state="pending">待执行</span></div>
+            <article class="ai-workshop-agent-card" data-agent-id="designer">
+              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">03 · 绘</span><span class="ai-workshop-status" data-agent-status data-state="pending">待执行</span></div>
               <h3>角色设计Agent</h3><p class="ai-workshop-agent-duty">结合文化元素生成创意角色方案。</p>
-              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>在已确认的任务与文化依据上组织角色造型、色彩和设计说明，清楚标明哪些属于原创表达。</p><p>预期交接：角色设计方案。当前暂无执行摘要。</p></details>
+              <p class="ai-workshop-agent-summary" data-agent-summary>暂无执行摘要。</p><small class="ai-workshop-agent-timing" data-agent-timing>尚无执行时间。</small>
+              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>结合任务和文化证据组织名称、定位、服饰、颜色与视觉提示词，区分据资料设计与原创演绎。</p><p>交接给审校Agent：结构化角色文字方案及真实证据ID。此阶段不生成图片。</p></details>
             </article>
-            <article class="ai-workshop-agent-card">
-              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">04 · 校</span><span class="ai-workshop-status" data-state="pending">待执行</span></div>
+            <article class="ai-workshop-agent-card" data-agent-id="reviewer">
+              <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">04 · 校</span><span class="ai-workshop-status" data-agent-status data-state="pending">待执行</span></div>
               <h3>文化审校Agent</h3><p class="ai-workshop-agent-duty">检查文化依据、设计合理性与潜在错误。</p>
-              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>核对文化来源与设计表述，对不确定内容提出修订建议。涉及关键创作选择时，交由用户最终确认。</p><p>预期交接：审校意见与待确认事项。当前暂无执行摘要。</p></details>
+              <p class="ai-workshop-agent-summary" data-agent-summary>暂无执行摘要。</p><small class="ai-workshop-agent-timing" data-agent-timing>尚无执行时间。</small>
+              <details class="ai-workshop-details"><summary>查看职责与协作说明</summary><p>核对证据支持、脸谱和服饰范围、原创标记与需求冲突，给出问题及修订建议。</p><p>交接给你：辅助审校结果和待确认方案。AI审校不代表专业人员审核。</p></details>
             </article>
           </div>
+          <section id="ai-workshop-agent-confirmation" class="ai-workshop-card ai-workshop-confirmation" aria-labelledby="ai-workshop-agent-confirmation-heading" hidden>
+            <h3 id="ai-workshop-agent-confirmation-heading">你的确认，让创意有方向</h3>
+            <p id="ai-workshop-agent-confirm-reason"></p>
+            <p class="ai-workshop-description">请先阅读下方角色方案、辅助审校和文化资料。存在文化问题的草案不能通过点击确认转为已核实方案。</p>
+            <button id="ai-workshop-agent-confirm" class="ai-workshop-button" type="button" disabled>我已核查，接受本次文字方案</button>
+          </section>
+          <section id="ai-workshop-agent-result" class="ai-workshop-card ai-workshop-agent-result" aria-labelledby="ai-workshop-agent-result-heading" hidden>
+            <h3 id="ai-workshop-agent-result-heading">本次角色方案与文化依据</h3>
+            <div id="ai-workshop-agent-result-content"></div>
+            <button id="ai-workshop-agent-download" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>下载已确认角色JSON</button>
+            <p class="ai-workshop-description">仅导出审校通过且由你确认的文字方案；没有自动调用概念图或Neural4D。</p>
+          </section>
           <div class="ai-workshop-card">
             <h3>协作流程说明</h3>
             <ol class="ai-workshop-flow"><li>你提出创作需求</li><li>任务规划</li><li>文化研究</li><li>角色设计</li><li>文化审校</li><li>你确认最终方案</li></ol>
-            <p class="ai-workshop-description">需要修改或资料不足时，流程应回到相应环节。这是未来工作流说明，并非当前任务执行记录。</p>
-            <div class="ai-workshop-state-legend" aria-label="未来状态含义示意，非实时执行记录">
+            <p class="ai-workshop-description">资料不足或审校提出问题时，任务停下来请你调整；重新创作会保留上一任务记录，不自动循环调用模型。</p>
+            <div class="ai-workshop-state-legend" aria-label="状态含义示意，非实时执行记录">
               <span class="ai-workshop-status" data-state="pending">待执行</span><span class="ai-workshop-status" data-state="running">运行中</span><span class="ai-workshop-status" data-state="completed">已完成</span><span class="ai-workshop-status" data-state="failed">执行失败</span><span class="ai-workshop-status" data-state="awaiting_confirmation">等待用户确认</span>
             </div>
             <small class="ai-workshop-description">以上为状态含义示意，非实时执行记录。</small>
-            <button class="ai-workshop-text-link" type="button" data-ai-workshop-notice="Agent执行服务尚未接入，当前没有真实执行摘要。">执行摘要 · 待接入</button>
+            <details class="ai-workshop-details"><summary>查看真实任务事件</summary><p>仅记录公开阶段状态与摘要，不显示模型隐藏思维过程；最多保留本页面最近50条。</p><ol id="ai-workshop-agent-events" class="ai-workshop-agent-events"></ol></details>
           </div>
         </section>
 
@@ -195,7 +223,7 @@
           <div class="ai-workshop-section-head">
             <span class="ai-workshop-kicker">以传统为灵感 · 以想象为笔</span>
             <h2 id="ai-workshop-create-heading" class="ai-workshop-heading" tabindex="-1">AI角色创作</h2>
-            <p class="ai-workshop-description">先写下你心中的角色。当前可以整理页面内草稿，AI设计和概念图生成尚未开放。</p>
+            <p class="ai-workshop-description">先写下你心中的角色。你可以只整理本页草稿，也可以明确提交给四个Agent协作设计文字方案。概念图生成尚未开放。</p>
           </div>
           <div class="ai-workshop-create-layout">
             <form id="ai-workshop-creation-form" class="ai-workshop-form ai-workshop-card" novalidate>
@@ -207,11 +235,17 @@
               <select id="ai-workshop-style" class="ai-workshop-input"><option value="京剧写意">京剧写意</option><option value="国风幻想">国风幻想</option><option value="舞台角色">舞台角色</option></select>
               <div class="ai-workshop-form-footer"><button id="ai-workshop-save-draft" class="ai-workshop-button" type="submit" disabled>整理我的草稿</button><button id="ai-workshop-reset-draft" class="ai-workshop-button ai-workshop-button-secondary" type="button">清空草稿</button></div>
               <p class="ai-workshop-description">草稿仅保留在当前页面，刷新后清空；不会上传，也不是AI生成的设计。</p>
+              <div class="ai-workshop-agent-submit">
+                <button id="ai-workshop-agent-start" class="ai-workshop-button" type="button" disabled aria-describedby="ai-workshop-agent-submit-help">提交Agent创作 →</button>
+                <p id="ai-workshop-agent-submit-help" class="ai-workshop-description">点击此按钮才会将需求发送后端，并将必要需求及文化证据交给云模型。请勿填写敏感个人信息。正常流程进行3次模型调用，最终方案仍需你确认。</p>
+                <p id="ai-workshop-agent-submit-error" class="ai-workshop-feedback ai-workshop-feedback-error" role="alert" hidden></p>
+                <button id="ai-workshop-agent-submit-retry" class="ai-workshop-button ai-workshop-button-secondary" type="button" hidden>重试本次提交（沿用原标识与需求）</button>
+              </div>
             </form>
             <aside class="ai-workshop-card">
               <h3>创作草稿与设计说明</h3><span class="ai-workshop-badge">用户草稿 · 非AI输出</span>
               <div id="ai-workshop-draft-content" class="ai-workshop-draft"><p>尚未整理草稿，请先填写左侧需求。</p></div>
-              <p id="ai-workshop-draft-status" class="ai-workshop-feedback" role="status" aria-live="polite">未来的角色设计说明将在真实服务接入后单独展示。</p>
+              <p id="ai-workshop-draft-status" class="ai-workshop-feedback" role="status" aria-live="polite">页面内草稿与真实Agent结果分别展示。任务结果请前往Agent协作工作台查看。</p>
               <button class="ai-workshop-button" type="button" disabled aria-describedby="ai-workshop-concept-status">AI生成概念图 · 待开放</button>
             </aside>
           </div>
@@ -285,6 +319,6 @@
         </p>
       </div>
     </footer>
-    <script type="module" src="js/ai-workshop/main.js?v=phase2-1"></script>
+    <script type="module" src="js/ai-workshop/main.js?v=phase3-1"></script>
   </body>
 </html>
