@@ -222,6 +222,8 @@ class AssetService:
 
     def import_model(self, asset_id, raw, license_note):
         asset = self.style_defaults(self.store.get(asset_id))
+        if asset['culturalReviewRequired']:
+            raise ServiceError('CULTURAL_REVIEW_REQUIRED', '此Prompt草稿尚未完成新的文化审校，不能关联角色模型。', 409)
         note = self.license_note(license_note)
         validation = validate_glb(raw)
         metadata = {'hash': validation['hash'], 'size': len(raw), 'format': 'glb', 'origin': 'licensed_import',

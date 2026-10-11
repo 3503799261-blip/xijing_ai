@@ -15,6 +15,9 @@ from ..errors import ServiceError
 MAX_IMAGE_BYTES = 10 * 1024 * 1024
 MAX_MODEL_BYTES = 64 * 1024 * 1024
 MAX_IMAGE_PIXELS = 16_000_000
+MAX_TEXTURE_PIXELS = 16_000_000
+MAX_TOTAL_TEXTURE_PIXELS = 32_000_000
+MAX_TEXTURE_IMAGES = 16
 IMAGE_MIMES = {'image/png', 'image/jpeg', 'image/webp'}
 
 
@@ -61,6 +64,73 @@ def integer(value, minimum=0):
 
 def index(value, sequence):
     return integer(value) and value < len(sequence)
+
+
+def validate_textures(doc, binary, views):
+    """Bound embedded PNG/JPEG decoding and ordinary texture/material links.
+
+    Check every declared image, including unused ones. The GLB is preserved
+    byte-for-byte; this gate never silently repairs or replaces model textures.
+    """
+    images, textures = doc.get('images', []), doc.get('textures', [])
+    samplers, materials = doc.get('samplers', []), doc.get('materials', [])
+    for sequence in (images, textures, samplers, materials):
+        if not isinstance(sequence, list) or any(not isinstance(item, dict) for item in sequence):
+            fail('MODEL_TEXTURE_INVALID', '模型纹理或材质资源表格式无效。')
+    if len(images) > MAX_TEXTURE_IMAGES:
+        fail('MODEL_TEXTURE_TOO_LARGE', '模型内嵌图片超过16张，请先离线优化。')
+    total_pixels = 0
+    for image in images:
+        if image.get('mimeType') not in ('image/png', 'image/jpeg') or not index(image.get('bufferView'), views):
+            fail('MODEL_TEXTURE_INVALID', '模型图片须为内嵌PNG/JPEG，并引用有效的bufferView。')
+        view = views[image['bufferView']]
+        if 'byteStride' in view:
+            fail('MODEL_TEXTURE_INVALID', '模型图片缓冲区不能声明几何字节步长。')
+        start = view.get('byteOffset', 0)
+        raw = binary[start:start + view['byteLength']]
+        try:
+            with warnings.catch_warnings():
+                warnings.simplefilter('error', Image.DecompressionBombWarning)
+                with Image.open(io.BytesIO(raw)) as decoded:
+                    formats = {'PNG': 'image/png', 'JPEG': 'image/jpeg'}
+                    if formats.get(decoded.format) != image['mimeType'] or getattr(decoded, 'n_frames', 1) != 1:
+                        fail('MODEL_TEXTURE_INVALID', '模型图片实际格式与声明不一致，或包含多帧图片。')
+                    width, height = decoded.size
+                    pixels = width * height
+                    if width < 1 or height < 1 or width > 8192 or height > 8192 or pixels > MAX_TEXTURE_PIXELS:
+                        fail('MODEL_TEXTURE_TOO_LARGE', '模型单张纹理尺寸超过8192像素或1600万总像素。')
+                    total_pixels += pixels
+                    if total_pixels > MAX_TOTAL_TEXTURE_PIXELS:
+                        fail('MODEL_TEXTURE_TOO_LARGE', '模型内嵌纹理累计超过3200万像素，请先离线优化。')
+                    decoded.load()
+        except ServiceError:
+            raise
+        except (UnidentifiedImageError, OSError, ValueError, Image.DecompressionBombError, Image.DecompressionBombWarning):
+            fail('MODEL_TEXTURE_INVALID', '模型内嵌图片无法安全解码。')
+    for sampler in samplers:
+        for name, allowed in [('magFilter', (9728, 9729)), ('minFilter', (9728, 9729, 9984, 9985, 9986, 9987)),
+                              ('wrapS', (33071, 33648, 10497)), ('wrapT', (33071, 33648, 10497))]:
+            if name in sampler and (type(sampler[name]) is not int or sampler[name] not in allowed):
+                fail('MODEL_TEXTURE_INVALID', '模型纹理采样参数无效。')
+    for texture in textures:
+        if not index(texture.get('source'), images) or ('sampler' in texture and not index(texture['sampler'], samplers)):
+            fail('MODEL_TEXTURE_INVALID', '模型纹理引用不存在的内嵌图片或采样器。')
+    def texture_links(value):
+        if not isinstance(value, dict):
+            return
+        for key, nested in value.items():
+            if key == 'extras':
+                continue
+            if key.endswith('Texture'):
+                if (not isinstance(nested, dict) or not index(nested.get('index'), textures)
+                        or ('texCoord' in nested and not integer(nested['texCoord']))):
+                    fail('MODEL_TEXTURE_INVALID', '模型材质引用不存在的纹理或无效UV通道。')
+            elif isinstance(nested, dict):
+                texture_links(nested)
+    for material in materials:
+        texture_links(material)
+    return {'imageCount': len(images), 'textureCount': len(textures), 'materialCount': len(materials),
+            'decodedTexturePixels': total_pixels, 'embeddedImagesDecoded': True}
 
 
 def validate_glb(raw):
@@ -147,6 +217,7 @@ def _validate_glb(raw):
             fail('MODEL_INVALID', '模型bufferView越界。')
         if stride is not None and (not integer(stride, 4) or stride > 252 or stride % 4):
             fail('MODEL_INVALID', '模型字节步长无效。')
+    texture_validation = validate_textures(doc, binary, views)
     widths = {5120: 1, 5121: 1, 5122: 2, 5123: 2, 5125: 4, 5126: 4}
     components = {'SCALAR': 1, 'VEC2': 2, 'VEC3': 3, 'VEC4': 4, 'MAT2': 4, 'MAT3': 9, 'MAT4': 16}
     for accessor in accessors:
@@ -196,6 +267,8 @@ def _validate_glb(raw):
         for primitive in primitives:
             if not isinstance(primitive, dict) or not isinstance(primitive.get('attributes'), dict):
                 fail('MODEL_INVALID', '模型几何结构无效。')
+            if 'material' in primitive and not index(primitive['material'], doc.get('materials', [])):
+                fail('MODEL_TEXTURE_INVALID', '模型几何引用不存在的材质。')
             position = primitive['attributes'].get('POSITION')
             if not index(position, accessors):
                 fail('MODEL_INVALID', '模型缺少顶点坐标。')
@@ -244,8 +317,9 @@ def _validate_glb(raw):
             triangle_count += count // 3 if mode == 4 else count - 2
     if not primitive_count:
         fail('MODEL_INVALID', '模型场景没有可显示的三角几何。')
-    return {'validator': 'xijing_glb_structural_v1', 'valid': True, 'format': 'glb', 'version': 2,
+    return {'validator': 'xijing_glb_structural_v2', 'valid': True, 'format': 'glb', 'version': 2,
             'selfContained': True, 'externalResources': 0, 'meshCount': len(render_meshes),
             'primitiveCount': primitive_count, 'vertexCount': vertex_count, 'triangleCount': triangle_count,
             'size': len(raw), 'hash': hashlib.sha256(raw).hexdigest(),
+            **texture_validation,
             'fullConformanceChecked': False}
