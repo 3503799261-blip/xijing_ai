@@ -6,7 +6,7 @@ from ..errors import ServiceError
 from .planner import execution_metadata
 from .schemas import CharacterDesign, canonical_ids, evidence_aliases, model_evidence
 
-PROMPT_VERSION = 'agent_designer_v2'
+PROMPT_VERSION = 'agent_designer_v3'
 PROMPT = Path(__file__).resolve().parents[2] / 'prompts' / (PROMPT_VERSION + '.txt')
 
 

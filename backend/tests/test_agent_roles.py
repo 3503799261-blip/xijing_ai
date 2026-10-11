@@ -97,7 +97,7 @@ def test_four_roles_order_three_bounded_calls_canonical_citations_and_human_gate
         ('planner', 'running'), ('planner', 'completed'), ('researcher', 'running'), ('researcher', 'completed'),
         ('designer', 'running'), ('designer', 'completed'), ('reviewer', 'running'), ('reviewer', 'completed')]
     assert [call['requestId'] for call in runtime.provider.calls] == ['unit-task:planner', 'unit-task:designer', 'unit-task:reviewer']
-    assert [call['maxOutput'] for call in runtime.provider.calls] == [256, 800, 400]
+    assert [call['maxOutput'] for call in runtime.provider.calls] == [384, 800, 400]
     assert runtime.owner_calls == 1
     assert runtime.queries[0][1] == {'top_k': 5, 'category': None, 'mode': 'hybrid'}
     assert result['uncertain'] is False
@@ -111,7 +111,7 @@ def test_four_roles_order_three_bounded_calls_canonical_citations_and_human_gate
     assert sent['DESIGN']['usedEvidenceIds'] == ['E1']
     assert events[5]['artifact']['usedEvidenceIds'] == ['test-only-chunk']
     assert events[3]['artifact']['evidence'][0]['sourceVersion'] == 'unit-version'
-    assert events[1]['artifact']['execution']['promptVersion'] == 'agent_planner_v2'
+    assert events[1]['artifact']['execution']['promptVersion'] == 'agent_planner_v3'
 
 
 def test_clarification_stops_before_any_research_or_design():
@@ -378,11 +378,12 @@ def test_actual_preserved_sheng_garments_are_supported_by_their_exact_excerpts()
     assert garment_reference_issues(record['artifacts']['designer'], record['artifacts']['researcher']['evidence']) == []
 
 
-def test_planner_v2_avoids_optional_creative_color_research_and_retains_v1():
+def test_planner_v3_avoids_optional_creative_color_research_and_retains_v1_v2():
     from backend.app.agents.planner import PROMPT
     prompt = PROMPT.read_text(encoding='utf-8')
-    assert '不得追加' in prompt and '原创的配色' in prompt
+    assert '不得查询' in prompt and '允许原创' in prompt
     assert PROMPT.with_name('agent_planner_v1.txt').exists()
+    assert PROMPT.with_name('agent_planner_v2.txt').exists()
 
 
 def test_summary_bounds_long_missing_queries_and_public_limits():
@@ -390,3 +391,53 @@ def test_summary_bounds_long_missing_queries_and_public_limits():
     summary = research_summary({'queries': [{'question': '测试' * 180, 'uncertain': True}] * 3,
                                 'evidence': [], 'limitations': ['公开限制' * 160]})
     assert len(summary) <= 900 and summary.endswith('…')
+
+
+def test_single_character_cultural_terms_in_original_brief_are_valid_not_rejected():
+    """Offline boundary reproduction; not a reconstruction of missing model raw output."""
+    from backend.app.agents.planner import plan_creation
+    async def scenario():
+        brief = {**BRIEF, 'requirements': '以蟒与靠的适用语境设计角色，颜色可原创。'}
+        plan = {**PLAN, 'requiredEntities': ['蟒', '靠']}
+        provider = OfflineProvider([plan])
+        result = await plan_creation(brief, provider, 'unit-single-character')
+        assert result['requiredEntities'] == ['蟒', '靠']
+        assert provider.calls[0]['maxOutput'] == 384
+    asyncio.run(scenario())
+
+
+def test_phase2_explicit_insufficiency_is_preserved_even_when_candidates_exist(tmp_path):
+    from backend.app.agents.store import TaskStore
+    async def scenario():
+        runtime = OfflineRuntime([PLAN])
+        search = runtime.search
+        def insufficient_with_candidate(question, **kwargs):
+            return {**search(question, **kwargs), 'uncertain': True}
+        runtime.search_service.search = insufficient_with_candidate
+        store = TaskStore(tmp_path / 'source-insufficient.sqlite3')
+        task_id, _ = store.create(BRIEF, 'unit-source-insufficient')
+        store.start(task_id)
+        async def emit(agent_id, state, **kwargs):
+            store.emit(task_id, agent_id, state, **kwargs)
+        result = await run_workflow(runtime, task_id, BRIEF, emit)
+        store.finish(task_id, result)
+        research = store.artifacts(task_id)['researcher']
+        assert research['queries'][0]['evidenceIds']
+        assert research['queries'][0]['retrievalUncertain'] is True
+        assert research['queries'][0]['uncertain'] is True
+        assert research['policyVersion'] == 'agent_research_v3'
+        assert len(runtime.provider.calls) == 1 and result['design'] is None
+        assert store.status(task_id)['confirmation']['canAccept'] is False
+    asyncio.run(scenario())
+
+
+def test_v3_prompts_address_preserved_false_positive_and_costume_field_meaning():
+    from backend.app.agents.designer import PROMPT as design_prompt
+    from backend.app.agents.reviewer import PROMPT as review_prompt
+    designer_text = design_prompt.read_text(encoding='utf-8')
+    reviewer_text = review_prompt.read_text(encoding='utf-8')
+    assert '不能把性别分类或声音说明填进costume' in designer_text
+    assert '完整visualPrompt、creativeElements、limitations' in reviewer_text
+    assert '已有声明时声称' in reviewer_text
+    assert design_prompt.with_name('agent_designer_v2.txt').exists()
+    assert review_prompt.with_name('agent_reviewer_v2.txt').exists()

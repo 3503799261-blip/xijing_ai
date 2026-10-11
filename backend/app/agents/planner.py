@@ -7,7 +7,7 @@ from pydantic import ValidationError
 from ..errors import ServiceError
 from .schemas import TaskPlan
 
-PROMPT_VERSION = 'agent_planner_v2'
+PROMPT_VERSION = 'agent_planner_v3'
 PROMPT = Path(__file__).resolve().parents[2] / 'prompts' / (PROMPT_VERSION + '.txt')
 
 
@@ -22,7 +22,7 @@ async def plan_creation(brief: dict, provider, request_id: str) -> dict:
     result = await provider.generate([
         {'role': 'system', 'content': prompt},
         {'role': 'user', 'content': json.dumps({'USER_BRIEF': brief}, ensure_ascii=False)},
-    ], request_id, max_output=256)
+    ], request_id, max_output=384)
     try:
         plan = TaskPlan.model_validate_json(result['content'])
         if plan.style != brief['style']:

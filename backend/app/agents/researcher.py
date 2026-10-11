@@ -2,7 +2,7 @@
 import re
 from ..errors import ServiceError
 
-POLICY_VERSION = 'agent_research_v2'
+POLICY_VERSION = 'agent_research_v3'
 
 
 def _retrieve(runtime, question: str) -> dict:
@@ -21,7 +21,7 @@ def _retrieve(runtime, question: str) -> dict:
         permitted.append({**item, 'sourceVersion': source['document_version'],
                           'sourceContentHash': source['content_hash'],
                           'chunkContentHash': chunk['content_hash']})
-    return {**result, 'evidence': permitted, 'uncertain': not bool(permitted)}
+    return {**result, 'evidence': permitted, 'uncertain': result['uncertain'] or not bool(permitted)}
 
 
 async def research_opera(plan: dict, runtime, cancelled=lambda: False) -> dict:
