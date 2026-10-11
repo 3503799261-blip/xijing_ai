@@ -22,6 +22,13 @@ class Settings(BaseSettings):
     agent_queue_limit: int = Field(default=2, ge=0, le=5)
     agent_workflow_timeout_seconds: float = Field(default=150, ge=60, le=180)
     agent_workflow_enabled: bool = True
+    neural4d_api_key: SecretStr = SecretStr('')
+    neural4d_admin_token: SecretStr = SecretStr('')
+    neural4d_generation_enabled: bool = False
+    neural4d_protocol_verified: bool = False
+    neural4d_expected_credits: float | None = Field(default=None, gt=0)
+    neural4d_timeout_seconds: float = Field(default=30, ge=1, le=90)
+    neural4d_download_hosts: list[str] = []
     rag_data_dir: Path = WORKSPACE_ROOT / '.runtime' / 'xijing-ai'
     embedding_model: str = 'BAAI/bge-small-zh-v1.5'
     embedding_model_path: Path = WORKSPACE_ROOT / '.runtime' / 'models' / 'bge-small-zh-v1.5'

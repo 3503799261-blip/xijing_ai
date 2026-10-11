@@ -68,7 +68,13 @@ class Runtime:
 
     def capabilities(self):
         supervisor = getattr(self, 'agent_supervisor', None)
-        return {'questionAnswering': bool(self.search_service and self.provider.verified), 'knowledgeSearch': bool(self.search_service), 'agentWorkflow': bool(supervisor and supervisor.available()), 'conceptImage': False, 'imageToModel': False, 'checkedAt': datetime.now(timezone.utc).isoformat()}
+        assets = getattr(self, 'asset_service', None)
+        models = assets.model_service if assets else None
+        try:
+            model_available = bool(models and models.available())
+        except (ServiceError, OSError):
+            model_available = False
+        return {'questionAnswering': bool(self.search_service and self.provider.verified), 'knowledgeSearch': bool(self.search_service), 'agentWorkflow': bool(supervisor and supervisor.available()), 'conceptImage': False, 'imageToModel': model_available, 'assetManagement': bool(assets), 'modelViewer': bool(assets), 'checkedAt': datetime.now(timezone.utc).isoformat()}
 
     def health(self):
         supervisor = getattr(self, 'agent_supervisor', None)

@@ -5,12 +5,13 @@ import hashlib
 import logging
 import time
 import uuid
+import sqlite3
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, Response
 from starlette.exceptions import HTTPException
-from .config import Settings
+from .config import Settings, WORKSPACE_ROOT
 from .errors import ServiceError
 from .schemas import QuestionRequest, SearchRequest, QuestionAnswer
 from .services.runtime import Runtime
@@ -18,26 +19,47 @@ from .services.chat import grounded_answer
 from .static_frontend import public_file
 from .agents.supervisor import Supervisor
 from .api.agents import register_agents
+from .assets.service import AssetService
+from .assets.usage import UsageManager
+from .assets.neural_service import ModelService
+from .api.assets import register_assets
 
 logger = logging.getLogger('xijing.requests')
+USAGE_LEDGER_PATH = WORKSPACE_ROOT / '.runtime' / 'neural4d-usage.sqlite3'
 logger.setLevel(logging.INFO)
 if not logger.handlers:
     handler = logging.StreamHandler()
     handler.setFormatter(logging.Formatter('%(message)s'))
     logger.addHandler(handler)
 
-def create_app(settings=None):
+def create_app(settings=None, *, assets_usage_override=None):
     settings = settings or Settings()
     runtime = Runtime(settings)
     supervisor = Supervisor(runtime)
     runtime.agent_supervisor = supervisor
+    assets = model_service = None
+    try:
+        assets = AssetService(settings, supervisor.store)
+        assets.usage = assets_usage_override if assets_usage_override is not None else UsageManager(USAGE_LEDGER_PATH)
+        model_service = ModelService(settings, assets, assets.usage)
+        assets.model_service = model_service
+    except (ServiceError, OSError, sqlite3.Error):
+        assets = model_service = None
+    runtime.asset_service = assets
     @asynccontextmanager
     async def lifespan(app):
         try:
+            if model_service:
+                try:
+                    model_service.start()
+                except (ServiceError, OSError, sqlite3.Error):
+                    model_service.close()
             await runtime.start()
             await supervisor.start()
             yield
         finally:
+            if model_service:
+                model_service.close()
             try:
                 await supervisor.close()
             finally:
@@ -45,14 +67,15 @@ def create_app(settings=None):
     app = FastAPI(title='戏境 AI', lifespan=lifespan, docs_url=None, redoc_url=None)
     app.state.runtime = runtime
     app.state.agent_supervisor = supervisor
-    app.add_middleware(CORSMiddleware, allow_origins=settings.allowed_origins, allow_credentials=False, allow_methods=['GET', 'POST'], allow_headers=['Content-Type', 'X-Idempotency-Key'])
+    app.state.asset_service = assets
+    app.add_middleware(CORSMiddleware, allow_origins=settings.allowed_origins, allow_credentials=False, allow_methods=['GET', 'POST'], allow_headers=['Content-Type', 'X-Idempotency-Key', 'X-Asset-Admin-Token'])
     cache, pending = OrderedDict(), {}
 
     @app.middleware('http')
     async def public_request(request: Request, call_next):
         request.state.request_id = str(uuid.uuid4())
         started = time.perf_counter()
-        if request.method == 'POST':
+        if request.method == 'POST' and request.url.path not in ('/api/v1/assets/images', '/api/v1/assets/models/import'):
             body = await request.body()
             if len(body) > 8192:
                 error = ServiceError('BODY_TOO_LARGE', '请求内容过长，请缩短问题。', 413)
@@ -77,6 +100,7 @@ def create_app(settings=None):
     async def validation_error(request, exc):
         message = ('创作请求格式不正确：需求不能为空且最多1200个字符单位，风格与任务操作参数也须有效。'
                    if request.url.path.startswith('/api/v1/agent/') else
+                   '资产请求格式不正确，请检查角色、图片Hash、用途与确认参数。' if request.url.path.startswith('/api/v1/assets/') else
                    '请求格式不正确：问题不能为空且最多600个字符单位，请检查输入。')
         return JSONResponse(ServiceError('INVALID_REQUEST', message, 422).public(request.state.request_id), status_code=422)
 
@@ -135,6 +159,12 @@ def create_app(settings=None):
         finally: pending.pop(slot, None)
 
     register_agents(app, supervisor)
+    if assets:
+        register_assets(app, assets)
+    else:
+        @app.api_route('/api/v1/assets/{path:path}', methods=['GET', 'POST'])
+        async def unavailable_assets(path: str):
+            raise ServiceError('ASSET_SERVICE_UNAVAILABLE', '资产服务未就绪，文化网页与知识问答仍可使用。', 503)
 
     @app.get('/{path:path}')
     async def frontend(path: str):
