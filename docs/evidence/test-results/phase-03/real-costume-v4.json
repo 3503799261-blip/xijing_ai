@@ -1,0 +1,515 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-10-11T06:32:47.225725+00:00",
+  "scope": "Real HTTP workflow and real backend RAG/LLM; no automatic retry",
+  "case": "costume",
+  "brief": {
+    "requirements": "设计一位原创国风舞台角色，以京剧服装表达身份与人物气质为依据，明确蟒与靠各自的适用语境。颜色与未来装饰可原创，不把创意说成传统规范。",
+    "style": "舞台角色"
+  },
+  "budgetBefore": {
+    "calls": 94,
+    "estimatedUpperCostCny": 0.21980032,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 32,
+        "estimatedUpperCostCny": 0.08636608,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "pollSamples": [
+    {
+      "taskId": "dcd4d353-ebce-446d-a284-632be8f29736",
+      "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+      "state": "running",
+      "currentAgent": "planner",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:32:47.345023+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 0,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:32:47.323991+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:32:47.329149+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:32:47.346019+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 3,
+      "sequence": 3,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:32:47.322170+00:00",
+      "updatedAt": "2026-10-11T06:32:47.346019+00:00",
+      "requestId": "6b5ed9b5-0613-4433-affe-c50bf7a637ac"
+    },
+    {
+      "taskId": "dcd4d353-ebce-446d-a284-632be8f29736",
+      "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+      "state": "awaiting_confirmation",
+      "currentAgent": "researcher",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+          "startedAt": "2026-10-11T06:32:47.345023+00:00",
+          "finishedAt": "2026-10-11T06:32:48.464939+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "awaiting_confirmation",
+          "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧蟒与靠的适用语境比较；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：靠；相似人物不能替代。",
+          "startedAt": "2026-10-11T06:32:48.470234+00:00",
+          "finishedAt": "2026-10-11T06:32:48.492797+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 1,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:32:47.323991+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:32:47.329149+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:32:47.346019+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:32:48.465939+00:00",
+          "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:32:48.470234+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:32:48.493797+00:00",
+          "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧蟒与靠的适用语境比较；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：靠；相似人物不能替代。",
+          "agentId": "researcher",
+          "state": "awaiting_confirmation"
+        },
+        {
+          "kind": "task",
+          "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:32:48.497797+00:00",
+          "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+          "taskState": "awaiting_confirmation",
+          "confirmationId": "d5fc2ed2-2536-4371-917f-d08cba28ccb7"
+        }
+      ],
+      "lastSequence": 7,
+      "sequence": 7,
+      "confirmation": {
+        "id": "d5fc2ed2-2536-4371-917f-d08cba28ccb7",
+        "reason": "insufficient_evidence",
+        "canAccept": false
+      },
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:32:47.322170+00:00",
+      "updatedAt": "2026-10-11T06:32:48.497797+00:00",
+      "requestId": "c55931cf-68cc-4d9e-b5bb-a28bf954e6fe"
+    }
+  ],
+  "createHttpStatus": 202,
+  "created": {
+    "taskId": "dcd4d353-ebce-446d-a284-632be8f29736",
+    "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/dcd4d353-ebce-446d-a284-632be8f29736",
+    "resultUrl": "/api/v1/agent/result/dcd4d353-ebce-446d-a284-632be8f29736",
+    "requestId": "41df9b79-3e64-4bb5-8f81-84143a42595f"
+  },
+  "finalStatus": {
+    "taskId": "dcd4d353-ebce-446d-a284-632be8f29736",
+    "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+    "state": "awaiting_confirmation",
+    "currentAgent": "researcher",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "completed",
+        "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+        "startedAt": "2026-10-11T06:32:47.345023+00:00",
+        "finishedAt": "2026-10-11T06:32:48.464939+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "researcher",
+        "state": "awaiting_confirmation",
+        "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧蟒与靠的适用语境比较；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：靠；相似人物不能替代。",
+        "startedAt": "2026-10-11T06:32:48.470234+00:00",
+        "finishedAt": "2026-10-11T06:32:48.492797+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      },
+      {
+        "id": "reviewer",
+        "state": "pending",
+        "summary": "尚未执行。",
+        "startedAt": null,
+        "finishedAt": null,
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 1,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T06:32:47.323991+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T06:32:47.329149+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T06:32:47.346019+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T06:32:48.465939+00:00",
+        "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+        "agentId": "planner",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T06:32:48.470234+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "researcher",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+        "sequence": 6,
+        "occurredAt": "2026-10-11T06:32:48.493797+00:00",
+        "summary": "资料不足，尚未生成角色。 未覆盖查询：京剧蟒与靠的适用语境比较；检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。；来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。；部分研究问题没有有效资料；设计和审校不得补造这些文化事实。；未找到指定人物或传统名称的精确依据：靠；相似人物不能替代。",
+        "agentId": "researcher",
+        "state": "awaiting_confirmation"
+      },
+      {
+        "kind": "task",
+        "runId": "dcd4d353-ebce-446d-a284-632be8f29736",
+        "sequence": 7,
+        "occurredAt": "2026-10-11T06:32:48.497797+00:00",
+        "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+        "taskState": "awaiting_confirmation",
+        "confirmationId": "d5fc2ed2-2536-4371-917f-d08cba28ccb7"
+      }
+    ],
+    "lastSequence": 7,
+    "sequence": 7,
+    "confirmation": {
+      "id": "d5fc2ed2-2536-4371-917f-d08cba28ccb7",
+      "reason": "insufficient_evidence",
+      "canAccept": false
+    },
+    "resultReady": false,
+    "cancelRequested": false,
+    "createdAt": "2026-10-11T06:32:47.322170+00:00",
+    "updatedAt": "2026-10-11T06:32:48.497797+00:00",
+    "requestId": "c55931cf-68cc-4d9e-b5bb-a28bf954e6fe"
+  },
+  "outcome": "awaiting_confirmation",
+  "elapsedSeconds": 1.6636,
+  "budgetAfter": {
+    "calls": 95,
+    "estimatedUpperCostCny": 0.22151032,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 33,
+        "estimatedUpperCostCny": 0.08807608,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "providerCalls": [
+    {
+      "requestId": "dcd4d353-ebce-446d-a284-632be8f29736:planner",
+      "createdAt": "2026-10-11T06:32:47.348018+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.00726,
+      "estimatedUpperCny": 0.00171,
+      "usage": {
+        "prompt_tokens": 435,
+        "completion_tokens": 105,
+        "total_tokens": 540,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 435
+      },
+      "scope": "phase3"
+    }
+  ],
+  "modelCallCount": 1,
+  "measuredTokens": 540,
+  "estimatedCostCny": 0.00171,
+  "artifacts": {
+    "planner": {
+      "theme": "原创国风舞台角色",
+      "target": "京剧服装身份表达",
+      "style": "舞台角色",
+      "requirements": [
+        {
+          "id": "R1",
+          "text": "以京剧服装表达身份与气质"
+        },
+        {
+          "id": "R2",
+          "text": "明确蟒与靠各自适用语境"
+        },
+        {
+          "id": "R3",
+          "text": "颜色与未来装饰可原创，不称传统"
+        }
+      ],
+      "researchQueries": [
+        "京剧蟒与靠的适用语境比较"
+      ],
+      "clarificationQuestions": [],
+      "requiredEntities": [
+        "蟒",
+        "靠"
+      ],
+      "execution": {
+        "requestId": "dcd4d353-ebce-446d-a284-632be8f29736:planner",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 435,
+          "completion_tokens": 105,
+          "total_tokens": 540,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 435
+        },
+        "elapsedSeconds": 1.1085,
+        "promptVersion": "agent_planner_v4",
+        "promptHash": "bd3f5809b5aa49f723834da845c37441984659f03a4eb9602871539abfb79966"
+      }
+    },
+    "researcher": {
+      "queries": [
+        {
+          "question": "京剧蟒与靠的适用语境比较",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a"
+          ],
+          "uncertain": true,
+          "retrievalUncertain": false,
+          "missingYears": [],
+          "elapsedSeconds": 0.0177,
+          "retrievalMode": "hybrid",
+          "missingEntities": [
+            "靠"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+          "chunkId": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-mang",
+          "title": "京剧服装和人物身份有什么关系？",
+          "locator": "正文蟒袍段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+          "excerpt": "蟒袍常用于帝后、贵族及高级官员的正式场合。\n黄蟒可表示皇帝上朝，女蟒可用于后妃；\n这是戏服制度的基础说明。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧服饰",
+          "entityNames": [
+            "蟒袍",
+            "黄蟒",
+            "女蟒",
+            "皇帝",
+            "后妃"
+          ],
+          "vectorScore": 0.6144475592357135,
+          "keywordScore": null,
+          "entityMatchCount": 0,
+          "acceptedBy": "vector_threshold",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "70a5e6fd9bd22f9eed0d57a426d7e00b10d99010b29016441a2001218c9808e6",
+          "chunkContentHash": "caa952533ad90011874b486b08cda3c33febe2b2804a8c221ffb710f359c2282"
+        }
+      ],
+      "requirementCoverage": [
+        {
+          "requirementId": "R1",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a"
+          ]
+        },
+        {
+          "requirementId": "R2",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a"
+          ]
+        },
+        {
+          "requirementId": "R3",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a"
+          ]
+        }
+      ],
+      "limitations": [
+        "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+        "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。",
+        "部分研究问题没有有效资料；设计和审校不得补造这些文化事实。",
+        "未找到指定人物或传统名称的精确依据：靠；相似人物不能替代。"
+      ],
+      "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+      "policyVersion": "agent_research_v3"
+    }
+  },
+  "citationMappingChecks": []
+}

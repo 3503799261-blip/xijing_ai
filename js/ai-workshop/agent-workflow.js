@@ -228,9 +228,9 @@ export function initializeAgentWorkflow({ root, selectPanel, refreshCapabilities
       if (generation !== capturedGeneration || requestedTaskId !== taskId) return;
       if (applyStatus(value)) {
         succeeded = true;
-        setFeedback(value.cancelRequested ? '取消请求已记录，正在等待当前阶段真实收尾；已发生的模型费用仍保留。'
+        setFeedback(value.state === 'cancelled' ? '任务已取消，未继续启动后续阶段。'
+          : value.cancelRequested ? '取消请求已记录，正在等待当前阶段真实收尾；已发生的模型费用仍保留。'
           : value.state === 'failed' ? '任务执行失败。请查看已返回的阶段摘要；不会自动重发付费请求。'
-            : value.state === 'cancelled' ? '任务已取消，未继续启动后续阶段。'
               : value.state === 'completed' ? '你已确认最终文字方案。可以下载角色JSON，概念图和3D仍未开放。'
                 : value.state === 'awaiting_confirmation' ? REASONS[value.confirmation?.reason] || '任务需要你确认或补充。'
                   : '正在读取后端真实执行状态；进度仅在阶段返回后更新。');
@@ -313,7 +313,7 @@ export function initializeAgentWorkflow({ root, selectPanel, refreshCapabilities
         ? await confirmAgentWorkflow(taskId, { confirmationId: snapshot.confirmation.id, expectedSequence: snapshot.lastSequence })
         : await cancelAgentWorkflow(taskId, { expectedSequence: snapshot.lastSequence });
       if (generation !== capturedGeneration || !applyStatus(value)) return;
-      setFeedback(action === 'confirm' ? '已收到后端确认结果。正在读取最终方案。' : value.cancelRequested ? '已请求取消。当前阶段收尾后停止后续调用，已发生费用不会撤回。' : '任务已取消。');
+      setFeedback(action === 'confirm' ? '已收到后端确认结果。正在读取最终方案。' : value.state === 'cancelled' ? '任务已取消，未继续启动后续阶段。' : value.cancelRequested ? '已请求取消。当前阶段收尾后停止后续调用，已发生费用不会撤回。' : '任务已取消。');
       await loadResult(capturedGeneration);
     } catch (error) {
       if (generation === capturedGeneration) setFeedback(`操作未获确认，请先重新查询任务；不会自动重发：${error instanceof ServiceError ? error.message : '请稍后重试。'}`, true);

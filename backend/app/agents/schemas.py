@@ -1,6 +1,6 @@
 """Strict model output contracts, separate from persisted HTTP task state."""
 from typing import Annotated, Literal
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 Short = Annotated[str, Field(min_length=1, max_length=160)]
 EvidenceId = Annotated[str, Field(min_length=1, max_length=200)]
@@ -34,9 +34,15 @@ class TaskPlan(StrictArtifact):
     target: str = Field(min_length=1, max_length=80)
     style: Literal['京剧写意', '国风幻想', '舞台角色']
     requirements: list[Requirement] = Field(min_length=1, max_length=6)
-    researchQueries: list[Annotated[str, Field(min_length=1, max_length=180)]] = Field(min_length=1, max_length=3)
+    researchQueries: list[Annotated[str, Field(min_length=1, max_length=180)]] = Field(max_length=3)
     clarificationQuestions: list[Short] = Field(max_length=3)
     requiredEntities: list[Annotated[str, Field(min_length=1, max_length=40)]] = Field(default_factory=list, max_length=3)
+
+    @model_validator(mode='after')
+    def queries_or_clarification(self):
+        if not self.clarificationQuestions and not self.researchQueries:
+            raise ValueError('Research is required unless awaiting clarification')
+        return self
 
 
 class DesignElement(StrictArtifact):

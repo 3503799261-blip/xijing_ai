@@ -1,0 +1,1429 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-10-11T06:48:04.395602+00:00",
+  "scope": "Real HTTP workflow and real backend RAG/LLM; no automatic retry",
+  "case": "costume",
+  "brief": {
+    "requirements": "设计一位原创国风舞台角色，以京剧服装表达身份与人物气质为依据，明确蟒与靠各自的适用语境。颜色与未来装饰可原创，不把创意说成传统规范。",
+    "style": "舞台角色"
+  },
+  "budgetBefore": {
+    "calls": 96,
+    "estimatedUpperCostCny": 0.22239456,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 34,
+        "estimatedUpperCostCny": 0.08896032,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "pollSamples": [
+    {
+      "taskId": "8055928d-6279-4258-a2f5-23abeaad9308",
+      "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+      "state": "running",
+      "currentAgent": "planner",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:48:04.529283+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 0,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:48:04.508771+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:48:04.514310+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:48:04.529283+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 3,
+      "sequence": 3,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:48:04.506552+00:00",
+      "updatedAt": "2026-10-11T06:48:04.529283+00:00",
+      "requestId": "b062a099-b6ba-4d03-ac3d-a47067d51ffc"
+    },
+    {
+      "taskId": "8055928d-6279-4258-a2f5-23abeaad9308",
+      "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+      "state": "running",
+      "currentAgent": "designer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+          "startedAt": "2026-10-11T06:48:04.529283+00:00",
+          "finishedAt": "2026-10-11T06:48:05.457788+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成2条真实检索，保留4条候选依据。",
+          "startedAt": "2026-10-11T06:48:05.463169+00:00",
+          "finishedAt": "2026-10-11T06:48:05.498131+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:48:05.505134+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 2,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:48:04.508771+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:48:04.514310+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:48:04.529283+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:48:05.458788+00:00",
+          "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:48:05.464360+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:48:05.500131+00:00",
+          "summary": "完成2条真实检索，保留4条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:48:05.506133+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 7,
+      "sequence": 7,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:48:04.506552+00:00",
+      "updatedAt": "2026-10-11T06:48:05.506133+00:00",
+      "requestId": "b6223faa-cfb2-4ea0-8ef0-a16c4fd04663"
+    },
+    {
+      "taskId": "8055928d-6279-4258-a2f5-23abeaad9308",
+      "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+      "state": "running",
+      "currentAgent": "reviewer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+          "startedAt": "2026-10-11T06:48:04.529283+00:00",
+          "finishedAt": "2026-10-11T06:48:05.457788+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成2条真实检索，保留4条候选依据。",
+          "startedAt": "2026-10-11T06:48:05.463169+00:00",
+          "finishedAt": "2026-10-11T06:48:05.498131+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "completed",
+          "summary": "已生成原创角色「玄翎将帅·原创舞台角色」草案，尚待文化审校。",
+          "startedAt": "2026-10-11T06:48:05.505134+00:00",
+          "finishedAt": "2026-10-11T06:48:08.004241+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T06:48:08.009355+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 3,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:48:04.508771+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:48:04.514310+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:48:04.529283+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:48:05.458788+00:00",
+          "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:48:05.464360+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:48:05.500131+00:00",
+          "summary": "完成2条真实检索，保留4条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:48:05.506133+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 8,
+          "occurredAt": "2026-10-11T06:48:08.005544+00:00",
+          "summary": "已生成原创角色「玄翎将帅·原创舞台角色」草案，尚待文化审校。",
+          "agentId": "designer",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 9,
+          "occurredAt": "2026-10-11T06:48:08.010883+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "reviewer",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 9,
+      "sequence": 9,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:48:04.506552+00:00",
+      "updatedAt": "2026-10-11T06:48:08.010883+00:00",
+      "requestId": "cb0007e3-cd7a-4b9c-88ad-2d5544e45206"
+    },
+    {
+      "taskId": "8055928d-6279-4258-a2f5-23abeaad9308",
+      "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+      "state": "awaiting_confirmation",
+      "currentAgent": "reviewer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+          "startedAt": "2026-10-11T06:48:04.529283+00:00",
+          "finishedAt": "2026-10-11T06:48:05.457788+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成2条真实检索，保留4条候选依据。",
+          "startedAt": "2026-10-11T06:48:05.463169+00:00",
+          "finishedAt": "2026-10-11T06:48:05.498131+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "completed",
+          "summary": "已生成原创角色「玄翎将帅·原创舞台角色」草案，尚待文化审校。",
+          "startedAt": "2026-10-11T06:48:05.505134+00:00",
+          "finishedAt": "2026-10-11T06:48:08.004241+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "completed",
+          "summary": "辅助文化审校发现需修订内容，不能直接接受为最终方案。 costume[0].description：长袍披风未呈现蟒袍具体形制，仅行当气质；costume[1].description：肩甲短战裙未呈现靠的具体形制，仅泛化铠甲",
+          "startedAt": "2026-10-11T06:48:08.009355+00:00",
+          "finishedAt": "2026-10-11T06:48:09.792056+00:00",
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 4,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T06:48:04.508771+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T06:48:04.514310+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T06:48:04.529283+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T06:48:05.458788+00:00",
+          "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T06:48:05.464360+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T06:48:05.500131+00:00",
+          "summary": "完成2条真实检索，保留4条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T06:48:05.506133+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 8,
+          "occurredAt": "2026-10-11T06:48:08.005544+00:00",
+          "summary": "已生成原创角色「玄翎将帅·原创舞台角色」草案，尚待文化审校。",
+          "agentId": "designer",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 9,
+          "occurredAt": "2026-10-11T06:48:08.010883+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "reviewer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 10,
+          "occurredAt": "2026-10-11T06:48:09.792056+00:00",
+          "summary": "辅助文化审校发现需修订内容，不能直接接受为最终方案。 costume[0].description：长袍披风未呈现蟒袍具体形制，仅行当气质；costume[1].description：肩甲短战裙未呈现靠的具体形制，仅泛化铠甲",
+          "agentId": "reviewer",
+          "state": "completed"
+        },
+        {
+          "kind": "task",
+          "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+          "sequence": 11,
+          "occurredAt": "2026-10-11T06:48:09.796666+00:00",
+          "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+          "taskState": "awaiting_confirmation",
+          "confirmationId": "6f16414a-8431-4fdc-bfb1-38c47c285c83"
+        }
+      ],
+      "lastSequence": 11,
+      "sequence": 11,
+      "confirmation": {
+        "id": "6f16414a-8431-4fdc-bfb1-38c47c285c83",
+        "reason": "needs_revision",
+        "canAccept": false
+      },
+      "resultReady": true,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T06:48:04.506552+00:00",
+      "updatedAt": "2026-10-11T06:48:09.796666+00:00",
+      "requestId": "9352e3a0-4f4a-4b09-9e0b-ca9e9e4898e9"
+    }
+  ],
+  "createHttpStatus": 202,
+  "created": {
+    "taskId": "8055928d-6279-4258-a2f5-23abeaad9308",
+    "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/8055928d-6279-4258-a2f5-23abeaad9308",
+    "resultUrl": "/api/v1/agent/result/8055928d-6279-4258-a2f5-23abeaad9308",
+    "requestId": "83467be0-3397-4c56-acb7-ef7a6f176c38"
+  },
+  "finalStatus": {
+    "taskId": "8055928d-6279-4258-a2f5-23abeaad9308",
+    "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+    "state": "awaiting_confirmation",
+    "currentAgent": "reviewer",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "completed",
+        "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+        "startedAt": "2026-10-11T06:48:04.529283+00:00",
+        "finishedAt": "2026-10-11T06:48:05.457788+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "researcher",
+        "state": "completed",
+        "summary": "完成2条真实检索，保留4条候选依据。",
+        "startedAt": "2026-10-11T06:48:05.463169+00:00",
+        "finishedAt": "2026-10-11T06:48:05.498131+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "completed",
+        "summary": "已生成原创角色「玄翎将帅·原创舞台角色」草案，尚待文化审校。",
+        "startedAt": "2026-10-11T06:48:05.505134+00:00",
+        "finishedAt": "2026-10-11T06:48:08.004241+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "reviewer",
+        "state": "completed",
+        "summary": "辅助文化审校发现需修订内容，不能直接接受为最终方案。 costume[0].description：长袍披风未呈现蟒袍具体形制，仅行当气质；costume[1].description：肩甲短战裙未呈现靠的具体形制，仅泛化铠甲",
+        "startedAt": "2026-10-11T06:48:08.009355+00:00",
+        "finishedAt": "2026-10-11T06:48:09.792056+00:00",
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 4,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T06:48:04.508771+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T06:48:04.514310+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T06:48:04.529283+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T06:48:05.458788+00:00",
+        "summary": "已整理主题「原创国风舞台角色」及3项需求。",
+        "agentId": "planner",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T06:48:05.464360+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "researcher",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+        "sequence": 6,
+        "occurredAt": "2026-10-11T06:48:05.500131+00:00",
+        "summary": "完成2条真实检索，保留4条候选依据。",
+        "agentId": "researcher",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+        "sequence": 7,
+        "occurredAt": "2026-10-11T06:48:05.506133+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "designer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+        "sequence": 8,
+        "occurredAt": "2026-10-11T06:48:08.005544+00:00",
+        "summary": "已生成原创角色「玄翎将帅·原创舞台角色」草案，尚待文化审校。",
+        "agentId": "designer",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+        "sequence": 9,
+        "occurredAt": "2026-10-11T06:48:08.010883+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "reviewer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+        "sequence": 10,
+        "occurredAt": "2026-10-11T06:48:09.792056+00:00",
+        "summary": "辅助文化审校发现需修订内容，不能直接接受为最终方案。 costume[0].description：长袍披风未呈现蟒袍具体形制，仅行当气质；costume[1].description：肩甲短战裙未呈现靠的具体形制，仅泛化铠甲",
+        "agentId": "reviewer",
+        "state": "completed"
+      },
+      {
+        "kind": "task",
+        "runId": "8055928d-6279-4258-a2f5-23abeaad9308",
+        "sequence": 11,
+        "occurredAt": "2026-10-11T06:48:09.796666+00:00",
+        "summary": "任务已暂停，请查看需调整的需求或文化依据。",
+        "taskState": "awaiting_confirmation",
+        "confirmationId": "6f16414a-8431-4fdc-bfb1-38c47c285c83"
+      }
+    ],
+    "lastSequence": 11,
+    "sequence": 11,
+    "confirmation": {
+      "id": "6f16414a-8431-4fdc-bfb1-38c47c285c83",
+      "reason": "needs_revision",
+      "canAccept": false
+    },
+    "resultReady": true,
+    "cancelRequested": false,
+    "createdAt": "2026-10-11T06:48:04.506552+00:00",
+    "updatedAt": "2026-10-11T06:48:09.796666+00:00",
+    "requestId": "9352e3a0-4f4a-4b09-9e0b-ca9e9e4898e9"
+  },
+  "resultHttpStatus": 200,
+  "result": {
+    "schemaVersion": "1.0",
+    "design": {
+      "schemaVersion": "1.0",
+      "name": "玄翎将帅·原创舞台角色",
+      "positioning": "原创国风舞台角色，用于表现兼具仪典身份与征战场面的将帅气质，非传统剧目人物。",
+      "costume": [
+        {
+          "description": "玄青长袍配金线云纹，外罩披风",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "肩甲式装饰与短战裙，便于舞蹈",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "colors": [
+        {
+          "description": "玄青为主，金与朱红点缀",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "银灰作甲片装饰色，冷调对比",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "visualElements": [
+        {
+          "description": "仪典场合可着蟒袍类长袍",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a"
+          ]
+        },
+        {
+          "description": "征战场面可着靠类铠甲戏服",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+          ]
+        }
+      ],
+      "creativeElements": [
+        "将蟒与靠的语境并置为同一角色的两套造型",
+        "加入未来感发光纹样与几何甲片装饰"
+      ],
+      "visualPrompt": "原创国风舞台角色，玄青长袍金线云纹，仪典时呈蟒袍式长袍气质，征战时换靠式铠甲与披风，银灰甲片，朱红点缀，未来感发光纹样，非传统规范。",
+      "usedEvidenceIds": [
+        "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+      ],
+      "limitations": [
+        "蟒与靠的适用语境依据为项目原创事实摘要，未经京剧专家审核",
+        "角色造型与配色均为原创，不代表传统戏服制度"
+      ],
+      "execution": {
+        "requestId": "8055928d-6279-4258-a2f5-23abeaad9308:designer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1089,
+          "completion_tokens": 354,
+          "total_tokens": 1443,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 833
+        },
+        "elapsedSeconds": 2.486,
+        "promptVersion": "agent_designer_v3",
+        "promptHash": "b62062858884ae34ca53d84bbb3272afe049fee9aa52eaecf573f6bdfbd301ca"
+      }
+    },
+    "review": {
+      "verdict": "needs_revision",
+      "issues": [
+        {
+          "field": "costume[0].description",
+          "reason": "长袍披风未呈现蟒袍具体形制，仅行当气质",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a"
+          ]
+        },
+        {
+          "field": "costume[1].description",
+          "reason": "肩甲短战裙未呈现靠的具体形制，仅泛化铠甲",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+          ]
+        }
+      ],
+      "suggestions": [
+        "在costume中写明蟒袍式长袍与靠式铠甲的具体部件",
+        "保留creative标注，避免将原创造型称为传统规范"
+      ],
+      "checkedEvidenceIds": [
+        "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+        "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+        "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1"
+      ],
+      "needsHumanReview": true,
+      "programmaticChecks": {
+        "garmentReferenceGuard": "conservative_literal_absence",
+        "issuesFound": 0
+      },
+      "execution": {
+        "requestId": "8055928d-6279-4258-a2f5-23abeaad9308:reviewer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1524,
+          "completion_tokens": 146,
+          "total_tokens": 1670,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 1268
+        },
+        "elapsedSeconds": 1.7688,
+        "promptVersion": "agent_reviewer_v3",
+        "promptHash": "05fb0e2791700446715e98c5180454035ed8d9cfc08e4dcda0fc3f19212e6ce4"
+      }
+    },
+    "citations": [
+      {
+        "id": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+        "title": "京剧服装和人物身份有什么关系？",
+        "sourceId": "cnpoc-costume",
+        "locator": "正文蟒袍段 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+        "excerpt": "蟒袍常用于帝后、贵族及高级官员的正式场合。\n黄蟒可表示皇帝上朝，女蟒可用于后妃；\n这是戏服制度的基础说明。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+        "title": "京剧服装和人物身份有什么关系？",
+        "sourceId": "cnpoc-costume",
+        "locator": "正文靠段 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+        "excerpt": "靠是表现男女将帅铠甲的戏服，常见于征战场面。\n靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+        "title": "京剧旦行小讲堂",
+        "sourceId": "cnpoc-dan",
+        "locator": "正文（3）刀马旦、（5）武旦 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+        "excerpt": "刀马旦常扮演女将帅，硬靠、雉尾是常见扮相，重唱念与舞蹈。\n武旦常着短装，表演更侧重武打与打出手等技巧。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+        "title": "京劇行當",
+        "sourceId": "ncfta-male-roles",
+        "locator": "行当介绍—生—武生 · 入库片段 1/1",
+        "url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+        "excerpt": "武生常表现武艺高强的男子。\n长靠武生穿大靠、厚底靴，身段稳健；\n短打武生穿短衣、薄底靴，动作轻捷。\n区分同时涉及服装与表演方式。",
+        "contentKind": "original_fact_summary"
+      }
+    ],
+    "uncertain": true,
+    "publicationAllowed": false,
+    "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+    "promptVersions": {
+      "planner": "agent_planner_v4",
+      "researcher": "agent_research_v4",
+      "designer": "agent_designer_v3",
+      "reviewer": "agent_reviewer_v3"
+    },
+    "limitations": [
+      "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+      "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。",
+      "补查仅使用已有资料元数据中的相关词；词同现仅表示候选覆盖，语义支持仍需文化审校及用户核对。",
+      "蟒与靠的适用语境依据为项目原创事实摘要，未经京剧专家审核",
+      "角色造型与配色均为原创，不代表传统戏服制度"
+    ],
+    "confirmationReason": "needs_revision",
+    "taskId": "8055928d-6279-4258-a2f5-23abeaad9308",
+    "userConfirmed": false,
+    "requestId": "405e53b8-1750-40cf-b361-32edd7500b57"
+  },
+  "outcome": "awaiting_confirmation",
+  "elapsedSeconds": 5.7197,
+  "budgetAfter": {
+    "calls": 99,
+    "estimatedUpperCostCny": 0.23182528,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 37,
+        "estimatedUpperCostCny": 0.09839104,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "providerCalls": [
+    {
+      "requestId": "8055928d-6279-4258-a2f5-23abeaad9308:planner",
+      "createdAt": "2026-10-11T06:48:04.532422+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.00726,
+      "estimatedUpperCny": 0.00120824,
+      "usage": {
+        "prompt_tokens": 435,
+        "completion_tokens": 105,
+        "total_tokens": 540,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 179
+      },
+      "scope": "phase3"
+    },
+    {
+      "requestId": "8055928d-6279-4258-a2f5-23abeaad9308:designer",
+      "createdAt": "2026-10-11T06:48:05.509639+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.015716,
+      "estimatedUpperCny": 0.00450824,
+      "usage": {
+        "prompt_tokens": 1089,
+        "completion_tokens": 354,
+        "total_tokens": 1443,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 833
+      },
+      "scope": "phase3"
+    },
+    {
+      "requestId": "8055928d-6279-4258-a2f5-23abeaad9308:reviewer",
+      "createdAt": "2026-10-11T06:48:08.014202+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.01589,
+      "estimatedUpperCny": 0.0037142399999999997,
+      "usage": {
+        "prompt_tokens": 1524,
+        "completion_tokens": 146,
+        "total_tokens": 1670,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1268
+      },
+      "scope": "phase3"
+    }
+  ],
+  "modelCallCount": 3,
+  "measuredTokens": 3653,
+  "estimatedCostCny": 0.00943072,
+  "artifacts": {
+    "designer": {
+      "schemaVersion": "1.0",
+      "name": "玄翎将帅·原创舞台角色",
+      "positioning": "原创国风舞台角色，用于表现兼具仪典身份与征战场面的将帅气质，非传统剧目人物。",
+      "costume": [
+        {
+          "description": "玄青长袍配金线云纹，外罩披风",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "肩甲式装饰与短战裙，便于舞蹈",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "colors": [
+        {
+          "description": "玄青为主，金与朱红点缀",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "银灰作甲片装饰色，冷调对比",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "visualElements": [
+        {
+          "description": "仪典场合可着蟒袍类长袍",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a"
+          ]
+        },
+        {
+          "description": "征战场面可着靠类铠甲戏服",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+          ]
+        }
+      ],
+      "creativeElements": [
+        "将蟒与靠的语境并置为同一角色的两套造型",
+        "加入未来感发光纹样与几何甲片装饰"
+      ],
+      "visualPrompt": "原创国风舞台角色，玄青长袍金线云纹，仪典时呈蟒袍式长袍气质，征战时换靠式铠甲与披风，银灰甲片，朱红点缀，未来感发光纹样，非传统规范。",
+      "usedEvidenceIds": [
+        "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+      ],
+      "limitations": [
+        "蟒与靠的适用语境依据为项目原创事实摘要，未经京剧专家审核",
+        "角色造型与配色均为原创，不代表传统戏服制度"
+      ],
+      "execution": {
+        "requestId": "8055928d-6279-4258-a2f5-23abeaad9308:designer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1089,
+          "completion_tokens": 354,
+          "total_tokens": 1443,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 833
+        },
+        "elapsedSeconds": 2.486,
+        "promptVersion": "agent_designer_v3",
+        "promptHash": "b62062858884ae34ca53d84bbb3272afe049fee9aa52eaecf573f6bdfbd301ca"
+      }
+    },
+    "planner": {
+      "theme": "原创国风舞台角色",
+      "target": "京剧服装身份表达",
+      "style": "舞台角色",
+      "requirements": [
+        {
+          "id": "R1",
+          "text": "以京剧服装表达身份与气质"
+        },
+        {
+          "id": "R2",
+          "text": "明确蟒与靠各自适用语境"
+        },
+        {
+          "id": "R3",
+          "text": "颜色与未来装饰可原创，不称传统"
+        }
+      ],
+      "researchQueries": [
+        "京剧蟒与靠的适用语境比较"
+      ],
+      "clarificationQuestions": [],
+      "requiredEntities": [
+        "蟒",
+        "靠"
+      ],
+      "execution": {
+        "requestId": "8055928d-6279-4258-a2f5-23abeaad9308:planner",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 435,
+          "completion_tokens": 105,
+          "total_tokens": 540,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 179
+        },
+        "elapsedSeconds": 0.916,
+        "promptVersion": "agent_planner_v4",
+        "promptHash": "bd3f5809b5aa49f723834da845c37441984659f03a4eb9602871539abfb79966"
+      }
+    },
+    "researcher": {
+      "queries": [
+        {
+          "question": "京剧蟒与靠的适用语境比较",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a"
+          ],
+          "origin": "plan",
+          "expandedTerms": [],
+          "recheckedEntity": null,
+          "uncertain": true,
+          "retrievalUncertain": false,
+          "missingYears": [],
+          "missingEntities": [
+            "靠"
+          ],
+          "resolvedBy": [
+            1
+          ],
+          "retrievalScores": [
+            {
+              "id": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+              "rank": 1,
+              "vectorScore": 0.6144475592357135,
+              "keywordScore": null
+            }
+          ],
+          "elapsedSeconds": 0.0174,
+          "retrievalMode": "hybrid",
+          "candidateScores": [
+            {
+              "chunkId": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+              "score": 0.6144475592357135
+            },
+            {
+              "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+              "score": 0.5559656267239315
+            },
+            {
+              "chunkId": "chunk_ed790c73e1e33ccdd8542debb88531e562e5a4bd6c3f830485287d725bc63255",
+              "score": 0.503077106792508
+            },
+            {
+              "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+              "score": 0.4639712650776723
+            },
+            {
+              "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+              "score": 0.4569938829732651
+            },
+            {
+              "chunkId": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+              "score": 0.45431734307376737
+            },
+            {
+              "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+              "score": 0.4522662392324791
+            },
+            {
+              "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+              "score": 0.4407383791571463
+            },
+            {
+              "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+              "score": 0.4327768713400302
+            },
+            {
+              "chunkId": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+              "score": 0.42323440183104954
+            }
+          ],
+          "effectiveUncertain": false
+        },
+        {
+          "question": "京剧 靠 大靠 硬靠 靠旗",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1"
+          ],
+          "origin": "entity_recheck",
+          "expandedTerms": [
+            "大靠",
+            "硬靠",
+            "靠旗"
+          ],
+          "recheckedEntity": "靠",
+          "uncertain": false,
+          "retrievalUncertain": false,
+          "missingYears": [],
+          "missingEntities": [],
+          "resolvedBy": [],
+          "retrievalScores": [
+            {
+              "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+              "rank": 1,
+              "vectorScore": 0.5559674653118885,
+              "keywordScore": -3.0710449553679355
+            },
+            {
+              "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+              "rank": 2,
+              "vectorScore": 0.44372925539761326,
+              "keywordScore": -3.339765779825775
+            },
+            {
+              "id": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+              "rank": 3,
+              "vectorScore": 0.3670888364618057,
+              "keywordScore": -3.1608054861987744
+            }
+          ],
+          "elapsedSeconds": 0.0103,
+          "retrievalMode": "hybrid",
+          "candidateScores": [
+            {
+              "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+              "score": 0.5559674653118885
+            },
+            {
+              "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+              "score": 0.5162569109288895
+            },
+            {
+              "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+              "score": 0.5037554897598246
+            },
+            {
+              "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+              "score": 0.4921270484208412
+            },
+            {
+              "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+              "score": 0.4739113103753703
+            },
+            {
+              "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+              "score": 0.4622428013279928
+            },
+            {
+              "chunkId": "chunk_ed790c73e1e33ccdd8542debb88531e562e5a4bd6c3f830485287d725bc63255",
+              "score": 0.4540056648968554
+            },
+            {
+              "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+              "score": 0.44372925539761326
+            },
+            {
+              "chunkId": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+              "score": 0.4224975185640163
+            },
+            {
+              "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+              "score": 0.41111900593013273
+            }
+          ],
+          "effectiveUncertain": false
+        }
+      ],
+      "evidence": [
+        {
+          "id": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+          "chunkId": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-mang",
+          "title": "京剧服装和人物身份有什么关系？",
+          "locator": "正文蟒袍段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+          "excerpt": "蟒袍常用于帝后、贵族及高级官员的正式场合。\n黄蟒可表示皇帝上朝，女蟒可用于后妃；\n这是戏服制度的基础说明。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧服饰",
+          "entityNames": [
+            "蟒袍",
+            "黄蟒",
+            "女蟒",
+            "皇帝",
+            "后妃"
+          ],
+          "vectorScore": 0.6144475592357135,
+          "keywordScore": null,
+          "entityMatchCount": 0,
+          "acceptedBy": "vector_threshold",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "70a5e6fd9bd22f9eed0d57a426d7e00b10d99010b29016441a2001218c9808e6",
+          "chunkContentHash": "caa952533ad90011874b486b08cda3c33febe2b2804a8c221ffb710f359c2282"
+        },
+        {
+          "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-kao",
+          "title": "京剧服装和人物身份有什么关系？",
+          "locator": "正文靠段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+          "excerpt": "靠是表现男女将帅铠甲的戏服，常见于征战场面。\n靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧服饰",
+          "entityNames": [
+            "靠",
+            "靠旗",
+            "护背旗",
+            "铠甲",
+            "将帅"
+          ],
+          "vectorScore": 0.5559674653118885,
+          "keywordScore": -3.0710449553679355,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "70a5e6fd9bd22f9eed0d57a426d7e00b10d99010b29016441a2001218c9808e6",
+          "chunkContentHash": "cbe9fdabcb7947dfc40efe2e8547aa54f0ffa4879087496c627f4739e2fd70f5"
+        },
+        {
+          "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+          "sourceId": "cnpoc-dan",
+          "sectionId": "cnpoc-dan-daoma-wu",
+          "title": "京剧旦行小讲堂",
+          "locator": "正文（3）刀马旦、（5）武旦 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+          "excerpt": "刀马旦常扮演女将帅，硬靠、雉尾是常见扮相，重唱念与舞蹈。\n武旦常着短装，表演更侧重武打与打出手等技巧。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "刀马旦",
+            "武旦",
+            "硬靠",
+            "雉尾",
+            "打出手"
+          ],
+          "vectorScore": 0.44372925539761326,
+          "keywordScore": -3.339765779825775,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "97c698746dd732cb438331fce7d1114296e531bb70b94a4af4179659ec3e8ad6",
+          "chunkContentHash": "1db0cbb229e2d340790b92978c37ce4a32e30b1504336a6937bf555805a20e98"
+        },
+        {
+          "id": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+          "chunkId": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+          "sourceId": "ncfta-male-roles",
+          "sectionId": "ncfta-male-roles-wusheng",
+          "title": "京劇行當",
+          "locator": "行当介绍—生—武生 · 入库片段 1/1",
+          "url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+          "excerpt": "武生常表现武艺高强的男子。\n长靠武生穿大靠、厚底靴，身段稳健；\n短打武生穿短衣、薄底靴，动作轻捷。\n区分同时涉及服装与表演方式。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "武生",
+            "长靠武生",
+            "短打武生",
+            "大靠",
+            "厚底靴",
+            "薄底靴"
+          ],
+          "vectorScore": 0.3670888364618057,
+          "keywordScore": -3.1608054861987744,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 3,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "4d79587b4bffd3d58d78ee1394d879c4d8aaea193c9ef16fb44339e80bbbaf3c",
+          "chunkContentHash": "d79f4088acee5e942981f7c657e0853e99123be98da5318fbee6520d44c03d3c"
+        }
+      ],
+      "requirementCoverage": [
+        {
+          "requirementId": "R1",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1"
+          ]
+        },
+        {
+          "requirementId": "R2",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1"
+          ]
+        },
+        {
+          "requirementId": "R3",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1"
+          ]
+        }
+      ],
+      "limitations": [
+        "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+        "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。",
+        "补查仅使用已有资料元数据中的相关词；词同现仅表示候选覆盖，语义支持仍需文化审校及用户核对。"
+      ],
+      "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+      "missingEntities": [],
+      "uncertain": false,
+      "policyVersion": "agent_research_v4"
+    },
+    "reviewer": {
+      "verdict": "needs_revision",
+      "issues": [
+        {
+          "field": "costume[0].description",
+          "reason": "长袍披风未呈现蟒袍具体形制，仅行当气质",
+          "evidenceIds": [
+            "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a"
+          ]
+        },
+        {
+          "field": "costume[1].description",
+          "reason": "肩甲短战裙未呈现靠的具体形制，仅泛化铠甲",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+          ]
+        }
+      ],
+      "suggestions": [
+        "在costume中写明蟒袍式长袍与靠式铠甲的具体部件",
+        "保留creative标注，避免将原创造型称为传统规范"
+      ],
+      "checkedEvidenceIds": [
+        "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+        "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+        "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1"
+      ],
+      "needsHumanReview": true,
+      "programmaticChecks": {
+        "garmentReferenceGuard": "conservative_literal_absence",
+        "issuesFound": 0
+      },
+      "execution": {
+        "requestId": "8055928d-6279-4258-a2f5-23abeaad9308:reviewer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1524,
+          "completion_tokens": 146,
+          "total_tokens": 1670,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 1268
+        },
+        "elapsedSeconds": 1.7688,
+        "promptVersion": "agent_reviewer_v3",
+        "promptHash": "05fb0e2791700446715e98c5180454035ed8d9cfc08e4dcda0fc3f19212e6ce4"
+      }
+    }
+  },
+  "citationMappingChecks": [
+    {
+      "id": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+      "valid": true
+    },
+    {
+      "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+      "valid": true
+    },
+    {
+      "id": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+      "valid": true
+    },
+    {
+      "id": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+      "valid": true
+    }
+  ]
+}

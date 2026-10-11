@@ -15,8 +15,8 @@ def safe_summary(prefix: str, details=()) -> str:
 
 
 def research_summary(artifact: dict) -> str:
-    missing = [query['question'] for query in artifact['queries'] if query['uncertain']]
-    if missing or not artifact['evidence']:
+    missing = [query['question'] for query in artifact['queries'] if query.get('effectiveUncertain', query['uncertain'])]
+    if artifact.get('uncertain', bool(missing) or not artifact['evidence']):
         return safe_summary('资料不足，尚未生成角色。',
                             ['未覆盖查询：' + '；'.join(missing)] + artifact['limitations'])
     return safe_summary(f"完成{len(artifact['queries'])}条真实检索，保留{len(artifact['evidence'])}条候选依据。")
@@ -46,7 +46,8 @@ async def run_workflow(runtime, task_id, brief: dict, emit, cancelled=lambda: Fa
         try:
             artifact = await operation()
         except ServiceError as exc:
-            await emit(agent_id, 'failed', summary=exc.message, error_code=exc.code)
+            await emit(agent_id, 'failed', summary=exc.message, error_code=exc.code,
+                       artifact=getattr(exc, 'diagnostic_artifact', None))
             raise
         except Exception:
             await emit(agent_id, 'failed', summary='此阶段发生内部错误，未执行后续创作。', error_code='AGENT_INTERNAL')
@@ -70,10 +71,10 @@ async def run_workflow(runtime, task_id, brief: dict, emit, cancelled=lambda: Fa
     research = await step('researcher', lambda: researcher.research_opera(plan, runtime, cancelled),
                           research_summary,
                           lambda value: 'awaiting_confirmation'
-                          if not value['evidence'] or any(q['uncertain'] for q in value['queries']) else 'completed')
+                          if value['uncertain'] else 'completed')
     result['limitations'] = list(research['limitations'])
     result['knowledgeGeneration'] = research['knowledgeGeneration']
-    if not research['evidence'] or any(query['uncertain'] for query in research['queries']):
+    if research['uncertain']:
         result['confirmationReason'] = 'insufficient_evidence'
         return result
 

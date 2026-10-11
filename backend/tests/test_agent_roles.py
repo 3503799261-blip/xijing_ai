@@ -111,7 +111,7 @@ def test_four_roles_order_three_bounded_calls_canonical_citations_and_human_gate
     assert sent['DESIGN']['usedEvidenceIds'] == ['E1']
     assert events[5]['artifact']['usedEvidenceIds'] == ['test-only-chunk']
     assert events[3]['artifact']['evidence'][0]['sourceVersion'] == 'unit-version'
-    assert events[1]['artifact']['execution']['promptVersion'] == 'agent_planner_v3'
+    assert events[1]['artifact']['execution']['promptVersion'] == 'agent_planner_v4'
 
 
 def test_clarification_stops_before_any_research_or_design():
@@ -378,12 +378,14 @@ def test_actual_preserved_sheng_garments_are_supported_by_their_exact_excerpts()
     assert garment_reference_issues(record['artifacts']['designer'], record['artifacts']['researcher']['evidence']) == []
 
 
-def test_planner_v3_avoids_optional_creative_color_research_and_retains_v1_v2():
+def test_planner_v4_avoids_optional_creative_color_research_and_retains_prior_versions():
     from backend.app.agents.planner import PROMPT
     prompt = PROMPT.read_text(encoding='utf-8')
     assert '不得查询' in prompt and '允许原创' in prompt
+    assert '同一个比较查询' in prompt and '不追加“人物气质”推断' in prompt
     assert PROMPT.with_name('agent_planner_v1.txt').exists()
     assert PROMPT.with_name('agent_planner_v2.txt').exists()
+    assert PROMPT.with_name('agent_planner_v3.txt').exists()
 
 
 def test_summary_bounds_long_missing_queries_and_public_limits():
@@ -425,7 +427,7 @@ def test_phase2_explicit_insufficiency_is_preserved_even_when_candidates_exist(t
         assert research['queries'][0]['evidenceIds']
         assert research['queries'][0]['retrievalUncertain'] is True
         assert research['queries'][0]['uncertain'] is True
-        assert research['policyVersion'] == 'agent_research_v3'
+        assert research['policyVersion'] == 'agent_research_v4'
         assert len(runtime.provider.calls) == 1 and result['design'] is None
         assert store.status(task_id)['confirmation']['canAccept'] is False
     asyncio.run(scenario())
@@ -441,3 +443,139 @@ def test_v3_prompts_address_preserved_false_positive_and_costume_field_meaning()
     assert '已有声明时声称' in reviewer_text
     assert design_prompt.with_name('agent_designer_v2.txt').exists()
     assert review_prompt.with_name('agent_reviewer_v2.txt').exists()
+
+
+def test_empty_research_queries_are_valid_only_when_asking_clarification():
+    from backend.app.agents.schemas import TaskPlan
+    from pydantic import ValidationError
+    plan = {**PLAN, 'theme': '待补充', 'target': '待补充',
+            'researchQueries': [], 'clarificationQuestions': ['请确认角色用途。']}
+    runtime, events, result = execute(responses=[plan])
+    assert len(runtime.provider.calls) == 1 and runtime.owner_calls == 0
+    assert events[-1]['state'] == 'awaiting_confirmation' and '请确认角色用途' in events[-1]['summary']
+    assert result['confirmationReason'] == 'clarification'
+    with pytest.raises(ValidationError):
+        TaskPlan.model_validate({**PLAN, 'researchQueries': [], 'clarificationQuestions': []})
+
+
+def test_failed_planner_diagnostic_persists_paths_and_usage_without_raw_content(tmp_path):
+    from backend.app.agents.store import TaskStore
+    async def scenario():
+        marker = 'private-test-marker-never-save'
+        response = {**PLAN, 'theme': '', 'target': '', marker: marker}
+        runtime = OfflineRuntime([response])
+        brief = {**BRIEF, 'requirements': marker}
+        store = TaskStore(tmp_path / 'diagnostic.sqlite3')
+        task_id, _ = store.create(brief, 'unit-plan-diagnostic')
+        store.start(task_id)
+        async def emit(agent_id, state, **kwargs):
+            store.emit(task_id, agent_id, state, **kwargs)
+        with pytest.raises(ServiceError) as caught:
+            await run_workflow(runtime, task_id, brief, emit)
+        store.fail(task_id, caught.value)
+        artifact = store.artifacts(task_id)['planner']
+        assert artifact['kind'] == 'schema_validation_failure'
+        assert {'field': 'theme', 'type': 'string_too_short'} in artifact['validationErrors']
+        assert {'field': 'unknown_field', 'type': 'extra_forbidden'} in artifact['validationErrors']
+        serialized = json.dumps(artifact)
+        assert marker not in serialized and 'USER_BRIEF' not in serialized and 'content' not in artifact
+        assert artifact['execution']['promptVersion'] == 'agent_planner_v4'
+        assert artifact['execution']['model'] == 'offline-test-double'
+        assert set(artifact['execution']['usage']) == {'prompt_tokens', 'completion_tokens', 'total_tokens'}
+        assert len(runtime.provider.calls) == 1
+    asyncio.run(scenario())
+
+
+def test_diagnostic_rejects_arbitrary_validation_keys_and_upstream_metadata():
+    from backend.app.agents.planner import safe_plan_diagnostic
+    artifact = safe_plan_diagnostic(ValueError('unsafe-test-message'), ('sensitive-test-field',),
+                                    {'model': 'private-test-model', 'usage': {'prompt_tokens': 1, 'extra': 'private-test-usage'},
+                                     'elapsedSeconds': 'private-test-elapsed', 'content': 'private-test-response'},
+                                    'unit-diagnostic-call', 'public-test-prompt')
+    assert artifact['validationErrors'] == [{'field': 'unknown_field', 'type': 'constraint_mismatch'}]
+    assert artifact['execution']['model'] is None and artifact['execution']['elapsedSeconds'] is None
+    assert 'private-test' not in json.dumps(artifact) and 'unsafe-test-message' not in json.dumps(artifact)
+
+
+def expansion_test_runtime(responses, metadata):
+    """Synthetic search responses and metadata; no real model or culture facts."""
+    all_evidence = list({item['id']: item for response in responses for item in response['evidence']}.values())
+    runtime = OfflineRuntime([], evidence=all_evidence)
+    runtime.store.all_chunks = lambda: [{'entity_names': names} for names in metadata]
+    runtime.search_service.entities = {term for names in metadata for term in names}
+    def search(question, **kwargs):
+        index = len(runtime.queries)
+        runtime.queries.append((question, kwargs))
+        return {'question': question, 'elapsedSeconds': 0.0, 'retrievalMode': kwargs['mode'],
+                **copy.deepcopy(responses[index])}
+    runtime.search_service.search = search
+    return runtime
+
+
+def expansion_test_evidence(cid, text, names, score=0.7, rank=1):
+    return {**EVIDENCE, 'id': cid, 'chunkId': cid, 'excerpt': text,
+            'entityNames': names, 'vectorScore': score, 'rank': rank}
+
+
+@pytest.mark.parametrize('initial_insufficient', [False, True])
+def test_known_missing_entity_recheck_keeps_original_uncertainty_scores_and_candidate_status(initial_insufficient):
+    wrong = expansion_test_evidence('test-wrong', '合成其他类别，不是文化资料。', ['测试另一类别'], 0.6)
+    found = expansion_test_evidence('test-found', '测试衣甲属于合成测试衣数据。', ['测试衣', '测试衣甲'], 0.4)
+    runtime = expansion_test_runtime([
+        {'evidence': [wrong], 'uncertain': initial_insufficient},
+        {'evidence': [found], 'uncertain': False}], [['测试衣', '测试衣甲', '测试衣乙']])
+    plan = {**PLAN, 'researchQueries': ['测试衣适用语境'], 'requiredEntities': ['测试衣']}
+    result = asyncio.run(research_opera(plan, runtime))
+    initial, recheck = result['queries']
+    assert len(runtime.queries) == 2 and runtime.owner_calls == 2
+    assert runtime.queries[1][0] == '京剧 测试衣 测试衣乙 测试衣甲'
+    assert initial['origin'] == 'plan' and initial['expandedTerms'] == []
+    assert initial['retrievalUncertain'] is initial_insufficient and initial['uncertain'] is True
+    assert initial['effectiveUncertain'] is False and initial['resolvedBy'] == [1]
+    assert initial['retrievalScores'][0]['vectorScore'] == 0.6
+    assert recheck['origin'] == 'entity_recheck' and recheck['expandedTerms'] == ['测试衣乙', '测试衣甲']
+    assert result['uncertain'] is False and result['missingEntities'] == []
+    assert len(result['evidence']) <= 5 and any(item['id'] == 'test-found' for item in result['evidence'])
+    assert result['requirementCoverage'][0]['status'] == 'candidate'
+    assert any('语义支持仍需' in text for text in result['limitations'])
+
+
+def test_unknown_entity_never_expands_from_partial_name_or_unrelated_metadata():
+    candidate = expansion_test_evidence('test-unrelated', '合成其他人物。', ['测试人物'])
+    runtime = expansion_test_runtime([{'evidence': [candidate], 'uncertain': False}], [['测试人物', '测试人物甲']])
+    result = asyncio.run(research_opera({**PLAN, 'researchQueries': ['不存在的测试人物规范'],
+                                       'requiredEntities': ['不存在的测试人物']}, runtime))
+    assert len(runtime.queries) == 1 and result['uncertain'] is True
+    assert result['missingEntities'] == ['不存在的测试人物']
+    assert all(query['origin'] == 'plan' for query in result['queries'])
+
+
+def test_entity_rechecks_never_exceed_three_retrievals_or_hide_remaining_entity_gap():
+    wrong = expansion_test_evidence('test-irrelevant', '合成其他类别。', ['测试别类'])
+    found = expansion_test_evidence('test-a', '合成测试甲证据。', ['测试甲', '测试甲衣'])
+    runtime = expansion_test_runtime([
+        {'evidence': [wrong], 'uncertain': False}, {'evidence': [wrong], 'uncertain': False},
+        {'evidence': [found], 'uncertain': False}], [['测试甲', '测试甲衣'], ['测试乙', '测试乙衣']])
+    plan = {**PLAN, 'researchQueries': ['测试甲语境', '测试乙语境'], 'requiredEntities': ['测试甲', '测试乙']}
+    result = asyncio.run(research_opera(plan, runtime))
+    assert len(runtime.queries) == 3 and runtime.owner_calls == 3
+    assert result['queries'][0]['effectiveUncertain'] is False
+    assert result['queries'][1]['effectiveUncertain'] is True
+    assert result['missingEntities'] == ['测试乙'] and result['uncertain'] is True
+
+
+def test_entity_recheck_cannot_bypass_missing_year_or_other_explicit_insufficiency():
+    wrong = expansion_test_evidence('test-date-wrong', '合成其他类别。', ['测试别类'])
+    found = expansion_test_evidence('test-date-found', '测试衣甲合成测试衣，未记载年份。', ['测试衣', '测试衣甲'])
+    runtime = expansion_test_runtime([{'evidence': [wrong], 'uncertain': False},
+                                     {'evidence': [found], 'uncertain': False}], [['测试衣', '测试衣甲']])
+    result = asyncio.run(research_opera({**PLAN, 'researchQueries': ['测试衣1932年规范'],
+                                       'requiredEntities': ['测试衣']}, runtime))
+    assert len(runtime.queries) == 2 and result['missingEntities'] == []
+    assert result['queries'][0]['missingYears'] == ['1932']
+    assert result['queries'][0]['effectiveUncertain'] is True and result['uncertain'] is True
+    runtime = expansion_test_runtime([{'evidence': [found], 'uncertain': True}], [['测试衣', '测试衣甲']])
+    result = asyncio.run(research_opera({**PLAN, 'researchQueries': ['测试衣规范'],
+                                       'requiredEntities': ['测试衣']}, runtime))
+    assert len(runtime.queries) == 1 and result['queries'][0]['retrievalUncertain'] is True
+    assert result['uncertain'] is True

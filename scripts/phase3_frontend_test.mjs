@@ -291,6 +291,7 @@ try {
     currentStatus = { ...statusFixture({ state: 'cancelled', sequence: 4, agentState: 'completed' }), cancelRequested: true };
     fresh.element('agent-query').fire('click'); await flush();
     assert.equal(fresh.element('agent-task-state').textContent, '已取消');
+    assert.match(fresh.element('agent-feedback').textContent, /任务已取消/);
     assert.equal(fresh.root.querySelector('[data-agent-id="researcher"]').querySelector('[data-agent-status]').dataset.state, 'pending');
     assert.equal([...timers.values()].filter((timer) => timer.duration === 1000).length, 0);
   });
