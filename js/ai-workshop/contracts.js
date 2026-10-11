@@ -25,13 +25,15 @@ export const SERVICE_CAPABILITIES = Object.freeze({
   conceptImage: false,
   imageToModel: false,
   knowledgeSearch: false,
+  assetManagement: false,
+  modelViewer: false,
 });
 
 export const SERVICE_MESSAGES = Object.freeze({
   questionAnswering: '知识问答服务尚未就绪，请检查后端配置与知识库后重试。',
   agentWorkflow: '多Agent协作尚未接入；当前仅展示职责与流程，不执行真实任务。',
-  conceptImage: 'AI概念图生成尚未接入；当前仅支持整理本页面内的用户需求草稿。',
-  imageToModel: 'Neural4D图生3D尚未接入，模型生成、预览与下载暂未开放。',
+  conceptImage: '平台AI概念图生成尚未接入。可导入你有使用权的实际概念图，并保留来源及许可。',
+  imageToModel: '真实建模默认关闭，必须逐次获得明确授权；模型查看与真实建模分开管理。',
 });
 
 /** @typedef {'pending'|'running'|'completed'|'failed'|'awaiting_confirmation'} AgentState */
@@ -81,17 +83,20 @@ const isObject = (value) => value !== null && typeof value === 'object' && !Arra
 const isText = (value, maximum) => typeof value === 'string' && value.trim().length > 0 && value.length <= maximum;
 const optionalText = (value, maximum) => value === undefined || value === null || (typeof value === 'string' && value.length <= maximum);
 
-/** 校验后端真实能力；图像和3D仍保持未接入。 */
+/** Optional new capability fields preserve the Phase 2/3 protocol. No fixture implies generation readiness. */
 export function validateCapabilities(value) {
-  if (!isObject(value) || Object.keys(SERVICE_CAPABILITIES).some((key) => typeof value[key] !== 'boolean')) {
+  if (!isObject(value) || ['questionAnswering', 'agentWorkflow', 'conceptImage', 'imageToModel', 'knowledgeSearch'].some((key) => typeof value[key] !== 'boolean')
+      || ['assetManagement', 'modelViewer'].some((key) => value[key] !== undefined && typeof value[key] !== 'boolean')) {
     throw new TypeError('Invalid capabilities response');
   }
   return Object.freeze({
     questionAnswering: value.questionAnswering,
     knowledgeSearch: value.knowledgeSearch,
     agentWorkflow: value.agentWorkflow,
-    conceptImage: false,
-    imageToModel: false,
+    conceptImage: value.conceptImage,
+    imageToModel: value.imageToModel,
+    assetManagement: value.assetManagement === true,
+    modelViewer: value.modelViewer === true,
   });
 }
 
@@ -234,6 +239,104 @@ export function validateWorkflowResult(value) {
     throw new TypeError('Unconfirmed or uncertain design cannot be published');
   }
   return Object.freeze({ ...value, citations });
+}
+
+const isHash = (value) => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
+
+/** Only the configured project API may serve registered assets. Reject signed/external/arbitrary URLs. */
+export function safeAssetFileUrl(value, kind, identifier, action = 'file') {
+  if (!['images', 'models'].includes(kind) || !isIdentifier(identifier) || !['file', 'download'].includes(action)) return null;
+  try {
+    const origin = globalThis.location?.origin || 'http://127.0.0.1:8000';
+    const configured = globalThis.document?.querySelector('meta[name="ai-workshop-api-base"]')?.content?.trim() || '/api/v1';
+    const base = new URL(configured, origin);
+    const url = new URL(value, base.origin);
+    const expected = `${base.pathname.replace(/\/$/, '')}/assets/${kind}/${identifier}/${action}`;
+    if (!['http:', 'https:'].includes(base.protocol) || base.username || base.password || base.search || base.hash
+        || url.origin !== base.origin || url.pathname !== expected || url.search || url.hash || url.username || url.password) return null;
+    return url.href;
+  } catch { return null; }
+}
+
+export function validateAssetIdentifier(value) {
+  if (!isIdentifier(value)) throw new TypeError('Invalid asset identifier');
+  return value;
+}
+
+export function validateAssetImage(value) {
+  if (!isObject(value) || !isIdentifier(value.imageId) || !isHash(value.hash)
+      || !['image/png', 'image/jpeg', 'image/webp'].includes(value.mimeType)
+      || !Number.isInteger(value.width) || value.width < 1 || !Number.isInteger(value.height) || value.height < 1
+      || !Number.isSafeInteger(value.size) || value.size < 1 || !['manual_image', 'imported_ai_image'].includes(value.provenance)
+      || !isText(value.licenseNote, 2000) || typeof value.accepted !== 'boolean'
+      || !safeAssetFileUrl(value.fileUrl, 'images', value.imageId)) throw new TypeError('Invalid asset image');
+  return Object.freeze({ ...value });
+}
+
+export function validateAssetModel(value) {
+  if (!isObject(value) || !isIdentifier(value.modelId) || !isHash(value.hash) || value.format !== 'glb'
+      || !Number.isSafeInteger(value.size) || value.size < 20
+      || !['licensed_import', 'legal_fixture', 'licensed_test_fixture', 'local_test_fixture', 'neural4d'].includes(value.origin)
+      || !isText(value.licenseNote, 3000) || !isObject(value.validation)
+      || !safeAssetFileUrl(value.fileUrl, 'models', value.modelId)
+      || !safeAssetFileUrl(value.downloadUrl, 'models', value.modelId, 'download')) throw new TypeError('Invalid asset model');
+  return Object.freeze({ ...value });
+}
+
+export function validateCharacterAsset(value) {
+  if (!isObject(value) || !isIdentifier(value.assetId) || !isIdentifier(value.sourceTaskId) || !isHash(value.sourceResultHash)
+      || !isIdentifier(value.characterId) || !['chibi', 'realistic'].includes(value.styleMode)
+      || !Number.isSafeInteger(value.styleVersion) || value.styleVersion < 1
+      || (value.culturalReviewRequired !== undefined && typeof value.culturalReviewRequired !== 'boolean')
+      || !Number.isSafeInteger(value.version) || value.version < 1 || !isText(value.name, 200)
+      || !['personal', 'enterprise'].includes(value.mode) || !isText(value.purpose, 500)
+      || !isObject(value.characterSnapshot) || value.characterSnapshot.schemaVersion !== '1.0' || value.characterSnapshot.name !== value.name
+      || !isText(value.characterSnapshot.positioning, 2000) || !isText(value.characterSnapshot.visualPrompt, 6000)
+      || !isObject(value.characterConfirmation) || value.characterConfirmation.userConfirmed !== true
+      || !isObject(value.reviewSnapshot) || value.reviewSnapshot.verdict !== 'pass' || value.reviewSnapshot.needsHumanReview !== true
+      || !Array.isArray(value.citationSnapshot) || value.citationSnapshot.length < 1
+      || !isObject(value.visualPrompt) || !isText(value.visualPrompt.imagePrompt, 12000)
+      || !isText(value.visualPrompt.negativePrompt, 3000) || !isText(value.visualPrompt.templateVersion, 100)
+      || !isHash(value.visualPrompt.promptHash) || typeof value.visualPrompt.approved !== 'boolean'
+      || !Array.isArray(value.images) || value.images.length > 40 || !Array.isArray(value.models) || value.models.length > 40) throw new TypeError('Invalid character asset');
+  const citations = validateQuestionAnswer({ answer: '文化依据结构校验', citations: value.citationSnapshot, uncertain: false, requestId: 'asset-validation' }).citations;
+  const allowed = new Set(citations.map((citation) => citation.id));
+  if (!idArray(value.characterSnapshot.usedEvidenceIds, allowed) || !value.characterSnapshot.usedEvidenceIds.length
+      || !idArray(value.reviewSnapshot.checkedEvidenceIds, allowed)) throw new TypeError('Invalid asset evidence mapping');
+  for (const field of ['costume', 'colors', 'visualElements']) {
+    if (!Array.isArray(value.characterSnapshot[field]) || value.characterSnapshot[field].length < 1 || value.characterSnapshot[field].length > 16
+        || !value.characterSnapshot[field].every((item) => isObject(item) && isText(item.description, 2000)
+          && ['evidence_based', 'creative'].includes(item.interpretation) && idArray(item.evidenceIds, allowed)
+          && (item.interpretation !== 'evidence_based' || item.evidenceIds.length > 0)
+          && item.evidenceIds.every((id) => value.characterSnapshot.usedEvidenceIds.includes(id)))) throw new TypeError('Invalid asset design element');
+  }
+  const images = value.images.map(validateAssetImage);
+  const models = value.models.map(validateAssetModel);
+  for (const item of [...images, ...models]) {
+    if (item.assetId !== value.assetId || item.characterId !== value.characterId || item.styleMode !== value.styleMode
+        || item.styleVersion !== value.styleVersion) throw new TypeError('Asset file belongs to another character style/version');
+  }
+  return Object.freeze({ ...value, citationSnapshot: citations, images: Object.freeze(images), models: Object.freeze(models) });
+}
+
+export function validateCharacterAssetList(value) {
+  if (!isObject(value) || !Array.isArray(value.characters) || value.characters.length > 100) throw new TypeError('Invalid character style family');
+  return Object.freeze(value.characters.map(validateCharacterAsset));
+}
+
+export function validateModelList(value) {
+  if (!isObject(value) || !Array.isArray(value.models) || value.models.length > 100) throw new TypeError('Invalid models response');
+  return Object.freeze(value.models.map(validateAssetModel));
+}
+
+/** Missing historical count is represented by null, never silently turned into zero. */
+export function validateAssetUsage(value) {
+  const count = (item) => item === null || (Number.isInteger(item) && item >= 0 && item <= 3);
+  if (!isObject(value) || value.max_calls !== 3 || !count(value.used_calls) || !count(value.remaining_calls)
+      || typeof value.history_verified !== 'boolean' || typeof value.realEnabled !== 'boolean'
+      || typeof value.providerConfigured !== 'boolean' || typeof value.protocolVerified !== 'boolean'
+      || (value.history_verified && (value.used_calls === null || value.remaining_calls !== 3 - value.used_calls))) throw new TypeError('Invalid generation usage response');
+  return Object.freeze({ ...value });
 }
 
 /**

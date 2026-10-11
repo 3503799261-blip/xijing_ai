@@ -1,6 +1,6 @@
-import { askOperaQuestion, getServiceCapabilities, loadServiceCapabilities, requiresCapabilityRecheck, ServiceError, createSubmissionKey } from './services.js?v=phase3-1';
-import { safeCitationUrl } from './contracts.js?v=phase3-1';
-import { initializeAgentWorkflow } from './agent-workflow.js?v=phase3-1';
+import { askOperaQuestion, getServiceCapabilities, loadServiceCapabilities, requiresCapabilityRecheck, ServiceError, createSubmissionKey } from './services.js?v=phase4-1';
+import { safeCitationUrl } from './contracts.js?v=phase4-1';
+import { initializeAgentWorkflow } from './agent-workflow.js?v=phase4-1';
 
 const PANEL_NAMES = ['overview', 'qa', 'agents', 'create', 'model'];
 const MAX_QUESTION_LENGTH = 600;
@@ -54,6 +54,7 @@ function initializeWorkshop() {
   let capabilityRefreshId = 0;
   let lastFailedTurn = null;
   let agentController = null;
+  let assetController = null;
   const turns = [];
 
   function updateScrollOffset() {
@@ -83,6 +84,7 @@ function initializeWorkshop() {
     });
     root.dataset.activePanel = name;
     activePanel = name;
+    void assetController?.setVisible(name === 'model');
     if (focusHeading) panels.find((panel) => panel.name === name).heading.focus();
     if (name === 'qa' && !getServiceCapabilities().questionAnswering) void refreshCapabilities();
   }
@@ -169,7 +171,8 @@ function initializeWorkshop() {
       badge.classList.toggle('ai-workshop-badge-ready', capability.questionAnswering);
     });
     heroServiceNote.textContent = [capability.questionAnswering ? '京剧RAG问答已就绪' : failed ? '后端暂时无法连接' : '京剧问答尚未就绪',
-      capability.agentWorkflow ? 'Agent协作已就绪' : 'Agent协作尚未就绪', '概念图与图生3D待接入'].join(' · ');
+      capability.agentWorkflow ? 'Agent协作已就绪' : 'Agent协作尚未就绪',
+      capability.assetManagement ? '数字资产登记已就绪' : '资产服务待检查', '真实建模须逐次单独授权'].join(' · ');
     agentController?.setCapability(capability);
   }
 
@@ -400,6 +403,14 @@ function initializeWorkshop() {
     notice.textContent = 'Agent界面未能初始化，请刷新后重试。京剧问答和页面内草稿仍可使用。';
     notice.hidden = false;
   }
+  // Asset/viewer initialization failures are isolated from existing QA and Agent modules.
+  void import('./digital-assets.js?v=phase4-1').then(({ initializeDigitalAssets }) => {
+    assetController = initializeDigitalAssets({ root, selectPanel });
+    return assetController?.setVisible(activePanel === 'model');
+  }).catch(() => {
+    const assetFeedback = root.querySelector('#ai-workshop-asset-feedback');
+    if (assetFeedback) { assetFeedback.textContent = '数字资产界面暂时无法初始化，请刷新后重试。京剧问答和Agent工作台仍可使用。'; assetFeedback.classList.add('ai-workshop-feedback-error'); }
+  });
   void refreshCapabilities();
 }
 

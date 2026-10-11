@@ -1,4 +1,4 @@
-import { SERVICE_CAPABILITIES, SERVICE_MESSAGES, CREATION_STYLES, validateCapabilities, validateQuestionAnswer, validateServiceError, validateWorkflowCreated, validateWorkflowStatus, validateWorkflowResult, validateWorkflowTaskId } from './contracts.js?v=phase3-1';
+import { SERVICE_CAPABILITIES, SERVICE_MESSAGES, CREATION_STYLES, validateCapabilities, validateQuestionAnswer, validateServiceError, validateWorkflowCreated, validateWorkflowStatus, validateWorkflowResult, validateWorkflowTaskId, validateAssetIdentifier, validateCharacterAsset, validateCharacterAssetList, validateAssetImage, validateAssetModel, validateModelList, validateAssetUsage } from './contracts.js?v=phase4-1';
 
 const CHAT_TIMEOUT_MS = 55000;
 const CAPABILITY_TIMEOUT_MS = 8000;
@@ -204,5 +204,91 @@ export async function cancelAgentWorkflow(taskId, { expectedSequence } = {}) {
 /** @param {import('./contracts.js').CreationBrief} _brief */
 export async function generateConceptImage(_brief) { return unavailable('conceptImage'); }
 
-/** @param {{imageId: string}} _request */
+/** Real generation remains closed until the server verifies a separate one-shot approval. */
 export async function submitModelTask(_request) { return unavailable('imageToModel'); }
+
+function assetIdentifier(value) {
+  try { return validateAssetIdentifier(value); }
+  catch { throw new ServiceError('INVALID_ASSET_ID', '资产标识无效，请选择后端已登记的资产。'); }
+}
+
+async function assetRequest(path, options, validator = (value) => value, timeout = 10000) {
+  const body = await requestJson(`assets/${path}`, options, timeout);
+  try { return validator(body); }
+  catch { throw new ServiceError('INVALID_ASSET_RESPONSE', '资产服务返回结构未通过校验，未展示未经检查的图片或模型。', false); }
+}
+
+const jsonPost = (payload) => ({ method: 'POST', headers: { Accept: 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+const jsonGet = { method: 'GET', headers: { Accept: 'application/json' } };
+
+export async function createCharacterAsset(request) {
+  if (!request || !['personal', 'enterprise'].includes(request.mode) || typeof request.purpose !== 'string'
+      || !request.purpose.trim() || request.purpose.length > 240) throw new ServiceError('INVALID_ASSET_BRIEF', '请选择用途并填写不超过240字的资产用途。');
+  const payload = { sourceTaskId: workflowIdentifier(request.sourceTaskId), mode: request.mode, purpose: request.purpose.trim() };
+  if (request.styleMode !== undefined) {
+    if (!['chibi', 'realistic'].includes(request.styleMode)) throw new ServiceError('INVALID_ASSET_STYLE', '请选择Q版卡通或写实国风风格。');
+    payload.styleMode = request.styleMode;
+  }
+  if (request.mode === 'enterprise') {
+    const fields = ['organizationType', 'audience', 'useCase', 'designGoal', 'culturalBoundaries', 'deliveryScope', 'licenseStatus'];
+    if (!request.enterpriseBrief || fields.some((field) => typeof request.enterpriseBrief[field] !== 'string'
+        || !request.enterpriseBrief[field].trim() || request.enterpriseBrief[field].length > (field === 'audience' ? 160 : 240))
+        || !['game', 'tourism', 'ip_design', 'other'].includes(request.enterpriseBrief.organizationType)
+        || !['unverified', 'user_authorized'].includes(request.enterpriseBrief.licenseStatus)) throw new ServiceError('INVALID_ENTERPRISE_BRIEF', '请完整填写企业用途、文化边界与授权状态，受众最多160字，其他说明最多240字。');
+    payload.enterpriseBrief = Object.fromEntries(fields.map((field) => [field, request.enterpriseBrief[field].trim()]));
+  }
+  return assetRequest('characters', jsonPost(payload), validateCharacterAsset);
+}
+
+export async function getCharacterAsset(assetId) {
+  return assetRequest(`characters/${assetIdentifier(assetId)}`, jsonGet, validateCharacterAsset);
+}
+
+export async function listCharacterAssets({ sourceTaskId, mode, characterId } = {}) {
+  const params = new URLSearchParams();
+  if (sourceTaskId !== undefined) params.set('sourceTaskId', workflowIdentifier(sourceTaskId));
+  if (characterId !== undefined) params.set('characterId', assetIdentifier(characterId));
+  if (mode !== undefined) {
+    if (!['personal', 'enterprise'].includes(mode)) throw new ServiceError('INVALID_ASSET_MODE', '资产应用模式无效。');
+    params.set('mode', mode);
+  }
+  return assetRequest(`characters${params.size ? `?${params}` : ''}`, jsonGet, validateCharacterAssetList);
+}
+
+export async function createPromptVersion(assetId, { expectedPromptHash, imagePrompt, negativePrompt }) {
+  if (typeof expectedPromptHash !== 'string' || !/^[a-f0-9]{64}$/.test(expectedPromptHash)
+      || typeof imagePrompt !== 'string' || !imagePrompt.trim() || imagePrompt.length > 3000
+      || typeof negativePrompt !== 'string' || !negativePrompt.trim() || negativePrompt.length > 1000) throw new ServiceError('INVALID_PROMPT_VERSION', '请填写视觉Prompt（最多3000字）及画面约束（最多1000字），并重新核对原版本。');
+  const payload = { expectedPromptHash, imagePrompt: imagePrompt.trim(), negativePrompt: negativePrompt.trim(), action: 'create_version' };
+  if (new TextEncoder().encode(JSON.stringify(payload)).length > 8192) throw new ServiceError('PROMPT_BODY_TOO_LARGE', 'Prompt及画面约束超过本地请求容量，请缩短内容后重试。未发送或创建新版本。');
+  return assetRequest(`characters/${assetIdentifier(assetId)}/prompt-versions`, jsonPost(payload), validateCharacterAsset);
+}
+
+export async function approveVisualPrompt(assetId, promptHash) {
+  if (typeof promptHash !== 'string' || !/^[a-f0-9]{64}$/.test(promptHash)) throw new ServiceError('INVALID_PROMPT_HASH', '视觉提示词版本无效，请重新读取资产。');
+  return assetRequest(`characters/${assetIdentifier(assetId)}/visual-approval`, jsonPost({ promptHash, action: 'accept' }), validateCharacterAsset);
+}
+
+export async function uploadAssetImage({ assetId, file, provenance, licenseNote }) {
+  if (!file || !['image/png', 'image/jpeg', 'image/webp'].includes(file.type) || file.size < 1 || file.size > 10 * 1024 * 1024
+      || !['manual_image', 'imported_ai_image'].includes(provenance) || typeof licenseNote !== 'string' || !licenseNote.trim() || licenseNote.length > 1000) {
+    throw new ServiceError('INVALID_IMAGE_UPLOAD', '请上传不超过10MB的PNG、JPEG或WEBP图片，并填写真实来源和使用许可。');
+  }
+  const params = new URLSearchParams({ assetId: assetIdentifier(assetId), provenance, licenseNote: licenseNote.trim() });
+  return assetRequest(`images?${params}`, { method: 'POST', headers: { Accept: 'application/json', 'Content-Type': file.type }, body: file }, validateAssetImage, 30000);
+}
+
+export async function acceptAssetImage(imageId, imageHash) {
+  if (typeof imageHash !== 'string' || !/^[a-f0-9]{64}$/.test(imageHash)) throw new ServiceError('INVALID_IMAGE_HASH', '图片版本无效，请重新读取概念图。');
+  return assetRequest(`images/${assetIdentifier(imageId)}/accept`, jsonPost({ imageHash, action: 'accept' }), validateAssetImage);
+}
+
+export async function listAssetModels() { return assetRequest('models', jsonGet, validateModelList); }
+export async function getAssetUsage() { return assetRequest('usage', jsonGet, validateAssetUsage); }
+
+export async function importLicensedModel({ assetId, file, licenseNote }) {
+  if (!file || file.size < 20 || file.size > 50 * 1024 * 1024 || !/\.glb$/i.test(file.name || '')
+      || typeof licenseNote !== 'string' || !licenseNote.trim() || licenseNote.length > 1000) throw new ServiceError('INVALID_MODEL_UPLOAD', '请导入不超过50MB的GLB文件，并填写合法使用许可。服务器还会检查实际文件。');
+  const params = new URLSearchParams({ assetId: assetIdentifier(assetId), licenseNote: licenseNote.trim() });
+  return assetRequest(`models/import?${params}`, { method: 'POST', headers: { Accept: 'application/json', 'Content-Type': 'model/gltf-binary' }, body: file }, validateAssetModel, 30000);
+}

@@ -37,9 +37,11 @@ const event = (sequence, extra = {}) => ({ kind: 'agent', runId, agentId: 'plann
 const response = (body, status = 200) => ({ ok: status >= 200 && status < 300, status, json: async () => body });
 const savedGlobals = Object.fromEntries(['fetch', 'document', 'window', 'location', 'sessionStorage', 'setTimeout', 'clearTimeout'].map((name) => [name, globalThis[name]]));
 try {
-  await check('Agent capability follows backend; concept image and model remain false', () => {
+  await check('AI capabilities follow actual backend gates instead of old future-feature constants', () => {
     const capabilities = contracts.validateCapabilities(enabled);
-    assert.equal(capabilities.agentWorkflow, true); assert.equal(capabilities.conceptImage, false); assert.equal(capabilities.imageToModel, false);
+    assert.equal(capabilities.agentWorkflow, true); assert.equal(capabilities.conceptImage, true); assert.equal(capabilities.imageToModel, true);
+    assert.equal(contracts.validateCapabilities({ ...enabled, conceptImage: false }).conceptImage, false);
+    assert.equal(contracts.validateCapabilities({ ...enabled, imageToModel: false }).imageToModel, false);
     assert.equal(contracts.validateCapabilities({ ...enabled, agentWorkflow: false }).agentWorkflow, false);
   });
   await check('create/status retain separate canonical task and Agent states', () => {
@@ -312,13 +314,13 @@ try {
     const html = await readFile(new URL('about.html', repo), 'utf8');
     for (const name of names) assert.ok(html.includes(`id="ai-workshop-${name}"`), name);
     for (const id of contracts.WORKFLOW_AGENT_IDS) assert.ok(html.includes(`data-agent-id="${id}"`), id);
-    assert.ok(html.includes('main.js?v=phase3-1')); assert.ok(html.includes('ai-workshop.css?v=phase3-1'));
+    assert.ok(html.includes('main.js?v=phase4-1')); assert.ok(html.includes('ai-workshop.css?v=phase4-1'));
     for (const file of ['main', 'services', 'agent-workflow']) {
       const source = await readFile(new URL(`js/ai-workshop/${file}.js`, repo), 'utf8');
       assert.equal(/(?:innerHTML|outerHTML)\s*=|insertAdjacentHTML|eval\s*\(/.test(source), false);
       assert.equal(source.includes('?v=phase2-1'), false);
     }
-    assert.ok(html.includes('AI生成概念图 · 待开放')); assert.ok(html.includes('提交图生3D任务 · 待开放'));
+    assert.ok(html.includes('AI生成概念图 · 待开放')); assert.ok(html.includes('真实图生3D · 等待单独授权'));
   });
 } finally {
   for (const [name, value] of Object.entries(savedGlobals)) {

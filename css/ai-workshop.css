@@ -1362,6 +1362,239 @@ textarea.ai-workshop-input {
   margin-top: 22px;
 }
 
+/* Phase 4: scoped asset registration and actual interactive GLB viewport. */
+.ai-workshop-asset-flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-workshop-asset-flow li {
+  padding: 13px 10px;
+  color: #795246;
+  background: #f0e2c5;
+  border: 1px solid var(--ai-workshop-border);
+  border-radius: 8px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.ai-workshop-asset-feedback {
+  margin: 20px 0;
+  padding: 15px 18px;
+  background: #faf0da;
+  border-left: 3px solid var(--gold, #c99b45);
+  border-radius: 0 9px 9px 0;
+}
+
+.ai-workshop-asset-registration,
+.ai-workshop-asset-concept {
+  margin-bottom: 24px;
+}
+
+.ai-workshop-asset-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 18px 24px;
+}
+
+.ai-workshop-asset-form-grid > div {
+  min-width: 0;
+}
+
+.ai-workshop-asset-form-grid .ai-workshop-label {
+  margin-bottom: 8px;
+}
+
+.ai-workshop-style-query p { margin-top: 0; }
+.ai-workshop-test-model-picker {
+  margin-top: 18px;
+  padding: 15px;
+  background: #f4ebd8;
+  border: 1px dashed var(--ai-workshop-border);
+  border-radius: 9px;
+}
+.ai-workshop-test-model-picker .ai-workshop-label { margin-bottom: 8px; }
+.ai-workshop-test-model-picker small { display: block; margin-top: 8px; color: #705d57; }
+
+.ai-workshop-asset-summary {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ai-workshop-border);
+  overflow-wrap: anywhere;
+}
+
+.ai-workshop-enterprise-fields {
+  padding: 20px;
+  background: #f6edd9;
+  border: 1px solid var(--ai-workshop-border);
+  border-radius: 10px;
+}
+
+.ai-workshop-upload-form {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ai-workshop-border);
+}
+
+.ai-workshop-upload-form > .ai-workshop-button,
+.ai-workshop-model-layout form > .ai-workshop-button {
+  justify-self: start;
+}
+
+.ai-workshop-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #604a3f;
+  line-height: 1.8;
+}
+
+.ai-workshop-checkbox input {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  accent-color: var(--red, #8d1820);
+}
+
+.ai-workshop-image-preview {
+  margin-top: 0;
+  align-items: stretch;
+  min-height: 280px;
+}
+
+.ai-workshop-image-preview p {
+  max-width: none;
+  white-space: pre-wrap;
+}
+
+.ai-workshop-concept-image,
+.ai-workshop-approval-image {
+  display: block;
+  width: 100%;
+  max-height: 440px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.ai-workshop-approval-image {
+  max-height: 250px;
+  margin-top: 18px;
+  background: #f7efdf;
+}
+
+.ai-workshop-viewer-card {
+  min-width: 0;
+  padding: 26px;
+  background: var(--paper, #fffaf0);
+  border: 1px solid var(--ai-workshop-border);
+  border-radius: 18px;
+  box-shadow: var(--ai-workshop-shadow);
+}
+
+.ai-workshop-viewer-card > .ai-workshop-label {
+  margin-bottom: 10px;
+}
+
+.ai-workshop-viewer-card .ai-workshop-model-viewport {
+  display: block;
+  width: 100%;
+  height: 480px;
+  min-height: 0;
+  margin: 18px 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.ai-workshop-model-viewer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  --poster-color: transparent;
+}
+
+.ai-workshop-model-viewport[data-viewer-state="idle"]::after,
+.ai-workshop-model-viewport[data-viewer-state="loading"]::after,
+.ai-workshop-model-viewport[data-viewer-state="error"]::after {
+  position: absolute;
+  inset: 30px;
+  display: grid;
+  place-items: center;
+  color: #edd5a3;
+  font-size: 1.05rem;
+  pointer-events: none;
+}
+
+.ai-workshop-model-viewport[data-viewer-state="idle"]::after { content: "选择已有GLB，开启真实3D观察"; }
+.ai-workshop-model-viewport[data-viewer-state="loading"]::after { content: "正在加载3D模型……"; }
+.ai-workshop-model-viewport[data-viewer-state="error"]::after { content: "加载失败，请查看下方提示"; }
+
+.ai-workshop-viewer-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 18px 0 12px;
+}
+
+.ai-workshop-viewer-controls .ai-workshop-button {
+  min-height: 44px;
+  padding: 10px 14px;
+  font-size: .94rem;
+}
+
+.ai-workshop-viewer-controls [aria-pressed="true"] {
+  color: #fff3d4;
+  background: var(--red, #8d1820);
+}
+
+.ai-workshop-generation-card {
+  align-self: start;
+}
+
+.ai-workshop-generation-card h3 {
+  margin-top: 16px;
+}
+
+.ai-workshop-approval-info > div {
+  grid-template-columns: 102px minmax(0, 1fr);
+  gap: 12px;
+}
+
+.ai-workshop-approval-info dd {
+  white-space: pre-wrap;
+  font-size: .94rem;
+}
+
+.ai-workshop-generation-card > .ai-workshop-button {
+  width: 100%;
+  margin: 20px 0 12px;
+}
+
+@media (max-width: 1100px) {
+  .ai-workshop-asset-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .ai-workshop-viewer-card { padding: 20px; }
+}
+
+@media (max-width: 850px) {
+  .ai-workshop-asset-form-grid { grid-template-columns: minmax(0, 1fr); }
+  .ai-workshop-viewer-card .ai-workshop-model-viewport { height: 420px; }
+}
+
+@media (max-width: 600px) {
+  .ai-workshop-asset-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); font-size: .88rem; }
+  .ai-workshop-enterprise-fields { padding: 16px; }
+  .ai-workshop-viewer-card { padding: 18px; }
+  .ai-workshop-viewer-card .ai-workshop-model-viewport { height: 340px; }
+  .ai-workshop-viewer-controls .ai-workshop-button { flex: 1 1 115px; }
+  .ai-workshop-asset-concept .ai-workshop-button { width: 100%; }
+  .ai-workshop-approval-info > div { grid-template-columns: 94px minmax(0, 1fr); gap: 10px; }
+}
+
 @keyframes ai-workshop-enter {
   from { opacity: .5; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }

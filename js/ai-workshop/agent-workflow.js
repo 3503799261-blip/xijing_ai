@@ -1,5 +1,5 @@
-import { AGENT_STATE_LABELS, WORKFLOW_STATE_LABELS, WORKFLOW_AGENT_IDS, safeCitationUrl, validateWorkflowTaskId } from './contracts.js?v=phase3-1';
-import { startAgentWorkflow, getAgentWorkflowStatus, getAgentWorkflowResult, confirmAgentWorkflow, cancelAgentWorkflow, createSubmissionKey, getServiceCapabilities, requiresCapabilityRecheck, ServiceError } from './services.js?v=phase3-1';
+import { AGENT_STATE_LABELS, WORKFLOW_STATE_LABELS, WORKFLOW_AGENT_IDS, safeCitationUrl, validateWorkflowTaskId } from './contracts.js?v=phase4-1';
+import { startAgentWorkflow, getAgentWorkflowStatus, getAgentWorkflowResult, confirmAgentWorkflow, cancelAgentWorkflow, createSubmissionKey, getServiceCapabilities, requiresCapabilityRecheck, ServiceError } from './services.js?v=phase4-1';
 
 const STORAGE_KEY = 'xijing.ai.agent.task.v1';
 const ACTIVE_STATES = new Set(['waiting', 'running']);
@@ -105,6 +105,7 @@ export function initializeAgentWorkflow({ root, selectPanel, refreshCapabilities
     return { id, card, status, summary, timing };
   });
   const badges = [...root.querySelectorAll('[data-ai-workshop-agent-capability]')];
+  const assetHandoff = element('agent-to-assets');
   let capable = false;
   let taskId = null;
   let runId = null;
@@ -138,6 +139,7 @@ export function initializeAgentWorkflow({ root, selectPanel, refreshCapabilities
     elements['agent-cancel'].disabled = !snapshot || mutationPending || queryPending || snapshot.cancelRequested || ['completed', 'failed', 'cancelled'].includes(snapshot.state);
     elements['agent-confirm'].disabled = !snapshot?.confirmation?.canAccept || !allStagesCompleted || !result || result.review.verdict !== 'pass' || result.uncertain || mutationPending || queryPending || resultPending;
     elements['agent-download'].disabled = !result?.publicationAllowed || !result?.userConfirmed || snapshot?.state !== 'completed' || !allStagesCompleted;
+    if (assetHandoff) assetHandoff.disabled = elements['agent-download'].disabled;
     elements['agent-new'].disabled = active || submissionPending || mutationPending || queryPending || resultPending || !!pendingSubmission;
   }
   function setCapability(value) {
@@ -231,7 +233,7 @@ export function initializeAgentWorkflow({ root, selectPanel, refreshCapabilities
         setFeedback(value.state === 'cancelled' ? '任务已取消，未继续启动后续阶段。'
           : value.cancelRequested ? '取消请求已记录，正在等待当前阶段真实收尾；已发生的模型费用仍保留。'
           : value.state === 'failed' ? '任务执行失败。请查看已返回的阶段摘要；不会自动重发付费请求。'
-              : value.state === 'completed' ? '你已确认最终文字方案。可以下载角色JSON，概念图和3D仍未开放。'
+              : value.state === 'completed' ? '你已确认最终文字方案。可以下载角色JSON，或明确带入数字IP中心；不会自动生成图片或模型。'
                 : value.state === 'awaiting_confirmation' ? REASONS[value.confirmation?.reason] || '任务需要你确认或补充。'
                   : '正在读取后端真实执行状态；进度仅在阶段返回后更新。');
         await loadResult(capturedGeneration);
@@ -328,6 +330,10 @@ export function initializeAgentWorkflow({ root, selectPanel, refreshCapabilities
     const link = document.createElement('a'); link.href = url; link.download = `xijing-character-${result.taskId}.json`; link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     setFeedback('已下载本次确认后的角色文字方案JSON。没有生成图片或3D模型。');
+  });
+  assetHandoff?.addEventListener('click', () => {
+    if (assetHandoff.disabled || !result?.publicationAllowed || !result.userConfirmed || snapshot?.state !== 'completed') return;
+    root.dispatchEvent(new CustomEvent('ai-workshop-character-selected', { detail: { taskId: result.taskId } }));
   });
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) stopTimer();

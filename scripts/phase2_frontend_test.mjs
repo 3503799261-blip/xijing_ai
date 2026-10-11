@@ -30,7 +30,7 @@ await check('reject certain answer without evidence', () => assert.throws(() => 
 await check('explicit insufficient evidence may have no citations', () => assert.equal(c.validateQuestionAnswer({ ...answer, uncertain: true, citations: [] }).uncertain, true));
 await check('reject duplicate citation identifiers', () => assert.throws(() => c.validateQuestionAnswer({ ...answer, citations: [citation, citation] })));
 await check('reject malformed answer fields', () => assert.throws(() => c.validateQuestionAnswer({ ...answer, requestId: null })));
-await check('Agent capability follows backend; image and model remain disabled', () => { const caps = c.validateCapabilities({ ...enabled, agentWorkflow: true, conceptImage: true, imageToModel: true }); assert.equal(caps.agentWorkflow, true); assert.equal(caps.conceptImage, false); assert.equal(caps.imageToModel, false); });
+await check('AI capabilities follow backend gates, while default image/model stay off', () => { const caps = c.validateCapabilities({ ...enabled, agentWorkflow: true, conceptImage: true, imageToModel: true }); assert.equal(caps.agentWorkflow, true); assert.equal(caps.conceptImage, true); assert.equal(caps.imageToModel, true); assert.equal(c.validateCapabilities(enabled).imageToModel, false); assert.equal(c.validateCapabilities(enabled).conceptImage, false); });
 await check('reject incomplete capabilities', () => assert.throws(() => c.validateCapabilities({ questionAnswering: true })));
 await check('source URL protocol and credential validation', () => {
   for (const url of ['javascript:alert(1)', 'data:text/html,a', 'https://user:secret@example.org', '/backend/file']) assert.equal(c.safeCitationUrl(url), null);
@@ -221,8 +221,8 @@ await check('HTML bindings, safe rendering and complete import version chain (st
   const requiredIds = [...main.matchAll(/required\('#([^']+)'\)/g)].map((match) => match[1]);
   for (const id of requiredIds) assert.ok(html.includes(`id="${id}"`), `missing HTML binding: ${id}`);
   for (const code of [main, services]) assert.equal(/(?:innerHTML|outerHTML)\s*=|insertAdjacentHTML|eval\s*\(/.test(code), false);
-  assert.ok(main.includes("from './services.js?v=phase3-1'")); assert.ok(main.includes("from './contracts.js?v=phase3-1'"));
-  assert.ok(services.includes("from './contracts.js?v=phase3-1'")); assert.ok(html.includes('main.js?v=phase3-1')); assert.ok(html.includes('ai-workshop.css?v=phase3-1'));
+  assert.ok(main.includes("from './services.js?v=phase4-1'")); assert.ok(main.includes("from './contracts.js?v=phase4-1'"));
+  assert.ok(services.includes("from './contracts.js?v=phase4-1'")); assert.ok(html.includes('main.js?v=phase4-1')); assert.ok(html.includes('ai-workshop.css?v=phase4-1'));
   assert.ok(css.includes('.ai-workshop-citation')); assert.ok(css.includes('prefers-reduced-motion'));
 });
 
