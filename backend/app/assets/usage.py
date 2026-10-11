@@ -304,6 +304,16 @@ class UsageManager:
                 raise ServiceError('NEURAL4D_IDEMPOTENCY_CONFLICT', '相同幂等键绑定不同输入或批准，已拒绝。', 409)
             return self._record(previous, newly_reserved=False)
 
+    def approval_estimated_credits(self, approval_id: str):
+        """Read the immutable human-approved estimate, not current config."""
+        approval_id = _identifier(approval_id, '单次批准ID')
+        with self.connect() as db:
+            self._policy(db)
+            row = db.execute('SELECT estimated_credits FROM neural4d_model_approvals WHERE approval_id=?', (approval_id,)).fetchone()
+        if row is None:
+            raise ServiceError('NEURAL4D_APPROVAL_NOT_FOUND', '本次批准不存在，不能创建任务。', 404)
+        return row['estimated_credits']
+
     def reserve(self, key: str, approval_id: str, payload: dict, purpose: str,
                 real_enabled: bool = False, provider_verified: bool = False):
         if real_enabled is not True:

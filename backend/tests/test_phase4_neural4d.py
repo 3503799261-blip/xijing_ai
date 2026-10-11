@@ -789,3 +789,64 @@ def test_sent_same_key_replay_after_price_change_only_reads_original_task(setup)
     assert replay['attemptId'] == original['attemptId'] and replay['estimatedCredits'] == 80
     assert not replay['newlyReserved'] and context.usage.summary()['occupied_attempts'] == 1
     assert sum(r.url.path.endswith('generateModelWithImage') for r in context.calls) == 1
+
+
+class OfflineCustomTransport(httpx.AsyncBaseTransport):
+    """Classification fixture, with no HTTP backend/socket/network behavior.
+
+    Deliberately not MockTransport so production-style policy is exercised. The
+    test patches only its temporary ledger as canonical, never the real ledger.
+    """
+    def __init__(self):
+        self.requests = []
+
+    async def handle_async_request(self, request):
+        self.requests.append(request)
+        if request.url.path.endswith('queryPointsInfo'):
+            return httpx.Response(200, json={'statusType': 0, 'data': {'total_points': 800}})
+        if request.url.path.endswith('generateModelWithImage'):
+            return httpx.Response(200, json={'uuid': 'offline-custom-classification-only'})
+        return httpx.Response(200, content=glb())
+
+
+def test_custom_transport_with_isolated_canonical_fixture_is_not_logged_as_mock(setup, monkeypatch):
+    context = setup(enabled=True, protocol=True)
+    data = prepared(context)
+    payload = context.models.freeze(data)
+    confirmation = context.usage.approve(payload, data['purpose'], confirmed=True, estimated_credits=80)
+    attempt = context.usage.reserve('offline-custom-classification', confirmation['approvalId'], payload, data['purpose'], True, True)
+    monkeypatch.setattr('backend.app.providers.neural4d.CANONICAL_USAGE_LEDGER', context.usage.path)
+    transport = OfflineCustomTransport()
+    provider = Neural4DProvider(context.settings, context.usage, transport)
+    assert not provider.is_mock
+    asyncio.run(provider.read_operation('queryPointsInfo', {}, 'verify'))
+    asyncio.run(provider.create_once(attempt['attemptId'], context.assets.file_path('image', data['imageId']).read_bytes()))
+    # A synthetic public DNS result avoids network while proving the custom
+    # transport must execute the same allowlist/public-IP check as real HTTP.
+    dns = []
+    def synthetic_public_dns(host, port, **kwargs):
+        dns.append((host, port))
+        return [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('8.8.8.8', 443))]
+    monkeypatch.setattr(socket, 'getaddrinfo', synthetic_public_dns)
+    assert asyncio.run(provider.download(f'https://{DOWNLOAD_HOST}/custom-contract.glb')) == glb()
+    assert dns == [(DOWNLOAD_HOST, 443)]
+    assert len(transport.requests) == 3
+    assert 'authorization' not in transport.requests[-1].headers
+    with context.usage.connect() as db:
+        rows = list(db.execute('SELECT operation,is_mock FROM neural4d_operational_requests ORDER BY operation'))
+    assert [(r['operation'], r['is_mock']) for r in rows] == [('create_model', 0), ('download', 0), ('verify', 0)]
+    # This is only accounting in the temporary test ledger; no real HTTP was sent.
+    assert context.usage.summary()['realHttpRequests'] == 3 and context.usage.summary()['mockHttpRequests'] == 0
+
+
+def test_custom_transport_does_not_bypass_private_download_address_check(setup, monkeypatch):
+    context = setup()
+    monkeypatch.setattr('backend.app.providers.neural4d.CANONICAL_USAGE_LEDGER', context.usage.path)
+    transport = OfflineCustomTransport()
+    provider = Neural4DProvider(context.settings, context.usage, transport)
+    monkeypatch.setattr(socket, 'getaddrinfo', lambda *args, **kwargs: [
+        (socket.AF_INET, socket.SOCK_STREAM, 6, '', ('127.0.0.1', 443))])
+    with pytest.raises(ServiceError, match='MODEL_DOWNLOAD_BLOCKED'):
+        asyncio.run(provider.download(f'https://{DOWNLOAD_HOST}/private-contract.glb'))
+    assert transport.requests == []
+    assert context.usage.summary()['realHttpRequests'] == 0

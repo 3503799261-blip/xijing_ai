@@ -4,6 +4,7 @@ import io
 import json
 import struct
 from types import SimpleNamespace
+from pathlib import Path
 import pytest
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
@@ -11,6 +12,7 @@ from fastapi.testclient import TestClient
 from PIL import Image
 from pydantic import ValidationError
 from backend.app.agents.store import TaskStore, AGENTS
+from backend.app.agents.schemas import CharacterDesign, CultureReview
 from backend.app.assets.service import AssetService
 from backend.app.assets.schemas import CreateAsset, ModelApprovalRequest
 from backend.app.assets.validation import normalize_image, validate_glb, MAX_IMAGE_BYTES
@@ -34,6 +36,16 @@ def fixture_result():
                            'contentKind': 'original_fact_summary'}], 'uncertain': False,
             'knowledgeGeneration': 'offline-fixture-v1', 'promptVersions': {'planner': 'test-only'},
             'confirmationReason': 'final_acceptance'}
+
+
+def confirmed_export_regression():
+    """Previously recorded data in a sanitized OFFLINE regression fixture.
+
+    Its temporary TaskStore states in these tests are synthetic. They are not
+    evidence of new real Agent execution, user approval or model generation.
+    """
+    return json.loads((Path(__file__).parent / 'fixtures' / 'phase4' /
+                       'confirmed-character-export-regression.json').read_text(encoding='utf-8'))['result']
 
 
 def task(store, *, confirmed=True, change=None):
@@ -146,6 +158,76 @@ def test_snapshot_requires_authoritative_confirmation_and_preserves_phase3(tmp_p
     assert svc.create_character({'sourceTaskId': pending, 'purpose': '测试'})['assetId'] == created['assetId']
     reopened = AssetService(svc.settings, TaskStore(store.path))
     assert reopened.get_character(created['assetId'])['sourceResultHash'] == created['sourceResultHash']
+
+
+def test_confirmed_phase3_export_trace_metadata_is_separated_without_relaxing_culture_schema(tmp_path):
+    exported = confirmed_export_regression()
+    assert exported['design']['name'] == '青旌将·霄羽'
+    # Reproduce the real export-envelope failure before the asset adapter.
+    for key, schema in [('design', CharacterDesign), ('review', CultureReview)]:
+        with pytest.raises(ValidationError) as error:
+            schema.model_validate(exported[key])
+        assert [(item['loc'], item['type']) for item in error.value.errors()] == [(('execution',), 'extra_forbidden')]
+    svc, store = service(tmp_path)
+    source = task(store, change=lambda result: result.update(exported))
+    before = store.result(source)
+    assets = [svc.create_character({'sourceTaskId': source, 'purpose': '导出兼容离线回归', 'styleMode': mode})
+              for mode in ('realistic', 'chibi')]
+    for created in assets:
+        expected_design = {key: value for key, value in before['design'].items() if key != 'execution'}
+        expected_review = {key: value for key, value in before['review'].items() if key != 'execution'}
+        assert created['characterSnapshot'] == expected_design
+        assert created['reviewSnapshot'] == expected_review
+        assert created['citationSnapshot'] == before['citations']
+        assert not created['culturalReviewRequired']
+        assert svc.verify_character_snapshot(created['assetId'])['sourceResultHash'] == created['sourceResultHash']
+    assert assets[0]['characterId'] == assets[1]['characterId']
+    assert store.result(source) == before
+
+
+def test_confirmed_phase3_export_http_asset_registration_regression(tmp_path):
+    svc, store = service(tmp_path)
+    source = task(store, change=lambda result: result.update(confirmed_export_regression()))
+    with api(svc) as client:
+        result = client.post('/api/v1/assets/characters',
+                             json={'sourceTaskId': source, 'purpose': '导出兼容HTTP离线回归', 'styleMode': 'chibi'})
+        assert result.status_code == 201
+        assert result.json()['name'] == '青旌将·霄羽' and result.json()['styleMode'] == 'chibi'
+        assert 'execution' not in result.json()['characterSnapshot']
+        assert 'execution' not in result.json()['reviewSnapshot']
+        assert 'redacted-phase3' not in result.text
+
+
+@pytest.mark.parametrize('change', [
+    lambda r: r['design'].update(unrecognizedCultureProperty='blocked'),
+    lambda r: r['review'].update(unrecognizedCultureProperty='blocked'),
+    lambda r: r['design']['costume'][0].update(unrecognizedCultureProperty='blocked'),
+    lambda r: r['design']['execution'].update(unrecognizedTraceProperty='blocked'),
+    lambda r: r['review']['execution']['usage'].update(unrecognizedUsageProperty=1),
+    lambda r: r['design']['execution']['usage'].update(prompt_tokens=True),
+    lambda r: r['review']['execution'].update(promptVersion='agent_designer_v1'),
+    lambda r: r['review'].update(programmaticChecks={'garmentReferenceGuard': 'conservative_literal_absence',
+                                                    'issuesFound': 0, 'unrecognizedCheck': 'blocked'}),
+    lambda r: r['review'].update(programmaticChecks={'garmentReferenceGuard': 'conservative_literal_absence', 'issuesFound': 1}),
+])
+def test_export_adapter_only_accepts_known_server_envelope_fields(tmp_path, change):
+    svc, store = service(tmp_path)
+    exported = confirmed_export_regression()
+    change(exported)
+    source = task(store, change=lambda result: result.update(exported))
+    with pytest.raises(ServiceError, match='CHARACTER_SCHEMA_INVALID'):
+        svc.create_character({'sourceTaskId': source, 'purpose': '拒绝未知字段离线回归'})
+    assert svc.list_characters() == []
+
+
+def test_newer_review_programmatic_metadata_stays_separate_from_cultural_contract(tmp_path):
+    svc, store = service(tmp_path)
+    exported = confirmed_export_regression()
+    exported['review']['programmaticChecks'] = {'garmentReferenceGuard': 'conservative_literal_absence', 'issuesFound': 0}
+    source = task(store, change=lambda result: result.update(exported))
+    created = svc.create_character({'sourceTaskId': source, 'purpose': '新审校追踪字段离线回归'})
+    assert created['reviewSnapshot'] == {key: value for key, value in exported['review'].items()
+                                        if key not in ('execution', 'programmaticChecks')}
 
 
 def test_unknown_task_and_client_supplied_design_cannot_create_asset(tmp_path):

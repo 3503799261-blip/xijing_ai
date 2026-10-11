@@ -45,8 +45,13 @@ class Neural4DProvider:
         # Only explicitly offline MockTransport may isolate a fixture ledger.
         # A different real/custom HTTP transport cannot reset the project cap by
         # selecting another data directory or constructing a fresh UsageManager.
-        if not isinstance(self.transport, httpx.MockTransport) and self.usage.path.resolve() != CANONICAL_USAGE_LEDGER.resolve():
+        if not self.is_mock and self.usage.path.resolve() != CANONICAL_USAGE_LEDGER.resolve():
             raise ServiceError('NEURAL4D_LEDGER_PATH_INVALID', '真实供应商服务只能使用全项目固定额度账本，禁止切换账本重置次数。', 503)
+
+    @property
+    def is_mock(self):
+        """Only the explicit offline transport is classified as mock."""
+        return isinstance(self.transport, httpx.MockTransport)
 
     @property
     def configured(self):
@@ -88,7 +93,7 @@ class Neural4DProvider:
             raise
         finally:
             self.usage.record_request(operation, attempt_id=attempt_id, http_status=status, duration_ms=(time.perf_counter()-started)*1000,
-                                      error_code=error, is_mock=self.transport is not None)
+                                      error_code=error, is_mock=self.is_mock)
 
     @staticmethod
     def error(status):
@@ -154,7 +159,7 @@ class Neural4DProvider:
                 self.usage.halt('SAVE_FAILED_AFTER_SEND')
             raise
         finally:
-            self.usage.record_request('create_model', attempt_id=attempt_id, is_mock=self.transport is not None,
+            self.usage.record_request('create_model', attempt_id=attempt_id, is_mock=self.is_mock,
                                       http_status=status, duration_ms=(time.perf_counter()-started)*1000, error_code=error)
 
     async def download(self, url):
@@ -162,7 +167,7 @@ class Neural4DProvider:
         host = parsed.hostname
         if parsed.scheme != 'https' or not host or parsed.username or parsed.password or parsed.port not in (None, 443) or host not in self.settings.neural4d_download_hosts:
             raise ServiceError('MODEL_DOWNLOAD_BLOCKED', '模型下载域名尚未人工核验，不允许任意外链。', 403)
-        if self.transport is None:
+        if not self.is_mock:
             for info in socket.getaddrinfo(host, 443, type=socket.SOCK_STREAM):
                 if not ipaddress.ip_address(info[4][0]).is_global:
                     raise ServiceError('MODEL_DOWNLOAD_BLOCKED', '模型下载地址不是公开资源。', 403)
@@ -187,5 +192,5 @@ class Neural4DProvider:
             error = exc.code
             raise
         finally:
-            self.usage.record_request('download', is_mock=self.transport is not None, http_status=status,
+            self.usage.record_request('download', is_mock=self.is_mock, http_status=status,
                                       duration_ms=(time.perf_counter()-started)*1000, error_code=error)

@@ -1,5 +1,6 @@
 """Authoritative local asset service; no network or implicit model generation."""
 import hashlib
+import math
 import os
 import re
 import tempfile
@@ -19,6 +20,61 @@ PUBLIC_IMAGE = {'imageId', 'assetId', 'hash', 'sourceHash', 'mimeType', 'width',
 PUBLIC_MODEL = {'modelId', 'assetId', 'hash', 'size', 'format', 'origin', 'licenseNote', 'title', 'validation',
                 'sourceResultHash', 'citationHash', 'assetVersion', 'createdAt', 'providerTaskId', 'imageId', 'imageHash',
                 'characterId', 'styleMode', 'styleVersion'}
+
+
+def cultural_artifact(value, role):
+    """Separate known server trace fields from strict Phase 3 culture JSON.
+
+    Designer/Reviewer validate their LLM artifact first, then attach execution
+    metadata for public tracing. Do not loosen either cultural schema or ignore
+    arbitrary extra fields when importing that persisted envelope.
+    """
+    if not isinstance(value, dict):
+        raise ValueError('Invalid Phase 3 artifact envelope')
+    artifact = dict(value)
+    execution = artifact.pop('execution', None)
+    if 'execution' in value:
+        expected = {'requestId', 'model', 'usage', 'elapsedSeconds', 'promptVersion', 'promptHash'}
+        if not isinstance(execution, dict) or set(execution) != expected:
+            raise ValueError('Invalid execution metadata fields')
+        for key, limit in [('requestId', 200), ('model', 160), ('promptVersion', 80)]:
+            text = execution[key]
+            if key == 'model' and text is None:
+                continue
+            if not isinstance(text, str) or not 1 <= len(text) <= limit or any(ord(c) < 32 for c in text):
+                raise ValueError('Invalid execution metadata text')
+            text.encode('utf-8')
+        if (not re.fullmatch(f'agent_{role}_v[1-9][0-9]*', execution['promptVersion'])
+                or not isinstance(execution['promptHash'], str)
+                or not re.fullmatch(r'[a-f0-9]{64}', execution['promptHash'])):
+            raise ValueError('Invalid execution prompt provenance')
+        elapsed = execution['elapsedSeconds']
+        if elapsed is not None and (type(elapsed) not in (int, float) or not math.isfinite(elapsed) or not 0 <= elapsed <= 3600):
+            raise ValueError('Invalid execution duration')
+        usage = execution['usage']
+        counts = {'prompt_tokens', 'completion_tokens', 'total_tokens', 'prompt_cache_hit_tokens', 'prompt_cache_miss_tokens'}
+        details = {'prompt_tokens_details': {'cached_tokens'},
+                   'completion_tokens_details': {'reasoning_tokens', 'accepted_prediction_tokens', 'rejected_prediction_tokens'}}
+        if usage is not None:
+            if not isinstance(usage, dict) or not set(usage).issubset(counts | set(details)):
+                raise ValueError('Invalid execution token metadata fields')
+            for key, item in usage.items():
+                items = [item]
+                if key in details:
+                    if not isinstance(item, dict) or not set(item).issubset(details[key]):
+                        raise ValueError('Invalid execution token detail fields')
+                    items = item.values()
+                if any(type(count) is not int or count < 0 for count in items):
+                    raise ValueError('Invalid execution token count')
+    if role == 'reviewer' and 'programmaticChecks' in artifact:
+        checks = artifact.pop('programmaticChecks')
+        if (not isinstance(checks, dict) or set(checks) != {'garmentReferenceGuard', 'issuesFound'}
+                or checks['garmentReferenceGuard'] != 'conservative_literal_absence'
+                or type(checks['issuesFound']) is not int or checks['issuesFound'] < 0):
+            raise ValueError('Invalid server reviewer checks')
+        if checks['issuesFound'] and artifact.get('verdict') == 'pass':
+            raise ValueError('Passing review conflicts with server issues')
+    return artifact
 
 
 class AssetService:
@@ -41,9 +97,9 @@ class AssetService:
                 or result.get('schemaVersion') != '1.0'):
             raise ServiceError('CHARACTER_NOT_CONFIRMED', '角色确认或文化依据状态不满足资产创建要求。', 409)
         try:
-            design = CharacterDesign.model_validate(result.get('design')).model_dump()
-            review = CultureReview.model_validate(result.get('review')).model_dump()
-        except ValidationError:
+            design = CharacterDesign.model_validate(cultural_artifact(result.get('design'), 'designer')).model_dump()
+            review = CultureReview.model_validate(cultural_artifact(result.get('review'), 'reviewer')).model_dump()
+        except (ValidationError, ValueError, TypeError, UnicodeError):
             raise ServiceError('CHARACTER_SCHEMA_INVALID', '角色方案不符合已验收的Phase 3协议。', 422)
         if review['verdict'] != 'pass':
             raise ServiceError('CULTURE_REVIEW_REQUIRED', '文化审校尚未通过，不能创建角色资产。', 409)
