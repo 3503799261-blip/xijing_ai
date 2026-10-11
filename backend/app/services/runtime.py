@@ -67,7 +67,9 @@ class Runtime:
         return await asyncio.shield(future)
 
     def capabilities(self):
-        return {'questionAnswering': bool(self.search_service and self.provider.verified), 'knowledgeSearch': bool(self.search_service), 'agentWorkflow': False, 'conceptImage': False, 'imageToModel': False, 'checkedAt': datetime.now(timezone.utc).isoformat()}
+        supervisor = getattr(self, 'agent_supervisor', None)
+        return {'questionAnswering': bool(self.search_service and self.provider.verified), 'knowledgeSearch': bool(self.search_service), 'agentWorkflow': bool(supervisor and supervisor.available()), 'conceptImage': False, 'imageToModel': False, 'checkedAt': datetime.now(timezone.utc).isoformat()}
 
     def health(self):
-        return {'status': 'ready' if self.capabilities()['questionAnswering'] else 'degraded', 'knowledge': bool(self.search_service), 'embedding': bool(self.search_service), 'llmConfigured': self.provider.configured, 'llmVerified': self.provider.verified, 'diagnostic': self.diagnostic, 'documents': self.manifest.get('documents', 0) if self.manifest else 0, 'chunks': self.manifest.get('chunks', 0) if self.manifest else 0, 'budget': self.provider.ledger.summary()}
+        supervisor = getattr(self, 'agent_supervisor', None)
+        return {'status': 'ready' if self.capabilities()['questionAnswering'] else 'degraded', 'knowledge': bool(self.search_service), 'embedding': bool(self.search_service), 'llmConfigured': self.provider.configured, 'llmVerified': self.provider.verified, 'diagnostic': self.diagnostic, 'documents': self.manifest.get('documents', 0) if self.manifest else 0, 'chunks': self.manifest.get('chunks', 0) if self.manifest else 0, 'budget': self.provider.ledger.summary(), 'agents': {'supervisorReady': bool(supervisor and supervisor.ready), 'activeTaskId': supervisor.current_task if supervisor else None, 'enabled': self.settings.agent_workflow_enabled}}

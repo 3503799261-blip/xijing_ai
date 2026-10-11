@@ -1,5 +1,6 @@
 """One official DeepSeek provider. No automatic paid retry or raw error logging."""
 import hashlib
+import asyncio
 import json
 import time
 from datetime import datetime, timezone
@@ -11,8 +12,12 @@ class DeepSeekProvider:
     def __init__(self, settings, transport=None):
         self.settings = settings
         self.transport = transport
-        self.ledger = BudgetLedger(settings.rag_data_dir / 'api-budget.sqlite3', settings.rag_test_budget_cny)
+        self.ledger = BudgetLedger(settings.rag_data_dir / 'api-budget.sqlite3', settings.rag_test_budget_cny,
+                                   scope='phase3', scope_limit=settings.agent_test_budget_cny)
         self.probe_path = settings.rag_data_dir / 'provider-readiness.json'
+        # One provider instance serves chat and all workflow roles in the process.
+        self.capacity = asyncio.Semaphore(2)
+        self.capacity_wait_seconds = min(5.0, settings.request_timeout_seconds)
 
     @property
     def configured(self):
@@ -35,6 +40,20 @@ class DeepSeekProvider:
         limit = self.settings.deepseek_max_output_tokens if max_output is None else max_output
         if not isinstance(limit, int) or isinstance(limit, bool) or not 1 <= limit <= 800:
             raise ServiceError('LLM_OUTPUT_LIMIT', '模型输出长度超过本阶段允许范围。', 400)
+        try:
+            # Avoid a separately scheduled acquire task: cancellation cannot
+            # occur between its completed acquisition and our release guard.
+            async with asyncio.timeout(self.capacity_wait_seconds):
+                await self.capacity.acquire()
+        except asyncio.TimeoutError:
+            raise ServiceError('LLM_BUSY', '模型正在处理其他请求，请稍后手动重试。', 429, True)
+        try:
+            return await self._generate(messages, request_id, json_mode, limit)
+        finally:
+            self.capacity.release()
+
+    async def _generate(self, messages: list, request_id: str, json_mode: bool, limit: int) -> dict:
+        # No reservation is created while queued, including cancellation there.
         self.ledger.reserve(request_id, messages, limit)
         payload = {'model': self.settings.deepseek_model, 'messages': messages, 'thinking': {'type': 'disabled'}, 'stream': False, 'max_tokens': limit, 'temperature': 0.2}
         if json_mode: payload['response_format'] = {'type': 'json_object'}
@@ -80,6 +99,10 @@ class DeepSeekProvider:
             raise ServiceError('LLM_TIMEOUT', 'DeepSeek请求超时，未自动重发；请稍后手动重试。', 504, True)
         except httpx.RequestError:
             raise ServiceError('LLM_NETWORK', '无法连接DeepSeek，请检查网络后手动重试。', 503, True)
+        except asyncio.CancelledError:
+            # Cancellation after request admission cannot prove zero billing.
+            status = 'cancelled_unknown'
+            raise
         finally:
             self.ledger.finish(request_id, usage, status)
             if status != 'success':

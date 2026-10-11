@@ -18,6 +18,10 @@ class Settings(BaseSettings):
     deepseek_max_output_tokens: int = Field(default=800, ge=32, le=800)
     deepseek_timeout_seconds: float = Field(default=35, ge=1, le=40)
     rag_test_budget_cny: float = Field(default=3, gt=0, le=3)
+    agent_test_budget_cny: float = Field(default=0.5, gt=0, le=0.5)
+    agent_queue_limit: int = Field(default=2, ge=0, le=5)
+    agent_workflow_timeout_seconds: float = Field(default=150, ge=60, le=180)
+    agent_workflow_enabled: bool = True
     rag_data_dir: Path = WORKSPACE_ROOT / '.runtime' / 'xijing-ai'
     embedding_model: str = 'BAAI/bge-small-zh-v1.5'
     embedding_model_path: Path = WORKSPACE_ROOT / '.runtime' / 'models' / 'bge-small-zh-v1.5'
@@ -45,7 +49,7 @@ class Settings(BaseSettings):
     @classmethod
     def no_thinking(cls, value: bool) -> bool:
         if value:
-            raise ValueError('Phase 2 budget configuration requires non-thinking mode.')
+            raise ValueError('Approved budget configuration requires non-thinking mode.')
         return value
 
     @field_validator('rag_data_dir', 'embedding_model_path')

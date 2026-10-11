@@ -16,6 +16,8 @@ from .schemas import QuestionRequest, SearchRequest, QuestionAnswer
 from .services.runtime import Runtime
 from .services.chat import grounded_answer
 from .static_frontend import public_file
+from .agents.supervisor import Supervisor
+from .api.agents import register_agents
 
 logger = logging.getLogger('xijing.requests')
 logger.setLevel(logging.INFO)
@@ -27,13 +29,20 @@ if not logger.handlers:
 def create_app(settings=None):
     settings = settings or Settings()
     runtime = Runtime(settings)
+    supervisor = Supervisor(runtime)
+    runtime.agent_supervisor = supervisor
     @asynccontextmanager
     async def lifespan(app):
         await runtime.start()
-        yield
-        await runtime.close()
-    app = FastAPI(title='戏境 AI Phase 2', lifespan=lifespan, docs_url=None, redoc_url=None)
+        await supervisor.start()
+        try:
+            yield
+        finally:
+            await supervisor.close()
+            await runtime.close()
+    app = FastAPI(title='戏境 AI', lifespan=lifespan, docs_url=None, redoc_url=None)
     app.state.runtime = runtime
+    app.state.agent_supervisor = supervisor
     app.add_middleware(CORSMiddleware, allow_origins=settings.allowed_origins, allow_credentials=False, allow_methods=['GET', 'POST'], allow_headers=['Content-Type', 'X-Idempotency-Key'])
     cache, pending = OrderedDict(), {}
 
@@ -64,7 +73,10 @@ def create_app(settings=None):
 
     @app.exception_handler(RequestValidationError)
     async def validation_error(request, exc):
-        return JSONResponse(ServiceError('INVALID_REQUEST', '请求格式不正确：问题不能为空且最多600个字符单位，请检查输入。', 422).public(request.state.request_id), status_code=422)
+        message = ('创作请求格式不正确：需求不能为空且最多1200个字符单位，风格与任务操作参数也须有效。'
+                   if request.url.path.startswith('/api/v1/agent/') else
+                   '请求格式不正确：问题不能为空且最多600个字符单位，请检查输入。')
+        return JSONResponse(ServiceError('INVALID_REQUEST', message, 422).public(request.state.request_id), status_code=422)
 
     @app.exception_handler(HTTPException)
     async def http_error(request, exc):
@@ -119,6 +131,8 @@ def create_app(settings=None):
         except TimeoutError:
             raise ServiceError('REQUEST_TIMEOUT', '本次问答超时，未自动重发模型请求；请稍后重试。', 504, True)
         finally: pending.pop(slot, None)
+
+    register_agents(app, supervisor)
 
     @app.get('/{path:path}')
     async def frontend(path: str):
