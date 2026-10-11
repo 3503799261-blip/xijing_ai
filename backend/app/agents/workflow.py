@@ -8,6 +8,27 @@ PROMPT_VERSIONS = {'planner': planner.PROMPT_VERSION, 'researcher': researcher.P
                    'designer': designer.PROMPT_VERSION, 'reviewer': reviewer.PROMPT_VERSION}
 
 
+def safe_summary(prefix: str, details=()) -> str:
+    """Expose only already validated public fields, with no HTML rendering."""
+    text = prefix + (' ' + '；'.join(details) if details else '')
+    return text[:899] + '…' if len(text) > 900 else text
+
+
+def research_summary(artifact: dict) -> str:
+    missing = [query['question'] for query in artifact['queries'] if query['uncertain']]
+    if missing or not artifact['evidence']:
+        return safe_summary('资料不足，尚未生成角色。',
+                            ['未覆盖查询：' + '；'.join(missing)] + artifact['limitations'])
+    return safe_summary(f"完成{len(artifact['queries'])}条真实检索，保留{len(artifact['evidence'])}条候选依据。")
+
+
+def review_summary(artifact: dict) -> str:
+    prefix = {'pass': '辅助文化审校已完成，需由用户决定是否接受方案。',
+              'needs_revision': '辅助文化审校发现需修订内容，不能直接接受为最终方案。',
+              'insufficient_evidence': '辅助文化审校判定资料不足，不能作为已核实设计。'}[artifact['verdict']]
+    return safe_summary(prefix, [issue['field'] + '：' + issue['reason'] for issue in artifact['issues']])
+
+
 async def run_workflow(runtime, task_id, brief: dict, emit, cancelled=lambda: False) -> dict:
     """Persist actual role boundaries through emit; supervisor owns task state."""
     result = {'schemaVersion': '1.0', 'design': None, 'review': None, 'citations': [],
@@ -39,7 +60,7 @@ async def run_workflow(runtime, task_id, brief: dict, emit, cancelled=lambda: Fa
     # The task store seeds pending states. Re-emitting them is unnecessary and
     # could imply a second execution when a task is restored after a restart.
     plan = await step('planner', lambda: planner.plan_creation(brief, runtime.provider, f'{task_id}:planner'),
-                      lambda value: ('需要补充关键需求后重新提交创作。' if value['clarificationQuestions']
+                      lambda value: (safe_summary('请补充关键需求后重新提交创作：', value['clarificationQuestions']) if value['clarificationQuestions']
                                      else f"已整理主题「{value['theme']}」及{len(value['requirements'])}项需求。"),
                       lambda value: 'awaiting_confirmation' if value['clarificationQuestions'] else 'completed')
     if plan['clarificationQuestions']:
@@ -47,9 +68,7 @@ async def run_workflow(runtime, task_id, brief: dict, emit, cancelled=lambda: Fa
         return result
 
     research = await step('researcher', lambda: researcher.research_opera(plan, runtime, cancelled),
-                          lambda value: ('部分必需文化研究缺少有效资料，请调整要求或补充获准资料。'
-                                         if not value['evidence'] or any(q['uncertain'] for q in value['queries'])
-                                         else f"完成{len(value['queries'])}条真实检索，保留{len(value['evidence'])}条候选依据。"),
+                          research_summary,
                           lambda value: 'awaiting_confirmation'
                           if not value['evidence'] or any(q['uncertain'] for q in value['queries']) else 'completed')
     result['limitations'] = list(research['limitations'])
@@ -61,9 +80,7 @@ async def run_workflow(runtime, task_id, brief: dict, emit, cancelled=lambda: Fa
     design = await step('designer', lambda: designer.design_character(brief, plan, research, runtime.provider, f'{task_id}:designer'),
                         lambda value: f"已生成原创角色「{value['name']}」草案，尚待文化审校。")
     review = await step('reviewer', lambda: reviewer.review_culture(brief, plan, research, design, runtime.provider, f'{task_id}:reviewer'),
-                        lambda value: {'pass': '辅助文化审校已完成，需由用户决定是否接受方案。',
-                                       'needs_revision': '辅助文化审校发现需修订内容，不能直接接受为最终方案。',
-                                       'insufficient_evidence': '辅助文化审校判定资料不足，不能作为已核实设计。'}[value['verdict']])
+                        review_summary)
     result.update(design=design, review=review,
                   citations=public_citations(research['evidence'],
                                              design['usedEvidenceIds'] + review['checkedEvidenceIds']),

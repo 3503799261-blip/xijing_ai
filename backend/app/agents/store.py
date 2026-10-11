@@ -5,6 +5,7 @@ import sqlite3
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
+from contextlib import contextmanager
 from ..errors import ServiceError
 
 AGENTS = ('planner', 'researcher', 'designer', 'reviewer')
@@ -42,10 +43,15 @@ class TaskStore:
               PRIMARY KEY(task_id,sequence));
             ''')
 
+    @contextmanager
     def connect(self):
         db = sqlite3.connect(self.path, timeout=5)
         db.row_factory = sqlite3.Row
-        return db
+        try:
+            with db:
+                yield db
+        finally:
+            db.close()
 
     @staticmethod
     def signature(brief):
@@ -122,9 +128,10 @@ class TaskStore:
             return True
 
     def cancelled(self, task_id):
+        """Workflow stop guard: no terminal, held, or unknown state can run."""
         with self.connect() as db:
             row = self._row(db, task_id)
-            return bool(row['cancel_requested'] or row['state'] == 'cancelled')
+            return bool(row['cancel_requested'] or row['state'] != 'running')
 
     def emit(self, task_id, agent_id, state, summary='', artifact=None, error_code=None):
         if agent_id not in AGENTS or state not in AGENT_STATES:
@@ -133,7 +140,7 @@ class TaskStore:
             db.execute('BEGIN IMMEDIATE')
             row = self._row(db, task_id)
             if row['state'] in TERMINAL:
-                return
+                raise ServiceError('WORKFLOW_CANCELLED', '任务已经停止，未继续执行后续阶段。', 409)
             step = db.execute('SELECT * FROM agent_steps WHERE task_id=? AND agent_id=?', (task_id, agent_id)).fetchone()
             allowed = {'pending': {'running', 'failed'}, 'running': {'completed', 'failed', 'awaiting_confirmation'},
                        'awaiting_confirmation': set(), 'completed': set(), 'failed': set()}

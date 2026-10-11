@@ -5,6 +5,8 @@ from fastapi import APIRouter, Query, Request
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from ..errors import ServiceError
 
+MAX_SEQUENCE = (1 << 63) - 1
+
 class CreateRequest(BaseModel):
     model_config = ConfigDict(extra='forbid', str_strip_whitespace=True)
     requirements: str
@@ -21,12 +23,12 @@ class CreateRequest(BaseModel):
 class ConfirmRequest(BaseModel):
     model_config = ConfigDict(extra='forbid')
     confirmationId: UUID
-    expectedSequence: int = Field(ge=0, strict=True)
+    expectedSequence: int = Field(ge=0, le=MAX_SEQUENCE, strict=True)
     action: Literal['accept']
 
 class CancelRequest(BaseModel):
     model_config = ConfigDict(extra='forbid')
-    expectedSequence: int = Field(ge=0, strict=True)
+    expectedSequence: int = Field(ge=0, le=MAX_SEQUENCE, strict=True)
 
 def register_agents(app, supervisor):
     router = APIRouter(prefix='/api/v1/agent')
@@ -45,7 +47,7 @@ def register_agents(app, supervisor):
                 'requestId': request.state.request_id}
 
     @router.get('/status/{task_id}')
-    async def task_status(task_id: str, request: Request, afterSequence: int = Query(default=0, ge=0)):
+    async def task_status(task_id: str, request: Request, afterSequence: int = Query(default=0, ge=0, le=MAX_SEQUENCE)):
         return status(task_id, request, afterSequence)
 
     @router.get('/result/{task_id}')

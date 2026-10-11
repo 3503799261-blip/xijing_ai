@@ -6,8 +6,30 @@ from ..errors import ServiceError
 from .planner import execution_metadata
 from .schemas import CultureReview, canonical_ids, evidence_aliases, model_evidence
 
-PROMPT_VERSION = 'agent_reviewer_v1'
+PROMPT_VERSION = 'agent_reviewer_v2'
 PROMPT = Path(__file__).resolve().parents[2] / 'prompts' / (PROMPT_VERSION + '.txt')
+
+
+def garment_reference_issues(design: dict, evidence: list[dict]) -> list[dict]:
+    """A narrow conservative safeguard, not a general semantic classifier.
+
+    A face/voice excerpt cannot support a concrete unmentioned garment. These
+    lexemes name details to check for absence; they contain no hardcoded answer.
+    Broader paraphrase/role/version validity still needs model and human review.
+    """
+    by_id = {item['id']: item for item in evidence}
+    lexemes = ('宽肩', '长袍', '蟒袍', '大靠', '靠旗', '厚底靴', '薄底靴', '短打衣', '官衣', '硬靠', '盔头')
+    issues = []
+    for index, item in enumerate(design['costume']):
+        if item['interpretation'] != 'evidence_based':
+            continue
+        cited_text = '\n'.join(by_id[cid]['excerpt'] for cid in item['evidenceIds'])
+        missing = [term for term in lexemes if term in item['description'] and term not in cited_text]
+        if missing:
+            issues.append({'field': f'costume[{index}].description',
+                           'reason': '所引用片段未提及服饰细节「' + '、'.join(missing) + '」；请删除或明确改为原创。',
+                           'evidenceIds': item['evidenceIds']})
+    return issues
 
 
 def validate_review(content: str, evidence: list[dict], design: dict) -> dict:
@@ -45,5 +67,13 @@ async def review_culture(brief: dict, plan: dict, research: dict, design: dict, 
     result = await provider.generate([{'role': 'system', 'content': prompt},
                                       {'role': 'user', 'content': json.dumps(payload, ensure_ascii=False)}],
                                      request_id, max_output=400)
-    return {**validate_review(result['content'], research['evidence'], design),
+    review = validate_review(result['content'], research['evidence'], design)
+    guard_issues = garment_reference_issues(design, research['evidence'])
+    if guard_issues:
+        review['verdict'] = 'needs_revision'
+        review['issues'] = (guard_issues + review['issues'])[:4]
+        review['suggestions'] = (['具体服饰细节须有对应资料；无资料的造型只可明确标为原创。'] + review['suggestions'])[:4]
+        review['checkedEvidenceIds'] = list(dict.fromkeys(review['checkedEvidenceIds'] + [cid for issue in guard_issues for cid in issue['evidenceIds']]))
+    return {**review,
+            'programmaticChecks': {'garmentReferenceGuard': 'conservative_literal_absence', 'issuesFound': len(guard_issues)},
             'execution': execution_metadata(result, request_id, PROMPT_VERSION, prompt)}

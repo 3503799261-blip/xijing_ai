@@ -111,7 +111,7 @@ def test_four_roles_order_three_bounded_calls_canonical_citations_and_human_gate
     assert sent['DESIGN']['usedEvidenceIds'] == ['E1']
     assert events[5]['artifact']['usedEvidenceIds'] == ['test-only-chunk']
     assert events[3]['artifact']['evidence'][0]['sourceVersion'] == 'unit-version'
-    assert events[1]['artifact']['execution']['promptVersion'] == 'agent_planner_v1'
+    assert events[1]['artifact']['execution']['promptVersion'] == 'agent_planner_v2'
 
 
 def test_clarification_stops_before_any_research_or_design():
@@ -284,3 +284,109 @@ def test_actual_task_store_accepts_each_artifact_once_and_hold_transitions(tmp_p
             assert status['agents'][2]['state'] == 'pending'
             assert len(runtime.provider.calls) == 1
     asyncio.run(scenario())
+
+
+def test_exact_actor_and_year_guards_reject_similar_other_person_premiere_before_design(tmp_path):
+    """Offline regression shaped from the preserved false-person-first failure."""
+    from backend.app.agents.store import TaskStore
+
+    async def scenario():
+        brief = {'requirements': '以京剧演员司雨青澜在1932年首演的代表作为历史依据设计角色，不用相似人物替代。', 'style': '京剧写意'}
+        plan = {**PLAN, 'theme': '京剧演员司雨青澜',
+                'researchQueries': ['京剧演员司雨青澜生平与1932年首演剧目', '1932年京剧首演剧目记录']}
+        other = {**EVIDENCE, 'title': '合成类似人物首演测试',
+                 'excerpt': '测试中的另一位人物于1959年首演，仅为合成错误匹配资料。',
+                 'entityNames': ['测试另一人物', '1959年']}
+        runtime = OfflineRuntime([plan], evidence=[other])
+        store = TaskStore(tmp_path / 'actor.sqlite3')
+        task_id, _ = store.create(brief, 'unit-exact-actor')
+        store.start(task_id)
+        async def emit(agent_id, state, **kwargs):
+            store.emit(task_id, agent_id, state, **kwargs)
+        result = await run_workflow(runtime, task_id, brief, emit)
+        store.finish(task_id, result)
+        status = store.status(task_id)
+        artifacts = store.artifacts(task_id)
+        assert status['state'] == 'awaiting_confirmation' and status['confirmation']['canAccept'] is False
+        assert status['agents'][1]['state'] == 'awaiting_confirmation'
+        assert all(item['state'] == 'pending' for item in status['agents'][2:])
+        assert len(runtime.provider.calls) == 1 and result['design'] is None
+        assert artifacts['planner']['requiredEntities'] == ['司雨青澜']
+        assert artifacts['researcher']['queries'][0]['retrievalUncertain'] is False
+        assert artifacts['researcher']['queries'][0]['uncertain'] is True
+        summary = status['agents'][1]['summary']
+        assert '司雨青澜' in summary and '1932' in summary and '相似人物不能替代' in summary
+        assert len(summary) <= 900
+    asyncio.run(scenario())
+
+
+def test_unknown_actor_without_year_still_pauses_before_designer():
+    async def scenario():
+        brief = {**BRIEF, 'requirements': '核实京剧演员测试未知人物的真实代表作后设计，不能替代人物。'}
+        runtime = OfflineRuntime([{**PLAN, 'researchQueries': ['测试未知人物有哪些真实代表作']}])
+        events = []
+        async def emit(agent_id, state, **kwargs):
+            events.append({'agentId': agent_id, 'state': state, **kwargs})
+        result = await run_workflow(runtime, 'unit-no-year', brief, emit)
+        assert result['design'] is None and len(runtime.provider.calls) == 1
+        assert '测试未知人物' in events[-1]['summary']
+    asyncio.run(scenario())
+
+
+def test_specific_clarification_question_is_visible_without_result_ready():
+    plan = {**PLAN, 'clarificationQuestions': ['请确认角色用途与舞台场景。']}
+    _, events, result = execute(responses=[plan])
+    assert result['design'] is None
+    assert '请确认角色用途与舞台场景' in events[-1]['summary']
+
+
+def test_actual_preserved_face_output_triggers_conservative_garment_guard():
+    """Read real archived artifact; no model calls and no evidence file rewrite."""
+    from pathlib import Path
+    from backend.app.agents.reviewer import garment_reference_issues
+    record = json.loads((Path(__file__).resolve().parents[2] / 'docs/evidence/test-results/phase-03/real-face-first.json').read_text(encoding='utf-8'))
+    design = record['artifacts']['designer']
+    evidence = record['artifacts']['researcher']['evidence']
+    issues = garment_reference_issues(design, evidence)
+    assert issues[0]['field'] == 'costume[0].description'
+    assert '宽肩' in issues[0]['reason'] and '长袍' in issues[0]['reason']
+    assert record['artifacts']['reviewer']['verdict'] == 'pass'  # Preserve actual failed judgement.
+
+
+def test_garment_guard_overrides_synthetic_model_pass_and_requires_revision():
+    async def scenario():
+        design = copy.deepcopy(DESIGN)
+        design['costume'][0]['description'] = '净行风格宽肩长袍，配脸谱式面妆'
+        runtime = OfflineRuntime([PLAN, design, REVIEW])
+        events = []
+        async def emit(agent_id, state, **kwargs):
+            events.append({'agentId': agent_id, 'state': state, **kwargs})
+        result = await run_workflow(runtime, 'unit-garment', BRIEF, emit)
+        assert len(runtime.provider.calls) == 3
+        assert result['review']['verdict'] == 'needs_revision'
+        assert result['uncertain'] is True and result['publicationAllowed'] is False
+        assert result['confirmationReason'] == 'needs_revision'
+        assert '宽肩' in events[-1]['summary']
+        assert result['review']['programmaticChecks']['issuesFound'] == 1
+    asyncio.run(scenario())
+
+
+def test_actual_preserved_sheng_garments_are_supported_by_their_exact_excerpts():
+    from pathlib import Path
+    from backend.app.agents.reviewer import garment_reference_issues
+    record = json.loads((Path(__file__).resolve().parents[2] / 'docs/evidence/test-results/phase-03/real-sheng-first.json').read_text(encoding='utf-8'))
+    assert garment_reference_issues(record['artifacts']['designer'], record['artifacts']['researcher']['evidence']) == []
+
+
+def test_planner_v2_avoids_optional_creative_color_research_and_retains_v1():
+    from backend.app.agents.planner import PROMPT
+    prompt = PROMPT.read_text(encoding='utf-8')
+    assert '不得追加' in prompt and '原创的配色' in prompt
+    assert PROMPT.with_name('agent_planner_v1.txt').exists()
+
+
+def test_summary_bounds_long_missing_queries_and_public_limits():
+    from backend.app.agents.workflow import research_summary
+    summary = research_summary({'queries': [{'question': '测试' * 180, 'uncertain': True}] * 3,
+                                'evidence': [], 'limitations': ['公开限制' * 160]})
+    assert len(summary) <= 900 and summary.endswith('…')

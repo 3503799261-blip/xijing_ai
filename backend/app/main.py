@@ -33,13 +33,15 @@ def create_app(settings=None):
     runtime.agent_supervisor = supervisor
     @asynccontextmanager
     async def lifespan(app):
-        await runtime.start()
-        await supervisor.start()
         try:
+            await runtime.start()
+            await supervisor.start()
             yield
         finally:
-            await supervisor.close()
-            await runtime.close()
+            try:
+                await supervisor.close()
+            finally:
+                await runtime.close()
     app = FastAPI(title='戏境 AI', lifespan=lifespan, docs_url=None, redoc_url=None)
     app.state.runtime = runtime
     app.state.agent_supervisor = supervisor

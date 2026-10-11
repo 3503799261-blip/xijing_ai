@@ -1,5 +1,6 @@
 """One supervised creator, bounded persistent queue, no paid automatic retry."""
 import asyncio
+import portalocker
 from ..errors import ServiceError
 from .store import TaskStore
 
@@ -12,21 +13,50 @@ class Supervisor:
         self.worker = None
         self.ready = False
         self.current_task = None
+        self.owner_lock = None
+        self.diagnostic = None
 
     async def start(self):
-        self.store.recover()
-        self.ready = True
-        self.worker = asyncio.create_task(self._work(), name='opera-agent-supervisor')
+        if self.worker and not self.worker.done():
+            return
+        self.ready = False
+        if self.owner_lock:
+            self.owner_lock.release()
+            self.owner_lock = None
+        lock = portalocker.Lock(str(self.runtime.settings.rag_data_dir / 'agent-tasks-owner.lock'), timeout=0)
+        try:
+            lock.acquire()
+        except portalocker.exceptions.LockException:
+            # An unavailable second process must never "recover" live tasks
+            # owned by the first application, even if its RAG lock also fails.
+            self.diagnostic = 'AGENT_TASKS_LOCKED'
+            return
+        self.owner_lock = lock
+        try:
+            self.store.recover()
+            self.worker = asyncio.create_task(self._work(), name='opera-agent-supervisor')
+            self.ready = True
+            self.diagnostic = None
+        except BaseException:
+            self.owner_lock.release()
+            self.owner_lock = None
+            self.worker = None
+            raise
 
     async def close(self):
         self.ready = False
-        if self.worker:
-            self.worker.cancel()
-            await asyncio.gather(self.worker, return_exceptions=True)
+        try:
+            if self.worker:
+                self.worker.cancel()
+                await asyncio.gather(self.worker, return_exceptions=True)
+        finally:
             self.worker = None
+            if self.owner_lock:
+                self.owner_lock.release()
+                self.owner_lock = None
 
     def available(self):
-        if not self.ready or not self.runtime.settings.agent_workflow_enabled:
+        if not self.ready or not self.worker or self.worker.done() or not self.runtime.settings.agent_workflow_enabled:
             return False
         if not self.runtime.search_service or not self.runtime.provider.verified:
             return False

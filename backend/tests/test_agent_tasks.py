@@ -184,3 +184,138 @@ def test_supervisor_failure_and_shutdown_do_not_retry(tmp_path):
         assert supervisor.store.status(task_id)['agents'][0]['errorCode'] == 'LLM_TIMEOUT'
         await supervisor.close()
     asyncio.run(scenario())
+
+
+@pytest.mark.parametrize('cursor', ['-1', str(1 << 63), str(1 << 80)])
+def test_api_rejects_cursor_outside_sqlite_integer_range(tmp_path, cursor):
+    app = create_app(config(tmp_path))
+    task_id, _ = app.state.agent_supervisor.store.create(BRIEF, 'cursor-test-0001')
+    with TestClient(app) as client:
+        response = client.get(f'/api/v1/agent/status/{task_id}', params={'afterSequence': cursor})
+        assert response.status_code == 422
+        assert response.json()['error']['code'] == 'INVALID_REQUEST'
+        assert str(tmp_path) not in response.text
+        valid = client.get(f'/api/v1/agent/status/{task_id}', params={'afterSequence': (1 << 63) - 1})
+        assert valid.status_code == 200 and valid.json()['events'] == []
+
+
+def test_second_supervisor_cannot_recover_or_dispatch_live_owner_tasks(tmp_path):
+    """Real OS owner lock and SQLite, with an explicitly offline runner."""
+    async def scenario():
+        entered, release = asyncio.Event(), asyncio.Event()
+        calls = []
+        runtime = SimpleNamespace(settings=config(tmp_path))
+
+        async def runner(runtime, task_id, brief, emit, cancelled):
+            calls.append(task_id)
+            await emit('planner', 'running', '离线锁测试')
+            entered.set()
+            await release.wait()
+            assert not cancelled()
+            for index, aid in enumerate(AGENTS):
+                if index:
+                    await emit(aid, 'running', '离线锁测试')
+                await emit(aid, 'completed', '离线假产物', {'offline': True})
+            return result()
+
+        first, second = Supervisor(runtime, runner), Supervisor(runtime, runner)
+        await first.start()
+        first.available = lambda: True
+        try:
+            task_id = first.create(BRIEF, 'owner-lock-0001')
+            await asyncio.wait_for(entered.wait(), timeout=1)
+            sequence = first.store.status(task_id)['lastSequence']
+            await second.start()
+            assert not second.ready and second.worker is None
+            assert second.diagnostic == 'AGENT_TASKS_LOCKED'
+            assert second.owner_lock is None and not second.available()
+            assert first.store.status(task_id)['state'] == 'running'
+            assert first.store.status(task_id)['lastSequence'] == sequence
+            assert not first.store.cancelled(task_id)
+            with pytest.raises(ServiceError, match='AGENT_SERVICE_UNAVAILABLE'):
+                second.create(BRIEF, 'owner-lock-0002')
+            release.set()
+            for _ in range(50):
+                if first.store.status(task_id)['state'] == 'awaiting_confirmation':
+                    break
+                await asyncio.sleep(.01)
+            assert first.store.status(task_id)['state'] == 'awaiting_confirmation'
+            assert calls == [task_id]
+        finally:
+            release.set()
+            await second.close()
+            await first.close()
+
+    asyncio.run(scenario())
+
+
+def test_owner_shutdown_releases_lock_and_reopen_recovers_only_unfinished(tmp_path):
+    async def scenario():
+        runtime = SimpleNamespace(settings=config(tmp_path))
+        entered = asyncio.Event()
+        calls = []
+
+        async def blocked_runner(runtime, task_id, brief, emit, cancelled):
+            calls.append(task_id)
+            await emit('planner', 'running', '离线停机测试')
+            entered.set()
+            await asyncio.Event().wait()
+
+        first = Supervisor(runtime, blocked_runner)
+        await first.start()
+        first.available = lambda: True
+        active = first.create(BRIEF, 'shutdown-owner-0001')
+        await asyncio.wait_for(entered.wait(), timeout=1)
+        waiting = first.create(BRIEF, 'shutdown-owner-0002')
+        await first.close()
+        assert first.owner_lock is None and first.worker is None and not first.ready
+        assert first.store.status(active)['state'] == 'failed'
+        assert first.store.status(waiting)['state'] == 'waiting'
+        reopened = Supervisor(runtime, blocked_runner)
+        await reopened.start()
+        try:
+            assert reopened.ready and reopened.owner_lock is not None
+            assert reopened.store.status(waiting)['state'] == 'failed'
+            assert reopened.store.status(active)['agents'][0]['errorCode'] == 'WORKFLOW_INTERRUPTED'
+            await asyncio.sleep(.02)
+            assert calls == [active]  # Restart performs no retry or paid dispatch.
+        finally:
+            await reopened.close()
+
+    asyncio.run(scenario())
+
+
+def test_failed_start_releases_owner_lock(tmp_path):
+    async def scenario():
+        runtime = SimpleNamespace(settings=config(tmp_path))
+        first = Supervisor(runtime)
+
+        def broken_recovery():
+            raise RuntimeError('offline injected recovery failure')
+
+        first.store.recover = broken_recovery
+        with pytest.raises(RuntimeError, match='offline injected'):
+            await first.start()
+        assert first.owner_lock is None and first.worker is None and not first.ready
+        replacement = Supervisor(runtime)
+        await replacement.start()
+        try:
+            assert replacement.ready and replacement.owner_lock is not None
+        finally:
+            await replacement.close()
+
+    asyncio.run(scenario())
+
+
+@pytest.mark.parametrize('state', ['failed', 'completed', 'cancelled', 'awaiting_confirmation', 'unknown_future_state'])
+def test_terminal_held_and_unknown_task_states_stop_workflow_callbacks(tmp_path, state):
+    store = TaskStore(tmp_path / 'tasks.sqlite3')
+    task_id, _ = store.create(BRIEF, 'stop-guard-0001')
+    assert store.start(task_id) and not store.cancelled(task_id)
+    with store.connect() as db:
+        db.execute('UPDATE agent_tasks SET state=? WHERE task_id=?', (state, task_id))
+    assert store.cancelled(task_id)
+    if state in {'failed', 'completed', 'cancelled'}:
+        with pytest.raises(ServiceError, match='WORKFLOW_CANCELLED'):
+            store.emit(task_id, 'planner', 'running', '不得继续')
+        assert store.artifacts(task_id) == {}

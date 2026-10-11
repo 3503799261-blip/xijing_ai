@@ -1,0 +1,1308 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-10-11T05:44:59.361776+00:00",
+  "scope": "Real HTTP workflow and real backend RAG/LLM; no automatic retry",
+  "case": "sheng",
+  "brief": {
+    "requirements": "设计一位用于非遗展览的原创年轻男性角色，以京剧武生及靠服为灵感。只使用知识库支持的文化依据；幻想装饰标明原创，不借用真实演员姓名。",
+    "style": "京剧写意"
+  },
+  "budgetBefore": {
+    "calls": 62,
+    "estimatedUpperCostCny": 0.13343424,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 0,
+        "estimatedUpperCostCny": 0,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "pollSamples": [
+    {
+      "taskId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "state": "running",
+      "currentAgent": "planner",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T05:44:59.522131+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 0,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T05:44:59.501080+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T05:44:59.506689+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T05:44:59.523131+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 3,
+      "sequence": 3,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T05:44:59.501080+00:00",
+      "updatedAt": "2026-10-11T05:44:59.523131+00:00",
+      "requestId": "a64f6514-b866-4199-8a4d-d0b463bbe44d"
+    },
+    {
+      "taskId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "state": "running",
+      "currentAgent": "designer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧武生非遗展览角色」及3项需求。",
+          "startedAt": "2026-10-11T05:44:59.522131+00:00",
+          "finishedAt": "2026-10-11T05:45:00.950660+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成3条真实检索，保留5条候选依据。",
+          "startedAt": "2026-10-11T05:45:00.954986+00:00",
+          "finishedAt": "2026-10-11T05:45:01.045467+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T05:45:01.050464+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "pending",
+          "summary": "尚未执行。",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 2,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T05:44:59.501080+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T05:44:59.506689+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T05:44:59.523131+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T05:45:00.951661+00:00",
+          "summary": "已整理主题「京剧武生非遗展览角色」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T05:45:00.955987+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T05:45:01.046465+00:00",
+          "summary": "完成3条真实检索，保留5条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T05:45:01.051467+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 7,
+      "sequence": 7,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T05:44:59.501080+00:00",
+      "updatedAt": "2026-10-11T05:45:01.051467+00:00",
+      "requestId": "27d3bae3-86f1-40f1-b3f8-61083f3222b8"
+    },
+    {
+      "taskId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "state": "running",
+      "currentAgent": "reviewer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧武生非遗展览角色」及3项需求。",
+          "startedAt": "2026-10-11T05:44:59.522131+00:00",
+          "finishedAt": "2026-10-11T05:45:00.950660+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成3条真实检索，保留5条候选依据。",
+          "startedAt": "2026-10-11T05:45:00.954986+00:00",
+          "finishedAt": "2026-10-11T05:45:01.045467+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "completed",
+          "summary": "已生成原创角色「云翎」草案，尚待文化审校。",
+          "startedAt": "2026-10-11T05:45:01.050464+00:00",
+          "finishedAt": "2026-10-11T05:45:03.404965+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "running",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "startedAt": "2026-10-11T05:45:03.410161+00:00",
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 3,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T05:44:59.501080+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T05:44:59.506689+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T05:44:59.523131+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T05:45:00.951661+00:00",
+          "summary": "已整理主题「京剧武生非遗展览角色」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T05:45:00.955987+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T05:45:01.046465+00:00",
+          "summary": "完成3条真实检索，保留5条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T05:45:01.051467+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 8,
+          "occurredAt": "2026-10-11T05:45:03.406122+00:00",
+          "summary": "已生成原创角色「云翎」草案，尚待文化审校。",
+          "agentId": "designer",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 9,
+          "occurredAt": "2026-10-11T05:45:03.411195+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "reviewer",
+          "state": "running"
+        }
+      ],
+      "lastSequence": 9,
+      "sequence": 9,
+      "confirmation": null,
+      "resultReady": false,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T05:44:59.501080+00:00",
+      "updatedAt": "2026-10-11T05:45:03.411195+00:00",
+      "requestId": "59841790-4e31-4c3c-9574-3c1daf4594b4"
+    },
+    {
+      "taskId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "state": "awaiting_confirmation",
+      "currentAgent": "reviewer",
+      "agents": [
+        {
+          "id": "planner",
+          "state": "completed",
+          "summary": "已整理主题「京剧武生非遗展览角色」及3项需求。",
+          "startedAt": "2026-10-11T05:44:59.522131+00:00",
+          "finishedAt": "2026-10-11T05:45:00.950660+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "researcher",
+          "state": "completed",
+          "summary": "完成3条真实检索，保留5条候选依据。",
+          "startedAt": "2026-10-11T05:45:00.954986+00:00",
+          "finishedAt": "2026-10-11T05:45:01.045467+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "designer",
+          "state": "completed",
+          "summary": "已生成原创角色「云翎」草案，尚待文化审校。",
+          "startedAt": "2026-10-11T05:45:01.050464+00:00",
+          "finishedAt": "2026-10-11T05:45:03.404965+00:00",
+          "errorCode": null
+        },
+        {
+          "id": "reviewer",
+          "state": "completed",
+          "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+          "startedAt": "2026-10-11T05:45:03.410161+00:00",
+          "finishedAt": "2026-10-11T05:45:04.742712+00:00",
+          "errorCode": null
+        }
+      ],
+      "completedSteps": 4,
+      "totalSteps": 4,
+      "events": [
+        {
+          "kind": "task",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 1,
+          "occurredAt": "2026-10-11T05:44:59.501080+00:00",
+          "summary": "任务已保存，等待真实工作流调度。",
+          "taskState": "waiting"
+        },
+        {
+          "kind": "task",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 2,
+          "occurredAt": "2026-10-11T05:44:59.506689+00:00",
+          "summary": "工作流已实际开始。",
+          "taskState": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 3,
+          "occurredAt": "2026-10-11T05:44:59.523131+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "planner",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 4,
+          "occurredAt": "2026-10-11T05:45:00.951661+00:00",
+          "summary": "已整理主题「京剧武生非遗展览角色」及3项需求。",
+          "agentId": "planner",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 5,
+          "occurredAt": "2026-10-11T05:45:00.955987+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "researcher",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 6,
+          "occurredAt": "2026-10-11T05:45:01.046465+00:00",
+          "summary": "完成3条真实检索，保留5条候选依据。",
+          "agentId": "researcher",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 7,
+          "occurredAt": "2026-10-11T05:45:01.051467+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "designer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 8,
+          "occurredAt": "2026-10-11T05:45:03.406122+00:00",
+          "summary": "已生成原创角色「云翎」草案，尚待文化审校。",
+          "agentId": "designer",
+          "state": "completed"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 9,
+          "occurredAt": "2026-10-11T05:45:03.411195+00:00",
+          "summary": "正在执行此阶段；结果将在校验后展示。",
+          "agentId": "reviewer",
+          "state": "running"
+        },
+        {
+          "kind": "agent",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 10,
+          "occurredAt": "2026-10-11T05:45:04.742712+00:00",
+          "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+          "agentId": "reviewer",
+          "state": "completed"
+        },
+        {
+          "kind": "task",
+          "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+          "sequence": 11,
+          "occurredAt": "2026-10-11T05:45:04.746938+00:00",
+          "summary": "设计与辅助审校已返回，等待你确认。",
+          "taskState": "awaiting_confirmation",
+          "confirmationId": "a3aa1f8e-d68f-4524-877d-e550fdcb044a"
+        }
+      ],
+      "lastSequence": 11,
+      "sequence": 11,
+      "confirmation": {
+        "id": "a3aa1f8e-d68f-4524-877d-e550fdcb044a",
+        "reason": "final_acceptance",
+        "canAccept": true
+      },
+      "resultReady": true,
+      "cancelRequested": false,
+      "createdAt": "2026-10-11T05:44:59.501080+00:00",
+      "updatedAt": "2026-10-11T05:45:04.746938+00:00",
+      "requestId": "140f553c-0269-462f-98a4-fabf330a0243"
+    }
+  ],
+  "createHttpStatus": 202,
+  "created": {
+    "taskId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+    "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+    "resultUrl": "/api/v1/agent/result/7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+    "requestId": "71b8ff9e-f857-4f4d-afed-f311c04df93e"
+  },
+  "finalStatus": {
+    "taskId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+    "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+    "state": "awaiting_confirmation",
+    "currentAgent": "reviewer",
+    "agents": [
+      {
+        "id": "planner",
+        "state": "completed",
+        "summary": "已整理主题「京剧武生非遗展览角色」及3项需求。",
+        "startedAt": "2026-10-11T05:44:59.522131+00:00",
+        "finishedAt": "2026-10-11T05:45:00.950660+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "researcher",
+        "state": "completed",
+        "summary": "完成3条真实检索，保留5条候选依据。",
+        "startedAt": "2026-10-11T05:45:00.954986+00:00",
+        "finishedAt": "2026-10-11T05:45:01.045467+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "designer",
+        "state": "completed",
+        "summary": "已生成原创角色「云翎」草案，尚待文化审校。",
+        "startedAt": "2026-10-11T05:45:01.050464+00:00",
+        "finishedAt": "2026-10-11T05:45:03.404965+00:00",
+        "errorCode": null
+      },
+      {
+        "id": "reviewer",
+        "state": "completed",
+        "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+        "startedAt": "2026-10-11T05:45:03.410161+00:00",
+        "finishedAt": "2026-10-11T05:45:04.742712+00:00",
+        "errorCode": null
+      }
+    ],
+    "completedSteps": 4,
+    "totalSteps": 4,
+    "events": [
+      {
+        "kind": "task",
+        "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+        "sequence": 1,
+        "occurredAt": "2026-10-11T05:44:59.501080+00:00",
+        "summary": "任务已保存，等待真实工作流调度。",
+        "taskState": "waiting"
+      },
+      {
+        "kind": "task",
+        "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+        "sequence": 2,
+        "occurredAt": "2026-10-11T05:44:59.506689+00:00",
+        "summary": "工作流已实际开始。",
+        "taskState": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+        "sequence": 3,
+        "occurredAt": "2026-10-11T05:44:59.523131+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "planner",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+        "sequence": 4,
+        "occurredAt": "2026-10-11T05:45:00.951661+00:00",
+        "summary": "已整理主题「京剧武生非遗展览角色」及3项需求。",
+        "agentId": "planner",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+        "sequence": 5,
+        "occurredAt": "2026-10-11T05:45:00.955987+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "researcher",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+        "sequence": 6,
+        "occurredAt": "2026-10-11T05:45:01.046465+00:00",
+        "summary": "完成3条真实检索，保留5条候选依据。",
+        "agentId": "researcher",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+        "sequence": 7,
+        "occurredAt": "2026-10-11T05:45:01.051467+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "designer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+        "sequence": 8,
+        "occurredAt": "2026-10-11T05:45:03.406122+00:00",
+        "summary": "已生成原创角色「云翎」草案，尚待文化审校。",
+        "agentId": "designer",
+        "state": "completed"
+      },
+      {
+        "kind": "agent",
+        "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+        "sequence": 9,
+        "occurredAt": "2026-10-11T05:45:03.411195+00:00",
+        "summary": "正在执行此阶段；结果将在校验后展示。",
+        "agentId": "reviewer",
+        "state": "running"
+      },
+      {
+        "kind": "agent",
+        "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+        "sequence": 10,
+        "occurredAt": "2026-10-11T05:45:04.742712+00:00",
+        "summary": "辅助文化审校已完成，需由用户决定是否接受方案。",
+        "agentId": "reviewer",
+        "state": "completed"
+      },
+      {
+        "kind": "task",
+        "runId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+        "sequence": 11,
+        "occurredAt": "2026-10-11T05:45:04.746938+00:00",
+        "summary": "设计与辅助审校已返回，等待你确认。",
+        "taskState": "awaiting_confirmation",
+        "confirmationId": "a3aa1f8e-d68f-4524-877d-e550fdcb044a"
+      }
+    ],
+    "lastSequence": 11,
+    "sequence": 11,
+    "confirmation": {
+      "id": "a3aa1f8e-d68f-4524-877d-e550fdcb044a",
+      "reason": "final_acceptance",
+      "canAccept": true
+    },
+    "resultReady": true,
+    "cancelRequested": false,
+    "createdAt": "2026-10-11T05:44:59.501080+00:00",
+    "updatedAt": "2026-10-11T05:45:04.746938+00:00",
+    "requestId": "140f553c-0269-462f-98a4-fabf330a0243"
+  },
+  "resultHttpStatus": 200,
+  "result": {
+    "schemaVersion": "1.0",
+    "design": {
+      "schemaVersion": "1.0",
+      "name": "云翎",
+      "positioning": "非遗展览用原创年轻男性武生角色，以京剧写意风格呈现，非传统剧目人物",
+      "costume": [
+        {
+          "description": "长靠武生式大靠，背插靠旗，厚底靴",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1"
+          ]
+        },
+        {
+          "description": "靠旗作装饰与表演辅助，非战场装备复原",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+          ]
+        }
+      ],
+      "colors": [
+        {
+          "description": "青蓝主调配银白，取写意冷色",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "靠旗边缘缀原创云纹渐变",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "visualElements": [
+        {
+          "description": "原创翎羽状头饰，非传统盔头",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "原创流云披风纹样，写意飘逸",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "creativeElements": [
+        "翎羽头饰与流云披风为原创幻想装饰，不属传统京剧行头",
+        "角色名云翎及配色方案为原创设定，不指向任何真实演员或历史人物"
+      ],
+      "visualPrompt": "年轻男性京剧武生写意形象，青蓝银白配色，长靠靠旗厚底靴，原创翎羽头饰与流云披风，非遗展览风格，简洁背景",
+      "usedEvidenceIds": [
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+        "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1"
+      ],
+      "limitations": [
+        "证据仅支持武生、靠服的一般特征，未涉及具体角色造型细节，需文化审校补充",
+        "脸谱色彩未采用，因证据提示不能以颜色概括所有人物性格"
+      ],
+      "execution": {
+        "requestId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf:designer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1147,
+          "completion_tokens": 361,
+          "total_tokens": 1508,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1147
+        },
+        "elapsedSeconds": 2.3428,
+        "promptVersion": "agent_designer_v1",
+        "promptHash": "9e4c25011d44e763cd4255b0efec73315d199777741437fbd342b4a92c09df3a"
+      }
+    },
+    "review": {
+      "verdict": "pass",
+      "issues": [],
+      "suggestions": [
+        "建议补充说明青蓝银白配色为原创写意设定，避免被误读为传统武生固定用色。"
+      ],
+      "checkedEvidenceIds": [
+        "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+        "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+        "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+        "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641"
+      ],
+      "needsHumanReview": true,
+      "execution": {
+        "requestId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf:reviewer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1547,
+          "completion_tokens": 70,
+          "total_tokens": 1617,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1547
+        },
+        "elapsedSeconds": 1.3195,
+        "promptVersion": "agent_reviewer_v1",
+        "promptHash": "2565d23e1b06da866251b74b21bcaddcde2554b77a943fc0927ad719afb093a2"
+      }
+    },
+    "citations": [
+      {
+        "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+        "title": "京剧服装和人物身份有什么关系？",
+        "sourceId": "cnpoc-costume",
+        "locator": "正文靠段 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+        "excerpt": "靠是表现男女将帅铠甲的戏服，常见于征战场面。\n靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+        "title": "京劇行當",
+        "sourceId": "ncfta-male-roles",
+        "locator": "行当介绍—生—武生 · 入库片段 1/1",
+        "url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+        "excerpt": "武生常表现武艺高强的男子。\n长靠武生穿大靠、厚底靴，身段稳健；\n短打武生穿短衣、薄底靴，动作轻捷。\n区分同时涉及服装与表演方式。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+        "title": "京剧的行当分类是什么？",
+        "sourceId": "fujian-roles",
+        "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+        "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+        "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+        "title": "京剧的行当分类是什么？",
+        "sourceId": "fujian-roles",
+        "locator": "正文“净”条目 · 入库片段 1/1",
+        "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+        "excerpt": "净又称花脸，脸谱和洪亮的声音是常见表演特点，角色多为性格或形象鲜明的男性人物。\n净行的唱功、身段或武打侧重有不同分支。",
+        "contentKind": "original_fact_summary"
+      },
+      {
+        "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+        "title": "包公为什么画黑脸？",
+        "sourceId": "cnpoc-bao",
+        "locator": "正文第一段、第三段 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+        "excerpt": "包拯的黑脸常表达刚正形象。\n黑色在别的扮相中还可关联勇猛、肤色或突出眉眼，不能据此判断所有黑脸角色都具有同一种性格。",
+        "contentKind": "original_fact_summary"
+      }
+    ],
+    "uncertain": false,
+    "publicationAllowed": false,
+    "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+    "promptVersions": {
+      "planner": "agent_planner_v1",
+      "researcher": "agent_research_v1",
+      "designer": "agent_designer_v1",
+      "reviewer": "agent_reviewer_v1"
+    },
+    "limitations": [
+      "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+      "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。",
+      "证据仅支持武生、靠服的一般特征，未涉及具体角色造型细节，需文化审校补充",
+      "脸谱色彩未采用，因证据提示不能以颜色概括所有人物性格"
+    ],
+    "confirmationReason": "final_acceptance",
+    "taskId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+    "userConfirmed": false,
+    "requestId": "55c86874-e18a-4ccb-ac32-fa88529e6eea"
+  },
+  "outcome": "awaiting_confirmation",
+  "elapsedSeconds": 5.7593,
+  "budgetAfter": {
+    "calls": 65,
+    "estimatedUpperCostCny": 0.14388624,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": null,
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 3,
+        "estimatedUpperCostCny": 0.010452,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "providerCalls": [
+    {
+      "requestId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf:planner",
+      "createdAt": "2026-10-11T05:44:59.525161+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.005338,
+      "estimatedUpperCny": 0.001616,
+      "usage": {
+        "prompt_tokens": 320,
+        "completion_tokens": 122,
+        "total_tokens": 442,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 320
+      },
+      "scope": "phase3"
+    },
+    {
+      "requestId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf:designer",
+      "createdAt": "2026-10-11T05:45:01.054467+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.0162,
+      "estimatedUpperCny": 0.005182,
+      "usage": {
+        "prompt_tokens": 1147,
+        "completion_tokens": 361,
+        "total_tokens": 1508,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1147
+      },
+      "scope": "phase3"
+    },
+    {
+      "requestId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf:reviewer",
+      "createdAt": "2026-10-11T05:45:03.414846+00:00",
+      "status": "success",
+      "reservedUpperCny": 0.016166,
+      "estimatedUpperCny": 0.003654,
+      "usage": {
+        "prompt_tokens": 1547,
+        "completion_tokens": 70,
+        "total_tokens": 1617,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1547
+      },
+      "scope": "phase3"
+    }
+  ],
+  "modelCallCount": 3,
+  "measuredTokens": 3567,
+  "estimatedCostCny": 0.010452,
+  "artifacts": {
+    "designer": {
+      "schemaVersion": "1.0",
+      "name": "云翎",
+      "positioning": "非遗展览用原创年轻男性武生角色，以京剧写意风格呈现，非传统剧目人物",
+      "costume": [
+        {
+          "description": "长靠武生式大靠，背插靠旗，厚底靴",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1"
+          ]
+        },
+        {
+          "description": "靠旗作装饰与表演辅助，非战场装备复原",
+          "interpretation": "evidence_based",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+          ]
+        }
+      ],
+      "colors": [
+        {
+          "description": "青蓝主调配银白，取写意冷色",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "靠旗边缘缀原创云纹渐变",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "visualElements": [
+        {
+          "description": "原创翎羽状头饰，非传统盔头",
+          "interpretation": "creative",
+          "evidenceIds": []
+        },
+        {
+          "description": "原创流云披风纹样，写意飘逸",
+          "interpretation": "creative",
+          "evidenceIds": []
+        }
+      ],
+      "creativeElements": [
+        "翎羽头饰与流云披风为原创幻想装饰，不属传统京剧行头",
+        "角色名云翎及配色方案为原创设定，不指向任何真实演员或历史人物"
+      ],
+      "visualPrompt": "年轻男性京剧武生写意形象，青蓝银白配色，长靠靠旗厚底靴，原创翎羽头饰与流云披风，非遗展览风格，简洁背景",
+      "usedEvidenceIds": [
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+        "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1"
+      ],
+      "limitations": [
+        "证据仅支持武生、靠服的一般特征，未涉及具体角色造型细节，需文化审校补充",
+        "脸谱色彩未采用，因证据提示不能以颜色概括所有人物性格"
+      ],
+      "execution": {
+        "requestId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf:designer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1147,
+          "completion_tokens": 361,
+          "total_tokens": 1508,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1147
+        },
+        "elapsedSeconds": 2.3428,
+        "promptVersion": "agent_designer_v1",
+        "promptHash": "9e4c25011d44e763cd4255b0efec73315d199777741437fbd342b4a92c09df3a"
+      }
+    },
+    "planner": {
+      "theme": "京剧武生非遗展览角色",
+      "target": "非遗展览原创角色",
+      "style": "京剧写意",
+      "requirements": [
+        {
+          "id": "R1",
+          "text": "原创年轻男性武生角色"
+        },
+        {
+          "id": "R2",
+          "text": "以靠服为灵感，幻想装饰标原创"
+        },
+        {
+          "id": "R3",
+          "text": "仅用知识库文化依据，不借真人名"
+        }
+      ],
+      "researchQueries": [
+        "京剧武生行当的表演与造型特征",
+        "京剧靠服的形制与象征含义",
+        "京剧脸谱色彩与角色性格的对应"
+      ],
+      "clarificationQuestions": [],
+      "execution": {
+        "requestId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf:planner",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 320,
+          "completion_tokens": 122,
+          "total_tokens": 442,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 320
+        },
+        "elapsedSeconds": 1.4176,
+        "promptVersion": "agent_planner_v1",
+        "promptHash": "f4b912bd3b65703aeec6f5c7c12564a72ed258c50e5bfdeb2e7eaf39e4e5c239"
+      }
+    },
+    "researcher": {
+      "queries": [
+        {
+          "question": "京剧武生行当的表演与造型特征",
+          "evidenceIds": [
+            "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+            "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+          ],
+          "uncertain": false,
+          "elapsedSeconds": 0.0664,
+          "retrievalMode": "hybrid"
+        },
+        {
+          "question": "京剧靠服的形制与象征含义",
+          "evidenceIds": [
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e"
+          ],
+          "uncertain": false,
+          "elapsedSeconds": 0.0082,
+          "retrievalMode": "hybrid"
+        },
+        {
+          "question": "京剧脸谱色彩与角色性格的对应",
+          "evidenceIds": [
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+            "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+            "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4"
+          ],
+          "uncertain": false,
+          "elapsedSeconds": 0.009,
+          "retrievalMode": "hybrid"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-sheng-dan",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "生",
+            "旦",
+            "老生",
+            "小生",
+            "武生",
+            "青衣",
+            "花旦"
+          ],
+          "vectorScore": 0.6747604289046252,
+          "keywordScore": -2.6419444877360507,
+          "entityMatchCount": 1,
+          "acceptedBy": "vector_threshold",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "68fcdede51c3d7d66090f2c38fef4f7c14ad83419ee634ae511e0a8572142eae",
+          "chunkContentHash": "4959ee55eae520b4f2d3bbdb688ce14d60f7d54a9ca2173801a84fc67b6187ed"
+        },
+        {
+          "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+          "sourceId": "cnpoc-costume",
+          "sectionId": "cnpoc-costume-kao",
+          "title": "京剧服装和人物身份有什么关系？",
+          "locator": "正文靠段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/6e64e9feb4274a109d5211075c533bcd.shtml",
+          "excerpt": "靠是表现男女将帅铠甲的戏服，常见于征战场面。\n靠旗也称护背旗，具有装饰和辅助表演用途，不应视为真实战场装备的复原。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧服饰",
+          "entityNames": [
+            "靠",
+            "靠旗",
+            "护背旗",
+            "铠甲",
+            "将帅"
+          ],
+          "vectorScore": 0.593351133405144,
+          "keywordScore": null,
+          "entityMatchCount": 0,
+          "acceptedBy": "vector_threshold",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "70a5e6fd9bd22f9eed0d57a426d7e00b10d99010b29016441a2001218c9808e6",
+          "chunkContentHash": "cbe9fdabcb7947dfc40efe2e8547aa54f0ffa4879087496c627f4739e2fd70f5"
+        },
+        {
+          "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+          "sourceId": "fujian-roles",
+          "sectionId": "fujian-roles-jing",
+          "title": "京剧的行当分类是什么？",
+          "locator": "正文“净”条目 · 入库片段 1/1",
+          "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+          "excerpt": "净又称花脸，脸谱和洪亮的声音是常见表演特点，角色多为性格或形象鲜明的男性人物。\n净行的唱功、身段或武打侧重有不同分支。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "净",
+            "花脸",
+            "脸谱"
+          ],
+          "vectorScore": 0.5327715845614664,
+          "keywordScore": -1.4405874437927428,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 1,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "68fcdede51c3d7d66090f2c38fef4f7c14ad83419ee634ae511e0a8572142eae",
+          "chunkContentHash": "3e20913efa3fe5896108c21d4f989cc24910771e6694cb865edd9f981e8e7611"
+        },
+        {
+          "id": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+          "chunkId": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+          "sourceId": "ncfta-male-roles",
+          "sectionId": "ncfta-male-roles-wusheng",
+          "title": "京劇行當",
+          "locator": "行当介绍—生—武生 · 入库片段 1/1",
+          "url": "https://www.ncfta.gov.tw/cp.aspx?n=1774",
+          "excerpt": "武生常表现武艺高强的男子。\n长靠武生穿大靠、厚底靴，身段稳健；\n短打武生穿短衣、薄底靴，动作轻捷。\n区分同时涉及服装与表演方式。",
+          "contentKind": "original_fact_summary",
+          "category": "京剧行当",
+          "entityNames": [
+            "武生",
+            "长靠武生",
+            "短打武生",
+            "大靠",
+            "厚底靴",
+            "薄底靴"
+          ],
+          "vectorScore": 0.6019206508348622,
+          "keywordScore": -2.6162048949599503,
+          "entityMatchCount": 1,
+          "acceptedBy": "vector_threshold",
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.0",
+          "sourceContentHash": "4d79587b4bffd3d58d78ee1394d879c4d8aaea193c9ef16fb44339e80bbbaf3c",
+          "chunkContentHash": "d79f4088acee5e942981f7c657e0853e99123be98da5318fbee6520d44c03d3c"
+        },
+        {
+          "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "chunkId": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+          "sourceId": "cnpoc-bao",
+          "sectionId": "cnpoc-bao-black",
+          "title": "包公为什么画黑脸？",
+          "locator": "正文第一段、第三段 · 入库片段 1/1",
+          "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+          "excerpt": "包拯的黑脸常表达刚正形象。\n黑色在别的扮相中还可关联勇猛、肤色或突出眉眼，不能据此判断所有黑脸角色都具有同一种性格。",
+          "contentKind": "original_fact_summary",
+          "category": "角色文化",
+          "entityNames": [
+            "包拯",
+            "包公",
+            "黑脸",
+            "黑色",
+            "脸谱"
+          ],
+          "vectorScore": 0.5061854348725546,
+          "keywordScore": -1.4209682659059866,
+          "entityMatchCount": 1,
+          "acceptedBy": "exact_entity_keyword",
+          "rank": 2,
+          "reviewStatus": "source_checked_by_assistant",
+          "sourceVersion": "1.0.1",
+          "sourceContentHash": "cfc19d010abfe4b8d09074c3f9f910eba369f0c7e96fc0ed05452456f4d4cbee",
+          "chunkContentHash": "96c68128b36bbd26b118ab8f0b155987c809b210f68ceb332330f6ff4b4716f0"
+        }
+      ],
+      "requirementCoverage": [
+        {
+          "requirementId": "R1",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+            "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641"
+          ]
+        },
+        {
+          "requirementId": "R2",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+            "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641"
+          ]
+        },
+        {
+          "requirementId": "R3",
+          "status": "candidate",
+          "evidenceIds": [
+            "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+            "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+            "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641"
+          ]
+        }
+      ],
+      "limitations": [
+        "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+        "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。"
+      ],
+      "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+      "policyVersion": "agent_research_v1"
+    },
+    "reviewer": {
+      "verdict": "pass",
+      "issues": [],
+      "suggestions": [
+        "建议补充说明青蓝银白配色为原创写意设定，避免被误读为传统武生固定用色。"
+      ],
+      "checkedEvidenceIds": [
+        "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+        "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+        "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+        "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+        "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641"
+      ],
+      "needsHumanReview": true,
+      "execution": {
+        "requestId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf:reviewer",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1547,
+          "completion_tokens": 70,
+          "total_tokens": 1617,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1547
+        },
+        "elapsedSeconds": 1.3195,
+        "promptVersion": "agent_reviewer_v1",
+        "promptHash": "2565d23e1b06da866251b74b21bcaddcde2554b77a943fc0927ad719afb093a2"
+      }
+    }
+  },
+  "citationMappingChecks": [
+    {
+      "id": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+      "valid": true
+    },
+    {
+      "id": "chunk_ad26be57b33e5d33362a266ecc9dba86d98a46d4b18ad42898fe0d6e3640c0c1",
+      "valid": true
+    },
+    {
+      "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+      "valid": true
+    },
+    {
+      "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+      "valid": true
+    },
+    {
+      "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+      "valid": true
+    }
+  ]
+}

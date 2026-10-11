@@ -36,6 +36,7 @@ class TaskPlan(StrictArtifact):
     requirements: list[Requirement] = Field(min_length=1, max_length=6)
     researchQueries: list[Annotated[str, Field(min_length=1, max_length=180)]] = Field(min_length=1, max_length=3)
     clarificationQuestions: list[Short] = Field(max_length=3)
+    requiredEntities: list[Annotated[str, Field(min_length=2, max_length=40)]] = Field(default_factory=list, max_length=3)
 
 
 class DesignElement(StrictArtifact):

@@ -105,6 +105,23 @@ def test_invalid_boolean_usage_does_not_release_unknown_reservation(tmp_path):
     assert ledger.summary()['activeScope']['estimatedUpperCostCny'] > 0
 
 
+@pytest.mark.parametrize('fail_transaction', [False, True])
+def test_short_ledger_connections_commit_or_roll_back_and_always_close(tmp_path, fail_transaction):
+    ledger = BudgetLedger(tmp_path / 'budget.sqlite3', 3, scope='phase3', scope_limit=0.5)
+    captured = None
+    try:
+        with ledger.connect() as db:
+            captured = db
+            db.execute('INSERT INTO calls VALUES (?,?,?,?,?,?)', ('resource-check', 'offline-test', 'reserved', 0.001, None, None))
+            if fail_transaction:
+                raise RuntimeError('offline injected rollback')
+    except RuntimeError:
+        assert fail_transaction
+    with pytest.raises(sqlite3.ProgrammingError):
+        captured.execute('SELECT 1')
+    assert ledger.summary()['calls'] == (0 if fail_transaction else 1)
+
+
 def test_model_scope_is_enforced_before_any_outbound_request(tmp_path):
     called = []
     provider = DeepSeekProvider(configuration(tmp_path, agent_test_budget_cny=0.000001),

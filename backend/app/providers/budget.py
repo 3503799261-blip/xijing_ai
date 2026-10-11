@@ -1,5 +1,6 @@
 """Persistent application budget, conservative CNY estimates, never a billing cap."""
 import sqlite3
+from contextlib import contextmanager
 from pathlib import Path
 from datetime import datetime, timezone
 from ..errors import ServiceError
@@ -26,13 +27,21 @@ class BudgetLedger:
                 db.execute('INSERT INTO budget_scopes VALUES (?,?,?) ON CONFLICT(name) DO UPDATE SET budget_cny=min(budget_scopes.budget_cny,excluded.budget_cny)',
                            (scope, scope_limit, datetime.now(timezone.utc).isoformat()))
 
+    @contextmanager
     def connect(self):
         db = sqlite3.connect(self.path, timeout=5)
-        db.execute('PRAGMA foreign_keys=ON')
-        return db
+        try:
+            db.execute('PRAGMA foreign_keys=ON')
+            with db:
+                yield db
+        finally:
+            # sqlite3's own context commits/rolls back but does not close.
+            db.close()
 
     def summary(self) -> dict:
         with self.connect() as db:
+            # Keep total and per-scope counts from one consistent read snapshot.
+            db.execute('BEGIN')
             row = db.execute('SELECT count(*),coalesce(sum(coalesce(cost,reserved)),0) FROM calls').fetchone()
             scopes = db.execute('SELECT s.name,s.budget_cny,count(c.request_id),coalesce(sum(coalesce(c.cost,c.reserved)),0) FROM budget_scopes s LEFT JOIN call_scopes a ON a.scope=s.name LEFT JOIN calls c ON c.request_id=a.request_id GROUP BY s.name,s.budget_cny').fetchall()
         by_scope = {s[0]: {'name': s[0], 'calls': s[2], 'estimatedUpperCostCny': round(s[3], 8), 'budgetCny': s[1]} for s in scopes}
