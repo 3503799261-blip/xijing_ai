@@ -1,0 +1,36 @@
+{
+  "modelViewerVersion": "4.4.0",
+  "fixturePurpose": "Licensed existing test GLB; not Neural4D generated; no opera-cultural claim.",
+  "files": [
+    {
+      "path": "js/vendor/model-viewer/model-viewer.min.js",
+      "url": "https://cdn.jsdelivr.net/npm/@google/model-viewer@4.4.0/dist/model-viewer.min.js",
+      "bytes": 1069272,
+      "sha256": "18b2e711035aa4705ee281530a55dc2338ff05eed3d70ae16d54105282a75ed5"
+    },
+    {
+      "path": "js/vendor/model-viewer/LICENSE",
+      "url": "https://raw.githubusercontent.com/google/model-viewer/v4.4.0/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "backend/tests/fixtures/phase4/Duck.glb",
+      "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Duck/glTF-Binary/Duck.glb",
+      "bytes": 120484,
+      "sha256": "65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5"
+    },
+    {
+      "path": "backend/tests/fixtures/phase4/Duck-README.md",
+      "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Duck/README.md",
+      "bytes": 855,
+      "sha256": "09c366dc722e768d1eb41f0d8f2798ee37c56efac269837feb0bb3df901eba36"
+    },
+    {
+      "path": "backend/tests/fixtures/phase4/SCEA-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/LICENSES/SCEA.txt",
+      "bytes": 6727,
+      "sha256": "68d85eaf2fa83beee09a454c37adae6566a5aebc82b66a86ccb2d1c36de352f5"
+    }
+  ]
+}
