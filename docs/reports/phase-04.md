@@ -1,0 +1,298 @@
+# 戏境 AI · Phase 4阶段报告
+
+## 1. 阶段状态
+
+- 执行日期：2026-10-11～12，Asia/Shanghai；原始证据保留实际UTC时间。
+- 当前状态：**PARTIAL**。已完成资产层、双风格、服务封装、离线安全测试和真实已有GLB浏览器测试；没有完成真实京剧角色建模及真手机手势验收。
+- 分支：`feature/phase4-neural4d`，基于Phase 3提交 `c89e63e1f5afa575b5e3972dd5cfa26a897d3942`。未合并main，未推送本阶段分支。
+- 本阶段Neural4D真实HTTP请求：**0**；真实新建模型提交：**0**；其他付费API调用：**0**；本阶段实际API费用：**0**。
+- 全项目历史提交次数：**尚未核实**。本地账本记录0次不能证明项目历史为0；剩余额度为`null`，真实创建锁定。
+
+当前停在首次真实建模的单独授权之前，交付检查点B的PARTIAL材料。不能据此批准自动进入Phase 5，也没有任何已生成京剧3D资产的成功声明。
+
+## 2. Phase 1～3继承与保护
+
+正式开发前检查已有代码、Git状态、Phase 3角色输出与审查方案，保留未提交文档和历史。原Phase 3基线备份位于 `D:\京剧\.backups\phase3-baseline-c89e63e.zip`；不使用强制重置、历史压缩或伪造时间。
+
+首页与另外6个文化页，共7个HTML：`index/history/roles/facial/music/video/gallery.html`，均与Phase 3基线逐字节一致。原8页均实际打开，62项本地资源正常，6个受保护路径拒绝公开。文化素材、原导航和酒红/金色/米白视觉保留；只增量扩展`about.html`工坊数字IP区域。
+
+原RAG、四Agent、人工确认与角色JSON保留。资产层从服务器权威TaskStore读取角色，要求4步完成、审校通过、`userConfirmed=true`、`publicationAllowed=true`及真实引用。没有从浏览器上传任意JSON冒称已审校结果，也没有为测试重新调用Agent或LLM。
+
+保留 [Phase 2报告](phase-02.md)、[Phase 3报告](phase-03.md)；本阶段没有重新测量历史LLM正确率或将历史费用算作新增消耗。[整站HTTP记录](../evidence/test-results/phase4-http-regression.json)、[只读连续性审计](../evidence/test-results/phase4-local-continuity-audit.json)提供实际文件Hash。
+
+## 3. 实际技术架构
+
+```text
+Phase 3已审校、人工确认的角色和引用
+  → 服务器权威快照 / 稳定characterId
+  → Q版或写实Style Adapter
+  → 独立assetId / styleVersion / Prompt Hash
+  → 人工视觉确认 / 实际授权概念图导入 / 图像Hash
+  → 单次建模批准（当前未启用）
+  → SQLite全项目原子预留 / 唯一发送权
+  → Neural4D Provider（仅Mock验证）
+  → 明确查询 / 受控下载 / GLB验证 / 私有资产存储
+  → model-viewer真实文件交互显示
+```
+
+继续采用HTML/CSS/原生ES Module + FastAPI，未迁移React/Vue/Next.js。资产元数据使用SQLite，文件存放在`RAG_DATA_DIR/assets`下；固定额度账本位于网站目录之外 `D:\京剧\.runtime\neural4d-usage.sqlite3`。RAG的SQLite/Qdrant/BGE及Agent服务仍由前三阶段提供。
+
+实际环境：Windows、Python3.11.1、Node24.15.0；沿用原后端依赖，新增固定Pillow12.2.0用于真实图像解码和portalocker3.2.0用于项目级发送owner锁。Viewer为本地固定版本model-viewer4.4.0（Apache2.0），只在选择GLB时加载。
+
+详见 [资产与双风格架构](../architecture/phase4-assets-and-styles.md)、[供应商安全边界](../architecture/phase4-neural4d-safety.md)。
+
+## 4. 角色资产与双风格成果
+
+资产Schema版本为1.1，增量字段采用既有camelCase约定：`styleMode`、`styleVersion`、`characterId`、`assetId`、`characterSnapshot`、`reviewSnapshot`、`citationSnapshot`、`visualPrompt`及各自的`images/models`。Phase 3的CharacterDesign协议不变；旧1.0资产兼容读取且不重写历史。
+
+一个文化角色可以保存多个风格和版本：
+
+| 项目 | Q版卡通 | 写实国风 |
+|---|---|---|
+| 代码 | `chibi` | `realistic` |
+| 风格模板 | `opera_chibi_v1` | `opera_realistic_v1` |
+| 视觉表达 | 可爱头身比例、清晰轮廓、建模友好结构 | 自然人体比例、服饰层次与材质表达 |
+| 文化依据 | 复用同一角色、审校、引用快照 | 完全相同的文化快照 |
+| 预留建模面数 | `faceNum=100000` | `faceNum=500000` |
+| 当前真实角色模型 | 无 | 无 |
+
+统一视觉模板版本`opera_asset_visual_v2`明确区分证据支持的服饰与原创设计，不自动删除靠旗、雉尾、脸谱或道具。两套模板都要求单人完整全身、构件边界清楚、简洁背景、无文字水印，且保留原角色Prompt供追溯。表中的面数是当前服务端参数设计，**尚非真实供应商成模质量验证**；两种风格均使用单模型图生3D路线，不调用可能产生多候选的专用Q版路线。
+
+风格切换只读取本地已有资产，不生成Prompt新版本、图片、Agent任务或模型。显式登记产生独立资产；没有相应模型时明确显示“当前风格尚未生成3D模型”，不会把Duck夹具当作两种京剧角色成果。
+
+人工编辑Prompt保存为不可覆盖的新asset版本，旧图片/模型保留；新草稿取消视觉和图片接受，带`culturalReviewRequired=true`，不能以客户端声明绕过重新文化审校。既有已发送任务保留原版本，读取不会重新提交。
+
+实际浏览器使用已确认角色“青旌将·霄羽”作本地技术联调，非最终建模素材：
+
+- 统一角色ID：`120653e0-6775-511a-9bf5-53d5307275e0`。
+- 源任务ID：`0a808e2b-182e-4457-b0bb-5e4f39a66263`。
+- Q版v1：`e9fd199c-65b6-4bb0-a930-9d03d749930a`。
+- 写实v1：`ba26e5fb-4881-4754-8222-94305eb90109`。
+
+[真实双风格浏览器记录](../evidence/test-results/phase4-browser-styles.json)和[HTTP快照核对](../evidence/test-results/phase4-style-http-readback.json)确认两者文化与审校快照完全一致、Prompt Hash不同、资产ID不同、切回Q版恢复原版本。两者图片/模型均为空，未替用户确认最终视觉方案。
+
+## 5. 概念图、许可与模型管理
+
+已实现PNG/JPEG/WEBP真实解码与规范化PNG、10MB限制、尺寸约束、原文件Hash/规范化Hash、出处及许可说明、独立图片接受。图像生成供应商与费用尚未选择，平台图像Provider继续未接入；当前采用授权图片导入路径。
+
+用户提供的候选图 `D:\京剧\概念图.jpg`：Q版、600×750、87358字节、SHA-256 `37aaa21e1c03d9bc35bcfc995002e42a200bad987b45766d3b1497b418472c3d`。用户声明来自小红书账号773908132并获得非商业使用与编辑许可；这属于用户提供的许可信息，不是独立认证。用户最后选择“先作为待关联素材”，因此：
+
+- `sourceTaskId=null`，`imageAccepted=false`，文化一致性待审核。
+- 未绑定上述蓝金武生，未移除水印，未复制到公开仓库，未用于真实建模。
+- 商业使用、供应商上传加工及公开模型再分发范围仍须核实。
+
+见 [候选图元数据](../evidence/test-results/phase4-concept-candidate.json)。它不被列为已完成的角色概念图。
+
+GLB支持真实导入、来源标注、Hash命名文件、文化/风格/图片/Prompt版本关联、已登记ID文件服务与下载。导入与生成文件需通过GLB头/BIN边界、网格、accessor/index、材质和嵌入PNG/JPEG实际解码检查；拒绝外部URI、不支持格式、过大文件及未审校草稿。最大50MB。`fullConformanceChecked=false`，不冒称通过完整Khronos一致性认证。
+
+文件采用同目录flush/fsync后原子不覆盖发布；相同Hash核对后复用，损坏拒绝自动覆盖。同供应商任务的重复结果通过SQLite唯一记录复用模型ID，避免多次刷新登记覆盖。
+
+## 6. Neural4D服务与全局三次保护
+
+当前官方资料索引：[Neural4D文档](https://docs.neural4d.com/llms.txt)，[图生3D接口](https://docs.neural4d.com/en/api-reference/image-to-3d/generate-model-with-image)。正式开发查阅的当前接口为multipart直接提交`image`；它与原历史方案中的matting/fileKey链不同。历史检查点A文档保留，实际差异记在架构文档，不自动回退旧链或增加预处理建模请求。
+
+Provider封装余额查询、单次图生3D创建、已有任务查询及受控GLB下载。由后端读取`NEURAL4D_API_KEY`，配置审计仅记录是否非空，不显示、打印或归档Key值。用户已表示拥有Key，但当前私有配置中该字段未配置，真实余额、鉴权、模型权限和扣费未验证。
+
+所有真实新建提交必须经过`ModelService → UsageManager → Neural4DProvider.create_once`。保护包括：
+
+1. 固定项目账本与硬上限3，`modelCount=1`；不因风格、企业用途、Key、RAG目录或重启创建新额度池。
+2. 默认关闭生成和协议核验开关；管理令牌、近期余额、人工核实费用、已确认图片/Prompt/文化快照及已核实历史全部通过才可批准。
+3. `BEGIN IMMEDIATE`原子预留并消费一次性批准；幂等键唯一，数据库约束/触发器再次限制第四次。
+4. `mark_started`持久化领取唯一HTTP发送权后才发送；单owner锁保护多进程与重启恢复。
+5. 单次批准绑定角色、风格、版本、来源Hash、图片Hash、Prompt Hash、用途、服务端参数及费用，15分钟有效。新版本或费用变化使旧未发送批准失效。
+6. 创建不自动重试、不重定向；失败、超时、未知或可能已发送均占用。结果不明确时进入`UNKNOWN/PENDING_RECONCILIATION`，禁止自动新建，先人工核查。
+7. 查询操作显式触发，至少15秒间隔，每轮20次/20分钟，继续查询要明确确认；不形成无限轮询。
+8. 下载限制人工配置的HTTPS精确主机、公开IP、无重定向/无供应商鉴权头转发，并检查实际GLB。未知格式不会自动执行可能付费的转换。
+
+已发送任务的同键请求只读返回旧记录，即使版本或费用后来改变也不重新创建。没有公开重置/返还/扩容接口，前端禁用按钮仅是交互提示，安全由后端执行。Agent代码没有供应商创建入口。
+
+MockTransport与真实transport明确分账；真实Provider检查固定账本位置，不能使用临时测试目录绕过限制。测试模拟的80等Credit值仅为夹具，**不能当作真实当前价格**。
+
+账本是应用层保护，仍须备份和妥善保存；拥有操作系统权限的人可改文件/源码，不能宣称对本机管理员不可绕过。下载DNS检查与HTTP实际解析间存在时间差，本阶段未将其作为公开互联网生产级SSRF防护保证。
+
+## 7. 前端与企业模式
+
+新增数字IP中心：既有Agent流程入口、服务器角色快照、Q版/写实选择、历史版本、Prompt编辑草稿、概念图导入与接受、独立测试模型和真实角色模型选择器、交互Viewer、用途与单次建模确认摘要。
+
+个人与企业模式均可自由选择风格。企业简报实际记录机构类型、受众、场景、设计目标、文化边界、交付范围及授权状态，可显式带入既有Agent输入框；不会自动提交或建模。当前完成企业需求入口与资产结构，**没有商业展示京剧模型、商用许可或游戏绑定/骨骼交付声明**。
+
+新增样式使用`ai-workshop-*`命名空间；模型与用户输出使用安全DOM文本，文件URL只允许已登记ID及配置的后端源，拒绝任意外链/危险协议。平台概念图和真实建模能力继续标为未启用。
+
+## 8. Web 3D Viewer实际验收
+
+采用model-viewer + 实际自包含GLB：相机水平角不夹断，支持鼠标拖拽、滚轮、放大/缩小按钮、重置、Loading/Ready/Error与手动失败重载。移动端默认保留页面上下滚动，用户主动进入触摸交互后允许模型手势，退出恢复页面滚动。
+
+真实浏览器夹具为Khronos Duck，120484字节，Hash `65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5`，©2006 Sony / SCEA Shared Source License1.0（随fixture保留全文），**不是CC0、京剧角色、Neural4D输出或双风格成果**。
+
+| 实际项目 | 结果 |
+|---|---|
+| 1920×1080 GLB加载、重启后加载 | Ready，真实模型可见 |
+| Loading | 实际观测到loading/75%与中文提示；无独立Loading截图 |
+| 连续水平拖拽≥260° | 一次鼠标拖拽记录391.8°，跨360°无夹断 |
+| 放大、缩小、滚轮 | 实际相机半径变化，有用户事件记录 |
+| 重置 | theta回0，半径回默认值 |
+| Error及恢复 | 专用测试文件临时缺失返回404，中文Error；恢复后手动重载Ready |
+| 375×812移动布局 | 无水平溢出，实际GLBReady，触摸模式开/关检查通过 |
+| 真手机单指旋转、双指缩放 | **未执行，待真机验收** |
+
+391.8°是实际用户`camera-change`的同向连续观察范围；程序缩放/重置或来回小幅拖动不计入260°。较早448.1°记录独立保留，不合并为同一次测量。真实手机触摸未验收，因此不能标注整个Viewer移动手势已通过。
+
+详见 [浏览器报告](../evidence/test-results/phase4-browser-test-report.md)。
+
+![双风格写实资产登记](../evidence/screenshots/phase-04/dual-style-realistic.jpg)
+
+![真实已有GLB与创建锁定提示](../evidence/screenshots/phase-04/viewer-post-restart-ready.jpg)
+
+![375×812窄视口真实GLB](../evidence/screenshots/phase-04/viewer-mobile-375.jpg)
+
+## 9. 实际测试结果与失败案例
+
+| 测试层 | 实际结果 | 证据 |
+|---|---|---|
+| 全量后端离线测试 | **406通过，0失败，1弃用警告**；pytest终端42.73秒，JUnit套件42.048秒（计时范围不同） | [JUnit](../evidence/test-results/phase4-final-unit.xml) |
+| 4个Phase 4后端文件专项复测 | 193通过、1警告、22.94秒；包含并发与旧JSON兼容 | [失败与修复记录](../evidence/test-results/phase4-windows-file-race.md) |
+| Phase 4前端离线 | 35通过/0失败 | [Node记录](../evidence/test-results/phase4-frontend-offline.json) |
+| 原问答/Agent前端离线回归 | 各25通过/0失败 | [问答](../evidence/test-results/phase4-phase2-frontend-regression.json)、[Agent](../evidence/test-results/phase4-phase3-frontend-regression.json) |
+| 实际本机资产HTTP/API | 13通过/0失败，含真实本地BGE检索、鉴权、重复拒绝、CORS、体积和modelCount限制 | [API记录](../evidence/test-results/phase4-http-assets.json) |
+| 已登记双风格实际HTTP读回 | 6项全部通过，无额外写入 | [风格快照](../evidence/test-results/phase4-style-http-readback.json) |
+| 原8页、静态资源、受保护文件 | 真实浏览器与HTTP均通过 | [浏览器8页](../evidence/test-results/phase4-browser-eight-pages.json)、[HTTP](../evidence/test-results/phase4-http-regression.json) |
+| 供应商真实鉴权、余额、成模/下载 | **未执行** | 固定账本供应商操作0条 |
+
+后端单元/Provider合约使用明确Mock和临时资产数据；不等同实际供应商测试。全量测试中的Starlette/TestClient httpx弃用提示保留，未为消除警告额外升级原依赖。
+
+真实失败和修复：
+
+- 已有Phase 3输出附加合法`execution/programmaticChecks`，首次网页登记422；修复为受控识别追踪字段，再严格验证文化JSON。旧TaskStore未修改，保存脱敏导出回归夹具。
+- 恢复缺失GLB后同URL失败缓存导致不能Ready；仅显式重载加入受控内部缓存参数，保留正常URL与严格校验。实际错误及恢复截图保存。
+- Windows并发同Hash `os.replace`遭WinError5，该次**1失败/190通过**真实记录保留；改原子不覆盖发布，4/8线程、已打开读者和篡改文件拒绝均复测通过。
+- HTTP脚本误读health字段及把未知历史期望为0，首次11通过/2失败；只修正测试断言，重跑13通过，原报告保留。
+- 服务在中断后退出，12日首次访问连接拒绝；恢复并确认startup完成后实际重新验收，没有将未就绪请求算作通过。
+- 初期免费vendor下载发生连接重置，实际重试后取得固定版本；不属于Neural调用失败，不占建模额度。
+
+代码审查发现的旧批准版本/费用漂移、任意真实transport账本分类、GLB内嵌纹理和草稿导入门禁亦有离线回归；这些不是虚构的供应商实战失败。
+
+## 10. 代码与文件变更
+
+主要改动：
+
+| 文件 | 作用 |
+|---|---|
+| `about.html`、`css/ai-workshop.css` | 增量数字IP与双风格/企业/Viewer界面，保留公共视觉 |
+| `js/ai-workshop/digital-assets.js`、`model-viewer-adapter.js` | 资产交互、版本切换、真实GLB状态和相机控制 |
+| `contracts.js/services.js/main.js/agent-workflow.js` | 增量协议、资产API、已确认角色带入，复用旧工作流 |
+| `backend/app/assets/` | Schema、文化快照、Prompt、SQLite目录、真实图片/GLB验证、全局额度与建模门禁 |
+| `backend/app/providers/neural4d.py`、`api/assets.py` | 唯一供应商封装与鉴权、受控本地资产接口 |
+| `config.py/main.py/services/runtime.py`、`.env.example` | 私有配置、启动锁、能力状态、已有服务整合 |
+| `backend/requirements.txt` | 固定图像解码与文件锁依赖 |
+| `backend/scripts/`、`backend/tests/` | 合法模型准备、可信人工历史CLI、离线回归、实际旧角色导出夹具 |
+| `js/vendor/model-viewer/` | 固定发行文件与原许可 |
+| `scripts/phase4*`、`prepare_phase4_viewer_fixture.py`、`export_phase4_prompt.py` | 免费回归、故障复现、只读审计、公开Prompt导出 |
+| `README.md`、`docs/architecture/`、`docs/prompts/phase-04/`、`docs/evidence/` | 运行指引、架构、真实失败/截图/Prompt证据与本报告 |
+
+完整实际文件清单以Git相对Phase 3基线的差异为准：`git diff --name-status c89e63e1f5afa575b5e3972dd5cfa26a897d3942 HEAD`。没有删除原文化HTML、资源或前三阶段提交。
+
+## 11. 实际Git记录
+
+以下均为本阶段真实提交，时间未改写，没有空提交：
+
+| Commit Hash | 实际变更 |
+|---|---|
+| `32a4034bcdcf5916d281737ca3843e4b6b098166` | 批准方案与公开Prompt基线 |
+| `2bb1b696895dcebcb02761ede71bc567ea4f4ca6` | 有文化依据的双风格资产存储 |
+| `ee90f1417a120126bad54b0d77ea67d4d22229b0` | 全局原子额度、幂等与服务封装 |
+| `61177ca6b2523d6e71ceecd34c8064484d9b9fa5` | 前端数字IP工作台与GLB查看器 |
+| `3b7a43ac4fbdde890c5e6bf78a917cb6e1a7a810` | GLB内嵌纹理校验、未审校导入门禁 |
+| `de6daad66eee5529d924d5e1bcc0c20a71983573` | 实际Viewer恢复Bug、费用变化批准失效 |
+| `fb5df133ba5ff38bbd2c0a7fc474bcf970a5f0fe` | 真实旧Agent追踪字段兼容、真实transport分类 |
+| `f72fc39a2c451457ffd99f81180813db82eeddb6` | Windows并发不可覆盖原子发布及回归 |
+
+本表是功能代码冻结点，另保留 [实际Git输出](../evidence/test-results/phase4-git-log-code-freeze.txt)；本报告和最终证据由随后真实文档提交收录，其Hash应读取`git log -1 --format=%H -- docs/reports/phase-04.md`。不预填自身尚未产生的Hash，最终回复提供该文档提交实际Hash。完整实际列表见Git历史，不将原Phase 1～3记录删除或合并。
+
+## 12. Prompt与比赛证据
+
+[Phase 4 Prompt目录](../prompts/phase-04/README.md)保存原检查点A、最终三次限制修订、正式开发批准、双风格补充需求及当前公开对话快照。用户来源/许可/待关联回复也在公开记录中，工程摘要不冒充逐字对话。
+
+公开导出仅包含用户、公开助手commentary/final和对应工具证据，剔除隐藏推理/系统/开发者内容、子Agent内部消息、图片Base64与常见凭证。真实源时间、源行号、快照Hash和范围见`04-export-metadata.json`。本轮重新导出到506条的快照不是承诺未来消息已收录，随后导出范围以元数据为准。
+
+提交前另行核对公开源代码/文档/证据中的常见凭证模式和环境模板，未发现疑似Key；原图、私有env、数据库和模型缓存没有被Git跟踪。此扫描不等于对任意秘密格式的绝对保证。[文件与证据核对](../evidence/test-results/phase4-final-evidence-check.json)同时记录406项JUnit计数、Prompt文件Hash、文档链接及真实GLBReady。
+
+真实Prompt/Schema变更、失败测试、GLB缓存恢复、文化门禁、费用/版本批准失效与双风格测试都有对应代码和证据；没有制造额外用户反馈或假调用历史。阶段截图包括首页、工坊、Agent、双风格、企业入口、Viewer桌面/移动/Error/恢复。
+
+评分依据：
+
+| 维度 | 当前实际证据 |
+|---|---|
+| 过程可复现性25% | 真实细粒度提交、原文Prompt、失败保留、固定版本和免费复测指令 |
+| 解题有效性25% | 已确认文化方案可转换为可追溯双风格资产；已有真实GLB可查看，最终京剧成模闭环仍未完成 |
+| 方法创新与意图控制20% | 一套文化依据/双风格适配；人工图片及费用批准、Hash绑定、全局三次硬限、不确定状态锁定 |
+| 工程质量15% | 模块隔离、SQLite事务/锁/幂等、不可覆盖文件、输入/文件检查和跨阶段回归 |
+| 用户体验15% | 保留文化色彩，来源/空态/错误清晰，真实旋转缩放、双风格与企业用途入口 |
+
+没有以Mock成果或Duck替代京剧模型来夸大解题完成度。
+
+## 13. 免费复现与实际条件
+
+完整环境和Phase 2/3启动流程见 [README](../../README.md)。现有依赖与BGE缓存环境下，已验证项目单worker服务、资产准备、免费测试及浏览器GLB；没有空白电脑安装10分钟承诺，也没有重新测量完整依赖下载时间。
+
+在 `D:\京剧\京剧` 执行：
+
+```powershell
+# 已有固定Duck fixture、本地依赖与BGE缓存；不访问供应商
+.\.venv\Scripts\python.exe -m backend.scripts.prepare_phase4_assets
+.\.venv\Scripts\python.exe -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --workers 1
+```
+
+另一个终端进行免费验证，重新运行的输出保存在被Git排除的`.runtime`目录，保留本阶段历史证据：
+
+```powershell
+New-Item -ItemType Directory -Force .runtime
+.\.venv\Scripts\python.exe -m pytest backend/tests -q --junitxml=.runtime/phase4-unit-local.xml
+node scripts/phase4_frontend_test.mjs --output .runtime/phase4-frontend-local.json
+node scripts/phase2_frontend_test.mjs --output .runtime/phase2-frontend-local.json
+node scripts/phase3_frontend_test.mjs --output .runtime/phase3-frontend-local.json
+.\.venv\Scripts\python.exe scripts/phase4_http_smoke.py
+.\.venv\Scripts\python.exe scripts/phase4_local_audit.py
+```
+
+浏览器打开 `http://127.0.0.1:8000/about.html#ai-workshop-model`，选择独立合法Duck验证Viewer。不要用`file://`加载ES Module，也不要用全目录HTTP服务器公开私有配置/数据库。若首次启动拒绝连接，先等日志`Application startup complete`；不盲目提交或重试付费任务。
+
+双风格复测可读取已人工确认的实际任务（每个环境的ID不同），明确登记两种风格并切换，观察未生成模型状态。不要将脱敏单元夹具登记为比赛真实角色，不替用户按“人工确认”。
+
+三个Phase 4免费核对脚本支持`--output`，默认写入`.runtime`下新报告；此行为在收尾复测实际验证。原证据不被普通复现命令覆盖。HTTP探针按当前“未知历史/关闭真实建模”状态检查；未来配置变化会如实改变结果，不能为了测试通过把历史强行设为0。
+
+## 14. 首次真实建模前的就绪报告
+
+目前**尚不具备发送首次真实建模的全部条件**：
+
+| 必要条件 | 当前实际状态 |
+|---|---|
+| 角色及风格 | 技术联调角色已登记；用户概念图暂不关联角色 |
+| 已接受概念图、Hash | 候选图Hash已记录，文化一致性与图片接受未完成 |
+| 实际Key、鉴权、余额 | 用户拥有Key；本地Neural字段未配置，未发余额或鉴权请求 |
+| 当前官方参数 | 服务已封装multipart `image`、单模型参数；实际发送前再次核对 |
+| 预计费用 | 未核实当前Credit；不填写Mock80或过期资料价格 |
+| 历史及剩余额度 | 历史未知，剩余null，真实创建锁定 |
+| 单次授权 | 尚无任何一次真实建模授权 |
+
+当前预留参数：`modelCount=1`、`mesh_quality=standard`、Q版`faceNum=100000`/写实`500000`、`disablePbr=0`、`onlyGenerateMesh=false`、`enableImageEnhancement=false`。最终发送输入必须由服务端冻结，不能以此表视为已获准请求。
+
+后续仍属于Phase 4：先核查全项目历史提交、在本地私有env配置Key（不要发聊天）、必要时明确执行不创建模型的余额验证；确认图片及角色文化一致性、非商业使用许可对供应商加工/再分发的范围；核实当前费用、下载主机与参数，再准备单次确认摘要。必须停止并取得该次的明确批准后才能保守占用一次额度。
+
+风险包括：单张图背面信息缺失、薄构件/靠旗/头饰可能成模失败、未知响应不能返还次数、生成权属与企业商用许可、GLB大小/性能、模型可能需人工加工。此时不请求笼统授权，也不以费用或历史未知状态擅自调用。
+
+## 15. 检查点B验收结论
+
+| 要求 | 结论 |
+|---|---|
+| 复用Phase 3 JSON与引用，保护前三阶段 | 已实现，实际旧任务登记、8页/离线回归通过 |
+| 双风格模板、版本、文化同源、分别保存 | 已实现，真实本地登记与离线图片/GLB隔离通过；尚无两份真实京剧模型 |
+| 神经建模服务与全局三次原子保护 | 已实现，Mock/并发/幂等/重启/未知/费用门禁通过；真实供应商联测未执行 |
+| 图片导入及逐次确认 | 已实现；用户素材待关联/接受，真实生成未授权 |
+| 真实已有GLB、鼠标≥260°、缩放、重置、Loading/Ready/Error | 实际浏览器通过 |
+| 真手机触摸拖拽及双指缩放 | 未验收 |
+| 企业用途入口 | 已实现；无商业角色模型/授权交付 |
+| 真实模型请求、输出、下载及京剧数字IP | 未执行，不能计入完成 |
+| Git、Prompt、README、失败与截图记录 | 已保存；文档提交Hash由最终回复/实际Git读取 |
+| Phase 4完整验收 | **PARTIAL，不能标记COMPLETE** |
+
+本轮功能代码停止修改。等待用户审查当前材料、补充真实设备验证和首次建模条件；不会自动发Neural4D请求、合并main或进入Phase 5。

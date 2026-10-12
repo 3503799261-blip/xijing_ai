@@ -1,0 +1,100 @@
+{
+  "executedAt": "2026-10-11T13:04:15.576Z",
+  "kind": "REAL_BROWSER_EXISTING_LEGAL_GLB",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "modelHash": "65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5",
+  "loadingObserved": true,
+  "initial": {
+    "cameraPhi": "1.308997",
+    "cameraRadius": "3.441173",
+    "cameraTheta": "0.000000",
+    "contentMode": "legal_test_fixture",
+    "observedDegrees": "0.0",
+    "styleMode": "not_character_asset",
+    "userEventCount": "0",
+    "viewerState": "ready"
+  },
+  "drag": {
+    "from": [
+      418,
+      660
+    ],
+    "to": [
+      1014,
+      660
+    ],
+    "data": {
+      "cameraPhi": "1.308997",
+      "cameraRadius": "3.441173",
+      "cameraTheta": "-7.823524",
+      "contentMode": "legal_test_fixture",
+      "observedDegrees": "391.8",
+      "styleMode": "not_character_asset",
+      "userEventCount": "8",
+      "viewerState": "ready"
+    }
+  },
+  "zoomIn": {
+    "cameraPhi": "1.308997",
+    "cameraRadius": "2.757279",
+    "cameraTheta": "-7.823524",
+    "contentMode": "legal_test_fixture",
+    "observedDegrees": "391.8",
+    "styleMode": "not_character_asset",
+    "userEventCount": "8",
+    "viewerState": "ready"
+  },
+  "zoomOut": {
+    "cameraPhi": "1.308997",
+    "cameraRadius": "3.436835",
+    "cameraTheta": "-7.823524",
+    "contentMode": "legal_test_fixture",
+    "observedDegrees": "391.8",
+    "styleMode": "not_character_asset",
+    "userEventCount": "8",
+    "viewerState": "ready"
+  },
+  "wheelZoom": {
+    "cameraPhi": "1.308997",
+    "cameraRadius": "3.441173",
+    "cameraTheta": "-7.823524",
+    "contentMode": "legal_test_fixture",
+    "observedDegrees": "391.8",
+    "styleMode": "not_character_asset",
+    "userEventCount": "8",
+    "viewerState": "ready"
+  },
+  "reset": {
+    "cameraPhi": "1.308997",
+    "cameraRadius": "3.441173",
+    "cameraTheta": "0.000000",
+    "contentMode": "legal_test_fixture",
+    "observedDegrees": "391.8",
+    "styleMode": "not_character_asset",
+    "userEventCount": "8",
+    "viewerState": "ready"
+  },
+  "wheelZoomAfterActualWheel": {
+    "cameraPhi": "1.308997",
+    "cameraRadius": "2.168112",
+    "cameraTheta": "0.000000",
+    "contentMode": "legal_test_fixture",
+    "observedDegrees": "391.8",
+    "styleMode": "not_character_asset",
+    "userEventCount": "114",
+    "viewerState": "ready"
+  },
+  "resetAfterWheel": {
+    "cameraPhi": "1.308997",
+    "cameraRadius": "3.441173",
+    "cameraTheta": "0.000000",
+    "contentMode": "legal_test_fixture",
+    "observedDegrees": "391.8",
+    "styleMode": "not_character_asset",
+    "userEventCount": "114",
+    "viewerState": "ready"
+  }
+}

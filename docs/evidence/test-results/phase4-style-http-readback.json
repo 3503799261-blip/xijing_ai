@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-12T11:43:14.041957+00:00",
+  "kind": "ACTUAL_LOCAL_HTTP_READBACK_NO_PROVIDER_CALLS",
+  "checks": {
+    "distinctStyleAssets": true,
+    "correctStyles": true,
+    "identicalCulturalBasis": true,
+    "differentPrompts": true,
+    "noClaimedImagesOrModels": true,
+    "sharedGlobalCapLocked": true
+  },
+  "assets": [
+    {
+      "assetId": "e9fd199c-65b6-4bb0-a930-9d03d749930a",
+      "characterId": "120653e0-6775-511a-9bf5-53d5307275e0",
+      "sourceTaskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "styleMode": "chibi",
+      "styleVersion": 1,
+      "sourceResultHash": "0f607164645178f5810d0dee207544ed89cfc0c571b1bc1f410478938d0b66de",
+      "citationHash": "f8d905a650b2e6f5faae3a76336bd2942640a0fe299dda88f6a9577fc56d3029"
+    },
+    {
+      "assetId": "ba26e5fb-4881-4754-8222-94305eb90109",
+      "characterId": "120653e0-6775-511a-9bf5-53d5307275e0",
+      "sourceTaskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "styleMode": "realistic",
+      "styleVersion": 1,
+      "sourceResultHash": "0f607164645178f5810d0dee207544ed89cfc0c571b1bc1f410478938d0b66de",
+      "citationHash": "f8d905a650b2e6f5faae3a76336bd2942640a0fe299dda88f6a9577fc56d3029"
+    }
+  ],
+  "usedCalls": null,
+  "remainingCalls": null,
+  "paidApiCalls": 0
+}

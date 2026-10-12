@@ -1,0 +1,37 @@
+{
+  "executedAt": "2026-10-11T13:18:46.788Z",
+  "kind": "REAL_BROWSER_LOCAL_DUAL_STYLE_ASSET_REGISTRATION",
+  "sourceTaskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+  "purpose": "双风格本地联调验证，非最终建模素材",
+  "chibi": {
+    "generationDisabled": true,
+    "prompt": "当前风格尚未登记视觉Prompt。请明确点击“核验并登记角色资产”。",
+    "style": "chibi",
+    "styleState": "Q版卡通尚未登记，当前风格尚未生成3D模型。若需要，请明确登记新风格；不会自动生成。",
+    "summary": "Q版卡通尚未登记，当前风格尚未生成3D模型。若需要，请明确登记新风格；不会自动生成。",
+    "viewer": {
+      "contentMode": "style_asset_missing",
+      "observedDegrees": "0",
+      "styleMode": "chibi",
+      "userEventCount": "0",
+      "viewerState": "idle"
+    }
+  },
+  "initialRegistrationFailure": {
+    "message": "角色方案不符合已验收的Phase 3协议。",
+    "state": {
+      "generationDisabled": true,
+      "prompt": "当前风格尚未登记视觉Prompt。请明确点击“核验并登记角色资产”。",
+      "style": "chibi",
+      "styleState": "Q版卡通尚未登记，当前风格尚未生成3D模型。若需要，请明确登记新风格；不会自动生成。",
+      "summary": "Q版卡通尚未登记，当前风格尚未生成3D模型。若需要，请明确登记新风格；不会自动生成。",
+      "viewer": {
+        "contentMode": "style_asset_missing",
+        "observedDegrees": "0",
+        "styleMode": "chibi",
+        "userEventCount": "0",
+        "viewerState": "idle"
+      }
+    }
+  }
+}

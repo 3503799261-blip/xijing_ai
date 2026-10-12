@@ -1,0 +1,510 @@
+{
+  "executedAt": "2026-10-11T13:22:13.894573+00:00",
+  "kind": "REAL_LOOPBACK_HTTP_NO_PAID_CALLS",
+  "command": ".\\.venv\\Scripts\\python.exe scripts/phase4_http_smoke.py",
+  "results": [
+    {
+      "name": "actual backend and local knowledge ready",
+      "passed": false,
+      "response": {
+        "status": 200,
+        "contentType": "application/json",
+        "size": 702,
+        "cors": null,
+        "contentRange": null,
+        "json": {
+          "status": "ready",
+          "knowledge": true,
+          "embedding": true,
+          "llmConfigured": true,
+          "llmVerified": true,
+          "diagnostic": null,
+          "documents": 12,
+          "chunks": 35,
+          "budget": {
+            "calls": 102,
+            "estimatedUpperCostCny": 0.24120888,
+            "budgetCny": 3.0,
+            "priceVerifiedAt": "2026-10-11",
+            "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+            "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+            "activeScope": {
+              "name": "phase3",
+              "calls": 40,
+              "estimatedUpperCostCny": 0.10777464,
+              "budgetCny": 0.5
+            },
+            "scopes": {
+              "phase3": {
+                "name": "phase3",
+                "calls": 40,
+                "estimatedUpperCostCny": 0.10777464,
+                "budgetCny": 0.5
+              }
+            }
+          },
+          "agents": {
+            "supervisorReady": true,
+            "activeTaskId": null,
+            "enabled": true,
+            "diagnostic": null
+          }
+        }
+      }
+    },
+    {
+      "name": "assets/viewer ready; paid image/model unavailable",
+      "passed": true,
+      "response": {
+        "status": 200,
+        "contentType": "application/json",
+        "size": 201,
+        "cors": null,
+        "contentRange": null,
+        "json": {
+          "questionAnswering": true,
+          "knowledgeSearch": true,
+          "agentWorkflow": true,
+          "conceptImage": false,
+          "imageToModel": false,
+          "assetManagement": true,
+          "modelViewer": true,
+          "checkedAt": "2026-10-11T13:22:13.767081+00:00"
+        }
+      }
+    },
+    {
+      "name": "global cap fixed3, history unknown locks creation",
+      "passed": true,
+      "response": {
+        "status": 200,
+        "contentType": "application/json",
+        "size": 882,
+        "cors": null,
+        "contentRange": null,
+        "json": {
+          "projectId": "xijing-ai-neural4d-project-v4",
+          "policyVersion": "phase4-generation-attempts-v4",
+          "max_creation_attempts": 3,
+          "max_models": 3,
+          "modelCount": 1,
+          "historicalUsageVerified": false,
+          "historical_used_attempts": null,
+          "used_attempts": null,
+          "reserved_attempts": null,
+          "occupied_attempts": null,
+          "remaining_attempts": null,
+          "attemptStates": {},
+          "creationHalted": false,
+          "haltCode": null,
+          "automaticGenerationRetry": false,
+          "realHttpRequests": 0,
+          "mockHttpRequests": 0,
+          "recordedActualCredits": 0,
+          "max_calls": 3,
+          "used_calls": null,
+          "remaining_calls": null,
+          "history_verified": false,
+          "realEnabled": false,
+          "providerConfigured": false,
+          "protocolVerified": false,
+          "readiness": [
+            "真实建模默认关闭；本次开发授权不等于单次真实建模授权。",
+            "需逐次人工确认、后端鉴权、费用及已核实的历史额度。"
+          ],
+          "imageGenerationConfigured": false,
+          "requestId": "ef8a6799-4f26-4dd4-b766-6d291724f6c5"
+        }
+      }
+    },
+    {
+      "name": "registered actual GLB supports Range206",
+      "passed": true,
+      "response": {
+        "status": 206,
+        "contentType": "model/gltf-binary",
+        "size": 100,
+        "cors": null,
+        "contentRange": "bytes 0-99/120484",
+        "json": null
+      }
+    },
+    {
+      "name": "balance verification requires admin",
+      "passed": true,
+      "response": {
+        "status": 403,
+        "contentType": "application/json",
+        "size": 173,
+        "cors": null,
+        "contentRange": null,
+        "json": {
+          "error": {
+            "code": "ASSET_AUTH_REQUIRED",
+            "message": "供应商操作需要独立的本地管理授权。",
+            "retryable": false
+          },
+          "requestId": "b7b6fa41-5a7c-47f6-acea-d566ba12eb85"
+        }
+      }
+    },
+    {
+      "name": "creation requires admin",
+      "passed": true,
+      "response": {
+        "status": 403,
+        "contentType": "application/json",
+        "size": 173,
+        "cors": null,
+        "contentRange": null,
+        "json": {
+          "error": {
+            "code": "ASSET_AUTH_REQUIRED",
+            "message": "供应商操作需要独立的本地管理授权。",
+            "retryable": false
+          },
+          "requestId": "8c1ed5fa-d2bf-4149-a2a7-08c4e514c385"
+        }
+      }
+    },
+    {
+      "name": "second duplicate creation stays refused",
+      "passed": true,
+      "response": {
+        "status": 403,
+        "contentType": "application/json",
+        "size": 173,
+        "cors": null,
+        "contentRange": null,
+        "json": {
+          "error": {
+            "code": "ASSET_AUTH_REQUIRED",
+            "message": "供应商操作需要独立的本地管理授权。",
+            "retryable": false
+          },
+          "requestId": "c130dca6-5d51-4296-aadb-7c1779af88e4"
+        }
+      }
+    },
+    {
+      "name": "modelCount2 fails validation before provider",
+      "passed": true,
+      "response": {
+        "status": 422,
+        "contentType": "application/json",
+        "size": 203,
+        "cors": null,
+        "contentRange": null,
+        "json": {
+          "error": {
+            "code": "INVALID_REQUEST",
+            "message": "资产请求格式不正确，请检查角色、图片Hash、用途与确认参数。",
+            "retryable": false
+          },
+          "requestId": "688549d7-5c26-4165-a740-d6b44236d7ee"
+        }
+      }
+    },
+    {
+      "name": "oversized JSON rejected before processing",
+      "passed": true,
+      "response": {
+        "status": 413,
+        "contentType": "application/json",
+        "size": 156,
+        "cors": null,
+        "contentRange": null,
+        "json": {
+          "error": {
+            "code": "BODY_TOO_LARGE",
+            "message": "请求内容过长，请缩短问题。",
+            "retryable": false
+          },
+          "requestId": "84d5b883-dd3a-4feb-9fc8-db02319408c9"
+        }
+      }
+    },
+    {
+      "name": "exact local CORS origin allowed",
+      "passed": true,
+      "response": {
+        "status": 200,
+        "contentType": "application/json",
+        "size": 882,
+        "cors": "http://127.0.0.1:8000",
+        "contentRange": null,
+        "json": {
+          "projectId": "xijing-ai-neural4d-project-v4",
+          "policyVersion": "phase4-generation-attempts-v4",
+          "max_creation_attempts": 3,
+          "max_models": 3,
+          "modelCount": 1,
+          "historicalUsageVerified": false,
+          "historical_used_attempts": null,
+          "used_attempts": null,
+          "reserved_attempts": null,
+          "occupied_attempts": null,
+          "remaining_attempts": null,
+          "attemptStates": {},
+          "creationHalted": false,
+          "haltCode": null,
+          "automaticGenerationRetry": false,
+          "realHttpRequests": 0,
+          "mockHttpRequests": 0,
+          "recordedActualCredits": 0,
+          "max_calls": 3,
+          "used_calls": null,
+          "remaining_calls": null,
+          "history_verified": false,
+          "realEnabled": false,
+          "providerConfigured": false,
+          "protocolVerified": false,
+          "readiness": [
+            "真实建模默认关闭；本次开发授权不等于单次真实建模授权。",
+            "需逐次人工确认、后端鉴权、费用及已核实的历史额度。"
+          ],
+          "imageGenerationConfigured": false,
+          "requestId": "f8e8a2b2-a160-47de-bbd5-bdb45e3055aa"
+        }
+      }
+    },
+    {
+      "name": "unapproved CORS origin denied",
+      "passed": true,
+      "response": {
+        "status": 200,
+        "contentType": "application/json",
+        "size": 882,
+        "cors": null,
+        "contentRange": null,
+        "json": {
+          "projectId": "xijing-ai-neural4d-project-v4",
+          "policyVersion": "phase4-generation-attempts-v4",
+          "max_creation_attempts": 3,
+          "max_models": 3,
+          "modelCount": 1,
+          "historicalUsageVerified": false,
+          "historical_used_attempts": null,
+          "used_attempts": null,
+          "reserved_attempts": null,
+          "occupied_attempts": null,
+          "remaining_attempts": null,
+          "attemptStates": {},
+          "creationHalted": false,
+          "haltCode": null,
+          "automaticGenerationRetry": false,
+          "realHttpRequests": 0,
+          "mockHttpRequests": 0,
+          "recordedActualCredits": 0,
+          "max_calls": 3,
+          "used_calls": null,
+          "remaining_calls": null,
+          "history_verified": false,
+          "realEnabled": false,
+          "providerConfigured": false,
+          "protocolVerified": false,
+          "readiness": [
+            "真实建模默认关闭；本次开发授权不等于单次真实建模授权。",
+            "需逐次人工确认、后端鉴权、费用及已核实的历史额度。"
+          ],
+          "imageGenerationConfigured": false,
+          "requestId": "092cc36e-dc1f-400c-9491-818f8381cd8e"
+        }
+      }
+    },
+    {
+      "name": "existing real local RAG retrieval still works without LLM",
+      "passed": true,
+      "response": {
+        "status": 200,
+        "contentType": "application/json",
+        "size": 4088,
+        "cors": null,
+        "contentRange": null,
+        "json": {
+          "question": "京剧的生旦净丑分别是什么？",
+          "evidence": [
+            {
+              "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+              "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+              "sourceId": "fujian-roles",
+              "sectionId": "fujian-roles-system",
+              "title": "京剧的行当分类是什么？",
+              "locator": "正文第一段及末段 · 入库片段 1/1",
+              "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+              "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+              "contentKind": "original_fact_summary",
+              "category": "京剧行当",
+              "entityNames": [
+                "京剧",
+                "行当",
+                "生",
+                "旦",
+                "净",
+                "丑",
+                "唱念做打"
+              ],
+              "vectorScore": 0.636662767908518,
+              "keywordScore": -6.059893590366162,
+              "entityMatchCount": 4,
+              "acceptedBy": "vector_threshold",
+              "rank": 1,
+              "reviewStatus": "source_checked_by_assistant"
+            },
+            {
+              "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+              "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+              "sourceId": "fujian-roles",
+              "sectionId": "fujian-roles-sheng-dan",
+              "title": "京剧的行当分类是什么？",
+              "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+              "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+              "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+              "contentKind": "original_fact_summary",
+              "category": "京剧行当",
+              "entityNames": [
+                "生",
+                "旦",
+                "老生",
+                "小生",
+                "武生",
+                "青衣",
+                "花旦"
+              ],
+              "vectorScore": 0.6588727001944517,
+              "keywordScore": -6.238754802937484,
+              "entityMatchCount": 2,
+              "acceptedBy": "vector_threshold",
+              "rank": 2,
+              "reviewStatus": "source_checked_by_assistant"
+            },
+            {
+              "id": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+              "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+              "sourceId": "fujian-roles",
+              "sectionId": "fujian-roles-chou",
+              "title": "京剧的行当分类是什么？",
+              "locator": "正文“丑”条目 · 入库片段 1/1",
+              "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+              "excerpt": "丑行常承担喜剧表演，鼻梁上的小块白色化妆使其有小花脸之称。\n文丑与武丑是常见分类，武丑另称开口跳。",
+              "contentKind": "original_fact_summary",
+              "category": "京剧行当",
+              "entityNames": [
+                "丑",
+                "小花脸",
+                "文丑",
+                "武丑",
+                "开口跳"
+              ],
+              "vectorScore": 0.5661063439804748,
+              "keywordScore": -2.030869834232371,
+              "entityMatchCount": 1,
+              "acceptedBy": "exact_entity_keyword",
+              "rank": 3,
+              "reviewStatus": "source_checked_by_assistant"
+            }
+          ],
+          "uncertain": false,
+          "retrievalMode": "hybrid",
+          "matchedEntities": [
+            "丑",
+            "净",
+            "旦",
+            "生"
+          ],
+          "elapsedSeconds": 0.0226,
+          "threshold": 0.57,
+          "candidateScores": [
+            {
+              "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+              "score": 0.6588727001944517
+            },
+            {
+              "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+              "score": 0.6538273845754528
+            },
+            {
+              "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+              "score": 0.636662767908518
+            },
+            {
+              "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+              "score": 0.5785673143111864
+            },
+            {
+              "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+              "score": 0.5661063439804748
+            },
+            {
+              "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+              "score": 0.5136010853159881
+            },
+            {
+              "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+              "score": 0.48926695365720463
+            },
+            {
+              "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+              "score": 0.48318621175656196
+            },
+            {
+              "chunkId": "chunk_eba2a0b8b78f35deb139ca978314152ee74e3c66b9ec7bcc2b66c8d3377e41b2",
+              "score": 0.4722277500308813
+            },
+            {
+              "chunkId": "chunk_ef3abbfbfcbac0f86d4f47955bf29bba01eb214a76fe47c155efcbba3859945c",
+              "score": 0.47067326785162167
+            }
+          ],
+          "requestId": "4e1d19b0-cad6-4193-ac85-da466bf013dd"
+        }
+      }
+    },
+    {
+      "name": "safety probes changed no creation attempts or provider operations",
+      "passed": false,
+      "response": {
+        "status": 200,
+        "contentType": "application/json",
+        "size": 882,
+        "cors": null,
+        "contentRange": null,
+        "json": {
+          "projectId": "xijing-ai-neural4d-project-v4",
+          "policyVersion": "phase4-generation-attempts-v4",
+          "max_creation_attempts": 3,
+          "max_models": 3,
+          "modelCount": 1,
+          "historicalUsageVerified": false,
+          "historical_used_attempts": null,
+          "used_attempts": null,
+          "reserved_attempts": null,
+          "occupied_attempts": null,
+          "remaining_attempts": null,
+          "attemptStates": {},
+          "creationHalted": false,
+          "haltCode": null,
+          "automaticGenerationRetry": false,
+          "realHttpRequests": 0,
+          "mockHttpRequests": 0,
+          "recordedActualCredits": 0,
+          "max_calls": 3,
+          "used_calls": null,
+          "remaining_calls": null,
+          "history_verified": false,
+          "realEnabled": false,
+          "providerConfigured": false,
+          "protocolVerified": false,
+          "readiness": [
+            "真实建模默认关闭；本次开发授权不等于单次真实建模授权。",
+            "需逐次人工确认、后端鉴权、费用及已核实的历史额度。"
+          ],
+          "imageGenerationConfigured": false,
+          "requestId": "fee59a45-4a83-4e73-87e9-92084cc100b6"
+        }
+      }
+    }
+  ],
+  "passed": 11,
+  "failed": 2
+}

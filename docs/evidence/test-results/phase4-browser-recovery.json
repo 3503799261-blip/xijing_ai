@@ -1,0 +1,23 @@
+{
+  "executedAt": "2026-10-11T13:14:51.329Z",
+  "kind": "REAL_BROWSER_SAME_FILE_MANUAL_RECOVERY",
+  "beforeRestore": {
+    "contentMode": "legal_test_fixture",
+    "observedDegrees": "0",
+    "styleMode": "not_character_asset",
+    "userEventCount": "0",
+    "viewerState": "error"
+  },
+  "manualRetry": {
+    "cameraPhi": "1.308997",
+    "cameraRadius": "3.441173",
+    "cameraTheta": "0.000000",
+    "contentMode": "legal_test_fixture",
+    "observedDegrees": "0.0",
+    "styleMode": "not_character_asset",
+    "userEventCount": "0",
+    "viewerState": "ready"
+  },
+  "reloadedSrc": null,
+  "providerRequests": 0
+}

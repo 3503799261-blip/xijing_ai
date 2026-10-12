@@ -1,0 +1,111 @@
+{
+  "kind": "OFFLINE_EXPLICIT_TEST_DOUBLES_AND_STATIC_CHECKS",
+  "disclaimer": "Not real LLM, RAG, backend, browser, CSS layout or model-availability evidence.",
+  "executedAt": "2026-10-11T13:00:58.923Z",
+  "nodeVersion": "v24.15.0",
+  "command": "node scripts/phase3_frontend_test.mjs --output docs/evidence/test-results/phase4-phase3-frontend-regression.json",
+  "results": [
+    {
+      "name": "AI capabilities follow actual backend gates instead of old future-feature constants",
+      "passed": true
+    },
+    {
+      "name": "create/status retain separate canonical task and Agent states",
+      "passed": true
+    },
+    {
+      "name": "reject malformed identities, events, duplicate Agents and late confirmation",
+      "passed": true
+    },
+    {
+      "name": "accept canonical evidence-bound design and reject invented or unsupported IDs",
+      "passed": true
+    },
+    {
+      "name": "reject publication before user acceptance or despite uncertainty/review failure",
+      "passed": true
+    },
+    {
+      "name": "creation sends trimmed explicit brief and original idempotency key; ignores server task URLs",
+      "passed": true
+    },
+    {
+      "name": "local input guards block empty, long, invalid styles and path identifiers before network",
+      "passed": true
+    },
+    {
+      "name": "status cursor, confirm sequence and cancel sequence use correct server APIs",
+      "passed": true
+    },
+    {
+      "name": "typed backend failures and malformed results do not silently create replacement tasks",
+      "passed": true
+    },
+    {
+      "name": "10-second workflow timeout makes one request only (accelerated clock)",
+      "passed": true
+    },
+    {
+      "name": "empty creation stays local; draft submit is not an Agent network action",
+      "passed": true
+    },
+    {
+      "name": "lost creation reply offers same-body same-key manual retry despite edited input",
+      "passed": true
+    },
+    {
+      "name": "real returned Agent snapshot drives cards; repeated events are deduplicated",
+      "passed": true
+    },
+    {
+      "name": "poll queries do not overlap; hidden page pauses automatic queries",
+      "passed": true
+    },
+    {
+      "name": "lost status connection preserves last confirmed Agent state, pauses polling and never resubmits",
+      "passed": true
+    },
+    {
+      "name": "outdated status snapshot cannot rewind a displayed stage",
+      "passed": true
+    },
+    {
+      "name": "awaiting confirmation displays verified text and safe references; export stays disabled",
+      "passed": true
+    },
+    {
+      "name": "final acceptance sends current confirmation and sequence; server-confirmed export becomes available",
+      "passed": true
+    },
+    {
+      "name": "culture hold cannot be accepted or exported; no model request follows a state query",
+      "passed": true
+    },
+    {
+      "name": "refresh restores only the task ID via free GET and does not re-create a paid task",
+      "passed": true
+    },
+    {
+      "name": "invalid saved task identifier is ignored without a network call",
+      "passed": true
+    },
+    {
+      "name": "unknown saved task is clearly invalidated; next explicit creation does not inherit its ID",
+      "passed": true
+    },
+    {
+      "name": "cancel request preserves real running stage until backend marks task cancelled",
+      "passed": true
+    },
+    {
+      "name": "automatic status polling is bounded and ends without inventing a task failure",
+      "passed": true
+    },
+    {
+      "name": "HTML binding/version chain and only safe text construction (static)",
+      "passed": true
+    }
+  ],
+  "passed": 25,
+  "failed": 0
+}

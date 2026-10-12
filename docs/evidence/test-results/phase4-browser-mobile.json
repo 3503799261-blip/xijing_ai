@@ -1,0 +1,25 @@
+{
+  "executedAt": "2026-10-11T13:19:55.903Z",
+  "kind": "REAL_BROWSER_NARROW_VIEWPORT_NOT_PHYSICAL_TOUCH",
+  "viewport": {
+    "width": 375,
+    "height": 812
+  },
+  "touchMode": "true",
+  "touchAction": "none",
+  "state": {
+    "cameraPhi": "1.308997",
+    "cameraRadius": "3.441173",
+    "cameraTheta": "0.000000",
+    "contentMode": "legal_test_fixture",
+    "observedDegrees": "0.0",
+    "styleMode": "not_character_asset",
+    "userEventCount": "0",
+    "viewerState": "ready"
+  },
+  "documentWidth": 360,
+  "physicalTouchDragVerified": false,
+  "pinchVerified": false,
+  "exitTouchMode": "false",
+  "exitTouchAction": "pan-y"
+}

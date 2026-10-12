@@ -1,0 +1,821 @@
+{
+  "executedAt": "2026-10-11T13:16:01.575Z",
+  "kind": "REAL_BROWSER_NAVIGATION_DOM_RESOURCE_OBSERVATIONS",
+  "pages": [
+    {
+      "page": "index.html",
+      "headings": [
+        "梨园风华",
+        "一桌二椅，演尽人间",
+        "选择你的梨园旅程",
+        "程式之中，自有天地"
+      ],
+      "images": [
+        {
+          "complete": true,
+          "src": "images/intro4.jpg",
+          "width": 939
+        },
+        {
+          "complete": true,
+          "src": "images/home1.jpg",
+          "width": 939
+        },
+        {
+          "complete": true,
+          "src": "images/intro2.jpg",
+          "width": 761
+        },
+        {
+          "complete": true,
+          "src": "images/sheng.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/red1.jpg",
+          "width": 186
+        },
+        {
+          "complete": true,
+          "src": "images/art1.jpg",
+          "width": 862
+        },
+        {
+          "complete": true,
+          "src": "images/opera1.jpg",
+          "width": 926
+        },
+        {
+          "complete": true,
+          "src": "images/gallery7.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/intro4.jpg",
+          "width": 939
+        },
+        {
+          "complete": true,
+          "src": "images/art3.jpg",
+          "width": 1876
+        },
+        {
+          "complete": true,
+          "src": "images/opera1.jpg",
+          "width": 926
+        },
+        {
+          "complete": true,
+          "src": "images/opera2.jpg",
+          "width": 882
+        },
+        {
+          "complete": true,
+          "src": "images/opera3.jpg",
+          "width": 1872
+        }
+      ],
+      "nav": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "title": "梨园风华｜首页",
+      "viewport": {
+        "height": 1080,
+        "width": 1920
+      },
+      "width": 1905
+    },
+    {
+      "page": "history.html",
+      "headings": [
+        "京剧发展历史",
+        "多声腔汇成一脉",
+        "两百余年，四段华章",
+        "历史图片长廊"
+      ],
+      "images": [
+        {
+          "complete": true,
+          "src": "images/intro2.jpg",
+          "width": 761
+        },
+        {
+          "complete": true,
+          "src": "images/intro1.jpg",
+          "width": 939
+        },
+        {
+          "complete": true,
+          "src": "images/intro2.jpg",
+          "width": 761
+        },
+        {
+          "complete": true,
+          "src": "images/intro3.jpg",
+          "width": 901
+        },
+        {
+          "complete": true,
+          "src": "images/intro4.jpg",
+          "width": 939
+        },
+        {
+          "complete": true,
+          "src": "images/历史1.jpg",
+          "width": 1001
+        },
+        {
+          "complete": true,
+          "src": "images/历史2.jpg",
+          "width": 1265
+        },
+        {
+          "complete": true,
+          "src": "images/历史3.jpg",
+          "width": 1882
+        },
+        {
+          "complete": true,
+          "src": "images/历史4.jpg",
+          "width": 1877
+        },
+        {
+          "complete": true,
+          "src": "images/历史5.jpg",
+          "width": 1959
+        }
+      ],
+      "nav": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "title": "京剧发展历史｜梨园风华",
+      "viewport": {
+        "height": 1080,
+        "width": 1920
+      },
+      "width": 1905
+    },
+    {
+      "page": "roles.html",
+      "headings": [
+        "生旦净丑",
+        "四门行当，各有乾坤",
+        "生 · 正气风骨",
+        "旦 · 水袖芳华"
+      ],
+      "images": [
+        {
+          "complete": true,
+          "src": "images/sheng.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/dan.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/jing.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/chou.jpg",
+          "width": 943
+        }
+      ],
+      "nav": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "title": "行当介绍｜梨园风华",
+      "viewport": {
+        "height": 1080,
+        "width": 1920
+      },
+      "width": 1905
+    },
+    {
+      "page": "facial.html",
+      "headings": [
+        "脸谱艺术",
+        "脸上有谱，心中有人",
+        "颜色会说话",
+        "经典脸谱图片墙"
+      ],
+      "images": [
+        {
+          "complete": true,
+          "src": "images/脸谱.jpg",
+          "width": 769
+        },
+        {
+          "complete": true,
+          "src": "images/red.jpg",
+          "width": 197
+        },
+        {
+          "complete": true,
+          "src": "images/black.jpg",
+          "width": 97
+        },
+        {
+          "complete": true,
+          "src": "images/white.jpg",
+          "width": 210
+        },
+        {
+          "complete": true,
+          "src": "images/blue.jpg",
+          "width": 202
+        },
+        {
+          "complete": true,
+          "src": "images/glod.jpg",
+          "width": 206
+        },
+        {
+          "complete": true,
+          "src": "images/red1.jpg",
+          "width": 186
+        },
+        {
+          "complete": true,
+          "src": "images/black1.jpg",
+          "width": 166
+        },
+        {
+          "complete": true,
+          "src": "images/blue1.jpg",
+          "width": 175
+        },
+        {
+          "complete": true,
+          "src": "images/white1.jpg",
+          "width": 189
+        },
+        {
+          "complete": true,
+          "src": "images/glod1.jpg",
+          "width": 182
+        },
+        {
+          "complete": true,
+          "src": "images/jing.jpg",
+          "width": 943
+        }
+      ],
+      "nav": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "title": "脸谱艺术｜梨园风华",
+      "viewport": {
+        "height": 1080,
+        "width": 1920
+      },
+      "width": 1905
+    },
+    {
+      "page": "music.html",
+      "headings": [
+        "唱腔与乐器",
+        "字正腔圆，声情相生",
+        "西皮明快，二黄深沉",
+        "京胡 · 一弓一弦托唱腔"
+      ],
+      "images": [
+        {
+          "complete": true,
+          "src": "images/京胡.jpg",
+          "width": 1103
+        }
+      ],
+      "nav": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "title": "唱腔与乐器｜梨园风华",
+      "viewport": {
+        "height": 1080,
+        "width": 1920
+      },
+      "width": 1905
+    },
+    {
+      "page": "video.html",
+      "headings": [
+        "视频欣赏",
+        "请把屏幕交给一场好戏",
+        "开场 · 锣鼓催征",
+        "唱段 · 声腔传情"
+      ],
+      "images": [],
+      "nav": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        }
+      ],
+      "title": "视频欣赏｜梨园风华",
+      "viewport": {
+        "height": 1080,
+        "width": 1920
+      },
+      "width": 1905
+    },
+    {
+      "page": "gallery.html",
+      "headings": [
+        "京剧艺术画廊",
+        "旋转中的梨园风华",
+        "演员风采",
+        "脸谱图鉴"
+      ],
+      "images": [
+        {
+          "complete": true,
+          "src": "images/gallery1.jpg",
+          "width": 862
+        },
+        {
+          "complete": true,
+          "src": "images/gallery2.jpg",
+          "width": 888
+        },
+        {
+          "complete": true,
+          "src": "images/gallery11.jpg",
+          "width": 926
+        },
+        {
+          "complete": true,
+          "src": "images/gallery12.jpg",
+          "width": 882
+        },
+        {
+          "complete": true,
+          "src": "images/gallery5.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/gallery6.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/gallery7.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/gallery8.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/opera1.jpg",
+          "width": 926
+        },
+        {
+          "complete": true,
+          "src": "images/opera2.jpg",
+          "width": 882
+        },
+        {
+          "complete": true,
+          "src": "images/opera4.jpg",
+          "width": 884
+        },
+        {
+          "complete": true,
+          "src": "images/opera5.jpg",
+          "width": 874
+        },
+        {
+          "complete": true,
+          "src": "images/sheng.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/dan.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/jing.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/chou.jpg",
+          "width": 943
+        },
+        {
+          "complete": true,
+          "src": "images/mask-red.jpg",
+          "width": 936
+        },
+        {
+          "complete": true,
+          "src": "images/mask-black.jpg",
+          "width": 936
+        },
+        {
+          "complete": true,
+          "src": "images/mask-blue.jpg",
+          "width": 936
+        },
+        {
+          "complete": true,
+          "src": "images/mask-gold.jpg",
+          "width": 936
+        },
+        {
+          "complete": true,
+          "src": "images/opera1.jpg",
+          "width": 926
+        },
+        {
+          "complete": true,
+          "src": "images/opera2.jpg",
+          "width": 882
+        },
+        {
+          "complete": true,
+          "src": "images/art4.jpg",
+          "width": 1666
+        },
+        {
+          "complete": true,
+          "src": "images/京胡.jpg",
+          "width": 1103
+        },
+        {
+          "complete": true,
+          "src": "images/opera3.jpg",
+          "width": 1872
+        },
+        {
+          "complete": true,
+          "src": "images/opera4.jpg",
+          "width": 884
+        },
+        {
+          "complete": true,
+          "src": "images/opera5.jpg",
+          "width": 874
+        },
+        {
+          "complete": true,
+          "src": "images/home-banner.jpg",
+          "width": 1875
+        }
+      ],
+      "nav": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        },
+        {
+          "href": "#actors",
+          "label": "演员风采"
+        },
+        {
+          "href": "#masks",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "#costumes",
+          "label": "戏服道具"
+        },
+        {
+          "href": "#stage",
+          "label": "舞台剧照"
+        }
+      ],
+      "title": "艺术画廊｜梨园风华",
+      "viewport": {
+        "height": 1080,
+        "width": 1920
+      },
+      "width": 1905
+    },
+    {
+      "page": "about.html",
+      "headings": [
+        "AI赋能京剧非遗，让传统文化焕发新生",
+        "一方工坊，两种探索",
+        "京剧AI智能问答",
+        "多Agent协作工作台"
+      ],
+      "images": [],
+      "nav": [
+        {
+          "href": "index.html",
+          "label": "梨园风华"
+        },
+        {
+          "href": "index.html",
+          "label": "首页"
+        },
+        {
+          "href": "history.html",
+          "label": "发展历史"
+        },
+        {
+          "href": "roles.html",
+          "label": "行当介绍"
+        },
+        {
+          "href": "facial.html",
+          "label": "脸谱艺术"
+        },
+        {
+          "href": "music.html",
+          "label": "唱腔乐器"
+        },
+        {
+          "href": "video.html",
+          "label": "视频欣赏"
+        },
+        {
+          "href": "gallery.html",
+          "label": "艺术画廊"
+        },
+        {
+          "href": "about.html#ai-workshop",
+          "label": "AI戏韵工坊"
+        },
+        {
+          "href": "#ai-workshop-overview",
+          "label": "工坊总览"
+        },
+        {
+          "href": "#ai-workshop-qa",
+          "label": "京剧问答"
+        },
+        {
+          "href": "#ai-workshop-agents",
+          "label": "Agent协作"
+        },
+        {
+          "href": "#ai-workshop-create",
+          "label": "角色创作"
+        },
+        {
+          "href": "#ai-workshop-model",
+          "label": "数字IP中心"
+        }
+      ],
+      "title": "AI戏韵工坊｜梨园风华",
+      "viewport": {
+        "height": 1080,
+        "width": 1920
+      },
+      "width": 1905
+    }
+  ],
+  "logs": []
+}

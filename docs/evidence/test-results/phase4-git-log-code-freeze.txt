@@ -1,0 +1,8 @@
+f72fc39a2c451457ffd99f81180813db82eeddb6 2026-10-12T19:37:27+08:00 fix: publish immutable assets atomically under Windows concurrency
+fb5df133ba5ff38bbd2c0a7fc474bcf970a5f0fe 2026-10-11T21:27:22+08:00 fix: accept verified legacy Agent envelopes and classify real transports
+de6daad66eee5529d924d5e1bcc0c20a71983573 2026-10-11T21:18:05+08:00 fix: recover failed viewer loads and invalidate changed cost approvals
+3b7a43ac4fbdde890c5e6bf78a917cb6e1a7a810 2026-10-11T21:15:07+08:00 fix: validate embedded GLB textures and block unreviewed model imports
+61177ca6b2523d6e71ceecd34c8064484d9b9fa5 2026-10-11T21:10:42+08:00 feat: connect dual-style asset workspace and interactive GLB viewer
+ee90f1417a120126bad54b0d77ea67d4d22229b0 2026-10-11T21:08:35+08:00 feat: protect Neural4D submissions with atomic global quota and idempotency
+2bb1b696895dcebcb02761ede71bc567ea4f4ca6 2026-10-11T21:02:13+08:00 feat: add evidence-bound dual-style character asset storage
+32a4034bcdcf5916d281737ca3843e4b6b098166 2026-10-11T18:06:23+08:00 docs: record approved phase 4 plan and public prompt evidence

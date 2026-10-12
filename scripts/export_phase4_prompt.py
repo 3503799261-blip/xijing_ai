@@ -31,7 +31,9 @@ def main():
                 found['01-final-architecture-revision.txt'] = (line, text)
             if text.startswith('Phase 4检查点A批准，开始正式开发。'):
                 found['02-approved-development-request.txt'] = (line, text)
-    if len(found) != 3:
+            if text.startswith('# 戏境 AI — Phase 4 双风格角色生成补充开发指令'):
+                found['06-dual-style-user-request.txt'] = (line, text)
+    if not {'00-original-user-request.txt', '01-final-architecture-revision.txt', '02-approved-development-request.txt'}.issubset(found):
         raise ValueError('Missing exact public Phase 4 user requests; do not invent evidence.')
     args.output.mkdir(parents=True, exist_ok=True)
     hashes = {}

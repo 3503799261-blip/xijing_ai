@@ -1,0 +1,22 @@
+{
+  "executedAt": "2026-10-11T13:08:07.030Z",
+  "kind": "REAL_BROWSER_INJECTED_MISSING_PRIVATE_FILE",
+  "modelId": "5ac8ea03-8bcd-4da8-bad5-af6da78269bf",
+  "viewer": {
+    "contentMode": "legal_test_fixture",
+    "observedDegrees": "0",
+    "styleMode": "not_character_asset",
+    "userEventCount": "0",
+    "viewerState": "error"
+  },
+  "status": "模型加载失败",
+  "error": "模型加载失败，请检查资源是否完整或浏览器是否支持WebGL。可重新加载原文件，不会提交建模。",
+  "logs": [
+    {
+      "level": "error",
+      "message": "kl: fetch for \"http://127.0.0.1:8000/api/v1/assets/models/5ac8ea03-8bcd-4da8-bad5-af6da78269bf/file\" responded with 404: Not Found\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:48:204423",
+      "timestamp": "2026-10-11T13:07:28.098Z",
+      "url": "http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js"
+    }
+  ]
+}

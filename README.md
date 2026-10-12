@@ -1,8 +1,8 @@
 # 戏境 AI
 
-在原有「梨园风华」8页京剧文化网站上建设AI戏韵工坊。前端保留HTML/CSS/原生ES Module与酒红、金色、米白视觉；Phase 2提供真实RAG问答，Phase 3加入规划、文化研究、角色设计、文化审校的真实协作与人工确认。当前交付文字方案和角色JSON，概念图与Neural4D继续未接入。
+在原有「梨园风华」8页京剧文化网站上建设AI戏韵工坊。前端保留HTML/CSS/原生ES Module与酒红、金色、米白视觉；Phase 2提供真实RAG问答，Phase 3加入规划、文化研究、角色设计、文化审校的真实协作与人工确认。Phase 4增量实现双风格本地资产与真实GLB查看器；平台图像生成和Neural4D真实建模尚未调用。
 
-Phase 1、Phase 2已获用户验收；基准分别为 `04b2c571e068ec0b26205fcce0c075395caeebce`、`a95c7748e4a22bfed9f4f8261e96dffa2522b740`。Phase 3开发与实测已完成，**等待用户检查点B验收**；详见 [Phase 3报告](docs/reports/phase-03.md)。[公开仓库](https://github.com/3503799261-blip/xijing_ai)。
+Phase 1、Phase 2已获用户验收；基准分别为 `04b2c571e068ec0b26205fcce0c075395caeebce`、`a95c7748e4a22bfed9f4f8261e96dffa2522b740`。Phase 3代码与实测记录继承保留，详见 [Phase 3历史报告](docs/reports/phase-03.md)。当前Phase 4状态为 **PARTIAL**，在首次真实建模前等待单次明确授权，尚未达到完整阶段验收。[公开仓库](https://github.com/3503799261-blip/xijing_ai)。
 
 ## 架构与数据边界
 
@@ -23,7 +23,7 @@ Phase 1、Phase 2已获用户验收；基准分别为 `04b2c571e068ec0b26205fcce
 
 本机 `.venv` 实际使用 `--system-site-packages`，复用已有CPU torch（包元数据2.11.0），避免重复下载大体积依赖。这是本次环境条件；干净机器应使用普通隔离环境。`backend/requirements.txt` 指定CPU torch2.11.0+cpu及CPU wheel来源，冷机安装整套依赖尚未从零计时验证，不将复用环境当成干净锁定环境。
 
-在当前Phase 3交付分支安装；克隆后应先确认存在backend与knowledge。保留阶段分支，未合并main：
+下方克隆命令对应Phase 3已有交付分支；克隆后先确认存在backend与knowledge。Phase 4在本地独立开发分支 `feature/phase4-neural4d` 中增量开发，不能假设该分支或最新代码已推送到远端，也不要通过下面的Phase 3克隆命令宣称取得Phase 4成果：
 
 ```powershell
 git clone --branch feature/phase3-opera-agents https://github.com/3503799261-blip/xijing_ai.git
@@ -99,7 +99,7 @@ if (-not (Test-Path -LiteralPath 'D:\京剧\.private-config\.env')) {
 | 方法/接口 | 行为 |
 |---|---|
 | GET /api/v1/health | 索引、Embedding、LLM配置/验证及非秘密预算摘要 |
-| GET /api/v1/capabilities | 问答、检索、Agent依据实际服务与预算就绪；概念图/3D仍false |
+| GET /api/v1/capabilities | 问答、检索、Agent依据实际服务与预算就绪；conceptImage仍false，imageToModel按真实建模门禁返回、当前false；assetManagement/modelViewer反映本地资产服务可用性 |
 | POST /api/v1/knowledge/search | question、可选topK/category；真实片段/来源/分数，无LLM调用 |
 | POST /api/v1/chat | question、可选conversationId；answer/citations/uncertain/requestId |
 | GET /api/v1/knowledge/sources | 允许公开的来源与许可元数据 |
@@ -142,6 +142,68 @@ node scripts/phase2_frontend_test.mjs --output docs/evidence/test-results/local-
 
 缓存依赖/模型/索引/有效API权限是本次前提，Phase 3没有重新安装依赖、下载模型或重建未变化语料。首次空电脑完整安装时间未验证；下方Phase 2缓存实测不能当作Phase 3冷机十分钟承诺。
 
+## Phase 4数字IP中心：当前PARTIAL交付
+
+打开 [数字IP中心](http://127.0.0.1:8000/about.html#ai-workshop-model)。本阶段复用已确认的Phase 3角色任务，不迁移前端框架，也不重新执行Agent。`Q版卡通(chibi)` 与 `写实国风(realistic)` 是资产视觉风格；个人/企业是用途模式，两者独立。相同文化方案的两种风格共享characterId和文化来源快照，各自保存assetId、styleVersion、Prompt、图片和模型记录。切换风格只读取已登记版本，不自动生成、不覆盖另一种风格。
+
+已实现本地角色登记、固定模板视觉Prompt、人工视觉确认、实际图片导入/Hash/接受、合法已有GLB导入与查看、SQLite资产记录，以及真实建模服务的默认关闭门禁和离线Mock测试。自由编辑Prompt会新建不可覆盖版本，并锁为待文化复核草稿；必须经既有Agent流程重新审校并确认新任务，不能靠客户端声明或单纯视觉确认解除文化门禁。旧图片、模型和已发送任务保留历史归属。
+
+**本轮未调用真实Neural4D建模或平台图像供应商API。** 图像供应商、费用与许可待确认；提供的概念图仍属待关联资料及非商业演示用途的用户许可声明，不能推定商业授权、文化专家审核或本平台真实图像生成。企业模式只记录机构、受众、用途和边界，不承诺商业交付、骨骼绑定或游戏可用规格。
+
+`model-viewer 4.4.0` 已在本地保存，加载真实GLB，不用图片/GIF/视频伪装3D。Duck是附有原许可的已有合法Viewer测试素材，独立于角色风格资产，也不是Neural4D输出或京剧数字IP。查看器提供水平旋转、缩放按钮、重置视角、Loading/Ready/Error和显式失败重载。1920×1080浏览器中一次真实鼠标拖拽已记录 **391.8°连续水平观察**，放大、缩小、滚轮和重置均已验证；移动设备可开启触摸查看模式。**真实手机单指拖动及双指缩放尚未验收，375×812移动视口截图不能替代这些手势测试**。真实角色建模与设备交互验收仍待完成，当前Phase 4为PARTIAL。见 [阶段报告](docs/reports/phase-04.md) 和 [浏览器测试](docs/evidence/test-results/phase4-browser-test-report.md)。
+
+### 本机准备与免费启动
+
+复用上文已准备的Windows Python环境、BGE模型和索引。新增依赖Pillow12.2.0、portalocker3.2.0已列入 `backend/requirements.txt`；对环境缺失的安装仍使用上文依赖命令。**不承诺空白电脑十分钟完成依赖、模型下载、知识库初始化和全部验收。**
+
+项目已包含本地Viewer及Duck文件。先停止应用，再将合法测试GLB登记到仓库外资产目录；该命令不调用任何模型或供应商：
+
+```powershell
+Set-Location -LiteralPath 'D:\京剧\京剧'
+.\.venv\Scripts\python.exe -m backend.scripts.prepare_phase4_assets
+.\.venv\Scripts\python.exe -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --workers 1
+```
+
+进入数字IP中心，在“独立Viewer测试素材”中选择Duck，检查真实模型、拖拽、放大/缩小和重置。这只验证已登记GLB查看器，不会创建角色模型。角色登记则需要实际已完成四Agent、审校pass、无资料不足且用户确认的taskId；不要把测试夹具登记成真实服务器任务。
+
+如果交付文件确实缺少本地Viewer或Duck，以下脚本才从免费公开地址下载缺失文件，并记录Hash；不读取API Key、不调用Neural4D。它不是图像/模型生成器，下载后仍应运行离线检查和浏览器验收：
+
+```powershell
+.\.venv\Scripts\python.exe scripts/prepare_phase4_viewer_fixture.py
+```
+
+资产SQLite和Hash文件默认在 `D:\京剧\.runtime\xijing-ai\assets\`；图片实际解码并移除元信息。GLB检查真实几何、内嵌PNG/JPEG、引用范围、大小和像素预算，禁止外部URI；这是结构与资源安全门禁，**不是完整Khronos规范认证**。同Hash文件不会被重复发布覆盖，损坏时停止加载并要求人工核查。
+
+### 免费检查
+
+以下命令不执行LLM或供应商调用。后端离线测试使用明确Mock与隔离额度账本，不能作为真实Neural4D成功证据；前端脚本的DOM双桩不能替代真实GLB/触摸测试。保留新的结果文件，不覆盖原阶段证据：
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q backend/tests/test_phase4_assets.py backend/tests/test_phase4_styles.py backend/tests/test_phase4_neural4d.py backend/tests/test_phase4_usage.py
+node scripts/phase4_frontend_test.mjs --output docs/evidence/test-results/local-phase4-frontend.json
+# 服务已启动时，这两个接口仅读取本地状态，不发起供应商请求。
+Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/v1/assets/usage'
+Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/v1/assets/models'
+```
+
+整站回归仍使用 `.\.venv\Scripts\python.exe -m pytest -q backend/tests`，并实际打开8个原页面。测试数量、桌面交互样本、失败与最终结果以Phase 4报告及证据为准；保留 [Windows文件并发失败与修复](docs/evidence/test-results/phase4-windows-file-race.md)，不能用更早一次通过掩盖后来的真实失败。
+
+### 首次真实建模前的条件
+
+全项目累计最多 **3次新建模型任务HTTP提交尝试**，每次 `modelCount=1`；失败、超时、未知结果也占用次数，禁止自动重发或返还。固定账本是 `D:\京剧\.runtime\neural4d-usage.sqlite3`，与风格、用途、RAG目录和服务重启无关。SQLite原子预留、幂等与发送者独占保护共同生效，浏览器和Agent不能绕过服务入口调用供应商。
+
+目前供应商/用户历史调用次数**尚未核实**，账本保持未知并锁定创建；不能把本轮未发送请求理解为全项目历史0次，也不能宣称还剩3次。`backend.scripts.neural4d_history` 是一次性可信人工对账工具，仅在取得实际历史证据后使用，不属于复现或自动初始化步骤，不得填0来解除未知状态。
+
+真实创建前须逐项完成：
+
+- 用户分别批准本次任务；阶段开发批准不等于任何一次真实建模授权。
+- 核对当前官方接口和账户Credit费用，真实API Key只填仓库外私有env；不发到聊天、前端、日志或Git。余额验证也是供应商请求，不能作为免费本地健康检查自动运行。
+- 确认角色文化来源、风格版本、最终Prompt、已经接受的真实概念图及其Hash、参数、用途、预计Credit、已用/剩余额度和许可。
+- 使用独立后端管理授权、已核实历史额度、有效余额/协议验证；本地配置默认 `NEURAL4D_GENERATION_ENABLED=false`、`NEURAL4D_PROTOCOL_VERIFIED=false`，费用为空、下载域名白名单为空。不要为普通Viewer或免费测试开启真实创建。
+- 对超时或未知状态先核查供应商已有任务；有可靠任务ID时才主动查询，不能通过重新生成解决未知结果。下载只允许人工核验的HTTPS域名，生成结果需继续通过GLB与浏览器验证。
+
+首次真实提交前必须停止，向用户报告测试、参数、预计费用、额度与风险并等待单独批准。阶段结尾仍需Phase 4检查点B验收；本README不宣告Phase 5开始。
+
 ## Phase 2历史测试与十分钟复现边界
 
 已有依赖、模型缓存、真实权限的机器可依次入库、启动、检查状态并完成核心问答。最终版本完整重建索引、启动新后端、HTTP打开前端及一次真实RAG实测 **25.6704秒**，见 [缓存复现](docs/evidence/test-results/phase-02-cached-reproduction-final-hybrid.json)。**首次空环境需要依赖和模型下载，尚未测得整体十分钟安装结果**；缓存条件不能作为冷机复现承诺。固定模型首次实际下载12.691秒，但该值同样依赖本次网络与已有CPU依赖。
@@ -181,8 +243,8 @@ node scripts/phase2_frontend_test.mjs --output docs/evidence/test-results/local-
 
 Phase 3实际40次供应商请求、39986 tokens，增量保守估算 **0.10777464元**（批准0.5元内）；与Phase 2合计102次、**0.24120888元**。包含失败、调优和一次问答回归，不等于供应商实时余额或实际账单。[本阶段费用](docs/evidence/test-results/phase-03/api-usage-final.json)。
 
-目前无跨问题语义记忆、专业人工知识审校、独立盲测及公开互联网后端访问控制/完整限流；本地单worker是已验证范围。辅助审校可能漏判、误报；已保留真实失败。图像和Neural4D待接入。
+目前无跨问题语义记忆、专业人工知识审校、独立盲测及公开互联网后端访问控制/完整限流；本地单worker是已验证范围。辅助审校可能漏判、误报；已保留真实失败。Phase 4本地资产与Viewer已增量实现，图像供应商及Neural4D真实建模尚未完成联测。
 
 Phase 1真实历史、备份与截图保留，见 [阶段报告](docs/reports/phase-01.md)。Phase 2方案、批准Prompt、真实工具过程、参数改动、失败与修复归档在docs；协作导出排除秘密与隐藏推理，不补造对话。历史报告描述的是当时状态，不能当作当前能力证明。
 
-当前交付Phase 3检查点B材料，未合并main，未开发Phase 4。请先审查阶段报告；只有用户明确验收并批准下一阶段，才开始概念图与Neural4D相关工作。
+当前交付Phase 4的PARTIAL材料，停在首次真实建模的单独授权前。保留Phase 1～3历史与独立阶段分支；没有据此宣称Phase 4已合并main或推送远端。真实建模和Phase 4检查点B均需用户明确审查，不自动进入Phase 5。

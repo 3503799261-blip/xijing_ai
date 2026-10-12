@@ -1,0 +1,485 @@
+{
+  "pages": [
+    {
+      "page": "index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "localPageLinks": 25,
+      "linkTargetsExist": true
+    },
+    {
+      "page": "history.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "localPageLinks": 13,
+      "linkTargetsExist": true
+    },
+    {
+      "page": "roles.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "localPageLinks": 16,
+      "linkTargetsExist": true
+    },
+    {
+      "page": "facial.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "localPageLinks": 13,
+      "linkTargetsExist": true
+    },
+    {
+      "page": "music.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "localPageLinks": 13,
+      "linkTargetsExist": true
+    },
+    {
+      "page": "video.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "localPageLinks": 13,
+      "linkTargetsExist": true
+    },
+    {
+      "page": "gallery.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "localPageLinks": 17,
+      "linkTargetsExist": true
+    },
+    {
+      "page": "about.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "localPageLinks": 26,
+      "linkTargetsExist": true
+    }
+  ],
+  "assets": [
+    {
+      "url": "http://127.0.0.1:8000/css/ai-workshop.css?v=phase4-1",
+      "status": 206,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8000/css/facial.css",
+      "status": 206,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8000/css/gallery.css",
+      "status": 206,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8000/css/history.css",
+      "status": 206,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8000/css/index.css?v=phase1",
+      "status": 206,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8000/css/music.css",
+      "status": 206,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8000/css/roles.css",
+      "status": 206,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8000/css/style.css",
+      "status": 206,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8000/css/video.css",
+      "status": 206,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/art1.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/art3.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/art4.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/black.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/black1.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/blue.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/blue1.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/chou.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/dan.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/gallery1.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/gallery11.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/gallery12.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/gallery2.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/gallery5.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/gallery6.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/gallery7.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/gallery8.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/glod.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/glod1.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/home-banner.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/home1.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/intro1.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/intro2.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/intro3.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/intro4.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/jing.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/mask-black.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/mask-blue.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/mask-gold.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/mask-red.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/opera1.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/opera2.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/opera3.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/opera4.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/opera5.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/red.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/red1.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/sheng.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/white.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/white1.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/京胡.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/历史1.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/历史2.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/历史3.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/历史4.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/历史5.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/images/脸谱.jpg",
+      "status": 206,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/js/ai-workshop/main.js?v=phase4-1",
+      "status": 206,
+      "contentType": "application/javascript"
+    },
+    {
+      "url": "http://127.0.0.1:8000/media/opera-audio.mp3",
+      "status": 206,
+      "contentType": "audio/mpeg"
+    },
+    {
+      "url": "http://127.0.0.1:8000/media/video1.mp4",
+      "status": 206,
+      "contentType": "video/mp4"
+    },
+    {
+      "url": "http://127.0.0.1:8000/media/video2.mp4",
+      "status": 206,
+      "contentType": "video/mp4"
+    },
+    {
+      "url": "http://127.0.0.1:8000/media/video3.mp4",
+      "status": 206,
+      "contentType": "video/mp4"
+    },
+    {
+      "url": "http://127.0.0.1:8000/media/video4.mp4",
+      "status": 206,
+      "contentType": "video/mp4"
+    }
+  ],
+  "protectedPaths": [
+    {
+      "path": ".env",
+      "status": 404
+    },
+    {
+      "path": ".git/config",
+      "status": 404
+    },
+    {
+      "path": "backend/app/config.py",
+      "status": 404
+    },
+    {
+      "path": "knowledge/sources.json",
+      "status": 404
+    },
+    {
+      "path": "docs/reports/phase-02.md",
+      "status": 404
+    },
+    {
+      "path": ".venv/pyvenv.cfg",
+      "status": 404
+    }
+  ],
+  "cultureIntegrity": [
+    {
+      "page": "index.html",
+      "byteIdenticalToPhase1": true,
+      "sha256": "bc0ace24da3667201354787613a5653a6107e080c35b189e28d4370c85675cd4"
+    },
+    {
+      "page": "history.html",
+      "byteIdenticalToPhase1": true,
+      "sha256": "e787849317758ccf549879bdec048fe24ff93bcdaf437f96f456813402f362f7"
+    },
+    {
+      "page": "roles.html",
+      "byteIdenticalToPhase1": true,
+      "sha256": "25103c713ecef22784e9cd49241b157095e1c36d142c19453d2986db96a322ac"
+    },
+    {
+      "page": "facial.html",
+      "byteIdenticalToPhase1": true,
+      "sha256": "3a4bc57dc1e83d16e3c594b7a6c4432cb4f8f44e7e7fe68f3761e9bcf3443d9e"
+    },
+    {
+      "page": "music.html",
+      "byteIdenticalToPhase1": true,
+      "sha256": "7fc8945972707e068984fecb8bdec8817974c3eb94a77b97a1a80c3ac1a24626"
+    },
+    {
+      "page": "video.html",
+      "byteIdenticalToPhase1": true,
+      "sha256": "eae28dffb204a62aca0dd8aa371ce73a108bb1c5f67f5c7f0b10ca43de470abf"
+    },
+    {
+      "page": "gallery.html",
+      "byteIdenticalToPhase1": true,
+      "sha256": "d359e4232b9d042ede82839400cdfd63dcde6f3ec941c7102e30819135147030"
+    }
+  ],
+  "health": {
+    "status": "ready",
+    "knowledge": true,
+    "embedding": true,
+    "llmConfigured": true,
+    "llmVerified": true,
+    "diagnostic": null,
+    "documents": 12,
+    "chunks": 35,
+    "budget": {
+      "calls": 102,
+      "estimatedUpperCostCny": 0.24120888,
+      "budgetCny": 3.0,
+      "priceVerifiedAt": "2026-10-11",
+      "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+      "activeScope": {
+        "name": "phase3",
+        "calls": 40,
+        "estimatedUpperCostCny": 0.10777464,
+        "budgetCny": 0.5
+      },
+      "scopes": {
+        "phase3": {
+          "name": "phase3",
+          "calls": 40,
+          "estimatedUpperCostCny": 0.10777464,
+          "budgetCny": 0.5
+        }
+      }
+    },
+    "agents": {
+      "supervisorReady": true,
+      "activeTaskId": null,
+      "enabled": true,
+      "diagnostic": null
+    }
+  },
+  "capabilities": {
+    "questionAnswering": true,
+    "knowledgeSearch": true,
+    "agentWorkflow": true,
+    "conceptImage": false,
+    "imageToModel": false,
+    "assetManagement": true,
+    "modelViewer": true,
+    "checkedAt": "2026-10-11T13:13:17.736429+00:00"
+  },
+  "success": true,
+  "scope": "actual loopback HTTP; public local resource GET with Range; remote embedded video playback not included"
+}

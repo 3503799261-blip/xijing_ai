@@ -1,0 +1,12 @@
+{
+  "testedAt": "2026-10-11T12:51:35.329Z",
+  "url": "http://127.0.0.1:8000/about.html#ai-workshop-model",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "method": "Actual browser mouse drag via CUA from (418,248) to (1014,248), no programmatic camera rotation",
+  "maxContinuousDegrees": 448.1,
+  "modelHash": "合法GLB测试/导入模型，非Neural4D生成 · 117.7KB\n许可：Khronos glTF-Sample-Assets Duck；©2006 Sony；SCEA Shared Source License1.0。完整许可位于backend/tests/fixtures/phase4/SCEA-LICENSE.txt。仅Viewer验证，非Neural4D/京剧角色。\nSHA-256：65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5",
+  "viewerState": "ready"
+}
