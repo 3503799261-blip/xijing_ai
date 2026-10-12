@@ -43,6 +43,7 @@ def main():
           and caps['json'].get('modelViewer') is True and caps['json'].get('conceptImage') is False
           and caps['json'].get('imageToModel') is False)
     usage = request('/api/v1/assets/usage')
+    original_real_requests = usage['json'].get('realHttpRequests')
     check('global cap fixed3, history unknown locks creation', usage,
           usage['status'] == 200 and usage['json']['max_calls'] == 3
           and usage['json']['history_verified'] is False and usage['json']['used_calls'] is None
@@ -72,7 +73,8 @@ def main():
     check('safety probes changed no creation attempts or provider operations', end,
           end['status'] == 200 and end['json'].get('used_attempts') is None
           and sum(end['json'].get('attemptStates', {}).values()) == 0
-          and end['json'].get('realHttpRequests') == 0)
+          and type(original_real_requests) is int
+          and end['json'].get('realHttpRequests') == original_real_requests)
     report = {'executedAt': datetime.now(timezone.utc).isoformat(), 'kind': 'REAL_LOOPBACK_HTTP_NO_PAID_CALLS',
               'command': '.\\.venv\\Scripts\\python.exe scripts/phase4_http_smoke.py', 'results': results,
               'passed': sum(row['passed'] for row in results), 'failed': sum(not row['passed'] for row in results)}
