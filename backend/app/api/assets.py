@@ -1,10 +1,12 @@
 """Bounded raw uploads and ID-only private asset serving."""
 from fastapi import APIRouter, Query, Request
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, HTMLResponse
 from starlette.concurrency import run_in_threadpool
 from ..errors import ServiceError
 from ..assets.schemas import CreateAsset, VisualApproval, ImageAcceptance, ModelApprovalRequest, ModelSubmitRequest, PromptVersionRequest
 from ..assets.validation import MAX_IMAGE_BYTES, MAX_MODEL_BYTES
+from ..assets.candidates import CandidateCatalog
+from ..assets.candidate_preview import candidate_preview
 
 
 async def bounded_body(request, limit):
@@ -28,8 +30,30 @@ async def bounded_body(request, limit):
 
 def register_assets(app, service):
     router = APIRouter(prefix='/api/v1/assets')
+    candidates = CandidateCatalog(service)
     def response(value, request):
         return {**value, 'requestId': getattr(request.state, 'request_id', None)}
+
+    # Read-only review material is separate from character images and approvals.
+    # There is deliberately no browser registration/acceptance/model route here.
+    @router.get('/candidates/{candidate_id}')
+    async def candidate(candidate_id: str, request: Request):
+        return response(await run_in_threadpool(candidates.get, candidate_id), request)
+
+    @router.get('/candidates/{candidate_id}/file')
+    async def candidate_file(candidate_id: str):
+        path = await run_in_threadpool(candidates.file_path, candidate_id)
+        item = await run_in_threadpool(candidates.get, candidate_id)
+        return FileResponse(path, media_type='image/png', headers={
+            'Cache-Control': 'private, no-store', 'X-Content-Type-Options': 'nosniff',
+            'ETag': '"' + item['hash'] + '"'})
+
+    @router.get('/candidates/{candidate_id}/preview', response_class=HTMLResponse)
+    async def preview_candidate(candidate_id: str):
+        item = await run_in_threadpool(candidates.get, candidate_id)
+        return HTMLResponse(candidate_preview(item), headers={
+            'Cache-Control': 'private, no-store', 'X-Content-Type-Options': 'nosniff',
+            'Content-Security-Policy': "default-src 'none'; script-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"})
 
     @router.post('/characters', status_code=201)
     async def create(data: CreateAsset, request: Request):
