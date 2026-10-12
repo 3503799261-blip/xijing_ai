@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="2.353" timestamp="2026-10-12T20:18:02.945378+08:00" hostname="wenwen"><testcase classname="backend.tests.test_phase4_neural4d" name="test_api_authorization_and_generation_default_off_emit_no_provider_requests" time="0.281"><failure message="PermissionError: [WinError 5] 拒绝访问。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-linkcheck\\test_api_authorization_and_gen0\\integration-0\\runtime\\assets\\images\\asset-uy1iycea.part' -&gt; 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-linkcheck\\test_api_authorization_and_gen0\\integration-0\\runtime\\assets\\images\\9e58107bd21d14edd98a05186edb085575a7b60859ee114f06081b38105dae3b.png'">setup = &lt;function setup.&lt;locals&gt;.create at 0x000002AF65E26840&gt;
+
+    def test_api_authorization_and_generation_default_off_emit_no_provider_requests(setup):
+        context = setup()
+&gt;       data = prepared(context)
+               ^^^^^^^^^^^^^^^^^
+
+backend\tests\test_phase4_neural4d.py:97: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+backend\tests\test_phase4_neural4d.py:82: in prepared
+    image = context.assets.upload_image(created['assetId'], image_bytes(), 'image/png', 'manual_image', '仅离线原创图片测试')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend\app\assets\service.py:278: in upload_image
+    metadata.update(storageKey=self.save_bytes('images', image, metadata['hash'], 'png'),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;backend.app.assets.service.AssetService object at 0x000002AF65E43010&gt;
+kind = 'images'
+raw = b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00 \x00\x00\x000\x08\x02\x00\x00\x00\xff\xce\xef8\x00\x00\x00GIDATx\x9c...2%\x89\x92DI\xa2$Q\x92(I\x94$J\x12%\x89\x92DI\xa24\x9e\xe8\x07\x89'\x01B\x82\xc7\xa8\x9e\x00\x00\x00\x00IEND\xaeB`\x82"
+digest = '9e58107bd21d14edd98a05186edb085575a7b60859ee114f06081b38105dae3b'
+suffix = 'png'
+
+    def save_bytes(self, kind, raw, digest, suffix):
+        directory = self.root / kind
+        directory.mkdir(parents=True, exist_ok=True)
+        if self.root not in directory.resolve().parents or directory.is_symlink():
+            raise ServiceError('ASSET_STORAGE_INVALID', '资产目录结构无效，未保存文件。', 409)
+        destination = directory / f'{digest}.{suffix}'
+        # Content-addressed files are immutable. In particular, never replace a
+        # same-hash file held open by a Windows reader or another completion.
+        def existing():
+            if (destination.is_symlink() or not destination.is_file()
+                    or self.root not in destination.resolve().parents
+                    or destination.stat().st_size != len(raw)):
+                raise ServiceError('ASSET_FILE_CHANGED', '同Hash资产文件结构或长度已变化，禁止覆盖；请人工核查。', 409)
+            if hashlib.sha256(destination.read_bytes()).hexdigest() != digest:
+                raise ServiceError('ASSET_FILE_CHANGED', '同Hash资产文件内容已变化，禁止覆盖；请人工核查。', 409)
+            return f'{kind}/{digest}.{suffix}'
+    
+        if destination.exists() or destination.is_symlink():
+            return existing()
+        # Only generated hash filenames reach the filesystem. A same-directory
+        # hard link publishes the fully fsynced file atomically without clobber;
+        # concurrent winners reuse identical bytes instead of os.replace.
+        with tempfile.NamedTemporaryFile(prefix='asset-', suffix='.part', dir=directory, delete=False) as temporary:
+            temporary.write(raw)
+            temporary.flush()
+            os.fsync(temporary.fileno())
+            temporary_path = Path(temporary.name)
+        try:
+            try:
+&gt;               os.link(temporary_path, destination)
+E               PermissionError: [WinError 5] 拒绝访问。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-linkcheck\\test_api_authorization_and_gen0\\integration-0\\runtime\\assets\\images\\asset-uy1iycea.part' -&gt; 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-linkcheck\\test_api_authorization_and_gen0\\integration-0\\runtime\\assets\\images\\9e58107bd21d14edd98a05186edb085575a7b60859ee114f06081b38105dae3b.png'
+
+backend\app\assets\service.py:261: PermissionError</failure></testcase></testsuite></testsuites>

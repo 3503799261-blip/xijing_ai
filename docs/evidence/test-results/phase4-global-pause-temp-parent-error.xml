@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="109" failures="0" skipped="0" tests="109" time="5.042" timestamp="2026-10-12T20:17:08.014558+08:00" hostname="wenwen"><testcase classname="backend.tests.test_phase4_usage" name="test_new_and_missing_ledger_have_unknown_history_not_free_quota" time="0.002"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_fixed_three_cap_includes_verified_historical_attempts[0]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_fixed_three_cap_includes_verified_historical_attempts[1]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_fixed_three_cap_includes_verified_historical_attempts[2]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_fixed_three_cap_includes_verified_historical_attempts[3]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_model_count_must_be_explicit_integer_one[0]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_model_count_must_be_explicit_integer_one[2]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_model_count_must_be_explicit_integer_one[3]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_model_count_must_be_explicit_integer_one[True]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_model_count_must_be_explicit_integer_one[1.0]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_model_count_must_be_explicit_integer_one[None]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_model_count_must_be_explicit_integer_one[1]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_approval_needs_explicit_confirmation_and_verified_credits" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_real_creation_defaults_closed_even_with_approved_payload" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_frozen_approval_rejects_changed_picture_character_prompt_params_or_purpose" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_expired_approval_never_reserves" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_same_key_replay_returns_existing_without_send_right" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_switching_key_does_not_bypass_one_use_approval_or_duplicate_input" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_http_errors_timeouts_and_unknowns_never_refund[FAILED]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_http_errors_timeouts_and_unknowns_never_refund[UNKNOWN]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_http_errors_timeouts_and_unknowns_never_refund[PENDING_RECONCILIATION]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_unreconciled_result_blocks_all_styles_approvals_reservations_and_unsent_claims[UNKNOWN]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_unreconciled_result_blocks_all_styles_approvals_reservations_and_unsent_claims[PENDING_RECONCILIATION]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_authoritative_reconciliation_clears_temporary_gate_without_refund_or_send[PROCESSING]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_authoritative_reconciliation_clears_temporary_gate_without_refund_or_send[FAILED]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_authoritative_reconciliation_clears_temporary_gate_without_refund_or_send[SUCCEEDED]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_concurrent_workers_cannot_reserve_or_claim_after_global_unknown" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_definite_failed_task_can_only_retry_with_new_approval_and_new_quota" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_restart_or_success_before_failed_local_save_requires_reconciliation[RESERVED]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_restart_or_success_before_failed_local_save_requires_reconciliation[ATTEMPT_STARTED]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_restart_or_success_before_failed_local_save_requires_reconciliation[UNKNOWN]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_known_submitted_uuid_survives_recovery_and_repeated_query_completion" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_mark_started_is_atomic_even_when_two_workers_race" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_four_concurrent_distinct_requests_cannot_reserve_four_slots" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_concurrent_same_key_reserves_once" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_separate_processes_compete_for_last_slot" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_history_cannot_reset_and_database_constraints_prevent_erasure" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_corrupt_ledger_fails_closed_without_private_path_leak" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_creation_halt_is_persistent_and_cannot_be_automatically_reset" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_operational_http_log_is_separate_from_creation_quota_and_mock_counts" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_missing_provider_id_never_becomes_success" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_approval_send_claim_and_request_audit_cannot_be_reset_in_database" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_same_frozen_json_different_key_order_is_same_payload" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_trusted_frozen_payload_is_hash_checked_copy_and_not_public_response" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_api_authorization_and_generation_default_off_emit_no_provider_requests" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_configured_key_does_not_replace_verification_history_or_approval" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_missing_key_never_reaches_transport_even_when_protocol_enabled" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_successful_creation_multipart_fixed_single_model_and_local_replay" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_provider_rejects_changed_image_before_claiming_or_sending" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_frozen_approval_rechecks_authoritative_asset_drift_before_creation[purpose]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_frozen_approval_rechecks_authoritative_asset_drift_before_creation[source]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_frozen_approval_rechecks_authoritative_asset_drift_before_creation[image]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_frozen_approval_rechecks_authoritative_asset_drift_before_creation[prompt]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_changed_authoritative_phase3_result_invalidates_frozen_asset" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_concurrent_same_attempt_creates_only_one_http_request" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_uncertain_create_preserves_quota_and_blocks_recreation[timeout]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_uncertain_create_preserves_quota_and_blocks_recreation[http_500]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_uncertain_create_preserves_quota_and_blocks_recreation[http_408]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_uncertain_create_preserves_quota_and_blocks_recreation[invalid_json]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_uncertain_create_preserves_quota_and_blocks_recreation[list_json]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_global_pause_blocks_other_style_but_allows_original_query_and_replay[UNKNOWN]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_global_pause_blocks_other_style_but_allows_original_query_and_replay[PENDING_RECONCILIATION]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_provider_cannot_send_already_reserved_other_style_after_unknown" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_multiple_returned_models_halt_future_creations_even_with_new_input" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_direct_provider_cannot_send_same_claim_twice" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_owner_lock_blocks_second_worker_and_startup_recovery_never_resends" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_signed_download_never_forwards_authorization_or_follows_redirect" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_failed_download_is_recorded_without_signed_url_or_secret[http_404]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_failed_download_is_recorded_without_signed_url_or_secret[timeout]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_last_slot_submission_replay_returns_original_even_when_quota_exhausted" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_received_uuid_but_failed_local_save_halts_new_creations" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_conflicting_uuid_fields_never_hide_additional_provider_model" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_management_authorization_rejects_untrusted_token_without_internal_errors[None]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_management_authorization_rejects_untrusted_token_without_internal_errors[]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_management_authorization_rejects_untrusted_token_without_internal_errors[wrong-ascii-token]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_management_authorization_rejects_untrusted_token_without_internal_errors[\u9519\u8bef\u7684\u6388\u6743\u5185\u5bb9]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_management_authorization_rejects_untrusted_token_without_internal_errors[123]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_explicit_refresh_keeps_original_job_and_links_validated_real_glb_fixture" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_corrupt_download_never_becomes_ready_or_trigger_new_model" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_malformed_query_status_does_not_claim_success_or_real_progress[False]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_malformed_query_status_does_not_claim_success_or_real_progress[True]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_malformed_query_status_does_not_claim_success_or_real_progress[0]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_malformed_query_status_does_not_claim_success_or_real_progress[None]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_query_throttle_restart_race_and_explicit_continuation_preserve_counts" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_each_style_uses_confirmed_image_and_single_model_server_preset[chibi-100000]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_each_style_uses_confirmed_image_and_single_model_server_preset[realistic-500000]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_styles_share_one_character_but_only_three_total_creation_attempts" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_concurrent_mixed_style_submissions_still_share_atomic_three_cap" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_approval_cannot_rebind_other_style_version_or_character[styleMode-chibi]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_approval_cannot_rebind_other_style_version_or_character[styleVersion-2]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_approval_cannot_rebind_other_style_version_or_character[characterId-11111111-1111-1111-1111-111111111111]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_approval_cannot_rebind_other_style_version_or_character[styleVersion-True]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_stale_approval_without_style_binding_never_uses_new_preset" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_free_prompt_cultural_review_gate_cannot_be_bypassed_by_generation_approval" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_provider_never_accepts_client_selected_multipart_parameters" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_new_prompt_version_invalidates_old_unsent_approval_before_quota_or_send" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_new_prompt_version_does_not_invalidate_other_style_approval" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_sent_same_key_replay_after_prompt_edit_keeps_original_job_and_download" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_reserved_but_unsent_same_key_does_not_bypass_new_prompt_version" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_sent_key_cannot_replay_another_approval_or_style" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_real_or_custom_provider_cannot_choose_fresh_noncanonical_ledger[None]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_real_or_custom_provider_cannot_choose_fresh_noncanonical_ledger[transport1]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_switching_mock_provider_to_real_transport_rechecks_canonical_before_send" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_unsent_approval_rejects_changed_or_unverified_cost_before_reserve_and_send[81]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_unsent_approval_rejects_changed_or_unverified_cost_before_reserve_and_send[1000]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_unsent_approval_rejects_changed_or_unverified_cost_before_reserve_and_send[None]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_sent_same_key_replay_after_price_change_only_reads_original_task" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_custom_transport_with_isolated_canonical_fixture_is_not_logged_as_mock" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase><testcase classname="backend.tests.test_phase4_neural4d" name="test_custom_transport_does_not_bypass_private_download_address_check" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'&quot;">self = WindowsPath('D:/京剧/.runtime/tests/phase4-pause-20261012-safety')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\京剧\\.runtime\\tests\\phase4-pause-20261012-safety'
+
+C:\Users\35037\Lib\pathlib.py:1116: FileNotFoundError</error></testcase></testsuite></testsuites>

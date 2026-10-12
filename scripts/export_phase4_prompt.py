@@ -33,6 +33,8 @@ def main():
                 found['02-approved-development-request.txt'] = (line, text)
             if text.startswith('# 戏境 AI — Phase 4 双风格角色生成补充开发指令'):
                 found['06-dual-style-user-request.txt'] = (line, text)
+            if text.startswith('请按照以下顺序制定并执行Phase 4真实建模准备与调用流程：'):
+                found['07-three-attempt-modeling-plan-request.txt'] = (line, text)
     if not {'00-original-user-request.txt', '01-final-architecture-revision.txt', '02-approved-development-request.txt'}.issubset(found):
         raise ValueError('Missing exact public Phase 4 user requests; do not invent evidence.')
     args.output.mkdir(parents=True, exist_ok=True)

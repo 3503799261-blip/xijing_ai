@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="6" time="2.566" timestamp="2026-10-12T20:12:11.154274+08:00" hostname="wenwen"><testcase classname="backend.tests.test_phase4_usage" name="test_unreconciled_result_blocks_all_styles_approvals_reservations_and_unsent_claims[UNKNOWN]" time="0.576"><failure message="KeyError: 'creationPaused'">tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Packages/sandbox.{a18a77ed-f18f-4d2f-a6cf-2719b1d9e98d}/AC/Temp/pytest-of-35037/pytest-0/test_unreconciled_result_block0')
+unknown_state = 'UNKNOWN'
+
+    @pytest.mark.parametrize('unknown_state', ['UNKNOWN', 'PENDING_RECONCILIATION'])
+    def test_unreconciled_result_blocks_all_styles_approvals_reservations_and_unsent_claims(tmp_path, unknown_state):
+        value = manager(tmp_path)
+        chibi = {**payload(0), 'styleMode': 'chibi'}
+        realistic = {**payload(1), 'styleMode': 'realistic'}
+        future = {**payload(2), 'styleMode': 'realistic'}
+        first_approval = approved(value, chibi)
+        first = value.reserve('unknown-chibi', first_approval['approvalId'], chibi, 'technical', True, True)
+        second = reserved(value, 'already-reserved-realistic', realistic)
+        future_approval = approved(value, future)
+        value.mark_started(first['attemptId'])
+        value.finish(first['attemptId'], unknown_state, error_code='OFFLINE_RESULT_UNKNOWN')
+    
+        summary = value.summary()
+&gt;       assert summary['creationPaused'] is True
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'creationPaused'
+
+backend\tests\test_phase4_usage.py:176: KeyError</failure></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_unreconciled_result_blocks_all_styles_approvals_reservations_and_unsent_claims[PENDING_RECONCILIATION]" time="0.101"><failure message="KeyError: 'creationPaused'">tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Packages/sandbox.{a18a77ed-f18f-4d2f-a6cf-2719b1d9e98d}/AC/Temp/pytest-of-35037/pytest-0/test_unreconciled_result_block1')
+unknown_state = 'PENDING_RECONCILIATION'
+
+    @pytest.mark.parametrize('unknown_state', ['UNKNOWN', 'PENDING_RECONCILIATION'])
+    def test_unreconciled_result_blocks_all_styles_approvals_reservations_and_unsent_claims(tmp_path, unknown_state):
+        value = manager(tmp_path)
+        chibi = {**payload(0), 'styleMode': 'chibi'}
+        realistic = {**payload(1), 'styleMode': 'realistic'}
+        future = {**payload(2), 'styleMode': 'realistic'}
+        first_approval = approved(value, chibi)
+        first = value.reserve('unknown-chibi', first_approval['approvalId'], chibi, 'technical', True, True)
+        second = reserved(value, 'already-reserved-realistic', realistic)
+        future_approval = approved(value, future)
+        value.mark_started(first['attemptId'])
+        value.finish(first['attemptId'], unknown_state, error_code='OFFLINE_RESULT_UNKNOWN')
+    
+        summary = value.summary()
+&gt;       assert summary['creationPaused'] is True
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'creationPaused'
+
+backend\tests\test_phase4_usage.py:176: KeyError</failure></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_authoritative_reconciliation_clears_temporary_gate_without_refund_or_send[PROCESSING]" time="0.096"><failure message="KeyError: 'creationPaused'">tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Packages/sandbox.{a18a77ed-f18f-4d2f-a6cf-2719b1d9e98d}/AC/Temp/pytest-of-35037/pytest-0/test_authoritative_reconciliat0')
+resolved_state = 'PROCESSING'
+
+    @pytest.mark.parametrize('resolved_state', ['PROCESSING', 'FAILED', 'SUCCEEDED'])
+    def test_authoritative_reconciliation_clears_temporary_gate_without_refund_or_send(tmp_path, resolved_state):
+        value = manager(tmp_path)
+        first = reserved(value, 'unknown-original', payload(0))
+        pending = reserved(value, 'unsent-existing', payload(1))
+        value.mark_started(first['attemptId'])
+        value.finish(first['attemptId'], 'UNKNOWN', error_code='OFFLINE_RESULT_UNKNOWN')
+        before = value.summary()
+&gt;       assert before['creationPaused']
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'creationPaused'
+
+backend\tests\test_phase4_usage.py:201: KeyError</failure></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_authoritative_reconciliation_clears_temporary_gate_without_refund_or_send[FAILED]" time="0.096"><failure message="KeyError: 'creationPaused'">tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Packages/sandbox.{a18a77ed-f18f-4d2f-a6cf-2719b1d9e98d}/AC/Temp/pytest-of-35037/pytest-0/test_authoritative_reconciliat1')
+resolved_state = 'FAILED'
+
+    @pytest.mark.parametrize('resolved_state', ['PROCESSING', 'FAILED', 'SUCCEEDED'])
+    def test_authoritative_reconciliation_clears_temporary_gate_without_refund_or_send(tmp_path, resolved_state):
+        value = manager(tmp_path)
+        first = reserved(value, 'unknown-original', payload(0))
+        pending = reserved(value, 'unsent-existing', payload(1))
+        value.mark_started(first['attemptId'])
+        value.finish(first['attemptId'], 'UNKNOWN', error_code='OFFLINE_RESULT_UNKNOWN')
+        before = value.summary()
+&gt;       assert before['creationPaused']
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'creationPaused'
+
+backend\tests\test_phase4_usage.py:201: KeyError</failure></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_authoritative_reconciliation_clears_temporary_gate_without_refund_or_send[SUCCEEDED]" time="0.094"><failure message="KeyError: 'creationPaused'">tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Packages/sandbox.{a18a77ed-f18f-4d2f-a6cf-2719b1d9e98d}/AC/Temp/pytest-of-35037/pytest-0/test_authoritative_reconciliat2')
+resolved_state = 'SUCCEEDED'
+
+    @pytest.mark.parametrize('resolved_state', ['PROCESSING', 'FAILED', 'SUCCEEDED'])
+    def test_authoritative_reconciliation_clears_temporary_gate_without_refund_or_send(tmp_path, resolved_state):
+        value = manager(tmp_path)
+        first = reserved(value, 'unknown-original', payload(0))
+        pending = reserved(value, 'unsent-existing', payload(1))
+        value.mark_started(first['attemptId'])
+        value.finish(first['attemptId'], 'UNKNOWN', error_code='OFFLINE_RESULT_UNKNOWN')
+        before = value.summary()
+&gt;       assert before['creationPaused']
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'creationPaused'
+
+backend\tests\test_phase4_usage.py:201: KeyError</failure></testcase><testcase classname="backend.tests.test_phase4_usage" name="test_concurrent_workers_cannot_reserve_or_claim_after_global_unknown" time="0.182"><failure message="AssertionError: assert ['NEURAL4D_QU...safe-success'] == ['NEURAL4D_RE...ION_REQUIRED']&#10;  &#10;  At index 0 diff: 'NEURAL4D_QUOTA_EXHAUSTED' != 'NEURAL4D_RECONCILIATION_REQUIRED'&#10;  Use -v to get more diff">tmp_path = WindowsPath('C:/Users/35037/AppData/Local/Packages/sandbox.{a18a77ed-f18f-4d2f-a6cf-2719b1d9e98d}/AC/Temp/pytest-of-35037/pytest-0/test_concurrent_workers_cannot0')
+
+    def test_concurrent_workers_cannot_reserve_or_claim_after_global_unknown(tmp_path):
+        value = manager(tmp_path)
+        first = reserved(value, 'unknown-source', payload(0))
+        waiting = reserved(value, 'waiting-source', payload(1))
+        approvals = [approved(value, payload(i)) for i in (2, 3)]
+        value.mark_started(first['attemptId'])
+        value.finish(first['attemptId'], 'UNKNOWN', error_code='OFFLINE_UNKNOWN')
+        barrier = Barrier(3)
+    
+        def contender(number):
+            ledger = UsageManager(value.path)
+            barrier.wait()
+            try:
+                if number == 2:
+                    ledger.mark_started(waiting['attemptId'])
+                else:
+                    ledger.reserve(f'blocked-worker-{number}', approvals[number]['approvalId'], payload(number + 2), 'technical', True, True)
+                return 'unsafe-success'
+            except ServiceError as error:
+                return error.code
+    
+        with ThreadPoolExecutor(max_workers=3) as workers:
+            outcomes = list(workers.map(contender, range(3)))
+&gt;       assert outcomes == ['NEURAL4D_RECONCILIATION_REQUIRED'] * 3
+E       AssertionError: assert ['NEURAL4D_QU...safe-success'] == ['NEURAL4D_RE...ION_REQUIRED']
+E         
+E         At index 0 diff: 'NEURAL4D_QUOTA_EXHAUSTED' != 'NEURAL4D_RECONCILIATION_REQUIRED'
+E         Use -v to get more diff
+
+backend\tests\test_phase4_usage.py:238: AssertionError</failure></testcase></testsuite></testsuites>

@@ -16,5 +16,8 @@
   "cultureAlignmentVerified": false,
   "status": "PENDING_CHARACTER_ASSOCIATION_AND_REVIEW",
   "modelCreated": false,
-  "paidApiCalls": 0
+  "paidApiCalls": 0,
+  "plannedUse": "FIRST_CHIBI_TECHNICAL_VALIDATION",
+  "latestUserSelection": "就用这个图片",
+  "selectionScope": "Selection for preparation only; character association, cultural alignment, frozen prompt and single submission approval remain pending."
 }

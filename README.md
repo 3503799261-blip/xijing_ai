@@ -144,6 +144,8 @@ node scripts/phase2_frontend_test.mjs --output docs/evidence/test-results/local-
 
 ## Phase 4数字IP中心：当前PARTIAL交付
 
+2026-10-12追加 [三次真实建模计划](docs/reports/phase-04-real-modeling-plan.md)：Q版技术验证、写实主展示、企业案例逐次确认、逐次停止；全部既往调用仍共享3次硬上限。已补齐全局UNKNOWN跨风格暂停，最终后端420项离线通过；仅执行1次真实只读余额鉴权，尚未提交模型。历史仍未知、图片待角色关联与接受、费用未核实，因此创建保持关闭。
+
 打开 [数字IP中心](http://127.0.0.1:8000/about.html#ai-workshop-model)。本阶段复用已确认的Phase 3角色任务，不迁移前端框架，也不重新执行Agent。`Q版卡通(chibi)` 与 `写实国风(realistic)` 是资产视觉风格；个人/企业是用途模式，两者独立。相同文化方案的两种风格共享characterId和文化来源快照，各自保存assetId、styleVersion、Prompt、图片和模型记录。切换风格只读取已登记版本，不自动生成、不覆盖另一种风格。
 
 已实现本地角色登记、固定模板视觉Prompt、人工视觉确认、实际图片导入/Hash/接受、合法已有GLB导入与查看、SQLite资产记录，以及真实建模服务的默认关闭门禁和离线Mock测试。自由编辑Prompt会新建不可覆盖版本，并锁为待文化复核草稿；必须经既有Agent流程重新审校并确认新任务，不能靠客户端声明或单纯视觉确认解除文化门禁。旧图片、模型和已发送任务保留历史归属。

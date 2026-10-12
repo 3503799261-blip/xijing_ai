@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-12T12:49:05.639195+00:00",
+  "kind": "LOCAL_FILES_ONLY_NO_NETWORK",
+  "secretScan": {
+    "scope": "Tracked and prospective tracked UTF-8 source/docs/evidence; known credential patterns and nonempty secret template assignments. Not a guarantee of universal secret detection.",
+    "filesListed": 509,
+    "suspectedLocations": []
+  },
+  "missingDocumentLinks": [],
+  "backendJUnit": {
+    "tests": "420",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "30.304"
+  },
+  "styleReadbackPassed": true,
+  "chibiRestored": true,
+  "postRestartGlbReady": true,
+  "newBrowserConsoleErrorsOrWarnings": [],
+  "promptFileHashesValid": true,
+  "publicPromptRecords": 617,
+  "candidateImageNotCopiedToRepository": true
+}
