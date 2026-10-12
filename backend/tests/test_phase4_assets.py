@@ -1,5 +1,6 @@
 """OFFLINE only: synthetic TaskStore artifacts are never demonstration evidence."""
 import copy
+import hashlib
 import io
 import json
 import struct
@@ -562,3 +563,36 @@ def test_generated_model_registration_atomic_under_concurrent_retrievals(tmp_pat
         jobs = [workers.submit(svc.register_generated_model, created['assetId'], image['imageId'], glb(), 'concurrent-offline-task', '离线测试') for _ in range(4)]
         ids = [job.result()['modelId'] for job in jobs]
     assert len(set(ids)) == 1 and len(svc.list_models(created['assetId'])) == 1
+
+
+def test_same_hash_file_reused_while_open_and_tamper_is_not_silently_repaired(tmp_path):
+    svc, store = service(tmp_path)
+    raw, digest = glb(), hashlib.sha256(glb()).hexdigest()
+    key = svc.save_bytes('models', raw, digest, 'glb')
+    path = svc.root / key
+    original_identity = path.stat().st_ino
+    with path.open('rb') as reader:
+        assert svc.save_bytes('models', raw, digest, 'glb') == key
+        assert reader.read() == raw and path.stat().st_ino == original_identity
+    corrupt = bytearray(raw)
+    corrupt[-1] ^= 1
+    path.write_bytes(corrupt)
+    with pytest.raises(ServiceError, match='ASSET_FILE_CHANGED'):
+        svc.save_bytes('models', raw, digest, 'glb')
+    assert path.read_bytes() == bytes(corrupt)
+    assert list(path.parent.glob('*.part')) == []
+
+
+def test_concurrent_hash_publish_is_atomic_no_overwrite_and_cleans_temporary_files(tmp_path):
+    from concurrent.futures import ThreadPoolExecutor
+    from threading import Barrier
+    svc, store = service(tmp_path)
+    raw, digest, barrier = glb(), hashlib.sha256(glb()).hexdigest(), Barrier(8)
+    def save():
+        barrier.wait(timeout=5)
+        return svc.save_bytes('models', raw, digest, 'glb')
+    with ThreadPoolExecutor(max_workers=8) as workers:
+        keys = list(workers.map(lambda _: save(), range(8)))
+    assert len(set(keys)) == 1 and (svc.root / keys[0]).read_bytes() == raw
+    assert list((svc.root / 'models').glob('*.part')) == []
+    assert len(list((svc.root / 'models').glob('*.glb'))) == 1

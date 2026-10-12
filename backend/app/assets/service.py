@@ -235,14 +235,32 @@ class AssetService:
         if self.root not in directory.resolve().parents or directory.is_symlink():
             raise ServiceError('ASSET_STORAGE_INVALID', '资产目录结构无效，未保存文件。', 409)
         destination = directory / f'{digest}.{suffix}'
-        # Only our generated hash filenames reach the filesystem; never a caller path.
+        # Content-addressed files are immutable. In particular, never replace a
+        # same-hash file held open by a Windows reader or another completion.
+        def existing():
+            if (destination.is_symlink() or not destination.is_file()
+                    or self.root not in destination.resolve().parents
+                    or destination.stat().st_size != len(raw)):
+                raise ServiceError('ASSET_FILE_CHANGED', '同Hash资产文件结构或长度已变化，禁止覆盖；请人工核查。', 409)
+            if hashlib.sha256(destination.read_bytes()).hexdigest() != digest:
+                raise ServiceError('ASSET_FILE_CHANGED', '同Hash资产文件内容已变化，禁止覆盖；请人工核查。', 409)
+            return f'{kind}/{digest}.{suffix}'
+
+        if destination.exists() or destination.is_symlink():
+            return existing()
+        # Only generated hash filenames reach the filesystem. A same-directory
+        # hard link publishes the fully fsynced file atomically without clobber;
+        # concurrent winners reuse identical bytes instead of os.replace.
         with tempfile.NamedTemporaryFile(prefix='asset-', suffix='.part', dir=directory, delete=False) as temporary:
             temporary.write(raw)
             temporary.flush()
             os.fsync(temporary.fileno())
             temporary_path = Path(temporary.name)
         try:
-            os.replace(temporary_path, destination)
+            try:
+                os.link(temporary_path, destination)
+            except FileExistsError:
+                return existing()
         finally:
             temporary_path.unlink(missing_ok=True)
         return f'{kind}/{digest}.{suffix}'
