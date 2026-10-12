@@ -1,0 +1,24 @@
+{
+  "scope": "FIRST_CHIBI_TECHNICAL_VALIDATION",
+  "styleMode": "chibi",
+  "mimeType": "image/jpeg",
+  "expectedSourceHash": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+  "sourceNote": {
+    "userStatement": "百度公开数据",
+    "sourceUrl": null,
+    "author": null,
+    "verified": false,
+    "notes": "仅记录本次用户声明。百度检索或公开展示不能证明作品作者及使用许可；与旧图小红书来源无关。"
+  },
+  "licenseNote": {
+    "status": "UNVERIFIED_NEW_IMAGE",
+    "permissionEvidence": null,
+    "usePermission": null,
+    "editPermission": null,
+    "externalProviderProcessingPermission": null,
+    "derivative3DPermission": null,
+    "publicRedistributionPermission": null,
+    "commercialPermission": null,
+    "notes": "新图未提供许可，不继承旧图非商业使用编辑许可。仅在本地作候选审核，不提交供应商或公开分发图片。"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-12T14:15:32.778779+00:00",
+  "kind": "LOCAL_READ_ONLY_FINAL_EVIDENCE_CHECK",
+  "sourceHashMatches": true,
+  "promptSnapshotHashValid": true,
+  "originalPixelsUnchanged": true,
+  "formalAssetCountsUnchanged": true,
+  "globalLimit": 3,
+  "historicalUsage": null,
+  "remaining": null,
+  "localCreationAttempts": 0,
+  "modelApprovals": 0,
+  "operationalRequestCounts": [
+    {
+      "operation": "verify",
+      "isMock": false,
+      "count": 1
+    }
+  ],
+  "supplierApiCallsThisTurn": 0,
+  "desktopOverflow": false,
+  "mobileOverflow": false,
+  "consoleErrors": [],
+  "junit": {
+    "phase4-bluewhite-candidates-first.xml": {
+      "tests": "49",
+      "failures": "1",
+      "errors": "0",
+      "time": "3.619"
+    },
+    "phase4-bluewhite-full.xml": {
+      "tests": "469",
+      "failures": "0",
+      "errors": "0",
+      "time": "38.894"
+    },
+    "phase4-bluewhite-candidates-final.xml": {
+      "tests": "49",
+      "failures": "0",
+      "errors": "0",
+      "time": "6.159"
+    }
+  },
+  "publicPromptRecords": 721,
+  "promptExportHashesValid": true,
+  "suspectedCredentialLocations": [],
+  "missingDocumentLinks": [],
+  "privateCandidateImageNotInRepository": true,
+  "note": "Pattern-based credential check is not a guarantee of universal secret detection. No private env values or account balance read."
+}

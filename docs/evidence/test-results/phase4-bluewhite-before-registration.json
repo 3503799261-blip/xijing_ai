@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-12T13:42:37.190096+00:00",
+  "kind": "LOCAL_READ_ONLY_NO_SUPPLIER_CALLS",
+  "globalLimit": 3,
+  "historicalUsageVerified": false,
+  "historicalUsed": null,
+  "localOccupiedAttempts": 0,
+  "globalRemaining": null,
+  "permanentHalt": false,
+  "oldTasks": [],
+  "unresolvedTaskCount": 0,
+  "nonterminalTaskCount": 0,
+  "supplierHistoryChecked": false,
+  "operationalRequests": [
+    {
+      "operation": "verify",
+      "is_mock": 0,
+      "count": 1
+    }
+  ],
+  "configuration": {
+    "keyConfigured": true,
+    "adminTokenConfigured": false,
+    "generationEnabled": false,
+    "protocolVerified": false,
+    "estimatedCredits": null
+  },
+  "registeredLocalAssets": [
+    {
+      "characterId": "120653e0-6775-511a-9bf5-53d5307275e0",
+      "assetId": "e9fd199c-65b6-4bb0-a930-9d03d749930a",
+      "sourceTaskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "name": "青旌将·霄羽",
+      "styleMode": "chibi",
+      "styleVersion": 1,
+      "purpose": "双风格本地联调验证，非最终建模素材"
+    },
+    {
+      "characterId": "120653e0-6775-511a-9bf5-53d5307275e0",
+      "assetId": "ba26e5fb-4881-4754-8222-94305eb90109",
+      "sourceTaskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "name": "青旌将·霄羽",
+      "styleMode": "realistic",
+      "styleVersion": 1,
+      "purpose": "双风格本地联调验证，非最终建模素材"
+    }
+  ],
+  "candidateImageActual": {
+    "exists": true,
+    "hashMatchesRecorded": false,
+    "sha256": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+    "size": 575200,
+    "width": 1049,
+    "height": 1398,
+    "format": "JPEG"
+  },
+  "candidateCharacterId": null,
+  "candidateSourceTaskId": null,
+  "candidateImageAccepted": false,
+  "paidApiCallsThisCheck": 0,
+  "submissionReadiness": "NOT_READY_REQUIRES_HISTORY_CHARACTER_IMAGE_PROMPT_COST_AND_SINGLE_APPROVAL"
+}

@@ -35,6 +35,8 @@ def main():
                 found['06-dual-style-user-request.txt'] = (line, text)
             if text.startswith('请按照以下顺序制定并执行Phase 4真实建模准备与调用流程：'):
                 found['07-three-attempt-modeling-plan-request.txt'] = (line, text)
+            if text.startswith('Phase 4 第一次Neural4D真实建模的Q版概念图已更新。'):
+                found['08-bluewhite-concept-update-request.txt'] = (line, text)
     if not {'00-original-user-request.txt', '01-final-architecture-revision.txt', '02-approved-development-request.txt'}.issubset(found):
         raise ValueError('Missing exact public Phase 4 user requests; do not invent evidence.')
     args.output.mkdir(parents=True, exist_ok=True)

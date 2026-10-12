@@ -1,18 +1,18 @@
 {
-  "exportedAt": "2026-10-12T12:48:14.552794+00:00",
-  "sourceSnapshotSha256": "178ed62f37e56dbcdf6ddb2465fdf966bdf8c597158a71218440263c98e6f437",
-  "publicRecords": 617,
+  "exportedAt": "2026-10-12T14:13:29.724380+00:00",
+  "sourceSnapshotSha256": "464d84db1378d809a9042d8b21d95ad26b036eb581906cc52e324de0055d5f22",
+  "publicRecords": 721,
   "omittedPartialLine": false,
   "skipped": {
-    "event_msg": 1122,
-    "token_usage_record": 287,
-    "reasoning": 275,
-    "world_state": 14,
-    "compacted": 4,
-    "turn_context": 10,
-    "inter_agent_communication_metadata": 108,
-    "agent_message": 108,
-    "private_message": 10
+    "event_msg": 1328,
+    "token_usage_record": 335,
+    "reasoning": 332,
+    "world_state": 17,
+    "compacted": 5,
+    "turn_context": 13,
+    "inter_agent_communication_metadata": 122,
+    "agent_message": 122,
+    "private_message": 12
   },
   "files": {
     "00-original-user-request.txt": "8325c4d5895bfb71dde386815ef767d82bd143d0925cb4037476bdec66cfa6ee",
@@ -20,7 +20,8 @@
     "02-approved-development-request.txt": "820b6839f3317b4d8e0ecedcb587e923713cacfb96c1db94b0aa3bc71f524b15",
     "06-dual-style-user-request.txt": "c770790c5841e68601b777c5333f43746274ba7d6d43b4934f57697ee3783993",
     "07-three-attempt-modeling-plan-request.txt": "ab3f5af5c0dce7ce3878fc83fe752e3b46351477700c8c53aa1f24abb4942fcb",
-    "03-public-conversation.jsonl": "abfbf5d1a44b06e50283a8f340bb8c3199ec48d15ff7b97575263fd6eafaddab"
+    "08-bluewhite-concept-update-request.txt": "dbc8cafadc6752c2e8a8250eceb39fd2efe67f2b7f1a142dd16515259387f0a4",
+    "03-public-conversation.jsonl": "e3a26ed647155dc878dc231935bf361f801910dfcad289eb3f71502e484e0f2c"
   },
   "scope": "Actual public user messages, assistant commentary/final and matched tool evidence. No hidden reasoning, system/developer content or child internal messages. Snapshot; future records not included."
 }

@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-12T14:03:40.793Z",
+  "kind": "ACTUAL_BROWSER_READ_ONLY_CANDIDATE_PREVIEW",
+  "desktop": {
+    "candidateId": "fa0cd555-1daf-44a3-8825-ee6f5eb8b79e",
+    "image": {
+      "complete": true,
+      "height": 1398,
+      "src": "http://127.0.0.1:8000/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file",
+      "width": 1049
+    },
+    "overflow": false,
+    "previewHash": "879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703",
+    "scripts": 0,
+    "sourceHash": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+    "title": "戏境 AI · 概念图待审预览",
+    "url": "http://127.0.0.1:8000/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/preview",
+    "viewport": {
+      "height": 1080,
+      "width": 1920
+    }
+  },
+  "mobile": {
+    "candidateId": "fa0cd555-1daf-44a3-8825-ee6f5eb8b79e",
+    "image": {
+      "complete": true,
+      "height": 1398,
+      "src": "http://127.0.0.1:8000/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file",
+      "width": 1049
+    },
+    "overflow": false,
+    "scripts": 0,
+    "scrollWidth": 360,
+    "sourceHash": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+    "url": "http://127.0.0.1:8000/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/preview",
+    "viewport": {
+      "height": 812,
+      "width": 375
+    }
+  },
+  "consoleErrors": [],
+  "screenshotPaths": [
+    "D:/京剧/.runtime/phase4-bluewhite-screenshots/candidate-desktop-1920.png",
+    "D:/京剧/.runtime/phase4-bluewhite-screenshots/candidate-mobile-375.png"
+  ],
+  "beforeFixEvidence": "phase4-bluewhite-browser-before-mobile-fix.json",
+  "afterFixMobileOverflow": false,
+  "imagePublicationPermissionVerified": false,
+  "screenshotsKeptPrivate": true,
+  "physicalTouchVerified": false,
+  "modelCreated": false,
+  "providerCalls": 0
+}

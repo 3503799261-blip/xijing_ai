@@ -9,6 +9,7 @@
 - `04-export-metadata.json`：导出范围、文件Hash和真实快照时间。
 - `06-dual-style-user-request.txt`：用户实际追加的“Phase 4双风格角色生成补充开发指令V1.0”原文。
 - `07-three-attempt-modeling-plan-request.txt`：用户真实追加的Q版技术验证、写实主展示、企业案例顺序和逐次停止要求。
+- `08-bluewhite-concept-update-request.txt`：同路径替换新蓝白概念图、重新Hash/审核/冻结、禁止提交模型的真实需求原文。
 
 由 `scripts/export_phase4_prompt.py` 从明确指定的当前会话导出，后续开发结束再更新快照。导出器剔除非公开内容并脱敏常见凭证；比赛材料发布前仍需检查。
 
@@ -36,9 +37,19 @@
 
 ## 已提供但尚待关联与核验的概念图
 
-本地候选文件为 `D:\京剧\概念图.jpg`，用户指定Q版风格，600×750、87358字节，SHA-256为 `37aaa21e1c03d9bc35bcfc995002e42a200bad987b45766d3b1497b418472c3d`。来源与许可声明记录在 [候选图片元数据](../../evidence/test-results/phase4-concept-candidate.json)。
+历史候选文件曾为 `D:\京剧\概念图.jpg`，用户指定Q版风格，600×750、87358字节，SHA-256为 `37aaa21e1c03d9bc35bcfc995002e42a200bad987b45766d3b1497b418472c3d`。原元数据保存在 [版本1历史记录](../../evidence/test-results/phase4-concept-candidate-v1.json)；当前原路径已被用户替换，不能继续将这段历史描述称为当前图片。
 
 该记录是用户对小红书账号来源、非商业使用及修改权限的声明；独立许可证据、公开再分发和商用许可尚未核实。其 `sourceTaskId=null`、`imageAccepted=false`、`cultureAlignmentVerified=false`，状态为 `PENDING_CHARACTER_ASSOCIATION_AND_REVIEW`。它尚未关联并确认实际角色，不能称为通过文化审校的最终概念图，也没有创建模型。本索引没有复制该图片进公开仓库或把许可声明改成“已认证”。
+
+## 新蓝白概念图的真实增量过程
+
+用户替换同一原路径后，本轮实际读取1049×1398的新蓝白Q版图并计算原SHA-256 `9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f`。用户仅回复“百度公开数据”，因此记录原文但不继承旧图许可，不猜测作者或已确认角色。真实角色JSON对照发现唯一已确认“青旌将·霄羽”与新图服饰、配色、头饰及毛笔不一致，保留未关联状态。
+
+增量实现独立`concept_candidates`、不可覆盖图片快照、历史只保留元数据以及只读预览，不修改Phase 3协议或模型额度。候选版本2的原JPEG与无损PNG解码像素一致，没有改背景；`candidate_bluewhite_review_v1`是第一个实际待审草稿，绑定图像Hash，`approved=false`。没有虚构已批准Prompt、文化审校或供应商返回。
+
+真实首轮离线48通过/1失败：测试要求显式禁止脚本的CSP声明，补齐后全量469通过。实际手机预览发现Prompt版本名横向溢出，增加标题换行和卡片最小宽度约束，保存修复前后证据，专项49通过，手机刷新后无溢出。实际本地HTTP14通过、前端离线35通过；本轮供应商调用0、配额预留0。证据、命令、风险、Hash和真实功能提交见 [本轮报告](../../reports/phase-04-bluewhite-candidate-review.md)。
+
+新图与包含图片的本机截图没有复制到公开Git仓库；文化对照、脱敏Hash与测试记录可归档。真实原始对话仍由导出器保存，而不是以此摘要替代。
 
 ## 真实失败、修复与证据索引
 

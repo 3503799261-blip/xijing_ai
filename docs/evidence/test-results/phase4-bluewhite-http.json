@@ -1,0 +1,143 @@
+{
+  "checkedAt": "2026-10-12T13:58:59.815698+00:00",
+  "kind": "ACTUAL_LOCAL_HTTP_GET_ONLY",
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "current_candidate_metadata",
+      "passed": true,
+      "facts": {
+        "status": 200,
+        "candidateId": "fa0cd555-1daf-44a3-8825-ee6f5eb8b79e",
+        "sourceHash": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+        "version": 2,
+        "modelEligible": false
+      }
+    },
+    {
+      "name": "png_content_and_cache_isolation",
+      "passed": true,
+      "facts": {
+        "status": 200,
+        "sha256": "879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703",
+        "size": 1231605,
+        "headers": {
+          "date": "Mon, 12 Oct 2026 13:58:58 GMT",
+          "server": "uvicorn",
+          "cache-control": "private, no-store",
+          "x-content-type-options": "nosniff",
+          "etag": "\"879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703\"",
+          "content-type": "image/png",
+          "accept-ranges": "bytes",
+          "content-length": "1231605",
+          "last-modified": "Mon, 12 Oct 2026 13:53:16 GMT",
+          "vary": "Origin",
+          "x-request-id": "78a8a14f-6ff4-4a60-b962-f2c110763869",
+          "Connection": "close"
+        }
+      }
+    },
+    {
+      "name": "old_bytes_not_falsely_restored",
+      "passed": true,
+      "facts": {
+        "status": 404,
+        "oldSourceHash": "37aaa21e1c03d9bc35bcfc995002e42a200bad987b45766d3b1497b418472c3d"
+      }
+    },
+    {
+      "name": "candidate_is_not_formal_accepted_image",
+      "passed": true,
+      "facts": {
+        "status": 404
+      }
+    },
+    {
+      "name": "creation_remains_locked",
+      "passed": true,
+      "facts": {
+        "status": 200,
+        "realEnabled": false,
+        "globalRemaining": null
+      }
+    },
+    {
+      "name": "preview_current_version_and_safe_headers",
+      "passed": true,
+      "facts": {
+        "status": 200,
+        "headers": {
+          "date": "Mon, 12 Oct 2026 13:58:58 GMT",
+          "server": "uvicorn",
+          "cache-control": "private, no-store",
+          "x-content-type-options": "nosniff",
+          "content-security-policy": "default-src 'none'; script-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+          "content-length": "4798",
+          "content-type": "text/html; charset=utf-8",
+          "vary": "Origin",
+          "x-request-id": "e683d5ce-7ff0-4328-8701-b512334ffb81",
+          "Connection": "close"
+        }
+      }
+    },
+    {
+      "name": "original_page_index",
+      "passed": true,
+      "facts": {
+        "status": 200
+      }
+    },
+    {
+      "name": "original_page_history",
+      "passed": true,
+      "facts": {
+        "status": 200
+      }
+    },
+    {
+      "name": "original_page_roles",
+      "passed": true,
+      "facts": {
+        "status": 200
+      }
+    },
+    {
+      "name": "original_page_facial",
+      "passed": true,
+      "facts": {
+        "status": 200
+      }
+    },
+    {
+      "name": "original_page_music",
+      "passed": true,
+      "facts": {
+        "status": 200
+      }
+    },
+    {
+      "name": "original_page_video",
+      "passed": true,
+      "facts": {
+        "status": 200
+      }
+    },
+    {
+      "name": "original_page_gallery",
+      "passed": true,
+      "facts": {
+        "status": 200
+      }
+    },
+    {
+      "name": "original_page_about",
+      "passed": true,
+      "facts": {
+        "status": 200
+      }
+    }
+  ],
+  "supplierApiCalls": 0,
+  "modelCreationAttempts": 0
+}

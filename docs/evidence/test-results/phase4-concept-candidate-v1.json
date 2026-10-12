@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-11T13:21:10.816475+00:00",
+  "path": "D:\\京剧\\概念图.jpg",
+  "styleMode": "chibi",
+  "sha256": "37aaa21e1c03d9bc35bcfc995002e42a200bad987b45766d3b1497b418472c3d",
+  "size": 87358,
+  "width": 600,
+  "height": 750,
+  "source": "User states Xiaohongshu account 773908132",
+  "licenseStatus": "user_declared_non_commercial_use_and_edit",
+  "licenseStatement": "User states permission for non-commercial image use and editing; independent evidence not yet checked.",
+  "commercialUseVerified": false,
+  "publicRedistributionVerified": false,
+  "sourceTaskId": null,
+  "imageAccepted": false,
+  "cultureAlignmentVerified": false,
+  "status": "PENDING_CHARACTER_ASSOCIATION_AND_REVIEW",
+  "modelCreated": false,
+  "paidApiCalls": 0,
+  "plannedUse": "FIRST_CHIBI_TECHNICAL_VALIDATION",
+  "latestUserSelection": "就用这个图片",
+  "selectionScope": "Selection for preparation only; character association, cultural alignment, frozen prompt and single submission approval remain pending."
+}

@@ -1,0 +1,17 @@
+{
+  "version": "candidate_bluewhite_review_v1",
+  "text": "用途：第一次Q版技术验证的概念图待审快照。以下仅描述实际新图，不是已核实京剧行当或传统服饰结论。\n单人物完整全身、Q版大头小身体，蓝白主色，面部、双侧头饰和鞋履完整可见。保持当前原图人物外观、蓝白衣服层次、白色宽袖口、珠状头饰和两侧延伸装饰的轮廓。保留图中手持细小毛笔；其文化身份与道具依据尚待审校，不认定为特定传统京剧人物标志。\n不替换服饰、不补入靠旗或武将盔甲，不改变原图角色配色、发饰、姿态或道具。保留当前浅色低对比背景；背景墨竹与地面阴影不属于角色模型构件。当前仅做无损格式规范化，未裁切、去背景或重新生成概念图。\n技术审核重点：顶端与周边珠饰、耳侧垂饰、两侧薄头饰应人工检查是否融合、遗漏或过薄；宽袖遮挡的手指与毛笔连接、细小笔杆和笔尖易断裂或粘连；单正面图不能保证背面真实性。不要通过虚构背面细节宣称文化正确。\n角色文化JSON尚未匹配，作者、来源网页、许可与建模授权未核实。本Prompt只冻结为审核草稿，不代表图片接受、文化通过、建模批准或已发送的供应商Prompt。普通图生3D接口只上传图像与参数，不接收此文本。",
+  "negativeConstraints": [
+    "不增加人物、文字、水印、拼贴或无依据京剧文化符号",
+    "不将宽袖直接认定为已考据水袖",
+    "不将毛笔认定为已核实传统角色道具",
+    "不套用不匹配角色的靠旗、盔甲或文化审校结论",
+    "不把概念图、待审Prompt或本地预览当作真实3D生成结果"
+  ],
+  "purpose": "FIRST_CHIBI_TECHNICAL_VALIDATION",
+  "templateKind": "observed_image_review_draft_not_phase3_character_template",
+  "culturalReviewRequired": true,
+  "cultureComparisonEvidence": "docs/evidence/test-results/phase4-bluewhite-culture-comparison.json",
+  "backgroundDecision": "KEEP_CURRENT_ORIGINAL_NO_EDIT",
+  "supplierReceivesThisPrompt": false
+}
