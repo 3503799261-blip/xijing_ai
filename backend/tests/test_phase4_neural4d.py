@@ -239,10 +239,82 @@ def test_uncertain_create_preserves_quota_and_blocks_recreation(setup, failure):
     attempt = next(iter(context.usage.summary()['attemptStates']))
     assert attempt == 'UNKNOWN'
     assert context.usage.summary()['occupied_attempts'] == 1 and context.usage.summary()['remaining_attempts'] == 2
-    new_confirmation = context.models.approve(data)
-    with pytest.raises(ServiceError, match='NEURAL4D_DUPLICATE_INPUT'):
-        asyncio.run(context.models.submit({'approvalId': new_confirmation['approvalId'], 'modelCount': 1}, 'offline-no-retry'))
+    assert context.models.available() is False
+    assert context.usage.summary()['creationPaused'] is True
+    with pytest.raises(ServiceError, match='NEURAL4D_GENERATION_DISABLED'):
+        context.models.approve(data)
+    replay = asyncio.run(context.models.submit({'approvalId': confirmation['approvalId'], 'modelCount': 1}, 'offline-unknown-key'))
+    assert replay['state'] == 'UNKNOWN'  # Readback is allowed, never another send.
     assert sum(r.url.path.endswith('generateModelWithImage') for r in calls) == 1
+
+
+@pytest.mark.parametrize('unknown_state', ['UNKNOWN', 'PENDING_RECONCILIATION'])
+def test_global_pause_blocks_other_style_but_allows_original_query_and_replay(setup, unknown_state):
+    calls = []
+
+    def handler(request):
+        calls.append(request)
+        if request.url.path.endswith('queryPointsInfo'):
+            return httpx.Response(200, json={'statusType': 0, 'data': {'total_points': 800}})
+        if request.url.path.endswith('generateModelWithImage'):
+            return httpx.Response(200, json={'uuid': 'offline-paused-original'})
+        assert request.url.path.endswith('retrieveModel')
+        assert json.loads(request.content) == {'uuid': 'offline-paused-original'}
+        return httpx.Response(200, json={'codeStatus': 1})
+
+    context = setup(handler, enabled=True, protocol=True)
+    chibi = prepared(context, style_mode='chibi', purpose='离线Q版首个任务')
+    source_task_id = context.assets.get_character(chibi['assetId'])['sourceTaskId']
+    realistic = prepared(context, style_mode='realistic', source_task_id=source_task_id, purpose='离线写实另一个用途')
+    first = approve(context, chibi)
+    future = context.models.approve(realistic)
+    original_request = {'approvalId': first['approvalId'], 'modelCount': 1}
+    sent = asyncio.run(context.models.submit(original_request, 'offline-paused-original'))
+    context.usage.finish(sent['jobId'], unknown_state, error_code='OFFLINE_UNKNOWN_AFTER_SEND')
+
+    assert context.models.available() is False
+    assert context.assets.usage_summary()['realEnabled'] is False
+    assert context.assets.usage_summary()['pauseCode'] == 'NEURAL4D_RECONCILIATION_REQUIRED'
+    with pytest.raises(ServiceError, match='NEURAL4D_GENERATION_DISABLED'):
+        context.models.approve(realistic)
+    with pytest.raises(ServiceError, match='NEURAL4D_RECONCILIATION_REQUIRED'):
+        asyncio.run(context.models.submit({'approvalId': future['approvalId'], 'modelCount': 1}, 'offline-other-style'))
+    replay = asyncio.run(context.models.submit(original_request, 'offline-paused-original'))
+    assert replay['jobId'] == sent['jobId'] and replay['state'] == unknown_state
+    assert sum(r.url.path.endswith('generateModelWithImage') for r in calls) == 1
+    assert context.usage.summary()['occupied_attempts'] == 1
+
+    # Only a deliberate query of the known original UUID resolves its state.
+    # This query never schedules or sends the separately approved style.
+    reconciled = asyncio.run(context.models.refresh(sent['jobId']))
+    assert reconciled['state'] == 'PROCESSING'
+    assert context.usage.summary()['creationPaused'] is False
+    assert context.models.available() is True
+    assert context.usage.summary()['occupied_attempts'] == 1
+    assert sum(r.url.path.endswith('generateModelWithImage') for r in calls) == 1
+    assert sum(r.url.path.endswith('retrieveModel') for r in calls) == 1
+    assert context.usage.summary()['realHttpRequests'] == 0
+
+
+def test_provider_cannot_send_already_reserved_other_style_after_unknown(setup):
+    context = setup(enabled=True, protocol=True)
+    chibi = prepared(context, style_mode='chibi', purpose='离线首个任务')
+    realistic = prepared(context, style_mode='realistic', purpose='离线已预约任务')
+    first = approve(context, chibi)
+    second = context.models.approve(realistic)
+    first_payload = context.models.approval_payload(first['approvalId'])
+    first_attempt = context.usage.reserve('offline-claim-first', first['approvalId'], first_payload, chibi['purpose'], True, True)
+    second_payload = context.models.approval_payload(second['approvalId'])
+    waiting = context.usage.reserve('offline-claim-waiting', second['approvalId'], second_payload, realistic['purpose'], True, True)
+    context.usage.mark_started(first_attempt['attemptId'])
+    context.usage.finish(first_attempt['attemptId'], 'UNKNOWN', error_code='OFFLINE_UNKNOWN')
+    raw = context.assets.file_path('image', realistic['imageId']).read_bytes()
+    with pytest.raises(ServiceError, match='NEURAL4D_RECONCILIATION_REQUIRED'):
+        asyncio.run(context.provider.create_once(waiting['attemptId'], raw))
+    assert context.usage.get_attempt(waiting['attemptId'])['state'] == 'RESERVED'
+    assert context.usage.get_attempt(waiting['attemptId'])['startedAt'] is None
+    assert context.usage.summary()['occupied_attempts'] == 2
+    assert sum(r.url.path.endswith('generateModelWithImage') for r in context.calls) == 0
 
 
 def test_multiple_returned_models_halt_future_creations_even_with_new_input(setup):

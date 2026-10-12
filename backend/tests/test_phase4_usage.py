@@ -155,8 +155,89 @@ def test_http_errors_timeouts_and_unknowns_never_refund(tmp_path, state):
     with pytest.raises(ServiceError, match='NEURAL4D_ATTEMPT_ALREADY_STARTED'):
         value.mark_started(attempt['attemptId'])
     if state != 'FAILED':
-        with pytest.raises(ServiceError, match='NEURAL4D_DUPLICATE_INPUT'):
+        with pytest.raises(ServiceError, match='NEURAL4D_RECONCILIATION_REQUIRED'):
             reserved(value, 'new-confirmed-key')
+
+
+@pytest.mark.parametrize('unknown_state', ['UNKNOWN', 'PENDING_RECONCILIATION'])
+def test_unreconciled_result_blocks_all_styles_approvals_reservations_and_unsent_claims(tmp_path, unknown_state):
+    value = manager(tmp_path)
+    chibi = {**payload(0), 'styleMode': 'chibi'}
+    realistic = {**payload(1), 'styleMode': 'realistic'}
+    future = {**payload(2), 'styleMode': 'realistic'}
+    first_approval = approved(value, chibi)
+    first = value.reserve('unknown-chibi', first_approval['approvalId'], chibi, 'technical', True, True)
+    second = reserved(value, 'already-reserved-realistic', realistic)
+    future_approval = approved(value, future)
+    value.mark_started(first['attemptId'])
+    value.finish(first['attemptId'], unknown_state, error_code='OFFLINE_RESULT_UNKNOWN')
+
+    summary = value.summary()
+    assert summary['creationPaused'] is True
+    assert summary['pauseCode'] == 'NEURAL4D_RECONCILIATION_REQUIRED'
+    assert summary['unreconciled_attempts'] == 1
+    assert summary['creationHalted'] is False  # Temporary gate, not irreversible halt.
+    assert summary['remaining_attempts'] == 1  # Counts remain truthful while locked.
+    with pytest.raises(ServiceError, match='NEURAL4D_RECONCILIATION_REQUIRED'):
+        approved(value, {**payload(3), 'styleMode': 'chibi'}, 'enterprise')
+    with pytest.raises(ServiceError, match='NEURAL4D_RECONCILIATION_REQUIRED'):
+        value.reserve('different-role-style', future_approval['approvalId'], future, 'technical', True, True)
+    with pytest.raises(ServiceError, match='NEURAL4D_RECONCILIATION_REQUIRED'):
+        value.mark_started(second['attemptId'])
+    assert value.get_attempt(second['attemptId'])['state'] == 'RESERVED'
+    replay = value.reserve('unknown-chibi', first_approval['approvalId'], chibi, 'technical', True, True)
+    assert replay['attemptId'] == first['attemptId'] and replay['newlyReserved'] is False
+    assert value.summary()['occupied_attempts'] == 2
+
+
+@pytest.mark.parametrize('resolved_state', ['PROCESSING', 'FAILED', 'SUCCEEDED'])
+def test_authoritative_reconciliation_clears_temporary_gate_without_refund_or_send(tmp_path, resolved_state):
+    value = manager(tmp_path)
+    first = reserved(value, 'unknown-original', payload(0))
+    pending = reserved(value, 'unsent-existing', payload(1))
+    value.mark_started(first['attemptId'])
+    value.finish(first['attemptId'], 'UNKNOWN', error_code='OFFLINE_RESULT_UNKNOWN')
+    before = value.summary()
+    assert before['creationPaused']
+    # Trusted service reconciliation only; no browser reset or automatic action.
+    value.finish(first['attemptId'], resolved_state, provider_task_id='offline-reconciled-task')
+    after = value.summary()
+    assert after['creationPaused'] is False and after['pauseCode'] is None
+    assert after['unreconciled_attempts'] == 0 and after['creationHalted'] is False
+    assert after['occupied_attempts'] == before['occupied_attempts'] == 2
+    assert after['remaining_attempts'] == before['remaining_attempts'] == 1
+    assert value.get_attempt(pending['attemptId'])['state'] == 'RESERVED'
+    assert value.get_attempt(pending['attemptId'])['startedAt'] is None
+    assert after['realHttpRequests'] == after['mockHttpRequests'] == 0
+    assert value.get_attempt(first['attemptId'])['events'][-1]['state'] == resolved_state
+
+
+def test_concurrent_workers_cannot_reserve_or_claim_after_global_unknown(tmp_path):
+    value = manager(tmp_path)
+    first = reserved(value, 'unknown-source', payload(0))
+    waiting = reserved(value, 'waiting-source', payload(1))
+    approvals = [approved(value, payload(i)) for i in (2, 3)]
+    value.mark_started(first['attemptId'])
+    value.finish(first['attemptId'], 'UNKNOWN', error_code='OFFLINE_UNKNOWN')
+    barrier = Barrier(3)
+
+    def contender(number):
+        ledger = UsageManager(value.path)
+        barrier.wait()
+        try:
+            if number == 2:
+                ledger.mark_started(waiting['attemptId'])
+            else:
+                ledger.reserve(f'blocked-worker-{number}', approvals[number]['approvalId'], payload(number + 2), 'technical', True, True)
+            return 'unsafe-success'
+        except ServiceError as error:
+            return error.code
+
+    with ThreadPoolExecutor(max_workers=3) as workers:
+        outcomes = list(workers.map(contender, range(3)))
+    assert outcomes == ['NEURAL4D_RECONCILIATION_REQUIRED'] * 3
+    assert value.summary()['occupied_attempts'] == 2
+    assert value.get_attempt(waiting['attemptId'])['startedAt'] is None
 
 
 def test_definite_failed_task_can_only_retry_with_new_approval_and_new_quota(tmp_path):
@@ -190,7 +271,7 @@ def test_restart_or_success_before_failed_local_save_requires_reconciliation(tmp
     assert reopened.recover()['recoveredAttempts'] == 0
     with pytest.raises(ServiceError, match='NEURAL4D_ATTEMPT_ALREADY_STARTED'):
         reopened.mark_started(attempt['attemptId'])
-    with pytest.raises(ServiceError, match='NEURAL4D_DUPLICATE_INPUT'):
+    with pytest.raises(ServiceError, match='NEURAL4D_RECONCILIATION_REQUIRED'):
         reserved(reopened, 'unsafe-recreation')
 
 

@@ -50,7 +50,7 @@ class ModelService:
 
     def available(self):
         state = self.usage.summary()
-        return bool(self.settings.neural4d_generation_enabled and self.verified() and state.get('historicalUsageVerified') and not state.get('creationHalted') and
+        return bool(self.settings.neural4d_generation_enabled and self.verified() and state.get('historicalUsageVerified') and not state.get('creationHalted') and not state.get('creationPaused') and
                     (state.get('remaining_attempts') or 0) > 0 and self.settings.neural4d_expected_credits and
                     self.balance >= self.settings.neural4d_expected_credits)
 

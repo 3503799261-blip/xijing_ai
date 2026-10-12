@@ -24,6 +24,7 @@ POLICY_VERSION = 'phase4-generation-attempts-v4'
 MAX_CREATION_ATTEMPTS = 3
 STATES = {'RESERVED', 'ATTEMPT_STARTED', 'SUBMITTED', 'PROCESSING', 'SUCCEEDED',
           'FAILED', 'UNKNOWN', 'PENDING_RECONCILIATION'}
+UNRECONCILED_STATES = {'UNKNOWN', 'PENDING_RECONCILIATION'}
 OPERATIONS = {'verify', 'preprocess', 'preprocess_status', 'create_model',
               'query_model', 'download', 'convert_format'}
 
@@ -226,6 +227,17 @@ class UsageManager:
             raise ServiceError('NEURAL4D_LEDGER_INCONSISTENT', '建模账本占用异常，已关闭真实创建。', 503)
         return policy
 
+    @staticmethod
+    def _require_reconciled(db):
+        """Global temporary gate inside the caller's write transaction.
+
+        Resolving an existing attempt is an audited service operation. It may
+        remove this gate, but never grants send rights or refunds a reservation.
+        Do not use the irreversible policy halt for an ordinary unknown result.
+        """
+        if db.execute("SELECT 1 FROM neural4d_creation_attempts WHERE state IN ('UNKNOWN','PENDING_RECONCILIATION') LIMIT 1").fetchone():
+            raise ServiceError('NEURAL4D_RECONCILIATION_REQUIRED', '存在结果未知或待核查的旧建模任务，已暂停全项目新批准和新建；请先人工核查原任务，次数不返还。', 409)
+
     def initialize_history(self, used_attempts: int, note: str):
         if type(used_attempts) is not int or not 0 <= used_attempts <= MAX_CREATION_ATTEMPTS:
             raise ServiceError('NEURAL4D_HISTORY_INVALID', '历史建模提交次数必须是0至3之间的整数。', 422)
@@ -252,6 +264,7 @@ class UsageManager:
             historical = policy['historical_used']
             operational = db.execute('SELECT is_mock,count(*) AS n,coalesce(sum(actual_credits),0) AS credits FROM neural4d_operational_requests GROUP BY is_mock').fetchall()
         known = historical is not None
+        unreconciled = sum(states.get(state, 0) for state in UNRECONCILED_STATES)
         return {'projectId': PROJECT_ID, 'policyVersion': POLICY_VERSION,
                 'max_creation_attempts': MAX_CREATION_ATTEMPTS, 'max_models': 3, 'modelCount': 1,
                 'historicalUsageVerified': known, 'historical_used_attempts': historical,
@@ -261,6 +274,9 @@ class UsageManager:
                 'remaining_attempts': MAX_CREATION_ATTEMPTS - historical - count if known else None,
                 'attemptStates': states, 'creationHalted': bool(policy['creation_halted']),
                 'haltCode': policy['halt_code'], 'automaticGenerationRetry': False,
+                'creationPaused': bool(unreconciled),
+                'pauseCode': 'NEURAL4D_RECONCILIATION_REQUIRED' if unreconciled else None,
+                'unreconciled_attempts': unreconciled,
                 'realHttpRequests': sum(r['n'] for r in operational if not r['is_mock']),
                 'mockHttpRequests': sum(r['n'] for r in operational if r['is_mock']),
                 'recordedActualCredits': sum(r['credits'] for r in operational if not r['is_mock'])}
@@ -279,6 +295,7 @@ class UsageManager:
         with self.connect() as db:
             db.execute('BEGIN IMMEDIATE')
             self._policy(db)
+            self._require_reconciled(db)
             db.execute('INSERT INTO neural4d_model_approvals VALUES (?,?,?,?,?,?,NULL)',
                        (approval_id, digest, purpose, credits, _now(), expires_at))
         return {'approvalId': approval_id, 'payloadHash': digest, 'purpose': purpose,
@@ -336,6 +353,7 @@ class UsageManager:
                 raise ServiceError('NEURAL4D_HISTORY_UNVERIFIED', '全项目历史占用尚未核实，禁止创建真实模型。', 403)
             if policy['creation_halted']:
                 raise ServiceError('NEURAL4D_CREATION_HALTED', '建模账本已停止新建，请先人工核查异常。', 403)
+            self._require_reconciled(db)
             if policy['historical_used'] + db.execute('SELECT count(*) FROM neural4d_creation_attempts').fetchone()[0] >= MAX_CREATION_ATTEMPTS:
                 raise ServiceError('NEURAL4D_QUOTA_EXHAUSTED', '全项目最多3次真实建模提交尝试，额度已用完。', 429)
             approval = db.execute('SELECT * FROM neural4d_model_approvals WHERE approval_id=?', (approval_id,)).fetchone()
@@ -369,6 +387,9 @@ class UsageManager:
             row = self._get(db, attempt_id)
             if row['state'] != 'RESERVED':
                 raise ServiceError('NEURAL4D_ATTEMPT_ALREADY_STARTED', '该提交已领取或等待核查，禁止再次发送。', 409)
+            # A different attempt may have become unknown after this reservation
+            # was committed. Recheck while claiming, before any network send.
+            self._require_reconciled(db)
             now = _now()
             db.execute("UPDATE neural4d_creation_attempts SET state='ATTEMPT_STARTED',started_at=?,updated_at=? WHERE attempt_id=? AND state='RESERVED'", (now, now, attempt_id))
             self._event(db, attempt_id, 'ATTEMPT_STARTED')
