@@ -1,0 +1,6 @@
+2935155bc766752d5319d3529c3d6ee47f14cc4c fix: safely recover original model with bounded HTTPS and local texture normalization
+9bb83bfd9d377e9c725808388053f1a83a5542ef docs: record first internal modeling attempt and download stop
+374df8c4567c79c06f28f085d9b404f0b7e079b7 feat: scope internal technical generation to shared one-shot quota
+ee9f28e3b09df396845b5b520e1167d33fd9ebdf docs: archive updated blue-white candidate review and evidence
+bcc3a060190cabb7fb210205abda19382d0e1fa9 feat: preserve unassociated concept candidates as immutable snapshots
+00509f94aafed5d5ffeb3461181dcf0e79e9d62b docs: record three-attempt modeling plan and verified preparation

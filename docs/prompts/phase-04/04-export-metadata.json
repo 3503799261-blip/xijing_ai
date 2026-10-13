@@ -1,17 +1,17 @@
 {
-  "exportedAt": "2026-10-13T09:43:41.685339+00:00",
-  "sourceSnapshotSha256": "ac3ad808465b6a8dc189cbbbeacf35be68972fa2e241417600f71779817f7f8b",
-  "publicRecords": 836,
+  "exportedAt": "2026-10-13T10:42:28.446857+00:00",
+  "sourceSnapshotSha256": "425f329c0c3b331b2ec413572e3914079a4ee1eab7c21acb069d24cee5c4c221",
+  "publicRecords": 1039,
   "omittedPartialLine": false,
   "skipped": {
-    "event_msg": 1541,
-    "token_usage_record": 384,
-    "reasoning": 395,
-    "world_state": 20,
-    "compacted": 5,
-    "turn_context": 15,
-    "inter_agent_communication_metadata": 138,
-    "agent_message": 138,
+    "event_msg": 1892,
+    "token_usage_record": 481,
+    "reasoning": 501,
+    "world_state": 24,
+    "compacted": 6,
+    "turn_context": 17,
+    "inter_agent_communication_metadata": 155,
+    "agent_message": 155,
     "private_message": 15
   },
   "files": {
@@ -24,7 +24,8 @@
     "09-internal-technical-submission-approval.txt": "1028d56f84a1ac3837a61e414b8df98ac6eb168c2142967c7e74087e8f5390ba",
     "10-internal-history-and-image-permission-reply.txt": "30b393bda5459f6a61b3c90d8e4c3dd5e57208c687b2c4914c5b5a9034647ec1",
     "11-internal-account-credit-quote.txt": "8b22fee2c79a48908e261185aa3dac7a12c1c7348d3f934b8374a3d3f8c13a2b",
-    "03-public-conversation.jsonl": "69df843606bb606dff7bca64fd661131e6200ff84fa14f43eb16b8d2b8069187"
+    "12-first-model-recovery-request.txt": "53c1a788cd5015c611d2f0f1b75cc89169e98b459218c5623b1b5ddca754c3be",
+    "03-public-conversation.jsonl": "03470e6085361e24ac37a8cf09689985bc9372c306360e73142ee29813dd5794"
   },
   "scope": "Actual public user messages, assistant commentary/final and matched tool evidence. No hidden reasoning, system/developer content or child internal messages. Snapshot; future records not included."
 }

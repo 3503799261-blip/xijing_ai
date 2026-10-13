@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-13T09:52:10.923195+00:00",
+  "kind": "ACTUAL_TLS_PUBLIC_RESOURCE_IDENTITY_CHECK_NO_HTTP_OR_CREATE",
+  "host": "cos.neural4d.com",
+  "allResolvedAddressesPublic": true,
+  "tlsHostnameVerificationEnabled": true,
+  "certificateValidationMode": "CERT_REQUIRED",
+  "tlsVersion": "TLSv1.3",
+  "certSubjectAlternativeNames": [
+    "*.neural4d.com",
+    "neural4d.com"
+  ],
+  "certSha256": "6042f4f06ceebb7173e42d1823c949da48f1a2c5996a3c38b57f15ea3fba7871",
+  "certNotAfter": "Feb 14 23:59:59 2027 GMT",
+  "apexRelationship": "Exact subdomain of official Neural4D provider domain, supplied by authenticated retrieveModel for authorized UUID.",
+  "supplierApiRequests": 0,
+  "httpDownloads": 0,
+  "keySent": false
+}

@@ -1,0 +1,98 @@
+{
+  "kind": "ACTUAL_PRIVATE_BROWSER_SCREENSHOT_METADATA_ONLY",
+  "publicModelBinaryIncluded": false,
+  "screenshotsPrivateDirectory": "D:\\京剧\\.runtime\\phase4-recovery-screenshots",
+  "files": [
+    {
+      "name": "01-ready-front-desktop.jpg",
+      "sha256": "e288e6c3cbe00c9159bef2621638e822df4ceed8f3044e667461444fbd0a5340",
+      "bytes": 86142,
+      "dimensions": [
+        1905,
+        1072
+      ]
+    },
+    {
+      "name": "02-mouse-rotation.jpg",
+      "sha256": "42caffc241ef0a7265bbf32a1b97f36c00489a705d2e3925e6dd138e5218bc39",
+      "bytes": 72488,
+      "dimensions": [
+        1905,
+        1072
+      ]
+    },
+    {
+      "name": "03-back-structure.jpg",
+      "sha256": "c6d74e4edc33b4bce713466b019a38e10136fa8cca6f769cd9272e0032fe23de",
+      "bytes": 73224,
+      "dimensions": [
+        1905,
+        1072
+      ]
+    },
+    {
+      "name": "04-load-missing-model.jpg",
+      "sha256": "d2bfb9fa56a9b4ab60ccb4b4eb915321b51426a88170ae5ae6b37c13acc7bf8b",
+      "bytes": 39915,
+      "dimensions": [
+        1905,
+        1072
+      ]
+    },
+    {
+      "name": "05-error-missing-original.jpg",
+      "sha256": "90223d3b216a2f50de9278a94536e51ae28628668b6b9b641716d4301243297d",
+      "bytes": 48638,
+      "dimensions": [
+        1905,
+        1072
+      ]
+    },
+    {
+      "name": "06-explicit-reload-frame.jpg",
+      "sha256": "275579d53fd5993c13d4c4e3b24d09ac55e4c282c78557fb88cd21a7b81099b9",
+      "bytes": 87253,
+      "dimensions": [
+        1905,
+        1072
+      ]
+    },
+    {
+      "name": "07-mobile-layout.jpg",
+      "sha256": "df0ae601866dc18e58659d278ee8f7c362beb2b01a012dde70fc85c6e751a8b0",
+      "bytes": 78343,
+      "dimensions": [
+        360,
+        1198
+      ]
+    },
+    {
+      "name": "08-full-character-final.jpg",
+      "sha256": "cd101d7d73696fde7d0912b6912b470fd8367db8dfe5e00ff03073fa5e77b7c3",
+      "bytes": 85490,
+      "dimensions": [
+        1905,
+        1072
+      ]
+    },
+    {
+      "name": "09-clean-page-initial-state.jpg",
+      "sha256": "24dfe797661bba112918a3272790187f5900ea7b37df6a1538d19556dad81f8f",
+      "bytes": 74207,
+      "dimensions": [
+        1265,
+        712
+      ]
+    },
+    {
+      "name": "10-recovered-model-final-desktop.jpg",
+      "sha256": "3bec21a15e4cfa468792faf7ba9d37d2d555868358d8ca6ff37bcdec8f9a4fac",
+      "bytes": 110206,
+      "dimensions": [
+        1264,
+        1148
+      ]
+    }
+  ],
+  "scope": "Image names do not assert transient states; Loading verified by actual AX/tool trace and state events. No stable separate Loading screenshot."
+}

@@ -1,0 +1,9 @@
+{
+  "kind": "LOCAL_ARCHIVE_SECRET_HASH_AND_LINK_CHECK",
+  "scannedTextFiles": 450,
+  "secretOrSignedUrlFindings": [],
+  "publicExportHashValid": true,
+  "publicRecords": 1039,
+  "brokenLocalMarkdownLinks": [],
+  "passed": true
+}

@@ -207,3 +207,15 @@ Viewer从本地 `js/vendor/model-viewer/model-viewer.min.js` 延迟加载，在�
 - 前端离线检查：`scripts/phase4_frontend_test.mjs`。
 
 Git、Prompt演进、失败案例与真实浏览器证据应引用实际记录，由最终阶段报告统一汇总；本文不生成提交Hash、供应商任务或虚构测试数据。
+
+## 13. 原任务安全恢复补充（2026-10-13）
+
+Neural4D下载与任务创建分离。共享`safe_model_download.py`仅接受精确已核实域名、HTTPS443、无凭证URL；所有DNS地址须公开，TCP固定已核实数值IP并核对peer，保留原Host/SNI及默认验证TLS。每跳独立检查、最多2跳、总90秒/50MiB；压缩传输、媒体类型、声明/实际长度及流式上限检查。生产不允许任意自定义HTTP传输替代这些检查；MockTransport只能用于明确离线测试。库的URL/Location日志仅在本次下载上下文抑制，业务日志仅记录host、状态、大小、跳数、耗时和错误码。
+
+`recover_first_internal_model.py`限定唯一原UUID/job，覆盖拒绝所有创建与批准，默认generation=false；仍取固定UsageManager及owner锁。格式失败的安全下载字节只能保存私有不可覆盖隔离快照，不作为已验证模型提供。缓存成功必须有登记且文件路径/长度/Hash核验通过；缺文件或损坏不自动下载/重建。
+
+`normalize_first_recovered_glb.py`仅针对已经取得的固定Hash原GLB，纯本地处理供应商非标准JPEG MIME及4K纹理预算不兼容，保留原文件/几何/场景/纹理索引关联，2K衍生结果再次通过原验证器。`validation.localConversion`保留源与衍生Hash、每个bufferView/纹理Hash及版本；不等于第二次生成或完整Khronos认证。
+
+内部Viewer新增`data-state-history`为真实状态事件辅助记录，metadata读取失败使用同一Error入口。仅内部页面CSP允许固定本地包所需WASM编译，JavaScript字符串eval、远程脚本/连接及非本机访问保持受限。[CSP范围依据](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution)
+
+首次模型与实际恢复/交互/费用证据以 [报告](../reports/phase-04-first-internal-modeling.md) 为准；8页和双风格组件保留，内部结果不被映射成两种正式角色模型。原创建次数1、剩余2，技术PASS不代表新建授权或Phase 4正式验收。

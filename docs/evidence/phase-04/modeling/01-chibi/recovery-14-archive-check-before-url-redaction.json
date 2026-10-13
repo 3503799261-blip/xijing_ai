@@ -1,0 +1,14 @@
+{
+  "kind": "LOCAL_ARCHIVE_SECRET_HASH_AND_LINK_CHECK",
+  "scannedTextFiles": 446,
+  "secretOrSignedUrlFindings": [
+    {
+      "file": "docs/prompts/phase-04/03-public-conversation.jsonl",
+      "kind": "SIGNED_RESOURCE_URL_PRESENT"
+    }
+  ],
+  "publicExportHashValid": true,
+  "publicRecords": 1029,
+  "brokenLocalMarkdownLinks": [],
+  "passed": false
+}

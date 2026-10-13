@@ -1,0 +1,238 @@
+{
+  "executedAt": "2026-10-13T10:20:08.051Z",
+  "kind": "ACTUAL_ORIGINAL_NEURAL4D_GLB_BROWSER_CHECK",
+  "providerTaskId": "bb074c31-1905-45b6-b763-22d065ddc616",
+  "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+  "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+  "checks": [
+    {
+      "name": "desktop1920x1080-ready",
+      "observed": {
+        "dataset": {
+          "cameraPhi": "1.308997",
+          "cameraRadius": "3.598735",
+          "cameraTheta": "0.000000",
+          "observedDegrees": "0.0",
+          "stateHistory": "idle,loading,ready",
+          "userEventCount": "0",
+          "viewerState": "ready"
+        },
+        "text": "模型加载完成 · 拖拽旋转，滚轮缩放",
+        "viewport": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "name": "real-mouse-continuous-horizontal-drag",
+      "observed": {
+        "cameraPhi": "1.308997",
+        "cameraRadius": "3.598735",
+        "cameraTheta": "-4.562832",
+        "observedDegrees": "261.2",
+        "stateHistory": "idle,loading,ready",
+        "userEventCount": "73",
+        "viewerState": "ready"
+      }
+    },
+    {
+      "name": "same-direction-turn-beyond360",
+      "observed": {
+        "cameraPhi": "1.308997",
+        "cameraRadius": "3.598735",
+        "cameraTheta": "-8.325333",
+        "observedDegrees": "476.8",
+        "stateHistory": "idle,loading,ready",
+        "userEventCount": "209",
+        "viewerState": "ready"
+      }
+    },
+    {
+      "name": "zoom-buttons",
+      "radiusBefore": "3.598735",
+      "radiusIn": "2.990195",
+      "radiusOut": "3.541593"
+    },
+    {
+      "name": "reset-view",
+      "observed": {
+        "cameraPhi": "1.308997",
+        "cameraRadius": "3.598735",
+        "cameraTheta": "0.000000",
+        "observedDegrees": "486.8",
+        "stateHistory": "idle,loading,ready",
+        "userEventCount": "249",
+        "viewerState": "ready"
+      }
+    },
+    {
+      "name": "real-mouse-wheel-zoom",
+      "observed": {
+        "cameraPhi": "1.308997",
+        "cameraRadius": "2.374087",
+        "cameraTheta": "0.000000",
+        "observedDegrees": "486.8",
+        "stateHistory": "idle,loading,ready",
+        "userEventCount": "293",
+        "viewerState": "ready"
+      }
+    },
+    {
+      "name": "back-structure-observation",
+      "observed": {
+        "cameraPhi": "1.308997",
+        "cameraRadius": "3.598735",
+        "cameraTheta": "-3.684767",
+        "observedDegrees": "486.8",
+        "stateHistory": "idle,loading,ready",
+        "userEventCount": "392",
+        "viewerState": "ready"
+      }
+    },
+    {
+      "name": "original-file-missing-error-state",
+      "observed": {
+        "controls": [
+          {
+            "disabled": true,
+            "hidden": false,
+            "text": "放大"
+          },
+          {
+            "disabled": true,
+            "hidden": false,
+            "text": "缩小"
+          },
+          {
+            "disabled": true,
+            "hidden": false,
+            "text": "重置视角"
+          },
+          {
+            "disabled": true,
+            "hidden": false,
+            "text": "进入触摸交互"
+          },
+          {
+            "disabled": false,
+            "hidden": false,
+            "text": "重新加载原模型"
+          }
+        ],
+        "dataset": {
+          "observedDegrees": "0",
+          "stateHistory": "idle,loading,error",
+          "userEventCount": "0",
+          "viewerState": "error"
+        },
+        "error": "模型加载失败，请检查资源是否完整或浏览器是否支持WebGL。可重新加载原文件，不会提交建模。",
+        "status": "模型加载失败"
+      }
+    },
+    {
+      "name": "explicit-reload-same-file-after-restoration",
+      "observed": {
+        "dataset": {
+          "cameraPhi": "1.308997",
+          "cameraRadius": "3.598735",
+          "cameraTheta": "0.000000",
+          "observedDegrees": "0.0",
+          "stateHistory": "idle,loading,error,loading,ready",
+          "userEventCount": "0",
+          "viewerState": "ready"
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      }
+    },
+    {
+      "name": "mobile375x812-layout-and-touch-mode-control",
+      "observed": {
+        "buttons": [
+          {
+            "disabled": false,
+            "pressed": null,
+            "text": "放大"
+          },
+          {
+            "disabled": false,
+            "pressed": null,
+            "text": "缩小"
+          },
+          {
+            "disabled": false,
+            "pressed": null,
+            "text": "重置视角"
+          },
+          {
+            "disabled": false,
+            "pressed": "true",
+            "text": "退出触摸交互"
+          },
+          {
+            "disabled": false,
+            "pressed": null,
+            "text": "重新加载原模型"
+          }
+        ],
+        "dataset": {
+          "cameraPhi": "1.308997",
+          "cameraRadius": "3.598735",
+          "cameraTheta": "0.000000",
+          "observedDegrees": "0.0",
+          "stateHistory": "idle,loading,error,loading,ready",
+          "userEventCount": "0",
+          "viewerState": "ready"
+        },
+        "scrollWidth": 360,
+        "touchAction": "none",
+        "viewport": [
+          375,
+          812
+        ]
+      },
+      "physicalTouchDragAndPinch": "NOT_EXECUTED_NO_TOUCH_DEVICE"
+    },
+    {
+      "name": "fresh-page-after-csp-fix",
+      "observed": {
+        "cameraPhi": "1.308997",
+        "cameraRadius": "3.598735",
+        "cameraTheta": "0.000000",
+        "observedDegrees": "0.0",
+        "stateHistory": "idle,loading,ready",
+        "userEventCount": "0",
+        "viewerState": "ready"
+      },
+      "console": []
+    }
+  ],
+  "consoleLogs": [
+    {
+      "level": "error",
+      "message": "CompileError: WebAssembly.instantiate(): Compiling or instantiating WebAssembly module violates the following Content Security policy directive because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: \"script-src 'self'\".\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:552:26861\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:552:29589",
+      "timestamp": "2026-10-13T10:19:23.883Z",
+      "url": "http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js"
+    },
+    {
+      "level": "error",
+      "message": "CompileError: WebAssembly.instantiate(): Compiling or instantiating WebAssembly module violates the following Content Security policy directive because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: \"script-src 'self'\".\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:552:26861\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:552:29589",
+      "timestamp": "2026-10-13T10:22:13.784Z",
+      "url": "http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js"
+    },
+    {
+      "level": "error",
+      "message": "kl: fetch for \"http://127.0.0.1:8000/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file\" responded with 404: Not Found\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:48:204423",
+      "timestamp": "2026-10-13T10:22:13.855Z",
+      "url": "http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js"
+    }
+  ],
+  "physicalTouchStatus": "NOT_EXECUTED",
+  "qualityObservation": [
+    "蓝白配色、头饰、衣服、手持毛笔均可观察",
+    "两侧延伸头饰有实体厚度，细小珠饰部分简化和粘连",
+    "毛笔是细小刚性形体，手袖附近存在融合与遮挡",
+    "背部整体闭合可观察，后脑与戏服细节较前面简化",
+    "初始取景稍紧，缩小可完整查看"
+  ]
+}

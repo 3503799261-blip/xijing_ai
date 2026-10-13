@@ -1,0 +1,584 @@
+{
+  "checkedAt": "2026-10-13T10:31:33.053712+00:00",
+  "kind": "ACTUAL_LOCAL_HTTP_AND_LEDGER_READBACK_NO_SUPPLIER_CALLS",
+  "checks": [
+    {
+      "path": "/index.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/history.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/roles.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/facial.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/music.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/video.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/gallery.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/about.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/api/v1/health",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/api/v1/assets/usage",
+      "status": 200,
+      "passed": true,
+      "occupied": 1,
+      "remaining": 2,
+      "realEnabled": false
+    },
+    {
+      "path": "/api/v1/assets/models",
+      "status": 200,
+      "passed": true,
+      "internalModelHidden": true
+    },
+    {
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer",
+      "status": 200,
+      "passed": true,
+      "csp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; worker-src 'self' blob:; base-uri 'none'; frame-ancestors 'none'",
+      "privateCache": "private, no-store"
+    },
+    {
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+      "status": 200,
+      "size": 8827324,
+      "hash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "mimeType": "model/gltf-binary",
+      "passed": true
+    }
+  ],
+  "resources": [
+    {
+      "path": "/css/ai-workshop.css",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/css/facial.css",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/css/gallery.css",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/css/history.css",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/css/index.css",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/css/music.css",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/css/roles.css",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/css/style.css",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/css/video.css",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/art1.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/art3.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/art4.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/black.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/black1.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/blue.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/blue1.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/chou.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/dan.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/gallery1.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/gallery11.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/gallery12.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/gallery2.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/gallery5.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/gallery6.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/gallery7.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/gallery8.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/glod.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/glod1.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/home-banner.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/home1.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/intro1.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/intro2.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/intro3.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/intro4.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/jing.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/mask-black.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/mask-blue.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/mask-gold.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/mask-red.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/opera1.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/opera2.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/opera3.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/opera4.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/opera5.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/red.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/red1.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/sheng.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/white.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/white1.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/京胡.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/历史1.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/历史2.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/历史3.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/历史4.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/历史5.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/images/脸谱.jpg",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/js/ai-workshop/main.js",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/js/ai-workshop/internal-viewer.js",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/js/ai-workshop/model-viewer-adapter.js",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/js/ai-workshop/contracts.js",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/js/ai-workshop/digital-assets.js",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/js/vendor/model-viewer/model-viewer.min.js",
+      "method": "GET",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    }
+  ],
+  "usage": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 1,
+    "reserved_attempts": 0,
+    "occupied_attempts": 1,
+    "remaining_attempts": 2,
+    "attemptStates": {
+      "SUCCEEDED": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 11,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 30.0
+  },
+  "creationEnabledInPrivateEnv": false,
+  "operations": [
+    {
+      "operation": "create_model",
+      "is_mock": 0,
+      "count": 1,
+      "credits": 30.0
+    },
+    {
+      "operation": "download",
+      "is_mock": 0,
+      "count": 2,
+      "credits": 0
+    },
+    {
+      "operation": "query_model",
+      "is_mock": 0,
+      "count": 6,
+      "credits": 0
+    },
+    {
+      "operation": "verify",
+      "is_mock": 0,
+      "count": 2,
+      "credits": 0
+    }
+  ],
+  "passed": true,
+  "previousHeadTrialEvidence": "recovery-11-final-local-readback.json",
+  "staticResourceMethod": "GET (the existing preview route supports GET, not HEAD)"
+}

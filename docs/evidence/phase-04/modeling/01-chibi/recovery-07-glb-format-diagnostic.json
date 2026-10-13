@@ -1,0 +1,63 @@
+{
+  "kind": "ACTUAL_QUARANTINED_ORIGINAL_GLB_LOCAL_INSPECTION",
+  "hash": "8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885",
+  "size": 26600184,
+  "header": {
+    "magic": "glTF",
+    "version": 2,
+    "declaredLength": 26600184
+  },
+  "jsonKeys": [
+    "accessors",
+    "asset",
+    "bufferViews",
+    "buffers",
+    "images",
+    "materials",
+    "meshes",
+    "nodes",
+    "samplers",
+    "scene",
+    "scenes",
+    "textures"
+  ],
+  "extensionsRequired": [],
+  "extensionsUsed": [],
+  "counts": {
+    "images": 2,
+    "textures": 2,
+    "materials": 1,
+    "meshes": 1,
+    "bufferViews": 5,
+    "accessors": 3
+  },
+  "images": [
+    {
+      "fields": [
+        "mimeType",
+        "bufferView"
+      ],
+      "mimeType": "image/jpg",
+      "bufferView": 3,
+      "actualFormat": "JPEG",
+      "width": 4096,
+      "height": 4096,
+      "frames": 1,
+      "size": 4216567
+    },
+    {
+      "fields": [
+        "mimeType",
+        "bufferView"
+      ],
+      "mimeType": "image/png",
+      "bufferView": 4,
+      "actualFormat": "PNG",
+      "width": 4096,
+      "height": 4096,
+      "frames": 1,
+      "size": 19829084
+    }
+  ],
+  "externalUriCount": 0
+}

@@ -1,0 +1,246 @@
+{
+  "checkedAt": "2026-10-13T10:18:26.225365+00:00",
+  "kind": "ACTUAL_LOCAL_FORMAT_RECOVERY",
+  "jobId": "b4da5f34-4681-420e-81b6-c1e3e447722e",
+  "providerTaskId": "bb074c31-1905-45b6-b763-22d065ddc616",
+  "networkCalls": 0,
+  "additionalCredits": 0,
+  "usageBefore": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 1,
+    "reserved_attempts": 0,
+    "occupied_attempts": 1,
+    "remaining_attempts": 2,
+    "attemptStates": {
+      "PENDING_RECONCILIATION": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": true,
+    "pauseCode": "NEURAL4D_RECONCILIATION_REQUIRED",
+    "unreconciled_attempts": 1,
+    "realHttpRequests": 11,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 30.0
+  },
+  "outcome": "LOCAL_RECOVERY_VALIDATED",
+  "conversion": {
+    "version": "first_internal_embedded_textures_2048_v1",
+    "supplierOriginalHash": "8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885",
+    "supplierOriginalSize": 26600184,
+    "derivedHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+    "derivedSize": 8827324,
+    "mimeCorrection": "image/jpg -> image/jpeg",
+    "textureOnlyOptimization": true,
+    "geometryBufferViews": [
+      {
+        "bufferView": 0,
+        "hash": "7206cb0a658573c5cd4ee1635c2b56c94641bcd9139db67bf4594302c089d711",
+        "byteLength": 1199964,
+        "bytesUnchanged": true
+      },
+      {
+        "bufferView": 1,
+        "hash": "876ca8b2301dcf227dbf80965d28942d59315fa2c8318c8f894664ac1659a5f4",
+        "byteLength": 811680,
+        "bytesUnchanged": true
+      },
+      {
+        "bufferView": 2,
+        "hash": "dbfacbc32aab8625617fc43d9be31b3aba39a2190e44cda94d066dfaf2ac7032",
+        "byteLength": 541120,
+        "bytesUnchanged": true
+      }
+    ],
+    "textures": [
+      {
+        "bufferView": 3,
+        "format": "JPEG",
+        "originalDimensions": [
+          4096,
+          4096
+        ],
+        "derivedDimensions": [
+          2048,
+          2048
+        ],
+        "originalHash": "d7109c154bdbee629cbf6f8153345448ae96a63eabf3a1ac49db6f9a13a4723d",
+        "derivedHash": "b74d03784a58f3af5f9d534cffd53fed783d17eb2f847915b6b7e490bd709d32"
+      },
+      {
+        "bufferView": 4,
+        "format": "PNG",
+        "originalDimensions": [
+          4096,
+          4096
+        ],
+        "derivedDimensions": [
+          2048,
+          2048
+        ],
+        "originalHash": "9b7cb05e35766b3947edead43abe5b5ff25a46b89f2502a6bd7e0a5a6e4cdd0f",
+        "derivedHash": "51c974697b76ea360408e06cd0ad4ee36c93cd339ece3c0c9a9075f41c94a680"
+      }
+    ],
+    "geometryUnchanged": true,
+    "originalPreserved": true,
+    "newGeneration": false,
+    "providerCalls": 0
+  },
+  "model": {
+    "characterId": null,
+    "styleMode": "chibi",
+    "styleVersion": 2,
+    "hash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+    "size": 8827324,
+    "format": "glb",
+    "origin": "neural4d_technical_test",
+    "providerTaskId": "bb074c31-1905-45b6-b763-22d065ddc616",
+    "purpose": "技术验证",
+    "title": "内部非公开技术验证 · 非正式角色资产",
+    "licenseNote": "输入许可尚未独立核实；仅内部非公开技术验证，不代表角色文化审校或公开/商业使用许可。",
+    "validation": {
+      "validator": "xijing_glb_structural_v2",
+      "valid": true,
+      "format": "glb",
+      "version": 2,
+      "selfContained": true,
+      "externalResources": 0,
+      "meshCount": 1,
+      "primitiveCount": 1,
+      "vertexCount": 67640,
+      "triangleCount": 99997,
+      "size": 8827324,
+      "hash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "imageCount": 2,
+      "textureCount": 2,
+      "materialCount": 1,
+      "decodedTexturePixels": 8388608,
+      "embeddedImagesDecoded": true,
+      "fullConformanceChecked": false,
+      "localConversion": {
+        "version": "first_internal_embedded_textures_2048_v1",
+        "supplierOriginalHash": "8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885",
+        "supplierOriginalSize": 26600184,
+        "derivedHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "derivedSize": 8827324,
+        "mimeCorrection": "image/jpg -> image/jpeg",
+        "textureOnlyOptimization": true,
+        "geometryBufferViews": [
+          {
+            "bufferView": 0,
+            "hash": "7206cb0a658573c5cd4ee1635c2b56c94641bcd9139db67bf4594302c089d711",
+            "byteLength": 1199964,
+            "bytesUnchanged": true
+          },
+          {
+            "bufferView": 1,
+            "hash": "876ca8b2301dcf227dbf80965d28942d59315fa2c8318c8f894664ac1659a5f4",
+            "byteLength": 811680,
+            "bytesUnchanged": true
+          },
+          {
+            "bufferView": 2,
+            "hash": "dbfacbc32aab8625617fc43d9be31b3aba39a2190e44cda94d066dfaf2ac7032",
+            "byteLength": 541120,
+            "bytesUnchanged": true
+          }
+        ],
+        "textures": [
+          {
+            "bufferView": 3,
+            "format": "JPEG",
+            "originalDimensions": [
+              4096,
+              4096
+            ],
+            "derivedDimensions": [
+              2048,
+              2048
+            ],
+            "originalHash": "d7109c154bdbee629cbf6f8153345448ae96a63eabf3a1ac49db6f9a13a4723d",
+            "derivedHash": "b74d03784a58f3af5f9d534cffd53fed783d17eb2f847915b6b7e490bd709d32"
+          },
+          {
+            "bufferView": 4,
+            "format": "PNG",
+            "originalDimensions": [
+              4096,
+              4096
+            ],
+            "derivedDimensions": [
+              2048,
+              2048
+            ],
+            "originalHash": "9b7cb05e35766b3947edead43abe5b5ff25a46b89f2502a6bd7e0a5a6e4cdd0f",
+            "derivedHash": "51c974697b76ea360408e06cd0ad4ee36c93cd339ece3c0c9a9075f41c94a680"
+          }
+        ],
+        "geometryUnchanged": true,
+        "originalPreserved": true,
+        "newGeneration": false,
+        "providerCalls": 0
+      }
+    },
+    "frozenPayloadHash": "d023b5a3a3a3f65be6dd0ec0f9798b72cd3e105c99dfecd42c914bdd6a89d686",
+    "assetKind": "internal_technical_test",
+    "candidateId": "fa0cd555-1daf-44a3-8825-ee6f5eb8b79e",
+    "candidateVersion": 2,
+    "candidateScope": "FIRST_CHIBI_TECHNICAL_VALIDATION",
+    "sourceResultHash": null,
+    "citationHash": null,
+    "imageId": null,
+    "assetVersion": null,
+    "imageHash": "879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703",
+    "sourceImageHash": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+    "promptHash": "0648259709da555ba1c7d2070b2bb1c0317b2d505796e39518d4e7f48343b315",
+    "promptVersion": "candidate_bluewhite_review_v1",
+    "authorizationEvidenceHash": "1028d56f84a1ac3837a61e414b8df98ac6eb168c2142967c7e74087e8f5390ba",
+    "permissionEvidenceHash": "30b393bda5459f6a61b3c90d8e4c3dd5e57208c687b2c4914c5b5a9034647ec1",
+    "internalUseOnly": true,
+    "visibility": "internal",
+    "cultureAlignmentVerified": false,
+    "publicationAllowed": false,
+    "licenseVerified": false,
+    "commercialUseVerified": false,
+    "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+    "assetId": null,
+    "createdAt": "2026-10-13T10:18:28.036488+00:00",
+    "fileUrl": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+    "downloadUrl": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/download"
+  },
+  "frozenPayloadHash": "d023b5a3a3a3f65be6dd0ec0f9798b72cd3e105c99dfecd42c914bdd6a89d686",
+  "usageAfter": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 1,
+    "reserved_attempts": 0,
+    "occupied_attempts": 1,
+    "remaining_attempts": 2,
+    "attemptStates": {
+      "SUCCEEDED": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 11,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 30.0
+  },
+  "creationAttemptsUnchanged": true
+}

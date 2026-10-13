@@ -9,6 +9,11 @@ from export_phase_prompt import read_snapshot, public_text, export_public, sourc
 def redact(text):
     text = re.sub(r'\b(?:sk-|ghp_|github_pat_)[A-Za-z0-9_-]{16,}', '[credential redacted]', text)
     text = re.sub(r'Bearer\s+(?!YOUR|<)[A-Za-z0-9._-]{16,}', 'Bearer [credential redacted]', text)
+    # Official documentation also contains signed object-storage example URLs.
+    # Remove the entire query-bearing resource URL, not just one token field,
+    # including URLs embedded inside serialized tool output.
+    text = re.sub(r'https?://cos\.(?:neural4d\.com|zmkj\.com)/[^\s"\\<>]+',
+                  lambda match: '[signed model resource URL redacted]' if '?' in match[0] else match[0], text)
     return text
 
 
@@ -44,6 +49,8 @@ def main():
                 found['10-internal-history-and-image-permission-reply.txt'] = (line, text)
             if '建模不带贴图消耗20个积分' in text and text.startswith('<send_user_message_question_reply>'):
                 found['11-internal-account-credit-quote.txt'] = (line, text)
+            if text.lstrip().startswith('# 戏境 AI — Phase 4 第一次真实模型恢复与验收指令'):
+                found['12-first-model-recovery-request.txt'] = (line, text)
     if not {'00-original-user-request.txt', '01-final-architecture-revision.txt', '02-approved-development-request.txt'}.issubset(found):
         raise ValueError('Missing exact public Phase 4 user requests; do not invent evidence.')
     args.output.mkdir(parents=True, exist_ok=True)

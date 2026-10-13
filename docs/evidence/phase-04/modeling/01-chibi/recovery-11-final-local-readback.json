@@ -1,0 +1,433 @@
+{
+  "checkedAt": "2026-10-13T10:30:41.131382+00:00",
+  "kind": "ACTUAL_LOCAL_HTTP_AND_LEDGER_READBACK_NO_SUPPLIER_CALLS",
+  "checks": [
+    {
+      "path": "/index.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/history.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/roles.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/facial.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/music.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/video.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/gallery.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/about.html",
+      "status": 200,
+      "sameAsLocalFile": true,
+      "passed": true
+    },
+    {
+      "path": "/api/v1/health",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/api/v1/assets/usage",
+      "status": 200,
+      "passed": true,
+      "occupied": 1,
+      "remaining": 2,
+      "realEnabled": false
+    },
+    {
+      "path": "/api/v1/assets/models",
+      "status": 200,
+      "passed": true,
+      "internalModelHidden": true
+    },
+    {
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer",
+      "status": 200,
+      "passed": true,
+      "csp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; worker-src 'self' blob:; base-uri 'none'; frame-ancestors 'none'",
+      "privateCache": "private, no-store"
+    },
+    {
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+      "status": 200,
+      "size": 8827324,
+      "hash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "mimeType": "model/gltf-binary",
+      "passed": true
+    }
+  ],
+  "resources": [
+    {
+      "path": "/css/ai-workshop.css",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/css/facial.css",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/css/gallery.css",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/css/history.css",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/css/index.css",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/css/music.css",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/css/roles.css",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/css/style.css",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/css/video.css",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/art1.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/art3.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/art4.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/black.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/black1.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/blue.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/blue1.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/chou.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/dan.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/gallery1.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/gallery11.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/gallery12.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/gallery2.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/gallery5.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/gallery6.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/gallery7.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/gallery8.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/glod.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/glod1.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/home-banner.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/home1.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/intro1.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/intro2.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/intro3.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/intro4.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/jing.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/mask-black.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/mask-blue.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/mask-gold.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/mask-red.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/opera1.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/opera2.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/opera3.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/opera4.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/opera5.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/red.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/red1.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/sheng.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/white.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/white1.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/京胡.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/历史1.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/历史2.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/历史3.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/历史4.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/历史5.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/images/脸谱.jpg",
+      "status": 405,
+      "passed": false
+    },
+    {
+      "path": "/js/ai-workshop/main.js",
+      "status": 405,
+      "passed": false
+    }
+  ],
+  "usage": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 1,
+    "reserved_attempts": 0,
+    "occupied_attempts": 1,
+    "remaining_attempts": 2,
+    "attemptStates": {
+      "SUCCEEDED": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 11,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 30.0
+  },
+  "creationEnabledInPrivateEnv": false,
+  "operations": [
+    {
+      "operation": "create_model",
+      "is_mock": 0,
+      "count": 1,
+      "credits": 30.0
+    },
+    {
+      "operation": "download",
+      "is_mock": 0,
+      "count": 2,
+      "credits": 0
+    },
+    {
+      "operation": "query_model",
+      "is_mock": 0,
+      "count": 6,
+      "credits": 0
+    },
+    {
+      "operation": "verify",
+      "is_mock": 0,
+      "count": 2,
+      "credits": 0
+    }
+  ],
+  "passed": false
+}

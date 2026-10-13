@@ -132,4 +132,3 @@ def test_local_conversion_has_no_network_or_creation_call_path(offline_original,
     assert not call_names.intersection(prohibited)
     assert 'RecoveryOnlyService' in {node.func.id for node in ast.walk(tree)
                                     if isinstance(node, ast.Call) and isinstance(node.func, ast.Name)}
-

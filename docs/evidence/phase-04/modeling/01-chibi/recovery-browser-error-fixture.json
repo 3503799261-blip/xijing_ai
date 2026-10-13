@@ -1,0 +1,9 @@
+{
+  "kind": "ACTUAL_LOCAL_GLBFILENOTFOUND_BROWSER_FIXTURE",
+  "hashBefore": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+  "databaseChanges": 0,
+  "supplierRequests": 0,
+  "timeoutRestorationSeconds": 60,
+  "hashAfter": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+  "restored": true
+}

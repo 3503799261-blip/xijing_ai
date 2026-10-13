@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="2" failures="2" skipped="0" tests="5" time="2.456" timestamp="2026-10-13T18:21:01.589002+08:00" hostname="wenwen"><testcase classname="backend.tests.test_phase4_recovery_conversion" name="test_local_conversion_rejects_unbound_source_hash_before_decode" time="0.100" /><testcase classname="backend.tests.test_phase4_recovery_conversion" name="test_fixed_offline_source_converts_only_textures_and_preserves_geometry" time="0.000"><error message="failed on setup with &quot;KeyError: (4096, 4096)&quot;">@pytest.fixture(scope='module')
+    def offline_original():
+        # Actual JPEG bytes with the same narrow format discrepancy diagnosed in
+        # the supplier model; geometry remains the original four-face fixture.
+&gt;       texture = image_bytes((4096, 4096), fmt='JPEG')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+backend\tests\test_phase4_recovery_conversion.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+backend\tests\test_phase4_assets.py:81: in image_bytes
+    Image.new(mode, size, '#7e2440').save(stream, format=fmt)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\Image.py:3226: in new
+    color = ImageColor.getcolor(color, mode)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\ImageColor.py:155: in getcolor
+    elif Image.getmodebase(mode) == "L":
+         ^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\Image.py:280: in getmodebase
+    return ImageMode.getmode(mode).basemode
+           ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+mode = (4096, 4096)
+
+    @lru_cache
+    def getmode(mode: str) -&gt; ModeDescriptor:
+        """Gets a mode descriptor for the given mode."""
+        endian = "&lt;" if sys.byteorder == "little" else "&gt;"
+    
+        modes = {
+            # core modes
+            # Bits need to be extended to bytes
+            "1": ("L", "L", ("1",), "|b1"),
+            "L": ("L", "L", ("L",), "|u1"),
+            "I": ("L", "I", ("I",), f"{endian}i4"),
+            "F": ("L", "F", ("F",), f"{endian}f4"),
+            "P": ("P", "L", ("P",), "|u1"),
+            "RGB": ("RGB", "L", ("R", "G", "B"), "|u1"),
+            "RGBX": ("RGB", "L", ("R", "G", "B", "X"), "|u1"),
+            "RGBA": ("RGB", "L", ("R", "G", "B", "A"), "|u1"),
+            "CMYK": ("RGB", "L", ("C", "M", "Y", "K"), "|u1"),
+            "YCbCr": ("RGB", "L", ("Y", "Cb", "Cr"), "|u1"),
+            # UNDONE - unsigned |u1i1i1
+            "LAB": ("RGB", "L", ("L", "A", "B"), "|u1"),
+            "HSV": ("RGB", "L", ("H", "S", "V"), "|u1"),
+            # extra experimental modes
+            "RGBa": ("RGB", "L", ("R", "G", "B", "a"), "|u1"),
+            "LA": ("L", "L", ("L", "A"), "|u1"),
+            "La": ("L", "L", ("L", "a"), "|u1"),
+            "PA": ("RGB", "L", ("P", "A"), "|u1"),
+        }
+        if mode in modes:
+            base_mode, base_type, bands, type_str = modes[mode]
+            return ModeDescriptor(mode, bands, base_mode, base_type, type_str)
+    
+        mapping_modes = {
+            # I;16 == I;16L, and I;32 == I;32L
+            "I;16": "&lt;u2",
+            "I;16S": "&lt;i2",
+            "I;16L": "&lt;u2",
+            "I;16LS": "&lt;i2",
+            "I;16B": "&gt;u2",
+            "I;16BS": "&gt;i2",
+            "I;16N": f"{endian}u2",
+            "I;16NS": f"{endian}i2",
+            "I;32": "&lt;u4",
+            "I;32B": "&gt;u4",
+            "I;32L": "&lt;u4",
+            "I;32S": "&lt;i4",
+            "I;32BS": "&gt;i4",
+            "I;32LS": "&lt;i4",
+        }
+    
+&gt;       type_str = mapping_modes[mode]
+                   ^^^^^^^^^^^^^^^^^^^
+E       KeyError: (4096, 4096)
+
+C:\Users\35037\Lib\site-packages\PIL\ImageMode.py:84: KeyError</error></testcase><testcase classname="backend.tests.test_phase4_recovery_conversion" name="test_local_conversion_requires_exact_diagnosed_texture_count" time="0.005"><failure message="KeyError: (4096, 4096)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002CF4D20A590&gt;
+
+    def test_local_conversion_requires_exact_diagnosed_texture_count(monkeypatch):
+&gt;       single = textured_glb([image_bytes((4096, 4096), fmt='JPEG')], fmt='JPEG', mime='image/jpg')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+backend\tests\test_phase4_recovery_conversion.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+backend\tests\test_phase4_assets.py:81: in image_bytes
+    Image.new(mode, size, '#7e2440').save(stream, format=fmt)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\Image.py:3226: in new
+    color = ImageColor.getcolor(color, mode)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\ImageColor.py:155: in getcolor
+    elif Image.getmodebase(mode) == "L":
+         ^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\Image.py:280: in getmodebase
+    return ImageMode.getmode(mode).basemode
+           ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+mode = (4096, 4096)
+
+    @lru_cache
+    def getmode(mode: str) -&gt; ModeDescriptor:
+        """Gets a mode descriptor for the given mode."""
+        endian = "&lt;" if sys.byteorder == "little" else "&gt;"
+    
+        modes = {
+            # core modes
+            # Bits need to be extended to bytes
+            "1": ("L", "L", ("1",), "|b1"),
+            "L": ("L", "L", ("L",), "|u1"),
+            "I": ("L", "I", ("I",), f"{endian}i4"),
+            "F": ("L", "F", ("F",), f"{endian}f4"),
+            "P": ("P", "L", ("P",), "|u1"),
+            "RGB": ("RGB", "L", ("R", "G", "B"), "|u1"),
+            "RGBX": ("RGB", "L", ("R", "G", "B", "X"), "|u1"),
+            "RGBA": ("RGB", "L", ("R", "G", "B", "A"), "|u1"),
+            "CMYK": ("RGB", "L", ("C", "M", "Y", "K"), "|u1"),
+            "YCbCr": ("RGB", "L", ("Y", "Cb", "Cr"), "|u1"),
+            # UNDONE - unsigned |u1i1i1
+            "LAB": ("RGB", "L", ("L", "A", "B"), "|u1"),
+            "HSV": ("RGB", "L", ("H", "S", "V"), "|u1"),
+            # extra experimental modes
+            "RGBa": ("RGB", "L", ("R", "G", "B", "a"), "|u1"),
+            "LA": ("L", "L", ("L", "A"), "|u1"),
+            "La": ("L", "L", ("L", "a"), "|u1"),
+            "PA": ("RGB", "L", ("P", "A"), "|u1"),
+        }
+        if mode in modes:
+            base_mode, base_type, bands, type_str = modes[mode]
+            return ModeDescriptor(mode, bands, base_mode, base_type, type_str)
+    
+        mapping_modes = {
+            # I;16 == I;16L, and I;32 == I;32L
+            "I;16": "&lt;u2",
+            "I;16S": "&lt;i2",
+            "I;16L": "&lt;u2",
+            "I;16LS": "&lt;i2",
+            "I;16B": "&gt;u2",
+            "I;16BS": "&gt;i2",
+            "I;16N": f"{endian}u2",
+            "I;16NS": f"{endian}i2",
+            "I;32": "&lt;u4",
+            "I;32B": "&gt;u4",
+            "I;32L": "&lt;u4",
+            "I;32S": "&lt;i4",
+            "I;32BS": "&gt;i4",
+            "I;32LS": "&lt;i4",
+        }
+    
+&gt;       type_str = mapping_modes[mode]
+                   ^^^^^^^^^^^^^^^^^^^
+E       KeyError: (4096, 4096)
+
+C:\Users\35037\Lib\site-packages\PIL\ImageMode.py:84: KeyError</failure></testcase><testcase classname="backend.tests.test_phase4_recovery_conversion" name="test_local_conversion_requires_diagnosed_texture_dimensions" time="0.005"><failure message="KeyError: (64, 64)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002CF4D0D6450&gt;
+
+    def test_local_conversion_requires_diagnosed_texture_dimensions(monkeypatch):
+&gt;       small = image_bytes((64, 64), fmt='JPEG')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+backend\tests\test_phase4_recovery_conversion.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+backend\tests\test_phase4_assets.py:81: in image_bytes
+    Image.new(mode, size, '#7e2440').save(stream, format=fmt)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\Image.py:3226: in new
+    color = ImageColor.getcolor(color, mode)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\ImageColor.py:155: in getcolor
+    elif Image.getmodebase(mode) == "L":
+         ^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\Image.py:280: in getmodebase
+    return ImageMode.getmode(mode).basemode
+           ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+mode = (64, 64)
+
+    @lru_cache
+    def getmode(mode: str) -&gt; ModeDescriptor:
+        """Gets a mode descriptor for the given mode."""
+        endian = "&lt;" if sys.byteorder == "little" else "&gt;"
+    
+        modes = {
+            # core modes
+            # Bits need to be extended to bytes
+            "1": ("L", "L", ("1",), "|b1"),
+            "L": ("L", "L", ("L",), "|u1"),
+            "I": ("L", "I", ("I",), f"{endian}i4"),
+            "F": ("L", "F", ("F",), f"{endian}f4"),
+            "P": ("P", "L", ("P",), "|u1"),
+            "RGB": ("RGB", "L", ("R", "G", "B"), "|u1"),
+            "RGBX": ("RGB", "L", ("R", "G", "B", "X"), "|u1"),
+            "RGBA": ("RGB", "L", ("R", "G", "B", "A"), "|u1"),
+            "CMYK": ("RGB", "L", ("C", "M", "Y", "K"), "|u1"),
+            "YCbCr": ("RGB", "L", ("Y", "Cb", "Cr"), "|u1"),
+            # UNDONE - unsigned |u1i1i1
+            "LAB": ("RGB", "L", ("L", "A", "B"), "|u1"),
+            "HSV": ("RGB", "L", ("H", "S", "V"), "|u1"),
+            # extra experimental modes
+            "RGBa": ("RGB", "L", ("R", "G", "B", "a"), "|u1"),
+            "LA": ("L", "L", ("L", "A"), "|u1"),
+            "La": ("L", "L", ("L", "a"), "|u1"),
+            "PA": ("RGB", "L", ("P", "A"), "|u1"),
+        }
+        if mode in modes:
+            base_mode, base_type, bands, type_str = modes[mode]
+            return ModeDescriptor(mode, bands, base_mode, base_type, type_str)
+    
+        mapping_modes = {
+            # I;16 == I;16L, and I;32 == I;32L
+            "I;16": "&lt;u2",
+            "I;16S": "&lt;i2",
+            "I;16L": "&lt;u2",
+            "I;16LS": "&lt;i2",
+            "I;16B": "&gt;u2",
+            "I;16BS": "&gt;i2",
+            "I;16N": f"{endian}u2",
+            "I;16NS": f"{endian}i2",
+            "I;32": "&lt;u4",
+            "I;32B": "&gt;u4",
+            "I;32L": "&lt;u4",
+            "I;32S": "&lt;i4",
+            "I;32BS": "&gt;i4",
+            "I;32LS": "&lt;i4",
+        }
+    
+&gt;       type_str = mapping_modes[mode]
+                   ^^^^^^^^^^^^^^^^^^^
+E       KeyError: (64, 64)
+
+C:\Users\35037\Lib\site-packages\PIL\ImageMode.py:84: KeyError</failure></testcase><testcase classname="backend.tests.test_phase4_recovery_conversion" name="test_local_conversion_has_no_network_or_creation_call_path" time="0.000"><error message="failed on setup with &quot;KeyError: (4096, 4096)&quot;">@pytest.fixture(scope='module')
+    def offline_original():
+        # Actual JPEG bytes with the same narrow format discrepancy diagnosed in
+        # the supplier model; geometry remains the original four-face fixture.
+&gt;       texture = image_bytes((4096, 4096), fmt='JPEG')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+backend\tests\test_phase4_recovery_conversion.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+backend\tests\test_phase4_assets.py:81: in image_bytes
+    Image.new(mode, size, '#7e2440').save(stream, format=fmt)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\Image.py:3226: in new
+    color = ImageColor.getcolor(color, mode)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\ImageColor.py:155: in getcolor
+    elif Image.getmodebase(mode) == "L":
+         ^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35037\Lib\site-packages\PIL\Image.py:280: in getmodebase
+    return ImageMode.getmode(mode).basemode
+           ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+mode = (4096, 4096)
+
+    @lru_cache
+    def getmode(mode: str) -&gt; ModeDescriptor:
+        """Gets a mode descriptor for the given mode."""
+        endian = "&lt;" if sys.byteorder == "little" else "&gt;"
+    
+        modes = {
+            # core modes
+            # Bits need to be extended to bytes
+            "1": ("L", "L", ("1",), "|b1"),
+            "L": ("L", "L", ("L",), "|u1"),
+            "I": ("L", "I", ("I",), f"{endian}i4"),
+            "F": ("L", "F", ("F",), f"{endian}f4"),
+            "P": ("P", "L", ("P",), "|u1"),
+            "RGB": ("RGB", "L", ("R", "G", "B"), "|u1"),
+            "RGBX": ("RGB", "L", ("R", "G", "B", "X"), "|u1"),
+            "RGBA": ("RGB", "L", ("R", "G", "B", "A"), "|u1"),
+            "CMYK": ("RGB", "L", ("C", "M", "Y", "K"), "|u1"),
+            "YCbCr": ("RGB", "L", ("Y", "Cb", "Cr"), "|u1"),
+            # UNDONE - unsigned |u1i1i1
+            "LAB": ("RGB", "L", ("L", "A", "B"), "|u1"),
+            "HSV": ("RGB", "L", ("H", "S", "V"), "|u1"),
+            # extra experimental modes
+            "RGBa": ("RGB", "L", ("R", "G", "B", "a"), "|u1"),
+            "LA": ("L", "L", ("L", "A"), "|u1"),
+            "La": ("L", "L", ("L", "a"), "|u1"),
+            "PA": ("RGB", "L", ("P", "A"), "|u1"),
+        }
+        if mode in modes:
+            base_mode, base_type, bands, type_str = modes[mode]
+            return ModeDescriptor(mode, bands, base_mode, base_type, type_str)
+    
+        mapping_modes = {
+            # I;16 == I;16L, and I;32 == I;32L
+            "I;16": "&lt;u2",
+            "I;16S": "&lt;i2",
+            "I;16L": "&lt;u2",
+            "I;16LS": "&lt;i2",
+            "I;16B": "&gt;u2",
+            "I;16BS": "&gt;i2",
+            "I;16N": f"{endian}u2",
+            "I;16NS": f"{endian}i2",
+            "I;32": "&lt;u4",
+            "I;32B": "&gt;u4",
+            "I;32L": "&lt;u4",
+            "I;32S": "&lt;i4",
+            "I;32BS": "&gt;i4",
+            "I;32LS": "&lt;i4",
+        }
+    
+&gt;       type_str = mapping_modes[mode]
+                   ^^^^^^^^^^^^^^^^^^^
+E       KeyError: (4096, 4096)
+
+C:\Users\35037\Lib\site-packages\PIL\ImageMode.py:84: KeyError</error></testcase></testsuite></testsuites>
