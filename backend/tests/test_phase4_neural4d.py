@@ -547,7 +547,10 @@ def test_malformed_query_status_does_not_claim_success_or_real_progress(setup, i
     submitted = asyncio.run(context.models.submit({'approvalId': confirmation['approvalId'], 'modelCount': 1}, 'offline-invalid-query-code'))
     with pytest.raises(ServiceError, match='NEURAL4D_RECONCILIATION_REQUIRED'):
         asyncio.run(context.models.refresh(submitted['jobId']))
-    assert context.models.status(submitted['jobId'])['state'] == 'SUBMITTED'
+    assert context.models.status(submitted['jobId'])['state'] == 'PENDING_RECONCILIATION'
+    assert context.models.status(submitted['jobId'])['providerTaskId'] == 'offline-malformed-query'
+    assert context.usage.summary()['creationPaused'] is True
+    assert context.usage.summary()['occupied_attempts'] == 1
     assert not any(r.method == 'GET' for r in requests)
 
 

@@ -19,7 +19,10 @@ PUBLIC_IMAGE = {'imageId', 'assetId', 'hash', 'sourceHash', 'mimeType', 'width',
                 'characterId', 'styleMode', 'styleVersion'}
 PUBLIC_MODEL = {'modelId', 'assetId', 'hash', 'size', 'format', 'origin', 'licenseNote', 'title', 'validation',
                 'sourceResultHash', 'citationHash', 'assetVersion', 'createdAt', 'providerTaskId', 'imageId', 'imageHash',
-                'characterId', 'styleMode', 'styleVersion'}
+                'characterId', 'styleMode', 'styleVersion', 'assetKind', 'candidateId', 'candidateVersion',
+                'sourceImageHash', 'promptHash', 'promptVersion', 'visibility', 'internalUseOnly', 'publicationAllowed',
+                'cultureAlignmentVerified', 'purpose', 'authorizationEvidenceHash', 'permissionEvidenceHash',
+                'candidateScope', 'licenseVerified', 'commercialUseVerified', 'frozenPayloadHash'}
 
 
 def cultural_artifact(value, role):
@@ -356,7 +359,8 @@ class AssetService:
     def list_models(self, asset_id=None):
         if asset_id is not None:
             self.store.get(asset_id)
-        return [self.public_model(item) for item in self.store.files('model', asset_id)]
+        return [self.public_model(item) for item in self.store.files('model', asset_id)
+                if item.get('visibility') != 'internal' and item.get('internalUseOnly') is not True]
 
     def file_path(self, kind, file_id):
         item = self.store.file(kind, file_id)

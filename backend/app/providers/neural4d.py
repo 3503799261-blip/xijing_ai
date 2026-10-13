@@ -8,6 +8,7 @@ import ipaddress
 import json
 import socket
 import time
+import uuid
 from urllib.parse import urlsplit
 import httpx
 from ..config import WORKSPACE_ROOT
@@ -110,14 +111,29 @@ class Neural4DProvider:
         headers = self.headers()
         payload = self.usage.frozen_payload(attempt_id)
         parameters = parameters_for_style(payload.get('styleMode'))
+        technical = payload.get('assetKind') == 'internal_technical_test'
+        valid_identity = isinstance(payload.get('characterId'), str) and bool(payload['characterId'].strip())
+        if technical:
+            try:
+                valid_identity = (str(uuid.UUID(payload.get('candidateId', ''))) == payload.get('candidateId')
+                    and type(payload.get('candidateVersion')) is int and payload['candidateVersion'] >= 1
+                    and payload.get('styleMode') == 'chibi' and payload.get('purpose') == '技术验证'
+                    and payload.get('internalUseOnly') is True and payload.get('publicationAllowed') is False
+                    and payload.get('cultureAlignmentVerified') is False
+                    and all(field in payload and payload[field] is None for field in
+                            ('characterId', 'assetId', 'sourceTaskId', 'sourceResultHash', 'citationHash', 'imageId')))
+            except (ValueError, TypeError, AttributeError):
+                valid_identity = False
+        elif payload.get('assetKind', 'character_asset') != 'character_asset':
+            valid_identity = False
         if (type(payload.get('styleVersion')) is not int or payload['styleVersion'] < 1
-                or not isinstance(payload.get('characterId'), str) or not payload['characterId'].strip()
+                or not valid_identity
                 or type(payload.get('modelCount')) is not int or payload['modelCount'] != 1
                 or payload.get('imageHash') != hashlib.sha256(image).hexdigest() or payload.get('parameters') != parameters):
             raise ServiceError('NEURAL4D_INPUT_CHANGED', '冻结的建模图片或参数发生变化。', 409)
         # Durable winner before any network operation; duplicate invocation cannot send.
         self.usage.mark_started(attempt_id)
-        started, status, error = time.perf_counter(), None, None
+        started, status, error, actual_credits = time.perf_counter(), None, None, None
         try:
             async with self.client() as client:
                 response = await client.post(BASE + '/generateModelWithImage', headers=headers,
@@ -130,6 +146,9 @@ class Neural4DProvider:
             data = response.json()
             if not isinstance(data, dict):
                 raise ValueError('Invalid provider response')
+            charged = data.get('pointsDeducted')
+            if type(charged) in (int, float) and 0 <= charged < 1000000:
+                actual_credits = float(charged)
             ids = data.get('uuids') or ([data['uuid']] if data.get('uuid') else [])
             if (not isinstance(ids, list) or len(ids) != 1 or not isinstance(ids[0], str) or not 1 <= len(ids[0]) <= 200
                     or (data.get('uuid') is not None and data['uuid'] != ids[0])):
@@ -160,7 +179,8 @@ class Neural4DProvider:
             raise
         finally:
             self.usage.record_request('create_model', attempt_id=attempt_id, is_mock=self.is_mock,
-                                      http_status=status, duration_ms=(time.perf_counter()-started)*1000, error_code=error)
+                                      http_status=status, duration_ms=(time.perf_counter()-started)*1000, error_code=error,
+                                      actual_credits=actual_credits)
 
     async def download(self, url):
         parsed = urlsplit(url)

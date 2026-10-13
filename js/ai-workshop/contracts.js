@@ -276,10 +276,16 @@ export function validateAssetImage(value) {
 export function validateAssetModel(value) {
   if (!isObject(value) || !isIdentifier(value.modelId) || !isHash(value.hash) || value.format !== 'glb'
       || !Number.isSafeInteger(value.size) || value.size < 20
-      || !['licensed_import', 'legal_fixture', 'licensed_test_fixture', 'local_test_fixture', 'neural4d'].includes(value.origin)
+      || !['licensed_import', 'legal_fixture', 'licensed_test_fixture', 'local_test_fixture', 'neural4d', 'neural4d_technical_test'].includes(value.origin)
       || !isText(value.licenseNote, 3000) || !isObject(value.validation)
       || !safeAssetFileUrl(value.fileUrl, 'models', value.modelId)
       || !safeAssetFileUrl(value.downloadUrl, 'models', value.modelId, 'download')) throw new TypeError('Invalid asset model');
+  if (value.origin === 'neural4d_technical_test' && (value.assetKind !== 'internal_technical_test'
+      || value.visibility !== 'internal' || value.internalUseOnly !== true || value.publicationAllowed !== false
+      || value.cultureAlignmentVerified !== false || value.characterId !== null || value.assetId !== null
+      || value.styleMode !== 'chibi' || !isIdentifier(value.candidateId) || !isHash(value.promptHash))) {
+    throw new TypeError('Invalid private technical model identity');
+  }
   return Object.freeze({ ...value });
 }
 

@@ -7,6 +7,20 @@ from ..assets.schemas import CreateAsset, VisualApproval, ImageAcceptance, Model
 from ..assets.validation import MAX_IMAGE_BYTES, MAX_MODEL_BYTES
 from ..assets.candidates import CandidateCatalog
 from ..assets.candidate_preview import candidate_preview
+from ..assets.internal_viewer import internal_viewer
+
+
+def require_local_internal_access(request):
+    """Private technical artifacts are accessible only from this local machine."""
+    if (not request.client or request.client.host not in ('127.0.0.1', '::1')
+            or request.url.hostname not in ('127.0.0.1', 'localhost', '::1')
+            or request.headers.get('sec-fetch-site') == 'cross-site'):
+        raise ServiceError('ASSET_FILE_NOT_FOUND', '该资源不对外公开。', 404)
+
+
+def protect_internal_model(item, request):
+    if item.get('internalUseOnly') is True or item.get('visibility') == 'internal':
+        require_local_internal_access(request)
 
 
 async def bounded_body(request, limit):
@@ -116,20 +130,34 @@ def register_assets(app, service):
 
     @router.get('/models/{model_id}')
     async def model(model_id: str, request: Request):
-        return response(service.get_model(model_id), request)
+        item = service.get_model(model_id)
+        protect_internal_model(item, request)
+        return response(item, request)
 
     @router.get('/models/{model_id}/file')
-    async def model_file(model_id: str):
+    async def model_file(model_id: str, request: Request):
         item = service.get_model(model_id)
+        protect_internal_model(item, request)
         return FileResponse(await run_in_threadpool(service.file_path, 'model', model_id), media_type='model/gltf-binary',
-                            headers={'X-Content-Type-Options': 'nosniff', 'Cache-Control': 'private, max-age=3600',
+                            headers={'X-Content-Type-Options': 'nosniff', 'Cache-Control': 'private, no-store' if item.get('internalUseOnly') else 'private, max-age=3600',
                                      'ETag': '"' + item['hash'] + '"'})
 
     @router.get('/models/{model_id}/download')
-    async def model_download(model_id: str):
+    async def model_download(model_id: str, request: Request):
         item = service.get_model(model_id)
+        protect_internal_model(item, request)
         return FileResponse(await run_in_threadpool(service.file_path, 'model', model_id), media_type='model/gltf-binary',
                             filename=f"xijing-{item['modelId']}.glb", headers={'X-Content-Type-Options': 'nosniff'})
+
+    @router.get('/internal-models/{model_id}/viewer', response_class=HTMLResponse)
+    async def technical_viewer(model_id: str, request: Request):
+        require_local_internal_access(request)
+        item = service.get_model(model_id)
+        if item.get('origin') != 'neural4d_technical_test' or item.get('internalUseOnly') is not True:
+            raise ServiceError('ASSET_FILE_NOT_FOUND', '未找到内部技术验证模型。', 404)
+        return HTMLResponse(internal_viewer(item), headers={'Cache-Control': 'private, no-store',
+            'X-Content-Type-Options': 'nosniff',
+            'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; worker-src 'self' blob:; base-uri 'none'; frame-ancestors 'none'"})
 
     @router.get('/usage')
     async def usage(request: Request):

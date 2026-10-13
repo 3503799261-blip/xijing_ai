@@ -9,6 +9,7 @@ from ..errors import ServiceError
 from ..providers.neural4d import Neural4DProvider, parameters_for_style
 from .validation import validate_glb
 from .visual_prompt import canonical_hash
+from .technical_test import freeze_technical_candidate, technical_image_path, register_technical_model
 
 
 class ModelService:
@@ -135,6 +136,23 @@ class ModelService:
             db.execute('INSERT INTO neural4d_frozen_approvals VALUES (?,?)', (result['approvalId'], json.dumps(payload, ensure_ascii=False, sort_keys=True)))
         return result
 
+    def approve_technical_candidate(self, data):
+        """Trusted local orchestration only; never a browser approval schema.
+
+        This scoped exception has no Phase 3 cultural identity or publication
+        approval. Quota, verification, cost and the one-shot send remain shared.
+        """
+        if not self.available():
+            raise ServiceError('NEURAL4D_GENERATION_DISABLED', '内部验证仍须鉴权、余额、已核实费用与全局历史额度。', 403)
+        if data.get('action') != 'accept' or data.get('estimatedCredits') != self.settings.neural4d_expected_credits:
+            raise ServiceError('NEURAL4D_COST_UNVERIFIED', '内部验证的单次费用或确认不匹配。', 409)
+        payload = freeze_technical_candidate(self.assets, data)
+        result = self.usage.approve(payload, payload['purpose'], confirmed=True, estimated_credits=data['estimatedCredits'])
+        with self.assets.store.connect() as db:
+            db.execute('INSERT INTO neural4d_frozen_approvals VALUES (?,?)',
+                       (result['approvalId'], json.dumps(payload, ensure_ascii=False, sort_keys=True)))
+        return result
+
     def approval_payload(self, approval_id):
         with self.assets.store.connect() as db:
             row = db.execute('SELECT payload_json FROM neural4d_frozen_approvals WHERE approval_id=?', (approval_id,)).fetchone()
@@ -159,10 +177,12 @@ class ModelService:
             raise ServiceError('NEURAL4D_COST_CHANGED', '本次预计Credit费用已变化，请重新核实费用并明确确认；未发出建模请求。', 409)
         if not self.settings.neural4d_expected_credits or self.balance < self.settings.neural4d_expected_credits:
             raise ServiceError('NEURAL4D_GENERATION_DISABLED', '本次预计费用或已核验余额不满足条件，未发出请求。', 403)
-        current = self.freeze({**payload, 'assetVersion': payload['assetVersion']})
+        technical = payload.get('assetKind') == 'internal_technical_test'
+        current = freeze_technical_candidate(self.assets, payload) if technical else self.freeze({**payload, 'assetVersion': payload['assetVersion']})
         if current != payload:
             raise ServiceError('NEURAL4D_INPUT_CHANGED', '批准后资产已变化。', 409)
-        raw = self.assets.file_path('image', payload['imageId']).read_bytes()
+        raw = (technical_image_path(self.assets, payload) if technical else
+               self.assets.file_path('image', payload['imageId'])).read_bytes()
         if hashlib.sha256(raw).hexdigest() != payload['imageHash']:
             raise ServiceError('NEURAL4D_INPUT_CHANGED', '图片Hash不匹配。', 409)
         record = self.usage.reserve(key, data['approvalId'], payload, payload['purpose'], real_enabled=True, provider_verified=True)
@@ -174,7 +194,8 @@ class ModelService:
         payload = self.usage.frozen_payload(record['attemptId'])
         # No provider secrets or storage paths; only the server-frozen variant
         # identifiers needed to display the selected model's actual lineage.
-        style = {field: payload.get(field) for field in ('characterId', 'styleMode', 'styleVersion', 'assetId', 'assetVersion')}
+        style = {field: payload.get(field) for field in ('characterId', 'styleMode', 'styleVersion', 'assetId', 'assetVersion',
+                                                       'assetKind', 'candidateId', 'candidateVersion', 'internalUseOnly')}
         return {**record, **style, 'jobId': record['attemptId'], 'modelCount': 1, 'modelUrl': None, 'downloadUrl': None}
 
     def status(self, job_id):
@@ -208,21 +229,33 @@ class ModelService:
         if not self.settings.neural4d_protocol_verified:
             raise ServiceError('NEURAL4D_PROTOCOL_UNVERIFIED', '查询协议尚未核验。', 403)
         self.claim_query(job_id)
-        result = await self.provider.read_operation('retrieveModel', {'uuid': record['providerTaskId']}, 'query_model', attempt_id=job_id)
+        try:
+            result = await self.provider.read_operation('retrieveModel', {'uuid': record['providerTaskId']}, 'query_model', attempt_id=job_id)
+        except ServiceError as error:
+            self.usage.finish(job_id, 'PENDING_RECONCILIATION', provider_task_id=record['providerTaskId'], error_code=error.code)
+            raise
         code = result.get('codeStatus')
         if type(code) is not int:
+            self.usage.finish(job_id, 'PENDING_RECONCILIATION', provider_task_id=record['providerTaskId'], error_code='NEURAL4D_STATUS_INVALID')
             raise ServiceError('NEURAL4D_RECONCILIATION_REQUIRED', '供应商状态类型无效，请人工核查。', 502)
         if code == 1:
             self.usage.finish(job_id, 'PROCESSING', provider_task_id=record['providerTaskId'])
         elif code == 0:
-            raw = await self.provider.download(result.get('modelUrl', ''))
-            payload = self.approval_payload(record['approvalId'])
-            item = self.assets.register_generated_model(payload['assetId'], payload['imageId'], raw, record['providerTaskId'],
-                '供应商输出；商业使用需另行核查供应商条款和输入许可。')
+            try:
+                raw = await self.provider.download(result.get('modelUrl', ''))
+                payload = self.approval_payload(record['approvalId'])
+                item = (register_technical_model(self.assets, payload, raw, record['providerTaskId'])
+                        if payload.get('assetKind') == 'internal_technical_test' else
+                        self.assets.register_generated_model(payload['assetId'], payload['imageId'], raw, record['providerTaskId'],
+                            '供应商输出；商业使用需另行核查供应商条款和输入许可。'))
+            except ServiceError as error:
+                self.usage.finish(job_id, 'PENDING_RECONCILIATION', provider_task_id=record['providerTaskId'], error_code=error.code)
+                raise
             self.usage.finish(job_id, 'SUCCEEDED', provider_task_id=record['providerTaskId'])
             return {**self.status(job_id), 'model': item}
         elif code == -3:
             self.usage.finish(job_id, 'FAILED', provider_task_id=record['providerTaskId'], error_code='NEURAL4D_MODEL_FAILED')
         else:
+            self.usage.finish(job_id, 'PENDING_RECONCILIATION', provider_task_id=record['providerTaskId'], error_code='NEURAL4D_STATUS_UNKNOWN')
             raise ServiceError('NEURAL4D_RECONCILIATION_REQUIRED', '供应商状态不能确认，请人工核查；未创建新任务。', 502)
         return self.status(job_id)
