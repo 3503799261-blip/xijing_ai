@@ -1,0 +1,41 @@
+{
+  "kind": "ACTUAL_LOCAL_FREEZE_NO_PROVIDER_CALL",
+  "sourcePathHashMatches": true,
+  "payload": {
+    "assetKind": "internal_technical_test",
+    "candidateId": "fa0cd555-1daf-44a3-8825-ee6f5eb8b79e",
+    "candidateVersion": 2,
+    "candidateScope": "FIRST_CHIBI_TECHNICAL_VALIDATION",
+    "characterId": null,
+    "assetId": null,
+    "sourceTaskId": null,
+    "sourceResultHash": null,
+    "citationHash": null,
+    "imageId": null,
+    "assetVersion": null,
+    "styleMode": "chibi",
+    "styleVersion": 2,
+    "modelCount": 1,
+    "purpose": "技术验证",
+    "parameters": {
+      "modelCount": "1",
+      "mesh_quality": "standard",
+      "faceNum": "100000",
+      "disablePbr": "0",
+      "onlyGenerateMesh": "false",
+      "enableImageEnhancement": "false"
+    },
+    "imageHash": "879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703",
+    "sourceImageHash": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+    "promptHash": "0648259709da555ba1c7d2070b2bb1c0317b2d505796e39518d4e7f48343b315",
+    "promptVersion": "candidate_bluewhite_review_v1",
+    "authorizationEvidenceHash": "1028d56f84a1ac3837a61e414b8df98ac6eb168c2142967c7e74087e8f5390ba",
+    "permissionEvidenceHash": "30b393bda5459f6a61b3c90d8e4c3dd5e57208c687b2c4914c5b5a9034647ec1",
+    "internalUseOnly": true,
+    "visibility": "internal",
+    "cultureAlignmentVerified": false,
+    "publicationAllowed": false,
+    "licenseVerified": false,
+    "commercialUseVerified": false
+  }
+}

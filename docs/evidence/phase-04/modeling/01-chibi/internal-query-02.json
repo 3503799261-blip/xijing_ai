@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-10-13T09:33:09.251627+00:00",
+  "action": "refresh",
+  "kind": "ACTUAL_INTERNAL_TECHNICAL_TEST",
+  "autoRetry": false,
+  "publicExhibitionAllowed": false,
+  "formalCharacterAsset": false,
+  "senderLockAcquired": true,
+  "usageBefore": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 1,
+    "reserved_attempts": 0,
+    "occupied_attempts": 1,
+    "remaining_attempts": 2,
+    "attemptStates": {
+      "PROCESSING": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 4,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 30.0
+  },
+  "result": {
+    "attemptId": "b4da5f34-4681-420e-81b6-c1e3e447722e",
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "idempotencyKey": "internal-chibi-first-3cfc985b-7142-47fc-bf2a-bd8947b6eb3d",
+    "approvalId": "3cfc985b-7142-47fc-bf2a-bd8947b6eb3d",
+    "payloadHash": "d023b5a3a3a3f65be6dd0ec0f9798b72cd3e105c99dfecd42c914bdd6a89d686",
+    "purpose": "技术验证",
+    "estimatedCredits": 30.0,
+    "state": "PROCESSING",
+    "reservedAt": "2026-10-13T09:30:43.471949+00:00",
+    "startedAt": "2026-10-13T09:30:43.479210+00:00",
+    "updatedAt": "2026-10-13T09:33:09.698873+00:00",
+    "providerTaskId": "bb074c31-1905-45b6-b763-22d065ddc616",
+    "errorCode": null,
+    "httpStatus": null,
+    "newlyReserved": false,
+    "events": [
+      {
+        "sequence": 1,
+        "state": "RESERVED",
+        "recordedAt": "2026-10-13T09:30:43.472948+00:00",
+        "providerTaskId": null,
+        "errorCode": null,
+        "httpStatus": null
+      },
+      {
+        "sequence": 2,
+        "state": "ATTEMPT_STARTED",
+        "recordedAt": "2026-10-13T09:30:43.479210+00:00",
+        "providerTaskId": null,
+        "errorCode": null,
+        "httpStatus": null
+      },
+      {
+        "sequence": 3,
+        "state": "SUBMITTED",
+        "recordedAt": "2026-10-13T09:30:45.662822+00:00",
+        "providerTaskId": "bb074c31-1905-45b6-b763-22d065ddc616",
+        "errorCode": null,
+        "httpStatus": 200
+      },
+      {
+        "sequence": 4,
+        "state": "PROCESSING",
+        "recordedAt": "2026-10-13T09:31:30.321599+00:00",
+        "providerTaskId": "bb074c31-1905-45b6-b763-22d065ddc616",
+        "errorCode": null,
+        "httpStatus": null
+      },
+      {
+        "sequence": 5,
+        "state": "PROCESSING",
+        "recordedAt": "2026-10-13T09:33:09.699877+00:00",
+        "providerTaskId": "bb074c31-1905-45b6-b763-22d065ddc616",
+        "errorCode": null,
+        "httpStatus": null
+      }
+    ],
+    "characterId": null,
+    "styleMode": "chibi",
+    "styleVersion": 2,
+    "assetId": null,
+    "assetVersion": null,
+    "assetKind": "internal_technical_test",
+    "candidateId": "fa0cd555-1daf-44a3-8825-ee6f5eb8b79e",
+    "candidateVersion": 2,
+    "internalUseOnly": true,
+    "jobId": "b4da5f34-4681-420e-81b6-c1e3e447722e",
+    "modelCount": 1,
+    "modelUrl": null,
+    "downloadUrl": null
+  },
+  "usageAfter": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 1,
+    "reserved_attempts": 0,
+    "occupied_attempts": 1,
+    "remaining_attempts": 2,
+    "attemptStates": {
+      "PROCESSING": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 5,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 30.0
+  },
+  "outcome": "COMPLETED_OPERATION"
+}

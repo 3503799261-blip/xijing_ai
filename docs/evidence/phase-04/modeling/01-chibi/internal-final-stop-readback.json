@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-13T09:37:51.336097+00:00",
+  "kind": "LOCAL_READ_ONLY_AFTER_STOP_NO_SUPPLIER_CALLS",
+  "policy": {
+    "historical_used": 0,
+    "max_attempts": 3,
+    "creation_halted": 0
+  },
+  "attempts": [
+    {
+      "attempt_id": "b4da5f34-4681-420e-81b6-c1e3e447722e",
+      "state": "PENDING_RECONCILIATION",
+      "provider_task_id": "bb074c31-1905-45b6-b763-22d065ddc616",
+      "started_at": "2026-10-13T09:30:43.479210+00:00",
+      "error_code": "MODEL_DOWNLOAD_BLOCKED"
+    }
+  ],
+  "operations": [
+    {
+      "operation": "create_model",
+      "is_mock": 0,
+      "count": 1,
+      "actualCredits": 30.0
+    },
+    {
+      "operation": "query_model",
+      "is_mock": 0,
+      "count": 3,
+      "actualCredits": null
+    },
+    {
+      "operation": "verify",
+      "is_mock": 0,
+      "count": 2,
+      "actualCredits": null
+    }
+  ],
+  "occupiedAttempts": 1,
+  "remainingAttempts": 2,
+  "creationPaused": true,
+  "newModelAttemptsAfterFailure": 0,
+  "viewerTestForGeneratedModel": "NOT_RUN_NO_MODEL_FILE",
+  "humanAcceptance": "PENDING",
+  "note": "Supplier completion branch was reached, but download domain was blocked locally before any download HTTP request. No signed URL or credentials recorded."
+}

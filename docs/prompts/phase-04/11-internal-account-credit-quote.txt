@@ -1,0 +1,3 @@
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_e2fba557628240c683dcdc03b2770fc8\",0]","question":"请提供Neural4D账户中本次普通图生3D、standard、单模型的当前Credit报价及依据。官方该接口文档未列固定价格，不能套用专用Q版30或Mock80 Credit；不必发送密钥。","answer":"建模不带贴图消耗20个积分，带贴图30个积分，go会员每个月1500积分"}]
+</send_user_message_question_reply>

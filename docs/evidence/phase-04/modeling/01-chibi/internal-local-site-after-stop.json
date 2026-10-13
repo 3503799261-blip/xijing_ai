@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-10-13T09:42:41.514175+00:00",
+  "kind": "ACTUAL_LOCAL_HTTP_AFTER_SUPPLIER_STOP",
+  "checks": [
+    {
+      "path": "/api/v1/health",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/api/v1/assets/usage",
+      "status": 200,
+      "passed": true,
+      "remaining": 2,
+      "realEnabled": false,
+      "creationPaused": true
+    },
+    {
+      "path": "/api/v1/assets/models",
+      "status": 200,
+      "passed": true,
+      "privateModelsExposed": false
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "passed": true,
+      "sameAsLocalFile": true
+    },
+    {
+      "path": "/history.html",
+      "status": 200,
+      "passed": true,
+      "sameAsLocalFile": true
+    },
+    {
+      "path": "/roles.html",
+      "status": 200,
+      "passed": true,
+      "sameAsLocalFile": true
+    },
+    {
+      "path": "/facial.html",
+      "status": 200,
+      "passed": true,
+      "sameAsLocalFile": true
+    },
+    {
+      "path": "/music.html",
+      "status": 200,
+      "passed": true,
+      "sameAsLocalFile": true
+    },
+    {
+      "path": "/video.html",
+      "status": 200,
+      "passed": true,
+      "sameAsLocalFile": true
+    },
+    {
+      "path": "/gallery.html",
+      "status": 200,
+      "passed": true,
+      "sameAsLocalFile": true
+    },
+    {
+      "path": "/about.html",
+      "status": 200,
+      "passed": true,
+      "sameAsLocalFile": true
+    }
+  ],
+  "passed": 11,
+  "failed": 0,
+  "supplierRequests": 0
+}

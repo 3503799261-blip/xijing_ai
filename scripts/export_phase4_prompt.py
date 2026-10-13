@@ -37,6 +37,13 @@ def main():
                 found['07-three-attempt-modeling-plan-request.txt'] = (line, text)
             if text.startswith('Phase 4 第一次Neural4D真实建模的Q版概念图已更新。'):
                 found['08-bluewhite-concept-update-request.txt'] = (line, text)
+            if text.lstrip().startswith('现在批准进行第1次 Neural4D 真实建模'):
+                found['09-internal-technical-submission-approval.txt'] = (line, text)
+            if ('已确认允许此次上传与衍生处理' in text and '已核实，此前为0次' in text
+                    and text.startswith('<send_user_message_question_reply>')):
+                found['10-internal-history-and-image-permission-reply.txt'] = (line, text)
+            if '建模不带贴图消耗20个积分' in text and text.startswith('<send_user_message_question_reply>'):
+                found['11-internal-account-credit-quote.txt'] = (line, text)
     if not {'00-original-user-request.txt', '01-final-architecture-revision.txt', '02-approved-development-request.txt'}.issubset(found):
         raise ValueError('Missing exact public Phase 4 user requests; do not invent evidence.')
     args.output.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-13T09:36:11.038260+00:00",
+  "action": "refresh",
+  "kind": "ACTUAL_INTERNAL_TECHNICAL_TEST",
+  "autoRetry": false,
+  "publicExhibitionAllowed": false,
+  "formalCharacterAsset": false,
+  "senderLockAcquired": true,
+  "usageBefore": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 1,
+    "reserved_attempts": 0,
+    "occupied_attempts": 1,
+    "remaining_attempts": 2,
+    "attemptStates": {
+      "PROCESSING": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 5,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 30.0
+  },
+  "outcome": "STOPPED",
+  "errorCode": "MODEL_DOWNLOAD_BLOCKED",
+  "message": "模型下载域名尚未人工核验，不允许任意外链。"
+}

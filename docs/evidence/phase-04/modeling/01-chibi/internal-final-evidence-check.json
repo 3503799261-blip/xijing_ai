@@ -1,0 +1,9 @@
+{
+  "kind": "LOCAL_ONLY_NO_SUPPLIER_REQUEST",
+  "publicPromptRecords": 836,
+  "exportHashesValid": true,
+  "suspectedCredentialLocations": [],
+  "missingDocumentLinks": [],
+  "generatedImagesOrGlbAddedToRepository": false,
+  "scopeNote": "Pattern check of tracked/prospective source, docs and text evidence; not universal secret detection."
+}

@@ -1,18 +1,18 @@
 {
-  "exportedAt": "2026-10-12T14:13:29.724380+00:00",
-  "sourceSnapshotSha256": "464d84db1378d809a9042d8b21d95ad26b036eb581906cc52e324de0055d5f22",
-  "publicRecords": 721,
+  "exportedAt": "2026-10-13T09:43:41.685339+00:00",
+  "sourceSnapshotSha256": "ac3ad808465b6a8dc189cbbbeacf35be68972fa2e241417600f71779817f7f8b",
+  "publicRecords": 836,
   "omittedPartialLine": false,
   "skipped": {
-    "event_msg": 1328,
-    "token_usage_record": 335,
-    "reasoning": 332,
-    "world_state": 17,
+    "event_msg": 1541,
+    "token_usage_record": 384,
+    "reasoning": 395,
+    "world_state": 20,
     "compacted": 5,
-    "turn_context": 13,
-    "inter_agent_communication_metadata": 122,
-    "agent_message": 122,
-    "private_message": 12
+    "turn_context": 15,
+    "inter_agent_communication_metadata": 138,
+    "agent_message": 138,
+    "private_message": 15
   },
   "files": {
     "00-original-user-request.txt": "8325c4d5895bfb71dde386815ef767d82bd143d0925cb4037476bdec66cfa6ee",
@@ -21,7 +21,10 @@
     "06-dual-style-user-request.txt": "c770790c5841e68601b777c5333f43746274ba7d6d43b4934f57697ee3783993",
     "07-three-attempt-modeling-plan-request.txt": "ab3f5af5c0dce7ce3878fc83fe752e3b46351477700c8c53aa1f24abb4942fcb",
     "08-bluewhite-concept-update-request.txt": "dbc8cafadc6752c2e8a8250eceb39fd2efe67f2b7f1a142dd16515259387f0a4",
-    "03-public-conversation.jsonl": "e3a26ed647155dc878dc231935bf361f801910dfcad289eb3f71502e484e0f2c"
+    "09-internal-technical-submission-approval.txt": "1028d56f84a1ac3837a61e414b8df98ac6eb168c2142967c7e74087e8f5390ba",
+    "10-internal-history-and-image-permission-reply.txt": "30b393bda5459f6a61b3c90d8e4c3dd5e57208c687b2c4914c5b5a9034647ec1",
+    "11-internal-account-credit-quote.txt": "8b22fee2c79a48908e261185aa3dac7a12c1c7348d3f934b8374a3d3f8c13a2b",
+    "03-public-conversation.jsonl": "69df843606bb606dff7bca64fd661131e6200ff84fa14f43eb16b8d2b8069187"
   },
   "scope": "Actual public user messages, assistant commentary/final and matched tool evidence. No hidden reasoning, system/developer content or child internal messages. Snapshot; future records not included."
 }

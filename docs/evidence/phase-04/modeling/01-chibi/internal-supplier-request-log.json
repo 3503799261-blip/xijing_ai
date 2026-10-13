@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-13T09:40:56.846157+00:00",
+  "kind": "ACTUAL_REDACTED_OPERATIONAL_LEDGER_READBACK_AFTER_STOP",
+  "requests": [
+    {
+      "operation": "verify",
+      "httpStatus": 200,
+      "durationMs": 615.6041999993249,
+      "actualCredits": null,
+      "errorCode": null
+    },
+    {
+      "operation": "verify",
+      "httpStatus": 200,
+      "durationMs": 590.8656999999948,
+      "actualCredits": null,
+      "errorCode": null
+    },
+    {
+      "operation": "create_model",
+      "httpStatus": 200,
+      "durationMs": 2187.0011000000886,
+      "actualCredits": 30.0,
+      "errorCode": null
+    },
+    {
+      "operation": "query_model",
+      "httpStatus": 200,
+      "durationMs": 507.49720000021625,
+      "actualCredits": null,
+      "errorCode": null
+    },
+    {
+      "operation": "query_model",
+      "httpStatus": 200,
+      "durationMs": 419.63439999926777,
+      "actualCredits": null,
+      "errorCode": null
+    },
+    {
+      "operation": "query_model",
+      "httpStatus": 200,
+      "durationMs": 442.366199999924,
+      "actualCredits": null,
+      "errorCode": null
+    }
+  ],
+  "creationRequests": 1,
+  "noCredentialsOrSignedUrls": true,
+  "noDownloadsIssued": true
+}

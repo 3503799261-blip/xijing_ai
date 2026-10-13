@@ -1,0 +1,3 @@
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_0a3e8a2dc04a4c328b32368a0752abca\",0]","question":"此前全项目建模历史仍标记为未知。你现在称为“第1次”，是否已核实所有工具及账户记录，确认本项目此前的新建模型HTTP提交尝试为0次（包括失败和超时）？","answer":"已核实，此前为0次"},{"questionItemId":"[\"request_user_input_async\",\"call_0a3e8a2dc04a4c328b32368a0752abca\",1]","question":"新蓝白图此前只注明“百度公开数据”。是否已确认允许将这张图片上传Neural4D，作本次内部技术验证及3D衍生处理？不需要公开展示许可。","answer":"已确认允许此次上传与衍生处理"}]
+</send_user_message_question_reply>
