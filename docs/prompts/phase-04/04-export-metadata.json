@@ -1,15 +1,15 @@
 {
-  "exportedAt": "2026-10-13T10:42:28.446857+00:00",
-  "sourceSnapshotSha256": "425f329c0c3b331b2ec413572e3914079a4ee1eab7c21acb069d24cee5c4c221",
-  "publicRecords": 1039,
+  "exportedAt": "2026-10-13T12:03:55.824391+00:00",
+  "sourceSnapshotSha256": "8583bb1ea19b44dcac6e210484ee546a19b44053f5ab8ec6f9c949a1fa1f1ae5",
+  "publicRecords": 1056,
   "omittedPartialLine": false,
   "skipped": {
-    "event_msg": 1892,
-    "token_usage_record": 481,
-    "reasoning": 501,
-    "world_state": 24,
+    "event_msg": 1927,
+    "token_usage_record": 489,
+    "reasoning": 512,
+    "world_state": 25,
     "compacted": 6,
-    "turn_context": 17,
+    "turn_context": 18,
     "inter_agent_communication_metadata": 155,
     "agent_message": 155,
     "private_message": 15
@@ -25,7 +25,8 @@
     "10-internal-history-and-image-permission-reply.txt": "30b393bda5459f6a61b3c90d8e4c3dd5e57208c687b2c4914c5b5a9034647ec1",
     "11-internal-account-credit-quote.txt": "8b22fee2c79a48908e261185aa3dac7a12c1c7348d3f934b8374a3d3f8c13a2b",
     "12-first-model-recovery-request.txt": "53c1a788cd5015c611d2f0f1b75cc89169e98b459218c5623b1b5ddca754c3be",
-    "03-public-conversation.jsonl": "03470e6085361e24ac37a8cf09689985bc9372c306360e73142ee29813dd5794"
+    "13-first-model-human-acceptance.txt": "eef57a4107dd31515f0d82cc3cda339056f79d6451f7cb06a1edc1d240989580",
+    "03-public-conversation.jsonl": "88abc63a0a1cd35f8784739509bfbeffbea8591e7af7af554440aadff57798d2"
   },
   "scope": "Actual public user messages, assistant commentary/final and matched tool evidence. No hidden reasoning, system/developer content or child internal messages. Snapshot; future records not included."
 }

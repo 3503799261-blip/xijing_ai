@@ -340,3 +340,7 @@ node scripts/phase3_frontend_test.mjs --output .runtime/phase3-frontend-local.js
 最终652后端离线通过、前端Phase 2/3各25及Phase 4共36通过；8页浏览器打开与图片复核、14本机HTTP+62资源GET通过。失败夹具、旧安全断言、真实纹理失败及HEAD405试验保留，详见 [恢复报告第7～12节](phase-04-first-internal-modeling.md)。修复真实提交 `2935155bc766752d5319d3529c3d6ee47f14cc4c`。
 
 本轮新增3原任务查询+2安全资源下载，创建0、付费转换0、增量Credit0。项目仍创建1/3、剩余2，原30积分扣费不变。原账本SUCCEEDED及未知临时暂停解除不等于用户验收/第二次授权；生成配置仍false。**第1次内部桌面技术验证PASS，用户人工验收PENDING；Phase 4整体仍PARTIAL**。等待用户审查第一模型，不能自动进行第二次、合并main或进入Phase 5。
+
+## 20. 第1次用户人工验收（2026-10-13）
+
+用户在恢复完成后回复“批准，第一次非常好”，第1次内部技术模型人工验收通过。[原文](../prompts/phase-04/13-first-model-human-acceptance.txt)、[更新报告第13节](phase-04-first-internal-modeling.md)。此轮仅保存验收及本地额度快照，无API请求、预留或创建。已用1/3、剩2、生成关闭；第2次仍须单独明确授权。实体手机实测、公开/文化/商用审核和完整Phase 4验收未因此自动通过，整体仍PARTIAL。

@@ -51,6 +51,8 @@ def main():
                 found['11-internal-account-credit-quote.txt'] = (line, text)
             if text.lstrip().startswith('# 戏境 AI — Phase 4 第一次真实模型恢复与验收指令'):
                 found['12-first-model-recovery-request.txt'] = (line, text)
+            if text.strip() == '批准，第一次非常好' or text.rstrip().endswith('\n批准，第一次非常好'):
+                found['13-first-model-human-acceptance.txt'] = (line, text)
     if not {'00-original-user-request.txt', '01-final-architecture-revision.txt', '02-approved-development-request.txt'}.issubset(found):
         raise ValueError('Missing exact public Phase 4 user requests; do not invent evidence.')
     args.output.mkdir(parents=True, exist_ok=True)

@@ -102,3 +102,7 @@ GLB缓存原因可对照 [官方CachingGLTFLoader源码](https://raw.githubuserc
 以上为实际工程摘要，不是逐字用户对话。公开JSONL由真实session导出；脱敏API、Hash、失败JUnit和交互事实见 [恢复报告](../../reports/phase-04-first-internal-modeling.md)。含图截图、原/衍生模型仅本机私有。新增3原查询+2安全下载、创建0/增量Credit0，仍已用1/剩2。第1次桌面技术PASS、用户人工验收PENDING，Phase 4仍PARTIAL；没有第2次授权。
 
 归档脱敏检查发现早期官方文档示例含签名对象URL，导出器已整体替换为脱敏标记，3项专项通过。本次实际模型下载URL从未写入日志/证据。最新公开快照为1039条，以`04-export-metadata.json`的时间、范围与文件Hash为准；源会话仍原样保留于用户本机，禁止公开原始含密钥会话。此处不宣称此快照含导出完成后的最终回复和文档Commit输出。
+
+## 第1次真实模型用户验收
+
+用户实际回复 **“批准，第一次非常好”**，已认定第1次内部技术验证人工验收通过，原文见 [13-first-model-human-acceptance.txt](13-first-model-human-acceptance.txt)。仅登记验收，不创建第二次、不推进Phase 5，也不把用户反馈变成未执行的手机手势或文化许可测试。上述1039条是上一导出快照；当前公开记录数与文件Hash以更新后的导出元数据为准。
