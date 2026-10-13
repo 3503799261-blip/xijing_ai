@@ -259,6 +259,22 @@ try {
     const failed = viewerModule.initializeModelViewer({ root, loader: async () => { throw new Error('explicit offline loader failure'); } });
     await failed.load(model); assert.equal(failed.diagnostics().state, 'error'); assert.match(elements.get('#ai-workshop-viewer-error').textContent, /组件无法加载/); failed.dispose();
   });
+    await check('metadata failure uses the same error state and cancels stale model callbacks without network', async () => {
+      const before = calls.length;
+      const failed = viewerModule.initializeModelViewer({ root, loader: async () => {} });
+      await failed.load(model);
+      const stale = elements.get('#ai-workshop-viewer-host').children[0];
+      failed.showError('离线元数据读取失败');
+      stale.fire('load');
+      assert.equal(failed.diagnostics().state, 'error');
+      assert.equal(failed.diagnostics().modelId, null);
+      assert.equal(elements.get('#ai-workshop-viewer-host').dataset.viewerState, 'error');
+      assert.equal(elements.get('#ai-workshop-viewer-host').attributes['aria-busy'], 'false');
+      assert.equal(elements.get('#ai-workshop-viewer-zoom-in').disabled, true);
+      assert.equal(elements.get('#ai-workshop-viewer-error').hidden, false);
+      assert.equal(calls.length, before);
+      failed.dispose();
+    });
   const assetNames = ['asset-form', 'asset-feedback', 'asset-source-task', 'asset-mode', 'asset-style', 'style-state', 'style-model-select', 'style-version-select', 'style-query', 'prompt-edit-form', 'prompt-edit-save', 'prompt-edit-text', 'prompt-edit-negative', 'enterprise-fields', 'asset-summary', 'asset-prompt', 'visual-accept',
     'asset-image-form', 'asset-image-file', 'asset-image-license', 'asset-image-rights', 'asset-image-provenance', 'asset-image-preview', 'image-accept',
     'model-select', 'model-info', 'model-download', 'asset-quota', 'model-approval-summary', 'model-submit', 'model-import-form', 'asset-purpose',

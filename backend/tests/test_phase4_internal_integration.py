@@ -365,6 +365,10 @@ def test_loopback_internal_file_and_viewer_use_actual_model_and_no_store(setup, 
     assert model['modelId'] in viewer.text and model['providerTaskId'] in viewer.text
     assert viewer.headers['cache-control'] == 'private, no-store'
     assert 'frame-ancestors' in viewer.headers['content-security-policy']
+    policy = viewer.headers['content-security-policy']
+    script_rule = next(rule.strip() for rule in policy.split(';') if rule.strip().startswith('script-src '))
+    assert script_rule == "script-src 'self' 'wasm-unsafe-eval'"
+    assert "'unsafe-eval'" not in policy and "script-src 'unsafe-inline'" not in policy
     assert '/js/ai-workshop/internal-viewer.js' in viewer.text
     assert context.usage.summary()['occupied_attempts'] == 0
 

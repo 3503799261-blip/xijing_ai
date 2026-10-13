@@ -141,7 +141,7 @@ def technical_image_path(assets, payload):
     return CandidateCatalog(assets).file_path(checked['candidateId'])
 
 
-def register_technical_model(assets, payload, raw, provider_task_id):
+def register_technical_model(assets, payload, raw, provider_task_id, *, local_conversion=None):
     """Store an already-requested result; no promotion to a cultural role.
 
     Later candidate edits invalidate unsent approvals but do not erase a model
@@ -153,6 +153,12 @@ def register_technical_model(assets, payload, raw, provider_task_id):
             or len(provider_task_id) > 200 or any(ord(c) < 32 for c in provider_task_id)):
         fail('NEURAL4D_RESPONSE_INVALID', '供应商模型标识无效。', 502)
     validation = validate_glb(raw)
+    if local_conversion is not None:
+        if (not isinstance(local_conversion, dict) or local_conversion.get('derivedHash') != validation['hash']
+                or local_conversion.get('geometryUnchanged') is not True
+                or local_conversion.get('newGeneration') is not False):
+            fail('MODEL_RESULT_CONFLICT', '本地模型转换溯源无效。')
+        validation['localConversion'] = local_conversion
     lineage_fields = ('assetKind', 'candidateId', 'candidateVersion', 'candidateScope',
                       'characterId', 'sourceTaskId', 'sourceResultHash', 'citationHash',
                       'imageId', 'assetVersion', 'styleMode', 'styleVersion',

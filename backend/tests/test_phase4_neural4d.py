@@ -382,7 +382,7 @@ def test_signed_download_never_forwards_authorization_or_follows_redirect(setup)
     context = setup(handler)
     result = asyncio.run(context.provider.download(f'https://{DOWNLOAD_HOST}/model.glb?signature=offline-signature'))
     assert result.startswith(b'glTF') and 'authorization' not in requests[0].headers
-    with pytest.raises(ServiceError, match='MODEL_DOWNLOAD_FAILED'):
+    with pytest.raises(ServiceError, match='MODEL_DOWNLOAD_BLOCKED'):
         asyncio.run(context.provider.download(f'https://{DOWNLOAD_HOST}/redirect.glb'))
     assert len(requests) == 2
     for url in ('http://127.0.0.1/model.glb', 'https://evil.example.invalid/model.glb',
@@ -896,22 +896,17 @@ def test_custom_transport_with_isolated_canonical_fixture_is_not_logged_as_mock(
     assert not provider.is_mock
     asyncio.run(provider.read_operation('queryPointsInfo', {}, 'verify'))
     asyncio.run(provider.create_once(attempt['attemptId'], context.assets.file_path('image', data['imageId']).read_bytes()))
-    # A synthetic public DNS result avoids network while proving the custom
-    # transport must execute the same allowlist/public-IP check as real HTTP.
-    dns = []
-    def synthetic_public_dns(host, port, **kwargs):
-        dns.append((host, port))
-        return [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('8.8.8.8', 443))]
-    monkeypatch.setattr(socket, 'getaddrinfo', synthetic_public_dns)
-    assert asyncio.run(provider.download(f'https://{DOWNLOAD_HOST}/custom-contract.glb')) == glb()
-    assert dns == [(DOWNLOAD_HOST, 443)]
-    assert len(transport.requests) == 3
-    assert 'authorization' not in transport.requests[-1].headers
+    # An arbitrary custom transport cannot replace the DNS-pinned production
+    # downloader. Only explicit MockTransport is accepted for offline download
+    # tests; supplier-operation accounting still classifies this as non-mock.
+    with pytest.raises(ServiceError, match='MODEL_DOWNLOAD_BLOCKED'):
+        asyncio.run(provider.download(f'https://{DOWNLOAD_HOST}/custom-contract.glb'))
+    assert len(transport.requests) == 2
     with context.usage.connect() as db:
         rows = list(db.execute('SELECT operation,is_mock FROM neural4d_operational_requests ORDER BY operation'))
-    assert [(r['operation'], r['is_mock']) for r in rows] == [('create_model', 0), ('download', 0), ('verify', 0)]
+    assert [(r['operation'], r['is_mock']) for r in rows] == [('create_model', 0), ('verify', 0)]
     # This is only accounting in the temporary test ledger; no real HTTP was sent.
-    assert context.usage.summary()['realHttpRequests'] == 3 and context.usage.summary()['mockHttpRequests'] == 0
+    assert context.usage.summary()['realHttpRequests'] == 2 and context.usage.summary()['mockHttpRequests'] == 0
 
 
 def test_custom_transport_does_not_bypass_private_download_address_check(setup, monkeypatch):

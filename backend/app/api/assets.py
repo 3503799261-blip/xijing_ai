@@ -157,7 +157,10 @@ def register_assets(app, service):
             raise ServiceError('ASSET_FILE_NOT_FOUND', '未找到内部技术验证模型。', 404)
         return HTMLResponse(internal_viewer(item), headers={'Cache-Control': 'private, no-store',
             'X-Content-Type-Options': 'nosniff',
-            'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; worker-src 'self' blob:; base-uri 'none'; frame-ancestors 'none'"})
+            # The pinned local model-viewer bundle initializes a Wasm decoder.
+            # Permit only Wasm compilation; string-JS eval and remote script or
+            # resource origins stay blocked by this internal page's CSP.
+            'Content-Security-Policy': "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; worker-src 'self' blob:; base-uri 'none'; frame-ancestors 'none'"})
 
     @router.get('/usage')
     async def usage(request: Request):

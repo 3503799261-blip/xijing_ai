@@ -80,6 +80,9 @@ export function initializeModelViewer({ root, loader = ensureViewer }) {
   function setState(value, message) {
     state = value;
     host.dataset.viewerState = value;
+    const history = (host.dataset.stateHistory || '').split(',').filter(Boolean);
+    history.push(value);
+    host.dataset.stateHistory = history.slice(-30).join(',');
     host.setAttribute('aria-busy', String(value === 'loading'));
     status.dataset.viewerState = value;
     status.textContent = message;
@@ -195,5 +198,9 @@ export function initializeModelViewer({ root, loader = ensureViewer }) {
     delete host.dataset.cameraTheta; delete host.dataset.cameraPhi; delete host.dataset.cameraRadius;
     setState('idle', message);
   }
-  return { load, diagnostics, clear, dispose() { clear('3D查看器已关闭'); } };
+  function showError(message = '模型资源读取失败，请检查原文件。') {
+    clear();
+    fail(message);
+  }
+  return { load, diagnostics, clear, showError, dispose() { clear('3D查看器已关闭'); } };
 }

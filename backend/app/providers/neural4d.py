@@ -4,15 +4,13 @@ Official current multipart contract, checked 2026-10-11. No legacy JSON/fileKey
 fallback, redirects, automatic polling, SDK retries or alternative create paths.
 """
 import hashlib
-import ipaddress
 import json
-import socket
 import time
 import uuid
-from urllib.parse import urlsplit
 import httpx
 from ..config import WORKSPACE_ROOT
 from ..errors import ServiceError
+from .safe_model_download import secure_download
 
 BASE = 'https://alb.neural4d.com:3000/api'
 CANONICAL_USAGE_LEDGER = WORKSPACE_ROOT / '.runtime' / 'neural4d-usage.sqlite3'
@@ -182,35 +180,24 @@ class Neural4DProvider:
                                       http_status=status, duration_ms=(time.perf_counter()-started)*1000, error_code=error,
                                       actual_credits=actual_credits)
 
-    async def download(self, url):
-        parsed = urlsplit(url)
-        host = parsed.hostname
-        if parsed.scheme != 'https' or not host or parsed.username or parsed.password or parsed.port not in (None, 443) or host not in self.settings.neural4d_download_hosts:
-            raise ServiceError('MODEL_DOWNLOAD_BLOCKED', '模型下载域名尚未人工核验，不允许任意外链。', 403)
-        if not self.is_mock:
-            for info in socket.getaddrinfo(host, 443, type=socket.SOCK_STREAM):
-                if not ipaddress.ip_address(info[4][0]).is_global:
-                    raise ServiceError('MODEL_DOWNLOAD_BLOCKED', '模型下载地址不是公开资源。', 403)
-        # New client: NO Authorization on signed object-store URL or redirects.
-        started, status, error = time.perf_counter(), None, None
+    async def download(self, url, *, attempt_id=None):
+        # Exact hosts, each-hop DNS pinning and TLS SNI verification are enforced
+        # by the same backend downloader for ordinary and recovery operations.
+        # No supplier Authorization, cookies, proxies or full-URL logs.
+        started, error = time.perf_counter(), None
+        self.last_download_metadata = []
         try:
-            async with self.client(90) as client:
-                async with client.stream('GET', url) as response:
-                    status = response.status_code
-                    if not response.is_success:
-                        raise ServiceError('MODEL_DOWNLOAD_FAILED', '模型下载失败，未自动跟随跳转。', 502)
-                    data = bytearray()
-                    async for block in response.aiter_bytes():
-                        if len(data) + len(block) > 50 * 1024 * 1024:
-                            raise ServiceError('MODEL_DOWNLOAD_TOO_LARGE', '模型超过50MB，停止下载。', 413)
-                        data.extend(block)
-            return bytes(data)
-        except httpx.HTTPError:
-            error = 'MODEL_DOWNLOAD_TIMEOUT'
-            raise ServiceError(error, '模型下载超时或网络异常，未自动重试。', 504) from None
+            return await secure_download(url, self.settings.neural4d_download_hosts, self.transport,
+                                         on_metadata=self.last_download_metadata.append)
         except ServiceError as exc:
             error = exc.code
             raise
         finally:
-            self.usage.record_request('download', is_mock=self.is_mock, http_status=status,
-                                      duration_ms=(time.perf_counter()-started)*1000, error_code=error)
+            elapsed = (time.perf_counter()-started)*1000
+            for number, metadata in enumerate(self.last_download_metadata):
+                self.usage.record_request('download', attempt_id=attempt_id, is_mock=self.is_mock,
+                    http_status=metadata['httpStatus'], duration_ms=elapsed if number == len(self.last_download_metadata)-1 else None,
+                    error_code=error if number == len(self.last_download_metadata)-1 else None)
+            if not self.last_download_metadata and error not in (None, 'MODEL_DOWNLOAD_BLOCKED'):
+                self.usage.record_request('download', attempt_id=attempt_id, is_mock=self.is_mock,
+                                         duration_ms=elapsed, error_code=error)

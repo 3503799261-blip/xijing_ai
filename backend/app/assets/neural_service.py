@@ -242,7 +242,7 @@ class ModelService:
             self.usage.finish(job_id, 'PROCESSING', provider_task_id=record['providerTaskId'])
         elif code == 0:
             try:
-                raw = await self.provider.download(result.get('modelUrl', ''))
+                raw = await self.provider.download(result.get('modelUrl', ''), attempt_id=job_id)
                 payload = self.approval_payload(record['approvalId'])
                 item = (register_technical_model(self.assets, payload, raw, record['providerTaskId'])
                         if payload.get('assetKind') == 'internal_technical_test' else

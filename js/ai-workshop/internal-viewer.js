@@ -14,9 +14,6 @@ if (root) {
     if (model.origin !== 'neural4d_technical_test' || model.internalUseOnly !== true) throw new Error('不是内部技术验证模型');
     await viewer.load(model);
   } catch {
-    root.querySelector('#ai-workshop-viewer-status').textContent = '模型读取失败';
-    const error = root.querySelector('#ai-workshop-viewer-error');
-    error.textContent = '请检查本地服务、内部访问条件和已保存模型。不会重新生成模型。';
-    error.hidden = false;
+    viewer?.showError('请检查本地服务、内部访问条件和已保存模型。不会重新生成模型。');
   }
 }
