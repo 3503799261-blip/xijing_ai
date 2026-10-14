@@ -1,0 +1,104 @@
+{
+  "claimedAt": "2026-10-14T14:01:36.929297+00:00",
+  "status": "EXISTING_WORKFLOW_SUBMITTED_ONCE",
+  "idempotencyKey": "phase42-realistic-0170077e-one-agent-workflow-v1",
+  "brief": {
+    "style": "舞台角色",
+    "requirements": "为用户选定的红金写实参考图建立原创京剧风格数字角色JSON，角色名固定为“绛绣·戏韵”，写实自然人体比例，用途比赛主展示。\n参考图可见外观（助手观察，不是历史文化证据）：单人物全身站姿，红金长袍与花鸟式装饰，蓝银冠饰、红色绒球、珠帘及两侧垂饰，白色长袖延展，手部部分遮挡，袍摆拖地。保持主体外观，不增加武器、旗帜或图中不存在的配饰。\n冠饰具体类型、纹样含义、水袖规范和衣袍传统类别均未经认证；上述外观必须标为原创视觉解读creative，不可借用不相关引用认证。不要判定真实人物、历史人物、具体剧目或青衣/花旦身份。\nRAG文化研究仅核查京剧行当入门分类和表演基础，将有证据的一般文化介绍与原创外观分开；原创角色名不是传统实体，不把它当作需证明存在的历史人物，也不要求资料认证原创冠饰和衣袍。不足之处明确保留，不编造事实或引用。\n本次只执行现有Planner、真实RAG Research、Designer和Culture Reviewer一次，最终结果待用户确认。不要生成概念图、调用Neural4D或修改已冻结realistic_model_v1.0。"
+  },
+  "sourceHash": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+  "permissionEvidenceHash": "3b0f0c331267dc32aa758c8b0517db31b796790b3aec6046ed1d71365ed04a28",
+  "budgetBefore": {
+    "calls": 103,
+    "estimatedUpperCostCny": 0.24383712,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": {
+      "name": "phase3",
+      "calls": 41,
+      "estimatedUpperCostCny": 0.11040288,
+      "budgetCny": 0.5
+    },
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 41,
+        "estimatedUpperCostCny": 0.11040288,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "neuralBefore": {
+    "attempts": 1,
+    "states": [
+      [
+        "SUCCEEDED",
+        1
+      ]
+    ],
+    "operations": [
+      [
+        "create_model",
+        1
+      ],
+      [
+        "download",
+        2
+      ],
+      [
+        "query_model",
+        6
+      ],
+      [
+        "verify",
+        2
+      ]
+    ]
+  },
+  "maxPaidModelCalls": 3,
+  "maxRetrievals": 3,
+  "automaticRetry": false,
+  "neural4dRequests": 0,
+  "newModelSubmissions": 0,
+  "httpStatus": 202,
+  "createdTask": {
+    "taskId": "a2a43828-773f-4f81-8908-5ff762ced750",
+    "runId": "a2a43828-773f-4f81-8908-5ff762ced750",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/a2a43828-773f-4f81-8908-5ff762ced750",
+    "resultUrl": "/api/v1/agent/result/a2a43828-773f-4f81-8908-5ff762ced750",
+    "requestId": "3437d752-fcbe-4c84-a3f6-3eebb4047b92"
+  },
+  "finishedAt": "2026-10-14T14:01:37.089174+00:00",
+  "neuralAfter": {
+    "attempts": 1,
+    "states": [
+      [
+        "SUCCEEDED",
+        1
+      ]
+    ],
+    "operations": [
+      [
+        "create_model",
+        1
+      ],
+      [
+        "download",
+        2
+      ],
+      [
+        "query_model",
+        6
+      ],
+      [
+        "verify",
+        2
+      ]
+    ]
+  },
+  "neuralLedgerUnchanged": true
+}

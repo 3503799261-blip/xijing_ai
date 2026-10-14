@@ -22,6 +22,10 @@
 - `16-realistic-source-and-one-review-authorization.txt`：用户仅声明百度公开资源，并单独允许一次400输出Token文本审校。
 - `realistic-model-v1.md`：从不可覆盖候选快照逐字导出的待审Prompt，不是批准记录。
 - `17-second-model-final-preflight-request.txt`：用户本轮只授权最终Preflight，明确在第二次单独批准前停止。
+- `18-second-model-user-approval.txt`：用户实际回复“批准第二次真实生成”，已接受为单次批准。
+- `19-second-image-permission-and-agent-reply.txt`：用户声明图片比赛展示/上传/衍生许可，并允许一次现有Agent流程。
+- `20-second-account-credit-limit-reply.txt`：用户明确本次账户报价30积分，最高30积分。
+- `second-agent-brief-v2.md`：实际一次流程暂停后提出的需求修订草案；没有自动执行或修改旧产物。
 
 由 `scripts/export_phase4_prompt.py` 从明确指定的当前会话导出，后续开发结束再更新快照。导出器剔除非公开内容并脱敏常见凭证；比赛材料发布前仍需检查。
 
@@ -131,3 +135,9 @@ GLB缓存原因可对照 [官方CachingGLTFLoader源码](https://raw.githubuserc
 本轮需求原文见 [17](17-second-model-final-preflight-request.txt)。实际只读核对原图Hash、Prompt正文与快照、固定3次政策、唯一SUCCEEDED原任务、没有新批准/预留/UNKNOWN及创建锁竞争；10项离线锁/并发/幂等/费用门禁测试通过。Windows拒绝锁内容读取与CIM进程诊断的真实失败保留，不将权限错误当作锁正常证据；后续不读写锁内容的非阻塞竞争被拒，账本不变。
 
 [最终Preflight报告](../../reports/phase-04-second-model-final-preflight.md)标记READY_FOR_APPROVAL仅指审核材料；实际submissionEligible=false，许可、正式角色关联、费用/余额及本次单独授权仍待确认。Neural4D/LLM请求0、真实预留/提交0，未改变生产服务或生成开关。角色命名不替代Phase 3正式结果，第一内部模型豁免不沿用。
+
+## 第二次单次批准与真实研究暂停
+
+用户已明确生成批准、新图三项使用范围声明及30积分报价/上限；原文18～20保留。不是等待用户再次说同一个生成批准。一次现有Agent流程真实提交为 `a2a43828-773f-4f81-8908-5ff762ced750`，Planner实际将原创名和未认证袖布词误列requiredEntities。Research唯一查询获得1条行当基础证据，但整体精确实体缺口使任务暂停；没有Designer/Reviewer产物，canAccept=false。实际只有Planner调用，681输入+128输出=809Token、1.6249秒、估算0.00213512元。
+
+保留原任务和失败，准备更清楚区分原创观察/一般文化研究的brief v2，不改Phase 3代码、旧JSON、阈值或资料；新一次付费流程仍需允许，修订效果尚未验证。生成授权与30积分限制保留，Neural4D请求/批准/预留/提交0，全局仍1/3剩2。[真实执行记录](../../reports/phase-04-second-model-execution.md)包含结果与停止原因，不把本次Planner错误写成RAG无结果或正式角色通过。

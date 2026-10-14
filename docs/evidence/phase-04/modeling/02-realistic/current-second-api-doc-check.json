@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-14T14:17:32.315017+00:00",
+  "kind": "PUBLIC_OFFICIAL_DOCUMENT_GET_ONLY",
+  "managementApiRequests": 0,
+  "pages": [
+    {
+      "url": "https://docs.neural4d.com/en/api-reference/image-to-3d/generate-model-with-image.md",
+      "httpStatus": 200,
+      "sha256": "d3e13779c7bb242d45e29f131aba0d4ec4a2118e0f283ddbeff9a45fb5cd4138",
+      "bytes": 13078,
+      "verifiedFunctionalSchema": {
+        "body": "multipart/form-data",
+        "fileField": "image",
+        "fileContentType": "image/*",
+        "maxUploadMb": 50,
+        "standardFaceRange": [
+          100000,
+          500000
+        ],
+        "providerDefaultModelCount": 4,
+        "projectRequiredModelCount": 1,
+        "standardQualitySupported": true,
+        "projectPlannedFaceCount": 500000,
+        "imageEnhancementDisabled": true
+      }
+    },
+    {
+      "url": "https://docs.neural4d.com/en/api-reference/account-and-validation/query-remaining-balance.md",
+      "httpStatus": 200,
+      "sha256": "cca3bec48e8427460863a4b183f30e60caa1d81419c4c3c4e731dd8dff1bbbac",
+      "bytes": 5509,
+      "verifiedFunctionalSchema": {
+        "successCodeField": "statusType",
+        "expectedSuccessCode": 0,
+        "balanceField": "data.total_points",
+        "balanceNumericType": "integer"
+      }
+    }
+  ]
+}

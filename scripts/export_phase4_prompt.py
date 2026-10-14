@@ -63,6 +63,13 @@ def main():
             if ('继续执行「戏境AI」Phase 4.2 第二次Neural4D写实主展示建模。' in text
                     and '最终提交前检查' in text):
                 found['17-second-model-final-preflight-request.txt'] = (line, text)
+            if text.strip() == '批准第二次真实生成':
+                found['18-second-model-user-approval.txt'] = (line, text)
+            if (text.startswith('<send_user_message_question_reply>') and '已取得上述许可' in text
+                    and '允许一次现有Agent流程' in text):
+                found['19-second-image-permission-and-agent-reply.txt'] = (line, text)
+            if text.startswith('<send_user_message_question_reply>') and '账户报价30积分，最高30积分' in text:
+                found['20-second-account-credit-limit-reply.txt'] = (line, text)
     if not {'00-original-user-request.txt', '01-final-architecture-revision.txt', '02-approved-development-request.txt'}.issubset(found):
         raise ValueError('Missing exact public Phase 4 user requests; do not invent evidence.')
     args.output.mkdir(parents=True, exist_ok=True)
