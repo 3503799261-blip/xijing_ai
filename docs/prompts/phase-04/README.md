@@ -21,6 +21,7 @@
 - `15-realistic-image-path-reply.txt`：用户实际指定概念图1。
 - `16-realistic-source-and-one-review-authorization.txt`：用户仅声明百度公开资源，并单独允许一次400输出Token文本审校。
 - `realistic-model-v1.md`：从不可覆盖候选快照逐字导出的待审Prompt，不是批准记录。
+- `17-second-model-final-preflight-request.txt`：用户本轮只授权最终Preflight，明确在第二次单独批准前停止。
 
 由 `scripts/export_phase4_prompt.py` 从明确指定的当前会话导出，后续开发结束再更新快照。导出器剔除非公开内容并脱敏常见凭证；比赛材料发布前仍需检查。
 
@@ -124,3 +125,9 @@ GLB缓存原因可对照 [官方CachingGLTFLoader源码](https://raw.githubuserc
 通过既有CandidateCatalog独立存SECOND_REALISTIC_SHOWCASE版本1，原图/无损PNG像素一致，正式资产计数及Neural账本不变。冻结 `realistic_model_v1.0` 供审核，明确普通图生3D不发送该文本。新增准备工具单次领取保护与离线测试；首轮55、最终专项58通过。一次shell本机HTTP因WinError10013失败，权限恢复后只读重测8页HTTP200且字节一致；浏览器候选在窄/1920大屏正常。没有将测试替身称为真实审校，没有第二模型GLB或Viewer结果。
 
 本轮Neural4D API0、预留0、创建0，仍1/3；第二次费用未确认。来源、图像许可、文化关联与批准flags均保持false。实际请求、返回、Hash、失败、测试与冻结材料见 [准备总结](../../reports/phase-04-realistic-preparation.md)和原始JSON/JUnit。当前公开导出为其时间快照，不承诺包含之后的最终回复或归档提交。
+
+## 第二次最终Preflight
+
+本轮需求原文见 [17](17-second-model-final-preflight-request.txt)。实际只读核对原图Hash、Prompt正文与快照、固定3次政策、唯一SUCCEEDED原任务、没有新批准/预留/UNKNOWN及创建锁竞争；10项离线锁/并发/幂等/费用门禁测试通过。Windows拒绝锁内容读取与CIM进程诊断的真实失败保留，不将权限错误当作锁正常证据；后续不读写锁内容的非阻塞竞争被拒，账本不变。
+
+[最终Preflight报告](../../reports/phase-04-second-model-final-preflight.md)标记READY_FOR_APPROVAL仅指审核材料；实际submissionEligible=false，许可、正式角色关联、费用/余额及本次单独授权仍待确认。Neural4D/LLM请求0、真实预留/提交0，未改变生产服务或生成开关。角色命名不替代Phase 3正式结果，第一内部模型豁免不沿用。

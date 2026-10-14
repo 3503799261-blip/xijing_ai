@@ -1,17 +1,17 @@
 {
-  "exportedAt": "2026-10-14T13:03:10.218308+00:00",
-  "sourceSnapshotSha256": "6432f39baef42eb0b0338fda8bee3afba2476e688e3e872bb6e38359d533569f",
-  "publicRecords": 1153,
+  "exportedAt": "2026-10-14T13:43:31.809139+00:00",
+  "sourceSnapshotSha256": "1787c960b8d115bb8b6f0f8ad3f241107fda621f211d681ef1eb4d8c0f6e1459",
+  "publicRecords": 1204,
   "omittedPartialLine": false,
   "skipped": {
-    "event_msg": 2106,
-    "token_usage_record": 532,
-    "reasoning": 562,
+    "event_msg": 2218,
+    "token_usage_record": 555,
+    "reasoning": 595,
     "world_state": 29,
     "compacted": 7,
-    "turn_context": 21,
-    "inter_agent_communication_metadata": 165,
-    "agent_message": 165,
+    "turn_context": 22,
+    "inter_agent_communication_metadata": 170,
+    "agent_message": 170,
     "private_message": 18
   },
   "files": {
@@ -29,7 +29,8 @@
     "14-realistic-showcase-preparation-request.txt": "51eb95d9e21e3092d5e13c1b582423d00f50d82ed89760c68084bcb24dcf0e3f",
     "15-realistic-image-path-reply.txt": "7bd48201e5a404be91f647f8522cb04b8ccc3969eb299a7f5e44119f8214e703",
     "16-realistic-source-and-one-review-authorization.txt": "39b161d8a793928bf9825dcc7ce48b158c6df88bd9e648320b2572995a0c97f3",
-    "03-public-conversation.jsonl": "5c11dd1f0d971d6ea822f4c04bb316d2cf47e7a34376fe479bc82cccefea3697"
+    "17-second-model-final-preflight-request.txt": "cfdfbcda3a986c15a08cc0a522990959e53b01f835fb5f691595fa49821cd59b",
+    "03-public-conversation.jsonl": "11c3f595e66c98c168a941c6aac42c7475244c25301d146526bf06fa8c44fe44"
   },
   "scope": "Actual public user messages, assistant commentary/final and matched tool evidence. No hidden reasoning, system/developer content or child internal messages. Snapshot; future records not included."
 }

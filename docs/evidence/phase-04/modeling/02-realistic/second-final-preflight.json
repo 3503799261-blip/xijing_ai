@@ -1,0 +1,133 @@
+{
+  "checkedAt": "2026-10-14T13:39:41.954916+00:00",
+  "kind": "ACTUAL_LOCAL_FINAL_PREFLIGHT_NO_SUPPLIER",
+  "roleNameRequestedByUser": "绛绣·戏韵",
+  "styleMode": "realistic",
+  "purpose": "Competition Main Showcase",
+  "candidateId": "92e3d09f-57ce-49b2-8d57-1c0664a72689",
+  "assetLabel": "realistic_showcase_candidate_v1",
+  "sourceSha256": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+  "normalizedPngSha256": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+  "sourceSnapshotAndPreviewPixelsEqual": true,
+  "promptVersion": "realistic_model_v1.0",
+  "promptSnapshotHash": "80a893202c9d09e508ceba0a2796a3e2b1aab54f812c6790b23177f18bde3e33",
+  "promptTextSha256": "777afaa81b1e696d98dac00e695727e17c40f38983691786d52b69a40f62fad2",
+  "promptMarkdownMatchesFrozenCandidate": true,
+  "promptApproved": false,
+  "characterId": null,
+  "assetId": null,
+  "sourceTaskId": null,
+  "licenseVerified": false,
+  "cultureAlignmentVerified": false,
+  "imageAccepted": false,
+  "modelEligible": false,
+  "policy": {
+    "project_id": "xijing-ai-neural4d-project-v4",
+    "policy_version": "phase4-generation-attempts-v4",
+    "max_attempts": 3,
+    "historical_used": 0,
+    "historical_verified_at": "2026-10-12T14:29:31.990474+00:00",
+    "creation_halted": 0,
+    "halt_code": null
+  },
+  "attempts": [
+    {
+      "attempt_id": "b4da5f34-4681-420e-81b6-c1e3e447722e",
+      "state": "SUCCEEDED",
+      "provider_task_id": "bb074c31-1905-45b6-b763-22d065ddc616"
+    }
+  ],
+  "attemptStates": {
+    "SUCCEEDED": 1
+  },
+  "used": 1,
+  "occupied": 1,
+  "reserved": 0,
+  "remaining": 2,
+  "nextOrdinalIfApproved": 2,
+  "unfinishedModelTasks": 0,
+  "unknownModelTasks": 0,
+  "existingAttemptsForThisCandidate": [],
+  "approvals": {
+    "total": 1,
+    "unconsumed": 0
+  },
+  "operationalLedger": [
+    {
+      "operation": "create_model",
+      "is_mock": 0,
+      "count": 1,
+      "actualCredits": 30.0
+    },
+    {
+      "operation": "download",
+      "is_mock": 0,
+      "count": 2,
+      "actualCredits": 0
+    },
+    {
+      "operation": "query_model",
+      "is_mock": 0,
+      "count": 6,
+      "actualCredits": 0
+    },
+    {
+      "operation": "verify",
+      "is_mock": 0,
+      "count": 2,
+      "actualCredits": 0
+    }
+  ],
+  "creationLockProbe": {
+    "existingFile": true,
+    "method": "Existing read-only rb handle, nonblocking exclusive lock; no start/recover/reserve.",
+    "status": "HELD_BY_ANOTHER_HANDLE_EXPECTED_EXCLUSION",
+    "fileMetadataUnchanged": true
+  },
+  "immutabilityTriggers": [
+    "neural4d_approval_immutable",
+    "neural4d_approval_no_delete",
+    "neural4d_attempt_inputs_immutable",
+    "neural4d_attempts_cap",
+    "neural4d_attempts_no_delete",
+    "neural4d_events_no_delete",
+    "neural4d_events_no_update",
+    "neural4d_requests_no_delete",
+    "neural4d_requests_no_update",
+    "neural4d_send_claim_immutable",
+    "neural4d_usage_immutable",
+    "neural4d_usage_no_delete"
+  ],
+  "ledgerBeforeAfterIdentical": true,
+  "formalAssetCounts": {
+    "character_assets": 2,
+    "asset_images": 0,
+    "asset_models": 3
+  },
+  "generationEnabled": false,
+  "configuredExpectedCreditsFromOldSettings": null,
+  "currentSecondQuoteVerified": false,
+  "currentCreditBalanceChecked": false,
+  "plannedServerPresetNotSent": {
+    "modelCount": "1",
+    "mesh_quality": "standard",
+    "faceNum": "500000",
+    "disablePbr": "0",
+    "onlyGenerateMesh": "false",
+    "enableImageEnhancement": "false"
+  },
+  "plannedModelCount": 1,
+  "neural4dApiRequests": 0,
+  "llmApiRequests": 0,
+  "newReservations": 0,
+  "newModelSubmissions": 0,
+  "reviewPackageStatus": "READY_FOR_APPROVAL",
+  "submissionEligible": false,
+  "pendingGates": [
+    "second_image_display_upload_derivative_permission",
+    "confirmed_phase3_character_association",
+    "current_second_cost_and_balance",
+    "per_attempt_human_approval_and_authenticated_sender"
+  ],
+  "secondModelViewerTest": false
+}

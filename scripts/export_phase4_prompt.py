@@ -60,6 +60,9 @@ def main():
             if (text.startswith('<send_user_message_question_reply>') and '百度公开资源' in text
                     and '允许一次已有DeepSeek文化审校' in text):
                 found['16-realistic-source-and-one-review-authorization.txt'] = (line, text)
+            if ('继续执行「戏境AI」Phase 4.2 第二次Neural4D写实主展示建模。' in text
+                    and '最终提交前检查' in text):
+                found['17-second-model-final-preflight-request.txt'] = (line, text)
     if not {'00-original-user-request.txt', '01-final-architecture-revision.txt', '02-approved-development-request.txt'}.issubset(found):
         raise ValueError('Missing exact public Phase 4 user requests; do not invent evidence.')
     args.output.mkdir(parents=True, exist_ok=True)

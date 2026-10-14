@@ -1,0 +1,13 @@
+{
+  "kind": "ACTUAL_READONLY_PREFLIGHT_HARNESS_FAILURE",
+  "date": "2026-10-14",
+  "result": "PRECHECK_STOPPED_BEFORE_FINAL_RECEIPT",
+  "exception": "PermissionError / Errno 13",
+  "operation": "Hashing the contents of the existing owner lock file",
+  "interpretation": "Windows denied reading the lock range. This alone was not reported as proof of a healthy sender lock.",
+  "change": "The check now uses metadata before/after and an existing rb handle for a nonblocking exclusive lock probe; it does not read or write the lock contents, unlock another process, construct a UsageManager, or recover/reserve any production attempt.",
+  "additionalDiagnostic": "The restricted shell also denied the optional CIM process inventory; the report will not claim the lock owner's process identity was verified.",
+  "neural4dApiRequests": 0,
+  "newModelReservations": 0,
+  "newModelSubmissions": 0
+}

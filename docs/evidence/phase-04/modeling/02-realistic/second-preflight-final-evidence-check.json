@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-14T13:45:30.311269+00:00",
+  "kind": "ACTUAL_FINAL_PREFLIGHT_EVIDENCE_CHECK",
+  "ledgerUnchangedAfterOfflineMocks": true,
+  "actualUsed": 1,
+  "actualRemaining": 2,
+  "unknownTasks": 0,
+  "unconsumedApprovals": 0,
+  "sourceHashStillMatches": true,
+  "frozenPromptDocumentUnchangedFromPreparationCommit": true,
+  "generationEnabled": false,
+  "offlineJUnit": {
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "links": [
+    {
+      "target": "../evidence/phase-04/modeling/02-realistic/second-preflight-harness-failure.json",
+      "exists": true
+    },
+    {
+      "target": "phase-04-realistic-model-risk.md",
+      "exists": true
+    },
+    {
+      "target": "../evidence/phase-04/modeling/02-realistic/second-final-preflight.json",
+      "exists": true
+    },
+    {
+      "target": "../evidence/phase-04/modeling/02-realistic/second-final-preflight-offline-tests.xml",
+      "exists": true
+    },
+    {
+      "target": "phase-04-realistic-preparation.md",
+      "exists": true
+    }
+  ],
+  "publicPromptExportHashVerified": true,
+  "publicRecords": 1204,
+  "commonSecretPatternFindings": [],
+  "protectedBusinessCodeNotModified": true,
+  "neural4dApiRequests": 0,
+  "llmApiRequests": 0,
+  "newReservations": 0,
+  "newModelSubmissions": 0,
+  "reportSha256": "8c3818d8fb05c6a401a5bdd41b89ed70d71fe264887370a2321c231e5a3b8650",
+  "reviewPackageStatus": "READY_FOR_APPROVAL",
+  "submissionEligible": false
+}
