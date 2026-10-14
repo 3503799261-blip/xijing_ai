@@ -1,0 +1,6 @@
+{
+  "kind": "OFFLINE_TESTS_NO_SUPPLIER_REQUESTS",
+  "cwd": "D:\\京剧\\京剧",
+  "basetemp": "D:\\京剧\\.runtime\\tests\\phase42-final-3dd8904f028e4cee9e11203d63ad8670",
+  "command": ".venv\\Scripts\\python.exe -m pytest backend/tests/test_phase42_preparation.py backend/tests/test_phase4_candidates.py backend/tests/test_phase4_candidate_api.py backend/tests/test_phase4_prompt_export.py -q --basetemp <validated-path> --junitxml docs/evidence/phase-04/modeling/02-realistic/preparation-final-offline-tests.xml"
+}

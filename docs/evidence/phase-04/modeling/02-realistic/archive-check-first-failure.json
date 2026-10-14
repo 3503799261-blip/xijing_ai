@@ -1,0 +1,11 @@
+{
+  "kind": "ACTUAL_ARCHIVE_CHECK_HARNESS_FAILURE",
+  "date": "2026-10-14",
+  "result": "ASSERTION_FAILED_BEFORE_SCAN_RECORD_UPDATE",
+  "cause": "The readonly archive checker initially classified every tracked .glb as private. The existing licensed Duck.glb fixture is deliberately tracked and was incorrectly included.",
+  "credentialPatternFindings": 0,
+  "businessCodeOrDataChanged": false,
+  "supplierRequests": 0,
+  "modelSubmissions": 0,
+  "resolution": "Verify the exact existing Duck fixture hash and its preserved manifest/license, then exempt only that fixture from the private-model list. Keep credential and signed-URL scans unchanged; do not exempt real generated models."
+}

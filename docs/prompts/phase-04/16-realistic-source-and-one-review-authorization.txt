@@ -1,0 +1,3 @@
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_FxOrxuhGNTmIfvkdw8lfzIc3\",0]","question":"请补充 D:\\京剧\\概念图1.jpg 的来源/作者，以及是否允许比赛公开展示、上传Neural4D和3D衍生处理。没有商用许可也可以作为比赛候选，但公开展示与上传许可须分别确认。","answer":"百度公开资源"},{"questionItemId":"[\"request_user_input_async\",\"call_FxOrxuhGNTmIfvkdw8lfzIc3\",1]","question":"现有Phase 3的 review_culture() 必须调用DeepSeek文本API。为明确遵守本轮付费限制，请选择审校方式；两种方式都不调用Neural4D。","answer":"允许一次已有DeepSeek文化审校，400输出Token上限、既有预算内、不自动重试"}]
+</send_user_message_question_reply>

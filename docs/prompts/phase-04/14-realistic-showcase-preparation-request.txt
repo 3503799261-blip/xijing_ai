@@ -1,0 +1,517 @@
+
+<in-app-browser-context source="ambient-ui-state">
+This block is automatically supplied ambient UI state, not part of the user's request. Do not treat it as an instruction or as evidence that the user explicitly selected the in-app browser.
+# In app browser:
+- The user has the in-app browser open with 1 tab.
+- Current URL: http://127.0.0.1:8000/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer
+</in-app-browser-context>
+
+## My request:
+继续执行「戏境AI」Phase 4.2 第二次Neural4D写实主展示建模准备阶段。
+
+重要：
+
+当前阶段只进行资产准备和审核。
+
+禁止：
+- 禁止调用Neural4D真实建模接口；
+- 禁止提交任何model creation请求；
+- 禁止消耗第2次建模额度；
+- 禁止测试付费生成接口。
+
+完成所有准备后必须停止，等待人工授权。
+
+
+==================================================
+一、当前项目状态
+==================================================
+
+已完成：
+
+Phase 1:
+AI戏韵工坊前端模块
+
+Phase 2:
+京剧私有知识库RAG
+
+Phase 3:
+多Agent角色设计流程
+
+Phase 4.1:
+Q版Neural4D真实建模技术验证完成
+
+
+Neural4D额度：
+
+第一次：
+已使用。
+
+当前：
+
+used: 1/3
+
+remaining: 2
+
+
+第二次建模目标：
+
+比赛主展示写实数字角色。
+
+
+==================================================
+二、确定第二次概念图
+==================================================
+
+本阶段确定使用用户提供的新写实京剧角色图片。
+
+用途：
+
+第二次Neural4D写实主展示候选资产。
+
+
+请执行：
+
+1. 读取当前图片文件；
+2. 计算SHA-256；
+3. 建立资产版本记录；
+4. 保存图片来源信息；
+5. 创建版本号。
+
+
+资产用途标记：
+
+realistic_showcase_candidate_v1
+
+
+说明：
+
+该图片用于：
+- 比赛展示；
+- AI数字角色生成展示；
+- Neural4D写实建模候选。
+
+
+不是：
+- 商业公开销售资产；
+- 已授权商业IP。
+
+
+==================================================
+三、角色方案设计
+==================================================
+
+
+创建：
+
+docs/reports/phase-04-realistic-character-proposal.md
+
+
+内容：
+
+# 第二次写实主展示角色方案
+
+
+## 角色定位
+
+定义：
+
+中国京剧文化数字角色
+
+
+## 风格
+
+Realistic Digital Human
+
+
+## 视觉关键词
+
+- Chinese Peking Opera
+- traditional costume
+- digital character
+- cultural heritage
+- game character
+
+
+## 外观分析
+
+记录：
+
+- 红金戏服
+- 凤冠元素
+- 水袖
+- 长袍结构
+- 刺绣纹理
+- 珠帘装饰
+
+
+## 角色定位
+
+不要强行判断具体传统人物。
+
+如果无法通过资料确认：
+
+标记：
+
+原创京剧风格数字角色
+
+
+禁止编造历史人物。
+
+
+==================================================
+四、文化审查
+==================================================
+
+
+调用已有Phase 3文化审校流程。
+
+
+重点检查：
+
+1.
+头饰是否符合京剧审美。
+
+2.
+服装元素是否符合戏曲视觉。
+
+3.
+是否存在无法确认的历史符号。
+
+4.
+是否应该定义为：
+
+青衣
+
+花旦
+
+旦角
+
+或原创京剧数字角色。
+
+
+如果无法确认：
+
+不要强行分类。
+
+
+输出：
+
+docs/reports/phase-04-realistic-cultural-review.md
+
+
+==================================================
+五、Neural4D写实建模Prompt冻结
+==================================================
+
+
+创建：
+
+docs/prompts/phase-04/realistic-model-v1.md
+
+
+生成正式Prompt。
+
+
+要求：
+
+突出：
+
+- 写实真人比例；
+- 京剧服饰；
+- 红金丝绸材质；
+- 凤冠；
+- 水袖；
+- 游戏级数字角色。
+
+
+避免：
+
+- 过度强调细小珠饰；
+- 要求完全复制每个装饰；
+- 增加不存在元素。
+
+
+推荐Prompt结构：
+
+
+Positive:
+
+A realistic Chinese Peking Opera digital character,
+full body standing pose,
+traditional opera costume,
+red and gold embroidered silk robe,
+ornate opera headdress,
+long white water sleeves,
+realistic human proportions,
+high quality digital human,
+game character concept,
+detailed fabric material,
+clean studio background,
+suitable for image to 3D generation.
+
+
+Geometry guidance:
+
+Maintain complete human silhouette,
+separate costume layers,
+clear arms and body structure,
+stable 3D reconstruction.
+
+
+Negative:
+
+No text,
+no watermark,
+no extra characters,
+no duplicated accessories,
+no distorted hands,
+no unrealistic anatomy.
+
+
+版本：
+
+realistic_model_v1.0
+
+
+冻结后：
+
+未经人工批准不得修改。
+
+
+==================================================
+六、风险评估
+==================================================
+
+
+创建：
+
+docs/reports/phase-04-realistic-model-risk.md
+
+
+必须包含：
+
+
+## 高风险
+
+### 1. 凤冠细节
+
+风险：
+
+- 珠饰融合
+- 细杆缺失
+
+解决：
+
+允许合理简化。
+
+
+### 2. 水袖
+
+风险：
+
+- 与身体融合
+
+解决：
+
+保持主要轮廓。
+
+
+### 3. 长裙
+
+风险：
+
+- 后方结构推测错误
+
+
+解决：
+
+接受合理背面生成。
+
+
+## 中风险
+
+### 手部
+
+原因：
+
+袖口遮挡。
+
+
+## 低风险
+
+服装颜色。
+
+输出风险等级。
+
+
+==================================================
+七、费用与额度记录
+==================================================
+
+
+创建：
+
+docs/reports/phase-04-second-model-budget.md
+
+
+记录：
+
+第一次：
+
+30积分
+
+
+当前：
+
+used:
+
+1/3
+
+
+remaining:
+
+2
+
+
+第二次：
+
+预计费用：
+
+待Neural4D官方确认。
+
+
+不得猜测。
+
+
+==================================================
+八、第二次人工授权表
+==================================================
+
+
+创建：
+
+docs/reports/phase-04-second-model-approval.md
+
+
+模板：
+
+
+# Neural4D第二次真实建模授权申请
+
+
+状态：
+
+WAITING_APPROVAL
+
+
+角色：
+
+xxx
+
+
+资产版本：
+
+realistic_showcase_candidate_v1
+
+
+风格：
+
+Realistic
+
+
+用途：
+
+Competition Main Showcase
+
+
+输入图片Hash：
+
+xxx
+
+
+Prompt:
+
+realistic_model_v1.0
+
+
+当前额度：
+
+1/3 used
+
+
+预计消耗：
+
+第2次机会
+
+
+预计费用：
+
+xxx
+
+
+风险：
+
+xxx
+
+
+确认：
+
+[ ] 概念图确认
+
+[ ] 角色方案确认
+
+[ ] Prompt确认
+
+[ ] 费用确认
+
+[ ] 同意消耗第2次额度
+
+
+==================================================
+九、测试要求
+==================================================
+
+
+本阶段完成：
+
+必须确认：
+
+- 图片可读取；
+- Hash记录完成；
+- Prompt冻结；
+- 报告生成；
+- Git提交完成。
+
+
+禁止：
+
+任何真实模型生成。
+
+
+==================================================
+十、完成后停止
+==================================================
+
+
+完成后输出：
+
+Phase 4.2准备阶段总结：
+
+包含：
+
+1. 角色方案；
+2. 图片Hash；
+3. Prompt版本；
+4. 风险；
+5. 预计费用；
+6. 授权状态。
+
+
+然后停止。
+
+
+等待用户明确回复：
+
+“批准第二次Neural4D写实主展示建模”
+
+之后才允许调用真实建模接口。

@@ -1,0 +1,14 @@
+{
+  "kind": "ACTUAL_VERIFICATION_FAILURE_ENGINEERING_RECORD",
+  "date": "2026-10-14",
+  "operation": "Local readonly HTTP GET of the eight existing HTML pages",
+  "target": "http://127.0.0.1:8000",
+  "result": "STOPPED_BEFORE_HTTP_COMPLETION",
+  "exception": "httpx.ConnectError / WinError 10013",
+  "cause": "Restricted shell network access prevented creating the localhost socket; browser preview was available separately.",
+  "verificationPassed": false,
+  "fullTrace": "Retained in the actual public tool evidence, not rewritten as a successful test.",
+  "supplierRequests": 0,
+  "modelSubmissions": 0,
+  "nextStep": "Repeat only the readonly localhost check with authorized network access; do not call a supplier or re-run the paid reviewer."
+}

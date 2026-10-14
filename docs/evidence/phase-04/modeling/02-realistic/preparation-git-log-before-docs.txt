@@ -1,0 +1,6 @@
+3182bb6b7b1732a6663bd88daf87bc52f34ce60e feat: prepare realistic candidate with one-shot cultural review
+908d9f55d5f6fac37270e5d8cf07365b210ea5fb docs: record user acceptance of first internal model
+8ba51783484a948c4da8d4392bfe59d050a46ef2 docs: archive first model recovery evidence and internal viewer acceptance
+2935155bc766752d5319d3529c3d6ee47f14cc4c fix: safely recover original model with bounded HTTPS and local texture normalization
+9bb83bfd9d377e9c725808388053f1a83a5542ef docs: record first internal modeling attempt and download stop
+374df8c4567c79c06f28f085d9b404f0b7e079b7 feat: scope internal technical generation to shared one-shot quota

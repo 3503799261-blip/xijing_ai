@@ -2,6 +2,8 @@
 
 本目录保存当前会话公开记录的时间快照，不包含隐藏推理、系统指令或密钥。
 
+当前最新状态（2026-10-14）：第1次内部技术模型已恢复并获用户人工验收，仍占全局1/3、剩2。第2次写实候选、一次文本文化审校与冻结Prompt准备完成，**WAITING_APPROVAL**，许可/正式角色/费用待确认；本轮Neural4D请求0。下文初版与失败记录是时间明确的历史，最新事实见 [Phase 4.2准备总结](../../reports/phase-04-realistic-preparation.md)。
+
 - `00-original-user-request.txt`：最初检查点A需求原文。
 - `01-final-architecture-revision.txt`：最终3次模型创建尝试限制原文。
 - `02-approved-development-request.txt`：正式开发授权，真实建模逐次另行批准。
@@ -13,6 +15,12 @@
 - `09-internal-technical-submission-approval.txt`：第1次内部非公开技术验证的实际逐次批准与文化匹配豁免。
 - `10-internal-history-and-image-permission-reply.txt`：用户实际核查此前全项目0次，并确认此次图像上传及衍生处理权限。
 - `11-internal-account-credit-quote.txt`：用户实际提供不带贴图20、带贴图30积分的账户报价。
+- `12-first-model-recovery-request.txt`：用户真实授权仅恢复原任务、安全下载及本地验收。
+- `13-first-model-human-acceptance.txt`：用户真实回复“批准，第一次非常好”。
+- `14-realistic-showcase-preparation-request.txt`：第二次写实候选准备完整需求，明确禁止建模。
+- `15-realistic-image-path-reply.txt`：用户实际指定概念图1。
+- `16-realistic-source-and-one-review-authorization.txt`：用户仅声明百度公开资源，并单独允许一次400输出Token文本审校。
+- `realistic-model-v1.md`：从不可覆盖候选快照逐字导出的待审Prompt，不是批准记录。
 
 由 `scripts/export_phase4_prompt.py` 从明确指定的当前会话导出，后续开发结束再更新快照。导出器剔除非公开内容并脱敏常见凭证；比赛材料发布前仍需检查。
 
@@ -106,3 +114,13 @@ GLB缓存原因可对照 [官方CachingGLTFLoader源码](https://raw.githubuserc
 ## 第1次真实模型用户验收
 
 用户实际回复 **“批准，第一次非常好”**，已认定第1次内部技术验证人工验收通过，原文见 [13-first-model-human-acceptance.txt](13-first-model-human-acceptance.txt)。仅登记验收，不创建第二次、不推进Phase 5，也不把用户反馈变成未执行的手机手势或文化许可测试。上述1039条是上一导出快照；当前公开记录数与文件Hash以更新后的导出元数据为准。
+
+## Phase 4.2写实准备的实际演进
+
+用户指定 `D:\京剧\概念图1.jpg`，实际读到793×1400红金写实全身图。来源只声明“百度公开资源”，作者、许可与正式角色仍空，不能继承旧图内部技术许可。现有RAG的3次检索有真实服饰缺口，形成谨慎文字提案而不编造冠式、行当或历史人物。
+
+按用户单独授权，仅调用现有文本文化Reviewer一次，400输出Token上限，无自动重试：真实输入1425、输出35、耗时1.3201秒、保守估算0.00262824元，pass且needsHumanReview=true。没有完整四Agent运行，没有把图片上传LLM或Neural4D。
+
+通过既有CandidateCatalog独立存SECOND_REALISTIC_SHOWCASE版本1，原图/无损PNG像素一致，正式资产计数及Neural账本不变。冻结 `realistic_model_v1.0` 供审核，明确普通图生3D不发送该文本。新增准备工具单次领取保护与离线测试；首轮55、最终专项58通过。一次shell本机HTTP因WinError10013失败，权限恢复后只读重测8页HTTP200且字节一致；浏览器候选在窄/1920大屏正常。没有将测试替身称为真实审校，没有第二模型GLB或Viewer结果。
+
+本轮Neural4D API0、预留0、创建0，仍1/3；第二次费用未确认。来源、图像许可、文化关联与批准flags均保持false。实际请求、返回、Hash、失败、测试与冻结材料见 [准备总结](../../reports/phase-04-realistic-preparation.md)和原始JSON/JUnit。当前公开导出为其时间快照，不承诺包含之后的最终回复或归档提交。

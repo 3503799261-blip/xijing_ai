@@ -258,3 +258,9 @@ Phase 1真实历史、备份与截图保留，见 [阶段报告](docs/reports/ph
 本机已有私有资产可打开：`http://127.0.0.1:8000/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer`。该模型、原图及含图截图不在公开仓库；新克隆环境不会凭README自动下载或生成同一内部模型，也不得将它当作公开/商用角色交付。
 
 项目仍占用1/3、剩2，真实生成默认false。原任务可靠恢复只解除未知暂停，不自动批准第二次。恢复CLI不是普通自动化测试：可能查询/下载原UUID，要求人工指示、原账本管理锁及准确历史；禁止删除账本、绕过安全下载或重建解决文件问题。离线测试见阶段报告，当前最终后端652通过、前端Phase 2/3各25、Phase 4共36通过。
+
+### 第2次写实主展示准备（2026-10-14）
+
+新红金图已独立登记为 `realistic_showcase_candidate_v1`，冻结 `realistic_model_v1.0`，完成一次经单独授权的现有文本文化审校；实际1460 Token，保守估算0.00262824元。文字pass不认证图片冠式、行当或版权。第二次当前费用、比赛展示/上传/3D衍生许可和正式角色关联仍待确认，状态WAITING_APPROVAL。
+
+本轮58项相关离线测试通过、8页HTTP逐字节与准备基线一致、实际候选浏览器预览正常；不替代第二模型Viewer或实体手机验收。Neural4D API请求/预留/新建提交均0，仍已用1/3、剩2、生成默认false。[准备报告](docs/reports/phase-04-realistic-preparation.md)、[第二次待审表](docs/reports/phase-04-second-model-approval.md)、[冻结Prompt](docs/prompts/phase-04/realistic-model-v1.md)。不自动运行已领取的付费审校工具，不自动进入第二次建模或Phase 5。

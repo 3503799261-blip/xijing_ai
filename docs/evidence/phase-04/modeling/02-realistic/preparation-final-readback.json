@@ -1,0 +1,137 @@
+{
+  "checkedAt": "2026-10-14T13:07:01.686793+00:00",
+  "kind": "ACTUAL_READONLY_PREPARATION_FINAL_CHECK",
+  "candidateId": "92e3d09f-57ce-49b2-8d57-1c0664a72689",
+  "sourceSha256": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+  "previewSha256": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+  "promptVersion": "realistic_model_v1.0",
+  "promptSnapshotHash": "80a893202c9d09e508ceba0a2796a3e2b1aab54f812c6790b23177f18bde3e33",
+  "promptTextSha256": "777afaa81b1e696d98dac00e695727e17c40f38983691786d52b69a40f62fad2",
+  "frozenMarkdownMatchesCandidate": true,
+  "sourceSnapshotAndPreviewPixelEquality": true,
+  "licensingAndModelApprovalStillFalse": true,
+  "neural4dLedger": {
+    "attempts": 1,
+    "attemptStates": [
+      [
+        "SUCCEEDED",
+        1
+      ]
+    ],
+    "operations": [
+      [
+        "create_model",
+        1,
+        30.0
+      ],
+      [
+        "download",
+        2,
+        0
+      ],
+      [
+        "query_model",
+        6,
+        0
+      ],
+      [
+        "verify",
+        2,
+        0
+      ]
+    ]
+  },
+  "neural4dApiRequestsInPreparation": 0,
+  "neural4dReservationsInPreparation": 0,
+  "neural4dSubmissionsInPreparation": 0,
+  "used": 1,
+  "maxCalls": 3,
+  "remaining": 2,
+  "unknownTasks": 0,
+  "creationEnabled": false,
+  "formalAssetCountsUnchanged": {
+    "character_assets": 2,
+    "asset_images": 0,
+    "asset_models": 3
+  },
+  "firstQImageSha256": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+  "firstInternalViewerGlbSha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+  "firstInternalViewerGlbSize": 8827324,
+  "reviewerReceiptStatus": "RETURNED_VALIDATED",
+  "reviewerRequestId": "phase4-realistic-review-cf3b8494-c371-40c9-8d12-b6d7027fcac2",
+  "oneRealTextReviewOnly": true,
+  "offlineJUnit": {
+    "tests": 58,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "htmlHTTPChecks": [
+    {
+      "file": "about.html",
+      "httpStatus": 200,
+      "byteIdenticalToPreparationBase": true,
+      "servedBytesIdentical": true,
+      "sha256": "374f517281bce28c227b6d0d55ce64cae90d0869ae7240807f62c0238fdc7b6c"
+    },
+    {
+      "file": "facial.html",
+      "httpStatus": 200,
+      "byteIdenticalToPreparationBase": true,
+      "servedBytesIdentical": true,
+      "sha256": "3a4bc57dc1e83d16e3c594b7a6c4432cb4f8f44e7e7fe68f3761e9bcf3443d9e"
+    },
+    {
+      "file": "gallery.html",
+      "httpStatus": 200,
+      "byteIdenticalToPreparationBase": true,
+      "servedBytesIdentical": true,
+      "sha256": "d359e4232b9d042ede82839400cdfd63dcde6f3ec941c7102e30819135147030"
+    },
+    {
+      "file": "history.html",
+      "httpStatus": 200,
+      "byteIdenticalToPreparationBase": true,
+      "servedBytesIdentical": true,
+      "sha256": "e787849317758ccf549879bdec048fe24ff93bcdaf437f96f456813402f362f7"
+    },
+    {
+      "file": "index.html",
+      "httpStatus": 200,
+      "byteIdenticalToPreparationBase": true,
+      "servedBytesIdentical": true,
+      "sha256": "bc0ace24da3667201354787613a5653a6107e080c35b189e28d4370c85675cd4"
+    },
+    {
+      "file": "music.html",
+      "httpStatus": 200,
+      "byteIdenticalToPreparationBase": true,
+      "servedBytesIdentical": true,
+      "sha256": "7fc8945972707e068984fecb8bdec8817974c3eb94a77b97a1a80c3ac1a24626"
+    },
+    {
+      "file": "roles.html",
+      "httpStatus": 200,
+      "byteIdenticalToPreparationBase": true,
+      "servedBytesIdentical": true,
+      "sha256": "25103c713ecef22784e9cd49241b157095e1c36d142c19453d2986db96a322ac"
+    },
+    {
+      "file": "video.html",
+      "httpStatus": 200,
+      "byteIdenticalToPreparationBase": true,
+      "servedBytesIdentical": true,
+      "sha256": "eae28dffb204a62aca0dd8aa371ce73a108bb1c5f67f5c7f0b10ca43de470abf"
+    }
+  ],
+  "legacyInteractionBrowserRegressionThisRound": false,
+  "secondModelViewerTest": false,
+  "reports": [
+    "phase-04-realistic-character-proposal.md",
+    "phase-04-realistic-cultural-review.md",
+    "phase-04-realistic-model-risk.md",
+    "phase-04-second-model-budget.md",
+    "phase-04-second-model-approval.md"
+  ],
+  "status": "PREPARED_WITH_PENDING_HUMAN_AND_RIGHTS_GATES"
+}

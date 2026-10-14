@@ -1,0 +1,270 @@
+{
+  "checkedAt": "2026-10-14T12:45:52.780277+00:00",
+  "kind": "ACTUAL_REALISTIC_ASSET_PREPARATION_ONLY",
+  "sourceHash": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+  "neural4dBefore": {
+    "attempts": 1,
+    "attemptStates": [
+      [
+        "SUCCEEDED",
+        1
+      ]
+    ],
+    "operations": [
+      [
+        "create_model",
+        1,
+        30.0
+      ],
+      [
+        "download",
+        2,
+        0
+      ],
+      [
+        "query_model",
+        6,
+        0
+      ],
+      [
+        "verify",
+        2,
+        0
+      ]
+    ]
+  },
+  "neural4dApiCalls": 0,
+  "newModelSubmissions": 0,
+  "newModelReservations": 0,
+  "fullFourAgentWorkflowRun": false,
+  "reviewerIsTextOnly": true,
+  "textCultureReviewReceipt": {
+    "status": "RETURNED_VALIDATED",
+    "requestId": "phase4-realistic-review-cf3b8494-c371-40c9-8d12-b6d7027fcac2",
+    "inputHash": "e815dca5039425217719464145bc6a61213a3baceebd40a7b2f9d6502eac1adf",
+    "sourceHash": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+    "claimedAt": "2026-10-14T12:45:52.788932+00:00",
+    "maxOutputTokens": 400,
+    "estimatedUpperCny": 0.015522,
+    "automaticRetry": false,
+    "budgetBefore": {
+      "calls": 102,
+      "estimatedUpperCostCny": 0.24120888,
+      "budgetCny": 3.0,
+      "priceVerifiedAt": "2026-10-11",
+      "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+      "activeScope": {
+        "name": "phase3",
+        "calls": 40,
+        "estimatedUpperCostCny": 0.10777464,
+        "budgetCny": 0.5
+      },
+      "scopes": {
+        "phase3": {
+          "name": "phase3",
+          "calls": 40,
+          "estimatedUpperCostCny": 0.10777464,
+          "budgetCny": 0.5
+        }
+      }
+    },
+    "review": {
+      "verdict": "pass",
+      "issues": [],
+      "suggestions": [],
+      "checkedEvidenceIds": [
+        "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+        "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd"
+      ],
+      "needsHumanReview": true,
+      "programmaticChecks": {
+        "garmentReferenceGuard": "conservative_literal_absence",
+        "issuesFound": 0
+      },
+      "execution": {
+        "requestId": "phase4-realistic-review-cf3b8494-c371-40c9-8d12-b6d7027fcac2",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 35,
+          "total_tokens": 1460,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 1169
+        },
+        "elapsedSeconds": 1.3201,
+        "promptVersion": "agent_reviewer_v3",
+        "promptHash": "05fb0e2791700446715e98c5180454035ed8d9cfc08e4dcda0fc3f19212e6ce4"
+      }
+    },
+    "budgetAfter": {
+      "calls": 103,
+      "estimatedUpperCostCny": 0.24383712,
+      "budgetCny": 3.0,
+      "priceVerifiedAt": "2026-10-11",
+      "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+      "activeScope": {
+        "name": "phase3",
+        "calls": 41,
+        "estimatedUpperCostCny": 0.11040288,
+        "budgetCny": 0.5
+      },
+      "scopes": {
+        "phase3": {
+          "name": "phase3",
+          "calls": 41,
+          "estimatedUpperCostCny": 0.11040288,
+          "budgetCny": 0.5
+        }
+      }
+    },
+    "finishedAt": "2026-10-14T12:45:54.122334+00:00"
+  },
+  "candidate": {
+    "candidateSchemaVersion": "1.0",
+    "styleMode": "realistic",
+    "mimeType": "image/png",
+    "width": 793,
+    "height": 1400,
+    "size": 997587,
+    "hash": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+    "sourceHash": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+    "normalization": "decoded_exif_removed_png_v1",
+    "originalSize": 535664,
+    "originalMimeType": "image/jpeg",
+    "sourceNote": {
+      "author": null,
+      "independentlyVerified": false,
+      "providerPlatform": "百度（用户声明）",
+      "sourceUrl": null,
+      "userStatement": "百度公开资源"
+    },
+    "licenseNote": {
+      "commercialSales": "not_requested_or_authorized",
+      "competitionPublicDisplay": "unconfirmed",
+      "derivative3DProcessing": "unconfirmed",
+      "publicRedistribution": "unconfirmed",
+      "supplierImageUpload": "unconfirmed",
+      "userStatement": "百度公开资源；未提供具体使用授权"
+    },
+    "licenseStatus": "unverified_new_image",
+    "promptSnapshot": {
+      "approved": false,
+      "frozenForReview": true,
+      "purpose": "Competition Main Showcase candidate only",
+      "sourceHash": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+      "text": "Positive:\nA realistic Chinese Peking Opera-inspired digital character, a single full-body standing figure based on the supplied reference image, realistic human proportions, red and gold embroidered silk-like long robe, ornate opera-inspired crown silhouette as visible in the reference, white water-sleeve-like extensions, layered fabric, clearly readable costume silhouette, detailed fabric material, game character concept, clean white studio background, suitable for image-to-3D reconstruction. This is an original visual interpretation, not a verified historical costume or identified traditional character.\n\nGeometry guidance:\nMaintain the complete head-to-foot silhouette and visible footwear. Preserve the reference pose and major costume layers. Resolve visible arms and body boundaries without inventing hidden anatomy or accessories. Keep a stable main volume; small crown rods and bead clusters may be simplified for reconstruction. Preserve the long sleeve outlines; do not require independent geometry for every bead or embroidery stitch. The unseen back is a reconstruction estimate and must be reviewed.\n\nNegative:\nNo text, no watermark, no extra characters, no duplicated accessories, no distorted hands, no unrealistic anatomy, no cropped head or feet, no chibi proportions, no added weapons or costume symbols absent from the reference.",
+      "version": "realistic_model_v1.0",
+      "imageHash": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+      "styleMode": "realistic",
+      "approvedAt": null,
+      "culturalApproval": false,
+      "characterId": null,
+      "sourceTaskId": null,
+      "snapshotKind": "unassociated_candidate_only",
+      "promptHash": "80a893202c9d09e508ceba0a2796a3e2b1aab54f812c6790b23177f18bde3e33"
+    },
+    "characterId": null,
+    "assetId": null,
+    "sourceTaskId": null,
+    "accepted": false,
+    "acceptedAt": null,
+    "imageAccepted": false,
+    "modelEligible": false,
+    "modelCreated": false,
+    "cultureAlignmentVerified": false,
+    "sourceVerified": false,
+    "licenseVerified": false,
+    "commercialUseVerified": false,
+    "publicRedistributionVerified": false,
+    "status": "PENDING_CHARACTER_ASSOCIATION_AND_REVIEW",
+    "filesAvailable": true,
+    "candidateId": "92e3d09f-57ce-49b2-8d57-1c0664a72689",
+    "scope": "SECOND_REALISTIC_SHOWCASE",
+    "version": 1,
+    "createdAt": "2026-10-14T12:45:54.212224+00:00"
+  },
+  "assetLabel": "realistic_showcase_candidate_v1",
+  "reviewerResult": {
+    "verdict": "pass",
+    "issues": [],
+    "suggestions": [],
+    "checkedEvidenceIds": [
+      "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+      "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd"
+    ],
+    "needsHumanReview": true,
+    "programmaticChecks": {
+      "garmentReferenceGuard": "conservative_literal_absence",
+      "issuesFound": 0
+    },
+    "execution": {
+      "requestId": "phase4-realistic-review-cf3b8494-c371-40c9-8d12-b6d7027fcac2",
+      "model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1425,
+        "completion_tokens": 35,
+        "total_tokens": 1460,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1169
+      },
+      "elapsedSeconds": 1.3201,
+      "promptVersion": "agent_reviewer_v3",
+      "promptHash": "05fb0e2791700446715e98c5180454035ed8d9cfc08e4dcda0fc3f19212e6ce4"
+    }
+  },
+  "neural4dAfter": {
+    "attempts": 1,
+    "attemptStates": [
+      [
+        "SUCCEEDED",
+        1
+      ]
+    ],
+    "operations": [
+      [
+        "create_model",
+        1,
+        30.0
+      ],
+      [
+        "download",
+        2,
+        0
+      ],
+      [
+        "query_model",
+        6,
+        0
+      ],
+      [
+        "verify",
+        2,
+        0
+      ]
+    ]
+  },
+  "neural4dLedgerUnchanged": true,
+  "formalAssetsBefore": {
+    "character_assets": 2,
+    "asset_images": 0,
+    "asset_models": 3
+  },
+  "formalAssetsAfter": {
+    "character_assets": 2,
+    "asset_images": 0,
+    "asset_models": 3
+  },
+  "sourceAndPreviewPixelsEqual": true,
+  "backgroundEdited": false,
+  "imageUploadedToSupplier": false,
+  "creationEnabled": false,
+  "status": "PREPARED_WITH_PENDING_HUMAN_AND_RIGHTS_GATES"
+}

@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-14T12:57:29.020Z",
+  "kind": "ACTUAL_LOCAL_BROWSER_CANDIDATE_PREVIEW_ONLY",
+  "url": "http://127.0.0.1:8000/api/v1/assets/candidates/92e3d09f-57ce-49b2-8d57-1c0664a72689/preview",
+  "narrow": {
+    "body": "戏境 AI · 概念图待审预览\n\n写实国风候选 · 未关联角色 · 来源与许可待核实 · 不可用于真实建模\n\n当前快照 · 版本 1\n候选 ID\n92e3d09f-57ce-49b2-8d57-1c0664a72689\n原文件 SHA-256\n0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095\n预览 PNG SHA-256\n7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45\n尺寸 / 风格\n793 × 1400 / realistic\n来源声明\n{\n  \"author\": null,\n  \"independentlyVerified\": false,\n  \"providerPlatform\": \"百度（用户声明）\",\n  \"sourceUrl\": null,\n  \"userStatement\": \"百度公开资源\"\n}\n许可状态\n{\n  \"commercialSales\": \"not_requested_or_authorized\",\n  \"competitionPublicDisplay\": \"unconfirmed\",\n  \"derivative3DProcessing\": \"unconfirmed\",\n  \"publicRedistribution\": \"unconfirmed\",\n  \"supplierImageUpload\": \"unconfirmed\",\n  \"userStatement\": \"百度公开资源；未提供具体使用授权\"\n}\n关联 / 图片接受 / 建模资格\n均未批准。此页面仅查看，不发出供应商请求。\n待审 Prompt · realistic_model_v1.0\n\n仅冻结本候选快照；不是已批准角色Prompt，不发送给图生3D接口。\n\nPositive:\nA realistic Chinese Peking Opera-inspired digital character, a single full-body standing figure based on the supplied reference image, realistic human proportions, red and gold embroidered silk-like long robe, ornate opera-inspired crown silhouette as visible in the reference, white water-sleeve-like extensions, layered fabric, clearly readable costume silhouette, detailed fabric material, game character concept, clean white studio background, suitable for image-to-3D reconstruction. This is an original visual interpretation, not a verified historical costume or identified traditional character.\n\nGeometry guidance:\nMaintain the complete head-to-foot silhouette and visible footwear. Preserve the reference pose and major costume layers. Resolve visible arms and body boundaries without inventing hidden anatomy or accessories. Keep a stable main volume; small crown rods and bead clusters may be simplified for reconstruction. Preserve the long sleeve outlines; do not require independent geometry for every bead or embroidery stitch. The unseen back is a reconstruction estimate and must be reviewed.\n\nNegative:\nNo text, no watermark, no extra characters, no duplicated accessories, no distorted hands, no unrealistic anatomy, no cropped head or feet, no chibi proportions, no added weapons or costume symbols absent from the reference.",
+    "buttons": 0,
+    "height": 920,
+    "image": [
+      {
+        "complete": true,
+        "height": 1400,
+        "id": "candidate-image",
+        "width": 793
+      }
+    ],
+    "scrollWidth": 304,
+    "title": "戏境 AI · 概念图待审预览",
+    "width": 319
+  },
+  "narrowWarningsAndErrors": [],
+  "desktop": {
+    "body": "戏境 AI · 概念图待审预览\n\n写实国风候选 · 未关联角色 · 来源与许可待核实 · 不可用于真实建模\n\n当前快照 · 版本 1\n候选 ID\n92e3d09f-57ce-49b2-8d57-1c0664a72689\n原文件 SHA-256\n0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095\n预览 PNG SHA-256\n7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45\n尺寸 / 风格\n793 × 1400 / realistic\n来源声明\n{\n  \"author\": null,\n  \"independentlyVerified\": false,\n  \"providerPlatform\": \"百度（用户声明）\",\n  \"sourceUrl\": null,\n  \"userStatement\": \"百度公开资源\"\n}\n许可状态\n{\n  \"commercialSales\": \"not_requested_or_authorized\",\n  \"competitionPublicDisplay\": \"unconfirmed\",\n  \"derivative3DProcessing\": \"unconfirmed\",\n  \"publicRedistribution\": \"unconfirmed\",\n  \"supplierImageUpload\": \"unconfirmed\",\n  \"userStatement\": \"百度公开资源；未提供具体使用授权\"\n}\n关联 / 图片接受 / 建模资格\n均未批准。此页面仅查看，不发出供应商请求。\n待审 Prompt · realistic_model_v1.0\n\n仅冻结本候选快照；不是已批准角色Prompt，不发送给图生3D接口。\n\nPositive:\nA realistic Chinese Peking Opera-inspired digital character, a single full-body standing figure based on the supplied reference image, realistic human proportions, red and gold embroidered silk-like long robe, ornate opera-inspired crown silhouette as visible in the reference, white water-sleeve-like extensions, layered fabric, clearly readable costume silhouette, detailed fabric material, game character concept, clean white studio background, suitable for image-to-3D reconstruction. This is an original visual interpretation, not a verified historical costume or identified traditional character.\n\nGeometry guidance:\nMaintain the complete head-to-foot silhouette and visible footwear. Preserve the reference pose and major costume layers. Resolve visible arms and body boundaries without inventing hidden anatomy or accessories. Keep a stable main volume; small crown rods and bead clusters may be simplified for reconstruction. Preserve the long sleeve outlines; do not require independent geometry for every bead or embroidery stitch. The unseen back is a reconstruction estimate and must be reviewed.\n\nNegative:\nNo text, no watermark, no extra characters, no duplicated accessories, no distorted hands, no unrealistic anatomy, no cropped head or feet, no chibi proportions, no added weapons or costume symbols absent from the reference.",
+    "buttons": 0,
+    "height": 1080,
+    "image": [
+      {
+        "complete": true,
+        "height": 1400,
+        "id": "candidate-image",
+        "width": 793
+      }
+    ],
+    "scrollWidth": 1905,
+    "title": "戏境 AI · 概念图待审预览",
+    "width": 1920
+  },
+  "desktopWarningsAndErrors": [],
+  "screenshotsLocalOnly": [
+    "D:/京剧/.runtime/phase42-realistic-screenshots/candidate-review-preview.jpg",
+    "D:/京剧/.runtime/phase42-realistic-screenshots/candidate-review-desktop.jpg"
+  ],
+  "neural4dRequests": 0,
+  "modelViewerTest": false,
+  "physicalPhoneTest": false
+}

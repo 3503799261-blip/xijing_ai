@@ -1,0 +1,3 @@
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_6f4acedce32343cfbc9f0295e4da6ee6\",0]","question":"当前 D:\\京剧\\概念图.jpg 仍是第一次蓝白Q版图，SHA-256为9c737011…，尚未更新。请提供新红金写实图的完整本机路径，并说明来源及是否允许比赛公开展示、上传Neural4D和3D衍生处理。不要发送API密钥。","answer":"D:\\京剧的概念图1，用这个"}]
+</send_user_message_question_reply>

@@ -1,0 +1,538 @@
+{
+  "image": {
+    "sourcePathLabel": "D:\\京剧\\概念图1.jpg",
+    "originalFormat": "JPEG",
+    "dimensions": [
+      793,
+      1400
+    ],
+    "size": 535664,
+    "sourceHash": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+    "frames": 1
+  },
+  "assetLabel": "realistic_showcase_candidate_v1",
+  "scope": "SECOND_REALISTIC_SHOWCASE",
+  "styleMode": "realistic",
+  "proposalId": "realistic_character_proposal_v1",
+  "proposalAuthorship": "Assistant preparation draft, not a completed Planner/Designer run or confirmed Phase3 role",
+  "brief": {
+    "description": "依据用户红金写实图准备原创京剧风格数字角色；仅审核文字及文化证据，不强推定历史人物/行当，不上传图给供应商。",
+    "style": "舞台角色",
+    "referenceObservation": "本助手实际读取图像：冠饰可见蓝银构件、红绒球、珠帘，红金长袍、白袖延展、手部部分遮挡、袍摆拖地；无可确认身份。"
+  },
+  "plan": {
+    "theme": "第二次写实主展示候选",
+    "target": "原创京剧风格文化数字角色",
+    "style": "舞台角色",
+    "requirements": [
+      {
+        "id": "R1",
+        "text": "忠实记录用户图的红金服饰、冠饰、白色袖布和写实比例，未知传统细节标原创"
+      },
+      {
+        "id": "R2",
+        "text": "不编造历史人物或传统行当，所有文化事实均有检索证据"
+      },
+      {
+        "id": "R3",
+        "text": "仅准备和审核，不创建模型；来源及许可保持待核实"
+      }
+    ],
+    "researchQueries": [
+      "京剧生旦净丑与青衣花旦的区别",
+      "京剧服饰水袖蟒和盔头的舞台表达",
+      "京剧服装和头饰如何表现人物身份与舞台写意"
+    ],
+    "clarificationQuestions": [],
+    "requiredEntities": []
+  },
+  "research": {
+    "evidence": [
+      {
+        "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+        "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+        "sourceId": "fujian-roles",
+        "sectionId": "fujian-roles-system",
+        "title": "京剧的行当分类是什么？",
+        "locator": "正文第一段及末段 · 入库片段 1/1",
+        "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+        "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+        "contentKind": "original_fact_summary",
+        "category": "京剧行当",
+        "entityNames": [
+          "京剧",
+          "行当",
+          "生",
+          "旦",
+          "净",
+          "丑",
+          "唱念做打"
+        ],
+        "vectorScore": 0.6024847737578911,
+        "keywordScore": -6.059893590366162,
+        "entityMatchCount": 4,
+        "acceptedBy": "vector_threshold",
+        "rank": 2,
+        "reviewStatus": "source_checked_by_assistant",
+        "sourceVersion": "1.0.0",
+        "sourceContentHash": "68fcdede51c3d7d66090f2c38fef4f7c14ad83419ee634ae511e0a8572142eae",
+        "chunkContentHash": "fc83f0c55b048c90bebd8abd984d408fba192d35e8d5c4c470491efd3b70fb07"
+      },
+      {
+        "id": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+        "chunkId": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+        "sourceId": "cnpoc-dan",
+        "sectionId": "cnpoc-dan-qingyi-huadan",
+        "title": "京剧旦行小讲堂",
+        "locator": "正文（1）正旦、（2）花旦 · 入库片段 1/1",
+        "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+        "excerpt": "青衣也称正旦，常表现举止稳重的中青年女性，重唱功。\n花旦常表现年轻、活泼的女性，更多侧重做功和说白；\n这属于入门概括。",
+        "contentKind": "original_fact_summary",
+        "category": "京剧行当",
+        "entityNames": [
+          "旦",
+          "青衣",
+          "正旦",
+          "花旦"
+        ],
+        "vectorScore": 0.6211784704187843,
+        "keywordScore": -7.730827136332731,
+        "entityMatchCount": 3,
+        "acceptedBy": "vector_threshold",
+        "rank": 3,
+        "reviewStatus": "source_checked_by_assistant",
+        "sourceVersion": "1.0.0",
+        "sourceContentHash": "97c698746dd732cb438331fce7d1114296e531bb70b94a4af4179659ec3e8ad6",
+        "chunkContentHash": "f2537424062528cd27c6d8e89044baa5c4f2e94c8c02d1850e1d766a3a48b314"
+      }
+    ],
+    "queries": [
+      {
+        "question": "京剧生旦净丑与青衣花旦的区别",
+        "httpStatus": 200,
+        "result": {
+          "question": "京剧生旦净丑与青衣花旦的区别",
+          "evidence": [
+            {
+              "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+              "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+              "sourceId": "fujian-roles",
+              "sectionId": "fujian-roles-sheng-dan",
+              "title": "京剧的行当分类是什么？",
+              "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+              "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+              "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+              "contentKind": "original_fact_summary",
+              "category": "京剧行当",
+              "entityNames": [
+                "生",
+                "旦",
+                "老生",
+                "小生",
+                "武生",
+                "青衣",
+                "花旦"
+              ],
+              "vectorScore": 0.6684294972678568,
+              "keywordScore": -12.315691839529688,
+              "entityMatchCount": 4,
+              "acceptedBy": "vector_threshold",
+              "rank": 1,
+              "reviewStatus": "source_checked_by_assistant"
+            },
+            {
+              "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+              "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+              "sourceId": "fujian-roles",
+              "sectionId": "fujian-roles-system",
+              "title": "京剧的行当分类是什么？",
+              "locator": "正文第一段及末段 · 入库片段 1/1",
+              "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+              "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+              "contentKind": "original_fact_summary",
+              "category": "京剧行当",
+              "entityNames": [
+                "京剧",
+                "行当",
+                "生",
+                "旦",
+                "净",
+                "丑",
+                "唱念做打"
+              ],
+              "vectorScore": 0.6024847737578911,
+              "keywordScore": -6.059893590366162,
+              "entityMatchCount": 4,
+              "acceptedBy": "vector_threshold",
+              "rank": 2,
+              "reviewStatus": "source_checked_by_assistant"
+            },
+            {
+              "id": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+              "chunkId": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+              "sourceId": "cnpoc-dan",
+              "sectionId": "cnpoc-dan-qingyi-huadan",
+              "title": "京剧旦行小讲堂",
+              "locator": "正文（1）正旦、（2）花旦 · 入库片段 1/1",
+              "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+              "excerpt": "青衣也称正旦，常表现举止稳重的中青年女性，重唱功。\n花旦常表现年轻、活泼的女性，更多侧重做功和说白；\n这属于入门概括。",
+              "contentKind": "original_fact_summary",
+              "category": "京剧行当",
+              "entityNames": [
+                "旦",
+                "青衣",
+                "正旦",
+                "花旦"
+              ],
+              "vectorScore": 0.6211784704187843,
+              "keywordScore": -7.730827136332731,
+              "entityMatchCount": 3,
+              "acceptedBy": "vector_threshold",
+              "rank": 3,
+              "reviewStatus": "source_checked_by_assistant"
+            },
+            {
+              "id": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+              "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+              "sourceId": "fujian-roles",
+              "sectionId": "fujian-roles-chou",
+              "title": "京剧的行当分类是什么？",
+              "locator": "正文“丑”条目 · 入库片段 1/1",
+              "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+              "excerpt": "丑行常承担喜剧表演，鼻梁上的小块白色化妆使其有小花脸之称。\n文丑与武丑是常见分类，武丑另称开口跳。",
+              "contentKind": "original_fact_summary",
+              "category": "京剧行当",
+              "entityNames": [
+                "丑",
+                "小花脸",
+                "文丑",
+                "武丑",
+                "开口跳"
+              ],
+              "vectorScore": 0.5616182363616005,
+              "keywordScore": -2.030869834232371,
+              "entityMatchCount": 1,
+              "acceptedBy": "exact_entity_keyword",
+              "rank": 4,
+              "reviewStatus": "source_checked_by_assistant"
+            },
+            {
+              "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+              "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+              "sourceId": "fujian-roles",
+              "sectionId": "fujian-roles-jing",
+              "title": "京剧的行当分类是什么？",
+              "locator": "正文“净”条目 · 入库片段 1/1",
+              "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+              "excerpt": "净又称花脸，脸谱和洪亮的声音是常见表演特点，角色多为性格或形象鲜明的男性人物。\n净行的唱功、身段或武打侧重有不同分支。",
+              "contentKind": "original_fact_summary",
+              "category": "京剧行当",
+              "entityNames": [
+                "净",
+                "花脸",
+                "脸谱"
+              ],
+              "vectorScore": 0.5424036070212969,
+              "keywordScore": null,
+              "entityMatchCount": 1,
+              "acceptedBy": "exact_entity_metadata",
+              "rank": 5,
+              "reviewStatus": "source_checked_by_assistant"
+            }
+          ],
+          "uncertain": false,
+          "retrievalMode": "hybrid",
+          "matchedEntities": [
+            "花旦",
+            "青衣",
+            "丑",
+            "净",
+            "旦",
+            "生",
+            "衣"
+          ],
+          "elapsedSeconds": 0.0551,
+          "threshold": 0.57,
+          "candidateScores": [
+            {
+              "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+              "score": 0.6684294972678568
+            },
+            {
+              "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+              "score": 0.6581545981606145
+            },
+            {
+              "chunkId": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+              "score": 0.6211784704187843
+            },
+            {
+              "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+              "score": 0.6024847737578911
+            },
+            {
+              "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+              "score": 0.5894805246824953
+            },
+            {
+              "chunkId": "chunk_eba2a0b8b78f35deb139ca978314152ee74e3c66b9ec7bcc2b66c8d3377e41b2",
+              "score": 0.5871023785982534
+            },
+            {
+              "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+              "score": 0.5616182363616005
+            },
+            {
+              "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+              "score": 0.5424036070212969
+            },
+            {
+              "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+              "score": 0.5226701992358765
+            },
+            {
+              "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+              "score": 0.5165001653667953
+            }
+          ],
+          "requestId": "6e0f811a-9ad8-498d-98d7-5662f2576d6b"
+        }
+      },
+      {
+        "question": "京剧服饰水袖蟒和盔头的舞台表达",
+        "httpStatus": 200,
+        "result": {
+          "question": "京剧服饰水袖蟒和盔头的舞台表达",
+          "evidence": [],
+          "uncertain": true,
+          "retrievalMode": "hybrid",
+          "matchedEntities": [],
+          "elapsedSeconds": 0.0099,
+          "threshold": 0.57,
+          "candidateScores": [
+            {
+              "chunkId": "chunk_1e7f4193d6b5738bb0bc6adefa748e7b0941dce23d71cc62293052953c6b516a",
+              "score": 0.5658562058169807
+            },
+            {
+              "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+              "score": 0.5017196908609692
+            },
+            {
+              "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+              "score": 0.47005097114770555
+            },
+            {
+              "chunkId": "chunk_3960b9451c203dc70df24bc9fbc6c2e8398582f9fd41038c8dd32c1961d2d93e",
+              "score": 0.46707472107526626
+            },
+            {
+              "chunkId": "chunk_20620832fe3d9595b1e167fa586a06d2a3319cff1d703acb00709a674645a517",
+              "score": 0.4662422615994346
+            },
+            {
+              "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+              "score": 0.4607117346398928
+            },
+            {
+              "chunkId": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+              "score": 0.4462782601174859
+            },
+            {
+              "chunkId": "chunk_ed790c73e1e33ccdd8542debb88531e562e5a4bd6c3f830485287d725bc63255",
+              "score": 0.4374884580083585
+            },
+            {
+              "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+              "score": 0.4288454361556343
+            },
+            {
+              "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+              "score": 0.42514899476976054
+            }
+          ],
+          "requestId": "1b1fb899-29a4-4004-a8ed-fc9cbf22e7f3"
+        }
+      },
+      {
+        "question": "京剧服装和头饰如何表现人物身份与舞台写意",
+        "httpStatus": 200,
+        "result": {
+          "question": "京剧服装和头饰如何表现人物身份与舞台写意",
+          "evidence": [
+            {
+              "id": "chunk_20620832fe3d9595b1e167fa586a06d2a3319cff1d703acb00709a674645a517",
+              "chunkId": "chunk_20620832fe3d9595b1e167fa586a06d2a3319cff1d703acb00709a674645a517",
+              "sourceId": "cnpoc-mei",
+              "sectionId": "cnpoc-mei-performance",
+              "title": "梅(兰芳)派",
+              "locator": "正文表演与舞蹈段 · 入库片段 1/1",
+              "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/1f1e4ff835d44a5180672e79acd60410.shtml",
+              "excerpt": "梅派注重把唱、念、做与舞蹈结合，用声音、身段和神情表现人物感情。\n艺术风格涉及多种表演要素，不只是某一种脸谱或服装。",
+              "contentKind": "original_fact_summary",
+              "category": "角色文化",
+              "entityNames": [
+                "梅派",
+                "梅兰芳",
+                "唱",
+                "念",
+                "做",
+                "舞蹈"
+              ],
+              "vectorScore": 0.6110134277904034,
+              "keywordScore": null,
+              "entityMatchCount": 0,
+              "acceptedBy": "vector_threshold",
+              "rank": 1,
+              "reviewStatus": "source_checked_by_assistant"
+            }
+          ],
+          "uncertain": false,
+          "retrievalMode": "hybrid",
+          "matchedEntities": [],
+          "elapsedSeconds": 0.0091,
+          "threshold": 0.57,
+          "candidateScores": [
+            {
+              "chunkId": "chunk_20620832fe3d9595b1e167fa586a06d2a3319cff1d703acb00709a674645a517",
+              "score": 0.6110134277904034
+            },
+            {
+              "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+              "score": 0.5672618294735123
+            },
+            {
+              "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+              "score": 0.5609213079476252
+            },
+            {
+              "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+              "score": 0.5404528860850291
+            },
+            {
+              "chunkId": "chunk_eba2a0b8b78f35deb139ca978314152ee74e3c66b9ec7bcc2b66c8d3377e41b2",
+              "score": 0.5333451914804458
+            },
+            {
+              "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+              "score": 0.5323375446576635
+            },
+            {
+              "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+              "score": 0.526048025117619
+            },
+            {
+              "chunkId": "chunk_1f7ad02c39b66e2d03d46f72d99dbb84a09722881807fd1144c68f6c02a2634e",
+              "score": 0.5060987965774757
+            },
+            {
+              "chunkId": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+              "score": 0.5036724351113981
+            },
+            {
+              "chunkId": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+              "score": 0.5004692261208643
+            }
+          ],
+          "requestId": "24951c5a-ddd6-4518-84e7-74c121917009"
+        }
+      }
+    ],
+    "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+    "limitations": [
+      "3次本地RAG检索，服饰水袖蟒盔头查询没有有效片段",
+      "仅行当术语和入门区别有候选依据，不支持将本图判为具体行当",
+      "资料为项目原创事实摘要，助手核对来源，非京剧专家认证；图像没有传给文本Reviewer"
+    ]
+  },
+  "design": {
+    "schemaVersion": "1.0",
+    "name": "绛绣·戏韵",
+    "positioning": "原创京剧风格文化数字角色候选；不指定历史人物、剧目或传统行当，不代表图像版权已获确认。",
+    "costume": [
+      {
+        "description": "参考图中的红金长袍、金色花鸟装饰与白色长袖延展；作为原创视觉设定，不宣称传统规范戏服类别。",
+        "interpretation": "creative",
+        "evidenceIds": []
+      }
+    ],
+    "colors": [
+      {
+        "description": "按原图保留红色主体、金色刺绣及白色袖布，不赋予固定身份或人格含义。",
+        "interpretation": "creative",
+        "evidenceIds": []
+      }
+    ],
+    "visualElements": [
+      {
+        "description": "参考图中的冠饰、红色绒球、珠饰与两侧垂饰，仅作京剧风格灵感；具体冠式未证实。",
+        "interpretation": "creative",
+        "evidenceIds": []
+      },
+      {
+        "description": "京剧行当常分生、旦、净、丑，各类有不同表演特点。",
+        "interpretation": "evidence_based",
+        "evidenceIds": [
+          "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+        ]
+      }
+    ],
+    "creativeElements": [
+      "保留参考图的写实人体比例与红金整体轮廓",
+      "原创文化展示候选，不作历史复原或真实人物身份认定"
+    ],
+    "visualPrompt": "原创京剧风格单人写实全身数字角色，参考图红金长袍、白色长袖延展、冠饰与珠帘；服饰谱式和传统行当未认证，清晰完整轮廓，简洁白色背景，不增加人物或不存在的配饰。",
+    "usedEvidenceIds": [
+      "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+    ],
+    "limitations": [
+      "现有RAG不足以认证本图冠饰、水袖与长袍的具体传统类别",
+      "不据脸部或衣冠判断青衣、花旦、旦角或历史人物",
+      "图片仅有百度公开资源声明，作者和展示/上传/衍生许可待确认"
+    ]
+  },
+  "styleTemplate": {
+    "originalVisualPrompt": "原创京剧风格单人写实全身数字角色，参考图红金长袍、白色长袖延展、冠饰与珠帘；服饰谱式和传统行当未认证，清晰完整轮廓，简洁白色背景，不增加人物或不存在的配饰。",
+    "imagePrompt": "角色：绛绣·戏韵。定位：原创京剧风格文化数字角色候选；不指定历史人物、剧目或传统行当，不代表图像版权已获确认。。\n服饰：参考图中的红金长袍、金色花鸟装饰与白色长袖延展；作为原创视觉设定，不宣称传统规范戏服类别。（原创设计）。\n配色：按原图保留红色主体、金色刺绣及白色袖布，不赋予固定身份或人格含义。（原创设计）。\n视觉元素：参考图中的冠饰、红色绒球、珠饰与两侧垂饰，仅作京剧风格灵感；具体冠式未证实。（原创设计）；京剧行当常分生、旦、净、丑，各类有不同表演特点。（文化依据）。\n原创构思：保留参考图的写实人体比例与红金整体轮廓；原创文化展示候选，不作历史复原或真实人物身份认定。\n艺术表达（不是新增文化事实）：写实国风数字角色，自然人体比例，服饰与构件关系清晰；呈现原角色方案中的质感与配色，不把写实效果等同于历史复原。\n技术拍摄要求（不是文化事实）：单个角色，全身完整并露出双足，正面或轻微三分之四视角；简洁纯色背景，均匀光照，四肢与服饰构件边界清晰，无文字、水印或多人拼贴。保留上述文化与原创元素；不要自行删除靠旗、雉尾或道具。",
+    "negativePrompt": "裁断头足，多人物，拼贴，复杂舞台背景，文字，水印，遮挡主要构件，静默删除文化元素；Q版比例，玩具化面部，凭空增加服饰史实",
+    "templateVersion": "opera_asset_visual_v2",
+    "limitations": [
+      "现有RAG不足以认证本图冠饰、水袖与长袍的具体传统类别",
+      "不据脸部或衣冠判断青衣、花旦、旦角或历史人物",
+      "图片仅有百度公开资源声明，作者和展示/上传/衍生许可待确认",
+      "单张图无法证明背面细节；3D背面及薄构件仍需人工核查。",
+      "靠旗、雉尾、长枪及薄片可能出现成模缺陷；简化前必须重新确认。"
+    ],
+    "styleMode": "realistic",
+    "styleVersion": 1,
+    "styleTemplateVersion": "opera_realistic_v1",
+    "styleLabel": "写实国风",
+    "editableDraft": false,
+    "promptHash": "1d44e3e59432e31866a70db1a468ef8c466f0e45a0d2260f5864fe3f967810af",
+    "approved": false,
+    "approvedAt": null
+  },
+  "promptSnapshot": {
+    "version": "realistic_model_v1.0",
+    "text": "Positive:\nA realistic Chinese Peking Opera-inspired digital character, a single full-body standing figure based on the supplied reference image, realistic human proportions, red and gold embroidered silk-like long robe, ornate opera-inspired crown silhouette as visible in the reference, white water-sleeve-like extensions, layered fabric, clearly readable costume silhouette, detailed fabric material, game character concept, clean white studio background, suitable for image-to-3D reconstruction. This is an original visual interpretation, not a verified historical costume or identified traditional character.\n\nGeometry guidance:\nMaintain the complete head-to-foot silhouette and visible footwear. Preserve the reference pose and major costume layers. Resolve visible arms and body boundaries without inventing hidden anatomy or accessories. Keep a stable main volume; small crown rods and bead clusters may be simplified for reconstruction. Preserve the long sleeve outlines; do not require independent geometry for every bead or embroidery stitch. The unseen back is a reconstruction estimate and must be reviewed.\n\nNegative:\nNo text, no watermark, no extra characters, no duplicated accessories, no distorted hands, no unrealistic anatomy, no cropped head or feet, no chibi proportions, no added weapons or costume symbols absent from the reference.",
+    "sourceHash": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+    "purpose": "Competition Main Showcase candidate only",
+    "frozenForReview": true,
+    "approved": false
+  },
+  "sourceNote": {
+    "userStatement": "百度公开资源",
+    "providerPlatform": "百度（用户声明）",
+    "author": null,
+    "sourceUrl": null,
+    "independentlyVerified": false
+  },
+  "licenseNote": {
+    "userStatement": "百度公开资源；未提供具体使用授权",
+    "competitionPublicDisplay": "unconfirmed",
+    "supplierImageUpload": "unconfirmed",
+    "derivative3DProcessing": "unconfirmed",
+    "commercialSales": "not_requested_or_authorized",
+    "publicRedistribution": "unconfirmed"
+  }
+}

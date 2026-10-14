@@ -1,0 +1,213 @@
+{
+  "checkedAt": "2026-10-14T13:16:49.145923+00:00",
+  "kind": "ACTUAL_LOCAL_DOCUMENT_AND_PROMPT_LINK_CHECK",
+  "files": [
+    {
+      "path": "docs/reports/phase-04-realistic-character-proposal.md",
+      "sha256": "0e26aa9022f77ab1445f7d7d6560758c61ba0db43a7a0954c8e0919e45347929",
+      "bytes": 4563
+    },
+    {
+      "path": "docs/reports/phase-04-realistic-cultural-review.md",
+      "sha256": "9f32706714d951292c6c7deee5a902a311b972cbc9b5b51c0ed7e2541b10e123",
+      "bytes": 4736
+    },
+    {
+      "path": "docs/reports/phase-04-realistic-model-risk.md",
+      "sha256": "c65b223bd271025bf2c5c4979f708ff59f293c4008f873a743e3700b68362969",
+      "bytes": 3516
+    },
+    {
+      "path": "docs/reports/phase-04-second-model-budget.md",
+      "sha256": "69bfbd45a10052342a863842a45170f1a36a2d599771705d7edf1a0d14592bc9",
+      "bytes": 3413
+    },
+    {
+      "path": "docs/reports/phase-04-second-model-approval.md",
+      "sha256": "f13de2cd66d74bb3d754e826071f3e8e0c9fe1986c843f0c299eea740693396e",
+      "bytes": 5061
+    },
+    {
+      "path": "docs/reports/phase-04-realistic-preparation.md",
+      "sha256": "191391e2f7242213dca975a1dd5d2e45a754d806d31862e8a5aa13cf9e9e944e",
+      "bytes": 9295
+    },
+    {
+      "path": "docs/prompts/phase-04/realistic-model-v1.md",
+      "sha256": "0e9a8e638c509697dbb1a844b32a6b729cb05141126791620cafc65c0bf26bb3",
+      "bytes": 3715
+    }
+  ],
+  "links": [
+    {
+      "document": "docs\\reports\\phase-04-realistic-character-proposal.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/realistic-preparation-result.json",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-character-proposal.md",
+      "target": "phase-04-realistic-cultural-review.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-character-proposal.md",
+      "target": "phase-04-second-model-approval.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-cultural-review.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/realistic-text-proposal-and-evidence.json",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-cultural-review.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/realistic-preparation-result.json",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-second-model-budget.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/realistic-preparation-result.json",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-second-model-budget.md",
+      "target": "phase-04-second-model-approval.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-second-model-approval.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/preparation-final-readback.json",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-second-model-approval.md",
+      "target": "phase-04-realistic-character-proposal.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-second-model-approval.md",
+      "target": "phase-04-realistic-cultural-review.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-second-model-approval.md",
+      "target": "phase-04-realistic-model-risk.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-second-model-approval.md",
+      "target": "phase-04-second-model-budget.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-second-model-approval.md",
+      "target": "../prompts/phase-04/realistic-model-v1.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-second-model-approval.md",
+      "target": "phase-04-realistic-preparation.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "phase-04-realistic-character-proposal.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "phase-04-realistic-cultural-review.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "phase-04-realistic-model-risk.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "phase-04-second-model-budget.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "phase-04-second-model-approval.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../prompts/phase-04/realistic-model-v1.md",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/preparation-offline-tests.xml",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/prompt-export-offline-tests.xml",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/preparation-final-offline-tests.xml",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/preparation-final-readback.json",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/realistic-candidate-browser.json",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/preparation-final-test-command.json",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/realistic-preparation-result.json",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../evidence/phase-04/modeling/02-realistic/http-check-first-sandbox-failure.json",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../prompts/phase-04/14-realistic-showcase-preparation-request.txt",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../prompts/phase-04/15-realistic-image-path-reply.txt",
+      "exists": true
+    },
+    {
+      "document": "docs\\reports\\phase-04-realistic-preparation.md",
+      "target": "../prompts/phase-04/16-realistic-source-and-one-review-authorization.txt",
+      "exists": true
+    },
+    {
+      "document": "docs\\prompts\\phase-04\\realistic-model-v1.md",
+      "target": "../../evidence/phase-04/modeling/02-realistic/realistic-preparation-result.json",
+      "exists": true
+    },
+    {
+      "document": "docs\\prompts\\phase-04\\realistic-model-v1.md",
+      "target": "../../reports/phase-04-second-model-approval.md",
+      "exists": true
+    }
+  ],
+  "missingLinks": 0,
+  "originalRequestsPresent": true,
+  "style": "realistic",
+  "newModelTaskId": null,
+  "status": "WAITING_APPROVAL"
+}
