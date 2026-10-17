@@ -73,6 +73,9 @@ def main():
             if (text.startswith('<send_user_message_question_reply>')
                     and re.search(r'"answer"\s*:\s*"允许按修订稿再运行一次"', text)):
                 found['21-second-agent-v2-one-run-approval.txt'] = (line, text)
+            if (text.startswith('<send_user_message_question_reply>')
+                    and re.search(r'"answer"\s*:\s*"接受角色方案，保留原图与冻结Prompt继续"', text)):
+                found['22-second-role-human-acceptance.txt'] = (line, text)
     if not {'00-original-user-request.txt', '01-final-architecture-revision.txt', '02-approved-development-request.txt'}.issubset(found):
         raise ValueError('Missing exact public Phase 4 user requests; do not invent evidence.')
     args.output.mkdir(parents=True, exist_ok=True)

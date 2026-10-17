@@ -1,6 +1,6 @@
 # 第二次写实主展示：四Agent角色方案人工审核
 
-整理日期：2026-10-17。状态：**ROLE_REVIEW_PASSED_WAITING_HUMAN_ACCEPTANCE**。
+整理日期：2026-10-17。初版状态：ROLE_REVIEW_PASSED_WAITING_HUMAN_ACCEPTANCE。**最新状态：HUMAN_ACCEPTED**，用户实际回复“接受角色方案，保留原图与冻结Prompt继续”，见 [人审原文](../prompts/phase-04/22-second-role-human-acceptance.txt)。下文待确认字段和未接受JSON保留为当时快照；人审后结果另存，不覆盖历史。
 
 用户已允许按修订稿运行一次现有Agent流程。该任务实际于2026-10-14 22:53:29～22:53:35（北京时间）完成四个阶段；本次恢复只读取原任务，没有重跑、重试或新增付费调用。第二次Neural4D模型尚未提交。
 

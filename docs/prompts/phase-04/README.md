@@ -2,7 +2,7 @@
 
 本目录保存当前会话公开记录的时间快照，不包含隐藏推理、系统指令或密钥。
 
-当前最新状态（2026-10-17）：第1次内部技术模型已人工验收，Neural4D仍占全局1/3、剩2。第2次生成批准、图片使用范围声明、30积分报价及最高30积分已保留。用户另行允许的v2 Agent原任务已完成四阶段、审校pass；本次只读恢复，不重复运行。状态 **ROLE_REVIEW_PASSED_WAITING_HUMAN_ACCEPTANCE**，具体新方案待人审，第二次尚未创建。下文初版与失败记录是各自时间快照，最新事实见 [新角色审核表](../../reports/phase-04-second-role-v2-review.md)。
+当前最新状态（2026-10-17）：用户已接受v2新角色，保留原图与冻结Prompt继续；正式写实资产登记后仅提交一次Neural4D，HTTP200、实际30积分。状态 **SECOND_MODEL_SUBMITTED_PROCESSING**，任务 `8735f32e-097e-488c-962f-f11e64af7741`；全局已用2/3、剩1，禁止自动创建第3次。下文初版与失败记录是各自时间快照，最新进展见 [执行记录](../../reports/phase-04-second-model-execution.md)。
 
 - `00-original-user-request.txt`：最初检查点A需求原文。
 - `01-final-architecture-revision.txt`：最终3次模型创建尝试限制原文。
@@ -26,6 +26,7 @@
 - `19-second-image-permission-and-agent-reply.txt`：用户声明图片比赛展示/上传/衍生许可，并允许一次现有Agent流程。
 - `20-second-account-credit-limit-reply.txt`：用户明确本次账户报价30积分，最高30积分。
 - `21-second-agent-v2-one-run-approval.txt`：用户实际允许按已展示修订稿再运行一次的原文；只对应一次现有流程。
+- `22-second-role-human-acceptance.txt`：用户实际接受具体新角色方案，保留原图与冻结Prompt继续；既有第二次建模批准和30积分上限保留。
 - `second-agent-brief-v2.md`：初稿在原任务暂停后提出；经另行允许已单次执行，保留请求正文及原提交时文件Hash，没有修改旧产物。
 
 由 `scripts/export_phase4_prompt.py` 从明确指定的当前会话导出，后续开发结束再更新快照。导出器剔除非公开内容并脱敏常见凭证；比赛材料发布前仍需检查。

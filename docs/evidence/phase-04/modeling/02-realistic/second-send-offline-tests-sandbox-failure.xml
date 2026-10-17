@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.489" timestamp="2026-10-17T13:07:44.130780+08:00" hostname="wenwen"><testcase classname="backend.tests.test_phase4_neural4d" name="test_api_authorization_and_generation_default_off_emit_no_provider_requests" time="0.432"><failure message="PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\35037\\AppData\\Local\\Packages\\sandbox.{5fd3c955-cd80-46e3-bd70-641ba9a6d2bb}\\AC\\Temp\\pytest-of-35037\\pytest-0\\test_api_authorization_and_gen0\\integration-0\\runtime\\assets\\images\\asset-218wnvsb.part' -&gt; 'C:\\Users\\35037\\AppData\\Local\\Packages\\sandbox.{5fd3c955-cd80-46e3-bd70-641ba9a6d2bb}\\AC\\Temp\\pytest-of-35037\\pytest-0\\test_api_authorization_and_gen0\\integration-0\\runtime\\assets\\images\\9e58107bd21d14edd98a05186edb085575a7b60859ee114f06081b38105dae3b.png'">backend\tests\test_phase4_neural4d.py:97: in test_api_authorization_and_generation_default_off_emit_no_provider_requests
+    data = prepared(context)
+           ^^^^^^^^^^^^^^^^^
+backend\tests\test_phase4_neural4d.py:82: in prepared
+    image = context.assets.upload_image(created['assetId'], image_bytes(), 'image/png', 'manual_image', '仅离线原创图片测试')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend\app\assets\service.py:281: in upload_image
+    metadata.update(storageKey=self.save_bytes('images', image, metadata['hash'], 'png'),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend\app\assets\service.py:264: in save_bytes
+    os.link(temporary_path, destination)
+E   PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\35037\\AppData\\Local\\Packages\\sandbox.{5fd3c955-cd80-46e3-bd70-641ba9a6d2bb}\\AC\\Temp\\pytest-of-35037\\pytest-0\\test_api_authorization_and_gen0\\integration-0\\runtime\\assets\\images\\asset-218wnvsb.part' -&gt; 'C:\\Users\\35037\\AppData\\Local\\Packages\\sandbox.{5fd3c955-cd80-46e3-bd70-641ba9a6d2bb}\\AC\\Temp\\pytest-of-35037\\pytest-0\\test_api_authorization_and_gen0\\integration-0\\runtime\\assets\\images\\9e58107bd21d14edd98a05186edb085575a7b60859ee114f06081b38105dae3b.png'</failure></testcase></testsuite></testsuites>

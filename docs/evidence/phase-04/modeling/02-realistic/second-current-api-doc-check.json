@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-17T05:04:41.354376+00:00",
+  "kind": "PUBLIC_OFFICIAL_DOC_GET_ONLY",
+  "credentialsSent": false,
+  "modelCreationRequests": 0,
+  "documents": [
+    {
+      "url": "https://docs.neural4d.com/llms.txt",
+      "httpStatus": 200,
+      "size": 4740,
+      "sha256": "22aee7e233b5671bc4f208a84b726efb858b646075136f1bcec359aedfe4b8e2"
+    },
+    {
+      "url": "https://docs.neural4d.com/en/api-reference/image-to-3d/generate-model-with-image.md",
+      "httpStatus": 200,
+      "size": 13078,
+      "sha256": "d3e13779c7bb242d45e29f131aba0d4ec4a2118e0f283ddbeff9a45fb5cd4138"
+    },
+    {
+      "url": "https://docs.neural4d.com/en/api-reference/account-and-validation/query-remaining-balance.md",
+      "httpStatus": 200,
+      "size": 5509,
+      "sha256": "cca3bec48e8427460863a4b183f30e60caa1d81419c4c3c4e731dd8dff1bbbac"
+    }
+  ],
+  "parametersStillDocumented": true
+}
