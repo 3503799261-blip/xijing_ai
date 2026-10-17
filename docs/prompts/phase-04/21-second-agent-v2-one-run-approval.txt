@@ -1,0 +1,3 @@
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_8e52546978d84c4eac582186671a9a43\",0]","question":"已保存这次实际暂停：仅调用Planner一次，809 Token、估算0.00214元；RAG有有效资料，但规划误把原创名当传统实体。修订稿已准备（docs/reports/phase-04-second-model-execution.md）：只调整本次需求表达，不改Phase 3代码或旧结果。是否允许按修订稿再运行一次现有Agent流程（最多3次DeepSeek文本调用、仍在0.5元范围预算内）？需要补充此授权，是因为你此前只允许一次流程；第二次建模批准和30积分上限会继续保留。","answer":"允许按修订稿再运行一次"}]
+</send_user_message_question_reply>

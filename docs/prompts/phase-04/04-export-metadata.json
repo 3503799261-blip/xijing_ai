@@ -1,18 +1,18 @@
 {
-  "exportedAt": "2026-10-14T14:22:54.306119+00:00",
-  "sourceSnapshotSha256": "9795b4008a8b5374cbbc206801760ba2367dcbebca68812a7e07cc58e47a23e8",
-  "publicRecords": 1265,
+  "exportedAt": "2026-10-17T04:58:46.933848+00:00",
+  "sourceSnapshotSha256": "137cd54d6f5d675a07dfde1fb8db877d667ef264e5c922ee076a334670b8161e",
+  "publicRecords": 1319,
   "omittedPartialLine": false,
   "skipped": {
-    "event_msg": 2361,
-    "token_usage_record": 582,
-    "reasoning": 652,
-    "world_state": 29,
-    "compacted": 7,
-    "turn_context": 23,
-    "inter_agent_communication_metadata": 177,
-    "agent_message": 177,
-    "private_message": 18
+    "event_msg": 2478,
+    "token_usage_record": 606,
+    "reasoning": 681,
+    "world_state": 32,
+    "compacted": 8,
+    "turn_context": 26,
+    "inter_agent_communication_metadata": 184,
+    "agent_message": 184,
+    "private_message": 23
   },
   "files": {
     "00-original-user-request.txt": "8325c4d5895bfb71dde386815ef767d82bd143d0925cb4037476bdec66cfa6ee",
@@ -33,7 +33,8 @@
     "18-second-model-user-approval.txt": "2969510ee09f62a3fa0ab768c9e0505f5b3e7b43a4e95a9ad3da8d997d0e81cd",
     "19-second-image-permission-and-agent-reply.txt": "3b0f0c331267dc32aa758c8b0517db31b796790b3aec6046ed1d71365ed04a28",
     "20-second-account-credit-limit-reply.txt": "5c2f784dced76ecb4e081e0b6577977f714c3b5eb21935c65c60c2f7dcb3f488",
-    "03-public-conversation.jsonl": "af146c6ec6d51c67742cb3c50ac0413be895b50ef8f10458795cefcca317dd58"
+    "21-second-agent-v2-one-run-approval.txt": "f0d1d8aa13b2e8413357d82af937057de7e60ac7f4bbc0039087ce2ad2d4a32c",
+    "03-public-conversation.jsonl": "3f67decea4825672692c475705332f1f591050eeb7402a6684270dea127887d1"
   },
   "scope": "Actual public user messages, assistant commentary/final and matched tool evidence. No hidden reasoning, system/developer content or child internal messages. Snapshot; future records not included."
 }

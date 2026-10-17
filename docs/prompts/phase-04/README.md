@@ -2,7 +2,7 @@
 
 本目录保存当前会话公开记录的时间快照，不包含隐藏推理、系统指令或密钥。
 
-当前最新状态（2026-10-14）：第1次内部技术模型已恢复并获用户人工验收，仍占全局1/3、剩2。第2次写实候选、一次文本文化审校与冻结Prompt准备完成，**WAITING_APPROVAL**，许可/正式角色/费用待确认；本轮Neural4D请求0。下文初版与失败记录是时间明确的历史，最新事实见 [Phase 4.2准备总结](../../reports/phase-04-realistic-preparation.md)。
+当前最新状态（2026-10-17）：第1次内部技术模型已人工验收，Neural4D仍占全局1/3、剩2。第2次生成批准、图片使用范围声明、30积分报价及最高30积分已保留。用户另行允许的v2 Agent原任务已完成四阶段、审校pass；本次只读恢复，不重复运行。状态 **ROLE_REVIEW_PASSED_WAITING_HUMAN_ACCEPTANCE**，具体新方案待人审，第二次尚未创建。下文初版与失败记录是各自时间快照，最新事实见 [新角色审核表](../../reports/phase-04-second-role-v2-review.md)。
 
 - `00-original-user-request.txt`：最初检查点A需求原文。
 - `01-final-architecture-revision.txt`：最终3次模型创建尝试限制原文。
@@ -25,7 +25,8 @@
 - `18-second-model-user-approval.txt`：用户实际回复“批准第二次真实生成”，已接受为单次批准。
 - `19-second-image-permission-and-agent-reply.txt`：用户声明图片比赛展示/上传/衍生许可，并允许一次现有Agent流程。
 - `20-second-account-credit-limit-reply.txt`：用户明确本次账户报价30积分，最高30积分。
-- `second-agent-brief-v2.md`：实际一次流程暂停后提出的需求修订草案；没有自动执行或修改旧产物。
+- `21-second-agent-v2-one-run-approval.txt`：用户实际允许按已展示修订稿再运行一次的原文；只对应一次现有流程。
+- `second-agent-brief-v2.md`：初稿在原任务暂停后提出；经另行允许已单次执行，保留请求正文及原提交时文件Hash，没有修改旧产物。
 
 由 `scripts/export_phase4_prompt.py` 从明确指定的当前会话导出，后续开发结束再更新快照。导出器剔除非公开内容并脱敏常见凭证；比赛材料发布前仍需检查。
 
@@ -141,3 +142,9 @@ GLB缓存原因可对照 [官方CachingGLTFLoader源码](https://raw.githubuserc
 用户已明确生成批准、新图三项使用范围声明及30积分报价/上限；原文18～20保留。不是等待用户再次说同一个生成批准。一次现有Agent流程真实提交为 `a2a43828-773f-4f81-8908-5ff762ced750`，Planner实际将原创名和未认证袖布词误列requiredEntities。Research唯一查询获得1条行当基础证据，但整体精确实体缺口使任务暂停；没有Designer/Reviewer产物，canAccept=false。实际只有Planner调用，681输入+128输出=809Token、1.6249秒、估算0.00213512元。
 
 保留原任务和失败，准备更清楚区分原创观察/一般文化研究的brief v2，不改Phase 3代码、旧JSON、阈值或资料；新一次付费流程仍需允许，修订效果尚未验证。生成授权与30积分限制保留，Neural4D请求/批准/预留/提交0，全局仍1/3剩2。[真实执行记录](../../reports/phase-04-second-model-execution.md)包含结果与停止原因，不把本次Planner错误写成RAG无结果或正式角色通过。
+
+## v2获准执行与原任务只读恢复
+
+上述段落为v2获准前的历史。用户实际回复“允许按修订稿再运行一次”，原文21保留。2026-10-14提交的唯一v2任务 `ca7007e7-e535-4b1f-a9b6-1932f10e20b4` 四个Agent均完成，文化审校pass；实际3次DeepSeek调用共3727 Token、既有保守价格估算0.0090436元。2026-10-17恢复只读取该任务与本地证据，新增LLM/Neural4D调用0，原失败任务的产物与新角色的未人审状态均保留。
+
+外观标原创，一般行当证据与真实知识SQLite核对一致。原图Hash、冻结英文Prompt不变，实际中文角色visualPrompt另存，包含“舞台光效”的差异已公开说明；不修改图片或伪称文本已发送图生3D。具体方案、限制与人审见 [审核表](../../reports/phase-04-second-role-v2-review.md)，实际JSON和调用量见 [恢复证据](../../evidence/phase-04/modeling/02-realistic/second-role-workflow-v2-outcome.json)。userConfirmed/publicationAllowed仍false，Neural全局仍已用1/剩2；第二次模型没有预留或提交。

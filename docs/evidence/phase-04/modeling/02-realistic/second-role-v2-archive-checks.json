@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-17T04:59:12.054832+00:00",
+  "kind": "LOCAL_ARCHIVE_CHECKS_NO_API",
+  "originalBriefFileHashMatchesReceipt": true,
+  "requestJsonUnchanged": true,
+  "frozenEnglishPromptUnchanged": true,
+  "sourceImageSha256": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+  "resultStillAwaitingHumanAcceptance": true,
+  "parentArtifactHashesUnchanged": true,
+  "canonicalEvidenceCheckedInOutcome": true,
+  "localMarkdownLinksChecked": 56,
+  "promptExportTests": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0
+  },
+  "neuralStates": [
+    [
+      "SUCCEEDED",
+      1
+    ]
+  ],
+  "used": 1,
+  "remaining": 2,
+  "apiRequests": 0,
+  "newModelSubmissions": 0,
+  "businessDatabaseMutations": 0,
+  "checkerCorrections": [
+    {
+      "initialOutcome": "FAILED",
+      "reason": "Local link checker incorrectly required every target to be a file; an existing screenshot directory link was rejected.",
+      "affectedLink": "../../evidence/screenshots/phase-04",
+      "fix": "Validate target existence for both files and directories; no product or safety rule was changed."
+    },
+    {
+      "initialOutcome": "FAILED_BEFORE_QUERY",
+      "reason": "Archive checker assumed a generic attempts table name instead of reading the existing project schema.",
+      "fix": "Read actual schema and use neural4d_creation_attempts in read-only mode. No database mutation."
+    }
+  ],
+  "publicExportRecords": 1319,
+  "publicExportFileHashesMatch": true,
+  "changedFilesCheckedForLocalSecrets": 14,
+  "privateSecretValueFound": false,
+  "signedResourceUrlFound": false,
+  "realGenerationDefaultEnabled": false
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "1.0",
+  "design": {
+    "schemaVersion": "1.0",
+    "name": "绛绣·戏韵",
+    "positioning": "原创京剧风格写实数字角色，用于比赛主展示，非历史人物或传统实体",
+    "costume": [
+      {
+        "description": "红金长袍，金色花鸟式纹理，下摆拖地",
+        "interpretation": "creative",
+        "evidenceIds": []
+      },
+      {
+        "description": "白色长袖布延展，手部部分遮挡",
+        "interpretation": "creative",
+        "evidenceIds": []
+      }
+    ],
+    "colors": [
+      {
+        "description": "红金主色配蓝银冠饰与红色绒球",
+        "interpretation": "creative",
+        "evidenceIds": []
+      }
+    ],
+    "visualElements": [
+      {
+        "description": "京剧行当分生旦净丑四类，各有唱念做打程式",
+        "interpretation": "evidence_based",
+        "evidenceIds": [
+          "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+        ]
+      }
+    ],
+    "creativeElements": [
+      "蓝银冠饰配珠帘与两侧垂饰，属原创设定",
+      "自然真人比例完整站姿，不认证具体服制或行当"
+    ],
+    "visualPrompt": "写实数字角色绛绣·戏韵，自然真人比例完整站姿，红金长袍带金色花鸟纹理，下摆拖地，白色长袖布延展遮手，蓝银冠饰配红色绒球、珠帘与两侧垂饰，舞台光效，无武器。以上服饰冠饰配色均为原创，非传统规范。",
+    "usedEvidenceIds": [
+      "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+    ],
+    "limitations": [
+      "证据仅为行当分类一般知识，不认证原创服制、冠式或历史身份",
+      "来源为项目原创事实摘要，未经京剧专家审核"
+    ],
+    "execution": {
+      "requestId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4:designer",
+      "model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1059,
+        "completion_tokens": 329,
+        "total_tokens": 1388,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 803
+      },
+      "elapsedSeconds": 2.4168,
+      "promptVersion": "agent_designer_v3",
+      "promptHash": "b62062858884ae34ca53d84bbb3272afe049fee9aa52eaecf573f6bdfbd301ca"
+    }
+  },
+  "review": {
+    "verdict": "pass",
+    "issues": [],
+    "suggestions": [],
+    "checkedEvidenceIds": [
+      "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6"
+    ],
+    "needsHumanReview": true,
+    "programmaticChecks": {
+      "garmentReferenceGuard": "conservative_literal_absence",
+      "issuesFound": 0
+    },
+    "execution": {
+      "requestId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4:reviewer",
+      "model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1458,
+        "completion_tokens": 32,
+        "total_tokens": 1490,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1202
+      },
+      "elapsedSeconds": 1.0137,
+      "promptVersion": "agent_reviewer_v3",
+      "promptHash": "05fb0e2791700446715e98c5180454035ed8d9cfc08e4dcda0fc3f19212e6ce4"
+    }
+  },
+  "citations": [
+    {
+      "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+      "title": "京剧的行当分类是什么？",
+      "sourceId": "fujian-roles",
+      "locator": "正文第一段及末段 · 入库片段 1/1",
+      "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+      "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+      "contentKind": "original_fact_summary"
+    }
+  ],
+  "uncertain": false,
+  "publicationAllowed": false,
+  "knowledgeGeneration": "gen-20261010T104704-f628d57b",
+  "promptVersions": {
+    "planner": "agent_planner_v4",
+    "researcher": "agent_research_v4",
+    "designer": "agent_designer_v3",
+    "reviewer": "agent_reviewer_v3"
+  },
+  "limitations": [
+    "检索结果仅为候选依据，不代表用户前提成立；适用范围由文化审校继续核查。",
+    "来源为项目原创事实摘要，助手已核对来源，尚未经过京剧专家审核。",
+    "证据仅为行当分类一般知识，不认证原创服制、冠式或历史身份",
+    "来源为项目原创事实摘要，未经京剧专家审核"
+  ],
+  "confirmationReason": "final_acceptance",
+  "taskId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+  "userConfirmed": false
+}

@@ -1,0 +1,107 @@
+{
+  "claimedAt": "2026-10-14T14:53:29.721996+00:00",
+  "status": "EXISTING_WORKFLOW_SUBMITTED_ONCE",
+  "idempotencyKey": "phase42-realistic-0170077e-one-agent-workflow-v2",
+  "brief": {
+    "style": "舞台角色",
+    "parentTaskId": "a2a43828-773f-4f81-8908-5ff762ced750",
+    "requirements": "创建原创京剧风格写实数字角色，名称固定为绛绣·戏韵，用途比赛主展示。此名完全是原创命名，不是历史人物或传统实体。\n本任务没有要求核实存在性的指定传统实体；TaskPlan.requiredEntities必须是空数组[]，不得放入角色名、京剧、冠饰或袖布。TaskPlan.researchQueries只使用一条：京剧行当入门分类与表演基础。研究仍需真实RAG，缺证时停止，不允许修改检索阈值或编造引用。\n以下都是参考图视觉观察和原创设定，服饰、颜色与冠饰必须标creative：自然真人比例、完整站姿，红金长袍、金色花鸟式纹理，蓝银冠饰、红色绒球、珠帘与两侧垂饰，白色长袖布延展，手部部分遮挡，下摆拖地。保持原图主体，不增加武器或其他配饰，不认证具体服制、冠式、历史身份或传统行当。\n在visualElements中只加入有真实证据的一般京剧行当知识说明作为文化介绍，并使用实际证据ID；不要把这条一般知识当作上述原创服饰的认证。严格区分evidence_based和creative，引用真实且不过度推断。\n只运行现有Planner、Research、Designer和Culture Reviewer一次，结果交给用户确认。不生成图片或3D，不调用Neural4D，不改变已冻结的realistic_model_v1.0。"
+  },
+  "briefDocumentHash": "848b2174097fb191ca1cc2db96ede87bf49e8aad6e1a39c6f1f702a7064154d6",
+  "parentTaskId": "a2a43828-773f-4f81-8908-5ff762ced750",
+  "sourceHash": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+  "permissionEvidenceHash": "f0d1d8aa13b2e8413357d82af937057de7e60ac7f4bbc0039087ce2ad2d4a32c",
+  "budgetBefore": {
+    "calls": 104,
+    "estimatedUpperCostCny": 0.24597224,
+    "budgetCny": 3.0,
+    "priceVerifiedAt": "2026-10-11",
+    "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+    "activeScope": {
+      "name": "phase3",
+      "calls": 42,
+      "estimatedUpperCostCny": 0.112538,
+      "budgetCny": 0.5
+    },
+    "scopes": {
+      "phase3": {
+        "name": "phase3",
+        "calls": 42,
+        "estimatedUpperCostCny": 0.112538,
+        "budgetCny": 0.5
+      }
+    }
+  },
+  "neuralBefore": {
+    "attempts": 1,
+    "states": [
+      [
+        "SUCCEEDED",
+        1
+      ]
+    ],
+    "operations": [
+      [
+        "create_model",
+        1
+      ],
+      [
+        "download",
+        2
+      ],
+      [
+        "query_model",
+        6
+      ],
+      [
+        "verify",
+        2
+      ]
+    ]
+  },
+  "maxPaidModelCalls": 3,
+  "maxRetrievals": 3,
+  "automaticRetry": false,
+  "neural4dRequests": 0,
+  "newModelSubmissions": 0,
+  "httpStatus": 202,
+  "createdTask": {
+    "taskId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+    "runId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+    "state": "waiting",
+    "sequence": 1,
+    "statusUrl": "/api/v1/agent/status/ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+    "resultUrl": "/api/v1/agent/result/ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+    "requestId": "57ca8a93-47b8-4df5-a6fe-007db9f2457f"
+  },
+  "finishedAt": "2026-10-14T14:53:29.825537+00:00",
+  "neuralAfter": {
+    "attempts": 1,
+    "states": [
+      [
+        "SUCCEEDED",
+        1
+      ]
+    ],
+    "operations": [
+      [
+        "create_model",
+        1
+      ],
+      [
+        "download",
+        2
+      ],
+      [
+        "query_model",
+        6
+      ],
+      [
+        "verify",
+        2
+      ]
+    ]
+  },
+  "neuralLedgerUnchanged": true
+}
