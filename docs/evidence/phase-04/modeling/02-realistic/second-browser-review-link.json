@@ -1,0 +1,142 @@
+{
+  "startedAt": "2026-10-17T05:31:16.955Z",
+  "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+  "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+  "browser": "Real installed Google Chrome, headless Chromium automation",
+  "mobile": "CDP emulation, not a physical mobile device",
+  "paidCallsAllowed": false,
+  "tests": {
+    "valid-link-empty-storage": {
+      "pass": true,
+      "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "storageBefore": null,
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "state": "ready",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      },
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0,
+      "realGenerateDisabled": true
+    },
+    "valid-link-overrides-conflicting-storage": {
+      "pass": true,
+      "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "storageBefore": "11111111-1111-4111-8111-111111111111",
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "state": "ready",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      },
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0,
+      "realGenerateDisabled": true
+    },
+    "invalid-link-safe-storage-fallback": {
+      "pass": true,
+      "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "storageBefore": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "state": "ready",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      },
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0,
+      "realGenerateDisabled": true
+    },
+    "invalid-link-no-storage-no-asset-get": {
+      "pass": true,
+      "assetReads": [],
+      "state": "idle",
+      "modelId": null,
+      "modelHash": null,
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": null,
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0,
+      "realGenerateDisabled": true
+    }
+  },
+  "contexts": [
+    {
+      "name": "valid-link-empty-storage",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    },
+    {
+      "name": "valid-link-overrides-conflicting-storage",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    },
+    {
+      "name": "invalid-link-safe-storage-fallback",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    },
+    {
+      "name": "invalid-link-no-storage-no-asset-get",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle"
+    }
+  ],
+  "chromeVersion": "155.0.8059.84",
+  "finishedAt": "2026-10-17T05:31:26.069Z",
+  "blockedMutations": 0,
+  "noPaidRequestsSent": true
+}

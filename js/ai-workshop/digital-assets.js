@@ -336,6 +336,11 @@ export function initializeDigitalAssets({ root, selectPanel }) {
   updateControls(); renderApproval();
   let savedAssetId = null;
   try { const saved = globalThis.sessionStorage?.getItem(ASSET_STORAGE_KEY); if (saved) savedAssetId = validateAssetIdentifier(saved); } catch { /* Corrupt IDs never cause a replacement create request. */ }
+  // A review link selects an existing local asset, never a generation action.
+  try {
+    const linked = new URLSearchParams(globalThis.location?.search || '').get('assetId');
+    if (linked) savedAssetId = validateAssetIdentifier(linked);
+  } catch { /* Invalid review links keep the existing safe storage fallback. */ }
   return {
     async setVisible(value) {
       if (visible === value) return;
