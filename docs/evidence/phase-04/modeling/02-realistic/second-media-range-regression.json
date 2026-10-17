@@ -1,0 +1,37 @@
+{
+  "kind": "LOCAL_MEDIA_RANGE_READ_AFTER_NAVIGATION_ABORTS",
+  "responses": [
+    {
+      "path": "/media/opera-audio.mp3",
+      "httpStatus": 206,
+      "bytesReceived": 1024,
+      "contentRange": "bytes 0-1023/5255474"
+    },
+    {
+      "path": "/media/video1.mp4",
+      "httpStatus": 206,
+      "bytesReceived": 1024,
+      "contentRange": "bytes 0-1023/11808060"
+    },
+    {
+      "path": "/media/video2.mp4",
+      "httpStatus": 206,
+      "bytesReceived": 1024,
+      "contentRange": "bytes 0-1023/5513081"
+    },
+    {
+      "path": "/media/video3.mp4",
+      "httpStatus": 206,
+      "bytesReceived": 1024,
+      "contentRange": "bytes 0-1023/10515522"
+    },
+    {
+      "path": "/media/video4.mp4",
+      "httpStatus": 206,
+      "bytesReceived": 1024,
+      "contentRange": "bytes 0-1023/10028576"
+    }
+  ],
+  "supplierCalls": 0,
+  "newModelSubmissions": 0
+}

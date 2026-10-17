@@ -1,8 +1,8 @@
 # 戏境 AI
 
-在原有「梨园风华」8页京剧文化网站上建设AI戏韵工坊。前端保留HTML/CSS/原生ES Module与酒红、金色、米白视觉；Phase 2提供真实RAG问答，Phase 3加入规划、文化研究、角色设计、文化审校的真实协作与人工确认。Phase 4增量实现双风格本地资产与真实GLB查看器；平台图像生成和Neural4D真实建模尚未调用。
+在原有「梨园风华」8页京剧文化网站上建设AI戏韵工坊。前端保留HTML/CSS/原生ES Module与酒红、金色、米白视觉；Phase 2提供真实RAG问答，Phase 3加入规划、文化研究、角色设计、文化审校的真实协作与人工确认。Phase 4提供双风格资产与真实GLB查看器，已逐次批准并实际提交Q版技术模型与写实主展示模型各一次；平台图像生成仍未接入。
 
-Phase 1、Phase 2已获用户验收；基准分别为 `04b2c571e068ec0b26205fcce0c075395caeebce`、`a95c7748e4a22bfed9f4f8261e96dffa2522b740`。Phase 3代码与实测记录继承保留，详见 [Phase 3历史报告](docs/reports/phase-03.md)。当前Phase 4状态为 **PARTIAL**，在首次真实建模前等待单次明确授权，尚未达到完整阶段验收。[公开仓库](https://github.com/3503799261-blip/xijing_ai)。
+Phase 1、Phase 2已获用户验收；基准分别为 `04b2c571e068ec0b26205fcce0c075395caeebce`、`a95c7748e4a22bfed9f4f8261e96dffa2522b740`。Phase 3代码与实测记录继承保留，详见 [Phase 3历史报告](docs/reports/phase-03.md)。当前Phase 4仍 **PARTIAL**，第1次模型已人工验收，第2次“绛绣·戏韵”真实模型技术PASS、等待模型人工验收，未执行企业第3次或Phase 5。固定全项目次数已用2/3、剩1，默认真实生成关闭，详见 [第2次执行记录](docs/reports/phase-04-second-model-execution.md)。本机服务启动后可[直接查看写实模型](http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model)；私有模型文件不随Git仓库分发，空环境仍用合法GLB夹具复现Viewer。[公开仓库](https://github.com/3503799261-blip/xijing_ai)。
 
 ## 架构与数据边界
 
@@ -150,7 +150,7 @@ node scripts/phase2_frontend_test.mjs --output docs/evidence/test-results/local-
 
 已实现本地角色登记、固定模板视觉Prompt、人工视觉确认、实际图片导入/Hash/接受、合法已有GLB导入与查看、SQLite资产记录，以及真实建模服务的默认关闭门禁和离线Mock测试。自由编辑Prompt会新建不可覆盖版本，并锁为待文化复核草稿；必须经既有Agent流程重新审校并确认新任务，不能靠客户端声明或单纯视觉确认解除文化门禁。旧图片、模型和已发送任务保留历史归属。
 
-**本轮未调用真实Neural4D建模或平台图像供应商API。** 图像供应商、费用与许可待确认；提供的概念图仍属待关联资料及非商业演示用途的用户许可声明，不能推定商业授权、文化专家审核或本平台真实图像生成。企业模式只记录机构、受众、用途和边界，不承诺商业交付、骨骼绑定或游戏可用规格。
+**本节初版搭建时未调用真实Neural4D建模或平台图像供应商API。** 后来逐次批准的两次真实建模以本文开头及执行报告为准，平台图像生成仍未接入。许可与文化确认按每个实际资产记录，不能推定商业授权、文化专家审核或本平台真实图像生成。企业模式只记录机构、受众、用途和边界，不承诺商业交付、骨骼绑定或游戏可用规格。
 
 `model-viewer 4.4.0` 已在本地保存，加载真实GLB，不用图片/GIF/视频伪装3D。Duck是附有原许可的已有合法Viewer测试素材，独立于角色风格资产，也不是Neural4D输出或京剧数字IP。查看器提供水平旋转、缩放按钮、重置视角、Loading/Ready/Error和显式失败重载。1920×1080浏览器中一次真实鼠标拖拽已记录 **391.8°连续水平观察**，放大、缩小、滚轮和重置均已验证；移动设备可开启触摸查看模式。**真实手机单指拖动及双指缩放尚未验收，375×812移动视口截图不能替代这些手势测试**。真实角色建模与设备交互验收仍待完成，当前Phase 4为PARTIAL。见 [阶段报告](docs/reports/phase-04.md) 和 [浏览器测试](docs/evidence/test-results/phase4-browser-test-report.md)。
 
@@ -190,7 +190,7 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/v1/assets/models'
 
 整站回归仍使用 `.\.venv\Scripts\python.exe -m pytest -q backend/tests`，并实际打开8个原页面。测试数量、桌面交互样本、失败与最终结果以Phase 4报告及证据为准；保留 [Windows文件并发失败与修复](docs/evidence/test-results/phase4-windows-file-race.md)，不能用更早一次通过掩盖后来的真实失败。
 
-### 首次真实建模前的条件
+### 每次真实建模前的条件
 
 全项目累计最多 **3次新建模型任务HTTP提交尝试**，每次 `modelCount=1`；失败、超时、未知结果也占用次数，禁止自动重发或返还。固定账本是 `D:\京剧\.runtime\neural4d-usage.sqlite3`，与风格、用途、RAG目录和服务重启无关。SQLite原子预留、幂等与发送者独占保护共同生效，浏览器和Agent不能绕过服务入口调用供应商。
 
@@ -204,7 +204,7 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/v1/assets/models'
 - 使用独立后端管理授权、已核实历史额度、有效余额/协议验证；本地配置默认 `NEURAL4D_GENERATION_ENABLED=false`、`NEURAL4D_PROTOCOL_VERIFIED=false`，费用为空、下载域名白名单为空。不要为普通Viewer或免费测试开启真实创建。
 - 对超时或未知状态先核查供应商已有任务；有可靠任务ID时才主动查询，不能通过重新生成解决未知结果。下载只允许人工核验的HTTPS域名，生成结果需继续通过GLB与浏览器验证。
 
-首次真实提交前必须停止，向用户报告测试、参数、预计费用、额度与风险并等待单独批准。阶段结尾仍需Phase 4检查点B验收；本README不宣告Phase 5开始。
+每次真实提交前必须停止，向用户报告测试、参数、预计费用、额度与风险并等待单独批准。第2次已执行并技术PASS，本次批准不可复用；第3次仍无授权。阶段结尾需Phase 4检查点B验收，不宣告Phase 5开始。
 
 ## Phase 2历史测试与十分钟复现边界
 
@@ -245,7 +245,7 @@ node scripts/phase2_frontend_test.mjs --output docs/evidence/test-results/local-
 
 Phase 3实际40次供应商请求、39986 tokens，增量保守估算 **0.10777464元**（批准0.5元内）；与Phase 2合计102次、**0.24120888元**。包含失败、调优和一次问答回归，不等于供应商实时余额或实际账单。[本阶段费用](docs/evidence/test-results/phase-03/api-usage-final.json)。
 
-目前无跨问题语义记忆、专业人工知识审校、独立盲测及公开互联网后端访问控制/完整限流；本地单worker是已验证范围。辅助审校可能漏判、误报；已保留真实失败。Phase 4本地资产与Viewer已增量实现，图像生成供应商尚未接入；首次真实Neural4D内部技术模型已生成并恢复，正式角色/写实/企业模型尚未生成。
+目前无跨问题语义记忆、专业人工知识审校、独立盲测及公开互联网后端访问控制/完整限流；本地单worker是已验证范围。辅助审校可能漏判、误报，真实失败已保留。Phase 4本地资产与Viewer已实现，图像生成供应商未接入；第1次内部模型已人工验收，第2次正式写实模型技术PASS待用户验收，企业模型尚未生成，实体手机性能未实测。
 
 Phase 1真实历史、备份与截图保留，见 [阶段报告](docs/reports/phase-01.md)。Phase 2方案、批准Prompt、真实工具过程、参数改动、失败与修复归档在docs；协作导出排除秘密与隐藏推理，不补造对话。历史报告描述的是当时状态，不能当作当前能力证明。
 

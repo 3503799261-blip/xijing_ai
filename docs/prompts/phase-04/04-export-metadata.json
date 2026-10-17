@@ -1,17 +1,17 @@
 {
-  "exportedAt": "2026-10-17T05:12:30.902572+00:00",
-  "sourceSnapshotSha256": "c5706c948ae65b648b4835f5817dd96568f8a76a47348b4aaba25626d9f0506d",
-  "publicRecords": 1401,
+  "exportedAt": "2026-10-17T05:42:20.881802+00:00",
+  "sourceSnapshotSha256": "3c67ea68ffaa3e170a7bfedec1367a83b78e4ab87a5392560582b925617556b0",
+  "publicRecords": 1516,
   "omittedPartialLine": false,
   "skipped": {
-    "event_msg": 2630,
-    "token_usage_record": 644,
-    "reasoning": 717,
+    "event_msg": 2863,
+    "token_usage_record": 697,
+    "reasoning": 793,
     "world_state": 34,
     "compacted": 8,
     "turn_context": 27,
-    "inter_agent_communication_metadata": 196,
-    "agent_message": 196,
+    "inter_agent_communication_metadata": 222,
+    "agent_message": 222,
     "private_message": 23
   },
   "files": {
@@ -35,7 +35,7 @@
     "20-second-account-credit-limit-reply.txt": "5c2f784dced76ecb4e081e0b6577977f714c3b5eb21935c65c60c2f7dcb3f488",
     "21-second-agent-v2-one-run-approval.txt": "f0d1d8aa13b2e8413357d82af937057de7e60ac7f4bbc0039087ce2ad2d4a32c",
     "22-second-role-human-acceptance.txt": "3f90429e1ca723e5e73ece5a921d5f73070052cdd02680ddb608871e8de566c2",
-    "03-public-conversation.jsonl": "cc44d0e7f3cf03d658e112f588f7c475a759a17c38f1c832634da9eec558d5cb"
+    "03-public-conversation.jsonl": "cd2961716e4ab2c871409506b08ba263282dd28dbcaa01034fe2e16ac92fa010"
   },
   "scope": "Actual public user messages, assistant commentary/final and matched tool evidence. No hidden reasoning, system/developer content or child internal messages. Snapshot; future records not included."
 }

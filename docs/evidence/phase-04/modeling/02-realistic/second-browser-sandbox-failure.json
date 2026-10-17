@@ -1,0 +1,88 @@
+{
+  "startedAt": "2026-10-17T05:21:01.520Z",
+  "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+  "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+  "browser": "Real installed Google Chrome, headless Chromium automation",
+  "mobile": "CDP emulation, not a physical mobile device",
+  "paidCallsAllowed": false,
+  "tests": {
+    "desktopFailure": {
+      "pass": false,
+      "message": "page.goto: net::ERR_NETWORK_ACCESS_DENIED at http://127.0.0.1:8000/about.html#ai-workshop-model\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8000/about.html#ai-workshop-model\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    "mobileFailure": {
+      "pass": false,
+      "message": "page.goto: net::ERR_NETWORK_ACCESS_DENIED at http://127.0.0.1:8000/about.html#ai-workshop-model\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8000/about.html#ai-workshop-model\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    "statesFailure": {
+      "pass": false,
+      "message": "page.goto: net::ERR_NETWORK_ACCESS_DENIED at http://127.0.0.1:8000/about.html#ai-workshop-model\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8000/about.html#ai-workshop-model\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    "regressionFailure": {
+      "pass": false,
+      "message": "page.goto: net::ERR_NETWORK_ACCESS_DENIED at http://127.0.0.1:8000/index.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8000/index.html\", waiting until \"networkidle\"\u001b[22m\n"
+    }
+  },
+  "contexts": [
+    {
+      "name": "desktop-real-glb",
+      "pageErrors": [],
+      "failedResources": [
+        {
+          "path": "/about.html",
+          "error": "net::ERR_NETWORK_ACCESS_DENIED"
+        }
+      ],
+      "httpErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": []
+    },
+    {
+      "name": "emulated-mobile-real-glb",
+      "pageErrors": [],
+      "failedResources": [
+        {
+          "path": "/about.html",
+          "error": "net::ERR_NETWORK_ACCESS_DENIED"
+        }
+      ],
+      "httpErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": []
+    },
+    {
+      "name": "loading-real-resource-delayed",
+      "pageErrors": [],
+      "failedResources": [
+        {
+          "path": "/about.html",
+          "error": "net::ERR_NETWORK_ACCESS_DENIED"
+        }
+      ],
+      "httpErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": []
+    },
+    {
+      "name": "eight-static-pages-regression",
+      "pageErrors": [],
+      "failedResources": [
+        {
+          "path": "/index.html",
+          "error": "net::ERR_NETWORK_ACCESS_DENIED"
+        }
+      ],
+      "httpErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": []
+    }
+  ],
+  "chromeVersion": "155.0.8059.84",
+  "finishedAt": "2026-10-17T05:21:07.341Z",
+  "blockedMutations": 0,
+  "noPaidRequestsSent": true
+}

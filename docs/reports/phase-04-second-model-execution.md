@@ -1,6 +1,6 @@
 # 第二次写实建模执行记录
 
-初始记录日期：2026-10-14；最新更新：2026-10-17。当前状态：**SECOND_MODEL_SUBMITTED_PROCESSING**。用户已接受新角色并要求保留原图与冻结Prompt继续；第2次真实提交HTTP200、实际扣费30积分，原任务正在生成，未创建第3次。前7节保留各时间点事实，第8节记录实际发送与后续恢复。
+初始记录日期：2026-10-14；本次执行日期：2026-10-17。**结论：PASS（第2次模型技术验证），模型人工验收PENDING。** 原任务已完成、安全取得并经本地纹理兼容通过原验证，真实Chrome的桌面/手机模拟、三态、双风格及8页回归通过。实际只创建一次第2次模型、30积分，全项目已用2/3、剩1；默认关闭新建，停止等待用户验收，不执行第3次或Phase 5。前10节保留各时间点的真实暂停/失败/恢复历史，最终结果见第11～14节。
 
 ## 1. 已收到的真实批准与补充
 
@@ -97,3 +97,103 @@ Planner、Research、Designer、Reviewer均completed；审校pass、needsHumanRe
 首次原任务查询 `codeStatus=1`、PROCESSING，见 [查询01](../evidence/phase-04/modeling/02-realistic/second-query-01.json)。这是已知进行中状态，不是UNKNOWN；没有重发或重新创建。后续仅允许查询/安全下载该UUID及本地Viewer验证。模型结果尚未取得前不标记技术PASS。
 
 发送前两文件离线回归 **109 passed**，保留 [JUnit](../evidence/phase-04/modeling/02-realistic/second-send-offline-tests.xml) 与 [沙箱失败](../evidence/phase-04/modeling/02-realistic/second-send-offline-tests-sandbox-failure.xml)。失败根因为WinError5硬链接限制，获准权限后原测试通过，没有为测试放宽原子保存。另3项脱敏导出测试通过；测试没有使用真实配额。包装器静态复核发现重复启动可能覆盖提交状态文件，已在任何创建前改为仅本次独占领取标记的进程允许更新，原文件存在时拒绝发送且不覆盖；固定账本保护原样保留。
+
+## 9. 原模型安全下载与真实格式阻断
+
+第2/3次查询仍为PROCESSING；第4次查询返回`codeStatus=0`，供应商已完成。仅对该原任务下载一次，精确已核实host `cos.neural4d.com`、HTTPS、公网DNS固定、无重定向，HTTP200取得 **18,266,484字节**。没有记录完整签名URL或发送模型Key给下载CDN。[查询04及安全下载元数据](../evidence/phase-04/modeling/02-realistic/second-query-04.json)保留。
+
+原文件SHA-256：`51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e`，按Hash存于受控recovery-quarantine，未公开或伪装成已通过验证的模型。
+
+原校验器实际报`MODEL_TEXTURE_INVALID`：两张内嵌真实JPEG的声明为非标准`image/jpg`；两张4096×4096纹理也分别超过现有单图1600万像素、合计3200万像素预算。[本地诊断](../evidence/phase-04/modeling/02-realistic/second-original-glb-diagnosis.json)确认GLB2头/总长度正确、1mesh、5个bufferView、纹理视图3和4。不是下载域名拒绝、过期链接、供应商建模失败或新建请求结果未知。
+
+账本按既有门禁转PENDING_RECONCILIATION，跨风格新建暂停，次数仍2/3、剩1。已停止后续供应商查询；仅准备对确切原Hash的本地MIME规范化和2K纹理兼容，保留原始文件、场景和每个非纹理几何bufferView的Hash，不放宽验证器或调用付费转换/重新建模。转换完成并通过原验证及真实Viewer前，不标记技术PASS。
+
+## 10. 本地兼容恢复与正式模型登记
+
+新增固定范围工具 `backend/scripts/normalize_second_recovered_glb.py`，不是泛用上传处理器。它只接受第2次原Hash、18,266,484字节、已诊断两张4096 JPEG与5视图布局，绑定该任务/角色/资产/图片/冻结批准；显式禁用创建、查询和鉴权方法，要求默认创建关闭及独占owner锁。两张JPEG重采样至2048并改为`image/jpeg`，原三组非纹理bufferView逐个Hash相同，场景/节点/accessor/材质语义不变。
+
+专项 **19 passed**（新第二次14项+首次转换5项），[JUnit](../evidence/phase-04/modeling/02-realistic/second-local-conversion-tests.xml)保留；包含固定Hash范围、几何与UV保持、禁止联网、临时正式角色登记和重复运行幂等。独立只读安全审查通过后，生产CLI只执行一次，没有运行第一次内部模型的豁免路径。
+
+实际恢复于2026-10-17 13:20北京时间完成：[本地恢复证据](../evidence/phase-04/modeling/02-realistic/second-local-glb-recovery.json)。
+
+| 项目 | 实际值 |
+|---|---|
+| 兼容版modelId | `1fa0b519-caf4-4009-aec2-f20b0f9a3523` |
+| GLB字节数 | 15,158,668 |
+| GLB SHA-256 | `5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5` |
+| 三角面 / 顶点 | 500000 / 305024 |
+| 网格 / 材质 / 内嵌图片 | 1 / 1 / 2 |
+| 解码纹理像素 | 8,388,608 |
+| 结构门禁 | xijing_glb_structural_v2有效、自包含、外部资源0；不是完整Khronos认证 |
+| 原文件 | 隔离目录保持原Hash与长度，未覆盖 |
+| 本地转换谱系Hash | `0934dbe65254eab9e7ade199a17fc1cb16f51e2fbecb66eff1bbfd9c1469999e` |
+| 增量供应商请求 / 费用 | 0 / 0 |
+
+正式登记保留原任务ID、引用Hash、角色sourceResultHash及图片/风格Prompt谱系；模型许可说明注明原文件Hash与本地兼容版本。原任务改SUCCEEDED，旧MODEL_TEXTURE_INVALID事件不删除，次数/18条真实HTTP记录均未增加；全局2/3、剩1，无待核查建模任务。创建开关保持false，没有第三次。
+
+本地8000服务已以单worker运行，健康检查/真实模型元信息均HTTP200；模型Hash匹配，modelViewer=true、imageToModel=false，见 [HTTP只读结果](../evidence/phase-04/modeling/02-realistic/second-local-server-readback.json)。初次沙箱本地HTTP WinError10013保留，获准权限后只读请求成功。随后将使用真正Chrome测试，不能以服务200替代交互通过。
+
+## 11. 真正Chrome浏览器验收
+
+使用本机已安装 **Google Chrome155.0.8059.84**，Playwright驱动，headless/SwiftShader WebGL；桌面1920×1080，手机390×844触摸模拟。CUA浏览器工具两次报kernel assets路径不存在，未据此宣布浏览器不可测；使用已有捆绑Playwright，无安装新依赖。首次Chrome沙箱阻止本地HTTP，保存 [首轮失败](../evidence/phase-04/modeling/02-realistic/second-browser-sandbox-failure.json)，获准本地网络权限后实测通过。
+
+| 实际检查 | 结果与证据 |
+|---|---|
+| 真实GLB加载 | Ready，modelId与`5a021ac6…bdfd5` Hash均与正式资产一致，不是Duck夹具 |
+| 鼠标连续水平拖拽 | 单次实际拖拽 **325.920°**，49次user-interaction事件；非脚本设置相机 |
+| 滚轮缩放 | 半径3.98983→3.13069 |
+| 按钮缩放 | 放大至3.19187，缩小回3.98983 |
+| Reset | 回0°/75°/初始半径 |
+| 手机触摸模拟 | 单指同向两划累计 **382.657°**、123次真实交互事件；跨360°连续观察 |
+| 手机双指模拟 | 两个同时接触点，半径3.98983→2.84145 |
+| 手机布局 | 390px视口/390px页面，无横向溢出 |
+| Loading→Ready | 只延迟原GLB响应，加载提示可见，随后真实文件Ready |
+| Error与重载 | 仅对原GLB故障注入一次，明确Error/重载入口；解除后点击重载，GET原文件恢复同modelId/Hash |
+| 双风格隔离 | 同角色切Q版：idle、无model-viewer、明确未生成；切回写实恢复原模型，未假用同一模型充当两种风格 |
+| 8页回归 | 全部HTTP200、导航正常、无坏图、桌面无横溢出 |
+| 正常控制台 | 桌面、手机、Loading及8页正常场景console/pageerror均0 |
+| 付费与外域 | 测试拦截全部非GET/HEAD及外域；实际POST/供应商调用0，新建按钮保持禁用 |
+
+完整实测分别见 [主套](../evidence/phase-04/modeling/02-realistic/second-browser-test-result.json)、[双风格](../evidence/phase-04/modeling/02-realistic/second-browser-style-switch-result.json)、[手机260°以上及Error恢复](../evidence/phase-04/modeling/02-realistic/second-browser-mobile-range-reload.json)。**手机为真实Chrome的CDP触摸模拟，尚未测试实体手机。** 程序设0/90/180/270°只用于质量截图，不计为用户拖拽证据。
+
+实际执行的 [浏览器脚本快照](../evidence/phase-04/modeling/02-realistic/second-browser-harness.mjs)一并归档：使用已有捆绑Node/Playwright、本机Chrome及当前已登记模型；`--model=1fa0b519-caf4-4009-aec2-f20b0f9a3523`执行主套，另以`--only=style`、`--only=edge`、`--only=link`分次追加。脚本只有本地GET/HEAD，机器路径及资产ID固定，不是空白电脑通用安装脚本。重新测量须先为结果另存新版本，避免覆盖本机截图/原JSON；公开归档不包含模型二进制。
+
+故障注入场景按预期保留2条console错误和原GLB的ERR_FAILED；8页切换取消未播完媒体时记录7条ERR_ABORTED，不删掉当作全零。对涉及5个原媒体追加Range读取，均HTTP206/1024字节，见 [媒体回归](../evidence/phase-04/modeling/02-realistic/second-media-range-regression.json)，不是资源404或破损。实体机性能、长期运行及其他浏览器没有用本轮Chrome结果替代。
+
+## 12. 实际视觉观察与资产使用边界
+
+已实际查看正面、90°侧面、180°背面及手机截图：人脸可辨认、站姿与真人比例保留；蓝银冠饰/红绒球、红金长袍纹样及白色袖布均可见，模型有可观察侧面和背面。
+
+仍需人工接受的质量问题：冠饰珠饰/细杆有简化和融合，不能声称逐件复刻；手部仍部分受袖布遮挡，袖布与衣层部分连接；下摆/足部可见性受长袍限制。单张正面图没有背面参照，后部发型与纹样属于生成推测，不能认证为传统真实服制。未验证骨骼、动画、游戏级拓扑或商业资产规范；50万面/15.2MB在实体低性能手机上的体验仍待测。
+
+所有含角色图像的截图及原/兼容GLB仅本机保存，不复制进公开Git仓库。截图目录：`D:\京剧\.runtime\second-realistic-screenshots\`，文件Hash清单另存最终归档核对；主要文件为`01-desktop-front.png`、`03-side-90.png`、`04-back-180.png`、`06-mobile-390x844.png`、`07-loading.png`、`08-error.png`、`12-mobile-over260.png`、`13-error-recovered-original.png`和`14-direct-review-link-empty-storage.png`。
+
+用户提供的比赛展示/上传/衍生声明不扩大成商业销售或公开GLB再分发许可，来源作者和原URL仍未独立审计。技术PASS不替代本次模型艺术质量、文化或权利的用户验收。
+
+## 13. 只读验收入口、代码与Git
+
+[直接打开绛绣·戏韵写实模型](http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model)。本机服务保持运行，创建开关false。
+
+实际工程改进：验收链接只用现有`validateAssetIdentifier`读取已登记assetId，优先于旧会话选择，走现有GET恢复，不触发注册/生成。36项现有前端离线检查通过，见 [结果](../evidence/phase-04/modeling/02-realistic/second-frontend-offline.json)；真实Chrome额外验证空存储、冲突存储、非法ID安全回退、非法且无存储4项，全部通过，见 [链接验证](../evidence/phase-04/modeling/02-realistic/second-browser-review-link.json)。没有为方便展示绕过人审或下载保护。
+
+本轮实际代码变化为第二模型窄范围本地转换脚本、对应离线测试、前端5行只读链接支持，以及Prompt导出器识别本次真实人审原文；HTML/CSS、原文化资源、RAG/Agent业务代码未改。8页HTML与638028e逐字节一致，见 [只读连续性记录](../evidence/phase-04/modeling/02-realistic/second-post-submit-continuity.json)。
+
+| 已发生提交 | 对应内容 |
+|---|---|
+| `638028e84253d200bd323dccd75ae6376c6d8d18` | v2实际完成结果、人审材料及原失败保留 |
+| `c873c312b04f16cdc679c733684fae47f9caf805` | 新角色人审、正式资产、第二次实际授权提交/30积分及离线测试证据 |
+| `2b08f3608d8667f456a02527b59e14b1720b8a8f` | 原模型纹理兼容工具、19项测试、原始失败与本地恢复 |
+| `e72d237b5c6451267856ec2bd38bb55c20ce4945` | 已有资产只读验收链接、36项离线与4项浏览器验证 |
+
+最终文档/浏览器归档提交由真实Git记录和最终回复提供，不预造自身Hash。不合并main、不推送、不压缩既有历史。公开Prompt22保存本次角色接受原文，JSONL由实际会话继续导出；新增工程摘要不伪称用户原始Prompt。
+
+## 14. 费用、配额与停止结论
+
+- 本次Neural4D实际新建1次、实际 **30积分**；加上第1次累计2次/60积分，剩 **1次全局机会**。失败/超时同样计入的固定3次限制原样保留。
+- 本次余额验证1、创建1、原任务查询4、安全下载1，共7次供应商/资源HTTP操作；累计18条。公开文档GET、本地HTTP、Chrome和离线测试分别记录，不混成新建模型数。
+- 原文件格式失败后只有本地处理；没有第二次创建、付费格式转换、DeepSeek新调用或额外积分。原/兼容文件、冻结Prompt、来源及人工接受链路保持可追溯。
+- 原任务现SUCCEEDED，全项目无UNKNOWN/PENDING；真实生成仍默认关闭，本次批准已消费，不能复用创建另一个模型。
+- **第2次技术验证PASS，等待用户人工验收。** 视觉质量与实体手机验证边界见上文；Phase 4整体仍PARTIAL。
+- **停止，不执行第3次企业建模，不进入Phase 5。** 只有本次结果获人工审查、另行明确准备/审核/逐次授权后，才可讨论第3次；不因还有额度自动申请或消耗。
+
+最终 [只读归档核对](../evidence/phase-04/modeling/02-realistic/second-final-readback.json)包含原/兼容GLB、14张本机截图Hash、8页HTML连续性、公开导出Hash、密钥/签名URL排除及最终账本状态。检查脚本最初使用错一个浏览器JSON字段名，读取实际结构后修正；未改变原测试结果、模型或产品规则。全部实际Git记录保留，最终停在本次模型人工验收前。

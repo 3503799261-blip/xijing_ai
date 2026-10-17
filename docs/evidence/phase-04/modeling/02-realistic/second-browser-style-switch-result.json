@@ -1,0 +1,66 @@
+{
+  "startedAt": "2026-10-17T05:24:20.120Z",
+  "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+  "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+  "browser": "Real installed Google Chrome, headless Chromium automation",
+  "mobile": "CDP emulation, not a physical mobile device",
+  "paidCallsAllowed": false,
+  "tests": {
+    "chibiNotFaked": {
+      "pass": true,
+      "before": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": false,
+        "lastError": "",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "maxContinuousDegrees": 0,
+        "userEventCount": 0
+      },
+      "absent": {
+        "state": "idle",
+        "modelId": null,
+        "statusText": "当前风格尚未生成3D模型",
+        "selectorValue": "",
+        "viewerElementCount": 0
+      }
+    },
+    "realisticRestored": {
+      "pass": true,
+      "characterId": "29c8a710-2760-5079-a2c6-0b6d3f1067b1",
+      "state": "ready",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      },
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0
+    }
+  },
+  "contexts": [
+    {
+      "name": "same-character-style-switch-read-only",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready,idle,idle,idle,loading,ready"
+    }
+  ],
+  "chromeVersion": "155.0.8059.84",
+  "finishedAt": "2026-10-17T05:24:25.879Z",
+  "blockedMutations": 0,
+  "noPaidRequestsSent": true
+}

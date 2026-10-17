@@ -2,7 +2,7 @@
 
 本目录保存当前会话公开记录的时间快照，不包含隐藏推理、系统指令或密钥。
 
-当前最新状态（2026-10-17）：用户已接受v2新角色，保留原图与冻结Prompt继续；正式写实资产登记后仅提交一次Neural4D，HTTP200、实际30积分。状态 **SECOND_MODEL_SUBMITTED_PROCESSING**，任务 `8735f32e-097e-488c-962f-f11e64af7741`；全局已用2/3、剩1，禁止自动创建第3次。下文初版与失败记录是各自时间快照，最新进展见 [执行记录](../../reports/phase-04-second-model-execution.md)。
+当前最新状态（2026-10-17）：第2次任务 `8735f32e-097e-488c-962f-f11e64af7741` 已完成，30积分，安全取回原文件后本地修正已诊断纹理MIME/尺寸，原门禁通过，真实Chrome技术 **PASS，模型人工验收PENDING**。全局已用2/3、剩1，默认创建关闭，禁止自动创建第3次/进入Phase 5。下文初版与失败记录是各自时间快照，最新进展见 [执行记录](../../reports/phase-04-second-model-execution.md)。
 
 - `00-original-user-request.txt`：最初检查点A需求原文。
 - `01-final-architecture-revision.txt`：最终3次模型创建尝试限制原文。
@@ -149,3 +149,13 @@ GLB缓存原因可对照 [官方CachingGLTFLoader源码](https://raw.githubuserc
 上述段落为v2获准前的历史。用户实际回复“允许按修订稿再运行一次”，原文21保留。2026-10-14提交的唯一v2任务 `ca7007e7-e535-4b1f-a9b6-1932f10e20b4` 四个Agent均完成，文化审校pass；实际3次DeepSeek调用共3727 Token、既有保守价格估算0.0090436元。2026-10-17恢复只读取该任务与本地证据，新增LLM/Neural4D调用0，原失败任务的产物与新角色的未人审状态均保留。
 
 外观标原创，一般行当证据与真实知识SQLite核对一致。原图Hash、冻结英文Prompt不变，实际中文角色visualPrompt另存，包含“舞台光效”的差异已公开说明；不修改图片或伪称文本已发送图生3D。具体方案、限制与人审见 [审核表](../../reports/phase-04-second-role-v2-review.md)，实际JSON和调用量见 [恢复证据](../../evidence/phase-04/modeling/02-realistic/second-role-workflow-v2-outcome.json)。userConfirmed/publicationAllowed仍false，Neural全局仍已用1/剩2；第二次模型没有预留或提交。
+
+## 第2次真实成模、格式失败与恢复
+
+用户接受新角色后，复用正式角色/资产/图片/全局UsageManager，经独占锁、原子预留和单次发送，仅创建第二次任务8735f32e-097e-488c-962f-f11e64af7741，HTTP200实际30积分。三次查询生成中，第四次完成；精确白名单HTTPS/DNS固定下载18.3MB原GLB。原校验器真实阻止image/jpg及4K纹理，保留原文件及PENDING事件，不再查供应商或建模。
+
+固定原Hash的第二模型专用本地脚本只修MIME与2K纹理，逐Hash核对几何、UV和场景不变，再走原validate_glb及正式角色登记，原任务SUCCEEDED。19项专项离线通过；恢复HTTP/新增Credit均0。初始沙箱硬链接/DNS/本地HTTP限制、CUA kernel路径失败及真正Chrome首次网络拒绝都保留；获准环境权限后使用原安全机制，不改成不受控下载或宽松验证器。
+
+真实Chrome桌面325.920°、手机模拟382.657°、双指/滚轮/按钮/Reset/三态/Error重载同模型/双风格/8页均有独立JSON与私有截图。正常场景控制台0；故意Error及切页媒体取消记录不删除，原媒体Range206另验。为实际验收增加仅GET的assetId链接，36项前端离线和4项Chrome链接专项通过，不冒充用户另提的Prompt。上述为真实工程摘要，原始用户批准22和公开会话快照另存，不包含隐藏推理。
+
+当前仅等待第二模型人工验收；没有第3次新建或Phase 5工作。详细文件、Hash、真实测试与Git见[执行报告](../../reports/phase-04-second-model-execution.md)。

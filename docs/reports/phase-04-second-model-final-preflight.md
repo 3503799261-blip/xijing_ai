@@ -1,5 +1,7 @@
 # 第二次真实建模最终检查
 
+后续实际状态（2026-10-17）：本页READY_FOR_APPROVAL为当时材料快照。之后用户已批准生成/费用/图像使用并接受新角色，真实第2次单模型完成、30积分，Viewer技术PASS，人工验收PENDING。固定全局已用2/3、剩1；本页不能再次授予创建权，参见 [最终执行报告](phase-04-second-model-execution.md)。
+
 检查日期：2026-10-14，Asia/Shanghai。实际只读记录时间：2026-10-14T13:39:41.954916+00:00。
 
 **结论：READY_FOR_APPROVAL（人工审核材料就绪）。** 此状态不代表 `READY_FOR_SUBMISSION`，不授予任何发送权。当前 `submissionEligible=false`、真实生成开关false；许可、正式角色关联、费用和逐次授权仍需补齐。

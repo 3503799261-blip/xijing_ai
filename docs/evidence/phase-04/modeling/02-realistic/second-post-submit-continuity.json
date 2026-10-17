@@ -1,0 +1,81 @@
+{
+  "kind": "CURRENT_READ_ONLY_CONTINUITY",
+  "pages": [
+    {
+      "page": "index.html",
+      "sha256": "bc0ace24da3667201354787613a5653a6107e080c35b189e28d4370c85675cd4",
+      "unchangedSinceRoleReview": true
+    },
+    {
+      "page": "history.html",
+      "sha256": "e787849317758ccf549879bdec048fe24ff93bcdaf437f96f456813402f362f7",
+      "unchangedSinceRoleReview": true
+    },
+    {
+      "page": "roles.html",
+      "sha256": "25103c713ecef22784e9cd49241b157095e1c36d142c19453d2986db96a322ac",
+      "unchangedSinceRoleReview": true
+    },
+    {
+      "page": "facial.html",
+      "sha256": "3a4bc57dc1e83d16e3c594b7a6c4432cb4f8f44e7e7fe68f3761e9bcf3443d9e",
+      "unchangedSinceRoleReview": true
+    },
+    {
+      "page": "music.html",
+      "sha256": "7fc8945972707e068984fecb8bdec8817974c3eb94a77b97a1a80c3ac1a24626",
+      "unchangedSinceRoleReview": true
+    },
+    {
+      "page": "video.html",
+      "sha256": "eae28dffb204a62aca0dd8aa371ce73a108bb1c5f67f5c7f0b10ca43de470abf",
+      "unchangedSinceRoleReview": true
+    },
+    {
+      "page": "gallery.html",
+      "sha256": "d359e4232b9d042ede82839400cdfd63dcde6f3ec941c7102e30819135147030",
+      "unchangedSinceRoleReview": true
+    },
+    {
+      "page": "about.html",
+      "sha256": "374f517281bce28c227b6d0d55ce64cae90d0869ae7240807f62c0238fdc7b6c",
+      "unchangedSinceRoleReview": true
+    }
+  ],
+  "allEightUnchanged": true,
+  "maxAttempts": 3,
+  "historicalUsed": 0,
+  "states": [
+    [
+      "PROCESSING",
+      1
+    ],
+    [
+      "SUCCEEDED",
+      1
+    ]
+  ],
+  "operations": [
+    [
+      "create_model",
+      2,
+      60.0
+    ],
+    [
+      "download",
+      2,
+      0
+    ],
+    [
+      "query_model",
+      9,
+      0
+    ],
+    [
+      "verify",
+      3,
+      0
+    ]
+  ],
+  "newApiCalls": 0
+}

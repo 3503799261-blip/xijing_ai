@@ -1,0 +1,144 @@
+{
+  "checkedAt": "2026-10-17T05:43:40.015632+00:00",
+  "kind": "FINAL_READ_ONLY_SECOND_MODEL_AUDIT",
+  "conclusion": "PASS_TECHNICAL_HUMAN_MODEL_ACCEPTANCE_PENDING",
+  "generationDefaultEnabled": false,
+  "maxAttempts": 3,
+  "used": 2,
+  "remaining": 1,
+  "states": [
+    [
+      "SUCCEEDED",
+      2
+    ]
+  ],
+  "operations": [
+    [
+      "create_model",
+      2,
+      60.0
+    ],
+    [
+      "download",
+      3,
+      0
+    ],
+    [
+      "query_model",
+      10,
+      0
+    ],
+    [
+      "verify",
+      3,
+      0
+    ]
+  ],
+  "totalRealHttpRequests": 18,
+  "totalRecordedCredits": 60,
+  "secondModelCredits": 30,
+  "currentLlmCalls": 107,
+  "newLlmCallsThisExecution": 0,
+  "newSupplierCallsByAudit": 0,
+  "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+  "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+  "originalPreserved": true,
+  "allEightHtmlUnchanged": true,
+  "backendAppAndCssUnchanged": true,
+  "publicExportRecords": 1516,
+  "exportHashesMatch": true,
+  "publicFilesChecked": 41,
+  "privateBinariesIncluded": false,
+  "secretScan": "PASS",
+  "localMarkdownLinksChecked": 174,
+  "screenshots": [
+    {
+      "file": "01-desktop-front.png",
+      "sha256": "f22ff6eaf9ace8861b3803a80f251b7180d0ec3119293568565befc6fd4c56ae",
+      "size": 577552,
+      "localOnly": true
+    },
+    {
+      "file": "02-desktop-rotated.png",
+      "sha256": "61b3fd8bd498f2a529d0296928a2ae916f8560c8edd031a3285e72f9bc6f858b",
+      "size": 561918,
+      "localOnly": true
+    },
+    {
+      "file": "03-side-90.png",
+      "sha256": "fba2e21cdce59656aa3e3f10fd0dbf0097135e8c7e3d72555f9fdb08ec09f8f3",
+      "size": 547718,
+      "localOnly": true
+    },
+    {
+      "file": "04-back-180.png",
+      "sha256": "6d994bd45a0f8b117e4715bcd35501bd0d7904544a5576484141dee702eef495",
+      "size": 565352,
+      "localOnly": true
+    },
+    {
+      "file": "05-side-270.png",
+      "sha256": "93bc23b8507f57b95ff61889a4839c9c35b506032a23cc8adf6dd10547fbbde4",
+      "size": 545244,
+      "localOnly": true
+    },
+    {
+      "file": "06-mobile-390x844.png",
+      "sha256": "95f8b6a1cb1c2ea7c5a786abbc601c7964e9ed2ebb769c310dca2c422b2b2be3",
+      "size": 209762,
+      "localOnly": true
+    },
+    {
+      "file": "07-loading.png",
+      "sha256": "37720e3a9eed1456b2936655f8b8462299b0fd2a43b7520f1622383259ff9e22",
+      "size": 460553,
+      "localOnly": true
+    },
+    {
+      "file": "08-error.png",
+      "sha256": "1904929045d4e60ddd33313295f8229b96a5a8882f67a2706f0e66b69b9a4611",
+      "size": 464596,
+      "localOnly": true
+    },
+    {
+      "file": "09-home-1920x1080.png",
+      "sha256": "e88cc3ff12c0c67cbcf073f9b4b0543ad94c6f476db890a2a86960355901717b",
+      "size": 1679172,
+      "localOnly": true
+    },
+    {
+      "file": "10-chibi-style-missing.png",
+      "sha256": "99785500f48051231056c3cc148875fd64163571b01721d96621fb5a62d4f00a",
+      "size": 408131,
+      "localOnly": true
+    },
+    {
+      "file": "11-realistic-style-restored.png",
+      "sha256": "10e2cc155df60cf91c8ccc5cb6445fdf4ff36266de73df2caf0c1b237b17f2b0",
+      "size": 577188,
+      "localOnly": true
+    },
+    {
+      "file": "12-mobile-over260.png",
+      "sha256": "6903cf460247edf69fe1dd07fce91d8fd21816f6fc33b532264ec063cde6af7e",
+      "size": 210547,
+      "localOnly": true
+    },
+    {
+      "file": "13-error-recovered-original.png",
+      "sha256": "34450ce2820607c4a385ce8574ed4db769fc9269e1b4f1f3553d9774d9b6c484",
+      "size": 485281,
+      "localOnly": true
+    },
+    {
+      "file": "14-direct-review-link-empty-storage.png",
+      "sha256": "10e2cc155df60cf91c8ccc5cb6445fdf4ff36266de73df2caf0c1b237b17f2b0",
+      "size": 577188,
+      "localOnly": true
+    }
+  ],
+  "physicalMobileTested": false,
+  "phase4Overall": "PARTIAL",
+  "thirdModelSubmitted": false,
+  "auditHarnessCorrection": "Initial field lookup used mobileContinuousOver260; checked actual JSON and corrected to mobileContinuous260. No product, model or browser result changed."
+}

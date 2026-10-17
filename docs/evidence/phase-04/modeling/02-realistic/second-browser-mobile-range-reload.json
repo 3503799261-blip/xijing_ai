@@ -1,0 +1,151 @@
+{
+  "startedAt": "2026-10-17T05:26:41.794Z",
+  "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+  "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+  "browser": "Real installed Google Chrome, headless Chromium automation",
+  "mobile": "CDP emulation, not a physical mobile device",
+  "paidCallsAllowed": false,
+  "tests": {
+    "mobileContinuous260": {
+      "pass": true,
+      "method": "Real Chrome CDP emulated single-touch gestures, repeated same direction, not physical phone",
+      "initial": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": true,
+        "lastError": "",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "maxContinuousDegrees": 0,
+        "userEventCount": 0
+      },
+      "sweeps": [
+        {
+          "state": "ready",
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+          "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "touchEnabled": true,
+          "lastError": "",
+          "orbit": {
+            "theta": 3.3394990090756766,
+            "phi": 1.3089969389957472,
+            "radius": 3.9898317468431963
+          },
+          "maxContinuousDegrees": 191.31791874891604,
+          "userEventCount": 61
+        },
+        {
+          "state": "ready",
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+          "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "touchEnabled": true,
+          "lastError": "",
+          "orbit": {
+            "theta": 6.678998018151359,
+            "phi": 1.3089969389957472,
+            "radius": 3.9898317468431963
+          },
+          "maxContinuousDegrees": 382.65711765707323,
+          "userEventCount": 123
+        }
+      ],
+      "final": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": true,
+        "lastError": "",
+        "orbit": {
+          "theta": 6.678998018151359,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "maxContinuousDegrees": 382.65711765707323,
+        "userEventCount": 123
+      }
+    },
+    "reloadOriginalAfterError": {
+      "pass": true,
+      "faultDisabledBeforeClick": true,
+      "aborted": 1,
+      "allowedOriginal": 1,
+      "before": {
+        "state": "error",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": false,
+        "lastError": "模型加载失败，请检查资源是否完整或浏览器是否支持WebGL。可重新加载原文件，不会提交建模。",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": -2.2
+        },
+        "maxContinuousDegrees": 0,
+        "userEventCount": 0
+      },
+      "after": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": false,
+        "lastError": "",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "maxContinuousDegrees": 0,
+        "userEventCount": 0
+      },
+      "noModelCreationPossible": true
+    }
+  },
+  "contexts": [
+    {
+      "name": "emulated-mobile-continuous-range",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    },
+    {
+      "name": "one-abort-then-reload-original-glb",
+      "pageErrors": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FAILED",
+          "path": "http://127.0.0.1:8000/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+          "line": 0
+        },
+        {
+          "type": "error",
+          "text": "TypeError: Failed to fetch\n    at Ql.load (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:48:203748)\n    at ap.load (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:552:34811)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5683\n    at new Promise (<anonymous>)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5661\n    at Pg.preload (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5700)\n    at Pg.load (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5909)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:1008:3676\n    at Array.map (<anonymous>)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:1008:3645",
+          "path": "http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js",
+          "line": 593
+        }
+      ],
+      "failedResources": [
+        {
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+          "error": "net::ERR_FAILED"
+        }
+      ],
+      "httpErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,error,loading,ready"
+    }
+  ],
+  "chromeVersion": "155.0.8059.84",
+  "finishedAt": "2026-10-17T05:27:27.926Z",
+  "blockedMutations": 0,
+  "noPaidRequestsSent": true
+}
