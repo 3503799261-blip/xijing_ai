@@ -1,0 +1,185 @@
+{
+  "checkedAt": "2026-10-17T05:20:16.846190+00:00",
+  "kind": "ACTUAL_SECOND_LOCAL_FORMAT_RECOVERY",
+  "jobId": "d3367e96-02f9-453b-b331-6ed5b0ec03cd",
+  "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+  "networkCalls": 0,
+  "additionalCredits": 0,
+  "usageBefore": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 2,
+    "reserved_attempts": 0,
+    "occupied_attempts": 2,
+    "remaining_attempts": 1,
+    "attemptStates": {
+      "PENDING_RECONCILIATION": 1,
+      "SUCCEEDED": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": true,
+    "pauseCode": "NEURAL4D_RECONCILIATION_REQUIRED",
+    "unreconciled_attempts": 1,
+    "realHttpRequests": 18,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 60.0
+  },
+  "outcome": "LOCAL_RECOVERY_VALIDATED",
+  "conversion": {
+    "version": "second_formal_embedded_jpeg_textures_2048_v1",
+    "supplierOriginalHash": "51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e",
+    "supplierOriginalSize": 18266484,
+    "derivedHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+    "derivedSize": 15158668,
+    "mimeCorrection": "image/jpg -> image/jpeg",
+    "textureOnlyOptimization": true,
+    "geometryBufferViews": [
+      {
+        "bufferView": 0,
+        "hash": "fa0e45d65d1edf7d203e2c5befeb0102342e4b9710d2db4dfcc78ce9f1846639",
+        "derivedHash": "fa0e45d65d1edf7d203e2c5befeb0102342e4b9710d2db4dfcc78ce9f1846639",
+        "byteLength": 6000000,
+        "bytesUnchanged": true
+      },
+      {
+        "bufferView": 1,
+        "hash": "a6f86a9623eee9e335ff093ffc496c64cf75a0b6d0165b8fa1defac29c501341",
+        "derivedHash": "a6f86a9623eee9e335ff093ffc496c64cf75a0b6d0165b8fa1defac29c501341",
+        "byteLength": 3660288,
+        "bytesUnchanged": true
+      },
+      {
+        "bufferView": 2,
+        "hash": "a4bd47637a29ff46ab6e78ef1b621a79003ce7ab1cbec6a02a0a851fa3f506c2",
+        "derivedHash": "a4bd47637a29ff46ab6e78ef1b621a79003ce7ab1cbec6a02a0a851fa3f506c2",
+        "byteLength": 2440192,
+        "bytesUnchanged": true
+      }
+    ],
+    "textures": [
+      {
+        "bufferView": 3,
+        "format": "JPEG",
+        "originalDimensions": [
+          4096,
+          4096
+        ],
+        "derivedDimensions": [
+          2048,
+          2048
+        ],
+        "originalHash": "71583885427ac5c834cf1314b18c6fbfb26399c573afe3544ec61b3963cb955e",
+        "derivedHash": "ccbc10cb3b3465a4252f7c6b5641fbab77078c3f64be23b48327d3d1321caf81"
+      },
+      {
+        "bufferView": 4,
+        "format": "JPEG",
+        "originalDimensions": [
+          4096,
+          4096
+        ],
+        "derivedDimensions": [
+          2048,
+          2048
+        ],
+        "originalHash": "70b55260fa94a835e5c14a54e7bfa961805fefcb37964dba9008cb4f3f3fd000",
+        "derivedHash": "edb48ddcb21f2fe8d06bd4cd01d7c5728e55c2a52c3bb2a252868df51e3a9a46"
+      }
+    ],
+    "geometryUnchanged": true,
+    "sceneNodeAccessorMaterialSemanticsUnchanged": true,
+    "originalPreserved": true,
+    "newGeneration": false,
+    "providerCalls": 0,
+    "jobId": "d3367e96-02f9-453b-b331-6ed5b0ec03cd",
+    "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+    "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+    "imageId": "0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d",
+    "characterId": "29c8a710-2760-5079-a2c6-0b6d3f1067b1",
+    "sourceResultHash": "e6639f0486adc05039a2a46399dc0c21a06930a1376a73a9fdec399ab124f76d",
+    "citationHash": "6d2cdf84e6c36b686e984da5cfc8cc311577168d4042b6617c3d80aa5fd2faa0",
+    "imageHash": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+    "sourceImageHash": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+    "promptHash": "441bcedf8a656275909bdab20d90b5f4b4c2cbc9cb2e1ea778ea5b828a91fcd8",
+    "frozenPayloadHash": "04ae4f09a0bd2772517160a2bc34ee81e0b21c804690952b3f8727d1e4d8189c"
+  },
+  "model": {
+    "characterId": "29c8a710-2760-5079-a2c6-0b6d3f1067b1",
+    "styleMode": "realistic",
+    "styleVersion": 1,
+    "hash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+    "size": 15158668,
+    "format": "glb",
+    "origin": "neural4d",
+    "licenseNote": "用户声明允许比赛展示、Neural4D上传及3D衍生；非商业销售许可。第二次供应商原模型SHA-256=51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e；本地纹理转换版本=second_formal_embedded_jpeg_textures_2048_v1；仅JPEG MIME与2048纹理优化，几何不变。详细谱系SHA-256=0934dbe65254eab9e7ade199a17fc1cb16f51e2fbecb66eff1bbfd9c1469999e；未产生新建模或费用。",
+    "title": "绛绣·戏韵",
+    "validation": {
+      "validator": "xijing_glb_structural_v2",
+      "valid": true,
+      "format": "glb",
+      "version": 2,
+      "selfContained": true,
+      "externalResources": 0,
+      "meshCount": 1,
+      "primitiveCount": 1,
+      "vertexCount": 305024,
+      "triangleCount": 500000,
+      "size": 15158668,
+      "hash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "imageCount": 2,
+      "textureCount": 2,
+      "materialCount": 1,
+      "decodedTexturePixels": 8388608,
+      "embeddedImagesDecoded": true,
+      "fullConformanceChecked": false
+    },
+    "sourceResultHash": "e6639f0486adc05039a2a46399dc0c21a06930a1376a73a9fdec399ab124f76d",
+    "citationHash": "6d2cdf84e6c36b686e984da5cfc8cc311577168d4042b6617c3d80aa5fd2faa0",
+    "assetVersion": 1,
+    "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+    "imageId": "0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d",
+    "imageHash": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+    "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+    "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+    "createdAt": "2026-10-17T05:20:18.676250+00:00",
+    "fileUrl": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+    "downloadUrl": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/download"
+  },
+  "provenanceHash": "0934dbe65254eab9e7ade199a17fc1cb16f51e2fbecb66eff1bbfd9c1469999e",
+  "provenanceStorageKey": "recovery-provenance/0934dbe65254eab9e7ade199a17fc1cb16f51e2fbecb66eff1bbfd9c1469999e.json",
+  "frozenPayloadHash": "04ae4f09a0bd2772517160a2bc34ee81e0b21c804690952b3f8727d1e4d8189c",
+  "usageAfter": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 2,
+    "reserved_attempts": 0,
+    "occupied_attempts": 2,
+    "remaining_attempts": 1,
+    "attemptStates": {
+      "SUCCEEDED": 2
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 18,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 60.0
+  },
+  "creationAttemptsUnchanged": true,
+  "realHttpRequestsUnchanged": true
+}

@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-10-17T05:15:19.224231+00:00",
+  "kind": "ACTUAL_SECOND_FORMAL_MODEL",
+  "action": "refresh",
+  "autoCreationRetry": false,
+  "modelCount": 1,
+  "senderSourceSha256": "ebc2fb0f928c682fe774335e7584cf44bfed1e0fd3309c888de81f82cdb305a4",
+  "ownerLockAcquired": true,
+  "usageBefore": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 2,
+    "reserved_attempts": 0,
+    "occupied_attempts": 2,
+    "remaining_attempts": 1,
+    "attemptStates": {
+      "PROCESSING": 1,
+      "SUCCEEDED": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 16,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 60.0
+  },
+  "jobId": "d3367e96-02f9-453b-b331-6ed5b0ec03cd",
+  "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+  "usageAfter": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 2,
+    "reserved_attempts": 0,
+    "occupied_attempts": 2,
+    "remaining_attempts": 1,
+    "attemptStates": {
+      "PENDING_RECONCILIATION": 1,
+      "SUCCEEDED": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": true,
+    "pauseCode": "NEURAL4D_RECONCILIATION_REQUIRED",
+    "unreconciled_attempts": 1,
+    "realHttpRequests": 18,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 60.0
+  },
+  "responseShape": {
+    "codeStatus": "int",
+    "message": "str",
+    "modelUrl": "str"
+  },
+  "providerCodeStatus": 0,
+  "quarantinedResource": {
+    "hash": "51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e",
+    "size": 18266484,
+    "storageKey": "recovery-quarantine/51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e.bin",
+    "validatedModel": false
+  },
+  "safeDownloadMetadata": [
+    {
+      "host": "cos.neural4d.com",
+      "httpStatus": 200,
+      "contentType": "application/octet-stream",
+      "size": 18266484,
+      "redirectCount": 0,
+      "dnsPinned": true
+    }
+  ],
+  "outcome": "STOPPED",
+  "errorCode": "MODEL_TEXTURE_INVALID",
+  "message": "模型图片须为内嵌PNG/JPEG，并引用有效的bufferView。"
+}

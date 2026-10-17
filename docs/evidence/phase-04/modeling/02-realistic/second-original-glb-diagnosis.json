@@ -1,0 +1,33 @@
+{
+  "kind": "LOCAL_ORIGINAL_SECOND_GLB_DIAGNOSIS",
+  "hash": "51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e",
+  "size": 18266484,
+  "headerLengthMatches": true,
+  "version": 2,
+  "images": [
+    {
+      "declaredMime": "image/jpg",
+      "actualFormat": "JPEG",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "bufferView": 3,
+      "frames": 1
+    },
+    {
+      "declaredMime": "image/jpg",
+      "actualFormat": "JPEG",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "bufferView": 4,
+      "frames": 1
+    }
+  ],
+  "meshCount": 1,
+  "bufferViews": 5,
+  "apiRequests": 0,
+  "newModelSubmissions": 0
+}

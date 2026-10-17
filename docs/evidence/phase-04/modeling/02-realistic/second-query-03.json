@@ -1,0 +1,151 @@
+{
+  "checkedAt": "2026-10-17T05:13:18.483084+00:00",
+  "kind": "ACTUAL_SECOND_FORMAL_MODEL",
+  "action": "refresh",
+  "autoCreationRetry": false,
+  "modelCount": 1,
+  "senderSourceSha256": "ebc2fb0f928c682fe774335e7584cf44bfed1e0fd3309c888de81f82cdb305a4",
+  "ownerLockAcquired": true,
+  "usageBefore": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 2,
+    "reserved_attempts": 0,
+    "occupied_attempts": 2,
+    "remaining_attempts": 1,
+    "attemptStates": {
+      "PROCESSING": 1,
+      "SUCCEEDED": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 15,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 60.0
+  },
+  "jobId": "d3367e96-02f9-453b-b331-6ed5b0ec03cd",
+  "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+  "result": {
+    "attemptId": "d3367e96-02f9-453b-b331-6ed5b0ec03cd",
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "idempotencyKey": "second-realistic-showcase-0170077e-v1",
+    "approvalId": "bba8a00c-223a-4753-865f-85e6e50ed495",
+    "payloadHash": "04ae4f09a0bd2772517160a2bc34ee81e0b21c804690952b3f8727d1e4d8189c",
+    "purpose": "比赛主展示",
+    "estimatedCredits": 30.0,
+    "state": "PROCESSING",
+    "reservedAt": "2026-10-17T05:09:56.483061+00:00",
+    "startedAt": "2026-10-17T05:09:56.490587+00:00",
+    "updatedAt": "2026-10-17T05:13:18.827143+00:00",
+    "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+    "errorCode": null,
+    "httpStatus": null,
+    "newlyReserved": false,
+    "events": [
+      {
+        "sequence": 10,
+        "state": "RESERVED",
+        "recordedAt": "2026-10-17T05:09:56.484058+00:00",
+        "providerTaskId": null,
+        "errorCode": null,
+        "httpStatus": null
+      },
+      {
+        "sequence": 11,
+        "state": "ATTEMPT_STARTED",
+        "recordedAt": "2026-10-17T05:09:56.490587+00:00",
+        "providerTaskId": null,
+        "errorCode": null,
+        "httpStatus": null
+      },
+      {
+        "sequence": 12,
+        "state": "SUBMITTED",
+        "recordedAt": "2026-10-17T05:09:58.642375+00:00",
+        "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+        "errorCode": null,
+        "httpStatus": 200
+      },
+      {
+        "sequence": 13,
+        "state": "PROCESSING",
+        "recordedAt": "2026-10-17T05:10:27.626253+00:00",
+        "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+        "errorCode": null,
+        "httpStatus": null
+      },
+      {
+        "sequence": 14,
+        "state": "PROCESSING",
+        "recordedAt": "2026-10-17T05:11:49.282747+00:00",
+        "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+        "errorCode": null,
+        "httpStatus": null
+      },
+      {
+        "sequence": 15,
+        "state": "PROCESSING",
+        "recordedAt": "2026-10-17T05:13:18.827143+00:00",
+        "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+        "errorCode": null,
+        "httpStatus": null
+      }
+    ],
+    "characterId": "29c8a710-2760-5079-a2c6-0b6d3f1067b1",
+    "styleMode": "realistic",
+    "styleVersion": 1,
+    "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+    "assetVersion": 1,
+    "assetKind": null,
+    "candidateId": null,
+    "candidateVersion": null,
+    "internalUseOnly": null,
+    "jobId": "d3367e96-02f9-453b-b331-6ed5b0ec03cd",
+    "modelCount": 1,
+    "modelUrl": null,
+    "downloadUrl": null
+  },
+  "outcome": "OPERATION_COMPLETED",
+  "usageAfter": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 2,
+    "reserved_attempts": 0,
+    "occupied_attempts": 2,
+    "remaining_attempts": 1,
+    "attemptStates": {
+      "PROCESSING": 1,
+      "SUCCEEDED": 1
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 16,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 60.0
+  },
+  "responseShape": {
+    "codeStatus": "int",
+    "message": "str"
+  },
+  "providerCodeStatus": 1,
+  "quarantinedResource": null,
+  "safeDownloadMetadata": []
+}
