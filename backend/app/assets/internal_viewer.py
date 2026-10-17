@@ -26,6 +26,6 @@ main{{max-width:1280px;padding:24px;margin:auto}}h1{{color:#701f35;font-size:30p
 <button id="ai-workshop-viewer-reset" disabled>重置视角</button><button id="ai-workshop-viewer-touch" disabled>进入触摸交互</button>
 <button id="ai-workshop-viewer-reload" hidden>重新加载原模型</button></div>
 <p id="ai-workshop-viewer-help">鼠标拖拽旋转，滚轮缩放；手机先进入触摸交互。失败只重载原文件，不创建新模型。</p>
-<p>请检查≥260°连续观察、头饰/毛笔/背面；人工验收尚未完成。</p>
+<p>可检查≥260°连续观察、头饰/毛笔/背面；人工验收结论以项目阶段报告为准。本页仅供内部技术查看。</p>
 <script type="module" src="/js/ai-workshop/internal-viewer.js?v=phase4-internal-1"></script>
 </main></body></html>'''
