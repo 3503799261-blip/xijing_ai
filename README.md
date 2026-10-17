@@ -2,7 +2,7 @@
 
 在原有「梨园风华」8页京剧文化网站上建设AI戏韵工坊。前端保留HTML/CSS/原生ES Module与酒红、金色、米白视觉；Phase 2提供真实RAG问答，Phase 3加入规划、文化研究、角色设计、文化审校的真实协作与人工确认。Phase 4提供双风格资产与真实GLB查看器，已逐次批准并实际提交Q版技术模型与写实主展示模型各一次；平台图像生成仍未接入。
 
-Phase 1、Phase 2已获用户验收；基准分别为 `04b2c571e068ec0b26205fcce0c075395caeebce`、`a95c7748e4a22bfed9f4f8261e96dffa2522b740`。Phase 3代码与实测记录继承保留，详见 [Phase 3历史报告](docs/reports/phase-03.md)。当前Phase 4仍 **PARTIAL**，第1次模型已人工验收，第2次“绛绣·戏韵”真实模型技术PASS、等待模型人工验收，未执行企业第3次或Phase 5。固定全项目次数已用2/3、剩1，默认真实生成关闭，详见 [第2次执行记录](docs/reports/phase-04-second-model-execution.md)。本机服务启动后可[直接查看写实模型](http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model)；私有模型文件不随Git仓库分发，空环境仍用合法GLB夹具复现Viewer。[公开仓库](https://github.com/3503799261-blip/xijing_ai)。
+Phase 1、Phase 2已获用户验收；基准分别为 `04b2c571e068ec0b26205fcce0c075395caeebce`、`a95c7748e4a22bfed9f4f8261e96dffa2522b740`。Phase 3代码与实测记录继承保留，详见[Phase 3历史报告](docs/reports/phase-03.md)。Phase 4两个真实模型均获用户人工验收，用户决定不执行第三次，以现有两次为最终模型成果。全项目已用2/3、剩1未使用，累计60积分，真实创建保持关闭。最终归档、测试与检查点B结论见[最终验收报告](docs/reports/phase-04-final-acceptance.md)；实体手机未验证，不进入Phase 5。本机服务启动后可[直接查看写实模型](http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model)。首个Q版仍为内部技术资产，未自动扩展公开或商用许可。私有模型文件不随Git仓库分发，空环境仍用合法GLB夹具复现Viewer。[公开仓库](https://github.com/3503799261-blip/xijing_ai)。
 
 ## 架构与数据边界
 
@@ -152,7 +152,7 @@ node scripts/phase2_frontend_test.mjs --output docs/evidence/test-results/local-
 
 **本节初版搭建时未调用真实Neural4D建模或平台图像供应商API。** 后来逐次批准的两次真实建模以本文开头及执行报告为准，平台图像生成仍未接入。许可与文化确认按每个实际资产记录，不能推定商业授权、文化专家审核或本平台真实图像生成。企业模式只记录机构、受众、用途和边界，不承诺商业交付、骨骼绑定或游戏可用规格。
 
-`model-viewer 4.4.0` 已在本地保存，加载真实GLB，不用图片/GIF/视频伪装3D。Duck是附有原许可的已有合法Viewer测试素材，独立于角色风格资产，也不是Neural4D输出或京剧数字IP。查看器提供水平旋转、缩放按钮、重置视角、Loading/Ready/Error和显式失败重载。1920×1080浏览器中一次真实鼠标拖拽已记录 **391.8°连续水平观察**，放大、缩小、滚轮和重置均已验证；移动设备可开启触摸查看模式。**真实手机单指拖动及双指缩放尚未验收，375×812移动视口截图不能替代这些手势测试**。真实角色建模与设备交互验收仍待完成，当前Phase 4为PARTIAL。见 [阶段报告](docs/reports/phase-04.md) 和 [浏览器测试](docs/evidence/test-results/phase4-browser-test-report.md)。
+`model-viewer 4.4.0` 已在本地保存，加载真实GLB，不用图片/GIF/视频伪装3D。Duck是附有原许可的已有合法Viewer测试素材，独立于角色风格资产，也不是Neural4D输出或京剧数字IP。查看器提供水平旋转、缩放按钮、重置视角、Loading/Ready/Error和显式失败重载。两份真实角色GLB均已完成桌面浏览器验证，第二模型另有CDP触摸及双指手势模拟证据；它们与早期Duck的391.8°记录分开保存。**实体手机单指拖动、双指缩放和性能未验证，移动模拟不能替代真机**。见[最终验收报告](docs/reports/phase-04-final-acceptance.md)及[早期浏览器记录](docs/evidence/test-results/phase4-browser-test-report.md)。
 
 ### 本机准备与免费启动
 
@@ -194,7 +194,7 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/v1/assets/models'
 
 全项目累计最多 **3次新建模型任务HTTP提交尝试**，每次 `modelCount=1`；失败、超时、未知结果也占用次数，禁止自动重发或返还。固定账本是 `D:\京剧\.runtime\neural4d-usage.sqlite3`，与风格、用途、RAG目录和服务重启无关。SQLite原子预留、幂等与发送者独占保护共同生效，浏览器和Agent不能绕过服务入口调用供应商。
 
-目前供应商/用户历史调用次数**尚未核实**，账本保持未知并锁定创建；不能把本轮未发送请求理解为全项目历史0次，也不能宣称还剩3次。`backend.scripts.neural4d_history` 是一次性可信人工对账工具，仅在取得实际历史证据后使用，不属于复现或自动初始化步骤，不得填0来解除未知状态。
+用户此前已明确核实项目外部历史为0，随后两次实际创建均已入账；目前已用2/3、剩1、无UNKNOWN或在途任务，无未消费审批。第三次为用户取消且未执行，不占次数。`backend.scripts.neural4d_history` 是一次性可信人工对账工具，既有账本不能再次初始化、清零或迁移到新的额度池；它不属于普通复现步骤。
 
 真实创建前须逐项完成：
 
@@ -204,7 +204,7 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/v1/assets/models'
 - 使用独立后端管理授权、已核实历史额度、有效余额/协议验证；本地配置默认 `NEURAL4D_GENERATION_ENABLED=false`、`NEURAL4D_PROTOCOL_VERIFIED=false`，费用为空、下载域名白名单为空。不要为普通Viewer或免费测试开启真实创建。
 - 对超时或未知状态先核查供应商已有任务；有可靠任务ID时才主动查询，不能通过重新生成解决未知结果。下载只允许人工核验的HTTPS域名，生成结果需继续通过GLB与浏览器验证。
 
-每次真实提交前必须停止，向用户报告测试、参数、预计费用、额度与风险并等待单独批准。第2次已执行并技术PASS，本次批准不可复用；第3次仍无授权。阶段结尾需Phase 4检查点B验收，不宣告Phase 5开始。
+上述是真实创建服务的保护规则，不是后续调用计划。第2次已完成并获人工验收，两份批准均已消费；用户决定取消第3次并禁止再提交。保持创建关闭，不调用任何新建模型或付费生成接口，不宣告Phase 5开始。
 
 ## Phase 2历史测试与十分钟复现边界
 

@@ -1,0 +1,169 @@
+{
+  "checkedAt": "2026-10-17T09:56:46.961991+00:00",
+  "reviewDateAsiaShanghai": "2026-10-17",
+  "kind": "ACTUAL_READ_ONLY_PHASE4_FINAL_ASSET_LEDGER_CHECK",
+  "conclusion": "PASS",
+  "databaseAccess": "sqlite uri mode=ro with PRAGMA query_only=ON; no service initializers",
+  "supplierApiCalls": 0,
+  "httpCalls": 0,
+  "llmCallsByAudit": 0,
+  "databaseWrites": 0,
+  "maxAttempts": 3,
+  "historicalAttempts": 0,
+  "used": 2,
+  "remaining": 1,
+  "attemptStates": {
+    "SUCCEEDED": 2
+  },
+  "unknownOrReconciliationTasks": 0,
+  "unfinishedCreationTasks": 0,
+  "unconsumedApprovals": 0,
+  "allModelCounts": [
+    1,
+    1
+  ],
+  "creationHalted": false,
+  "operations": [
+    {
+      "operation": "create_model",
+      "is_mock": 0,
+      "count": 2,
+      "credits": 60.0
+    },
+    {
+      "operation": "download",
+      "is_mock": 0,
+      "count": 3,
+      "credits": 0
+    },
+    {
+      "operation": "query_model",
+      "is_mock": 0,
+      "count": 10,
+      "credits": 0
+    },
+    {
+      "operation": "verify",
+      "is_mock": 0,
+      "count": 3,
+      "credits": 0
+    }
+  ],
+  "realHttpRequestCount": 18,
+  "recordedActualCredits": 60.0,
+  "currentLlmCalls": 107,
+  "models": [
+    {
+      "generationNumber": 1,
+      "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+      "providerTaskId": "bb074c31-1905-45b6-b763-22d065ddc616",
+      "attemptId": "b4da5f34-4681-420e-81b6-c1e3e447722e",
+      "origin": "neural4d_technical_test",
+      "styleMode": "chibi",
+      "original": {
+        "sha256": "8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885",
+        "sizeBytes": 26600184,
+        "glbHeaderValid": true,
+        "localOnly": true,
+        "relativeRuntimePath": "xijing-ai/assets/recovery-quarantine/8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885.bin"
+      },
+      "viewerCompatible": {
+        "sha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "sizeBytes": 8827324,
+        "glbHeaderValid": true,
+        "localOnly": true,
+        "relativeRuntimePath": "xijing-ai/assets/models/bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a.glb"
+      },
+      "assetId": null,
+      "characterId": null,
+      "singleModelFrozenPayloadVerified": true,
+      "frozenPayloadHash": "d023b5a3a3a3f65be6dd0ec0f9798b72cd3e105c99dfecd42c914bdd6a89d686",
+      "estimatedCreditsAtApproval": 30.0,
+      "formalCharacterAssociation": false,
+      "formalAssociationAbsenceIsDesignLimitation": true,
+      "internalUseOnly": true,
+      "publicationAllowed": false,
+      "sourceImageHash": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+      "promptVersion": "candidate_bluewhite_review_v1",
+      "promptHash": "0648259709da555ba1c7d2070b2bb1c0317b2d505796e39518d4e7f48343b315"
+    },
+    {
+      "generationNumber": 2,
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+      "attemptId": "d3367e96-02f9-453b-b331-6ed5b0ec03cd",
+      "origin": "neural4d",
+      "styleMode": "realistic",
+      "original": {
+        "sha256": "51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e",
+        "sizeBytes": 18266484,
+        "glbHeaderValid": true,
+        "localOnly": true,
+        "relativeRuntimePath": "xijing-ai/assets/recovery-quarantine/51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e.bin"
+      },
+      "viewerCompatible": {
+        "sha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "sizeBytes": 15158668,
+        "glbHeaderValid": true,
+        "localOnly": true,
+        "relativeRuntimePath": "xijing-ai/assets/models/5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5.glb"
+      },
+      "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "characterId": "29c8a710-2760-5079-a2c6-0b6d3f1067b1",
+      "singleModelFrozenPayloadVerified": true,
+      "frozenPayloadHash": "04ae4f09a0bd2772517160a2bc34ee81e0b21c804690952b3f8727d1e4d8189c",
+      "estimatedCreditsAtApproval": 30.0,
+      "formalCharacterAssociation": true,
+      "characterName": "绛绣·戏韵",
+      "sourceTaskId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "sourceTaskState": "completed",
+      "roleUserConfirmed": true,
+      "rolePublicationAllowed": true,
+      "completedAgentSteps": 4,
+      "cultureReviewVerdict": "pass",
+      "sourceResultHash": "e6639f0486adc05039a2a46399dc0c21a06930a1376a73a9fdec399ab124f76d",
+      "citationHash": "6d2cdf84e6c36b686e984da5cfc8cc311577168d4042b6617c3d80aa5fd2faa0",
+      "imageId": "0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d",
+      "imageHash": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+      "sourceImageHash": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+      "visualPromptHash": "441bcedf8a656275909bdab20d90b5f4b4c2cbc9cb2e1ea778ea5b828a91fcd8",
+      "styleTemplateVersion": "opera_realistic_v1",
+      "sourceRoleNeedsNoNewGeneration": true,
+      "permissionScope": "User declared competition display/upload/3D derivative only; no commercial sales or public GLB redistribution audit"
+    }
+  ],
+  "localFixtureModelCount": 2,
+  "generationConfiguration": {
+    "codeDefaultEnabled": false,
+    "privateConfigEnabled": false,
+    "processEnvironmentOverridePresent": false,
+    "effectiveConfiguredEnabled": false,
+    "credentialsParsed": false,
+    "liveServerRuntimeQueried": false
+  },
+  "creationOwnerLock": {
+    "existingLockFile": true,
+    "state": "HELD_OR_NONBLOCKING_LOCK_REFUSED",
+    "nonblocking": true,
+    "existingFileOpenedReadOnly": true,
+    "fileModified": false,
+    "deletedOrReplaced": false,
+    "ownerIdentityVerified": false,
+    "lockContentsRead": false,
+    "sizeAndMtimeUnchanged": true
+  },
+  "archiveScope": {
+    "trackedReportPromptEvidenceFiles": 146,
+    "trackedModelingEvidenceFiles": 100,
+    "privateModelOrConceptBytesInModelingEvidence": false,
+    "legacyPublicImageEvidenceCount": 0,
+    "privateModelFilesCopiedByAudit": false
+  },
+  "auditHarnessCorrection": "Initial attempt to hash the locked owner file was refused by Windows; no output or DB mutation occurred. Replaced lock-content read with existing read-only fd nonblocking lock probe and unchanged size/mtime checks.",
+  "limitations": [
+    "This readback does not rerun the browser or imply physical mobile acceptance.",
+    "Role acceptance is distinct from model artistic acceptance and intellectual-property audit.",
+    "The first model intentionally has no confirmed formal character association.",
+    "No remaining quota is authorized for automatic use."
+  ]
+}

@@ -1,0 +1,22 @@
+
+<in-app-browser-context source="ambient-ui-state">
+This block is automatically supplied ambient UI state, not part of the user's request. Do not treat it as an instruction or as evidence that the user explicitly selected the in-app browser.
+# In app browser:
+- The user has the in-app browser open with 3 tabs.
+- Current URL: http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model
+</in-app-browser-context>
+
+## My request:
+**第二次写实模型技术验证PASS，等待你的人工验收。**
+
+[打开3D工坊查看“绛绣·戏韵”](http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model)
+
+- 实际消耗 **30积分**；全局已用 **2/3，剩1次**。
+- 真实GLB已加载：15.2MB、50万三角面。
+- 鼠标旋转325.92°、手机模拟382.66°；缩放、重置、三态及8页回归通过。实体手机尚未实测。
+- 已修复纹理兼容问题，原文件与几何保留，没有重新建模。
+- 珠饰简化、袖布遮挡及推测背面仍需你审看。
+
+[完整报告与证据](D:/京剧/京剧/docs/reports/phase-04-second-model-execution.md)。最终归档提交：`60bfc38`，工作区干净。
+
+已停止，未执行第三次建模或进入Phase 5。这两次建模效果都很好，不用第三次建模了。

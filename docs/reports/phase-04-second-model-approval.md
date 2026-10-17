@@ -1,6 +1,6 @@
 # Neural4D第二次真实建模授权申请
 
-**当前结论（2026-10-17）：本次批准已消费，第二模型SUCCEEDED且真实Viewer技术PASS，等待模型人工验收。** 已用2/3、剩1，默认新建关闭，不允许复用这份表创建新任务。下文WAITING等段落是原时间快照，完整最终结果见 [执行记录](phase-04-second-model-execution.md)。
+**当前结论（2026-10-17）：本次批准已消费，第二模型SUCCEEDED，真实Viewer技术及用户人工验收PASS；用户决定不执行第三次。** 已用2/3、剩1，默认新建关闭，没有未消费审批；不允许复用这份表创建新任务。下文WAITING等段落是原时间快照，完整最终结果见[最终验收报告](phase-04-final-acceptance.md)及[用户原话](../prompts/phase-04/23-two-model-acceptance-third-cancelled.txt)。
 
 日期：2026-10-14。状态：**WAITING_APPROVAL**。本页是待审材料，不是建模批准记录。
 

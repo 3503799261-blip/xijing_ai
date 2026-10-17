@@ -1,0 +1,787 @@
+{
+  "startedAt": "2026-10-17T05:56:51.339Z",
+  "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+  "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+  "browser": "Real installed Google Chrome, headless Chromium automation",
+  "mobile": "CDP emulation, not a physical mobile device",
+  "paidCallsAllowed": false,
+  "tests": {
+    "desktopLoaded": {
+      "pass": true,
+      "state": "ready",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      },
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0
+    },
+    "mouseRotation": {
+      "pass": true,
+      "attempts": 1,
+      "state": "ready",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 5.688780588533216,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      },
+      "maxContinuousDegrees": 325.91895120222847,
+      "userEventCount": 51
+    },
+    "wheelZoom": {
+      "pass": true,
+      "beforeRadius": 3.9898317468431963,
+      "afterRadius": 3.1306940840411377
+    },
+    "buttonZoom": {
+      "pass": true,
+      "beforeRadius": 3.9898317468431963,
+      "inRadius": 3.191865397474557,
+      "outRadius": 3.9898317468431963
+    },
+    "reset": {
+      "pass": true,
+      "initialOrbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      },
+      "resetOrbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      }
+    },
+    "realGenerateDisabled": true,
+    "touchRotate": {
+      "pass": true,
+      "before": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": true,
+        "lastError": "",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "maxContinuousDegrees": 0,
+        "userEventCount": 0
+      },
+      "after": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": true,
+        "lastError": "",
+        "orbit": {
+          "theta": 3.3394990090756766,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "maxContinuousDegrees": 191.26046886987993,
+        "userEventCount": 62
+      }
+    },
+    "pinchZoom": {
+      "pass": true,
+      "beforeRadius": 3.9898317468431963,
+      "afterRadius": 2.84145145683967,
+      "method": "Chrome CDP two simultaneous touch contacts"
+    },
+    "mobileReset": {
+      "pass": true,
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      }
+    },
+    "mobileLayout": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "viewerWidth": 320.796875,
+      "bodyOverflow": false
+    },
+    "mobileContinuous260": {
+      "pass": true,
+      "method": "Real Chrome CDP emulated single-touch gestures, repeated same direction, not physical phone",
+      "initial": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": true,
+        "lastError": "",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "maxContinuousDegrees": 0,
+        "userEventCount": 0
+      },
+      "sweeps": [
+        {
+          "state": "ready",
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+          "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "touchEnabled": true,
+          "lastError": "",
+          "orbit": {
+            "theta": 3.3394990090756766,
+            "phi": 1.3089969389957472,
+            "radius": 3.9898317468431963
+          },
+          "maxContinuousDegrees": 190.91893809405812,
+          "userEventCount": 62
+        },
+        {
+          "state": "ready",
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+          "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "touchEnabled": true,
+          "lastError": "",
+          "orbit": {
+            "theta": 6.678998018151359,
+            "phi": 1.3089969389957472,
+            "radius": 3.9898317468431963
+          },
+          "maxContinuousDegrees": 382.2581370022153,
+          "userEventCount": 126
+        }
+      ],
+      "final": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": true,
+        "lastError": "",
+        "orbit": {
+          "theta": 6.678998018151359,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "maxContinuousDegrees": 382.2581370022153,
+        "userEventCount": 126
+      }
+    },
+    "loading": {
+      "pass": true,
+      "text": "正在加载真正的3D模型……75%",
+      "delayedOnlyOriginalGlb": true
+    },
+    "loadingThenReady": {
+      "pass": true
+    },
+    "error": {
+      "pass": true,
+      "state": "error",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "touchEnabled": false,
+      "lastError": "模型加载失败，请检查资源是否完整或浏览器是否支持WebGL。可重新加载原文件，不会提交建模。",
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": -2.2
+      },
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0,
+      "originalResourceAbortOnly": true,
+      "reloadOriginalVisible": true
+    },
+    "reloadOriginalAfterError": {
+      "pass": true,
+      "faultDisabledBeforeClick": true,
+      "aborted": 1,
+      "allowedOriginal": 1,
+      "before": {
+        "state": "error",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": false,
+        "lastError": "模型加载失败，请检查资源是否完整或浏览器是否支持WebGL。可重新加载原文件，不会提交建模。",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": -2.2
+        },
+        "maxContinuousDegrees": 0,
+        "userEventCount": 0
+      },
+      "after": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": false,
+        "lastError": "",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "maxContinuousDegrees": 0,
+        "userEventCount": 0
+      },
+      "noModelCreationPossible": true
+    },
+    "chibiNotFaked": {
+      "pass": true,
+      "before": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "touchEnabled": false,
+        "lastError": "",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "maxContinuousDegrees": 0,
+        "userEventCount": 0
+      },
+      "absent": {
+        "state": "idle",
+        "modelId": null,
+        "statusText": "当前风格尚未生成3D模型",
+        "selectorValue": "",
+        "viewerElementCount": 0
+      }
+    },
+    "realisticRestored": {
+      "pass": true,
+      "characterId": "29c8a710-2760-5079-a2c6-0b6d3f1067b1",
+      "state": "ready",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      },
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0
+    },
+    "eightPages": {
+      "pass": true,
+      "pages": [
+        {
+          "filename": "index.html",
+          "status": 200,
+          "title": "梨园风华｜首页",
+          "brokenImages": [],
+          "workshopNavigation": true,
+          "horizontalOverflow": false
+        },
+        {
+          "filename": "history.html",
+          "status": 200,
+          "title": "京剧发展历史｜梨园风华",
+          "brokenImages": [],
+          "workshopNavigation": true,
+          "horizontalOverflow": false
+        },
+        {
+          "filename": "roles.html",
+          "status": 200,
+          "title": "行当介绍｜梨园风华",
+          "brokenImages": [],
+          "workshopNavigation": true,
+          "horizontalOverflow": false
+        },
+        {
+          "filename": "facial.html",
+          "status": 200,
+          "title": "脸谱艺术｜梨园风华",
+          "brokenImages": [],
+          "workshopNavigation": true,
+          "horizontalOverflow": false
+        },
+        {
+          "filename": "music.html",
+          "status": 200,
+          "title": "唱腔与乐器｜梨园风华",
+          "brokenImages": [],
+          "workshopNavigation": true,
+          "horizontalOverflow": false
+        },
+        {
+          "filename": "gallery.html",
+          "status": 200,
+          "title": "艺术画廊｜梨园风华",
+          "brokenImages": [],
+          "workshopNavigation": true,
+          "horizontalOverflow": false
+        },
+        {
+          "filename": "video.html",
+          "status": 200,
+          "title": "视频欣赏｜梨园风华",
+          "brokenImages": [],
+          "workshopNavigation": true,
+          "horizontalOverflow": false
+        },
+        {
+          "filename": "about.html",
+          "status": 200,
+          "title": "AI戏韵工坊｜梨园风华",
+          "brokenImages": [],
+          "workshopNavigation": true,
+          "horizontalOverflow": false
+        }
+      ]
+    },
+    "valid-link-empty-storage": {
+      "pass": true,
+      "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "storageBefore": null,
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "state": "ready",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      },
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0,
+      "realGenerateDisabled": true
+    },
+    "valid-link-overrides-conflicting-storage": {
+      "pass": true,
+      "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "storageBefore": "11111111-1111-4111-8111-111111111111",
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "state": "ready",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      },
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0,
+      "realGenerateDisabled": true
+    },
+    "invalid-link-safe-storage-fallback": {
+      "pass": true,
+      "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "storageBefore": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "state": "ready",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.9898317468431963
+      },
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0,
+      "realGenerateDisabled": true
+    },
+    "invalid-link-no-storage-no-asset-get": {
+      "pass": true,
+      "assetReads": [],
+      "state": "idle",
+      "modelId": null,
+      "modelHash": null,
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": null,
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0,
+      "realGenerateDisabled": true
+    },
+    "firstInternalScope": {
+      "pass": true,
+      "notice": "真实Neural4D输出 · 技术验证用 · 非正式角色资产 · 不公开展示或分发。没有文化一致性通过声明。",
+      "formalCharacterAsset": false,
+      "sameCharacterChibiAsset": false,
+      "state": "ready",
+      "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+      "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.5987347811727006
+      },
+      "maxContinuousDegrees": 0,
+      "userEventCount": 0
+    },
+    "firstInternalMouse260": {
+      "pass": true,
+      "attempts": 1,
+      "state": "ready",
+      "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+      "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "touchEnabled": false,
+      "lastError": "",
+      "orbit": {
+        "theta": 7.91874630283902,
+        "phi": 1.3089969389957472,
+        "radius": 3.5987347811727006
+      },
+      "maxContinuousDegrees": 453.7,
+      "userEventCount": 52
+    },
+    "firstInternalZoomReset": {
+      "pass": true,
+      "beforeWheel": 3.5987347811727006,
+      "afterWheel": 2.9206779890625985,
+      "beforeButton": 3.5987347811727006,
+      "inside": 2.878987824938161,
+      "outside": 3.5987347811727006,
+      "initial": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.5987347811727006
+      },
+      "reset": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.5987347811727006
+      }
+    },
+    "firstInternalMobile260ZoomReset": {
+      "pass": true,
+      "method": "Chrome CDP emulation, not physical mobile, first internal GLB kept separate from formal character",
+      "initial": {
+        "state": "ready",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "touchEnabled": true,
+        "lastError": "",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.5987347811727006
+        },
+        "maxContinuousDegrees": 0,
+        "userEventCount": 0
+      },
+      "sweeps": [
+        {
+          "state": "ready",
+          "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+          "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+          "touchEnabled": true,
+          "lastError": "",
+          "orbit": {
+            "theta": 2.6242769075037495,
+            "phi": 1.3089969389957472,
+            "radius": 3.5987347811727006
+          },
+          "maxContinuousDegrees": 150.3,
+          "userEventCount": 66
+        },
+        {
+          "state": "ready",
+          "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+          "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+          "touchEnabled": true,
+          "lastError": "",
+          "orbit": {
+            "theta": 5.248553815007496,
+            "phi": 1.3089969389957472,
+            "radius": 3.5987347811727006
+          },
+          "maxContinuousDegrees": 300.7,
+          "userEventCount": 132
+        }
+      ],
+      "continuousDegrees": 300.7,
+      "beforePinch": 3.5987347811727006,
+      "afterPinch": 2.614982427581106,
+      "reset": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 3.5987347811727006
+      }
+    }
+  },
+  "contexts": [
+    {
+      "name": "desktop-real-glb",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    },
+    {
+      "name": "emulated-mobile-real-glb",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    },
+    {
+      "name": "emulated-mobile-continuous-range",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    },
+    {
+      "name": "loading-real-resource-delayed",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": []
+    },
+    {
+      "name": "error-original-resource-aborted",
+      "pageErrors": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FAILED",
+          "path": "http://127.0.0.1:8000/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+          "line": 0
+        },
+        {
+          "type": "error",
+          "text": "TypeError: Failed to fetch\n    at Ql.load (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:48:203748)\n    at ap.load (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:552:34811)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5683\n    at new Promise (<anonymous>)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5661\n    at Pg.preload (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5700)\n    at Pg.load (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5909)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:1008:3676\n    at Array.map (<anonymous>)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:1008:3645",
+          "path": "http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js",
+          "line": 593
+        }
+      ],
+      "failedResources": [
+        {
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+          "error": "net::ERR_FAILED"
+        }
+      ],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": []
+    },
+    {
+      "name": "one-abort-then-reload-original-glb",
+      "pageErrors": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FAILED",
+          "path": "http://127.0.0.1:8000/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+          "line": 0
+        },
+        {
+          "type": "error",
+          "text": "TypeError: Failed to fetch\n    at Ql.load (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:48:203748)\n    at ap.load (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:552:34811)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5683\n    at new Promise (<anonymous>)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5661\n    at Pg.preload (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5700)\n    at Pg.load (http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:594:5909)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:1008:3676\n    at Array.map (<anonymous>)\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:1008:3645",
+          "path": "http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js",
+          "line": 593
+        }
+      ],
+      "failedResources": [
+        {
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+          "error": "net::ERR_FAILED"
+        }
+      ],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,error,loading,ready"
+    },
+    {
+      "name": "same-character-style-switch-read-only",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready,idle,idle,idle,loading,ready"
+    },
+    {
+      "name": "eight-static-pages-regression",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video2.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video4.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video3.mp4",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpErrors": [],
+      "assetReads": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "not applicable, static navigation only"
+    },
+    {
+      "name": "valid-link-empty-storage",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    },
+    {
+      "name": "valid-link-overrides-conflicting-storage",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    },
+    {
+      "name": "invalid-link-safe-storage-fallback",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [
+        "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+      ],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    },
+    {
+      "name": "invalid-link-no-storage-no-asset-get",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "assetReads": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle"
+    },
+    {
+      "name": "first-internal-model-desktop-only",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [
+        {
+          "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpErrors": [],
+      "assetReads": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    },
+    {
+      "name": "first-internal-model-emulated-mobile",
+      "pageErrors": [],
+      "console": [],
+      "failedResources": [
+        {
+          "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpErrors": [],
+      "assetReads": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "stateHistory": "idle,loading,ready"
+    }
+  ],
+  "chromeVersion": "155.0.8059.84",
+  "finishedAt": "2026-10-17T05:59:39.509Z",
+  "blockedMutations": 0,
+  "noPaidRequestsSent": true
+}

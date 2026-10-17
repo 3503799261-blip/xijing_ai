@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-17T09:59:21.549040+00:00",
+  "kind": "FREE_FINAL_ARCHIVE_VALIDATION",
+  "conclusion": "PASS",
+  "phase4DeliveryStatus": "COMPLETE_USER_ADJUSTED_TWO_MODEL_SCOPE",
+  "checkpointBFinalUserConfirmationPending": true,
+  "used": 2,
+  "remainingUnused": 1,
+  "thirdModel": "CANCELLED_BY_USER_NOT_EXECUTED",
+  "newPaidCalls": 0,
+  "newSupplierCalls": 0,
+  "newModelSubmissions": 0,
+  "llmCallsBefore": 107,
+  "llmCallsAfter": 107,
+  "realHttpBefore": 18,
+  "realHttpAfter": 18,
+  "testCounts": {
+    "backend": {
+      "tests": 675,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    },
+    "postHintSubset": {
+      "tests": 52,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    },
+    "phase2": 25,
+    "phase3": 25,
+    "phase4": 36
+  },
+  "physicalMobileTested": false,
+  "exportRecords": 1606,
+  "exportHashesMatch": true,
+  "publicFilesScanned": 31,
+  "secretScan": "PASS",
+  "privateBinariesAdded": false,
+  "screenshotCount": 21,
+  "branch": "feature/phase4-neural4d",
+  "codeFixCommit": "251b90e85200ca513484e8e04405aa020f5f5713",
+  "preArchiveWorkingTree": [
+    " M README.md",
+    " M docs/prompts/phase-04/03-public-conversation.jsonl",
+    " M docs/prompts/phase-04/04-export-metadata.json",
+    " M docs/prompts/phase-04/README.md",
+    " M docs/reports/phase-04-real-modeling-plan.md",
+    " M docs/reports/phase-04-second-model-approval.md",
+    " M docs/reports/phase-04-second-model-budget.md",
+    " M docs/reports/phase-04-second-model-execution.md",
+    " M docs/reports/phase-04.md",
+    " M scripts/export_phase4_prompt.py",
+    "?? docs/evidence/phase-04/final-acceptance/",
+    "?? docs/prompts/phase-04/23-two-model-acceptance-third-cancelled.txt",
+    "?? docs/prompts/phase-04/24-final-archive-user-request.txt",
+    "?? docs/reports/phase-04-final-acceptance.md"
+  ],
+  "finalCommitPolicy": "Current report/evidence committed after validation; final hash and clean worktree verified after commit in final user response.",
+  "localLinksVerified": 196
+}

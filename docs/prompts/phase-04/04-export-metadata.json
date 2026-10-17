@@ -1,18 +1,18 @@
 {
-  "exportedAt": "2026-10-17T05:42:20.881802+00:00",
-  "sourceSnapshotSha256": "3c67ea68ffaa3e170a7bfedec1367a83b78e4ab87a5392560582b925617556b0",
-  "publicRecords": 1516,
+  "exportedAt": "2026-10-17T09:58:40.710514+00:00",
+  "sourceSnapshotSha256": "09dbfa1464262019fd85e8301041887cda45a4156d55003660d64091915938c6",
+  "publicRecords": 1606,
   "omittedPartialLine": false,
   "skipped": {
-    "event_msg": 2863,
-    "token_usage_record": 697,
-    "reasoning": 793,
-    "world_state": 34,
-    "compacted": 8,
-    "turn_context": 27,
-    "inter_agent_communication_metadata": 222,
-    "agent_message": 222,
-    "private_message": 23
+    "event_msg": 3026,
+    "token_usage_record": 738,
+    "reasoning": 827,
+    "world_state": 37,
+    "compacted": 9,
+    "turn_context": 31,
+    "inter_agent_communication_metadata": 231,
+    "agent_message": 231,
+    "private_message": 25
   },
   "files": {
     "00-original-user-request.txt": "8325c4d5895bfb71dde386815ef767d82bd143d0925cb4037476bdec66cfa6ee",
@@ -35,7 +35,9 @@
     "20-second-account-credit-limit-reply.txt": "5c2f784dced76ecb4e081e0b6577977f714c3b5eb21935c65c60c2f7dcb3f488",
     "21-second-agent-v2-one-run-approval.txt": "f0d1d8aa13b2e8413357d82af937057de7e60ac7f4bbc0039087ce2ad2d4a32c",
     "22-second-role-human-acceptance.txt": "3f90429e1ca723e5e73ece5a921d5f73070052cdd02680ddb608871e8de566c2",
-    "03-public-conversation.jsonl": "cd2961716e4ab2c871409506b08ba263282dd28dbcaa01034fe2e16ac92fa010"
+    "23-two-model-acceptance-third-cancelled.txt": "ecd9ab1fc3c9863526ab1f7b1aef497ffb9ad1fe9fd161b25e44a6aaf4527653",
+    "24-final-archive-user-request.txt": "faaa89f3aaaad2dba2d4f3739b34a93f6f49a539677dc3bc8d4e01f8f7671575",
+    "03-public-conversation.jsonl": "bfe5f04497268bb3434fdb36a626a5ca8010644c79340c5966ab286a5a662b58"
   },
   "scope": "Actual public user messages, assistant commentary/final and matched tool evidence. No hidden reasoning, system/developer content or child internal messages. Snapshot; future records not included."
 }

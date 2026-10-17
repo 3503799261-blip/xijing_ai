@@ -1,0 +1,6 @@
+251b90e fix: keep internal viewer acceptance guidance current
+60bfc38 docs: archive second model viewer acceptance evidence
+e72d237 feat: open existing character assets from read-only review links
+2b08f36 fix: normalize second model textures without regeneration
+c873c31 docs: record authorized second Neural4D submission
+638028e docs: archive completed second role workflow for human review

@@ -1,0 +1,131 @@
+{
+  "checkedAt": "2026-10-17T09:56:05.758071+00:00",
+  "kind": "LOCAL_GET_ONLY_FINAL_READBACK",
+  "supplierCalls": 0,
+  "paidCalls": 0,
+  "requests": [
+    {
+      "path": "/api/v1/health",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/capabilities",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/assets/usage",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/media/opera-audio.mp3",
+      "method": "GET",
+      "status": 206,
+      "bytesReceived": 1024,
+      "contentRange": "bytes 0-1023/5255474"
+    },
+    {
+      "path": "/media/video1.mp4",
+      "method": "GET",
+      "status": 206,
+      "bytesReceived": 1024,
+      "contentRange": "bytes 0-1023/11808060"
+    },
+    {
+      "path": "/media/video2.mp4",
+      "method": "GET",
+      "status": 206,
+      "bytesReceived": 1024,
+      "contentRange": "bytes 0-1023/5513081"
+    },
+    {
+      "path": "/media/video3.mp4",
+      "method": "GET",
+      "status": 206,
+      "bytesReceived": 1024,
+      "contentRange": "bytes 0-1023/10515522"
+    },
+    {
+      "path": "/media/video4.mp4",
+      "method": "GET",
+      "status": 206,
+      "bytesReceived": 1024,
+      "contentRange": "bytes 0-1023/10028576"
+    },
+    {
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+      "method": "GET",
+      "status": 206,
+      "bytesReceived": 1024,
+      "contentRange": "bytes 0-1023/8827324"
+    }
+  ],
+  "health": {
+    "status": "ready"
+  },
+  "capabilities": {
+    "questionAnswering": true,
+    "knowledgeSearch": true,
+    "agentWorkflow": true,
+    "conceptImage": false,
+    "imageToModel": false,
+    "assetManagement": true,
+    "modelViewer": true,
+    "checkedAt": "2026-10-17T09:56:05.907281+00:00"
+  },
+  "usage": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 2,
+    "reserved_attempts": 0,
+    "occupied_attempts": 2,
+    "remaining_attempts": 1,
+    "attemptStates": {
+      "SUCCEEDED": 2
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 18,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 60.0,
+    "max_calls": 3,
+    "used_calls": 2,
+    "remaining_calls": 1,
+    "history_verified": true,
+    "realEnabled": false,
+    "providerConfigured": true,
+    "protocolVerified": false,
+    "readiness": [
+      "真实建模默认关闭；本次开发授权不等于单次真实建模授权。",
+      "需逐次人工确认、后端鉴权、费用及已核实的历史额度。"
+    ],
+    "imageGenerationConfigured": false,
+    "requestId": "17de4c2e-3c59-4adc-a370-30c7f5932d26"
+  },
+  "internalViewerHintAfterRestart": "PASS",
+  "unchangedFromSecondAcceptedHead": {
+    "index.html": true,
+    "history.html": true,
+    "roles.html": true,
+    "facial.html": true,
+    "music.html": true,
+    "gallery.html": true,
+    "video.html": true,
+    "about.html": true
+  },
+  "productDiffSinceSecondDelivery": [
+    "backend/app/assets/internal_viewer.py"
+  ],
+  "conclusion": "PASS"
+}

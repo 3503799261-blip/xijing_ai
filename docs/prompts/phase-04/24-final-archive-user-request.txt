@@ -1,0 +1,74 @@
+
+<in-app-browser-context source="ambient-ui-state">
+This block is automatically supplied ambient UI state, not part of the user's request. Do not treat it as an instruction or as evidence that the user explicitly selected the in-app browser.
+# In app browser:
+- The user has the in-app browser open with 3 tabs.
+- Current URL: http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model
+</in-app-browser-context>
+
+## My request:
+# 戏境 AI — Phase 4 最终归档与验收收尾
+
+用户已明确决定：**不执行第三次 Neural4D 真实建模。现有两次真实建模成果作为本项目最终模型成果。**
+
+## 1. 当前确认状态
+
+- 第1次：Q版技术验证，已人工验收通过。
+- 第2次：写实主展示“绛绣·戏韵”，技术验收通过。
+- Neural4D真实建模总提交次数：2/3。
+- 已知剩余额度：1次。
+- 第3次企业案例建模：用户决定不执行。
+- 禁止再次提交任何新建模型任务。
+
+## 2. 必须保持的限制
+
+1. 不调用Neural4D创建模型接口。
+2. 不发起新的建模HTTP提交。
+3. 不调用付费图像生成或其他付费模型接口。
+4. 不改变历史额度记录，不把剩余1次记成已使用。
+5. 保持真实模型创建入口关闭，防止误触发。
+6. 不删除或覆盖已有真实GLB、任务ID、费用记录和验收证据。
+
+## 3. 最终验收与回归检查
+
+在不调用付费API的前提下：
+
+- 检查两个模型资产与角色记录的关联。
+- 检查Q版、写实风格切换及缺失资产提示。
+- 检查真实GLB加载、拖拽旋转、缩放、重置及错误恢复。
+- 复核现有8个网页的回归测试。
+- 核实Neural4D全局额度台账为已用2次、剩余1次。
+- 检查API创建锁及并发保护仍然有效。
+- 如有条件，使用实体手机测试触摸旋转和双指缩放；若没有完成实体设备测试，必须如实标注未验证。
+
+不得为了让所有测试显示通过而伪造结果。
+
+## 4. 最终报告
+
+更新或新增：
+
+`docs/reports/phase-04-final-acceptance.md`
+
+必须包括：
+
+- Phase 4功能清单及验收状态；
+- 两次真实建模的任务记录、费用和结果；
+- 两个真实GLB的文件信息与资产关联；
+- 双风格功能和3D Viewer测试结果；
+- 全局建模额度：已用2/3、剩余1次；
+- 第三次建模取消的用户决策；
+- 已完成测试、未完成测试及已知风险；
+- 比赛演示建议和运行方式；
+- 最终Git提交及工作区状态。
+
+将第三次建模记录为“用户决定不执行”，不得标记为生成失败。
+
+## 5. Git与停止条件
+
+遵循现有分支和提交规范，采用细粒度真实提交。
+
+不得重写历史、擅自合并main或推送未经用户确认的变更。
+
+完成最终检查和报告后停止，不进入Phase 5，不创建任何新模型。
+
+向用户汇报Phase 4最终验收结论、剩余风险、Git提交和工作区状态。

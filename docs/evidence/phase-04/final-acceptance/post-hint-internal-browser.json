@@ -1,0 +1,105 @@
+{
+  "startedAt": "2026-10-17T09:55:30.464Z",
+  "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+  "paidCallsAllowed": false,
+  "physicalMobileTested": false,
+  "tests": {
+    "loading": {
+      "pass": true,
+      "text": "正在加载真正的3D模型……",
+      "delayedOnlyOriginalGlb": true
+    },
+    "postFixHint": {
+      "pass": true,
+      "change": "Neutral report-based acceptance guidance; internal-only scope preserved"
+    },
+    "loadingToReady": {
+      "pass": true
+    },
+    "error": {
+      "pass": true,
+      "text": "模型加载失败，请检查资源是否完整或浏览器是否支持WebGL。可重新加载原文件，不会提交建模。",
+      "injectedFailure": true
+    },
+    "recovery": {
+      "pass": true,
+      "reloadedOriginalOnly": true,
+      "noNewModelCreated": true
+    }
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop.css"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/internal-viewer.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/model-viewer-adapter.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0"
+    },
+    {
+      "method": "GET",
+      "path": "/js/vendor/model-viewer/model-viewer.min.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop.css"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/internal-viewer.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/model-viewer-adapter.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0"
+    },
+    {
+      "method": "GET",
+      "path": "/js/vendor/model-viewer/model-viewer.min.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file"
+    }
+  ],
+  "pageErrors": [],
+  "chromeVersion": "155.0.8059.84",
+  "finishedAt": "2026-10-17T09:55:35.234Z",
+  "allPassed": true,
+  "onlyLocalGetHead": true
+}

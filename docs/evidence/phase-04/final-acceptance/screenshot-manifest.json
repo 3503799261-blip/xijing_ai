@@ -1,0 +1,153 @@
+{
+  "checkedAt": "2026-10-17T09:59:21.134590+00:00",
+  "privateScreenshotsCopiedToRepository": false,
+  "screenshots": [
+    {
+      "directory": "phase4-final-browser",
+      "file": "01-desktop-front.png",
+      "sizeBytes": 577552,
+      "sha256": "f22ff6eaf9ace8861b3803a80f251b7180d0ec3119293568565befc6fd4c56ae",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "02-desktop-rotated.png",
+      "sizeBytes": 561918,
+      "sha256": "61b3fd8bd498f2a529d0296928a2ae916f8560c8edd031a3285e72f9bc6f858b",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "03-side-90.png",
+      "sizeBytes": 547718,
+      "sha256": "fba2e21cdce59656aa3e3f10fd0dbf0097135e8c7e3d72555f9fdb08ec09f8f3",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "04-back-180.png",
+      "sizeBytes": 565352,
+      "sha256": "6d994bd45a0f8b117e4715bcd35501bd0d7904544a5576484141dee702eef495",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "05-side-270.png",
+      "sizeBytes": 545244,
+      "sha256": "93bc23b8507f57b95ff61889a4839c9c35b506032a23cc8adf6dd10547fbbde4",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "06-mobile-390x844.png",
+      "sizeBytes": 209762,
+      "sha256": "95f8b6a1cb1c2ea7c5a786abbc601c7964e9ed2ebb769c310dca2c422b2b2be3",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "07-loading.png",
+      "sizeBytes": 460235,
+      "sha256": "0b67b35904a089d54c5c9af8b83e499c9e378dac62d207dbbcbd57ec0bc86bf1",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "08-error.png",
+      "sizeBytes": 464596,
+      "sha256": "1904929045d4e60ddd33313295f8229b96a5a8882f67a2706f0e66b69b9a4611",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "09-home-1920x1080.png",
+      "sizeBytes": 1683592,
+      "sha256": "f76f92635693a097ec14afd8a353c5070cd30d04be999a85c21a0fd6e7581486",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "10-chibi-style-missing.png",
+      "sizeBytes": 408131,
+      "sha256": "99785500f48051231056c3cc148875fd64163571b01721d96621fb5a62d4f00a",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "11-realistic-style-restored.png",
+      "sizeBytes": 577639,
+      "sha256": "0d19472649c2906911466d2ddf04f6d24db08725a524f0165d1a3b7d976f6b85",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "12-mobile-over260.png",
+      "sizeBytes": 210547,
+      "sha256": "6903cf460247edf69fe1dd07fce91d8fd21816f6fc33b532264ec063cde6af7e",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "13-error-recovered-original.png",
+      "sizeBytes": 485281,
+      "sha256": "34450ce2820607c4a385ce8574ed4db769fc9269e1b4f1f3553d9774d9b6c484",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "14-direct-review-link-empty-storage.png",
+      "sizeBytes": 577639,
+      "sha256": "0d19472649c2906911466d2ddf04f6d24db08725a524f0165d1a3b7d976f6b85",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "15-first-internal-front.png",
+      "sizeBytes": 356110,
+      "sha256": "e7e5736ac5cb6f4d30a6b2c1daf83166bde903c4289811fd6bdb923bcbc402c2",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "16-first-internal-rotated.png",
+      "sizeBytes": 271570,
+      "sha256": "34b9bfa97639f91ce8af3fcef78096bdb649e7ccd448a38a60f80d060d6ea568",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-browser",
+      "file": "17-first-internal-mobile.png",
+      "sizeBytes": 181346,
+      "sha256": "79234ac66437e038977f60ef9cb625f99e33ae53a62661958fb47f320753873a",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-internal-states",
+      "file": "18-first-internal-loading.png",
+      "sizeBytes": 48056,
+      "sha256": "c5266d5418293128e2d071a0044ff3476329121a731d19268cbf2da5f72553d1",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-internal-states",
+      "file": "19-first-internal-ready-after-hint-fix.png",
+      "sizeBytes": 356110,
+      "sha256": "e7e5736ac5cb6f4d30a6b2c1daf83166bde903c4289811fd6bdb923bcbc402c2",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-internal-states",
+      "file": "20-first-internal-error.png",
+      "sizeBytes": 49265,
+      "sha256": "e9840ced9a9ad0d7d6e5a6e76046447376d20704a284d467badd6acab958a0b4",
+      "localOnly": true
+    },
+    {
+      "directory": "phase4-final-internal-states",
+      "file": "21-first-internal-error-recovered.png",
+      "sizeBytes": 356110,
+      "sha256": "e7e5736ac5cb6f4d30a6b2c1daf83166bde903c4289811fd6bdb923bcbc402c2",
+      "localOnly": true
+    }
+  ]
+}

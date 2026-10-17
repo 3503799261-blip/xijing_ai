@@ -2,7 +2,12 @@
 
 本目录保存当前会话公开记录的时间快照，不包含隐藏推理、系统指令或密钥。
 
-当前最新状态（2026-10-17）：第2次任务 `8735f32e-097e-488c-962f-f11e64af7741` 已完成，30积分，安全取回原文件后本地修正已诊断纹理MIME/尺寸，原门禁通过，真实Chrome技术 **PASS，模型人工验收PENDING**。全局已用2/3、剩1，默认创建关闭，禁止自动创建第3次/进入Phase 5。下文初版与失败记录是各自时间快照，最新进展见 [执行记录](../../reports/phase-04-second-model-execution.md)。
+当前最新状态（2026-10-17）：两个真实模型均已技术及用户人工验收PASS，用户明确决定不执行第3次，以两次成果归档。全局已用2/3、剩1未使用，累计60积分，默认创建关闭，无未消费审批，禁止新建或进入Phase 5。下文初版/PENDING与失败记录是各自时间快照，当前以[最终验收报告](../../reports/phase-04-final-acceptance.md)为准。
+
+- [23-two-model-acceptance-third-cancelled.txt](23-two-model-acceptance-third-cancelled.txt)：用户真实确认“两次建模效果都很好，不用第三次建模了”。
+- [24-final-archive-user-request.txt](24-final-archive-user-request.txt)：最终归档与免费回归完整原始需求，明确第三次取消、保留剩余1次且禁止新建。
+
+本次工程处理：只做免费本地/离线检查、保存真实验收和取消决定、更新报告及Prompt导出选择器；不修改模型、角色JSON、既有失败或额度，不调用付费API。导出快照的实际时间、源Hash、公开条数及文件Hash以`04-export-metadata.json`为准，未来对话不计入当前快照。
 
 - `00-original-user-request.txt`：最初检查点A需求原文。
 - `01-final-architecture-revision.txt`：最终3次模型创建尝试限制原文。
@@ -158,4 +163,4 @@ GLB缓存原因可对照 [官方CachingGLTFLoader源码](https://raw.githubuserc
 
 真实Chrome桌面325.920°、手机模拟382.657°、双指/滚轮/按钮/Reset/三态/Error重载同模型/双风格/8页均有独立JSON与私有截图。正常场景控制台0；故意Error及切页媒体取消记录不删除，原媒体Range206另验。为实际验收增加仅GET的assetId链接，36项前端离线和4项Chrome链接专项通过，不冒充用户另提的Prompt。上述为真实工程摘要，原始用户批准22和公开会话快照另存，不包含隐藏推理。
 
-当前仅等待第二模型人工验收；没有第3次新建或Phase 5工作。详细文件、Hash、真实测试与Git见[执行报告](../../reports/phase-04-second-model-execution.md)。
+以上是第二模型技术交付时的历史暂停点；用户后来通过23接受两次成果、取消第三次，并通过24要求最终免费归档。本次没有第3次新建或Phase 5工作，最终记录见[最终验收报告](../../reports/phase-04-final-acceptance.md)。
