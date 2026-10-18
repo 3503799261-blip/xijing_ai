@@ -1,0 +1,28 @@
+{
+  "clientReviewDate": "2026-10-18",
+  "timezone": "Asia/Shanghai",
+  "exportedAtUtc": "2026-10-18T12:19:54.678263+00:00",
+  "status": "PHASE_5_CHECKPOINT_A_WAITING_APPROVAL",
+  "source": "User-provided attached text; copied exact bytes, no heading added",
+  "promptBytes": 12086,
+  "promptSha256": "de871d0017bfe3d54db074c72d9906bdc68d2cd24d895b2d5f0013ee37ba68bd",
+  "promptExactByteMatch": true,
+  "publicRecords": 40,
+  "conversationSha256": "1951b61e1ccd554be08bffea2d4eab4191834ea337a0c34e469a0a5e5ecb83c7",
+  "sessionSnapshotSha256": "04108c7ea32df972892f27c868fd1dd5baf36660575203b026e5a3752a2cf192",
+  "firstSourceLine": 11183,
+  "lastSourceLine": 11356,
+  "omittedPartialLine": false,
+  "skipped": {
+    "event_msg": 73,
+    "token_usage_record": 18,
+    "reasoning": 18,
+    "world_state": 3,
+    "inter_agent_communication_metadata": 11,
+    "agent_message": 11
+  },
+  "scope": "Current explicitly named session, from actual Phase 5 attachment message through read snapshot. Public user/assistant/tool records only; hidden reasoning/system/developer/child internal messages omitted; credentials and signed model URLs redacted. Future events not included.",
+  "sourceCodeModified": false,
+  "paidCalls": 0,
+  "modelCreations": 0
+}
