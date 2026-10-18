@@ -2,7 +2,27 @@
 
 在原有「梨园风华」8页京剧文化网站上建设AI戏韵工坊。前端保留HTML/CSS/原生ES Module与酒红、金色、米白视觉；Phase 2提供真实RAG问答，Phase 3加入规划、文化研究、角色设计、文化审校的真实协作与人工确认。Phase 4提供双风格资产与真实GLB查看器，已逐次批准并实际提交Q版技术模型与写实主展示模型各一次；平台图像生成仍未接入。
 
-Phase 1、Phase 2已获用户验收；基准分别为 `04b2c571e068ec0b26205fcce0c075395caeebce`、`a95c7748e4a22bfed9f4f8261e96dffa2522b740`。Phase 3代码与实测记录继承保留，详见[Phase 3历史报告](docs/reports/phase-03.md)。Phase 4两个真实模型均获用户人工验收，用户决定不执行第三次，以现有两次为最终模型成果。全项目已用2/3、剩1未使用，累计60积分，真实创建保持关闭。最终归档、测试与检查点B结论见[最终验收报告](docs/reports/phase-04-final-acceptance.md)；实体手机未验证，不进入Phase 5。本机服务启动后可[直接查看写实模型](http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model)。首个Q版仍为内部技术资产，未自动扩展公开或商用许可。私有模型文件不随Git仓库分发，空环境仍用合法GLB夹具复现Viewer。[公开仓库](https://github.com/3503799261-blip/xijing_ai)。
+当前状态（2026-10-18）：Phase 1～3已按各自范围验收，Phase 4已在两模型范围验收通过；Phase 5检查点A已批准，**当前仅实施WP1：项目状态校准与端到端流程**。WP2～WP5尚未执行，WP1结束后等待人工验收。当前本地分支`feature/phase5-competition-delivery`继承检查点A提交`8d5de53`，未合并main、未推送；不能假设远端克隆已包含最新本地成果。
+
+两个真实Neural4D模型均已人工验收，累计实际60积分；**已用2/3、剩1未使用，第三次用户决定不执行，创建保持关闭**。平台图像生成仍未接入，现有图片来自导入。首个Q版仅内部技术用途；写实“绛绣·戏韵”为已生成主展示资产，不是每次新需求即时生成的结果。实体手机未验证。私有GLB、图片、任务及资产数据库不随Git分发，空环境只能先使用合法测试夹具验证Viewer，不能用Duck冒充京剧成品。
+
+[公开仓库](https://github.com/3503799261-blip/xijing_ai) · [Phase 4最终验收](docs/reports/phase-04-final-acceptance.md) · [WP1流程/状态/问题清单](docs/reports/phase-05-work-package-01.md) · [WP1实际测试](docs/evidence/test-results/phase-05-wp1-test-report.md)。历史阶段与测试仍由其原报告保留，不把旧状态混作当前状态。
+
+## 已准备本机：免费启动与已有成果
+
+本机已有venv、BGE、活动索引及私有资产时，只需在仓库根运行以下命令；已有本服务则直接访问，避免第二个进程抢占端口/本地索引：
+
+```powershell
+Set-Location -LiteralPath 'D:\京剧\京剧'
+.\.venv\Scripts\python.exe -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --workers 1
+```
+
+- [首页](http://127.0.0.1:8000/index.html)、[AI工坊](http://127.0.0.1:8000/about.html)。同一8000端口提供安全静态资源与API，不用`file://`或把整个仓库公开的静态服务器。
+- [已有写实模型](http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model)：只GET已登记资产/GLB；绛绣切Q版会诚实显示未生成，不会取别人的Q版模型。
+- [内部Q版技术Viewer](http://127.0.0.1:8000/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer)：仅loopback/内部用途，没有正式角色关联，不用于公开或商用交付。
+- [health](http://127.0.0.1:8000/api/v1/health)、[capabilities](http://127.0.0.1:8000/api/v1/capabilities)、[全局额度](http://127.0.0.1:8000/api/v1/assets/usage)：本地免费读取；问答“就绪”包含既往探测/配置指纹状态，不是实时余额/外网连通测试。
+
+启动会初始化本地库并处理已有中断状态，不是纯只读操作，但不会自动重新执行Agent或建模。停止时在启动终端按Ctrl+C，等进程退出；不要删除owner锁或强开第二个worker。**WP1不发送问答、不提交Agent，不运行任何供应商探测、建模或图像生成工具。**
 
 ## 架构与数据边界
 
@@ -19,14 +39,14 @@ Phase 1、Phase 2已获用户验收；基准分别为 `04b2c571e068ec0b26205fcce
 
 ## 环境与依赖
 
-本次实际使用Windows、Python3.11.1、Node24.15.0。运行网站只需Python后端与现代浏览器；Node用于前端离线检查。已安装FastAPI0.143.0、uvicorn0.54.0、pydantic-settings2.15.0、httpx0.28.1、qdrant-client1.19.1、sentence-transformers6.1.0、numpy2.4.4、pytest9.1.1。
+既有验证环境为Windows/Python3.11.1；Node用于前端离线检查，网站运行不需要前端构建。Phase 2/3的Node24.15.0是历史版本，Phase 4最终记录为Node24.19.0/Chrome155.0.8059.84；WP1本轮实际版本以测试报告为准。依赖固定在`backend/requirements.txt`，原环境包括FastAPI0.143.0、uvicorn0.54.0、pydantic-settings2.15.0、httpx0.28.1、qdrant-client1.19.1、sentence-transformers6.1.0、numpy2.4.4、pytest9.1.1、Pillow12.2.0和portalocker3.2.0。
 
 本机 `.venv` 实际使用 `--system-site-packages`，复用已有CPU torch（包元数据2.11.0），避免重复下载大体积依赖。这是本次环境条件；干净机器应使用普通隔离环境。`backend/requirements.txt` 指定CPU torch2.11.0+cpu及CPU wheel来源，冷机安装整套依赖尚未从零计时验证，不将复用环境当成干净锁定环境。
 
-下方克隆命令对应Phase 3已有交付分支；克隆后先确认存在backend与knowledge。Phase 4在本地独立开发分支 `feature/phase4-neural4d` 中增量开发，不能假设该分支或最新代码已推送到远端，也不要通过下面的Phase 3克隆命令宣称取得Phase 4成果：
+以下是**新环境准备说明，本次WP1没有执行克隆或安装**。克隆后先核对交付分支/提交以及backend、knowledge是否存在；未推送的WP1代码不能从远端自动取得。不要使用旧Phase 3分支克隆命令来声称拿到了最新交付：
 
 ```powershell
-git clone --branch feature/phase3-opera-agents https://github.com/3503799261-blip/xijing_ai.git
+git clone https://github.com/3503799261-blip/xijing_ai.git
 Set-Location -LiteralPath 'xijing_ai'
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r backend/requirements.txt
@@ -40,13 +60,16 @@ python -m venv .venv
 
 ```powershell
 Set-Location -LiteralPath 'D:\京剧\京剧'
-New-Item -ItemType Directory -Force -Path 'D:\京剧\.private-config' | Out-Null
-if (-not (Test-Path -LiteralPath 'D:\京剧\.private-config\.env')) {
-  Copy-Item -LiteralPath '.env.example' -Destination 'D:\京剧\.private-config\.env'
+$projectParent = Split-Path -Parent (Get-Location).Path
+$privateDirectory = Join-Path $projectParent '.private-config'
+$privateEnvFile = Join-Path $privateDirectory '.env'
+New-Item -ItemType Directory -Force -Path $privateDirectory | Out-Null
+if (-not (Test-Path -LiteralPath $privateEnvFile)) {
+  Copy-Item -LiteralPath '.env.example' -Destination $privateEnvFile
 }
 ```
 
-用本机编辑器填写 `DEEPSEEK_API_KEY`；不得发到聊天、提交Git或出现在截图/日志。配置改变后重启后端。路径不同的机器应同时调整模板中的RAG_DATA_DIR、EMBEDDING_MODEL_PATH，保持它们在仓库外。
+仅在确需真实文本问答/Agent且已有授权时，用本机编辑器填写`DEEPSEEK_API_KEY`；不得发到聊天、提交Git或出现在截图/日志。仅查看已有GLB不需要调用供应商。配置改变后重启后端。模板中的RAG_DATA_DIR/EMBEDDING_MODEL_PATH默认注释，采用代码按仓库父目录推导的路径；如需覆盖，填写仓库外绝对路径，**不要写空等号**。`XIJING_ENV_FILE`若覆盖也应指向仓库外绝对路径。现有私有.env不被模板修改覆盖。
 
 | 字段 | 当前实现 |
 |---|---|
@@ -65,9 +88,26 @@ if (-not (Test-Path -LiteralPath 'D:\京剧\.private-config\.env')) {
 
 后端请求总预算默认45秒、供应商默认35秒；浏览器55秒超时，超时不会自动重发模型请求。完整校验依据 `backend/app/config.py`。
 
+## 不随Git取得的资源及缺失行为
+
+下表的“仓库父目录”在本机为`D:\京剧`，不是必须使用同一个盘符；历史任务ID/模型ID仅对已恢复对应资产的环境有效。
+
+| 资源 | 当前位置/用途 | 准备方式及缺失时行为 |
+|---|---|---|
+| Python/venv与依赖 | 仓库`.venv`，本机存在 | 新机器按真实requirements安装；本轮不安装，冷机时间未验证 |
+| 私有env/Key | 仓库父目录`.private-config/.env` | 本机手工配置，绝不入Git；没有Key时实时问答/Agent不可用，不生成假答案 |
+| BGE缓存 | 父目录`.runtime/models/bge-small-zh-v1.5` | 固定revision下载见下节；缺失则知识能力降级，不换成随机向量 |
+| SQLite知识/Qdrant | 父目录`.runtime/xijing-ai/active.json`选择`generations/<generation>/knowledge.sqlite3`及`qdrant/` | 从knowledge入库；不能误找RAG根下不存在的knowledge.sqlite3；缺失/锁冲突会提示未就绪 |
+| Agent与预算记录 | RAG_DATA_DIR中的`agent-tasks.sqlite3`、`api-budget.sqlite3` | 新输入只在明确提交时创建；不复制整库公开、不删除预算。缺历史UUID时返回未找到，不自动重跑 |
+| 真实图片/模型及资产关联 | RAG_DATA_DIR下`assets/catalog.sqlite3`、`images/`、`models/` | 需受控保留本机授权文件与关联记录；Git不含它们。缺记录/文件显示未找到、未生成或Viewer Error，可重载原文件；不自动下载/重建 |
+| 两份供应商原文件 | 同assets目录的`recovery-quarantine/` | 保留原Hash及本地兼容谱系，不作为普通重新转换命令执行；当前兼容GLB均内嵌纹理，无需额外外链贴图 |
+| 全局三次账本 | 父目录`.runtime/neural4d-usage.sqlite3` | 保留真实2次历史与固定上限3；缺失只能保持历史未知/创建锁定，不能自动填0或换新额度池 |
+
+已有真实GLB：Q版8,827,324字节，SHA-256 `bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a`；写实15,158,668字节，SHA-256 `5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5`。文件位于`assets/models/<Hash>.glb`，角色/图片/Prompt/任务关联与原文件Hash见[Phase 4最终报告](docs/reports/phase-04-final-acceptance.md)。跨机器受控资产迁移还没有实现一键导入，不能承诺仅clone即可完整展示两成品。
+
 ## 模型下载、入库与启动
 
-先下载固定snapshot，再入库。这里会下载约95.8MB模型权重及必要配置/tokenizer；CPU PyTorch及其他依赖不包含在这个体积中。
+以下仅在新环境缓存/索引缺失时准备，**不是本机每次启动必跑，本次WP1未下载、重建或恢复生产数据**。先下载固定snapshot，再入库；约95.8MB权重及配置/tokenizer不含CPU PyTorch/其他依赖体积。
 
 ```powershell
 .\.venv\Scripts\python.exe -m backend.scripts.download_model
@@ -84,15 +124,9 @@ if (-not (Test-Path -LiteralPath 'D:\京剧\.private-config\.env')) {
 
 打开 [首页](http://127.0.0.1:8000/index.html) 或 [京剧问答](http://127.0.0.1:8000/about.html#ai-workshop-qa)。当前前后端均为8000，默认相对 `/api/v1`；不要继续使用把整个目录公开的Python HTTP Server代替安全静态服务。停止时在启动终端按Ctrl+C。
 
-免费检查 [health](http://127.0.0.1:8000/api/v1/health)、[capabilities](http://127.0.0.1:8000/api/v1/capabilities)。没有Key仍能完成真实入库与检索；知识未就绪或模型未验证时不会显示问答已就绪。
+免费检查[health](http://127.0.0.1:8000/api/v1/health)、[capabilities](http://127.0.0.1:8000/api/v1/capabilities)。没有Key仍能完成本地入库/检索；知识未就绪或没有同配置成功探测记录时问答不就绪。已保存成功探测只表示最近记录与配置相符，不保证今天外网/余额有效。
 
-真实权限已在本地确认、并允许小额调用时，显式运行一次连通检查：
-
-```powershell
-.\.venv\Scripts\python.exe -m backend.scripts.check_provider --output docs/evidence/test-results/local-provider-probe.json
-```
-
-此命令会调用真实DeepSeek并计入预算，不能当免费健康检查。探测成功仅说明API连通，问答就绪还需要真实索引/Embedding。服务能力端点自身不发起付费探测。
+`backend.scripts.check_provider`运行即调用真实DeepSeek并计入预算，不是免费健康检查；WP1禁止执行。需要真实文本联测时必须另获授权，再参考[Phase 2历史运行说明](docs/reports/phase-02.md)。本地能力端点自身不进行供应商探测。
 
 ## 接口与问答使用
 
@@ -128,23 +162,20 @@ Agent模块管理严格JSON交接、任务SQLite、单消费者与独占进程�
 
 刷新只恢复task ID并免费查询，不重新提交。重启保留已完成/待确认任务；意外中断的运行任务标失败且不重发模型。调整需求明确创建新任务，关联前一任务、保留历史。只使用一个worker；索引锁与Agent任务锁分别保护数据和调度。任务数据库与两级预算账本均位于仓库外RAG_DATA_DIR。
 
-本阶段实际检查：后端 **213项**；Agent前端 **25项**、原问答前端 **25项**离线检查；真实HTTP API **14项**；8页/62资源及6个受保护路径；桌面1920×1080、手机390×844实际浏览器。16次脚本工作流加4次浏览器创作均归档，包含失败与暂停，不能称20个成功方案或独立盲测。最终网页武生案例约 **4.0秒**完成四阶段，仍待人工确认。见 [浏览器报告](docs/evidence/test-results/phase-03/browser-test-report.md)、[Agent架构](docs/architecture/phase-03-agents.md)、[真实案例汇总](docs/evidence/test-results/phase-03/real-cases-summary.json)。
+Phase 3历史检查：后端213项；Agent前端25项、原问答前端25项离线检查；真实HTTP API14项；8页/62资源及6个受保护路径；桌面/手机模拟浏览器。16次脚本工作流加4次浏览器创作包含失败与暂停，不能称20个成功方案或独立盲测。该阶段“武生约4秒、待确认”描述的是当时任务，不是今日重新执行。见[历史浏览器报告](docs/evidence/test-results/phase-03/browser-test-report.md)、[Agent架构](docs/architecture/phase-03-agents.md)、[真实案例汇总](docs/evidence/test-results/phase-03/real-cases-summary.json)。
 
 ```powershell
-# 免费离线逻辑检查，含明确测试双桩，不是实际模型证据。
-.\.venv\Scripts\python.exe -m pytest -q backend/tests
+# 以下为前端双桩/本机GET检查，不是实际模型证据；使用新输出文件。
 node scripts/phase3_frontend_test.mjs --output docs/evidence/test-results/local-agent-frontend.json
 node scripts/phase2_frontend_test.mjs --output docs/evidence/test-results/local-qa-frontend.json
 .\.venv\Scripts\python.exe scripts/phase2_http_smoke.py --output docs/evidence/test-results/local-http-regression.json
-# 付费：明确执行一个真实工作流，新文件保留本轮结果，受两级预算保护。
-.\.venv\Scripts\python.exe -m backend.scripts.evaluate_agent_workflow --case sheng --allow-paid --output docs/evidence/test-results/my-agent-sheng.json
 ```
 
 缓存依赖/模型/索引/有效API权限是本次前提，Phase 3没有重新安装依赖、下载模型或重建未变化语料。首次空电脑完整安装时间未验证；下方Phase 2缓存实测不能当作Phase 3冷机十分钟承诺。
 
-## Phase 4数字IP中心：当前PARTIAL交付
+## 已验收的数字IP中心与两份历史真实模型
 
-2026-10-12追加 [三次真实建模计划](docs/reports/phase-04-real-modeling-plan.md)：Q版技术验证、写实主展示、企业案例逐次确认、逐次停止；全部既往调用仍共享3次硬上限。已补齐全局UNKNOWN跨风格暂停，最终后端420项离线通过；仅执行1次真实只读余额鉴权，尚未提交模型。历史仍未知、图片待角色关联与接受、费用未核实，因此创建保持关闭。
+两次真实建模均已完成并获人工验收：Q版内部技术验证与写实绛绣·戏韵。全局2/3、剩1未用、累计60积分；无UNKNOWN/在途或待消费批准；[原三次计划](docs/reports/phase-04-real-modeling-plan.md)中的第三次已由用户取消，不是失败。创建保持关闭，不通过查看、测试或风格切换重新生成模型。早期PARTIAL、历史未知或仅1次的快照保存在原报告，不再作为当前状态。
 
 打开 [数字IP中心](http://127.0.0.1:8000/about.html#ai-workshop-model)。本阶段复用已确认的Phase 3角色任务，不迁移前端框架，也不重新执行Agent。`Q版卡通(chibi)` 与 `写实国风(realistic)` 是资产视觉风格；个人/企业是用途模式，两者独立。相同文化方案的两种风格共享characterId和文化来源快照，各自保存assetId、styleVersion、Prompt、图片和模型记录。切换风格只读取已登记版本，不自动生成、不覆盖另一种风格。
 
@@ -176,27 +207,34 @@ Set-Location -LiteralPath 'D:\京剧\京剧'
 
 资产SQLite和Hash文件默认在 `D:\京剧\.runtime\xijing-ai\assets\`；图片实际解码并移除元信息。GLB检查真实几何、内嵌PNG/JPEG、引用范围、大小和像素预算，禁止外部URI；这是结构与资源安全门禁，**不是完整Khronos规范认证**。同Hash文件不会被重复发布覆盖，损坏时停止加载并要求人工核查。
 
-### 免费检查
+### 免费检查与测试隔离
 
-以下命令不执行LLM或供应商调用。后端离线测试使用明确Mock与隔离额度账本，不能作为真实Neural4D成功证据；前端脚本的DOM双桩不能替代真实GLB/触摸测试。保留新的结果文件，不覆盖原阶段证据：
+后端测试使用明确Mock与临时账本，但直接导入`backend.app.main`会先构造默认app；WP1核查发现收集阶段早于autouse夹具，可能初始化本机默认库。为严格免费且不触生产资源，本轮使用**收集前测试专用隔离**：空env/Key、临时RAG与canonical账本、真实HTTP transport拒绝、生产文件/SQLite访问守卫；不改变生产配置入口或额度算法。复现时从仓库根执行以下已归档辅助，选择全新的临时目录：
 
 ```powershell
-.\.venv\Scripts\python.exe -m pytest -q backend/tests/test_phase4_assets.py backend/tests/test_phase4_styles.py backend/tests/test_phase4_neural4d.py backend/tests/test_phase4_usage.py
+$projectParent = Split-Path -Parent (Get-Location).Path
+$testRun = Join-Path $projectParent '.runtime\phase5-wp1-local-review-01'
+.\.venv\Scripts\python.exe docs/evidence/test-results/phase-05-wp1/offline-bootstrap.py --run-root $testRun --junitxml (Join-Path $testRun 'pytest.xml') --basetemp (Join-Path $testRun 'pytest-temp')
+```
+
+该脚本只能在独立测试进程使用，新目录内保存JUnit及真实退出码；目录已存在会拒绝，不能用来改生产账本。离线测试不是真实Neural4D/DeepSeek成功证据。前端DOM双桩不替代浏览器/GLB/触摸测试；以下只读GET和前端脚本仍可分别验证：
+
+```powershell
 node scripts/phase4_frontend_test.mjs --output docs/evidence/test-results/local-phase4-frontend.json
 # 服务已启动时，这两个接口仅读取本地状态，不发起供应商请求。
 Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/v1/assets/usage'
 Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/v1/assets/models'
 ```
 
-整站回归仍使用 `.\.venv\Scripts\python.exe -m pytest -q backend/tests`，并实际打开8个原页面。测试数量、桌面交互样本、失败与最终结果以Phase 4报告及证据为准；保留 [Windows文件并发失败与修复](docs/evidence/test-results/phase4-windows-file-race.md)，不能用更早一次通过掩盖后来的真实失败。
+WP1本轮命令、隔离失败/修正、数量及浏览器结果以[测试报告](docs/evidence/test-results/phase-05-wp1-test-report.md)为准；Phase 4的675通过及52项重叠专项是历史，不相加成独立727项。保留[历史Windows文件并发失败与修复](docs/evidence/test-results/phase4-windows-file-race.md)。不能用旧结果掩盖本轮失败，也不能通过删除/跳过测试做成全绿。
 
-### 每次真实建模前的条件
+### 已实现的创建保护（历史能力，当前禁止新建）
 
 全项目累计最多 **3次新建模型任务HTTP提交尝试**，每次 `modelCount=1`；失败、超时、未知结果也占用次数，禁止自动重发或返还。固定账本是 `D:\京剧\.runtime\neural4d-usage.sqlite3`，与风格、用途、RAG目录和服务重启无关。SQLite原子预留、幂等与发送者独占保护共同生效，浏览器和Agent不能绕过服务入口调用供应商。
 
 用户此前已明确核实项目外部历史为0，随后两次实际创建均已入账；目前已用2/3、剩1、无UNKNOWN或在途任务，无未消费审批。第三次为用户取消且未执行，不占次数。`backend.scripts.neural4d_history` 是一次性可信人工对账工具，既有账本不能再次初始化、清零或迁移到新的额度池；它不属于普通复现步骤。
 
-真实创建前须逐项完成：
+原服务的保护检查包括以下项目，它们是历史实现说明，**不是当前申请生成的操作指引**：
 
 - 用户分别批准本次任务；阶段开发批准不等于任何一次真实建模授权。
 - 核对当前官方接口和账户Credit费用，真实API Key只填仓库外私有env；不发到聊天、前端、日志或Git。余额验证也是供应商请求，不能作为免费本地健康检查自动运行。
@@ -204,7 +242,7 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/v1/assets/models'
 - 使用独立后端管理授权、已核实历史额度、有效余额/协议验证；本地配置默认 `NEURAL4D_GENERATION_ENABLED=false`、`NEURAL4D_PROTOCOL_VERIFIED=false`，费用为空、下载域名白名单为空。不要为普通Viewer或免费测试开启真实创建。
 - 对超时或未知状态先核查供应商已有任务；有可靠任务ID时才主动查询，不能通过重新生成解决未知结果。下载只允许人工核验的HTTPS域名，生成结果需继续通过GLB与浏览器验证。
 
-上述是真实创建服务的保护规则，不是后续调用计划。第2次已完成并获人工验收，两份批准均已消费；用户决定取消第3次并禁止再提交。保持创建关闭，不调用任何新建模型或付费生成接口，不宣告Phase 5开始。
+第2次已完成并获人工验收，两份批准均已消费；用户决定取消第3次并禁止再提交。Phase 5 WP1只梳理状态/流程与免费验证，不调用任何新建、供应商刷新或付费生成接口；不进入WP2～WP5。
 
 ## Phase 2历史测试与十分钟复现边界
 
@@ -212,16 +250,15 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/v1/assets/models'
 
 已有真实证据：初次12文档/35片段的512维向量入库约30.5013秒；隔离副本中的真实CPU首次/幂等/更新/重建/重开/写锁/失败保旧生命周期检查约16.6563秒；单次32-token上限的真实Provider探测成功。[初次入库](docs/evidence/test-results/phase-02-ingest-initial.json)、[真实生命周期](docs/evidence/test-results/phase-02-real-lifecycle.json)、[探测结果](docs/evidence/test-results/phase-02-provider-probe-success.json)。
 
-免费离线与检索检查可重跑：
+Phase 2历史评价可按需复查；本次不重建索引。离线pytest请使用上方收集前隔离命令，前端检查与独立检索使用新输出路径/标签：
 
 ```powershell
-.\.venv\Scripts\python.exe -m pytest -q backend/tests
 node scripts/phase2_frontend_test.mjs --output docs/evidence/test-results/local-frontend-unit.json
 # 独立评估会占用本地索引，先停止应用；默认标签使用真实时间，避免覆盖旧结果。
 .\.venv\Scripts\python.exe -m backend.scripts.evaluate_retrieval
 ```
 
-后端 **124项通过**、前端 **25项离线检查通过**，均明确标注fake/mock边界，不作为真实Embedding/LLM证明。实际模型、入库、检索和浏览器证据独立保存；初始失败保留。[前端离线](docs/evidence/test-results/phase-02-frontend-unit.json)、[后端最终回归](docs/evidence/test-results/phase-02-final-unit-regression.json)。
+Phase 2当时后端124项、前端25项通过，均标注fake/mock边界，不是当前全部测试数，也不作为真实Embedding/LLM证明。真实模型、入库、检索和浏览器证据独立保存；初始失败保留。[历史前端离线](docs/evidence/test-results/phase-02-frontend-unit.json)、[历史后端回归](docs/evidence/test-results/phase-02-final-unit-regression.json)。
 
 20题全部执行真实本地Embedding/向量与混合对比。最终混合候选证据覆盖为18支持题全部命中；题目由助手核对，**不是人工gold Recall@5**。同批题被用于调参；5题留出也已用于诊断，不宣传为独立盲测。错误人物仍可能命中相似材料，真实LLM应说明限制。[最终检索](docs/evidence/test-results/phase-02-retrieval-final-entity-metadata-same20-comparison.json)。
 
@@ -229,38 +266,52 @@ node scripts/phase2_frontend_test.mjs --output docs/evidence/test-results/local-
 
 8页浏览器/资源回归、1920×1080桌面、390×844手机及768×1024工坊Agent视口实际完成；四推荐问题、展开引用、连续提问、空输入、停机恢复、安全文字与未接入模块均已实际操作。7个文化HTML逐字节保持Phase 1版本。见 [浏览器实测报告](docs/evidence/test-results/phase-02-browser-test-report.md)。
 
-需要额外付费联测时显式执行以下命令，会使用私有配置并计入应用预算；默认不自动重试，每次新标签保留旧结果：
-
-```powershell
-.\.venv\Scripts\python.exe -m backend.scripts.evaluate_answers --base-url http://127.0.0.1:8000 --label my-review
-# 此项重建并临时启动/关闭自己的服务进程，运行前手动停掉现有应用；需要已缓存依赖、模型及已成功的provider探测。
-.\.venv\Scripts\python.exe -m backend.scripts.reproduce_smoke --label my-cached-review
-```
+`check_provider`、`evaluate_answers`、`evaluate_baseline`、`evaluate_agent_workflow`及`reproduce_smoke`会使用真实文本模型，**不在WP1执行范围**；其中reproduce_smoke还会重建索引、启停服务。它们不是一键免费启动/验收命令，需将来另获明确授权后按对应历史报告使用。
 
 ## 费用、证据与阶段控制
 
-全站默认3元**应用测试预算**。预算账本根据代码记录的峰价（输入未命中2元、命中0.04元、输出8元/百万tokens）预留上界；有usage时计算保守估算，超时/网络结果未知保留预留额。这不是官方账户硬限，也不包含其他程序使用同Key的费用；实际账单以供应商为准。追加预算须用户另行批准，勿删除账本绕过预算。
+全站默认3元应用测试预算，现有Provider另沿用phase3增量范围0.5元；不能靠重启或删除账本增额。代码保存的是历史核对价格用于估算，不声称为今天官方实时价格或账户硬扣费上限；未来付费测试必须另行确认，本WP1不调用付费API。
 
-截至阶段归档，实际账本62次成功供应商请求，累计保守估算 **0.13343424元**，详见 [Token与费用证据](docs/evidence/test-results/phase-02-api-usage.json)。该数字包含连通探测、早期/修复后测试、5次直接问答、浏览器问答和两次缓存复现，不是仅最终20题的费用；不会读取或宣称账户实时余额。价格依据 [DeepSeek官方价目](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)。
+Phase 2归档时62次成功文本请求、保守估算0.13343424元是历史快照，包含探测/调优/比较/浏览器等，不是今天全站累计或官方账单，见[原usage证据](docs/evidence/test-results/phase-02-api-usage.json)。价格核查日期和来源留在原阶段报告，不在WP1重新访问供应商。
 
 Phase 3实际40次供应商请求、39986 tokens，增量保守估算 **0.10777464元**（批准0.5元内）；与Phase 2合计102次、**0.24120888元**。包含失败、调优和一次问答回归，不等于供应商实时余额或实际账单。[本阶段费用](docs/evidence/test-results/phase-03/api-usage-final.json)。
 
-目前无跨问题语义记忆、专业人工知识审校、独立盲测及公开互联网后端访问控制/完整限流；本地单worker是已验证范围。辅助审校可能漏判、误报，真实失败已保留。Phase 4本地资产与Viewer已实现，图像生成供应商未接入；第1次内部模型已人工验收，第2次正式写实模型技术PASS待用户验收，企业模型尚未生成，实体手机性能未实测。
+当前本机账本累计107次文本调用；WP1前后差量另见测试报告，不把历史费用相加伪装实时扣费。无跨问题语义记忆、专家知识审校、独立盲测或完整公网部署体系；辅助审校可能漏判，失败保留。企业需求入口与共用Agent流程存在，**没有真实企业客户/订单/收入/企业模型或完整商业交付认证**；企业模型取消而不是生成失败。
 
 Phase 1真实历史、备份与截图保留，见 [阶段报告](docs/reports/phase-01.md)。Phase 2方案、批准Prompt、真实工具过程、参数改动、失败与修复归档在docs；协作导出排除秘密与隐藏推理，不补造对话。历史报告描述的是当时状态，不能当作当前能力证明。
 
-当前交付Phase 4的PARTIAL材料，第1次内部模型已获用户人工验收，停在第2次单独授权前。保留Phase 1～3历史与独立阶段分支；没有据此宣称Phase 4已合并main或推送远端。任何下一次真实建模和Phase 4检查点B均需用户明确审查，不自动进入Phase 5。
+当前Phase 4两模型范围已验收，Phase 5仅WP1获准；README与运行路径说明已按此校准。WP1不是新历史入口/比赛导览/完整最终测试或交付包，后续工作包须逐项验收后另行开展。正文现有页面中的少量“首次建模”等旧文案已列问题清单，本次不扩展修改UI。
 
 ### 第1次内部真实模型恢复（2026-10-13）
 
-原任务`bb074c31-1905-45b6-b763-22d065ddc616`只提交过1次、扣30积分。下载白名单及供应商纹理声明/像素预算不兼容已诊断；通过固定IP、验证TLS、逐跳限域名的后端安全下载恢复原26.6MB GLB，保留原文件，只本地优化MIME和2K纹理。约8.42MiB衍生GLB在项目Viewer实际加载，真实鼠标同向476.8°、滚轮/按钮缩放、重置及Loading/Ready/Error验证通过，技术结论PASS。手机宽度和入口检查通过，实体手机手势/完整Phase 4验收仍待完成。[完整恢复、Hash、费用与失败报告](docs/reports/phase-04-first-internal-modeling.md)
+历史过程：原任务`bb074c31-1905-45b6-b763-22d065ddc616`仅一次提交、30积分；下载/纹理门禁失败后恢复原26.6MB GLB，保留原件，本地修MIME及2K纹理后8.42MiB模型技术PASS，随后用户人工验收。原476.8°等是当时浏览器样本，实体手机仍未测；不是本轮重新生成。[完整恢复、Hash及失败报告](docs/reports/phase-04-first-internal-modeling.md)。
 
 本机已有私有资产可打开：`http://127.0.0.1:8000/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer`。该模型、原图及含图截图不在公开仓库；新克隆环境不会凭README自动下载或生成同一内部模型，也不得将它当作公开/商用角色交付。
 
-项目仍占用1/3、剩2，真实生成默认false。原任务可靠恢复只解除未知暂停，不自动批准第二次。恢复CLI不是普通自动化测试：可能查询/下载原UUID，要求人工指示、原账本管理锁及准确历史；禁止删除账本、绕过安全下载或重建解决文件问题。离线测试见阶段报告，当前最终后端652通过、前端Phase 2/3各25、Phase 4共36通过。
+恢复当时只用了1次；后来已完成第2次，**当前始终以2/3、剩1为准**。恢复/本地转换CLI可能查询供应商或写资产状态，不是WP1普通测试，本次不执行。旧652项等记录保留在原报告，不称今天最终测试数。
 
 ### 第2次写实主展示准备（2026-10-14）
 
-新红金图已独立登记为 `realistic_showcase_candidate_v1`，冻结 `realistic_model_v1.0`，完成一次经单独授权的现有文本文化审校；实际1460 Token，保守估算0.00262824元。文字pass不认证图片冠式、行当或版权。第二次当前费用、比赛展示/上传/3D衍生许可和正式角色关联仍待确认，状态WAITING_APPROVAL。
+历史过程：红金图独立登记`realistic_showcase_candidate_v1`，冻结`realistic_model_v1.0`，最初一次授权审校后仍待角色/许可/费用确认。随后逐次授权、正式四Agent及人审、真实模型生成和技术/人工验收均已完成；早期WAITING_APPROVAL不是当前状态。文字审校不等于图片冠式、行当或版权认证。
 
-本轮58项相关离线测试通过、8页HTTP逐字节与准备基线一致、实际候选浏览器预览正常；不替代第二模型Viewer或实体手机验收。Neural4D API请求/预留/新建提交均0，仍已用1/3、剩2、生成默认false。[准备报告](docs/reports/phase-04-realistic-preparation.md)、[第二次待审表](docs/reports/phase-04-second-model-approval.md)、[冻结Prompt](docs/prompts/phase-04/realistic-model-v1.md)。不自动运行已领取的付费审校工具，不自动进入第二次建模或Phase 5。
+早期58项候选检查不替代成模验收；完整演进见[准备报告](docs/reports/phase-04-realistic-preparation.md)、[当时待审表](docs/reports/phase-04-second-model-approval.md)、[冻结Prompt](docs/prompts/phase-04/realistic-model-v1.md)、[最终实际执行](docs/reports/phase-04-second-model-execution.md)。原报告、Prompt、失败和真实Git不重写。
+
+## 常见运行问题
+
+| 现象 | 检查与处理 |
+|---|---|
+| localhost/127.0.0.1连接拒绝 | 先确认本服务已startup complete，访问同源8000；检查端口归属，不重复启动、不杀未知进程 |
+| 知识未就绪/锁冲突 | 检查active.json指向的generation、BGE缓存和单worker；独立入库/评价前先停止应用，不删除锁强开 |
+| API Key/鉴权/网络/预算错误 | 显示真实错误，不用固定回答替代；本轮不做付费探测；历史JSON/已有GLB可以独立查看 |
+| 新会话看不到旧Agent任务 | 目前只从sessionStorage恢复；便捷历史ID入口属WP2，不能通过重新提交来冒充恢复 |
+| 缺真实资产或某风格无模型 | 核对catalog与本地文件；无授权资产包时明确缺失，不自动生成，合法Duck仅技术夹具 |
+| GLB Error | 核对Hash和已登记资源，显式重载原文件；不能重跑Neural4D或关掉验证门禁 |
+| 手机访问内部模型失败 | 内部Q版限定loopback，后端也绑定127.0.0.1；实体设备尚未验收，不为测试解除此边界 |
+
+旧`phase4_http_smoke`会按早期未知历史断言并POST拒绝探针，`evaluate_agent_api`会做旧任务变更，`phase4_modeling_preflight/phase4_local_audit`也包含早期状态假设；**不要将它们当当前只读预检运行**。不使用任何建模提交、恢复、余额或历史清零工具来完成WP1。
+
+## 阶段证据索引
+
+[Phase 1](docs/reports/phase-01.md) · [Phase 2](docs/reports/phase-02.md) · [Phase 3](docs/reports/phase-03.md) · [Phase 4最终](docs/reports/phase-04-final-acceptance.md) · [Phase 5检查点A](docs/reports/phase-05-project-audit.md) · [WP1](docs/reports/phase-05-work-package-01.md)。
+
+真实协作与Prompt：[Phase 1](docs/prompts/phase-01/README.md)、[Phase 2](docs/prompts/phase-02/README.md)、[Phase 3](docs/prompts/phase-03/README.md)、[Phase 4](docs/prompts/phase-04/README.md)、[Phase 5](docs/prompts/phase-05/README.md)。不把摘要冒充原始对话，不删除失败记录；历史报告中的当时状态须结合日期阅读。
