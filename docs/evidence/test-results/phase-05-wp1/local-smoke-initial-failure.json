@@ -1,0 +1,12 @@
+{
+  "recordedAtUtc": "2026-10-18T13:11:45.762695+00:00",
+  "kind": "ACTUAL_WP1_LOCAL_SMOKE_HARNESS_FAILURE",
+  "errorType": "TypeError",
+  "message": "check() got multiple values for argument 'name'",
+  "location": "final historical-role check metadata field",
+  "resultFileWritten": false,
+  "testPassCountNotClaimed": true,
+  "fix": "Rename the role metadata field to characterName; preserve initial helper",
+  "supplierCalls": 0,
+  "modelCreationRequests": 0
+}

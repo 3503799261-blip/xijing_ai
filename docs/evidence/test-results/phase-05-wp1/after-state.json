@@ -1,0 +1,108 @@
+{
+  "checkedAtUtc": "2026-10-18T13:18:09.949962+00:00",
+  "clientReviewDate": "2026-10-18",
+  "kind": "WP1_READ_ONLY_STATE_SNAPSHOT",
+  "python": "3.11.1",
+  "branch": "feature/phase5-competition-delivery",
+  "head": "8d5de53fd74941fbf827fe2792a6d4f41df38764",
+  "maxAttempts": 3,
+  "used": 2,
+  "remainingUnused": 1,
+  "externalHistoricalUsed": 0,
+  "states": [
+    [
+      "SUCCEEDED",
+      2
+    ]
+  ],
+  "unconsumedApprovals": 0,
+  "operations": [
+    [
+      "create_model",
+      2,
+      60.0
+    ],
+    [
+      "download",
+      3,
+      0
+    ],
+    [
+      "query_model",
+      10,
+      0
+    ],
+    [
+      "verify",
+      3,
+      0
+    ]
+  ],
+  "realHttpRequests": 18,
+  "recordedCredits": 60.0,
+  "llmCalls": 107,
+  "agentStates": [
+    [
+      "awaiting_confirmation",
+      15
+    ],
+    [
+      "cancelled",
+      2
+    ],
+    [
+      "completed",
+      2
+    ],
+    [
+      "failed",
+      3
+    ]
+  ],
+  "safeFlags": {
+    "NEURAL4D_GENERATION_ENABLED": "false",
+    "NEURAL4D_PROTOCOL_VERIFIED": "false"
+  },
+  "modelsAndOriginals": [
+    {
+      "relativeRuntimeAsset": "models/bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a.glb",
+      "sha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "sizeBytes": 8827324,
+      "glbHeaderMatches": true,
+      "privateFileNotCopied": true
+    },
+    {
+      "relativeRuntimeAsset": "models/5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5.glb",
+      "sha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "sizeBytes": 15158668,
+      "glbHeaderMatches": true,
+      "privateFileNotCopied": true
+    },
+    {
+      "relativeRuntimeAsset": "recovery-quarantine/8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885.bin",
+      "sha256": "8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885",
+      "sizeBytes": 26600184,
+      "glbHeaderMatches": true,
+      "privateFileNotCopied": true
+    },
+    {
+      "relativeRuntimeAsset": "recovery-quarantine/51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e.bin",
+      "sha256": "51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e",
+      "sizeBytes": 18266484,
+      "glbHeaderMatches": true,
+      "privateFileNotCopied": true
+    }
+  ],
+  "htmlSha256": {
+    "index.html": "bc0ace24da3667201354787613a5653a6107e080c35b189e28d4370c85675cd4",
+    "history.html": "e787849317758ccf549879bdec048fe24ff93bcdaf437f96f456813402f362f7",
+    "roles.html": "25103c713ecef22784e9cd49241b157095e1c36d142c19453d2986db96a322ac",
+    "facial.html": "3a4bc57dc1e83d16e3c594b7a6c4432cb4f8f44e7e7fe68f3761e9bcf3443d9e",
+    "music.html": "7fc8945972707e068984fecb8bdec8817974c3eb94a77b97a1a80c3ac1a24626",
+    "gallery.html": "d359e4232b9d042ede82839400cdfd63dcde6f3ec941c7102e30819135147030",
+    "video.html": "eae28dffb204a62aca0dd8aa371ce73a108bb1c5f67f5c7f0b10ca43de470abf",
+    "about.html": "374f517281bce28c227b6d0d55ce64cae90d0869ae7240807f62c0238fdc7b6c"
+  },
+  "paidCallsBySnapshot": 0,
+  "databaseWritesBySnapshot": 0
+}

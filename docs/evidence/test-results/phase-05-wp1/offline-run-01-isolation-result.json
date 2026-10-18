@@ -1,0 +1,32 @@
+{
+  "kind": "OFFLINE_TEST_PROCESS_ISOLATION",
+  "pytestExitCode": 3,
+  "scope": "Explicit test doubles and temporary stores only; not live provider or browser evidence.",
+  "isolation": {
+    "freshProcess": true,
+    "emptyPrivateEnv": true,
+    "emptyProviderKeys": true,
+    "realGenerationDisabled": true,
+    "temporaryRagAndModelPaths": true,
+    "moduleLevelAppIsolatedBeforeCollection": true,
+    "canonicalLedgerPathsAgreeInsideRunRoot": true,
+    "realHttpTransportsDenied": true,
+    "mockTransportsPermitted": true,
+    "productionFilesAndSqliteGuarded": true,
+    "externalPytestPluginAutoloadDisabled": true
+  },
+  "passed": 0,
+  "failedReports": 0,
+  "skippedReports": 0,
+  "collectionErrors": 0,
+  "failedNodes": [],
+  "auditCounts": {
+    "blockedFileAccess": 1,
+    "blockedSqlite": 0,
+    "blockedRealHttp": 0
+  },
+  "outputs": {
+    "junit": "pytest.xml",
+    "terminal": "pytest-output.redacted.txt"
+  }
+}

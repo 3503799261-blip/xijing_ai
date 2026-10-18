@@ -1,0 +1,25 @@
+{
+  "clientDate": "2026-10-18",
+  "timezone": "Asia/Shanghai",
+  "exportedAtUtc": "2026-10-18T13:21:57.834192+00:00",
+  "status": "PHASE_5_WP1_WAITING_ACCEPTANCE",
+  "promptBytes": 15130,
+  "promptSha256": "cccb910e524c03d43448faaef643bf9e7326e123da01a0a78481da4e706ee080",
+  "promptExactByteMatch": true,
+  "publicRecords": 79,
+  "publicSnapshotSha256": "c4722a1084a2e276ebf9239c19a57a6286d98d9cf53cdf69cc4ce28a670f2762",
+  "sourceSnapshotSha256": "9d128f288aa65a1858c8c3e3f668e679e7bdfa2e35ed8f8675c8dfb449671970",
+  "firstSourceLine": 11411,
+  "lastSourceLine": 11772,
+  "omittedPartialLine": false,
+  "skipped": {
+    "event_msg": 154,
+    "token_usage_record": 36,
+    "reasoning": 55,
+    "inter_agent_communication_metadata": 19,
+    "agent_message": 19
+  },
+  "scope": "Actual current-session WP1 attachment through snapshot; public records only; excludes hidden reasoning/system/developer/child internal messages. Credentials, signed resource URLs and user home/tooling profile paths redacted. Prior Phase 5 checkpoint A snapshot preserved. Future messages not included.",
+  "paidCallsThisWp1": 0,
+  "modelCreationCallsThisWp1": 0
+}

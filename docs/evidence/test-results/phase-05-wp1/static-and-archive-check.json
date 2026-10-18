@@ -1,0 +1,300 @@
+{
+  "checkedAtUtc": "2026-10-18T13:30:53.522597+00:00",
+  "kind": "WP1_DOCUMENTATION_AND_ARCHIVE_CHECK",
+  "checks": [
+    {
+      "name": "readme-current-status",
+      "passed": true
+    },
+    {
+      "name": "obsolete-current-claims-removed",
+      "passed": true
+    },
+    {
+      "name": "template-uses-existing-portable-defaults",
+      "passed": true
+    },
+    {
+      "name": "template-real-generation-off",
+      "passed": true
+    },
+    {
+      "name": "readme-python-modules-exist",
+      "passed": true,
+      "modules": [
+        "backend.scripts.download_model",
+        "backend.scripts.evaluate_retrieval",
+        "backend.scripts.ingest",
+        "backend.scripts.prepare_phase4_assets"
+      ]
+    },
+    {
+      "name": "readme-script-references-exist",
+      "passed": true,
+      "scripts": [
+        "scripts/phase2_frontend_test.mjs",
+        "scripts/phase2_http_smoke.py",
+        "scripts/phase3_frontend_test.mjs",
+        "scripts/phase4_frontend_test.mjs",
+        "scripts/prepare_phase4_viewer_fixture.py"
+      ]
+    },
+    {
+      "name": "unchanged-maxAttempts",
+      "passed": true
+    },
+    {
+      "name": "unchanged-used",
+      "passed": true
+    },
+    {
+      "name": "unchanged-remainingUnused",
+      "passed": true
+    },
+    {
+      "name": "unchanged-states",
+      "passed": true
+    },
+    {
+      "name": "unchanged-unconsumedApprovals",
+      "passed": true
+    },
+    {
+      "name": "unchanged-operations",
+      "passed": true
+    },
+    {
+      "name": "unchanged-realHttpRequests",
+      "passed": true
+    },
+    {
+      "name": "unchanged-recordedCredits",
+      "passed": true
+    },
+    {
+      "name": "unchanged-llmCalls",
+      "passed": true
+    },
+    {
+      "name": "unchanged-agentStates",
+      "passed": true
+    },
+    {
+      "name": "unchanged-safeFlags",
+      "passed": true
+    },
+    {
+      "name": "unchanged-modelsAndOriginals",
+      "passed": true
+    },
+    {
+      "name": "unchanged-htmlSha256",
+      "passed": true
+    },
+    {
+      "name": "protected-product-and-old-reports-unchanged",
+      "passed": true
+    },
+    {
+      "name": "exactly-two-real-model-records",
+      "passed": true
+    },
+    {
+      "name": "internal-role-not-forced",
+      "passed": true
+    },
+    {
+      "name": "formal-role-model-lineage",
+      "passed": true
+    },
+    {
+      "name": "enterprise-no-fabricated-instance",
+      "passed": true,
+      "registeredPersonalAssets": 3,
+      "enterpriseAssets": 0
+    },
+    {
+      "name": "completed-full-pytest",
+      "passed": true
+    },
+    {
+      "name": "test-collection-network-and-storage-isolated",
+      "passed": true
+    },
+    {
+      "name": "phase2-frontend",
+      "passed": true
+    },
+    {
+      "name": "phase3-frontend",
+      "passed": true
+    },
+    {
+      "name": "phase4-frontend",
+      "passed": true
+    },
+    {
+      "name": "local-free-checks",
+      "passed": true
+    },
+    {
+      "name": "browser-four-groups",
+      "passed": true
+    },
+    {
+      "name": "raw-wp1-prompt-hash",
+      "passed": true
+    },
+    {
+      "name": "public-wp1-snapshot-hash",
+      "passed": true
+    },
+    {
+      "name": "only-allowed-wp1-files",
+      "passed": true,
+      "fileCount": 33
+    },
+    {
+      "name": "no-private-binary-added",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-.env.example",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-README.md",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-phase-05-wp1-test-report.md",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-after-state.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-before-state.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-browser-preflight-failures.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-browser-private-screenshot-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-browser-smoke.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-local-smoke-harness.py",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-local-smoke-initial-failure.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-local-smoke.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-offline-bootstrap.py",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-offline-final.xml",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-offline-run-01-isolation-result.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-offline-run-01-pytest-output.redacted.txt",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-offline-run-02-incomplete-junit.txt",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-offline-run-02-interrupted-result.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-offline-run-03-incomplete-junit.txt",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-offline-run-03-isolation-result.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-offline-run-03-pytest-output.redacted.txt",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-offline-run-04-isolation-result.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-offline-run-04-pytest-output.redacted.txt",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-phase2-frontend.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-phase3-frontend.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-phase4-frontend.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-state-readback-harness.py",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-static-and-archive-check.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-static-check-harness.py",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-03-wp1-approved-user-request.txt",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-04-wp1-public-conversation.jsonl",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-05-wp1-export-metadata.json",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-README.md",
+      "passed": true
+    },
+    {
+      "name": "no-sensitive-pattern-phase-05-work-package-01.md",
+      "passed": true
+    }
+  ],
+  "paidCalls": 0,
+  "supplierCalls": 0,
+  "passed": 68,
+  "failed": 0,
+  "skipped": 0,
+  "localLinksVerified": 94
+}

@@ -1,0 +1,9 @@
+{
+  "kind": "ACTUAL_INTERRUPTED_ISOLATION_RUN",
+  "bootstrapExitCode": 3,
+  "observedMessage": "OFFLINE_FILE_BOUNDARY_BLOCKED",
+  "pytestFinalResultAvailable": false,
+  "testCounts": "UNKNOWN_NOT_CLAIMED",
+  "junitComplete": false,
+  "note": "Run03 added diagnostic/finally capture; its platform.py subprocess DEVNULL evidence explains its own failure, not a fabricated precise trace for run02."
+}

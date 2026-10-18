@@ -1,0 +1,43 @@
+{
+  "createdAt": "2026-10-18T13:05:04.184868+00:00",
+  "screenshotsStayLocal": true,
+  "scope": "WP1 smoke only; no new rendering feature or paid calls",
+  "physicalMobileTest": "NOT_EXECUTED",
+  "script": {
+    "path": "D:\\\u4eac\u5267\\.runtime\\phase5-wp1-browser-smoke.mjs",
+    "sha256": "f890cb1dff61111b6a01affdb1a550f84c1de3746827a404a3d769ebeb7c96d9"
+  },
+  "screenshots": [
+    {
+      "name": "first-internal-ready.png",
+      "bytes": 356174,
+      "sha256": "a5baa0bf8eb3ff6710a7743ba65922e33d6707686a12f84d369ff00ab53f4c60",
+      "visuallyInspected": true
+    },
+    {
+      "name": "home-1920.png",
+      "bytes": 1623130,
+      "sha256": "03a6e57109a8d529038a3c5a1bd184de91abb9eb4f12ce3228bc36a5b06b01ac",
+      "visuallyInspected": true
+    },
+    {
+      "name": "same-character-chibi-missing.png",
+      "bytes": 408196,
+      "sha256": "45ec879b7e1ab01191c20c06dbc50524294bb61e3864535838f7c8fc2b7be070",
+      "visuallyInspected": true
+    },
+    {
+      "name": "second-realistic-ready.png",
+      "bytes": 583213,
+      "sha256": "a4806e19820e8873e1e048f9c8aa88c5d067e9bbaeac3163e5febd46c80ea786",
+      "visuallyInspected": true
+    }
+  ],
+  "visualObservations": [
+    "Home retains wine-red/gold cultural layout and legible primary navigation.",
+    "Realistic character is visible with material/face/headdress/red robe/white sleeves; this is not a cultural authenticity or commercial production quality audit.",
+    "Internal Q model is visible with internal/non-public scope notice; no formal-role association added.",
+    "Missing chibi variant clears the real model and displays explicit not-generated state.",
+    "Existing first-generation/fee preparation wording remains visible; this task does not change UI code."
+  ]
+}

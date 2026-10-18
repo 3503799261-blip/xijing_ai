@@ -1,0 +1,28 @@
+{
+  "scope": "WP1 local GET preflight before Chrome smoke",
+  "dateAsiaShanghai": "2026-10-18",
+  "supplierCalls": 0,
+  "paidCalls": 0,
+  "observations": [
+    {
+      "step": "Initial sandbox GET /api/v1/health",
+      "result": "SOCKET_ACCESS_DENIED",
+      "exception": "HttpRequestException",
+      "target": "http://127.0.0.1:8000/api/v1/health",
+      "note": "Sandbox restriction; not evidence of application health failure."
+    },
+    {
+      "step": "Escalated read-only local GET before root startup",
+      "result": "CONNECTION_REFUSED",
+      "exception": "HttpRequestException",
+      "note": "No listener was reachable. Child agent did not start or stop any server."
+    },
+    {
+      "step": "Escalated local GET shortly after root reported launcher PID440",
+      "result": "CONNECTION_REFUSED",
+      "exception": "HttpRequestException",
+      "note": "Awaiting root readiness confirmation; not counted as successful browser verification."
+    }
+  ],
+  "preservedFailures": true
+}

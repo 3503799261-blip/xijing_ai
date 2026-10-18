@@ -1,0 +1,88 @@
+{
+  "kind": "OFFLINE_TEST_PROCESS_ISOLATION",
+  "pytestReturned": false,
+  "pytestExitCode": null,
+  "bootstrapExitCode": 3,
+  "runnerError": {
+    "type": "IsolationViolation",
+    "code": "OFFLINE_FILE_BOUNDARY_BLOCKED"
+  },
+  "scope": "Explicit test doubles and temporary stores only; not live provider or browser evidence.",
+  "isolation": {
+    "freshProcess": true,
+    "emptyPrivateEnv": true,
+    "emptyProviderKeys": true,
+    "realGenerationDisabled": true,
+    "temporaryRagAndModelPaths": true,
+    "moduleLevelAppIsolatedBeforeCollection": true,
+    "canonicalLedgerPathsAgreeInsideRunRoot": true,
+    "realHttpTransportsDenied": true,
+    "mockTransportsPermitted": true,
+    "productionFilesAndSqliteGuarded": true,
+    "externalPytestPluginAutoloadDisabled": true
+  },
+  "passed": 675,
+  "failedReports": 0,
+  "skippedReports": 0,
+  "collectionErrors": 0,
+  "failedNodes": [],
+  "auditCounts": {
+    "blockedFileAccess": 1,
+    "blockedSqlite": 0,
+    "blockedRealHttp": 0
+  },
+  "guardDiagnostics": [
+    {
+      "event": "open",
+      "category": "external",
+      "basename": "",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp1-offline-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp1-offline-bootstrap.py",
+          "function": "audit",
+          "line": 170
+        },
+        {
+          "file": "subprocess.py",
+          "function": "_get_devnull",
+          "line": 1135
+        },
+        {
+          "file": "subprocess.py",
+          "function": "_get_handles",
+          "line": 1334
+        },
+        {
+          "file": "subprocess.py",
+          "function": "__init__",
+          "line": 892
+        },
+        {
+          "file": "subprocess.py",
+          "function": "run",
+          "line": 548
+        },
+        {
+          "file": "subprocess.py",
+          "function": "check_output",
+          "line": 466
+        },
+        {
+          "file": "platform.py",
+          "function": "_syscmd_ver",
+          "line": 284
+        }
+      ]
+    }
+  ],
+  "outputs": {
+    "junit": "pytest.xml",
+    "terminal": "pytest-output.redacted.txt"
+  }
+}
