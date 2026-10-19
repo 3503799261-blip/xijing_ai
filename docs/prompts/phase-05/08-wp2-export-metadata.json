@@ -1,0 +1,27 @@
+{
+  "kind": "WP2_PUBLIC_SNAPSHOT_NOT_HIDDEN_REASONING",
+  "exportedAtUtc": "2026-10-19T09:51:43.182617+00:00",
+  "sourceSnapshotSha256": "7e738f49a6fb975f74bc3dfffb6180d891653c7523d4f05828aea730cdd88c76",
+  "sourceBytes": 88550976,
+  "sourcePartialLastLineOmitted": false,
+  "sourceStartLine": 11930,
+  "sourceStartTimestamp": "2026-10-19T09:23:10.855Z",
+  "sourceSnapshotLastLine": 12528,
+  "exportedRecords": 124,
+  "skipped": {
+    "event_msg": 246,
+    "token_usage_record": 75,
+    "reasoning": 60,
+    "world_state": 4,
+    "inter_agent_communication_metadata": 28,
+    "agent_message": 28,
+    "compacted": 1,
+    "turn_context": 1
+  },
+  "excludedAgentToolCalls": 218,
+  "rawPromptBytes": 17604,
+  "rawPromptSha256": "8e79bb993d29f191d281e2fdd9c3886c99d8f50387e332c9aa341d10664c8cc6",
+  "publicSnapshotSha256": "cc32d9044bd661c112e067fc2ebad986fdd54e611e079d137610d2bd7352313c",
+  "scope": "Starts at actual WP2 attachment request. Only public messages and matched tool records up to this export; later commits and final reply are not included. Credentials, signed URLs and personal paths redacted. No hidden reasoning, system/developer or internal child messages.",
+  "additionalPathRedactions": 14
+}

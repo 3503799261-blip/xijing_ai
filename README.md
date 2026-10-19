@@ -2,11 +2,11 @@
 
 在原有「梨园风华」8页京剧文化网站上建设AI戏韵工坊。前端保留HTML/CSS/原生ES Module与酒红、金色、米白视觉；Phase 2提供真实RAG问答，Phase 3加入规划、文化研究、角色设计、文化审校的真实协作与人工确认。Phase 4提供双风格资产与真实GLB查看器，已逐次批准并实际提交Q版技术模型与写实主展示模型各一次；平台图像生成仍未接入。
 
-当前状态（2026-10-18）：Phase 1～3已按各自范围验收，Phase 4已在两模型范围验收通过；Phase 5检查点A已批准，**当前仅实施WP1：项目状态校准与端到端流程**。WP2～WP5尚未执行，WP1结束后等待人工验收。当前本地分支`feature/phase5-competition-delivery`继承检查点A提交`8d5de53`，未合并main、未推送；不能假设远端克隆已包含最新本地成果。
+当前状态（2026-10-19）：Phase 1～3已按各自范围验收，Phase 4已在两模型范围验收通过；Phase 5 WP1已获用户验收，**WP2：Agent历史只读查看已实现，等待人工验收**（`PHASE_5_WP2_WAITING_ACCEPTANCE`）。WP3～WP5未执行。当前本地分支`feature/phase5-competition-delivery`保留WP1提交`f58888b`、`ea0f4fc`，未合并main、未推送；不能假设远端克隆已包含最新本地成果。
 
 两个真实Neural4D模型均已人工验收，累计实际60积分；**已用2/3、剩1未使用，第三次用户决定不执行，创建保持关闭**。平台图像生成仍未接入，现有图片来自导入。首个Q版仅内部技术用途；写实“绛绣·戏韵”为已生成主展示资产，不是每次新需求即时生成的结果。实体手机未验证。私有GLB、图片、任务及资产数据库不随Git分发，空环境只能先使用合法测试夹具验证Viewer，不能用Duck冒充京剧成品。
 
-[公开仓库](https://github.com/3503799261-blip/xijing_ai) · [Phase 4最终验收](docs/reports/phase-04-final-acceptance.md) · [WP1流程/状态/问题清单](docs/reports/phase-05-work-package-01.md) · [WP1实际测试](docs/evidence/test-results/phase-05-wp1-test-report.md)。历史阶段与测试仍由其原报告保留，不把旧状态混作当前状态。
+[公开仓库](https://github.com/3503799261-blip/xijing_ai) · [Phase 4最终验收](docs/reports/phase-04-final-acceptance.md) · [WP1流程/状态/问题清单](docs/reports/phase-05-work-package-01.md) · [WP2报告](docs/reports/phase-05-work-package-02.md) · [WP2实际测试](docs/evidence/test-results/phase-05-wp2-test-report.md)。历史阶段与测试仍由其原报告保留，不把旧状态混作当前状态。
 
 ## 已准备本机：免费启动与已有成果
 
@@ -18,11 +18,12 @@ Set-Location -LiteralPath 'D:\京剧\京剧'
 ```
 
 - [首页](http://127.0.0.1:8000/index.html)、[AI工坊](http://127.0.0.1:8000/about.html)。同一8000端口提供安全静态资源与API，不用`file://`或把整个仓库公开的静态服务器。
+- [Agent历史档案](http://127.0.0.1:8000/about.html#ai-workshop-history)：在协作区点击“读取历史记录”，按状态、类型或完整任务ID筛选。查看详情、阶段公开产物、引用、文化审校、人审和事件均只发GET，不重跑任务、不恢复实时监控。详情中的资产入口只打开已有模型。
 - [已有写实模型](http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model)：只GET已登记资产/GLB；绛绣切Q版会诚实显示未生成，不会取别人的Q版模型。
 - [内部Q版技术Viewer](http://127.0.0.1:8000/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer)：仅loopback/内部用途，没有正式角色关联，不用于公开或商用交付。
 - [health](http://127.0.0.1:8000/api/v1/health)、[capabilities](http://127.0.0.1:8000/api/v1/capabilities)、[全局额度](http://127.0.0.1:8000/api/v1/assets/usage)：本地免费读取；问答“就绪”包含既往探测/配置指纹状态，不是实时余额/外网连通测试。
 
-启动会初始化本地库并处理已有中断状态，不是纯只读操作，但不会自动重新执行Agent或建模。停止时在启动终端按Ctrl+C，等进程退出；不要删除owner锁或强开第二个worker。**WP1不发送问答、不提交Agent，不运行任何供应商探测、建模或图像生成工具。**
+启动会初始化本地库并处理已有中断状态，不是纯只读操作，但不会自动重新执行Agent或建模。停止时在启动终端按Ctrl+C，等进程退出；不要删除owner锁或强开第二个worker。**WP1/WP2均不发送问答、不提交Agent，不运行任何供应商探测、建模或图像生成工具。**
 
 ## 架构与数据边界
 
@@ -162,6 +163,21 @@ Agent模块管理严格JSON交接、任务SQLite、单消费者与独占进程�
 
 刷新只恢复task ID并免费查询，不重新提交。重启保留已完成/待确认任务；意外中断的运行任务标失败且不重发模型。调整需求明确创建新任务，关联前一任务、保留历史。只使用一个worker；索引锁与Agent任务锁分别保护数据和调度。任务数据库与两级预算账本均位于仓库外RAG_DATA_DIR。
 
+### WP2：读取持久化历史
+
+历史档案独立于实时创作控制器。先进入[历史档案](http://127.0.0.1:8000/about.html#ai-workshop-history)，手动读取；列表默认每页10条，详情事件默认每页30条。筛选条件变化后点击查询，上一页/下一页沿用上次已提交条件。缺少详细输入、产物或时间会显示“历史记录未保存该信息”，不自动补写。历史状态始终标为记录状态，不播放过去事件冒充实时执行。
+
+| 方法/接口 | 只读行为 |
+|---|---|
+| GET /api/v1/agent/history | page/pageSize（最多50）、state、taskType、taskId；创建时间倒序及ID稳定排序，只返回摘要 |
+| GET /api/v1/agent/history/{taskId} | 已保存公开产物、RAG引用、角色JSON、审校、人审、分页事件及明确资产关联；eventPage/eventPageSize（最多100） |
+
+读库使用独立SQLite `mode=ro`、`query_only`事务；不调用任务执行/恢复服务。两接口无缓存；只展示受限公开字段，正文按文本渲染，凭证、内部路径、隐藏思考及URL查询参数不会作为历史内容返回。当前项目仅有本机可信使用边界，没有新建跨用户权限系统，不能据此直接公开部署历史接口。
+
+本机实际22任务/194事件，其中16条带持久化评测标识；这些是已有执行记录，不是本次生成，也不把评测记录称为独立供应商认证。单个阶段的完整请求输入没有保存。任务类型`character_creation`按既有工作流派生，开始/结束仅取已有事件，缺失则未知。新克隆没有这些私有数据库时不造历史；空库显示无记录，无法读取显示错误。
+
+示例完整任务ID：`ca7007e7-e535-4b1f-a9b6-1932f10e20b4`（绛绣·戏韵）。其详情只链接已关联的写实资产；内部Q版没有正式角色关联，不会借用。目录中的测试GLB会标“测试夹具”，不按目录数量宣称真实模型数量。完整数据盘点、API、测试边界及不变性证据见[WP2报告](docs/reports/phase-05-work-package-02.md)。
+
 Phase 3历史检查：后端213项；Agent前端25项、原问答前端25项离线检查；真实HTTP API14项；8页/62资源及6个受保护路径；桌面/手机模拟浏览器。16次脚本工作流加4次浏览器创作包含失败与暂停，不能称20个成功方案或独立盲测。该阶段“武生约4秒、待确认”描述的是当时任务，不是今日重新执行。见[历史浏览器报告](docs/evidence/test-results/phase-03/browser-test-report.md)、[Agent架构](docs/architecture/phase-03-agents.md)、[真实案例汇总](docs/evidence/test-results/phase-03/real-cases-summary.json)。
 
 ```powershell
@@ -280,7 +296,7 @@ Phase 3实际40次供应商请求、39986 tokens，增量保守估算 **0.107774
 
 Phase 1真实历史、备份与截图保留，见 [阶段报告](docs/reports/phase-01.md)。Phase 2方案、批准Prompt、真实工具过程、参数改动、失败与修复归档在docs；协作导出排除秘密与隐藏推理，不补造对话。历史报告描述的是当时状态，不能当作当前能力证明。
 
-当前Phase 4两模型范围已验收，Phase 5仅WP1获准；README与运行路径说明已按此校准。WP1不是新历史入口/比赛导览/完整最终测试或交付包，后续工作包须逐项验收后另行开展。正文现有页面中的少量“首次建模”等旧文案已列问题清单，本次不扩展修改UI。
+当前Phase 4两模型范围已验收，WP1已验收；WP2完成历史只读入口并等待验收。比赛导览、完整最终测试包和交付材料仍待后续工作包逐项批准。正文现有页面中的少量“首次建模”等旧文案保留在问题清单，本次不扩展修改。
 
 ### 第1次内部真实模型恢复（2026-10-13）
 
@@ -303,7 +319,7 @@ Phase 1真实历史、备份与截图保留，见 [阶段报告](docs/reports/ph
 | localhost/127.0.0.1连接拒绝 | 先确认本服务已startup complete，访问同源8000；检查端口归属，不重复启动、不杀未知进程 |
 | 知识未就绪/锁冲突 | 检查active.json指向的generation、BGE缓存和单worker；独立入库/评价前先停止应用，不删除锁强开 |
 | API Key/鉴权/网络/预算错误 | 显示真实错误，不用固定回答替代；本轮不做付费探测；历史JSON/已有GLB可以独立查看 |
-| 新会话看不到旧Agent任务 | 目前只从sessionStorage恢复；便捷历史ID入口属WP2，不能通过重新提交来冒充恢复 |
+| 新会话看不到旧Agent任务 | 到Agent历史档案手动读取或按完整ID筛选；这不会恢复实时控制器或重跑任务。无对应私有库时如实显示空/错误 |
 | 缺真实资产或某风格无模型 | 核对catalog与本地文件；无授权资产包时明确缺失，不自动生成，合法Duck仅技术夹具 |
 | GLB Error | 核对Hash和已登记资源，显式重载原文件；不能重跑Neural4D或关掉验证门禁 |
 | 手机访问内部模型失败 | 内部Q版限定loopback，后端也绑定127.0.0.1；实体设备尚未验收，不为测试解除此边界 |
@@ -312,6 +328,6 @@ Phase 1真实历史、备份与截图保留，见 [阶段报告](docs/reports/ph
 
 ## 阶段证据索引
 
-[Phase 1](docs/reports/phase-01.md) · [Phase 2](docs/reports/phase-02.md) · [Phase 3](docs/reports/phase-03.md) · [Phase 4最终](docs/reports/phase-04-final-acceptance.md) · [Phase 5检查点A](docs/reports/phase-05-project-audit.md) · [WP1](docs/reports/phase-05-work-package-01.md)。
+[Phase 1](docs/reports/phase-01.md) · [Phase 2](docs/reports/phase-02.md) · [Phase 3](docs/reports/phase-03.md) · [Phase 4最终](docs/reports/phase-04-final-acceptance.md) · [Phase 5检查点A](docs/reports/phase-05-project-audit.md) · [WP1](docs/reports/phase-05-work-package-01.md) · [WP2](docs/reports/phase-05-work-package-02.md)。
 
 真实协作与Prompt：[Phase 1](docs/prompts/phase-01/README.md)、[Phase 2](docs/prompts/phase-02/README.md)、[Phase 3](docs/prompts/phase-03/README.md)、[Phase 4](docs/prompts/phase-04/README.md)、[Phase 5](docs/prompts/phase-05/README.md)。不把摘要冒充原始对话，不删除失败记录；历史报告中的当时状态须结合日期阅读。

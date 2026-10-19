@@ -1,6 +1,6 @@
 # Phase 5 · 检查点A真实Prompt与方案记录
 
-更新日期：2026-10-18（Asia/Shanghai）。**用户已批准检查点A，但本轮仅授权WP1。当前状态：`PHASE_5_WP1_WAITING_ACCEPTANCE`。** 第1～6节保留检查点A当时的记录与边界，不能理解为现在尚未批准；本次真实WP1执行见第7节，不自动进入WP2。
+更新日期：2026-10-19（Asia/Shanghai）。**用户已验收WP1，并通过完整附件明确批准WP2。当前状态：`PHASE_5_WP2_WAITING_ACCEPTANCE`。** 第1～6节保留检查点A当时记录，第7节保留WP1当时的执行/停止点；本轮WP2见第8节。旧停止文字不代表后来未获批准，不自动进入WP3。
 
 ## 1. 本次原文及公开快照
 
@@ -83,3 +83,32 @@
 6. 前后台与4个原始/兼容模型Hash核对；生产真实HTTP仍18条、LLM仍107条、已用2/3剩1、创建关闭。没有复制Key/GLB到Git，没有安装依赖或新建模型。
 
 当前用户需要验收WP1；只有验收并下达下一工作包指令后才继续。后续Prompt规划仍按第5节记录真实发生的事项，不预造WP2批准、Bug或测试。
+
+## 8. WP2批准后的真实实施与验收等待
+
+第7节最后一段为WP1归档当时状态。用户后来以完整附件明确“已验收通过WP1，并正式授权开始WP2”，本轮只实施历史只读查询/展示、测试及归档；不进入WP3，不调用付费API。
+
+| 本轮文件 | 实际内容 |
+|---|---|
+| [06-wp2-approved-user-request.txt](06-wp2-approved-user-request.txt) | 用户WP2附件逐字节原文，不补造用户批准或反馈 |
+| [07-wp2-public-conversation.jsonl](07-wp2-public-conversation.jsonl) | 从本轮真实附件消息开始的公开协作时间快照；排除隐藏推理、系统/开发者及内部子Agent消息，凭证/签名链接/个人路径脱敏 |
+| [08-wp2-export-metadata.json](08-wp2-export-metadata.json) | 实际导出时间/范围/记录数/Hash；导出后的提交或回复不冒充已纳入 |
+| [WP2报告](../../reports/phase-05-work-package-02.md) | 真实数据盘点、只读API/UI、边界、资产关系、完成标准及停止点 |
+| [WP2测试报告](../../evidence/test-results/phase-05-wp2-test-report.md) | 698后端、34新前端、25/25/36原前端、190本地HTTP、浏览器及全表不变性；失败与复测分别保留 |
+
+原始附件副本SHA-256：`8e79bb993d29f191d281e2fdd9c3886c99d8f50387e332c9aa341d10664c8cc6`。公开快照不是原始会话全量，不复制含早期撤销密钥的整份历史日志。
+
+实际工程演进（工程摘要，不伪装用户原话）：
+
+1. 核对原分支与`ea0f4fc`干净起点、WP1两提交祖先；只读盘点22任务/88步骤/59产物/194事件及四个真实原始/兼容文件，建立完整18业务表before快照。
+2. 原TaskStore读连接仍包含写初始化语义，因此新增小型`HistoryReader`，SQLite mode=ro/query_only+事务，GET列表/详情均不调用执行器，不改持久化Schema。
+3. 独立历史CSS/JS挂接about局部，不接实时控制器、不写sessionStorage或回放SSE；按真实ID关联写实资产，测试模型独立标来源，内部Q版不嫁接角色。
+4. 联查修正产物版本number/null、缺step/event返回、双向分页的已提交条件；交叉审查把“完整”限定为事件序列与阶段记录，缺输入仍明确说明。安全渲染仅textContent。
+5. 专项首次沙箱TestClient停滞终止，完整复测23通过；收集前严格隔离全量698通过。没有因Windows权限问题放宽产品安全或跳过测试。
+6. HTTP两次连接失败保留，服务startup complete后190检查40 GET通过；浏览器首轮3/6、次轮5/6均为辅助选择器错误，定位锚点/折叠输入/空提示区后第三和最终6/6。没有为全绿虚构产品Bug或改生产历史。
+7. 原前端25/25/36及新34项通过；两个原GLB写实325.9°、Q版453.7°，缩放/重置/缺风格恢复通过；手机仅模拟，未声称实体测试或重跑付费AI。
+8. after全表对比一致，LLM107、Neural4D操作18、60历史积分与2/3余1不变；四个模型Hash不变。第三取消、创建关闭，外部/付费/新增建模均0。
+
+实际产品/测试提交：`9e3516dc6a7ada53d067a929383c5225368e902d`（`feat(phase5): add read-only agent history`）。测试报告/证据提交：`f8a1f47126b1104f1f004a4d4a62ba6fc4ad582f`（`test(phase5): archive history regression and invariants`）。最终文档归档提交和工作区状态以实际Git/最终回复为准，不自造尚未存在Hash。没有合并或推送。
+
+当前交付为`PHASE_5_WP2_WAITING_ACCEPTANCE`。等待用户人工验收；WP3导览与降级、后续交付材料及付费联测没有被本轮批准。
