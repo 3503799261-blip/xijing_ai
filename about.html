@@ -10,6 +10,7 @@
     </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/ai-workshop.css?v=phase4-1">
+    <link rel="stylesheet" href="css/ai-workshop-history.css?v=phase5-wp2-1">
   </head>
   <body>
     <header class="site-header">
@@ -155,6 +156,7 @@
             <span class="ai-workshop-kicker">各司其职 · 共成一戏</span>
             <h2 id="ai-workshop-agents-heading" class="ai-workshop-heading" tabindex="-1">多Agent协作工作台</h2>
             <p class="ai-workshop-description">规划先行、文化为据、创意表达、审校把关。每个阶段交接结构化产物，状态和摘要来自后端真实任务。</p>
+            <a class="ai-workshop-text-link" href="#ai-workshop-history">查看真实历史记录（只读） ↓</a>
           </div>
           <div class="ai-workshop-progress ai-workshop-agent-progress">
             <span id="ai-workshop-agent-service-state" class="ai-workshop-badge ai-workshop-badge-unavailable" data-ai-workshop-agent-capability>协作服务待检查</span>
@@ -218,6 +220,24 @@
             <small class="ai-workshop-description">以上为状态含义示意，非实时执行记录。</small>
             <details class="ai-workshop-details"><summary>查看真实任务事件</summary><p>仅记录公开阶段状态与摘要，不显示模型隐藏思维过程；最多保留本页面最近50条。</p><ol id="ai-workshop-agent-events" class="ai-workshop-agent-events"></ol></details>
           </div>
+          <section id="ai-workshop-history" class="ai-workshop-card ai-workshop-history" aria-labelledby="ai-workshop-history-heading" data-history-source="persisted_history">
+            <div class="ai-workshop-card-header"><h3 id="ai-workshop-history-heading">Agent历史档案</h3><span class="ai-workshop-badge">真实持久化记录 · 只读快照</span></div>
+            <p class="ai-workshop-description">手动读取本地已保存的任务、公开阶段产物与文化依据。这里不重跑Agent、不确认或取消任务，也不创建角色及模型。历史中的“运行中”仅是记录状态，非实时监控。</p>
+            <form id="ai-workshop-history-form" class="ai-workshop-history-filters" novalidate>
+              <div><label class="ai-workshop-label" for="ai-workshop-history-state">记录状态</label><select id="ai-workshop-history-state" class="ai-workshop-input"><option value="">全部状态</option></select></div>
+              <div><label class="ai-workshop-label" for="ai-workshop-history-type">任务类型</label><select id="ai-workshop-history-type" class="ai-workshop-input"><option value="">全部类型</option><option value="character_creation">角色创作</option></select></div>
+              <div><label class="ai-workshop-label" for="ai-workshop-history-task-id">精确任务ID</label><input id="ai-workshop-history-task-id" class="ai-workshop-input" maxlength="128" autocomplete="off" placeholder="选填已保存的完整任务ID"></div>
+              <button id="ai-workshop-history-load" class="ai-workshop-button ai-workshop-button-secondary" type="submit">读取历史记录</button>
+            </form>
+            <p id="ai-workshop-history-status" class="ai-workshop-feedback" role="status" aria-live="polite">尚未读取历史记录。点击“读取历史记录”进行免费只读查询。</p>
+            <div id="ai-workshop-history-list" class="ai-workshop-history-list" aria-label="历史任务列表" aria-busy="false"></div>
+            <div class="ai-workshop-history-pagination"><button id="ai-workshop-history-prev" class="ai-workshop-text-link" type="button" disabled>上一页</button><span id="ai-workshop-history-page">尚无分页</span><button id="ai-workshop-history-next" class="ai-workshop-text-link" type="button" disabled>下一页</button></div>
+            <article id="ai-workshop-history-detail" class="ai-workshop-history-detail" aria-labelledby="ai-workshop-history-detail-heading" hidden>
+              <h4 id="ai-workshop-history-detail-heading" tabindex="-1">历史任务详情</h4>
+              <p id="ai-workshop-history-detail-status" class="ai-workshop-feedback" role="status" aria-live="polite"></p>
+              <div id="ai-workshop-history-detail-content" aria-busy="false"></div>
+            </article>
+          </section>
         </section>
 
         <section id="ai-workshop-create" class="ai-workshop-panel" data-ai-workshop-panel="create" aria-labelledby="ai-workshop-create-heading">

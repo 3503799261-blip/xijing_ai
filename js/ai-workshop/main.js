@@ -65,6 +65,7 @@ function initializeWorkshop() {
   window.addEventListener('resize', updateScrollOffset);
 
   const panelFromHash = () => {
+    if (window.location.hash === '#ai-workshop-history') return 'agents';
     const match = window.location.hash.match(/^#ai-workshop-(overview|qa|agents|create|model)$/);
     if (match) return match[1];
     if (!window.location.hash || window.location.hash === '#ai-workshop') return 'overview';
@@ -403,6 +404,13 @@ function initializeWorkshop() {
     notice.textContent = 'Agent界面未能初始化，请刷新后重试。京剧问答和页面内草稿仍可使用。';
     notice.hidden = false;
   }
+  // Historical snapshots are isolated from the live workflow controller and never restore an active task.
+  void import('./agent-history.js?v=phase5-wp2-1').then(({ initializeAgentHistory }) => {
+    initializeAgentHistory({ root });
+  }).catch(() => {
+    const historyStatus = root.querySelector('#ai-workshop-history-status');
+    if (historyStatus) historyStatus.textContent = '历史档案暂时无法初始化，请刷新页面后重试；现有工作台不受影响。';
+  });
   // Asset/viewer initialization failures are isolated from existing QA and Agent modules.
   void import('./digital-assets.js?v=phase4-1').then(({ initializeDigitalAssets }) => {
     assetController = initializeDigitalAssets({ root, selectPanel });

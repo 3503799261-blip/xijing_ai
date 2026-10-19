@@ -1,9 +1,10 @@
 """HTTP task API, with no model work in status/result reads."""
 from typing import Literal
 from uuid import UUID
-from fastapi import APIRouter, Query, Request
+from fastapi import APIRouter, Query, Request, Response
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from ..errors import ServiceError
+from ..agents.history import HistoryReader
 
 MAX_SEQUENCE = (1 << 63) - 1
 
@@ -32,8 +33,28 @@ class CancelRequest(BaseModel):
 
 def register_agents(app, supervisor):
     router = APIRouter(prefix='/api/v1/agent')
+    history = HistoryReader(supervisor.store.path, supervisor.store.path.parent / 'assets' / 'catalog.sqlite3')
     def status(task_id, request, after=0):
         return {**supervisor.store.status(task_id, after), 'requestId': request.state.request_id}
+
+    @router.get('/history')
+    def task_history(request: Request, response: Response,
+                     page: int = Query(default=1, ge=1, le=100000),
+                     pageSize: int = Query(default=10, ge=1, le=50),
+                     state: str | None = Query(default=None, min_length=1, max_length=64),
+                     taskType: str | None = Query(default=None, min_length=1, max_length=64),
+                     taskId: str | None = Query(default=None, min_length=1, max_length=128)):
+        response.headers['Cache-Control'] = 'no-store'
+        return {**history.list(page, pageSize, state, taskType, taskId), 'requestId': request.state.request_id}
+
+    @router.get('/history/{task_id}')
+    def task_history_detail(task_id: str, request: Request, response: Response,
+                            eventPage: int = Query(default=1, ge=1, le=100000),
+                            eventPageSize: int = Query(default=30, ge=1, le=100)):
+        response.headers['Cache-Control'] = 'no-store'
+        if len(task_id) > 128:
+            raise ServiceError('AGENT_TASK_NOT_FOUND', '未找到这个历史任务，请检查任务标识。', 404)
+        return {**history.detail(task_id, eventPage, eventPageSize), 'requestId': request.state.request_id}
 
     @router.post('/create', status_code=202)
     async def create(data: CreateRequest, request: Request):
