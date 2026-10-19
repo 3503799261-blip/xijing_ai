@@ -1,0 +1,1061 @@
+{
+  "kind": "WP2_ACTUAL_LOCAL_GET_AND_READONLY_SQLITE",
+  "startedAtUtc": "2026-10-19T09:53:47.066434+00:00",
+  "checks": [
+    {
+      "name": "HTTP /api/v1/agent/history?page=1&pageSize=5",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "real-task-count",
+      "passed": true,
+      "taskCount": 22
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?page=2&pageSize=5",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?page=3&pageSize=5",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?page=4&pageSize=5",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?page=5&pageSize=5",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stable-page-order-and-no-duplicates",
+      "passed": true
+    },
+    {
+      "name": "summary-has-no-full-artifacts",
+      "passed": true
+    },
+    {
+      "name": "all-marked-readonly-history",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?pageSize=50&state=awaiting_confirmation",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "status-filter-awaiting_confirmation",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?pageSize=50&state=cancelled",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "status-filter-cancelled",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?pageSize=50&state=completed",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "status-filter-completed",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?pageSize=50&state=failed",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "status-filter-failed",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?taskType=character_creation&pageSize=50",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "actual-single-task-type",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?taskId=00000000-0000-0000-0000-000000000000",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "missing-id-list-empty",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/00000000-0000-0000-0000-000000000000",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?pageSize=51",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?state=imaginary",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "unknown-state-empty-not-invented",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history?taskType=imaginary",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "unknown-type-empty-not-invented",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "passed": true
+    },
+    {
+      "name": "saved-design-name-ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "passed": true
+    },
+    {
+      "name": "realistic-role-model-association",
+      "passed": true
+    },
+    {
+      "name": "internal-chibi-not-misassigned",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/a2a43828-773f-4f81-8908-5ff762ced750?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-a2a43828-773f-4f81-8908-5ff762ced750",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-a2a43828-773f-4f81-8908-5ff762ced750",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-a2a43828-773f-4f81-8908-5ff762ced750",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-a2a43828-773f-4f81-8908-5ff762ced750",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/1a18ff2c-93bb-47fb-8060-3de45378a721?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-1a18ff2c-93bb-47fb-8060-3de45378a721",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-1a18ff2c-93bb-47fb-8060-3de45378a721",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-1a18ff2c-93bb-47fb-8060-3de45378a721",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-1a18ff2c-93bb-47fb-8060-3de45378a721",
+      "passed": true
+    },
+    {
+      "name": "saved-design-name-1a18ff2c-93bb-47fb-8060-3de45378a721",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/8055928d-6279-4258-a2f5-23abeaad9308?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-8055928d-6279-4258-a2f5-23abeaad9308",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-8055928d-6279-4258-a2f5-23abeaad9308",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-8055928d-6279-4258-a2f5-23abeaad9308",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-8055928d-6279-4258-a2f5-23abeaad9308",
+      "passed": true
+    },
+    {
+      "name": "saved-design-name-8055928d-6279-4258-a2f5-23abeaad9308",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/e9e5929f-546b-4e92-878a-6fc43e4becdf?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-e9e5929f-546b-4e92-878a-6fc43e4becdf",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-e9e5929f-546b-4e92-878a-6fc43e4becdf",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-e9e5929f-546b-4e92-878a-6fc43e4becdf",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-e9e5929f-546b-4e92-878a-6fc43e4becdf",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/dcd4d353-ebce-446d-a284-632be8f29736?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-dcd4d353-ebce-446d-a284-632be8f29736",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-dcd4d353-ebce-446d-a284-632be8f29736",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-dcd4d353-ebce-446d-a284-632be8f29736",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-dcd4d353-ebce-446d-a284-632be8f29736",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/75783c7e-d83a-4129-8e7d-5d9482df05f9?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-75783c7e-d83a-4129-8e7d-5d9482df05f9",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-75783c7e-d83a-4129-8e7d-5d9482df05f9",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-75783c7e-d83a-4129-8e7d-5d9482df05f9",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-75783c7e-d83a-4129-8e7d-5d9482df05f9",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/174e97bf-4df1-4970-83e0-108afc81ec73?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-174e97bf-4df1-4970-83e0-108afc81ec73",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-174e97bf-4df1-4970-83e0-108afc81ec73",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-174e97bf-4df1-4970-83e0-108afc81ec73",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-174e97bf-4df1-4970-83e0-108afc81ec73",
+      "passed": true
+    },
+    {
+      "name": "saved-design-name-174e97bf-4df1-4970-83e0-108afc81ec73",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/1b61f794-f3e8-498e-9bc3-c6f832ef6aa7?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-1b61f794-f3e8-498e-9bc3-c6f832ef6aa7",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-1b61f794-f3e8-498e-9bc3-c6f832ef6aa7",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-1b61f794-f3e8-498e-9bc3-c6f832ef6aa7",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-1b61f794-f3e8-498e-9bc3-c6f832ef6aa7",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/0b771020-036f-4e68-96e8-1d9289e00bf3?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "passed": true
+    },
+    {
+      "name": "saved-design-name-0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/25086162-e04d-4ce8-8077-913b1f4b191a?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-25086162-e04d-4ce8-8077-913b1f4b191a",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-25086162-e04d-4ce8-8077-913b1f4b191a",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-25086162-e04d-4ce8-8077-913b1f4b191a",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-25086162-e04d-4ce8-8077-913b1f4b191a",
+      "passed": true
+    },
+    {
+      "name": "saved-design-name-25086162-e04d-4ce8-8077-913b1f4b191a",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/27e165c1-24fc-4eea-8e53-c595fbd0cce0?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-27e165c1-24fc-4eea-8e53-c595fbd0cce0",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-27e165c1-24fc-4eea-8e53-c595fbd0cce0",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-27e165c1-24fc-4eea-8e53-c595fbd0cce0",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-27e165c1-24fc-4eea-8e53-c595fbd0cce0",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/8317c2f1-1bf2-4927-b811-047da0e320b1?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-8317c2f1-1bf2-4927-b811-047da0e320b1",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-8317c2f1-1bf2-4927-b811-047da0e320b1",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-8317c2f1-1bf2-4927-b811-047da0e320b1",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-8317c2f1-1bf2-4927-b811-047da0e320b1",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/fd51edb9-7dc7-4607-8cb8-bdcaa9251d44?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/5dc6d493-5607-4964-b62f-23675ddb6503?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-5dc6d493-5607-4964-b62f-23675ddb6503",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-5dc6d493-5607-4964-b62f-23675ddb6503",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-5dc6d493-5607-4964-b62f-23675ddb6503",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-5dc6d493-5607-4964-b62f-23675ddb6503",
+      "passed": true
+    },
+    {
+      "name": "saved-design-name-5dc6d493-5607-4964-b62f-23675ddb6503",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/5e33473b-ab53-4e38-a578-3206d1d6ef37?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-5e33473b-ab53-4e38-a578-3206d1d6ef37",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-5e33473b-ab53-4e38-a578-3206d1d6ef37",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-5e33473b-ab53-4e38-a578-3206d1d6ef37",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-5e33473b-ab53-4e38-a578-3206d1d6ef37",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/0a808e2b-182e-4457-b0bb-5e4f39a66263?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "passed": true
+    },
+    {
+      "name": "saved-design-name-0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/3658476f-6e36-4b23-9f3b-7f1488d043cf?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-3658476f-6e36-4b23-9f3b-7f1488d043cf",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-3658476f-6e36-4b23-9f3b-7f1488d043cf",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-3658476f-6e36-4b23-9f3b-7f1488d043cf",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-3658476f-6e36-4b23-9f3b-7f1488d043cf",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/92ec4d81-7853-4b54-9ca3-978bab642f11?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/0f997418-f27c-4c29-a615-6f69168e0e92?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-0f997418-f27c-4c29-a615-6f69168e0e92",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-0f997418-f27c-4c29-a615-6f69168e0e92",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-0f997418-f27c-4c29-a615-6f69168e0e92",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-0f997418-f27c-4c29-a615-6f69168e0e92",
+      "passed": true
+    },
+    {
+      "name": "saved-design-name-0f997418-f27c-4c29-a615-6f69168e0e92",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/ecf0770b-f059-492d-9028-86cbebaa66d3?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-ecf0770b-f059-492d-9028-86cbebaa66d3",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-ecf0770b-f059-492d-9028-86cbebaa66d3",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-ecf0770b-f059-492d-9028-86cbebaa66d3",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-ecf0770b-f059-492d-9028-86cbebaa66d3",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/7f61a8d8-8300-4332-9947-8e1e2cabadbf?eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "stored-state-7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "passed": true
+    },
+    {
+      "name": "saved-agent-order-7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "passed": true
+    },
+    {
+      "name": "bounded-real-events-7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "passed": true
+    },
+    {
+      "name": "missing-input-not-reconstructed-7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "passed": true
+    },
+    {
+      "name": "saved-design-name-7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4?eventPage=1&eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4?eventPage=2&eventPageSize=2",
+      "passed": true
+    },
+    {
+      "name": "history-no-store",
+      "passed": true
+    },
+    {
+      "name": "detail-event-pagination",
+      "passed": true
+    },
+    {
+      "name": "HTTP /api/v1/assets/usage",
+      "passed": true
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?page=1&pageSize=5",
+      "status": 200,
+      "elapsedMs": 49.71
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?page=2&pageSize=5",
+      "status": 200,
+      "elapsedMs": 7.12
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?page=3&pageSize=5",
+      "status": 200,
+      "elapsedMs": 6.27
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?page=4&pageSize=5",
+      "status": 200,
+      "elapsedMs": 18.0
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?page=5&pageSize=5",
+      "status": 200,
+      "elapsedMs": 5.05
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?pageSize=50&state=awaiting_confirmation",
+      "status": 200,
+      "elapsedMs": 30.33
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?pageSize=50&state=cancelled",
+      "status": 200,
+      "elapsedMs": 26.25
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?pageSize=50&state=completed",
+      "status": 200,
+      "elapsedMs": 14.19
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?pageSize=50&state=failed",
+      "status": 200,
+      "elapsedMs": 4.41
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?taskType=character_creation&pageSize=50",
+      "status": 200,
+      "elapsedMs": 8.97
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?taskId=00000000-0000-0000-0000-000000000000",
+      "status": 200,
+      "elapsedMs": 18.67
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/00000000-0000-0000-0000-000000000000",
+      "status": 404,
+      "elapsedMs": 14.97
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?pageSize=51",
+      "status": 422,
+      "elapsedMs": 2.43
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?state=imaginary",
+      "status": 200,
+      "elapsedMs": 4.64
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history?taskType=imaginary",
+      "status": 200,
+      "elapsedMs": 25.0
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 35.29
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/a2a43828-773f-4f81-8908-5ff762ced750?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 28.9
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/1a18ff2c-93bb-47fb-8060-3de45378a721?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 35.83
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/8055928d-6279-4258-a2f5-23abeaad9308?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 13.59
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/e9e5929f-546b-4e92-878a-6fc43e4becdf?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 5.68
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/dcd4d353-ebce-446d-a284-632be8f29736?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 7.93
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/75783c7e-d83a-4129-8e7d-5d9482df05f9?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 31.46
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/174e97bf-4df1-4970-83e0-108afc81ec73?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 16.71
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/1b61f794-f3e8-498e-9bc3-c6f832ef6aa7?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 25.63
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/0b771020-036f-4e68-96e8-1d9289e00bf3?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 38.28
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/25086162-e04d-4ce8-8077-913b1f4b191a?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 14.79
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/27e165c1-24fc-4eea-8e53-c595fbd0cce0?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 26.69
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/8317c2f1-1bf2-4927-b811-047da0e320b1?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 31.27
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/fd51edb9-7dc7-4607-8cb8-bdcaa9251d44?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 32.08
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/5dc6d493-5607-4964-b62f-23675ddb6503?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 37.34
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/5e33473b-ab53-4e38-a578-3206d1d6ef37?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 20.07
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/0a808e2b-182e-4457-b0bb-5e4f39a66263?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 18.88
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/3658476f-6e36-4b23-9f3b-7f1488d043cf?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 34.61
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/92ec4d81-7853-4b54-9ca3-978bab642f11?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 195.61
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/0f997418-f27c-4c29-a615-6f69168e0e92?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 45.54
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/ecf0770b-f059-492d-9028-86cbebaa66d3?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 45.22
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/7f61a8d8-8300-4332-9947-8e1e2cabadbf?eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 33.9
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4?eventPage=1&eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 22.63
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4?eventPage=2&eventPageSize=2",
+      "status": 200,
+      "elapsedMs": 33.44
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/usage",
+      "status": 200,
+      "elapsedMs": 5.51
+    }
+  ],
+  "paidCalls": 0,
+  "supplierCalls": 0,
+  "showcase": {
+    "taskId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+    "roleName": "绛绣·戏韵",
+    "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+    "modelIds": [
+      "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+    ]
+  },
+  "usage": {
+    "projectId": "xijing-ai-neural4d-project-v4",
+    "policyVersion": "phase4-generation-attempts-v4",
+    "max_creation_attempts": 3,
+    "max_models": 3,
+    "modelCount": 1,
+    "historicalUsageVerified": true,
+    "historical_used_attempts": 0,
+    "used_attempts": 2,
+    "reserved_attempts": 0,
+    "occupied_attempts": 2,
+    "remaining_attempts": 1,
+    "attemptStates": {
+      "SUCCEEDED": 2
+    },
+    "creationHalted": false,
+    "haltCode": null,
+    "automaticGenerationRetry": false,
+    "creationPaused": false,
+    "pauseCode": null,
+    "unreconciled_attempts": 0,
+    "realHttpRequests": 18,
+    "mockHttpRequests": 0,
+    "recordedActualCredits": 60.0,
+    "max_calls": 3,
+    "used_calls": 2,
+    "remaining_calls": 1,
+    "history_verified": true,
+    "realEnabled": false,
+    "providerConfigured": true,
+    "protocolVerified": false,
+    "readiness": [
+      "真实建模默认关闭；本次开发授权不等于单次真实建模授权。",
+      "需逐次人工确认、后端鉴权、费用及已核实的历史额度。"
+    ],
+    "imageGenerationConfigured": false,
+    "requestId": "bb764947-7554-4c1d-86fb-8b9207d01f11"
+  },
+  "finishedAtUtc": "2026-10-19T09:53:48.145677+00:00",
+  "passed": 190,
+  "failed": 0,
+  "skipped": 0
+}

@@ -1,0 +1,1031 @@
+{
+  "kind": "WP2_REAL_LOCAL_BROWSER_WITH_EXPLICIT_SEPARATE_FAULT_FIXTURES",
+  "startedAt": "2026-10-19T09:43:25.990Z",
+  "tests": [
+    {
+      "name": "eight-existing-pages",
+      "kind": "REAL_LOCAL",
+      "passed": true,
+      "pages": [
+        {
+          "name": "index",
+          "status": 200,
+          "badImages": 0,
+          "nav": true,
+          "overflow": false
+        },
+        {
+          "name": "history",
+          "status": 200,
+          "badImages": 0,
+          "nav": true,
+          "overflow": false
+        },
+        {
+          "name": "roles",
+          "status": 200,
+          "badImages": 0,
+          "nav": true,
+          "overflow": false
+        },
+        {
+          "name": "facial",
+          "status": 200,
+          "badImages": 0,
+          "nav": true,
+          "overflow": false
+        },
+        {
+          "name": "music",
+          "status": 200,
+          "badImages": 0,
+          "nav": true,
+          "overflow": false
+        },
+        {
+          "name": "video",
+          "status": 200,
+          "badImages": 0,
+          "nav": true,
+          "overflow": false
+        },
+        {
+          "name": "gallery",
+          "status": 200,
+          "badImages": 0,
+          "nav": true,
+          "overflow": false
+        },
+        {
+          "name": "about",
+          "status": 200,
+          "badImages": 0,
+          "nav": true,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "real-history-list-pagination-detail-and-assets",
+      "kind": "REAL_LOCAL",
+      "passed": true,
+      "initialPageItems": 10,
+      "pagination": [
+        "第1页 / 3页，共22条",
+        "第2页 / 3页，共22条"
+      ],
+      "taskId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "assetLink": "http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model",
+      "hasMissingInputNotice": true
+    },
+    {
+      "name": "empty-and-not-found-manual-recovery",
+      "kind": "REAL_LOCAL",
+      "passed": true,
+      "emptyText": "没有符合条件的历史任务。可调整筛选后重新读取；不会创建测试或演示任务。",
+      "manualRecovery": true
+    },
+    {
+      "name": "mobile-readonly-history-layout",
+      "kind": "REAL_LOCAL_MOBILE_EMULATION",
+      "passed": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "physicalPhone": false
+    },
+    {
+      "name": "api-error-malformed-and-explicit-recovery",
+      "kind": "SYNTHETIC_HTTP_FAULT_ONLY",
+      "passed": true,
+      "faults": [
+        "HTTP503",
+        "malformedJSONShape"
+      ],
+      "manualRecovery": true,
+      "fixtureNotStored": true
+    },
+    {
+      "name": "unsafe-and-long-output-rendered-as-text",
+      "kind": "SYNTHETIC_RESPONSE_ONLY",
+      "passed": true,
+      "untrustedTextRendered": true,
+      "scriptExecuted": false,
+      "overflow": false,
+      "fixtureNotStored": true
+    }
+  ],
+  "contexts": [
+    {
+      "name": "eight-pages",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/index.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/index.css"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro4.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro2.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery7.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art3.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera2.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home-banner.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/history.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro2.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro3.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro4.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B21.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B22.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B23.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B24.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B25.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/roles.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/roles.css"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/dan.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/chou.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF2.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/facial.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/facial.css"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%84%B8%E8%B0%B1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/black.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/white.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/blue.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/glod.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/black1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/blue1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/white1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/glod1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-red.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/music.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/music.css"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E4%BA%AC%E8%83%A1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF3.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/video.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/video.css"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video2.mp4"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video3.mp4"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video4.mp4"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera5.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/gallery.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/gallery.css"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery2.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery11.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery12.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery5.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery6.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery7.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery8.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera2.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera4.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera5.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/dan.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/chou.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-red.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-black.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-blue.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-gold.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art4.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E4%BA%AC%E8%83%A1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home-banner.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video2.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video3.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video4.mp4",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "name": "real-history",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "failedResources": []
+    },
+    {
+      "name": "real-empty",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "failedResources": []
+    },
+    {
+      "name": "mobile-history",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "failedResources": []
+    },
+    {
+      "name": "mock-errors",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ],
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "path": "/api/v1/agent/history",
+          "status": 503
+        }
+      ],
+      "failedResources": []
+    },
+    {
+      "name": "mock-xss",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "failedResources": []
+    }
+  ],
+  "paidRequestsSent": 0,
+  "supplierRequestsSent": 0,
+  "physicalMobile": "NOT_TESTED",
+  "chromeVersion": "155.0.8059.84",
+  "nodeVersion": "v24.19.0",
+  "finishedAt": "2026-10-19T09:43:42.797Z",
+  "passed": 6,
+  "failed": 0,
+  "skipped": 0,
+  "blockedWrites": 0,
+  "blockedExternal": 0
+}

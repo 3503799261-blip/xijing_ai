@@ -1,0 +1,113 @@
+{
+  "screenshots": [
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-01/history-mobile.png",
+      "bytes": 91332,
+      "sha256": "0ee5922bbadf75cea6f1c613bb27f39e2937ad69bd4b28fb6cc2d2f019ce7697",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-02/eight-pages-about.png",
+      "bytes": 985201,
+      "sha256": "7dc185d3c8a4685c7c50ca4a93161d73ecfd2d57db5bb7137c4262b72008e85c",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-02/history-mobile.png",
+      "bytes": 91332,
+      "sha256": "0ee5922bbadf75cea6f1c613bb27f39e2937ad69bd4b28fb6cc2d2f019ce7697",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-03/eight-pages-about.png",
+      "bytes": 974357,
+      "sha256": "a6da214f2ed26d068fa1eda827f34293cc42b4294f893488f443a00816178cd7",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-03/history-mobile.png",
+      "bytes": 91332,
+      "sha256": "0ee5922bbadf75cea6f1c613bb27f39e2937ad69bd4b28fb6cc2d2f019ce7697",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-03/history-showcase-desktop.png",
+      "bytes": 249905,
+      "sha256": "500a60adc947d35b9e1821c7f780c5f4022a10d54b68f7aed29dc980e3ed513b",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-final/eight-pages-about.png",
+      "bytes": 974357,
+      "sha256": "a6da214f2ed26d068fa1eda827f34293cc42b4294f893488f443a00816178cd7",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-final/history-list-desktop.png",
+      "bytes": 281523,
+      "sha256": "ca385e0d3352e20f4666eb1ed6ebde4e175ff088d4c3c6931bb7b3962b6f4c85",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-final/history-mobile.png",
+      "bytes": 92404,
+      "sha256": "059cb1c2ede8aab554214bc58704a1cc0cfc8ea500009dbce1b4aa4b6cb35da8",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-final/history-showcase-desktop.png",
+      "bytes": 265670,
+      "sha256": "7f12a65c965dc030745d0aa7b9b12b16caed673fb7f46c78e615dbd17dfd654c",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-model-browser-01/first-internal-ready.png",
+      "bytes": 356174,
+      "sha256": "a5baa0bf8eb3ff6710a7743ba65922e33d6707686a12f84d369ff00ab53f4c60",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-model-browser-01/home-1920.png",
+      "bytes": 1627514,
+      "sha256": "84a5485fec75ed569225f348af39ebc7b63087ec8ecbce353513b074fba6546c",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-model-browser-01/same-character-chibi-missing.png",
+      "bytes": 408553,
+      "sha256": "99cabceb8f3d0b5d8453f95d0772c0a2b0f87770bb436cd802a5b73bf395a24a",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-model-browser-01/second-realistic-ready.png",
+      "bytes": 583213,
+      "sha256": "a4806e19820e8873e1e048f9c8aa88c5d067e9bbaeac3163e5febd46c80ea786",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-verified/eight-pages-about.png",
+      "bytes": 974193,
+      "sha256": "0e4c68bf99a1298236f3d45bfb66d9306499fed6b26bd75774406c7e2e7aa853",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-verified/history-list-desktop.png",
+      "bytes": 252091,
+      "sha256": "5e1a2361fe55ee6b335e2eb3e4faab3cb160bb4d5e60934140500efb76dfeb75",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-verified/history-mobile.png",
+      "bytes": 92367,
+      "sha256": "3a59a4dea0010a97e94f8bb2c462cb0690c790eb63fe76c07cae43140bac46ff",
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp2-browser-verified/history-showcase-desktop.png",
+      "bytes": 265696,
+      "sha256": "f6ff444dda3d4bf19359effb76678061b9fb7628d95be9a2d5b14071313ba7a0",
+      "privateEvidenceOnly": true
+    }
+  ],
+  "note": "Screenshots remain in controlled local runtime; internal Q model imagery is not redistributed through Git."
+}

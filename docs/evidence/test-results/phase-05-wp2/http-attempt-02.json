@@ -1,0 +1,16 @@
+{
+  "kind": "WP2_ACTUAL_LOCAL_GET_AND_READONLY_SQLITE",
+  "startedAtUtc": "2026-10-19T09:37:08.823566+00:00",
+  "checks": [],
+  "requests": [],
+  "paidCalls": 0,
+  "supplierCalls": 0,
+  "failure": {
+    "type": "URLError",
+    "message": "Local acceptance interrupted; inspect private trace without exposing secrets"
+  },
+  "finishedAtUtc": "2026-10-19T09:37:10.901377+00:00",
+  "passed": 0,
+  "failed": 0,
+  "skipped": 0
+}

@@ -1,0 +1,558 @@
+{
+  "kind": "WP2_REAL_LOCAL_BROWSER_WITH_EXPLICIT_SEPARATE_FAULT_FIXTURES",
+  "startedAt": "2026-10-19T09:40:50.655Z",
+  "tests": [
+    {
+      "name": "eight-existing-pages",
+      "kind": "REAL_LOCAL",
+      "passed": false,
+      "error": "Existing page regression index"
+    },
+    {
+      "name": "real-history-list-pagination-detail-and-assets",
+      "kind": "REAL_LOCAL",
+      "passed": false,
+      "error": "Missing truthful detail sections"
+    },
+    {
+      "name": "empty-and-not-found-manual-recovery",
+      "kind": "REAL_LOCAL",
+      "passed": false,
+      "error": "Empty status absent"
+    },
+    {
+      "name": "mobile-readonly-history-layout",
+      "kind": "REAL_LOCAL_MOBILE_EMULATION",
+      "passed": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "physicalPhone": false
+    },
+    {
+      "name": "api-error-malformed-and-explicit-recovery",
+      "kind": "SYNTHETIC_HTTP_FAULT_ONLY",
+      "passed": true,
+      "faults": [
+        "HTTP503",
+        "malformedJSONShape"
+      ],
+      "manualRecovery": true,
+      "fixtureNotStored": true
+    },
+    {
+      "name": "unsafe-and-long-output-rendered-as-text",
+      "kind": "SYNTHETIC_RESPONSE_ONLY",
+      "passed": true,
+      "untrustedTextRendered": true,
+      "scriptExecuted": false,
+      "overflow": false,
+      "fixtureNotStored": true
+    }
+  ],
+  "contexts": [
+    {
+      "name": "eight-pages",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/index.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/index.css"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro4.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro2.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera1.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery7.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art3.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera2.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home-banner.jpg"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "name": "real-history",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "failedResources": []
+    },
+    {
+      "name": "real-empty",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "failedResources": []
+    },
+    {
+      "name": "mobile-history",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "failedResources": []
+    },
+    {
+      "name": "mock-errors",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ],
+      "pageErrors": [],
+      "httpErrors": [
+        {
+          "path": "/api/v1/agent/history",
+          "status": 503
+        }
+      ],
+      "failedResources": []
+    },
+    {
+      "name": "mock-xss",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "failedResources": []
+    }
+  ],
+  "paidRequestsSent": 0,
+  "supplierRequestsSent": 0,
+  "physicalMobile": "NOT_TESTED",
+  "chromeVersion": "155.0.8059.84",
+  "nodeVersion": "v24.19.0",
+  "finishedAt": "2026-10-19T09:41:03.879Z",
+  "passed": 3,
+  "failed": 3,
+  "skipped": 0,
+  "blockedWrites": 0,
+  "blockedExternal": 0
+}
