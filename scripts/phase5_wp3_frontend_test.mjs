@@ -186,6 +186,7 @@ try {
     assert.equal(calls, 0); await value.controller.check(); assert.ok(value.get('demo-check-time').textContent.includes('失败')); await value.controller.check(); assert.ok(value.get('demo-conditions').textContent.includes('恢复成功')); assert.equal(calls, 2);
     let resolve; const pending = fixture({ checkDemoConditions: () => new Promise((done) => { resolve = done; }) }); const request = pending.controller.check(); pending.controller.exit(); resolve({ checkedAt: 'stale', checks: [] }); await request;
     assert.equal(pending.get('demo-check').attributes['aria-busy'], 'false'); assert.ok(!pending.get('demo-check-time').textContent.includes('stale'));
+    assert.ok(pending.get('demo-check-time').textContent.includes('已停止')); assert.ok(!pending.get('demo-conditions').textContent.includes('正在读取'));
   });
   await check('all diagnostic text uses safe DOM nodes even for an injected test message', async () => {
     const value = fixture({ checkDemoConditions: async () => ({ checkedAt: '<svg onload=alert(1)>', checks: [{ key: 'backend', label: '<script>', state: 'error', message: '<img onerror=alert(1)>' }] }) });

@@ -100,6 +100,10 @@ export function initializeDemoGuide({ root, selectPanel, services = { checkDemoC
   function start() { backup = false; current = 0; active = true; renderStep(); selectPanel(STEPS[0].panel); feedback('导览已开始，仅负责定位与说明，不会自动发送问题、执行Agent或生成模型。需要只读保护时请切换“备用演示”。'); }
   function enterBackup() { backup = true; active = true; renderStep(); selectPanel(STEPS[current].panel); feedback('备用演示模式：当前页面仅允许只读浏览，生成、确认、取消与登记操作将被拦截。它不改变服务器配置，也不会停止已经存在的后台任务；刷新页面后退出。'); }
   function exit() {
+    if (checking) {
+      elements['demo-check-time'].textContent = '已停止本轮只读条件检查；未据此更新可用状态。';
+      elements['demo-conditions'].replaceChildren(node('li', '本轮检查已停止，可在需要时手动重新检查。'));
+    }
     active = false; backup = false; checkGeneration += 1; checkAbort?.abort(); checking = false; elements['demo-check'].disabled = false; elements['demo-check'].setAttribute('aria-busy', 'false');
     renderMode(); feedback('已退出导览与本页备用保护；已有输入和记录保留。服务器真实建模创建仍由原有配置与授权机制控制。');
     elements['demo-start'].focus?.();
