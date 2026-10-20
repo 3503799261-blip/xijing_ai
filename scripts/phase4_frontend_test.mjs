@@ -24,7 +24,7 @@ const asset = { assetId: id, characterId: id, styleMode: 'realistic', styleVersi
   characterSnapshot: { schemaVersion: '1.0', name: '离线测试角色', positioning: '离线测试定位', visualPrompt: '离线测试文字', costume: [feature], colors: [feature], visualElements: [feature], usedEvidenceIds: [citation.id] },
   characterConfirmation: { userConfirmed: true }, reviewSnapshot: { verdict: 'pass', needsHumanReview: true, checkedEvidenceIds: [citation.id] }, citationSnapshot: [citation],
   visualPrompt: { imagePrompt: '离线测试Prompt', negativePrompt: '离线测试约束', templateVersion: 'offline-v1', promptHash: hash, approved: false }, images: [image], models: [] };
-const savedGlobals = Object.fromEntries(['fetch', 'document', 'window', 'location', 'sessionStorage', 'setTimeout', 'clearTimeout'].map((name) => [name, globalThis[name]]));
+const savedGlobals = Object.fromEntries(['fetch', 'document', 'window', 'location', 'sessionStorage', 'customElements', 'setTimeout', 'clearTimeout'].map((name) => [name, globalThis[name]]));
 try {
   globalThis.location = { origin: 'http://127.0.0.1:8000' };
   globalThis.document = { querySelector: () => null };
@@ -374,12 +374,181 @@ try {
     assert.equal(ae('asset-summary').dataset.styleVersion, '1');
     assert.equal(ae('asset-summary').dataset.assetId, id);
   });
+  function recoveryDom() {
+    const entries = new Map(assetNames.map((name) => [`#ai-workshop-${name}`, new Element()]));
+    const find = (name) => entries.get(`#ai-workshop-${name}`);
+    for (const name of ['asset-form', 'asset-image-form', 'model-import-form']) find(name).bindings = new Map([['[type="submit"]', new Element('button')]]);
+    for (const field of ['organizationType', 'audience', 'useCase', 'designGoal', 'culturalBoundaries', 'deliveryScope', 'licenseStatus']) {
+      const input = new Element('input'); input.value = field === 'organizationType' ? 'game' : field === 'licenseStatus' ? 'unverified' : '离线恢复测试';
+      entries.set(`[data-ai-workshop-enterprise="${field}"]`, input);
+    }
+    const localRoot = new Element(); localRoot.bindings = entries;
+    find('asset-mode').value = 'personal'; find('asset-style').value = 'realistic'; find('asset-purpose').value = '离线恢复测试';
+    return { root: localRoot, find };
+  }
+  const knownUsage = { ...usage, used_calls: 2, remaining_calls: 1, history_verified: true };
+  await check('empty source task sends no style query and leaves no false loading or missing-model claim', async () => {
+    const local = recoveryDom(); storage.clear(); globalThis.location.search = '';
+    let requests = 0; globalThis.fetch = async () => { requests++; throw new Error('No request expected'); };
+    assetsModule.initializeDigitalAssets({ root: local.root, selectPanel() {} });
+    local.find('style-query').fire('click'); await flush();
+    assert.equal(requests, 0);
+    const savedText = element => element.textContent + element.children.map(savedText).join('');
+    for (const name of ['asset-summary', 'style-state', 'model-info', 'viewer-status']) {
+      assert.match(savedText(local.find(name)), /未发送查询/);
+      assert.equal(savedText(local.find(name)).includes('正在读取'), false);
+    }
+    assert.equal(local.find('style-model-select').children[0].textContent, '已有模型状态尚待核实');
+  });
+  await check('failed style read stays unknown instead of claiming no model and recovers by manual GET', async () => {
+    const local = recoveryDom(); storage.clear(); globalThis.location.search = '';
+    const requests = []; let fail = true;
+    globalThis.fetch = async (url, options) => {
+      requests.push({ url, options });
+      if (!url.includes('/assets/characters?')) throw new Error('Unexpected style query');
+      if (fail) throw new TypeError('offline style read');
+      return response({ characters: [asset] });
+    };
+    assetsModule.initializeDigitalAssets({ root: local.root, selectPanel() {} });
+    local.find('asset-source-task').value = id;
+    local.find('style-query').fire('click'); await flush();
+    assert.equal(requests.length, 1);
+    assert.match(local.find('style-state').textContent, /状态未知/);
+    assert.equal(local.find('style-state').textContent.includes('正在读取'), false);
+    assert.equal(local.find('viewer-status').textContent.includes('尚未生成'), false);
+    assert.equal(local.find('viewer-host').dataset.contentMode, 'style_asset_unknown');
+    fail = false; local.find('style-query').fire('click'); await flush();
+    assert.equal(requests.length, 2);
+    assert.equal(local.find('asset-summary').dataset.assetId, id);
+    assert.ok(requests.every(request => request.options.method === 'GET'));
+    assert.equal(local.find('model-submit').disabled, true);
+  });
+  await check('failed linked asset GET preserves its exact ID and manual refresh restores it without writes or automatic retries', async () => {
+    const local = recoveryDom();
+    storage.clear(); globalThis.location.search = `?assetId=${id}`;
+    const requests = []; let characterAvailable = false;
+    globalThis.fetch = async (url, options) => {
+      requests.push({ url, options });
+      if (url.endsWith('/assets/models')) return response({ models: [] });
+      if (url.endsWith('/assets/usage')) return response(knownUsage);
+      if (url.endsWith(`/assets/characters/${id}`)) {
+        if (!characterAvailable) throw new TypeError('explicit offline linked asset failure');
+        return response(asset);
+      }
+      throw new Error(`Unexpected recovery request ${url}`);
+    };
+    const recovery = assetsModule.initializeDigitalAssets({ root: local.root, selectPanel() {} });
+    await recovery.setVisible(true); await flush();
+    assert.equal(requests.length, 3);
+    assert.equal(local.find('asset-summary').dataset.assetId, undefined);
+    const failedFeedback = local.find('asset-feedback').textContent;
+    const failedState = local.find('asset-summary').dataset.metadataState;
+    assert.equal(local.find('asset-refresh').disabled, false);
+    await flush(); assert.equal(requests.length, 3, 'no automatic retry');
+    characterAvailable = true;
+    local.find('asset-refresh').fire('click'); await flush();
+    assert.equal(requests.filter((request) => request.url.endsWith(`/assets/characters/${id}`)).length, 2);
+    assert.match(failedFeedback, /尚未读取到.*未生成/);
+    assert.equal(failedState, 'unavailable');
+    assert.equal(local.find('asset-summary').dataset.assetId, id);
+    assert.equal(local.find('asset-summary').dataset.metadataState, 'saved_snapshot');
+    assert.match(local.find('asset-feedback').textContent, /只读恢复/);
+    assert.ok(requests.every((request) => request.options.method === 'GET'));
+    assert.equal(local.find('model-submit').disabled, true);
+  });
+  await check('metadata failure preserves an existing image and ready GLB while marking the display as a stale loaded snapshot', async () => {
+    const local = recoveryDom();
+    const styledModel = { ...model, assetId: id, characterId: id, styleMode: 'realistic', styleVersion: 1 };
+    const existing = { ...asset, models: [styledModel] };
+    storage.clear(); globalThis.location.search = `?assetId=${id}`;
+    // A DOM double explicitly provides the custom element; no WebGL, external
+    // component download or real GLB/browser evidence is claimed by this test.
+    globalThis.customElements = { get: () => class OfflineModelViewer {} };
+    const requests = []; let failMetadata = false;
+    globalThis.fetch = async (url, options) => {
+      requests.push({ url, options });
+      if (url.endsWith('/assets/models')) return response({ models: [] });
+      if (url.endsWith('/assets/usage')) return response(knownUsage);
+      if (url.endsWith(`/assets/characters/${id}`)) {
+        if (failMetadata) throw new TypeError('explicit offline metadata failure');
+        return response(existing);
+      }
+      throw new Error(`Unexpected snapshot request ${url}`);
+    };
+    const recovery = assetsModule.initializeDigitalAssets({ root: local.root, selectPanel() {} });
+    await recovery.setVisible(true); await flush();
+    const oldImage = local.find('asset-image-preview').children[0];
+    const oldViewer = local.find('viewer-host').children[0];
+    oldViewer.fire('load');
+    assert.equal(local.find('viewer-host').dataset.viewerState, 'ready');
+    assert.equal(window.xijingAssetViewerDiagnostics().modelHash, hash);
+    failMetadata = true;
+    local.find('asset-refresh').fire('click'); await flush();
+    assert.equal(local.find('asset-image-preview').children[0], oldImage);
+    assert.equal(local.find('viewer-host').children[0], oldViewer);
+    assert.equal(local.find('viewer-host').dataset.viewerState, 'ready');
+    assert.equal(local.find('asset-summary').dataset.metadataState, 'stale');
+    assert.match(local.find('asset-feedback').textContent, /元数据读取失败.*仅保留已加载快照.*不表示服务当前在线/);
+    assert.match(local.find('style-state').textContent, /最新资产元数据读取失败/);
+    assert.equal(local.find('asset-summary').dataset.assetId, id);
+    assert.ok(requests.every((request) => request.options.method === 'GET'));
+    assert.equal(local.find('asset-refresh').disabled, false);
+    assert.equal(local.find('model-submit').disabled, true);
+    failMetadata = false;
+    local.find('asset-refresh').fire('click'); await flush();
+    assert.equal(local.find('asset-summary').dataset.metadataState, 'saved_snapshot');
+    assert.match(local.find('asset-feedback').textContent, /只读恢复/);
+    local.find('viewer-host').children[0].fire('load');
+    assert.equal(window.xijingAssetViewerDiagnostics().modelId, modelId);
+  });
+  await check('duplicate manual restore clicks coalesce and missing quota stays unknown instead of adopting the archival count', async () => {
+    const local = recoveryDom();
+    storage.clear(); globalThis.location.search = `?assetId=${id}`;
+    let release; let characterAvailable = false; let quotaAvailable = false;
+    const requests = [];
+    globalThis.fetch = async (url, options) => {
+      requests.push({ url, options });
+      if (url.endsWith('/assets/models')) return response({ models: [] });
+      if (url.endsWith('/assets/usage')) {
+        if (!quotaAvailable) throw new TypeError('explicit offline quota failure');
+        return response(knownUsage);
+      }
+      if (url.endsWith(`/assets/characters/${id}`)) {
+        if (!characterAvailable) throw new TypeError('explicit offline asset failure');
+        await new Promise((resolve) => { release = resolve; });
+        return response(asset);
+      }
+      throw new Error(`Unexpected quota request ${url}`);
+    };
+    const recovery = assetsModule.initializeDigitalAssets({ root: local.root, selectPanel() {} });
+    await recovery.setVisible(true); await flush();
+    assert.match(local.find('asset-quota').textContent, /尚未读取.*保持锁定/);
+    assert.equal(local.find('asset-quota').dataset.historyVerified, 'false');
+    characterAvailable = true; quotaAvailable = true;
+    local.find('asset-refresh').fire('click'); local.find('asset-refresh').fire('click'); await flush();
+    assert.equal(requests.filter((request) => request.url.endsWith(`/assets/characters/${id}`)).length, 2);
+    assert.equal(local.find('asset-refresh').disabled, true);
+    release(); await flush();
+    assert.match(local.find('asset-quota').textContent, /已占用：2 \/ 3.*剩余：1 次/);
+    assert.equal(local.find('model-submit').disabled, true);
+    assert.ok(requests.every((request) => request.options.method === 'GET'));
+  });
+  await check('archival model closure text separates historic credits from unknown future prices and never grants creation rights', () => {
+    const textTree = (element) => `${element.textContent || ''}${element.children.map(textTree).join('')}`;
+    const closure = textTree(ae('model-approval-summary'));
+    assert.match(closure, /两个已有真实模型成果.*取消第三次建模.*保持关闭/);
+    assert.match(closure, /前两次合计60积分.*不是当前账户余额或新任务报价/);
+    assert.match(closure, /未查询新任务报价.*历史费用不是实时价格/);
+    assert.equal(closure.includes('首次真实建模需要另行明确授权'), false);
+    assert.equal(ae('model-submit').disabled, true);
+    delete globalThis.location.search;
+  });
   await check('HTML retains all original sections and real-generation remains disabled; text-only untrusted rendering', async () => {
     const html = await readFile(new URL('about.html', repo), 'utf8');
     for (const panel of ['overview', 'qa', 'agents', 'create', 'model']) assert.ok(html.includes(`data-ai-workshop-panel="${panel}"`));
     for (const name of names) assert.ok(html.includes(`id="ai-workshop-${name}"`));
     assert.match(html, /id="ai-workshop-model-submit"[^>]*disabled/);
-    assert.ok(html.includes('真实建模 · 等待单次授权'));
+    assert.ok(html.includes('真实建模已关闭 · 第三次取消'));
     for (const file of ['digital-assets', 'model-viewer-adapter', 'services', 'main', 'agent-workflow']) {
       const source = await readFile(new URL(`js/ai-workshop/${file}.js`, repo), 'utf8');
       assert.equal(/(?:innerHTML|outerHTML)\s*=|insertAdjacentHTML|eval\s*\(/.test(source), false, file);

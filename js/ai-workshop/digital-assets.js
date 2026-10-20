@@ -76,7 +76,8 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     imageForm.querySelector('[type="submit"]').disabled = pending || !asset?.visualPrompt.approved || asset.culturalReviewRequired === true;
     imageAccept.disabled = pending || !selectedImage || !imageVisible || selectedImage.accepted || asset?.culturalReviewRequired === true;
     modelForm.querySelector('[type="submit"]').disabled = pending || !asset || asset.culturalReviewRequired === true;
-    // A stage-development approval does not authorize even the first real creation attempt.
+    find('asset-refresh').disabled = pending || refreshPending;
+    // Both accepted model results are retained; the user cancelled the third creation.
     submit.disabled = true;
     submit.setAttribute('aria-disabled', 'true');
   }
@@ -103,10 +104,11 @@ export function initializeDigitalAssets({ root, selectPanel }) {
       ['概念图', selectedImage?.accepted ? '已人工接受实际图片' : '尚未接受图片'],
       ['图片SHA-256', selectedImage?.hash || '暂无图片Hash'],
       ['生成参数', `modelCount=1；mesh_quality=standard；faceNum=${(asset?.styleMode || styleMode.value) === 'chibi' ? 100000 : 500000}；disablePbr=0；onlyGenerateMesh=false；enableImageEnhancement=false（提交前再次核对）`],
-      ['预计Credit', '尚未核实费用，禁止创建真实任务'],
+      ['预计Credit', '本轮不创建模型，未查询新任务报价；历史费用不是实时价格'],
+      ['历史费用', '验收归档记录：前两次合计60积分；不是当前账户余额或新任务报价'],
       ['已占用提交次数', used], ['剩余额度', remaining],
       ['本次用途', asset?.purpose || find('asset-purpose').value.trim() || '尚未填写'],
-      ['真实建模门禁', '本轮仅开发与验证；首次真实建模需要另行明确授权'],
+      ['真实建模门禁', '保留两个已有真实模型成果；用户已取消第三次建模，创建入口保持关闭'],
     ];
     const list = document.createElement('dl'); list.className = 'ai-workshop-task-info ai-workshop-approval-info';
     entries.forEach(([label, value]) => { const item = document.createElement('div'); item.append(text('dt', '', label), text('dd', '', value)); list.append(item); });
@@ -122,6 +124,9 @@ export function initializeDigitalAssets({ root, selectPanel }) {
   }
   function renderAsset(value) {
     asset = value;
+    savedAssetId = null;
+    summary.dataset.metadataState = 'saved_snapshot';
+    summary.dataset.metadataReadAt = new Date().toISOString();
     registeredVersions = registeredVersions.filter((item) => item.characterId === asset.characterId && item.styleMode === asset.styleMode && item.mode === asset.mode && item.assetId !== asset.assetId);
     registeredVersions.push(asset);
     const emptyVersion = document.createElement('option'); emptyVersion.value = ''; emptyVersion.textContent = '请选择该风格已保存版本';
@@ -230,8 +235,11 @@ export function initializeDigitalAssets({ root, selectPanel }) {
       modelInfo.textContent = `${STYLE_LABELS[styleMode.value]}当前版本尚无3D模型。下方测试素材独立提供，不属于此角色风格。`;
     }
   }
-  function clearCurrentStyle(message) {
+  function clearCurrentStyle(message, { modelStateUnknown = false } = {}) {
     asset = null; selectedImage = null; imageVisible = false;
+    savedAssetId = null;
+    summary.dataset.metadataState = 'unavailable';
+    delete summary.dataset.metadataReadAt;
     try { globalThis.sessionStorage?.removeItem?.(ASSET_STORAGE_KEY); } catch { /* Switching an absent style must not silently restore another style. */ }
     summary.replaceChildren(text('p', '', message));
     delete summary.dataset.characterId; delete summary.dataset.styleVersion; delete summary.dataset.assetId;
@@ -240,7 +248,15 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     find('prompt-edit-text').value = ''; find('prompt-edit-negative').value = '';
     styleState.textContent = message;
     registeredVersions = []; const emptyVersion = document.createElement('option'); emptyVersion.value = ''; emptyVersion.textContent = '当前风格尚无已登记版本'; styleVersions.replaceChildren(emptyVersion);
-    renderImage(); renderStyleModels(); renderApproval(); updateControls();
+    renderImage(); renderStyleModels();
+    if (modelStateUnknown) {
+      find('viewer-host').dataset.contentMode = 'style_asset_unknown';
+      viewer?.clear(message);
+      modelInfo.textContent = message;
+      if (styleModels.children[0]) styleModels.children[0].textContent = '已有模型状态尚待核实';
+      if (styleVersions.children[0]) styleVersions.children[0].textContent = '已有风格版本尚待核实';
+    }
+    renderApproval(); updateControls();
   }
   async function readSelectedStyle() {
     if (pending) return;
@@ -248,8 +264,11 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     const requestedMode = mode.value;
     const requestedStyle = styleMode.value;
     const currentGeneration = ++familyGeneration;
-    clearCurrentStyle(`${STYLE_LABELS[requestedStyle]}当前风格尚未生成3D模型；正在读取已有登记记录。`);
-    if (!requestedTask) { styleState.textContent = '请先带入同一角色的已确认任务ID；切换风格不会自动创建资产。'; return; }
+    clearCurrentStyle(`正在读取${STYLE_LABELS[requestedStyle]}已有登记记录；是否存在3D模型尚待核实。`, { modelStateUnknown: true });
+    if (!requestedTask) {
+      clearCurrentStyle('尚未选择角色，请先带入已确认任务ID；未发送查询，模型状态待核实。', { modelStateUnknown: true });
+      return;
+    }
     try {
       const family = await listCharacterAssets({ sourceTaskId: requestedTask, mode: requestedMode });
       if (currentGeneration !== familyGeneration || sourceTask.value.trim() !== requestedTask || mode.value !== requestedMode || styleMode.value !== requestedStyle) return;
@@ -257,17 +276,57 @@ export function initializeDigitalAssets({ root, selectPanel }) {
       const matched = registeredVersions[0];
       if (matched) renderAsset(matched);
       else clearCurrentStyle(`${STYLE_LABELS[requestedStyle]}尚未登记，当前风格尚未生成3D模型。若需要，请明确登记新风格；不会自动生成。`);
-    } catch (error) { if (currentGeneration === familyGeneration) say(error instanceof ServiceError ? error.message : '当前风格记录无法读取。', true); }
+    } catch (error) {
+      if (currentGeneration === familyGeneration) {
+        const message = `${STYLE_LABELS[requestedStyle]}已有资产未能读取，模型状态未知。请检查本地服务后点击“读取当前角色的已登记风格”，不会重新生成模型。`;
+        clearCurrentStyle(message, { modelStateUnknown: true });
+        say(message, true);
+      }
+    }
   }
-  async function refreshLocal() {
+  async function readExistingAsset(assetId) {
+    if (pending) return false;
+    pending = true; updateControls();
+    summary.dataset.metadataState = 'loading';
+    say('正在只读读取已登记资产……不会登记资产或生成模型。');
+    try {
+      const value = await getCharacterAsset(assetId);
+      renderAsset(value);
+      say('已只读恢复登记资产快照。图片与模型仍为原有文件，没有重新生成。');
+      return true;
+    } catch (error) {
+      // Retain the exact failed ID for an explicit manual GET retry. Never
+      // replace it with a create request or clear an already loaded image/GLB.
+      savedAssetId = assetId;
+      summary.dataset.metadataState = asset ? 'stale' : 'unavailable';
+      const message = asset
+        ? '最新资产元数据读取失败；当前仅保留已加载快照、原图与Viewer，不表示服务当前在线。请点击“刷新本地资产”手动重读。'
+        : '尚未读取到这份登记资产，未生成或登记替代内容。请点击“刷新本地资产”手动重读原资产ID。';
+      styleState.textContent = message;
+      if (!asset) summary.replaceChildren(text('p', '', message));
+      say(`${message}${error instanceof ServiceError ? ` ${error.message}` : ''}`, true);
+      return false;
+    } finally { pending = false; updateControls(); }
+  }
+  async function refreshLocal({ readAsset = false } = {}) {
     if (refreshPending) return;
     refreshPending = true; find('asset-refresh').disabled = true;
-    const results = await Promise.allSettled([listAssetModels(), getAssetUsage()]);
-    if (results[0].status === 'fulfilled') renderModels(results[0].value);
-    else { modelInfo.textContent = results[0].reason instanceof ServiceError ? results[0].reason.message : '模型列表暂时无法读取。'; }
-    if (results[1].status === 'fulfilled') usage = results[1].value;
-    else { usage = null; say(results[1].reason instanceof ServiceError ? results[1].reason.message : '额度记录暂时无法读取，生成锁定。', true); }
-    renderApproval(); refreshPending = false; find('asset-refresh').disabled = false;
+    try {
+      const results = await Promise.allSettled([listAssetModels(), getAssetUsage()]);
+      const failures = [];
+      if (results[0].status === 'fulfilled') renderModels(results[0].value);
+      else {
+        const message = results[0].reason instanceof ServiceError ? results[0].reason.message : '模型列表暂时无法读取。';
+        if (!asset) modelInfo.textContent = message;
+        failures.push(message);
+      }
+      if (results[1].status === 'fulfilled') usage = results[1].value;
+      else { usage = null; failures.push(results[1].reason instanceof ServiceError ? results[1].reason.message : '额度记录暂时无法读取，创建锁定。'); }
+      const requestedAsset = savedAssetId || asset?.assetId;
+      if (readAsset && requestedAsset && !pending) await readExistingAsset(requestedAsset);
+      renderApproval();
+      if (failures.length) say(`最新本地状态未能完整读取；${asset ? '当前图片与Viewer仅为已加载快照，不表示服务当前在线。' : '尚未取得完整资产状态，未生成替代内容。'} ${failures.join(' ')}`, true);
+    } finally { refreshPending = false; updateControls(); }
   }
   form.addEventListener('submit', (event) => {
     event.preventDefault(); if (pending) return;
@@ -315,7 +374,7 @@ export function initializeDigitalAssets({ root, selectPanel }) {
   mode.addEventListener('change', () => void readSelectedStyle());
   sourceTask.addEventListener('change', () => void readSelectedStyle());
   find('style-query').addEventListener('click', () => void readSelectedStyle());
-  find('asset-refresh').addEventListener('click', () => void refreshLocal());
+  find('asset-refresh').addEventListener('click', () => { if (!pending) void refreshLocal({ readAsset: true }); });
   find('enterprise-to-agent').addEventListener('click', () => {
     try {
       const brief = enterpriseRequirements(enterpriseBrief());
@@ -348,8 +407,7 @@ export function initializeDigitalAssets({ root, selectPanel }) {
       if (!value) return;
       await refreshLocal();
       if (savedAssetId && !asset && !pending) {
-        const restoreId = savedAssetId; savedAssetId = null;
-        await action(async () => renderAsset(await getCharacterAsset(restoreId)), '已恢复登记资产。刷新页面只读取本地记录，不重新生成。');
+        await readExistingAsset(savedAssetId);
       }
     },
   };

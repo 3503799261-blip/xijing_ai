@@ -66,6 +66,7 @@ function initializeWorkshop() {
 
   const panelFromHash = () => {
     if (window.location.hash === '#ai-workshop-history') return 'agents';
+    if (window.location.hash === '#ai-workshop-demo') return 'overview';
     const match = window.location.hash.match(/^#ai-workshop-(overview|qa|agents|create|model)$/);
     if (match) return match[1];
     if (!window.location.hash || window.location.hash === '#ai-workshop') return 'overview';
@@ -173,7 +174,7 @@ function initializeWorkshop() {
     });
     heroServiceNote.textContent = [capability.questionAnswering ? '京剧RAG问答已就绪' : failed ? '后端暂时无法连接' : '京剧问答尚未就绪',
       capability.agentWorkflow ? 'Agent协作已就绪' : 'Agent协作尚未就绪',
-      capability.assetManagement ? '数字资产登记已就绪' : '资产服务待检查', '真实建模须逐次单独授权'].join(' · ');
+      capability.assetManagement ? '数字资产登记已就绪' : '资产服务待检查', '新增建模关闭（第三次已取消）'].join(' · ');
     agentController?.setCapability(capability);
   }
 
@@ -405,6 +406,12 @@ function initializeWorkshop() {
     notice.hidden = false;
   }
   // Historical snapshots are isolated from the live workflow controller and never restore an active task.
+  void import('./demo-guide.js?v=phase5-wp3-1').then(({ initializeDemoGuide }) => {
+    initializeDemoGuide({ root, selectPanel });
+  }).catch(() => {
+    const feedback = root.querySelector('#ai-workshop-demo-feedback');
+    if (feedback) feedback.textContent = '演示导览未能加载，请刷新后重试；下方正常功能与静态说明仍可使用。';
+  });
   void import('./agent-history.js?v=phase5-wp2-1').then(({ initializeAgentHistory }) => {
     initializeAgentHistory({ root });
   }).catch(() => {

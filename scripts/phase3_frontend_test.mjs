@@ -320,7 +320,9 @@ try {
       assert.equal(/(?:innerHTML|outerHTML)\s*=|insertAdjacentHTML|eval\s*\(/.test(source), false);
       assert.equal(source.includes('?v=phase2-1'), false);
     }
-    assert.ok(html.includes('AI生成概念图 · 待开放')); assert.ok(html.includes('真实图生3D · 等待单独授权'));
+    assert.ok(html.includes('AI生成概念图 · 待开放')); assert.ok(html.includes('新增建模已关闭'));
+    assert.match(html, /id="ai-workshop-model-submit"[^>]*disabled/);
+    assert.ok(html.includes('第三次取消'));
   });
 } finally {
   for (const [name, value] of Object.entries(savedGlobals)) {
