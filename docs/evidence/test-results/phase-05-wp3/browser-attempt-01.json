@@ -1,0 +1,1532 @@
+{
+  "startedAt": "2026-10-20T12:01:49.905Z",
+  "scope": "WP3_LOCAL_BROWSER_WITH_EXPLICIT_ISOLATED_RESPONSE_DOUBLES",
+  "tests": [
+    {
+      "name": "guide-six-steps-targets-exit-and-refresh",
+      "kind": "REAL_LOCAL",
+      "passed": false,
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#ai-workshop-question')\u001b[22m\n\u001b[2m    - locator resolved to <textarea rows=\"3\" maxlength=\"600\" id=\"ai-workshop-question\" class=\"ai-workshop-input\" placeholder=\"写下你想了解的京剧知识……\" aria-describedby=\"ai-workshop-question-error ai-workshop-question-count ai-workshop-question-help\"></textarea>\u001b[22m\n\u001b[2m    - fill(\"保留的用户问题，不发送\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and e"
+    },
+    {
+      "name": "backup-guards-real-controls-and-manual-local-check",
+      "kind": "REAL_LOCAL",
+      "passed": true,
+      "guarded": [
+        {
+          "name": "send",
+          "exists": true,
+          "prevented": true
+        },
+        {
+          "name": "retry-question",
+          "exists": true,
+          "prevented": true
+        },
+        {
+          "name": "agent-start",
+          "exists": true,
+          "prevented": true
+        },
+        {
+          "name": "agent-submit-retry",
+          "exists": true,
+          "prevented": true
+        },
+        {
+          "name": "agent-confirm",
+          "exists": true,
+          "prevented": true
+        },
+        {
+          "name": "agent-cancel",
+          "exists": true,
+          "prevented": true
+        },
+        {
+          "name": "visual-accept",
+          "exists": true,
+          "prevented": true
+        },
+        {
+          "name": "image-accept",
+          "exists": true,
+          "prevented": true
+        },
+        {
+          "name": "model-submit",
+          "exists": true,
+          "prevented": true
+        }
+      ],
+      "conditions": "本地后端与知识检索条件 · 可读取\n\n本地知识检索条件可用，资料12份、片段35条。此快照未记录正在执行的Agent任务。LLM配置及既有验证状态不代表今日DeepSeek网络连通性，本次未调用模型。\n\n已保存Agent历史记录 · 可读取\n\n可只读查询22条持久化历史。打开历史档案后仍需手动读取；这不是新Agent执行。\n\n已有写实模型登记信息 · 可读取\n\n“绛绣·戏韵”的历史真实GLB登记可读取。本项未下载或检查GLB渲染；实际加载与交互以Viewer当前状态为准。\n\nNeural4D额度台账与创建状态 · 可读取\n\n全局已用2/3、剩余1次未使用，真实创建关闭。用户已取消第三次建模；本次不提交任务、不修改次数。",
+      "realHistoryReadable": true
+    },
+    {
+      "name": "mobile-guide-and-enterprise-layout",
+      "kind": "REAL_LOCAL_MOBILE_EMULATION",
+      "passed": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "enterpriseNotSubmitted": true
+    },
+    {
+      "name": "diagnostics-degraded-and-recovered",
+      "kind": "SYNTHETIC_HTTP_FAULT_WITH_REAL_GET_RECOVERY",
+      "passed": true,
+      "fault": "HTTP503 response double only",
+      "error": "本地后端与知识检索条件 · 未就绪\n\n本地服务尚未就绪，请检查启动状态后手动重试。",
+      "manualRecovery": true
+    },
+    {
+      "name": "chat-response-faults-preserve-input-and-never-auto-repeat",
+      "kind": "SYNTHETIC_POST_RESPONSES_ONLY_NO_SERVER_POST",
+      "passed": true,
+      "cases": [
+        {
+          "mode": "success",
+          "syntheticPostCount": 1,
+          "failedInputPreserved": null,
+          "realServerPosts": 0
+        },
+        {
+          "mode": "timeout504",
+          "syntheticPostCount": 1,
+          "failedInputPreserved": true,
+          "realServerPosts": 0
+        },
+        {
+          "mode": "network",
+          "syntheticPostCount": 1,
+          "failedInputPreserved": true,
+          "realServerPosts": 0
+        },
+        {
+          "mode": "authentication401",
+          "syntheticPostCount": 1,
+          "failedInputPreserved": true,
+          "realServerPosts": 0
+        },
+        {
+          "mode": "limited429",
+          "syntheticPostCount": 1,
+          "failedInputPreserved": true,
+          "realServerPosts": 0
+        },
+        {
+          "mode": "unavailable503",
+          "syntheticPostCount": 1,
+          "failedInputPreserved": true,
+          "realServerPosts": 0
+        },
+        {
+          "mode": "malformed",
+          "syntheticPostCount": 1,
+          "failedInputPreserved": true,
+          "realServerPosts": 0
+        }
+      ],
+      "externalApiEvidence": false
+    },
+    {
+      "name": "history-empty-and-detail404-manual-recovery",
+      "kind": "SYNTHETIC_GET_FAULT_WITH_REAL_HISTORY_RECOVERY",
+      "passed": false,
+      "error": "Empty history not honest"
+    },
+    {
+      "name": "asset-metadata-failure-reloads-original-id-only",
+      "kind": "SYNTHETIC_GET_FAULT_WITH_REAL_ASSET_RECOVERY",
+      "passed": true,
+      "originalAssetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "assetGetCalls": 3,
+      "preservedReadyViewer": true
+    },
+    {
+      "name": "real-glb-loading-error-and-explicit-reload",
+      "kind": "REAL_GLB_WITH_SYNTHETIC_FILE_HTTP_ERROR",
+      "passed": false,
+      "error": "Reload changed model identity"
+    }
+  ],
+  "contexts": [
+    {
+      "name": "guide",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "syntheticRequests": []
+    },
+    {
+      "name": "backup",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "syntheticRequests": []
+    },
+    {
+      "name": "mobile-guide",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "syntheticRequests": []
+    },
+    {
+      "name": "condition-fault",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ],
+      "httpErrors": [
+        {
+          "path": "/api/v1/health",
+          "status": 503
+        }
+      ],
+      "failedResources": [],
+      "syntheticRequests": []
+    },
+    {
+      "name": "chat-double-success",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "syntheticRequests": [
+        {
+          "method": "POST",
+          "path": "/api/v1/chat",
+          "mode": "success"
+        }
+      ]
+    },
+    {
+      "name": "chat-double-timeout504",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 504 (Gateway Timeout)"
+      ],
+      "httpErrors": [
+        {
+          "path": "/api/v1/chat",
+          "status": 504
+        }
+      ],
+      "failedResources": [],
+      "syntheticRequests": [
+        {
+          "method": "POST",
+          "path": "/api/v1/chat",
+          "mode": "timeout504"
+        }
+      ]
+    },
+    {
+      "name": "chat-double-network",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+      ],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/api/v1/chat",
+          "error": "net::ERR_INTERNET_DISCONNECTED"
+        }
+      ],
+      "syntheticRequests": [
+        {
+          "method": "POST",
+          "path": "/api/v1/chat",
+          "mode": "network"
+        }
+      ]
+    },
+    {
+      "name": "chat-double-authentication401",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+      ],
+      "httpErrors": [
+        {
+          "path": "/api/v1/chat",
+          "status": 401
+        }
+      ],
+      "failedResources": [],
+      "syntheticRequests": [
+        {
+          "method": "POST",
+          "path": "/api/v1/chat",
+          "mode": "authentication401"
+        }
+      ]
+    },
+    {
+      "name": "chat-double-limited429",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+      ],
+      "httpErrors": [
+        {
+          "path": "/api/v1/chat",
+          "status": 429
+        }
+      ],
+      "failedResources": [],
+      "syntheticRequests": [
+        {
+          "method": "POST",
+          "path": "/api/v1/chat",
+          "mode": "limited429"
+        }
+      ]
+    },
+    {
+      "name": "chat-double-unavailable503",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ],
+      "httpErrors": [
+        {
+          "path": "/api/v1/chat",
+          "status": 503
+        }
+      ],
+      "failedResources": [],
+      "syntheticRequests": [
+        {
+          "method": "POST",
+          "path": "/api/v1/chat",
+          "mode": "unavailable503"
+        }
+      ]
+    },
+    {
+      "name": "chat-double-malformed",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "syntheticRequests": [
+        {
+          "method": "POST",
+          "path": "/api/v1/chat",
+          "mode": "malformed"
+        }
+      ]
+    },
+    {
+      "name": "history-fault",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "syntheticRequests": []
+    },
+    {
+      "name": "asset-fault",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "httpErrors": [
+        {
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+          "status": 404
+        },
+        {
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+          "status": 404
+        }
+      ],
+      "failedResources": [],
+      "syntheticRequests": []
+    },
+    {
+      "name": "glb-recovery",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "kl: fetch for \"http://127.0.0.1:8000/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file\" responded with 503: Service Unavailable\n    at http://127.0.0.1:8000/js/vendor/model-viewer/model-viewer.min.js:48:204423"
+      ],
+      "httpErrors": [
+        {
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+          "status": 503
+        }
+      ],
+      "failedResources": [],
+      "syntheticRequests": []
+    }
+  ],
+  "paidApiCalls": 0,
+  "supplierRequests": 0,
+  "physicalMobile": "NOT_TESTED",
+  "chromeVersion": "155.0.8059.85",
+  "nodeVersion": "v24.19.0",
+  "finishedAt": "2026-10-20T12:03:00.059Z",
+  "passed": 5,
+  "failed": 3,
+  "skipped": 0,
+  "blockedWrites": 0,
+  "blockedExternal": 0
+}

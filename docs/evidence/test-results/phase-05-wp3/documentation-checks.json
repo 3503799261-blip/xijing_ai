@@ -1,0 +1,1595 @@
+{
+  "kind": "WP3_DOCUMENT_AND_ARCHIVE_CHECKS_NOT_APPLICATION_TESTS",
+  "checkedAtUtc": "2026-10-20T12:22:57.713179+00:00",
+  "passed": 296,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-04-final-acceptance.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-05-work-package-01.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-05-work-package-02.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-05-work-package-03.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-05-wp3-test-report.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-05-wp3-test-report.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/architecture/knowledge-provenance.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/architecture/phase-02-rag.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/architecture/ai-workshop-contracts.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-04-final-acceptance.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-02.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-05-work-package-02.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-03/browser-test-report.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/architecture/phase-03-agents.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-03/real-cases-summary.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-04-real-modeling-plan.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-04-final-acceptance.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase4-browser-test-report.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-05-wp1-test-report.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase4-windows-file-race.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-cached-reproduction-final-hybrid.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-ingest-initial.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-real-lifecycle.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-provider-probe-success.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-frontend-unit.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-final-unit-regression.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-retrieval-final-entity-metadata-same20-comparison.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-answers-rag20-final-hybrid.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-answers-rag20-final-hybrid-assistant-review.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-direct-vs-rag-five.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-browser-test-report.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-02-api-usage.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/evidence/test-results/phase-03/api-usage-final.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-01.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-04-first-internal-modeling.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-04-realistic-preparation.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-04-second-model-approval.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/prompts/phase-04/realistic-model-v1.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-04-second-model-execution.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-01.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-02.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-03.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-04-final-acceptance.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-05-project-audit.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-05-work-package-01.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-05-work-package-02.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/reports/phase-05-work-package-03.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/prompts/phase-01/README.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/prompts/phase-02/README.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/prompts/phase-03/README.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/prompts/phase-04/README.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "README.md",
+      "link": "docs/prompts/phase-05/README.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/reports/phase-05-work-package-03.md",
+      "link": "../evidence/test-results/phase-05-wp3-test-report.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/reports/phase-05-work-package-03.md",
+      "link": "../evidence/test-results/phase-05-wp3/screenshot-manifest.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/reports/phase-05-work-package-03.md",
+      "link": "../evidence/test-results/phase-05-wp3/before-state.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/reports/phase-05-work-package-03.md",
+      "link": "../evidence/test-results/phase-05-wp3/continuation-state.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/reports/phase-05-work-package-03.md",
+      "link": "../evidence/test-results/phase-05-wp3/after-acceptance-state.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/reports/phase-05-work-package-03.md",
+      "link": "../evidence/test-results/phase-05-wp3/provenance-and-originals-after-acceptance.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/reports/phase-05-work-package-03.md",
+      "link": "../prompts/phase-05/09-wp3-approved-user-request.txt"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/reports/phase-05-work-package-03.md",
+      "link": "../prompts/phase-05/README.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/isolation-result.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/pytest.xml"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/pytest-output.redacted.txt"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/demo-exit-final-34.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/demo-final-34.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/qa-final-25.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/agents-final-25.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/history-final-34.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/assets-final-42.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/browser-attempt-final.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/existing-models-browser.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/after-acceptance-state.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/provenance-and-originals-after-acceptance.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/archive-manifest.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/demo-initial-failure.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/demo-retest-33.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/demo-final-34.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/assets-old-code-red.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/assets-empty-stub-failure.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/assets-final-42.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/agents-initial-failure.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/agents-final-25.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/browser-attempt-01.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/browser-attempt-02.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/browser-attempt-final.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/before-state.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/continuation-state.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/after-acceptance-state.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/provenance-and-originals-after-acceptance.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "link": "phase-05-wp3/screenshot-manifest.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "00-original-user-request.txt"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "01-checkpoint-a-public-conversation.jsonl"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "02-export-metadata.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../reports/phase-05-project-audit.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../reports/phase-05-implementation-proposal.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../reports/phase-05-demo-plan.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../phase-01/00-original-user-request.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../reports/phase-02.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../reports/phase-03.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../reports/phase-04-final-acceptance.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "03-wp1-approved-user-request.txt"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "04-wp1-public-conversation.jsonl"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "05-wp1-export-metadata.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../reports/phase-05-work-package-01.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../evidence/test-results/phase-05-wp1-test-report.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "06-wp2-approved-user-request.txt"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "07-wp2-public-conversation.jsonl"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "08-wp2-export-metadata.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../reports/phase-05-work-package-02.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../evidence/test-results/phase-05-wp2-test-report.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "09-wp3-approved-user-request.txt"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "10-wp3-public-conversation.jsonl"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "11-wp3-export-metadata.json"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../reports/phase-05-work-package-03.md"
+    },
+    {
+      "name": "local-link",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md",
+      "link": "../../evidence/test-results/phase-05-wp3-test-report.md"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "offline-bootstrap.py"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "demo-browser-check.mjs"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "models-browser-check.mjs"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "readonly-invariants.py"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "readonly-provenance.py"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "isolation-result.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "pytest-output.redacted.txt"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "pytest.xml"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "assets-old-code-red.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "assets-initial-40.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "assets-retest-40.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "assets-style-retest-41.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "assets-empty-stub-failure.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "assets-final-42.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "demo-initial-failure.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "demo-retest-33.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "demo-final-34.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "qa-25.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "qa-final-25.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "agents-initial-failure.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "agents-final-25.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "history-final-34.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "browser-attempt-01.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "browser-attempt-02.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "browser-attempt-final.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "existing-models-browser.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "before-state.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "continuation-state.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "after-final-state.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "after-acceptance-state.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "provenance-and-originals-before.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "provenance-and-originals-after-final.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "provenance-and-originals-after-acceptance.json"
+    },
+    {
+      "name": "archive-sha256",
+      "passed": true,
+      "file": "demo-exit-final-34.json"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-01/backup-history.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-01/guide-mobile.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-01/viewer-error.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-02/backup-history.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-02/guide-desktop.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-02/guide-mobile.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-02/viewer-error.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-final/backup-history.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-final/guide-desktop.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-final/guide-mobile.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-final/viewer-error.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-browser-final/viewer-recovered.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-model-browser-01/first-internal-ready.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-model-browser-01/home-1920.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-model-browser-01/same-character-chibi-missing.png"
+    },
+    {
+      "name": "private-screenshot-sha256",
+      "passed": true,
+      "file": ".runtime/phase5-wp3-model-browser-01/second-realistic-ready.png"
+    },
+    {
+      "name": "public-count",
+      "passed": true
+    },
+    {
+      "name": "public-sha256",
+      "passed": true
+    },
+    {
+      "name": "raw-prompt-sha256",
+      "passed": true
+    },
+    {
+      "name": "public-message-scope",
+      "passed": true
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "README.md"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "README.md"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/reports/phase-05-work-package-03.md"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/reports/phase-05-work-package-03.md"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3-test-report.md"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/prompts/phase-05/README.md"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/after-acceptance-state.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/after-acceptance-state.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "after-acceptance-state.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/after-final-state.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/after-final-state.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "after-final-state.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/agents-final-25.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/agents-final-25.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "agents-final-25.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/agents-initial-failure.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/agents-initial-failure.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "agents-initial-failure.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/archive-manifest.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/archive-manifest.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "archive-manifest.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-empty-stub-failure.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-empty-stub-failure.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "assets-empty-stub-failure.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-final-42.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-final-42.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "assets-final-42.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-initial-40.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-initial-40.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "assets-initial-40.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-old-code-red.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-old-code-red.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "assets-old-code-red.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-retest-40.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-retest-40.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "assets-retest-40.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-style-retest-41.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/assets-style-retest-41.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "assets-style-retest-41.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/before-state.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/before-state.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "before-state.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/browser-attempt-01.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/browser-attempt-01.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "browser-attempt-01.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/browser-attempt-02.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/browser-attempt-02.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "browser-attempt-02.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/browser-attempt-final.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/browser-attempt-final.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "browser-attempt-final.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/continuation-state.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/continuation-state.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "continuation-state.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/demo-browser-check.mjs"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/demo-browser-check.mjs"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/demo-exit-final-34.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/demo-exit-final-34.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "demo-exit-final-34.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/demo-final-34.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/demo-final-34.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "demo-final-34.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/demo-initial-failure.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/demo-initial-failure.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "demo-initial-failure.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/demo-retest-33.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/demo-retest-33.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "demo-retest-33.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/existing-models-browser.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/existing-models-browser.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "existing-models-browser.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/history-final-34.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/history-final-34.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "history-final-34.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/isolation-result.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/isolation-result.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "isolation-result.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/models-browser-check.mjs"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/models-browser-check.mjs"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/offline-bootstrap.py"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/offline-bootstrap.py"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/provenance-and-originals-after-acceptance.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/provenance-and-originals-after-acceptance.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "provenance-and-originals-after-acceptance.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/provenance-and-originals-after-final.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/provenance-and-originals-after-final.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "provenance-and-originals-after-final.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/provenance-and-originals-before.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/provenance-and-originals-before.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "provenance-and-originals-before.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/pytest-output.redacted.txt"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/pytest-output.redacted.txt"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/pytest.xml"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/pytest.xml"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/qa-25.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/qa-25.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "qa-25.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/qa-final-25.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/qa-final-25.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "qa-final-25.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/readonly-invariants.py"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/readonly-invariants.py"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/readonly-provenance.py"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/readonly-provenance.py"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/screenshot-manifest.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/evidence/test-results/phase-05-wp3/screenshot-manifest.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "screenshot-manifest.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/prompts/phase-05/10-wp3-public-conversation.jsonl"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/prompts/phase-05/10-wp3-public-conversation.jsonl"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/prompts/phase-05/11-wp3-export-metadata.json"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/prompts/phase-05/11-wp3-export-metadata.json"
+    },
+    {
+      "name": "json-valid",
+      "passed": true,
+      "file": "11-wp3-export-metadata.json"
+    },
+    {
+      "name": "credential-pattern-scan",
+      "passed": true,
+      "file": "docs/prompts/phase-05/09-wp3-approved-user-request.txt"
+    },
+    {
+      "name": "personal-profile-scan",
+      "passed": true,
+      "file": "docs/prompts/phase-05/09-wp3-approved-user-request.txt"
+    },
+    {
+      "name": "all-production-invariants",
+      "passed": true
+    },
+    {
+      "name": "seven-pages-unchanged",
+      "passed": true
+    },
+    {
+      "name": "quota-and-budget-baseline",
+      "passed": true
+    },
+    {
+      "name": "last-network-browser-covered-by-after",
+      "passed": true
+    },
+    {
+      "name": "wp1-wp2-ancestor",
+      "passed": true,
+      "commit": "f58888bd63050ae6a691c82d76db690e79e11010"
+    },
+    {
+      "name": "wp1-wp2-ancestor",
+      "passed": true,
+      "commit": "ea0f4fcfc1f1bf60e395c6a4abd71762a8380658"
+    },
+    {
+      "name": "wp1-wp2-ancestor",
+      "passed": true,
+      "commit": "9e3516dc6a7ada53d067a929383c5225368e902d"
+    },
+    {
+      "name": "wp1-wp2-ancestor",
+      "passed": true,
+      "commit": "f8a1f47126b1104f1f004a4d4a62ba6fc4ad582f"
+    },
+    {
+      "name": "wp1-wp2-ancestor",
+      "passed": true,
+      "commit": "60e1590e9103d7ac3f7abb9b8b23ee46cca79156"
+    },
+    {
+      "name": "backend-and-old-reports-unchanged",
+      "passed": true
+    },
+    {
+      "name": "junit-698-no-fails-or-skips",
+      "passed": true
+    }
+  ],
+  "paidApiCalls": 0,
+  "note": "Known credential/profile pattern checks are not a guarantee for arbitrary unknown secrets. Exact offline bootstrap EOF whitespace retained as executed evidence."
+}

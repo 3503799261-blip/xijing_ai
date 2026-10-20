@@ -1,0 +1,142 @@
+{
+  "scope": "WP3 offline contract/DOM/Fetch doubles; no paid API, real device, or GLB validation",
+  "timestamp": "2026-10-19T10:12:08.360Z",
+  "passed": 32,
+  "failed": 1,
+  "skipped": 0,
+  "checks": [
+    {
+      "name": "status module import and guide initialization make no automatic API calls",
+      "passed": true
+    },
+    {
+      "name": "explicit condition check makes exactly four same-origin GET requests with no payload",
+      "passed": true
+    },
+    {
+      "name": "health and model metadata do not imply current DeepSeek connectivity or GLB rendering success",
+      "passed": true
+    },
+    {
+      "name": "active task status is reported without claiming backup stops the task",
+      "passed": true
+    },
+    {
+      "name": "missing local knowledge and empty real history remain honest warning states",
+      "passed": true
+    },
+    {
+      "name": "HTTP 401 is isolated, fixed Chinese feedback without reflecting sensitive response details",
+      "passed": true
+    },
+    {
+      "name": "HTTP 403 is isolated, fixed Chinese feedback without reflecting sensitive response details",
+      "passed": true
+    },
+    {
+      "name": "HTTP 404 is isolated, fixed Chinese feedback without reflecting sensitive response details",
+      "passed": true
+    },
+    {
+      "name": "HTTP 429 is isolated, fixed Chinese feedback without reflecting sensitive response details",
+      "passed": true
+    },
+    {
+      "name": "HTTP 503 is isolated, fixed Chinese feedback without reflecting sensitive response details",
+      "passed": true
+    },
+    {
+      "name": "malformed JSON is isolated from the other three successful local checks",
+      "passed": true
+    },
+    {
+      "name": "wrong saved model identity, fixture origin or non-GLB format cannot be reported as main real asset",
+      "passed": true
+    },
+    {
+      "name": "quota is read only and unverified counts are not silently inferred from known project baseline",
+      "passed": true
+    },
+    {
+      "name": "unexpected open creation or quota differences warn without changing backend records",
+      "passed": true
+    },
+    {
+      "name": "network failure and local timeout return four bounded errors without automatic retry",
+      "passed": true
+    },
+    {
+      "name": "manual condition reread recovers after a prior API failure",
+      "passed": true
+    },
+    {
+      "name": "cross-origin diagnostic API configuration is refused without a request",
+      "passed": true
+    },
+    {
+      "name": "six guide steps are keyboard-native buttons, start navigates and next/previous/skip stay local",
+      "passed": true
+    },
+    {
+      "name": "guide navigation does not fill question, brief, source task or enterprise input values",
+      "passed": true
+    },
+    {
+      "name": "history step only navigates until explicit fill action, then leaves WP2 manual query to the user",
+      "passed": true
+    },
+    {
+      "name": "both existing model links preserve exact identities and document new-page backup boundary",
+      "passed": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok(value.get('demo-links').textContent.includes('不继承'))\n"
+    },
+    {
+      "name": "non-loopback hostname never offers the internal Q model access link",
+      "passed": true
+    },
+    {
+      "name": "enterprise guide locates existing form without changing business fields or claiming a commercial case",
+      "passed": true
+    },
+    {
+      "name": "backup is explicit local state with no disabled overwrite or server configuration changes",
+      "passed": true
+    },
+    {
+      "name": "backup capture blocks known paid and persistence button IDs, including nested label click",
+      "passed": true
+    },
+    {
+      "name": "backup blocks form submit and submit buttons except the read-only history query",
+      "passed": true
+    },
+    {
+      "name": "backup permits read-only history refresh, model reload, camera controls and condition checks",
+      "passed": true
+    },
+    {
+      "name": "exit removes only local backup interception and preserves user inputs and original disabled flags",
+      "passed": true
+    },
+    {
+      "name": "a refreshed new guide instance starts exited without persistent mode restoration",
+      "passed": true
+    },
+    {
+      "name": "guide condition check is manual, error can be retried manually and stale completion cannot overwrite exit",
+      "passed": true
+    },
+    {
+      "name": "all diagnostic text uses safe DOM nodes even for an injected test message",
+      "passed": true
+    },
+    {
+      "name": "guide and status source do not mutate APIs, store modes, fake answers or install a global fetch override",
+      "passed": true
+    },
+    {
+      "name": "new styling is isolated, responsive, keyboard visible and respects reduced motion",
+      "passed": true
+    }
+  ]
+}

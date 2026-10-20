@@ -1,0 +1,101 @@
+{
+  "screenshots": [
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-01/backup-history.png",
+      "sha256": "1e9015fd434a59dd95ded8805c366d258ad0553b6e3582ac41e6bed4fe06d029",
+      "bytes": 266666,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-01/guide-mobile.png",
+      "sha256": "8865a5ab7735e0fca45855b9e8cebe4a9d6a12ad82a55e294f4deb7a13216045",
+      "bytes": 108924,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-01/viewer-error.png",
+      "sha256": "c4e8a9e54bc8548578698111204f95c9012cf064f6d703fccac7a2540788ef34",
+      "bytes": 462518,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-02/backup-history.png",
+      "sha256": "ba2ed6177eab9774db1fa7ef8dc201bd093060d04e6231eadc71fdebb4542a39",
+      "bytes": 266514,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-02/guide-desktop.png",
+      "sha256": "d6dcdd7cccb7d325be93b47fb796a796cb6e3b84c5c2b15f7e18c1e8cee0c59c",
+      "bytes": 329949,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-02/guide-mobile.png",
+      "sha256": "ea35b9cd797913994c02557706d6d63590bf00361bc8b1dac0ba87ed69d98fcd",
+      "bytes": 228472,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-02/viewer-error.png",
+      "sha256": "511bf6a77df3c7c253ec920b96d779b6cc858ade96ad72b1bfa51e945b37874c",
+      "bytes": 462139,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-final/backup-history.png",
+      "sha256": "732f4f317f8282700fad907dfafbdc892b9587f539839b981c46cedc2b5aa2f7",
+      "bytes": 266619,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-final/guide-desktop.png",
+      "sha256": "134da4d02396565d4dcd7136089f24fd30179fc304fb4c5dfba5dcabf98355a6",
+      "bytes": 321810,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-final/guide-mobile.png",
+      "sha256": "c8b3cebbe2f1336c2210f93dc573a098c362b7d307116ac00783527250246b57",
+      "bytes": 109201,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-final/viewer-error.png",
+      "sha256": "c4e8a9e54bc8548578698111204f95c9012cf064f6d703fccac7a2540788ef34",
+      "bytes": 462518,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-browser-final/viewer-recovered.png",
+      "sha256": "27aeb74bbf0e5d3b400b5dd9a9a8e228f9b85b638aea3b07e627cfeee041a927",
+      "bytes": 575399,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-model-browser-01/first-internal-ready.png",
+      "sha256": "a5baa0bf8eb3ff6710a7743ba65922e33d6707686a12f84d369ff00ab53f4c60",
+      "bytes": 356174,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-model-browser-01/home-1920.png",
+      "sha256": "c791ae1f619c8b1d9b7df04995b85e6e10e85041c4abe6b7cca81e25fa1e796f",
+      "bytes": 1623138,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-model-browser-01/same-character-chibi-missing.png",
+      "sha256": "169c4894277f19f73c0d8ae141e1c2aac2c78571865fa5399417ffab62949936",
+      "bytes": 409181,
+      "privateEvidenceOnly": true
+    },
+    {
+      "pathFromWorkspace": ".runtime/phase5-wp3-model-browser-01/second-realistic-ready.png",
+      "sha256": "610c5a80bb5a314b6c46a2bc2eb94c05a79570aaed199b0870d22749173f9e55",
+      "bytes": 553654,
+      "privateEvidenceOnly": true
+    }
+  ],
+  "note": "Controlled local screenshots; internal Q imagery and private model/image files are not distributed through Git."
+}

@@ -1,0 +1,175 @@
+{
+  "kind": "OFFLINE_EXPLICIT_TEST_DOUBLES_AND_STATIC_CHECKS",
+  "disclaimer": "Not real GLB rendering, browser, physical touch or provider API evidence.",
+  "executedAt": "2026-10-19T10:10:54.472Z",
+  "nodeVersion": "v24.19.0",
+  "command": "node scripts/phase4_frontend_test.mjs --output D:\\京剧\\.runtime\\phase5-wp3-assets-before-regression.json",
+  "results": [
+    {
+      "name": "capabilities follow backend without deriving real generation from an existing GLB",
+      "passed": true
+    },
+    {
+      "name": "registered model URL accepts same configured API only",
+      "passed": true
+    },
+    {
+      "name": "separate static frontend resolves asset paths to explicitly configured backend origin",
+      "passed": true
+    },
+    {
+      "name": "asset image validates real metadata and refuses untrusted image URL",
+      "passed": true
+    },
+    {
+      "name": "asset model requires GLB, license and exact controlled resource path",
+      "passed": true
+    },
+    {
+      "name": "character snapshot requires final confirmation, reviewer pass and mapped evidence",
+      "passed": true
+    },
+    {
+      "name": "style identity and image ownership cannot silently cross character versions",
+      "passed": true
+    },
+    {
+      "name": "missing historical quota remains null and locked, fixed cap cannot become four",
+      "passed": true
+    },
+    {
+      "name": "260+ degree continuous user turn unwraps 360 boundary; programmatic motion never qualifies",
+      "passed": true
+    },
+    {
+      "name": "back-and-forth gestures cannot be added together to falsely pass 260 degree range",
+      "passed": true
+    },
+    {
+      "name": "enterprise purpose stays separate from unchanged Agent style and rejects overflow",
+      "passed": true
+    },
+    {
+      "name": "create only sends source task and purpose; server owns confirmation snapshot",
+      "passed": true
+    },
+    {
+      "name": "invalid IDs, empty purpose and bad enterprise metadata stay local",
+      "passed": true
+    },
+    {
+      "name": "explicit style registration uses same source task, never starts provider generation",
+      "passed": true
+    },
+    {
+      "name": "manual Prompt edits submit immutable version request and reject oversized UTF8 locally",
+      "passed": true
+    },
+    {
+      "name": "invalid upload or absent license never sends binary data",
+      "passed": true
+    },
+    {
+      "name": "ordinary model submit stays explicitly unavailable and never starts provider call",
+      "passed": true
+    },
+    {
+      "name": "network failure makes one local request and never retries automatically",
+      "passed": true
+    },
+    {
+      "name": "viewer module waits for explicit valid model selection; starts loading and only load event means ready",
+      "passed": true
+    },
+    {
+      "name": "readonly DOM diagnostics follow real camera-change events and clear when style has no model",
+      "passed": true
+    },
+    {
+      "name": "zoom, reset and touch mode use actual viewer controls, preserving scroll on exit",
+      "passed": true
+    },
+    {
+      "name": "load error disables controls and displays clear error without a new model task",
+      "passed": true
+    },
+    {
+      "name": "explicit retry bypasses only the failed registered GLB cache key, without automatic retries or provider requests",
+      "passed": true
+    },
+    {
+      "name": "retry strategy does not weaken canonical model URL validation for external or caller-supplied query URLs",
+      "passed": true
+    },
+    {
+      "name": "old model callbacks cannot mark a replacement ready; diagnostics retain actual file hash",
+      "passed": true
+    },
+    {
+      "name": "viewer module import failure has a visible error instead of a blank empty region",
+      "passed": true
+    },
+    {
+      "name": "metadata failure uses the same error state and cancels stale model callbacks without network",
+      "passed": true
+    },
+    {
+      "name": "asset initialization makes zero API calls; model submit remains disabled",
+      "passed": true
+    },
+    {
+      "name": "opening asset panel reads only local model/usage endpoints with no provider request",
+      "passed": true
+    },
+    {
+      "name": "rapid duplicate asset registration is one local submission and confirmed image waits for visibility",
+      "passed": true
+    },
+    {
+      "name": "concept image load error stops acceptance and gives a visible warning",
+      "passed": true
+    },
+    {
+      "name": "Agent handoff reads registered styles only and never creates an asset or model by itself",
+      "passed": true
+    },
+    {
+      "name": "selecting an absent style only reads local family and clearly clears previous assets",
+      "passed": true
+    },
+    {
+      "name": "manual editing creates unconfirmed culturally held version without replacing old images/models",
+      "passed": true
+    },
+    {
+      "name": "prior style version remains selectable and is restored through GET without regeneration",
+      "passed": true
+    },
+    {
+      "name": "failed linked asset GET preserves its exact ID and manual refresh restores it without writes or automatic retries",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n1 !== 2\n"
+    },
+    {
+      "name": "metadata failure preserves an existing image and ready GLB while marking the display as a stale loaded snapshot",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'stale'\n"
+    },
+    {
+      "name": "duplicate manual restore clicks coalesce and missing quota stays unknown instead of adopting the archival count",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n1 !== 2\n"
+    },
+    {
+      "name": "archival model closure text separates historic credits from unknown future prices and never grants creation rights",
+      "passed": false,
+      "error": "The input did not match the regular expression /两个已有真实模型成果.*取消第三次建模.*保持关闭/. Input:\n\n'角色离线测试角色风格与版本写实国风 · 风格版本1概念图尚未接受图片图片SHA-256aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa生成参数modelCount=1；mesh_quality=standard；faceNum=500000；disablePbr=0；onlyGenerateMesh=false；enableImageEnhancement=false（提交前再次核对）预计Credit尚未核实费用，禁止创建真实任务已占用提交次数历史待核实剩余额度待核实，创建锁定本次用途离线结构测试真实建模门禁本轮仅开发与验证；首次真实建模需要另行明确授权'\n"
+    },
+    {
+      "name": "HTML retains all original sections and real-generation remains disabled; text-only untrusted rendering",
+      "passed": true
+    }
+  ],
+  "passed": 36,
+  "failed": 4
+}
