@@ -2,11 +2,11 @@
 
 在原有「梨园风华」8页京剧文化网站上建设AI戏韵工坊。前端保留HTML/CSS/原生ES Module与酒红、金色、米白视觉；Phase 2提供真实RAG问答，Phase 3加入规划、文化研究、角色设计、文化审校的真实协作与人工确认。Phase 4提供双风格资产与真实GLB查看器，已逐次批准并实际提交Q版技术模型与写实主展示模型各一次；平台图像生成仍未接入。
 
-当前状态（2026-10-19）：Phase 1～3已按各自范围验收，Phase 4已在两模型范围验收通过；Phase 5 WP1已获用户验收，**WP2：Agent历史只读查看已实现，等待人工验收**（`PHASE_5_WP2_WAITING_ACCEPTANCE`）。WP3～WP5未执行。当前本地分支`feature/phase5-competition-delivery`保留WP1提交`f58888b`、`ea0f4fc`，未合并main、未推送；不能假设远端克隆已包含最新本地成果。
+当前状态（2026-10-20）：Phase 1～3已按各自范围验收，Phase 4已在两模型范围验收通过；Phase 5 WP1、WP2已获用户验收，**WP3：比赛导览与异常降级已实现，等待人工验收**（`PHASE_5_WP3_WAITING_ACCEPTANCE`）。WP4、WP5未执行。当前本地分支`feature/phase5-competition-delivery`保留WP1/WP2历史，未合并main、未推送；不能假设远端克隆已包含最新本地成果。
 
 两个真实Neural4D模型均已人工验收，累计实际60积分；**已用2/3、剩1未使用，第三次用户决定不执行，创建保持关闭**。平台图像生成仍未接入，现有图片来自导入。首个Q版仅内部技术用途；写实“绛绣·戏韵”为已生成主展示资产，不是每次新需求即时生成的结果。实体手机未验证。私有GLB、图片、任务及资产数据库不随Git分发，空环境只能先使用合法测试夹具验证Viewer，不能用Duck冒充京剧成品。
 
-[公开仓库](https://github.com/3503799261-blip/xijing_ai) · [Phase 4最终验收](docs/reports/phase-04-final-acceptance.md) · [WP1流程/状态/问题清单](docs/reports/phase-05-work-package-01.md) · [WP2报告](docs/reports/phase-05-work-package-02.md) · [WP2实际测试](docs/evidence/test-results/phase-05-wp2-test-report.md)。历史阶段与测试仍由其原报告保留，不把旧状态混作当前状态。
+[公开仓库](https://github.com/3503799261-blip/xijing_ai) · [Phase 4最终验收](docs/reports/phase-04-final-acceptance.md) · [WP1流程](docs/reports/phase-05-work-package-01.md) · [WP2历史档案](docs/reports/phase-05-work-package-02.md) · [WP3导览及降级报告](docs/reports/phase-05-work-package-03.md) · [WP3实际测试](docs/evidence/test-results/phase-05-wp3-test-report.md)。历史阶段与测试仍由其原报告保留，不把旧状态混作当前状态。
 
 ## 已准备本机：免费启动与已有成果
 
@@ -19,11 +19,22 @@ Set-Location -LiteralPath 'D:\京剧\京剧'
 
 - [首页](http://127.0.0.1:8000/index.html)、[AI工坊](http://127.0.0.1:8000/about.html)。同一8000端口提供安全静态资源与API，不用`file://`或把整个仓库公开的静态服务器。
 - [Agent历史档案](http://127.0.0.1:8000/about.html#ai-workshop-history)：在协作区点击“读取历史记录”，按状态、类型或完整任务ID筛选。查看详情、阶段公开产物、引用、文化审校、人审和事件均只发GET，不重跑任务、不恢复实时监控。详情中的资产入口只打开已有模型。
+- [比赛演示导览](http://127.0.0.1:8000/about.html#ai-workshop-demo)：六步说明→手动进入对应功能；可以跳步、退出。只读备用模式会拦截当前页面的问答/Agent提交、确认/取消和资产写操作，允许历史GET与Viewer操作；刷新或新页退出，本页保护不是后端权限或全站开关。
 - [已有写实模型](http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model)：只GET已登记资产/GLB；绛绣切Q版会诚实显示未生成，不会取别人的Q版模型。
 - [内部Q版技术Viewer](http://127.0.0.1:8000/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer)：仅loopback/内部用途，没有正式角色关联，不用于公开或商用交付。
 - [health](http://127.0.0.1:8000/api/v1/health)、[capabilities](http://127.0.0.1:8000/api/v1/capabilities)、[全局额度](http://127.0.0.1:8000/api/v1/assets/usage)：本地免费读取；问答“就绪”包含既往探测/配置指纹状态，不是实时余额/外网连通测试。
 
-启动会初始化本地库并处理已有中断状态，不是纯只读操作，但不会自动重新执行Agent或建模。停止时在启动终端按Ctrl+C，等进程退出；不要删除owner锁或强开第二个worker。**WP1/WP2均不发送问答、不提交Agent，不运行任何供应商探测、建模或图像生成工具。**
+启动会初始化本地库并处理已有中断状态，不是纯只读操作，但不会自动重新执行Agent或建模。停止时在启动终端按Ctrl+C，等进程退出；不要删除owner锁或强开第二个worker。**WP1～WP3均不发送真实问答、不提交Agent，不运行任何供应商探测、建模或图像生成工具；WP3故障测试仅用明确的浏览器响应替身。**
+
+## WP3比赛导览与免费备用路线
+
+导览顺序：认识戏境AI → 京剧问答及引用 → 已保存Agent历史 → 角色JSON/审校/人审 → 两个已有真实模型 → 企业应用方向。步骤变化只是导航，不代表AI任务完成；先阅读说明，再点击“前往这一步对应的功能”。历史步骤可明确点击填入绛绣任务ID，然后由用户手动读取WP2记录，不自动查询或执行。
+
+“检查本地演示条件”只手动GET健康、历史摘要、写实模型登记与额度四项。初始未检查，每项独立成功/错误；知识就绪不等于当天DeepSeek可用，模型登记可读不等于GLB已加载。没有外网LLM时可以看本机历史和GLB，但仍需要本地后端与私有文件，不是离线大模型。后端本身不可用时保留文化页面及静态说明，不补造答案或历史。
+
+备用模式仅当前页面有效，不停止已经在后台运行的任务。两个模型链接打开新页，原备用页仍保留；新页不继承保护，应只查看已有Viewer。Q版仍限内部非公开回环用途，公开主展示优先写实。企业为需求入口和应用方向，无真实企业客户或交付案例。
+
+问答失败保留输入，结束等待并允许手动重试，不自动重复模型调用；历史为空/404/异常时按真实状态提示。资产首次读取失败可通过“读取本地模型与额度”按钮重读相同资产ID；失联时已有模型标为加载快照，风格读取失败显示状态未知。GLB Error只重新加载原文件，绝不重新建模。详细失败与复测见[WP3测试报告](docs/evidence/test-results/phase-05-wp3-test-report.md)。
 
 ## 架构与数据边界
 
@@ -296,7 +307,7 @@ Phase 3实际40次供应商请求、39986 tokens，增量保守估算 **0.107774
 
 Phase 1真实历史、备份与截图保留，见 [阶段报告](docs/reports/phase-01.md)。Phase 2方案、批准Prompt、真实工具过程、参数改动、失败与修复归档在docs；协作导出排除秘密与隐藏推理，不补造对话。历史报告描述的是当时状态，不能当作当前能力证明。
 
-当前Phase 4两模型范围已验收，WP1已验收；WP2完成历史只读入口并等待验收。比赛导览、完整最终测试包和交付材料仍待后续工作包逐项批准。正文现有页面中的少量“首次建模”等旧文案保留在问题清单，本次不扩展修改。
+当前Phase 4两模型范围、WP1与WP2已验收；WP3完成导览/备用入口与必要错误恢复，等待验收。“首次建模”旧文案已在本包校准为已有两模型、第三取消及创建关闭。完整最终测试包和交付材料仍待后续工作包逐项批准，本包不等同WP4最终回归。
 
 ### 第1次内部真实模型恢复（2026-10-13）
 
@@ -328,6 +339,6 @@ Phase 1真实历史、备份与截图保留，见 [阶段报告](docs/reports/ph
 
 ## 阶段证据索引
 
-[Phase 1](docs/reports/phase-01.md) · [Phase 2](docs/reports/phase-02.md) · [Phase 3](docs/reports/phase-03.md) · [Phase 4最终](docs/reports/phase-04-final-acceptance.md) · [Phase 5检查点A](docs/reports/phase-05-project-audit.md) · [WP1](docs/reports/phase-05-work-package-01.md) · [WP2](docs/reports/phase-05-work-package-02.md)。
+[Phase 1](docs/reports/phase-01.md) · [Phase 2](docs/reports/phase-02.md) · [Phase 3](docs/reports/phase-03.md) · [Phase 4最终](docs/reports/phase-04-final-acceptance.md) · [Phase 5检查点A](docs/reports/phase-05-project-audit.md) · [WP1](docs/reports/phase-05-work-package-01.md) · [WP2](docs/reports/phase-05-work-package-02.md) · [WP3](docs/reports/phase-05-work-package-03.md)。
 
 真实协作与Prompt：[Phase 1](docs/prompts/phase-01/README.md)、[Phase 2](docs/prompts/phase-02/README.md)、[Phase 3](docs/prompts/phase-03/README.md)、[Phase 4](docs/prompts/phase-04/README.md)、[Phase 5](docs/prompts/phase-05/README.md)。不把摘要冒充原始对话，不删除失败记录；历史报告中的当时状态须结合日期阅读。

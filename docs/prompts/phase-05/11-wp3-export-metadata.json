@@ -1,0 +1,28 @@
+{
+  "kind": "WP3_PUBLIC_TIME_SNAPSHOT_NOT_HIDDEN_REASONING",
+  "exportedAtUtc": "2026-10-20T12:21:58.142286+00:00",
+  "sourceSnapshotSha256": "076c0dacff6483407fff7c081c668750ddb2410a54fc4b9611b7460373fe307d",
+  "sourceBytes": 92883284,
+  "sourcePartialLastLineOmitted": false,
+  "sourceStartLine": 12692,
+  "sourceStartTimestamp": "2026-10-19T10:03:10.290Z",
+  "sourceSnapshotLastLine": 13270,
+  "exportedRecords": 146,
+  "skipped": {
+    "event_msg": 248,
+    "token_usage_record": 67,
+    "reasoning": 71,
+    "inter_agent_communication_metadata": 19,
+    "agent_message": 19,
+    "private_message": 5,
+    "additional_tools": 1,
+    "world_state": 2,
+    "turn_context": 1
+  },
+  "excludedAgentToolCalls": 0,
+  "rawPromptBytes": 23635,
+  "rawPromptSha256": "b6d3d76899c162a92883d920dd853bda29d7e84956fab5cc74ff2788adcfecc9",
+  "rawPromptMatchesActualUserMessage": true,
+  "publicSnapshotSha256": "a9380cef966534dd1556333ce0e295a30652835448fcd692cb05a50f87e13801",
+  "scope": "Only public user/assistant/matched tool records from actual WP3 request up to export time. Excludes hidden reasoning, system/developer, internal child communication; secrets/signed URLs/personal paths redacted. Future commits/final reply not included."
+}
