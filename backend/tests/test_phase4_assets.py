@@ -66,9 +66,9 @@ def task(store, *, confirmed=True, change=None):
 
 
 def service(tmp_path):
-    store = TaskStore(tmp_path / 'tasks.sqlite3')
+    store = TaskStore(tmp_path / 'tasks.sqlite3', create=True)
     settings = SimpleNamespace(rag_data_dir=tmp_path / 'runtime')
-    return AssetService(settings, store), store
+    return AssetService(settings, store, create=True), store
 
 
 def asset(svc, store, **extras):

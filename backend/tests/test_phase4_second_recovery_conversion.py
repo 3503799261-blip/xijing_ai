@@ -170,13 +170,13 @@ def test_offline_registration_uses_formal_lineage_and_preserves_global_count(tmp
     settings = Settings(_env_file=None, rag_data_dir=tmp_path / 'runtime',
         neural4d_generation_enabled=False, neural4d_protocol_verified=False,
         neural4d_api_key=SecretStr(''), deepseek_api_key=SecretStr(''))
-    tasks = TaskStore(settings.rag_data_dir / 'agent-tasks.sqlite3')
-    assets = AssetService(settings, tasks)
+    tasks = TaskStore(settings.rag_data_dir / 'agent-tasks.sqlite3', create=True)
+    assets = AssetService(settings, tasks, create=True)
     created = asset(assets, tasks, purpose='比赛主展示', styleMode='realistic')
     assets.approve_visual(created['assetId'], created['visualPrompt']['promptHash'])
     image = assets.upload_image(created['assetId'], image_bytes(), 'image/png', 'manual_image', '仅原创离线测试图片')
     image = assets.accept_image(image['imageId'], image['hash'])
-    usage = UsageManager(tmp_path / '.runtime/neural4d-usage.sqlite3')
+    usage = UsageManager(tmp_path / '.runtime/neural4d-usage.sqlite3', create=True)
     usage.initialize_history(0, '仅离线测试的历史，不是真实项目额度。')
     first = {'modelCount': 1, 'fixture': 'first'}
     approval = usage.approve(first, '仅离线第一模型', True, 30)

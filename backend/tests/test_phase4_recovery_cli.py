@@ -64,7 +64,7 @@ def test_original_query_only_records_structure_and_no_signed_value(tmp_path):
 
 def cached_assets(tmp_path, *, provider_task_id=TASK_ID):
     """Local-only byte-integrity fixture; not a supplier or GLB-format test."""
-    assets = AssetService(SimpleNamespace(rag_data_dir=tmp_path / 'offline-assets'), None)
+    assets = AssetService(SimpleNamespace(rag_data_dir=tmp_path / 'offline-assets'), None, create=True)
     raw = b'offline-model-cache-fixture'
     digest = hashlib.sha256(raw).hexdigest()
     storage_key = assets.save_bytes('models', raw, digest, 'glb')

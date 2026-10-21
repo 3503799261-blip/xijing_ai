@@ -15,6 +15,7 @@ from backend.app.errors import ServiceError
 from backend.app.knowledge.store import KnowledgeStore
 from backend.app.knowledge.vector_store import VectorStore
 from backend.app.services.runtime import Runtime
+from backend.app.providers.budget import BudgetLedger
 
 
 REVISION = 'offline-synthetic-encoder-revision'
@@ -51,6 +52,8 @@ def prepared(tmp_path, monkeypatch):
     vectors.upsert([chunk], [VECTOR])
     vectors.close()
     settings = Settings(_env_file=None, rag_data_dir=root, embedding_model_path=model, deepseek_api_key='', neural4d_api_key='', neural4d_admin_token='', neural4d_generation_enabled=False, neural4d_protocol_verified=False)
+    BudgetLedger(root / 'api-budget.sqlite3', settings.rag_test_budget_cny,
+                 scope='phase3', scope_limit=settings.agent_test_budget_cny, create=True)
     return settings, target
 
 

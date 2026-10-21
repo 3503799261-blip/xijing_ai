@@ -18,12 +18,13 @@ from backend.app.main import create_app
 from backend.app.providers.llm import DeepSeekProvider
 from backend.app.schemas import QuestionRequest
 from backend.app.services.runtime import Runtime
+from backend.tests.conftest import initialized_settings
 
 
 def settings_for_test(tmp_path: Path, **overrides):
     values = dict(_env_file=None, deepseek_api_key=SecretStr(""), rag_data_dir=tmp_path / "runtime", embedding_model_path=tmp_path / "fake-model")
     values.update(overrides)
-    return Settings(**values)
+    return initialized_settings(Settings(**values))
 
 
 EVIDENCE = [{"id": "unit_chunk", "title": "单元测试资料", "sourceId": "unit_source", "locator": "单元测试位置", "url": "https://example.invalid/unit-only", "excerpt": "此为离线故障注入文本。", "contentKind": "original_fact_summary"}]

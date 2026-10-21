@@ -261,7 +261,7 @@ def test_actual_task_store_accepts_each_artifact_once_and_hold_transitions(tmp_p
                             'elapsedSeconds': 0.0, 'retrievalMode': kwargs['mode']}
                 return search(question, **kwargs)
             runtime.search_service.search = partial
-        store = TaskStore(tmp_path / 'tasks.sqlite3')
+        store = TaskStore(tmp_path / 'tasks.sqlite3', create=True)
         task_id, created = store.create(BRIEF, f'unit-hold-{hold}')
         assert created and store.start(task_id)
 
@@ -298,7 +298,7 @@ def test_exact_actor_and_year_guards_reject_similar_other_person_premiere_before
                  'excerpt': '测试中的另一位人物于1959年首演，仅为合成错误匹配资料。',
                  'entityNames': ['测试另一人物', '1959年']}
         runtime = OfflineRuntime([plan], evidence=[other])
-        store = TaskStore(tmp_path / 'actor.sqlite3')
+        store = TaskStore(tmp_path / 'actor.sqlite3', create=True)
         task_id, _ = store.create(brief, 'unit-exact-actor')
         store.start(task_id)
         async def emit(agent_id, state, **kwargs):
@@ -416,7 +416,7 @@ def test_phase2_explicit_insufficiency_is_preserved_even_when_candidates_exist(t
         def insufficient_with_candidate(question, **kwargs):
             return {**search(question, **kwargs), 'uncertain': True}
         runtime.search_service.search = insufficient_with_candidate
-        store = TaskStore(tmp_path / 'source-insufficient.sqlite3')
+        store = TaskStore(tmp_path / 'source-insufficient.sqlite3', create=True)
         task_id, _ = store.create(BRIEF, 'unit-source-insufficient')
         store.start(task_id)
         async def emit(agent_id, state, **kwargs):
@@ -465,7 +465,7 @@ def test_failed_planner_diagnostic_persists_paths_and_usage_without_raw_content(
         response = {**PLAN, 'theme': '', 'target': '', marker: marker}
         runtime = OfflineRuntime([response])
         brief = {**BRIEF, 'requirements': marker}
-        store = TaskStore(tmp_path / 'diagnostic.sqlite3')
+        store = TaskStore(tmp_path / 'diagnostic.sqlite3', create=True)
         task_id, _ = store.create(brief, 'unit-plan-diagnostic')
         store.start(task_id)
         async def emit(agent_id, state, **kwargs):

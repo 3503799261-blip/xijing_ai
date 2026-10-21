@@ -3,6 +3,7 @@ import json
 import re
 import sqlite3
 from pathlib import Path
+from ..database import open_existing, validate_database, initialize_database
 
 def lexical_tokens(text: str) -> str:
     tokens = re.findall(r'[a-z0-9]+', text.lower())
@@ -11,17 +12,29 @@ def lexical_tokens(text: str) -> str:
         tokens.extend(run[i:i+2] for i in range(len(run)-1))
     return ' '.join(dict.fromkeys(tokens))
 
-class KnowledgeStore:
-    def __init__(self, path: Path, create=False):
-        self.db = sqlite3.connect(path)
-        self.db.row_factory = sqlite3.Row
-        if create:
-            self.db.executescript('''
+KNOWLEDGE_TABLES = {
+    'sources': ('source_id', 'data_json'),
+    'documents': ('document_id', 'source_id', 'version', 'content_hash'),
+    'chunks': ('chunk_id', 'source_id', 'section_id', 'content_hash', 'data_json'),
+    'chunk_terms': ('chunk_id', 'tokens'),
+}
+KNOWLEDGE_SCHEMA = r"""
             CREATE TABLE sources (source_id TEXT PRIMARY KEY, data_json TEXT NOT NULL);
             CREATE TABLE documents (document_id TEXT PRIMARY KEY, source_id TEXT, version TEXT, content_hash TEXT);
             CREATE TABLE chunks (chunk_id TEXT PRIMARY KEY, source_id TEXT, section_id TEXT, content_hash TEXT, data_json TEXT NOT NULL);
             CREATE VIRTUAL TABLE chunk_terms USING fts5(chunk_id UNINDEXED, tokens);
-            ''')
+            """
+KNOWLEDGE_DATABASE_MESSAGE = '活动知识库SQLite缺失或不可读取，请恢复配套资料版本；未自动创建或修复。'
+
+class KnowledgeStore:
+    def __init__(self, path: Path, create=False):
+        options = {'code': 'KNOWLEDGE_DATABASE_UNAVAILABLE', 'message': KNOWLEDGE_DATABASE_MESSAGE}
+        if create:
+            initialize_database(path, KNOWLEDGE_SCHEMA, KNOWLEDGE_TABLES, **options)
+        else:
+            validate_database(path, KNOWLEDGE_TABLES, **options)
+        self.db = open_existing(path, **options)
+        self.db.row_factory = sqlite3.Row
 
     def add(self, source: dict, chunks: list[dict]):
         sid = source['source_id']

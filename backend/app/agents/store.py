@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from contextlib import contextmanager
 from ..errors import ServiceError
+from ..database import open_existing, validate_database, initialize_database
 
 AGENTS = ('planner', 'researcher', 'designer', 'reviewer')
 TERMINAL = {'completed', 'failed', 'cancelled'}
@@ -18,12 +19,13 @@ def now():
 def encode(value):
     return json.dumps(value, ensure_ascii=False, separators=(',', ':'))
 
-class TaskStore:
-    def __init__(self, path: Path):
-        self.path = Path(path)
-        self.path.parent.mkdir(parents=True, exist_ok=True)
-        with self.connect() as db:
-            db.executescript('''
+TASK_TABLES = {
+    'agent_tasks': ('task_id', 'idempotency_key', 'signature', 'brief_json', 'state', 'sequence', 'current_agent', 'confirmation_json', 'result_json', 'cancel_requested', 'created_at', 'updated_at'),
+    'agent_steps': ('task_id', 'agent_id', 'state', 'summary', 'started_at', 'finished_at', 'error_code'),
+    'agent_artifacts': ('task_id', 'agent_id', 'version', 'content_json', 'content_hash', 'created_at'),
+    'agent_events': ('task_id', 'sequence', 'payload_json'),
+}
+TASK_SCHEMA = r"""
             CREATE TABLE IF NOT EXISTS agent_tasks (
               task_id TEXT PRIMARY KEY, idempotency_key TEXT UNIQUE NOT NULL,
               signature TEXT NOT NULL, brief_json TEXT NOT NULL, state TEXT NOT NULL,
@@ -41,15 +43,28 @@ class TaskStore:
             CREATE TABLE IF NOT EXISTS agent_events (
               task_id TEXT NOT NULL, sequence INTEGER NOT NULL, payload_json TEXT NOT NULL,
               PRIMARY KEY(task_id,sequence));
-            ''')
+            """
+TASK_DATABASE_MESSAGE = 'Agent任务数据库缺失、路径错误或不可读取，请检查配置并恢复原库；未自动创建或修复。'
+
+
+class TaskStore:
+    def __init__(self, path: Path, *, create=False):
+        self.path = Path(path).expanduser().resolve()
+        options = {'code': 'AGENT_DATABASE_UNAVAILABLE', 'message': TASK_DATABASE_MESSAGE}
+        if create:
+            initialize_database(self.path, TASK_SCHEMA, TASK_TABLES, **options)
+        else:
+            validate_database(self.path, TASK_TABLES, **options)
 
     @contextmanager
     def connect(self):
-        db = sqlite3.connect(self.path, timeout=5)
-        db.row_factory = sqlite3.Row
+        db = open_existing(self.path, timeout=5, code='AGENT_DATABASE_UNAVAILABLE', message=TASK_DATABASE_MESSAGE)
         try:
+            db.row_factory = sqlite3.Row
             with db:
                 yield db
+        except sqlite3.Error:
+            raise ServiceError('AGENT_DATABASE_UNAVAILABLE', TASK_DATABASE_MESSAGE, 503) from None
         finally:
             db.close()
 

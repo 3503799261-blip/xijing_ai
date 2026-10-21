@@ -16,12 +16,13 @@ from backend.app.config import Settings
 from backend.app.errors import ServiceError
 from backend.app.providers.budget import BudgetLedger
 from backend.app.providers.llm import DeepSeekProvider
+from backend.tests.conftest import initialized_settings
 
 
 def configuration(tmp_path, **overrides):
-    return Settings(_env_file=None, deepseek_api_key=SecretStr('offline-test-only'),
+    return initialized_settings(Settings(_env_file=None, deepseek_api_key=SecretStr('offline-test-only'),
                     rag_data_dir=tmp_path / 'runtime',
-                    embedding_model_path=tmp_path / 'unused-model', **overrides)
+                    embedding_model_path=tmp_path / 'unused-model', **overrides))
 
 
 def response():
@@ -32,10 +33,27 @@ def response():
     })
 
 
-def test_phase2_rows_survive_migration_and_do_not_consume_incremental_budget(tmp_path):
+def test_partial_legacy_ledger_is_not_implicitly_migrated_or_overwritten(tmp_path):
     path = tmp_path / 'budget.sqlite3'
     with sqlite3.connect(path) as db:
         db.execute('CREATE TABLE calls (request_id TEXT PRIMARY KEY, created_at TEXT, status TEXT, reserved REAL, cost REAL, usage_json TEXT)')
+        db.execute('INSERT INTO calls VALUES (?,?,?,?,?,?)', ('phase2-call', '2026-10-10', 'success', 0.02, 0.01, '{}'))
+    original = path.read_bytes()
+    # Current serving and first-install setup must not silently migrate a
+    # partial/legacy file. An operator must review such a migration separately.
+    for create in (False, True):
+        with pytest.raises(ServiceError, match='BUDGET_DATABASE_UNAVAILABLE'):
+            BudgetLedger(path, 3, scope='phase3', scope_limit=0.5, create=create)
+        assert path.read_bytes() == original
+    with sqlite3.connect(path.as_uri() + '?mode=ro', uri=True) as db:
+        assert db.execute('SELECT request_id,cost FROM calls').fetchall() == [('phase2-call', 0.01)]
+        assert db.execute("SELECT count(*) FROM sqlite_master WHERE type='table'").fetchone()[0] == 1
+
+
+def test_valid_prior_phase2_rows_do_not_consume_incremental_budget(tmp_path):
+    path = tmp_path / 'budget.sqlite3'
+    ledger = BudgetLedger(path, 3, scope='phase3', scope_limit=0.5, create=True)
+    with ledger.connect() as db:
         db.execute('INSERT INTO calls VALUES (?,?,?,?,?,?)', ('phase2-call', '2026-10-10', 'success', 0.02, 0.01, '{}'))
     ledger = BudgetLedger(path, 3, scope='phase3', scope_limit=0.5)
     assert ledger.summary()['estimatedUpperCostCny'] == 0.01
@@ -52,7 +70,7 @@ def test_phase2_rows_survive_migration_and_do_not_consume_incremental_budget(tmp
 
 def test_unknown_reservation_and_scope_limit_persist_across_restarts(tmp_path):
     path = tmp_path / 'budget.sqlite3'
-    first = BudgetLedger(path, 3, scope='phase3', scope_limit=0.001)
+    first = BudgetLedger(path, 3, scope='phase3', scope_limit=0.001, create=True)
     first.reserve('unknown-call', [], 1)
     first.finish('unknown-call', None, 'cancelled_unknown')
     before = first.summary()['activeScope']
@@ -67,7 +85,7 @@ def test_unknown_reservation_and_scope_limit_persist_across_restarts(tmp_path):
 
 def test_total_budget_still_includes_prior_phase2_usage(tmp_path):
     path = tmp_path / 'budget.sqlite3'
-    old = BudgetLedger(path, 0.001)
+    old = BudgetLedger(path, 0.001, create=True)
     old.reserve('phase2-unknown', [], 1)
     new = BudgetLedger(path, 0.001, scope='phase3', scope_limit=0.5)
     with pytest.raises(ServiceError) as caught:
@@ -79,7 +97,7 @@ def test_total_budget_still_includes_prior_phase2_usage(tmp_path):
 
 def test_concurrent_reservations_cannot_overspend_scope(tmp_path):
     path = tmp_path / 'budget.sqlite3'
-    a = BudgetLedger(path, 3, scope='phase3', scope_limit=0.0008)
+    a = BudgetLedger(path, 3, scope='phase3', scope_limit=0.0008, create=True)
     b = BudgetLedger(path, 3, scope='phase3', scope_limit=0.0008)
     barrier = Barrier(2)
 
@@ -98,7 +116,7 @@ def test_concurrent_reservations_cannot_overspend_scope(tmp_path):
 
 
 def test_invalid_boolean_usage_does_not_release_unknown_reservation(tmp_path):
-    ledger = BudgetLedger(tmp_path / 'budget.sqlite3', 3, scope='phase3', scope_limit=0.5)
+    ledger = BudgetLedger(tmp_path / 'budget.sqlite3', 3, scope='phase3', scope_limit=0.5, create=True)
     ledger.reserve('bad-usage', [], 1)
     ledger.finish('bad-usage', {'prompt_tokens': True, 'completion_tokens': 4}, 'success')
     assert ledger.records()[0]['estimatedUpperCny'] is None
@@ -107,7 +125,7 @@ def test_invalid_boolean_usage_does_not_release_unknown_reservation(tmp_path):
 
 @pytest.mark.parametrize('fail_transaction', [False, True])
 def test_short_ledger_connections_commit_or_roll_back_and_always_close(tmp_path, fail_transaction):
-    ledger = BudgetLedger(tmp_path / 'budget.sqlite3', 3, scope='phase3', scope_limit=0.5)
+    ledger = BudgetLedger(tmp_path / 'budget.sqlite3', 3, scope='phase3', scope_limit=0.5, create=True)
     captured = None
     try:
         with ledger.connect() as db:

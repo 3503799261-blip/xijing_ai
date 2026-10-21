@@ -15,6 +15,7 @@ from backend.app.errors import ServiceError
 from backend.app.providers.budget import BudgetLedger
 from backend.app.providers.llm import DeepSeekProvider
 from backend.app.services.chat import grounded_answer, validated_answer
+from backend.tests.conftest import initialized_settings
 
 
 def settings_for_test(tmp_path: Path, **overrides):
@@ -25,7 +26,7 @@ def settings_for_test(tmp_path: Path, **overrides):
         embedding_model_path=tmp_path / "fake-model",
     )
     values.update(overrides)
-    return Settings(**values)
+    return initialized_settings(Settings(**values))
 
 
 def envelope(content="unit test text", usage=None, **choice_updates):

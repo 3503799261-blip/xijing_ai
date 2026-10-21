@@ -56,9 +56,9 @@ def setup(tmp_path):
             return httpx.Response(200, json={'uuid': f'offline-model-uuid-{number}'})
         transport = httpx.MockTransport(handler or default)
         directory.mkdir(parents=True)
-        tasks = TaskStore(directory / 'tasks.sqlite3')
-        assets = AssetService(settings, tasks)
-        usage = UsageManager(directory / 'private-offline-quota.sqlite3')
+        tasks = TaskStore(directory / 'tasks.sqlite3', create=True)
+        assets = AssetService(settings, tasks, create=True)
+        usage = UsageManager(directory / 'private-offline-quota.sqlite3', create=True)
         if history is not None:
             usage.initialize_history(history, '仅离线模拟：不是实际项目历史或账户余额。')
         models = ModelService(settings, assets, usage, transport)

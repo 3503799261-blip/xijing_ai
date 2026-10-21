@@ -19,9 +19,7 @@ class ModelService:
         self.owner = None
         self.verified_until = 0
         self.balance = None
-        with self.assets.store.connect() as db:
-            db.execute('CREATE TABLE IF NOT EXISTS neural4d_frozen_approvals (approval_id TEXT PRIMARY KEY, payload_json TEXT NOT NULL)')
-            db.execute('CREATE TABLE IF NOT EXISTS neural4d_query_limits (job_id TEXT PRIMARY KEY, last_query REAL NOT NULL, series_start REAL NOT NULL, series_count INTEGER NOT NULL, total_count INTEGER NOT NULL)')
+        # The existing catalog schema is validated by AssetStore. No DDL here.
 
     def start(self):
         lock = portalocker.Lock(str(self.usage.path.with_suffix('.owner.lock')), timeout=0)

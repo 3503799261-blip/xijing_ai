@@ -19,7 +19,7 @@ BRIEF = {'requirements': '离线测试夹具，不是真实历史AI运行。', '
 
 
 def saved_tasks(tmp_path, count=3):
-    store = TaskStore(tmp_path / 'tasks.sqlite3')
+    store = TaskStore(tmp_path / 'tasks.sqlite3', create=True)
     ids = []
     for index in range(count):
         task_id, _ = store.create(BRIEF, 'history-fixture-' + str(index), queue_limit=5)
@@ -38,7 +38,11 @@ def saved_tasks(tmp_path, count=3):
 
 def http_client(store):
     app = FastAPI()
-    supervisor = SimpleNamespace(store=store)
+    # Isolated router fixture supplies the new supervisor read-preflight
+    # contract without running a worker. Full app safety tests exercise its
+    # real database guard against missing/corrupt configured files.
+    supervisor = SimpleNamespace(store=store, store_path=store.path,
+                                 require_database=lambda: store)
     # A route read must not access supervisor methods or mutate TaskStore.
     def forbidden(*args, **kwargs):
         raise AssertionError('History invoked a task mutation or workflow')
@@ -136,7 +140,7 @@ def test_missing_database_is_empty_and_is_not_created(tmp_path):
 
 
 def test_empty_existing_database(tmp_path):
-    store = TaskStore(tmp_path / 'empty.sqlite3')
+    store = TaskStore(tmp_path / 'empty.sqlite3', create=True)
     result = HistoryReader(store.path).list()
     assert result['items'] == [] and result['availableStates'] == [] and result['totalPages'] == 0
 
@@ -149,7 +153,7 @@ def test_missing_detail_is_404(tmp_path):
 
 
 def test_partial_failed_artifact_is_available_without_final_design(tmp_path):
-    store = TaskStore(tmp_path / 'tasks.sqlite3')
+    store = TaskStore(tmp_path / 'tasks.sqlite3', create=True)
     task_id, _ = store.create(BRIEF, 'partial-fixture')
     store.start(task_id)
     store.emit(task_id, 'planner', 'running')

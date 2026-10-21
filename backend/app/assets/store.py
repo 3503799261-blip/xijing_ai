@@ -6,6 +6,7 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 from ..errors import ServiceError
+from ..database import open_existing, validate_database, initialize_database
 from .visual_prompt import prompt_hash
 
 
@@ -17,13 +18,18 @@ def encode(value):
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False)
 
 
-class AssetStore:
-    def __init__(self, root):
-        self.root = Path(root).resolve()
-        self.root.mkdir(parents=True, exist_ok=True)
-        self.path = self.root / 'catalog.sqlite3'
-        with self.connect() as db:
-            db.executescript('''
+ASSET_TABLES = {
+    'character_assets': ('asset_id', 'signature', 'content_json', 'created_at'),
+    'asset_images': ('image_id', 'asset_id', 'content_json', 'created_at'),
+    'asset_models': ('model_id', 'asset_id', 'content_json', 'created_at'),
+    'concept_candidates': ('candidate_id', 'scope', 'version', 'signature', 'content_json', 'created_at'),
+    'neural4d_frozen_approvals': ('approval_id', 'payload_json'),
+    'neural4d_query_limits': ('job_id', 'last_query', 'series_start', 'series_count', 'total_count'),
+}
+ASSET_OBJECTS = (('index', 'images_by_asset'), ('index', 'models_by_asset'),
+                 ('index', 'model_provider_task_unique'), ('index', 'candidates_by_scope'),
+                 ('trigger', 'candidates_no_update'), ('trigger', 'candidates_no_delete'))
+ASSET_SCHEMA = r"""
             CREATE TABLE IF NOT EXISTS character_assets (
               asset_id TEXT PRIMARY KEY, signature TEXT UNIQUE NOT NULL,
               content_json TEXT NOT NULL, created_at TEXT NOT NULL);
@@ -38,16 +44,49 @@ class AssetStore:
             CREATE UNIQUE INDEX IF NOT EXISTS model_provider_task_unique
               ON asset_models(json_extract(content_json,'$.providerTaskId'))
               WHERE json_extract(content_json,'$.providerTaskId') IS NOT NULL;
-            ''')
+
+            CREATE TABLE IF NOT EXISTS concept_candidates (
+              candidate_id TEXT PRIMARY KEY, scope TEXT NOT NULL,
+              version INTEGER NOT NULL CHECK(version > 0),
+              signature TEXT UNIQUE NOT NULL, content_json TEXT NOT NULL,
+              created_at TEXT NOT NULL, UNIQUE(scope, version));
+            CREATE INDEX IF NOT EXISTS candidates_by_scope ON concept_candidates(scope, version);
+            CREATE TRIGGER IF NOT EXISTS candidates_no_update
+              BEFORE UPDATE ON concept_candidates BEGIN
+                SELECT RAISE(ABORT, 'concept candidate versions are immutable'); END;
+            CREATE TRIGGER IF NOT EXISTS candidates_no_delete
+              BEFORE DELETE ON concept_candidates BEGIN
+                SELECT RAISE(ABORT, 'concept candidate history is immutable'); END;
+
+CREATE TABLE IF NOT EXISTS neural4d_frozen_approvals (approval_id TEXT PRIMARY KEY, payload_json TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS neural4d_query_limits (job_id TEXT PRIMARY KEY, last_query REAL NOT NULL, series_start REAL NOT NULL, series_count INTEGER NOT NULL, total_count INTEGER NOT NULL);
+"""
+ASSET_DATABASE_MESSAGE = '资产数据库缺失、路径错误或不可读取，请检查配置并恢复原库；未自动创建或修复。'
+
+
+class AssetStore:
+    def __init__(self, root, *, create=False):
+        self.root = Path(root).expanduser().resolve()
+        self.path = self.root / 'catalog.sqlite3'
+        options = {'objects': ASSET_OBJECTS, 'code': 'ASSET_DATABASE_UNAVAILABLE', 'message': ASSET_DATABASE_MESSAGE}
+        if create:
+            initialize_database(self.path, ASSET_SCHEMA, ASSET_TABLES, **options)
+        else:
+            validate_database(self.path, ASSET_TABLES, **options)
 
     @contextmanager
     def connect(self):
-        db = sqlite3.connect(self.path, timeout=10)
-        db.row_factory = sqlite3.Row
-        db.execute('PRAGMA foreign_keys=ON')
+        db = open_existing(self.path, timeout=10, code='ASSET_DATABASE_UNAVAILABLE', message=ASSET_DATABASE_MESSAGE)
         try:
+            db.row_factory = sqlite3.Row
+            db.execute('PRAGMA foreign_keys=ON')
             with db:
                 yield db
+        except sqlite3.IntegrityError:
+            # Constraint rejection is a business invariant, not a broken store.
+            raise
+        except sqlite3.Error:
+            raise ServiceError('ASSET_DATABASE_UNAVAILABLE', ASSET_DATABASE_MESSAGE, 503) from None
         finally:
             db.close()
 

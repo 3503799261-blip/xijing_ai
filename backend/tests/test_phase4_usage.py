@@ -23,7 +23,7 @@ def payload(number=0):
 
 
 def manager(tmp_path, used=0):
-    value = UsageManager(tmp_path / 'neural4d.sqlite3')
+    value = UsageManager(tmp_path / 'neural4d.sqlite3', create=True)
     value.initialize_history(used, '仅离线测试：人工核查模拟历史，不是真实账户用量。')
     return value
 
@@ -40,7 +40,13 @@ def reserved(value, key='test-key', data=None, purpose='technical'):
 
 
 def test_new_and_missing_ledger_have_unknown_history_not_free_quota(tmp_path):
-    first = UsageManager(tmp_path / 'unknown.sqlite3')
+    missing = tmp_path / 'unknown.sqlite3'
+    with pytest.raises(ServiceError, match='NEURAL4D_LEDGER_UNAVAILABLE'):
+        UsageManager(missing)
+    assert not missing.exists()
+    # A deliberately initialized TEST ledger still starts with UNKNOWN history;
+    # strict serving never grants a new quota merely because a file is missing.
+    first = UsageManager(missing, create=True)
     summary = first.summary()
     assert summary['historicalUsageVerified'] is False
     assert summary['used_attempts'] is None and summary['remaining_attempts'] is None

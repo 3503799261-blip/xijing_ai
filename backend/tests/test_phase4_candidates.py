@@ -22,7 +22,7 @@ def image_bytes(color='#f8fcff', fmt='PNG'):
 @pytest.fixture
 def catalog(tmp_path):
     # No TaskStore is constructed or confirmed; candidates have no character.
-    assets = AssetService(SimpleNamespace(rag_data_dir=tmp_path / 'private'), None)
+    assets = AssetService(SimpleNamespace(rag_data_dir=tmp_path / 'private'), None, create=True)
     return CandidateCatalog(assets)
 
 

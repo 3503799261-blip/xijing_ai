@@ -11,11 +11,12 @@ from backend.app.errors import ServiceError
 from backend.app.main import create_app
 from backend.app.agents.store import TaskStore, AGENTS
 from backend.app.agents.supervisor import Supervisor
+from backend.tests.conftest import initialized_settings
 
 BRIEF = {'requirements': '离线任务测试：不是真实文化知识或模型结果。', 'style': '京剧写意'}
 
 def config(tmp_path, **kwargs):
-    return Settings(_env_file=None, rag_data_dir=tmp_path / 'runtime', embedding_model_path=tmp_path / 'model', **kwargs)
+    return initialized_settings(Settings(_env_file=None, rag_data_dir=tmp_path / 'runtime', embedding_model_path=tmp_path / 'model', **kwargs))
 
 def result(verdict='pass'):
     return {'design': {'name': '离线假设计'}, 'review': {'verdict': verdict}, 'citations': [],
@@ -28,7 +29,7 @@ def complete_steps(store, task_id):
         store.emit(task_id, aid, 'completed', '离线结束', {'testDouble': True})
 
 def test_task_idempotence_queue_and_conflict(tmp_path):
-    store = TaskStore(tmp_path / 'tasks.sqlite3')
+    store = TaskStore(tmp_path / 'tasks.sqlite3', create=True)
     task_id, created = store.create(BRIEF, 'submit-0001', 1)
     assert created
     assert store.create(BRIEF, 'submit-0001', 1) == (task_id, False)
@@ -40,7 +41,7 @@ def test_task_idempotence_queue_and_conflict(tmp_path):
 
 def test_state_artifact_events_and_confirmation_are_persistent(tmp_path):
     path = tmp_path / 'tasks.sqlite3'
-    store = TaskStore(path)
+    store = TaskStore(path, create=True)
     task_id, _ = store.create(BRIEF, 'submit-0001')
     complete_steps(store, task_id)
     store.finish(task_id, result())
@@ -68,7 +69,7 @@ def test_state_artifact_events_and_confirmation_are_persistent(tmp_path):
 
 @pytest.mark.parametrize('verdict', ['needs_revision', 'insufficient_evidence'])
 def test_review_problem_cannot_be_overridden_by_user(tmp_path, verdict):
-    store = TaskStore(tmp_path / 'tasks.sqlite3')
+    store = TaskStore(tmp_path / 'tasks.sqlite3', create=True)
     task_id, _ = store.create(BRIEF, 'submit-0001')
     complete_steps(store, task_id)
     store.finish(task_id, result(verdict))
@@ -79,7 +80,7 @@ def test_review_problem_cannot_be_overridden_by_user(tmp_path, verdict):
     assert not store.result(task_id)['publicationAllowed']
 
 def test_recovery_marks_only_unfinished_tasks_failed(tmp_path):
-    store = TaskStore(tmp_path / 'tasks.sqlite3')
+    store = TaskStore(tmp_path / 'tasks.sqlite3', create=True)
     active, _ = store.create(BRIEF, 'submit-0001')
     store.start(active)
     store.emit(active, 'planner', 'running', '离线处理')
@@ -93,7 +94,7 @@ def test_recovery_marks_only_unfinished_tasks_failed(tmp_path):
     assert store.next_waiting() is None
 
 def test_cancel_waiting_and_running_preserves_real_steps(tmp_path):
-    store = TaskStore(tmp_path / 'tasks.sqlite3')
+    store = TaskStore(tmp_path / 'tasks.sqlite3', create=True)
     task_id, _ = store.create(BRIEF, 'submit-0001')
     store.start(task_id)
     store.emit(task_id, 'planner', 'running')
@@ -111,7 +112,7 @@ def test_cancel_waiting_and_running_preserves_real_steps(tmp_path):
     assert store.status(other)['state'] == 'cancelled'
 
 def test_invalid_transition_does_not_persist_fake_completion(tmp_path):
-    store = TaskStore(tmp_path / 'tasks.sqlite3')
+    store = TaskStore(tmp_path / 'tasks.sqlite3', create=True)
     task_id, _ = store.create(BRIEF, 'submit-0001')
     with pytest.raises(ValueError):
         store.emit(task_id, 'planner', 'completed', artifact={})
@@ -309,7 +310,7 @@ def test_failed_start_releases_owner_lock(tmp_path):
 
 @pytest.mark.parametrize('state', ['failed', 'completed', 'cancelled', 'awaiting_confirmation', 'unknown_future_state'])
 def test_terminal_held_and_unknown_task_states_stop_workflow_callbacks(tmp_path, state):
-    store = TaskStore(tmp_path / 'tasks.sqlite3')
+    store = TaskStore(tmp_path / 'tasks.sqlite3', create=True)
     task_id, _ = store.create(BRIEF, 'stop-guard-0001')
     assert store.start(task_id) and not store.cancelled(task_id)
     with store.connect() as db:

@@ -21,21 +21,8 @@ HIDDEN_FIELDS = {'storageKey', 'originalStorageKey', 'sourcePathLabel', 'histori
 class CandidateCatalog:
     def __init__(self, assets):
         self.assets, self.store, self.root = assets, assets.store, assets.root
-        with self.store.connect() as db:
-            db.executescript('''
-            CREATE TABLE IF NOT EXISTS concept_candidates (
-              candidate_id TEXT PRIMARY KEY, scope TEXT NOT NULL,
-              version INTEGER NOT NULL CHECK(version > 0),
-              signature TEXT UNIQUE NOT NULL, content_json TEXT NOT NULL,
-              created_at TEXT NOT NULL, UNIQUE(scope, version));
-            CREATE INDEX IF NOT EXISTS candidates_by_scope ON concept_candidates(scope, version);
-            CREATE TRIGGER IF NOT EXISTS candidates_no_update
-              BEFORE UPDATE ON concept_candidates BEGIN
-                SELECT RAISE(ABORT, 'concept candidate versions are immutable'); END;
-            CREATE TRIGGER IF NOT EXISTS candidates_no_delete
-              BEFORE DELETE ON concept_candidates BEGIN
-                SELECT RAISE(ABORT, 'concept candidate history is immutable'); END;
-            ''')
+        # AssetStore validates the complete current schema. Ordinary service
+        # construction must not initialize or repair catalog tables.
 
     @staticmethod
     def _text(value, limit, label):

@@ -4,6 +4,7 @@ from contextlib import contextmanager
 from pathlib import Path
 from datetime import datetime, timezone
 from ..errors import ServiceError
+from ..database import open_existing, validate_database, initialize_database
 
 PRICE_SOURCE = 'https://api-docs.deepseek.com/zh-cn/quick_start/pricing/'
 PRICE_VERIFIED = '2026-10-11'
@@ -11,29 +12,51 @@ INPUT_MISS = 2.0
 INPUT_HIT = 0.04
 OUTPUT = 8.0
 
+BUDGET_TABLES = {
+    'calls': ('request_id', 'created_at', 'status', 'reserved', 'cost', 'usage_json'),
+    'budget_scopes': ('name', 'budget_cny', 'created_at'),
+    'call_scopes': ('request_id', 'scope'),
+}
+BUDGET_OBJECTS = (('index', 'call_scopes_scope'),)
+BUDGET_SCHEMA = r"""CREATE TABLE calls (request_id TEXT PRIMARY KEY, created_at TEXT, status TEXT, reserved REAL, cost REAL, usage_json TEXT);
+CREATE TABLE budget_scopes (name TEXT PRIMARY KEY, budget_cny REAL NOT NULL, created_at TEXT NOT NULL);
+CREATE TABLE call_scopes (request_id TEXT PRIMARY KEY REFERENCES calls(request_id), scope TEXT NOT NULL REFERENCES budget_scopes(name));
+CREATE INDEX call_scopes_scope ON call_scopes(scope);
+"""
+BUDGET_DATABASE_MESSAGE = '模型预算数据库缺失、路径错误或不可读取，已停止付费调用；请检查配置并恢复原库。'
+
+
 class BudgetLedger:
-    def __init__(self, path: Path, limit: float, scope: str | None = None, scope_limit: float | None = None):
+    def __init__(self, path: Path, limit: float, scope: str | None = None, scope_limit: float | None = None, *, create=False):
         if scope is not None and (not scope or scope_limit is None or scope_limit <= 0):
             raise ValueError('A named budget scope requires a positive limit.')
-        path.parent.mkdir(parents=True, exist_ok=True)
-        self.path, self.limit, self.scope = path, limit, scope
-        with self.connect() as db:
-            db.execute('CREATE TABLE IF NOT EXISTS calls (request_id TEXT PRIMARY KEY, created_at TEXT, status TEXT, reserved REAL, cost REAL, usage_json TEXT)')
-            # Add attribution without rewriting the Phase 2 ledger or its history.
-            db.execute('CREATE TABLE IF NOT EXISTS budget_scopes (name TEXT PRIMARY KEY, budget_cny REAL NOT NULL, created_at TEXT NOT NULL)')
-            db.execute('CREATE TABLE IF NOT EXISTS call_scopes (request_id TEXT PRIMARY KEY REFERENCES calls(request_id), scope TEXT NOT NULL REFERENCES budget_scopes(name))')
-            db.execute('CREATE INDEX IF NOT EXISTS call_scopes_scope ON call_scopes(scope)')
-            if scope is not None:
-                db.execute('INSERT INTO budget_scopes VALUES (?,?,?) ON CONFLICT(name) DO UPDATE SET budget_cny=min(budget_scopes.budget_cny,excluded.budget_cny)',
-                           (scope, scope_limit, datetime.now(timezone.utc).isoformat()))
+        self.path, self.limit, self.scope = Path(path).expanduser().resolve(), limit, scope
+        options = {'objects': BUDGET_OBJECTS, 'code': 'BUDGET_DATABASE_UNAVAILABLE', 'message': BUDGET_DATABASE_MESSAGE}
+        if create:
+            initialize_database(self.path, BUDGET_SCHEMA, BUDGET_TABLES, **options)
+        else:
+            validate_database(self.path, BUDGET_TABLES, **options)
+        if scope is not None:
+            # Preserve the existing non-increasing scope policy on a validated
+            # database. An unchanged normal start performs no write or DDL.
+            with self.connect() as db:
+                db.execute('BEGIN IMMEDIATE')
+                row = db.execute('SELECT budget_cny FROM budget_scopes WHERE name=?', (scope,)).fetchone()
+                if row is None:
+                    db.execute('INSERT INTO budget_scopes VALUES (?,?,?)',
+                               (scope, scope_limit, datetime.now(timezone.utc).isoformat()))
+                elif scope_limit < row[0]:
+                    db.execute('UPDATE budget_scopes SET budget_cny=? WHERE name=?', (scope_limit, scope))
 
     @contextmanager
     def connect(self):
-        db = sqlite3.connect(self.path, timeout=5)
+        db = open_existing(self.path, timeout=5, code='BUDGET_DATABASE_UNAVAILABLE', message=BUDGET_DATABASE_MESSAGE)
         try:
             db.execute('PRAGMA foreign_keys=ON')
             with db:
                 yield db
+        except sqlite3.Error:
+            raise ServiceError('BUDGET_DATABASE_UNAVAILABLE', BUDGET_DATABASE_MESSAGE, 503) from None
         finally:
             # sqlite3's own context commits/rolls back but does not close.
             db.close()

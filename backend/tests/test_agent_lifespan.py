@@ -3,10 +3,11 @@ import asyncio
 import pytest
 from backend.app.main import create_app
 from backend.app.config import Settings
+from backend.tests.conftest import initialized_settings
 
 @pytest.mark.parametrize('failure_stage', ['runtime', 'supervisor'])
 def test_startup_failure_always_closes_resources(tmp_path, failure_stage):
-    app = create_app(Settings(rag_data_dir=tmp_path))
+    app = create_app(initialized_settings(Settings(_env_file=None, rag_data_dir=tmp_path)))
     closed = []
     async def runtime_start():
         if failure_stage == 'runtime': raise RuntimeError('test startup failed')

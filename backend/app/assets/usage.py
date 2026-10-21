@@ -17,6 +17,7 @@ import time
 import uuid
 
 from ..errors import ServiceError
+from ..database import open_existing, validate_database, initialize_database
 
 
 PROJECT_ID = 'xijing-ai-neural4d-project-v4'
@@ -57,23 +58,20 @@ def _credits(value):
     return float(value)
 
 
-class UsageManager:
-    """One authoritative SQLite ledger, deliberately not keyed by API credentials.
-
-    ``initialize_history`` is a trusted CLI operation, never a browser endpoint.
-    ``reserve`` returns ``newlyReserved=False`` on a replay; callers must never
-    send that record. Only the winner of ``mark_started`` may attempt one HTTP
-    submission. There is no refund, delete, retry or cap-raising method.
-    """
-
-    def __init__(self, path: Path):
-        self.path = Path(path)
-        try:
-            self.path.parent.mkdir(parents=True, exist_ok=True)
-        except OSError:
-            raise ServiceError('NEURAL4D_LEDGER_UNAVAILABLE', '建模账本不可用，已关闭真实创建。', 503) from None
-        with self.connect() as db:
-            db.executescript('''
+USAGE_TABLES = {
+    'neural4d_usage_policy': ('project_id', 'policy_version', 'max_attempts', 'historical_used', 'historical_note', 'historical_verified_at', 'creation_halted', 'halt_code', 'created_at'),
+    'neural4d_model_approvals': ('approval_id', 'payload_hash', 'purpose', 'estimated_credits', 'confirmed_at', 'expires_at', 'consumed_attempt_id'),
+    'neural4d_creation_attempts': ('attempt_id', 'project_id', 'idempotency_key', 'approval_id', 'payload_hash', 'payload_json', 'purpose', 'estimated_credits', 'state', 'reserved_at', 'started_at', 'updated_at', 'provider_task_id', 'error_code', 'http_status'),
+    'neural4d_attempt_events': ('sequence', 'attempt_id', 'state', 'recorded_at', 'provider_task_id', 'error_code', 'http_status'),
+    'neural4d_operational_requests': ('request_id', 'operation', 'attempt_id', 'is_mock', 'recorded_at', 'http_status', 'duration_ms', 'actual_credits', 'error_code'),
+}
+USAGE_OBJECTS = tuple(('trigger', name) for name in (
+    'neural4d_attempts_no_delete', 'neural4d_attempt_inputs_immutable', 'neural4d_send_claim_immutable',
+    'neural4d_approval_no_delete', 'neural4d_approval_immutable', 'neural4d_usage_no_delete',
+    'neural4d_usage_immutable', 'neural4d_attempts_cap', 'neural4d_events_no_delete',
+    'neural4d_events_no_update', 'neural4d_requests_no_delete', 'neural4d_requests_no_update')) + (
+    ('index', 'neural4d_attempt_payload'), ('index', 'neural4d_one_real_create_request'))
+USAGE_SCHEMA = r"""
                 CREATE TABLE IF NOT EXISTS neural4d_usage_policy (
                     project_id TEXT PRIMARY KEY,
                     policy_version TEXT NOT NULL,
@@ -195,16 +193,37 @@ class UsageManager:
                 CREATE TRIGGER IF NOT EXISTS neural4d_requests_no_update
                     BEFORE UPDATE ON neural4d_operational_requests
                     BEGIN SELECT RAISE(ABORT,'request history is immutable'); END;
-            ''')
-            db.execute('INSERT OR IGNORE INTO neural4d_usage_policy(project_id,policy_version,max_attempts,created_at) VALUES (?,?,?,?)',
-                       (PROJECT_ID, POLICY_VERSION, MAX_CREATION_ATTEMPTS, _now()))
+            """
+USAGE_DATABASE_MESSAGE = '建模账本缺失、路径错误或异常，已关闭真实创建；请恢复并核查原历史记录，未自动重建。'
+
+
+class UsageManager:
+    """One authoritative SQLite ledger, deliberately not keyed by API credentials.
+
+    ``initialize_history`` is a trusted CLI operation, never a browser endpoint.
+    ``reserve`` returns ``newlyReserved=False`` on a replay; callers must never
+    send that record. Only the winner of ``mark_started`` may attempt one HTTP
+    submission. There is no refund, delete, retry or cap-raising method.
+    """
+
+    def __init__(self, path: Path, *, create=False):
+        self.path = Path(path).expanduser().resolve()
+        options = {'objects': USAGE_OBJECTS, 'code': 'NEURAL4D_LEDGER_UNAVAILABLE', 'message': USAGE_DATABASE_MESSAGE}
+        if create:
+            def seed(db):
+                db.execute('INSERT INTO neural4d_usage_policy(project_id,policy_version,max_attempts,created_at) VALUES (?,?,?,?)',
+                           (PROJECT_ID, POLICY_VERSION, MAX_CREATION_ATTEMPTS, _now()))
+            initialize_database(self.path, USAGE_SCHEMA, USAGE_TABLES, seed=seed, **options)
+        else:
+            validate_database(self.path, USAGE_TABLES, **options)
+        with self.connect() as db:
             self._policy(db)
 
     @contextmanager
     def connect(self):
         db = None
         try:
-            db = sqlite3.connect(self.path, timeout=10)
+            db = open_existing(self.path, timeout=10, code='NEURAL4D_LEDGER_UNAVAILABLE', message=USAGE_DATABASE_MESSAGE)
             db.row_factory = sqlite3.Row
             db.execute('PRAGMA foreign_keys=ON')
             db.execute('PRAGMA busy_timeout=10000')
