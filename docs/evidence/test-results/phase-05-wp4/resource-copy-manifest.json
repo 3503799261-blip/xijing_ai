@@ -1,0 +1,254 @@
+{
+  "at": "2026-10-20T12:37:04.757330+00:00",
+  "sourceCommit": "74b3e6e03c227c4b7ab00fe5b650b172d3a6c9e9",
+  "localRecoveryOnly": true,
+  "crossMachineVerified": false,
+  "secretsCopied": false,
+  "copiedResources": [
+    {
+      "resource": "active.json",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "73a20943a88a63abb995e076db84e66e6bca3dfa1fb0978d9914925a26ffba65",
+      "copySha256": "73a20943a88a63abb995e076db84e66e6bca3dfa1fb0978d9914925a26ffba65",
+      "bytes": 626
+    },
+    {
+      "resource": "agent-tasks.sqlite3",
+      "method": "sqlite_online_backup_readonly_source",
+      "sourceSha256": "0808c4b607acd4b4955dce44d9ba880aa5ed32776fc24bf2556d2c07364f9c94",
+      "copySha256": "f32013d3a19f15b7e4cb015fa18c6ffaad6ebeb7ffa991b2440f6245868af34e",
+      "bytes": 454656
+    },
+    {
+      "resource": "api-budget.sqlite3",
+      "method": "sqlite_online_backup_readonly_source",
+      "sourceSha256": "82181e214aaa592e39f6af1d88f9d22782433e46b861dc9700649a79cad8151b",
+      "copySha256": "aeed6e80d7594695879028c8b835d3ab7c97791dbffbf9e9094eaf087d3d7c6c",
+      "bytes": 69632
+    },
+    {
+      "resource": "assets/candidate-images/7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45.png",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+      "copySha256": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+      "bytes": 997587
+    },
+    {
+      "resource": "assets/candidate-images/879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703.png",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703",
+      "copySha256": "879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703",
+      "bytes": 1231605
+    },
+    {
+      "resource": "assets/candidate-originals/0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095.upload",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+      "copySha256": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+      "bytes": 535664
+    },
+    {
+      "resource": "assets/candidate-originals/9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f.upload",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+      "copySha256": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+      "bytes": 575200
+    },
+    {
+      "resource": "assets/catalog.sqlite3",
+      "method": "sqlite_online_backup_readonly_source",
+      "sourceSha256": "9a7a795c75d33ff2957051b88ff677be3965faf9cc9e2ee493c392abe3d28eff",
+      "copySha256": "37327d70f215bc90e2cc09fa9861fe6919450ef1e5fe29b9e5b92e685ab88da7",
+      "bytes": 131072
+    },
+    {
+      "resource": "assets/images/7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45.png",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+      "copySha256": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+      "bytes": 997587
+    },
+    {
+      "resource": "assets/models/5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5.glb",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "copySha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "bytes": 15158668
+    },
+    {
+      "resource": "assets/models/65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5.glb",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5",
+      "copySha256": "65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5",
+      "bytes": 120484
+    },
+    {
+      "resource": "assets/models/782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df.glb",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df",
+      "copySha256": "782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df",
+      "bytes": 120556
+    },
+    {
+      "resource": "assets/models/bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a.glb",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "copySha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "bytes": 8827324
+    },
+    {
+      "resource": "assets/original-images/0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095.upload",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+      "copySha256": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+      "bytes": 535664
+    },
+    {
+      "resource": "assets/recovery-provenance/0934dbe65254eab9e7ade199a17fc1cb16f51e2fbecb66eff1bbfd9c1469999e.json",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "0934dbe65254eab9e7ade199a17fc1cb16f51e2fbecb66eff1bbfd9c1469999e",
+      "copySha256": "0934dbe65254eab9e7ade199a17fc1cb16f51e2fbecb66eff1bbfd9c1469999e",
+      "bytes": 2930
+    },
+    {
+      "resource": "assets/recovery-quarantine/51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e.bin",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e",
+      "copySha256": "51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e",
+      "bytes": 18266484
+    },
+    {
+      "resource": "assets/recovery-quarantine/8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885.bin",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885",
+      "copySha256": "8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885",
+      "bytes": 26600184
+    },
+    {
+      "resource": "generations/gen-20261010T050104-5bf46e2d/knowledge.sqlite3",
+      "method": "sqlite_online_backup_readonly_source",
+      "sourceSha256": "f06056bed06b3cd5570afec044ccb75afc0e28127811fe4c1cac07a9ded30354",
+      "copySha256": "e129c5a520a6c02a747e5244af5801a5bc37b48b96d09a887df80f4443a48472",
+      "bytes": 163840
+    },
+    {
+      "resource": "generations/gen-20261010T050104-5bf46e2d/manifest.json",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "06e4af83dd4e86044478be23cc46418e24be2534e00029ba76abfd0afe48746c",
+      "copySha256": "06e4af83dd4e86044478be23cc46418e24be2534e00029ba76abfd0afe48746c",
+      "bytes": 626
+    },
+    {
+      "resource": "generations/gen-20261010T050104-5bf46e2d/qdrant/collection/opera_chunks/storage.sqlite",
+      "method": "sqlite_online_backup_readonly_source",
+      "sourceSha256": "cec98112e76667f29bc1538c515f4ded591cb2c886cc75f8615a4cd000ef8cd2",
+      "copySha256": "59ce75da61a466302e65f807f4fb1e69446c4fc5182466c913130bcc60f65548",
+      "bytes": 204800
+    },
+    {
+      "resource": "generations/gen-20261010T050104-5bf46e2d/qdrant/meta.json",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "3d81e98a040aaba9d8bcc7ae33b191dbd7b4fb3c426db2b5c7d2b63704202f24",
+      "copySha256": "3d81e98a040aaba9d8bcc7ae33b191dbd7b4fb3c426db2b5c7d2b63704202f24",
+      "bytes": 545
+    },
+    {
+      "resource": "generations/gen-20261010T101322-de3db5c3/knowledge.sqlite3",
+      "method": "sqlite_online_backup_readonly_source",
+      "sourceSha256": "f06056bed06b3cd5570afec044ccb75afc0e28127811fe4c1cac07a9ded30354",
+      "copySha256": "e129c5a520a6c02a747e5244af5801a5bc37b48b96d09a887df80f4443a48472",
+      "bytes": 163840
+    },
+    {
+      "resource": "generations/gen-20261010T101322-de3db5c3/manifest.json",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "0cac93767bf409a8fdfbdd3f8e082cae5228b2064111efb2b2ab09e4cfcd0894",
+      "copySha256": "0cac93767bf409a8fdfbdd3f8e082cae5228b2064111efb2b2ab09e4cfcd0894",
+      "bytes": 626
+    },
+    {
+      "resource": "generations/gen-20261010T101322-de3db5c3/qdrant/collection/opera_chunks/storage.sqlite",
+      "method": "sqlite_online_backup_readonly_source",
+      "sourceSha256": "cec98112e76667f29bc1538c515f4ded591cb2c886cc75f8615a4cd000ef8cd2",
+      "copySha256": "59ce75da61a466302e65f807f4fb1e69446c4fc5182466c913130bcc60f65548",
+      "bytes": 204800
+    },
+    {
+      "resource": "generations/gen-20261010T101322-de3db5c3/qdrant/meta.json",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "3d81e98a040aaba9d8bcc7ae33b191dbd7b4fb3c426db2b5c7d2b63704202f24",
+      "copySha256": "3d81e98a040aaba9d8bcc7ae33b191dbd7b4fb3c426db2b5c7d2b63704202f24",
+      "bytes": 545
+    },
+    {
+      "resource": "generations/gen-20261010T102847-791ed93a/knowledge.sqlite3",
+      "method": "sqlite_online_backup_readonly_source",
+      "sourceSha256": "1be91060970461a0f216bced4ada8a1977e2a11bbbd704388a54f9d5e2a4e0f2",
+      "copySha256": "7a6f03df1204dd23ea6db3b09ac08f80bd6ff05faa29d0d2188eacc250401a43",
+      "bytes": 163840
+    },
+    {
+      "resource": "generations/gen-20261010T102847-791ed93a/manifest.json",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "dc726d634cb81ecf3f0ca75bdf2795fd239de4040508162e0d015f32c7560c6c",
+      "copySha256": "dc726d634cb81ecf3f0ca75bdf2795fd239de4040508162e0d015f32c7560c6c",
+      "bytes": 626
+    },
+    {
+      "resource": "generations/gen-20261010T102847-791ed93a/qdrant/collection/opera_chunks/storage.sqlite",
+      "method": "sqlite_online_backup_readonly_source",
+      "sourceSha256": "266ebd3d977d361492fe9cbf2dbc0985119286dc89462551ed796f2fe59e45d8",
+      "copySha256": "f2f4b78009a4e8d822beab24e133351f5d5193c8cf66829b0faecefeb71a875c",
+      "bytes": 204800
+    },
+    {
+      "resource": "generations/gen-20261010T102847-791ed93a/qdrant/meta.json",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "3d81e98a040aaba9d8bcc7ae33b191dbd7b4fb3c426db2b5c7d2b63704202f24",
+      "copySha256": "3d81e98a040aaba9d8bcc7ae33b191dbd7b4fb3c426db2b5c7d2b63704202f24",
+      "bytes": 545
+    },
+    {
+      "resource": "generations/gen-20261010T104704-f628d57b/knowledge.sqlite3",
+      "method": "sqlite_online_backup_readonly_source",
+      "sourceSha256": "1be91060970461a0f216bced4ada8a1977e2a11bbbd704388a54f9d5e2a4e0f2",
+      "copySha256": "7a6f03df1204dd23ea6db3b09ac08f80bd6ff05faa29d0d2188eacc250401a43",
+      "bytes": 163840
+    },
+    {
+      "resource": "generations/gen-20261010T104704-f628d57b/manifest.json",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "73a20943a88a63abb995e076db84e66e6bca3dfa1fb0978d9914925a26ffba65",
+      "copySha256": "73a20943a88a63abb995e076db84e66e6bca3dfa1fb0978d9914925a26ffba65",
+      "bytes": 626
+    },
+    {
+      "resource": "generations/gen-20261010T104704-f628d57b/qdrant/collection/opera_chunks/storage.sqlite",
+      "method": "sqlite_online_backup_readonly_source",
+      "sourceSha256": "0750cab013d6222b3c7ae06e6dbfdff3853c743b04885c12eba9565af3d18547",
+      "copySha256": "18a933737ea9265df6edcb21c5e4a5a3bb6742f80cd6eb696f56d040f6054357",
+      "bytes": 204800
+    },
+    {
+      "resource": "generations/gen-20261010T104704-f628d57b/qdrant/meta.json",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "3d81e98a040aaba9d8bcc7ae33b191dbd7b4fb3c426db2b5c7d2b63704202f24",
+      "copySha256": "3d81e98a040aaba9d8bcc7ae33b191dbd7b4fb3c426db2b5c7d2b63704202f24",
+      "bytes": 545
+    },
+    {
+      "resource": "provider-readiness.json",
+      "method": "byte_copy_while_service_down",
+      "sourceSha256": "a14cc2efabf3d5045eac04cafc19402cbf9e891df5dfe63f9a787ed0f6b5a655",
+      "copySha256": "a14cc2efabf3d5045eac04cafc19402cbf9e891df5dfe63f9a787ed0f6b5a655",
+      "bytes": 189
+    }
+  ],
+  "canonicalLedgerCopyIntegrity": "ok",
+  "modelHashMatches": true,
+  "notes": [
+    "Real source exists and was read with service stopped. This is a new controlled local backup/copy, not a preexisting portable distribution.",
+    "SQLite logical backup may have a different binary layout; application rows are checked separately.",
+    "No environment keys copied, creation disabled, independent canonical ledger contains original used2 history, never a fresh quota pool."
+  ]
+}

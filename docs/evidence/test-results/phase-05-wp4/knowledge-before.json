@@ -1,0 +1,150 @@
+{
+  "at": "2026-10-20T12:36:59.921564+00:00",
+  "active": {
+    "generation_id": "gen-20261010T104704-f628d57b",
+    "corpus_hash": "12a8e8511e6e6c46b887442fbea1833dd577d996b42aa4122f032b706056f934",
+    "documents": 12,
+    "chunks": 35,
+    "duplicates_skipped": 0,
+    "model_id": "BAAI/bge-small-zh-v1.5",
+    "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+    "dimension": 512,
+    "distance": "Cosine",
+    "chunking": {
+      "target_chars": 350,
+      "overlap_chars": 70,
+      "max_tokens": 480,
+      "vector_text": "content"
+    },
+    "created_at": "2026-10-10T10:47:13.792635+00:00",
+    "review_scope": "assistant source-checked original facts; human review pending"
+  },
+  "generationFiles": {
+    "knowledge.sqlite3": {
+      "bytes": 163840,
+      "sha256": "1be91060970461a0f216bced4ada8a1977e2a11bbbd704388a54f9d5e2a4e0f2"
+    },
+    "manifest.json": {
+      "bytes": 626,
+      "sha256": "73a20943a88a63abb995e076db84e66e6bca3dfa1fb0978d9914925a26ffba65"
+    },
+    "qdrant/.lock": {
+      "bytes": 13,
+      "sha256": "67a987c432005e3afcc13a871b3ddabaeee0f4504058da65b0769016d3083b44"
+    },
+    "qdrant/collection/opera_chunks/storage.sqlite": {
+      "bytes": 204800,
+      "sha256": "0750cab013d6222b3c7ae06e6dbfdff3853c743b04885c12eba9565af3d18547"
+    },
+    "qdrant/meta.json": {
+      "bytes": 545,
+      "sha256": "3d81e98a040aaba9d8bcc7ae33b191dbd7b4fb3c426db2b5c7d2b63704202f24"
+    }
+  },
+  "modelFiles": {
+    ".cache/huggingface/.gitignore": {
+      "bytes": 1,
+      "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1"
+    },
+    ".cache/huggingface/CACHEDIR.TAG": {
+      "bytes": 195,
+      "sha256": "e8893e2dcb3f4545ef67a0a5b7b769113d38eef1aa61c7c7ba14659b02af955f"
+    },
+    ".cache/huggingface/download/1_Pooling/config.json.metadata": {
+      "bytes": 104,
+      "sha256": "eb60db243664376bc81667b66d46eb48ef72e5cfc7b127496e50d7f97824fe47"
+    },
+    ".cache/huggingface/download/config.json.metadata": {
+      "bytes": 104,
+      "sha256": "85ccae2ee62ebc7330c64d8e18bce677fb95a096c66b5b013e6e2c33f9dc5107"
+    },
+    ".cache/huggingface/download/config_sentence_transformers.json.metadata": {
+      "bytes": 104,
+      "sha256": "101eee65266e795078d5b4c84278d33c2bccb5cf77e0b40e7807e210658dfd51"
+    },
+    ".cache/huggingface/download/model.safetensors.metadata": {
+      "bytes": 128,
+      "sha256": "1a6164905bb3ebf2d0e47088a1b7969e1ed92236f393f068edfa78025a20e59a"
+    },
+    ".cache/huggingface/download/modules.json.metadata": {
+      "bytes": 104,
+      "sha256": "e3023bfd7fa3444d7b043950280c4f6a64eed0f686b6286e806b4ecb1de3e838"
+    },
+    ".cache/huggingface/download/README.md.metadata": {
+      "bytes": 104,
+      "sha256": "8832e007179b1acc1ab46fa9b236ad7a2470f85a55b7dd51716bcf191496ec0c"
+    },
+    ".cache/huggingface/download/sentence_bert_config.json.metadata": {
+      "bytes": 104,
+      "sha256": "9d6c68a9008bb35347f48258bf09aff9886e956bbca1eb8a3188c5f3ab8f270e"
+    },
+    ".cache/huggingface/download/special_tokens_map.json.metadata": {
+      "bytes": 104,
+      "sha256": "fa8f162af44ae0d5c0e5ead74b44cae3faf6d1b171a23c77bfcc72bdbf9ad36b"
+    },
+    ".cache/huggingface/download/tokenizer.json.metadata": {
+      "bytes": 104,
+      "sha256": "6507c049a32a82e5543514375823e0b8d756726c28825373b6fefc9db43d971c"
+    },
+    ".cache/huggingface/download/tokenizer_config.json.metadata": {
+      "bytes": 104,
+      "sha256": "a23722c68921d0b26998ff4739c61ca85bd6908c4f02a437604e6a38f7cf56a6"
+    },
+    ".cache/huggingface/download/vocab.txt.metadata": {
+      "bytes": 104,
+      "sha256": "0ff03539bf47c45615402b5eeb7cf6a218cb66e163badb0440a83d19a7c59751"
+    },
+    ".cache/huggingface/trees/7999e1d3359715c523056ef9478215996d62a620.json": {
+      "bytes": 1849,
+      "sha256": "2346229ecde3983842cb8e070285e8aae7d6680819af7d7aa17e56bc0f48cbc9"
+    },
+    "1_Pooling/config.json": {
+      "bytes": 190,
+      "sha256": "aaa8861589f80c961a03cc86c7eeaef7605c1676b9ab55329d33a304738769c6"
+    },
+    "config.json": {
+      "bytes": 776,
+      "sha256": "3853a7979202c348751b753e36f579c41d8da7d36af617d3d907e1fc9b441f2a"
+    },
+    "config_sentence_transformers.json": {
+      "bytes": 124,
+      "sha256": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56"
+    },
+    "model-manifest.json": {
+      "bytes": 2033,
+      "sha256": "0ef63ff29c06fc727a4f985c96a9210cedb09b5f06b1b8adf188da284bdc66e1"
+    },
+    "model.safetensors": {
+      "bytes": 95827648,
+      "sha256": "354763b9b1357bc9c44f62c6be2276321081ed2567773608c0d0785b61d5a026"
+    },
+    "modules.json": {
+      "bytes": 349,
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf"
+    },
+    "README.md": {
+      "bytes": 27670,
+      "sha256": "c48a4eeea77f6b1d38b48ec1c5b8d4f86d5550cc43fa345a0db1b2ca1d082369"
+    },
+    "sentence_bert_config.json": {
+      "bytes": 52,
+      "sha256": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf"
+    },
+    "special_tokens_map.json": {
+      "bytes": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+    },
+    "tokenizer.json": {
+      "bytes": 439125,
+      "sha256": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26"
+    },
+    "tokenizer_config.json": {
+      "bytes": 367,
+      "sha256": "e6f3b96db926a37d4039995fbf5ad17de158dfb8f6343d607e4dbaad18d75f5a"
+    },
+    "vocab.txt": {
+      "bytes": 109540,
+      "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Error: Command '['D:\\京剧\\.runtime\\phase5-wp4\\cold-env-attempt02\\Scripts\\python.exe', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.

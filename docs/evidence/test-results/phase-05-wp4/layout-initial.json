@@ -1,0 +1,200 @@
+{
+  "startedAt": "2026-10-20T12:42:34.484Z",
+  "scope": "WP4_24_REAL_LOCAL_PAGE_VIEWPORT_PAIRS_GET_HEAD_ONLY",
+  "cases": [
+    {
+      "file": "index.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "startedAt": "2026-10-20T12:42:35.118Z",
+      "status": "FAIL",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/index.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/index.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery7.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home-banner.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpStatus": 200,
+      "observed": {
+        "title": "梨园风华｜首页",
+        "h1": "梨园风华",
+        "h1Visible": true,
+        "mainTextLength": 3339,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/index.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "brokenImages": [],
+        "imageCount": 13,
+        "horizontalOverflow": false,
+        "scrollWidth": 1920,
+        "innerWidth": 1920,
+        "workshopPresent": false
+      },
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('label[for=\"nav-toggle\"]')\u001b[22m\n\u001b[2m    - locator resolved to <label for=\"nav-toggle\" title=\"点击展开或收起导航\" class=\"nav-trigger\">…</label>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 1",
+      "finishedAt": "2026-10-20T12:43:05.768Z",
+      "elapsedMs": 30649
+    }
+  ],
+  "paidRequests": 0,
+  "supplierRequests": 0,
+  "physicalMobile": "NOT_TESTED",
+  "serviceWorkers": "blocked",
+  "chromeVersion": "155.0.8059.85",
+  "nodeVersion": "v24.19.0"
+}

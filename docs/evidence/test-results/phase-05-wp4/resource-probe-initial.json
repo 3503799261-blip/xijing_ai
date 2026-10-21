@@ -1,0 +1,153 @@
+{
+  "kind": "WP4_ISOLATED_RESOURCE_MISSING_AND_RECOVERY",
+  "scope": "real local CPU BGE + versioned public corpus + real temporary SQLite/Qdrant + actual licensed Duck; synthetic saved task; NOT live provider/browser proof",
+  "results": [
+    {
+      "name": "real_bge_corpus_ingestion_in_isolated_root",
+      "status": "PASS",
+      "seconds": 32.8204,
+      "detail": {
+        "ingest": {
+          "status": "built",
+          "added": 12,
+          "updated": 0,
+          "skipped": 0,
+          "failed": 0,
+          "generation_id": "gen-20261020T123806-e3a68e90",
+          "corpus_hash": "12a8e8511e6e6c46b887442fbea1833dd577d996b42aa4122f032b706056f934",
+          "documents": 12,
+          "chunks": 35,
+          "duplicates_skipped": 0,
+          "model_id": "BAAI/bge-small-zh-v1.5",
+          "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+          "dimension": 512,
+          "distance": "Cosine",
+          "chunking": {
+            "target_chars": 350,
+            "overlap_chars": 70,
+            "max_tokens": 480,
+            "vector_text": "content"
+          },
+          "created_at": "2026-10-20T12:38:38.776500+00:00",
+          "review_scope": "assistant source-checked original facts; human review pending",
+          "elapsed_seconds": 32.7538
+        },
+        "fixtureHistory": "one synthetic completed task; no provider execution",
+        "embeddingDimension": 512
+      }
+    },
+    {
+      "name": "normal_local_cpu_search_and_missing_key_no_generation",
+      "status": "FAIL",
+      "seconds": 0.1511,
+      "errorType": "RuntimeError",
+      "assertion": "ISOLATED_PROBE_ERROR"
+    },
+    {
+      "name": "missing_bge_degrades_only_knowledge",
+      "status": "FAIL",
+      "seconds": 0.067,
+      "errorType": "RuntimeError",
+      "assertion": "ISOLATED_PROBE_ERROR"
+    },
+    {
+      "name": "bge_restored_by_reconfiguring_existing_local_snapshot",
+      "status": "FAIL",
+      "seconds": 0.0545,
+      "errorType": "RuntimeError",
+      "assertion": "ISOLATED_PROBE_ERROR"
+    },
+    {
+      "name": "missing_qdrant_cannot_fake_evidence",
+      "status": "FAIL",
+      "seconds": 0.0643,
+      "errorType": "RuntimeError",
+      "assertion": "ISOLATED_PROBE_ERROR"
+    },
+    {
+      "name": "restore_qdrant_exact_isolated_copy",
+      "status": "FAIL",
+      "seconds": 0.0015,
+      "errorType": "FileNotFoundError",
+      "assertion": "ISOLATED_PROBE_ERROR"
+    },
+    {
+      "name": "missing_knowledge_sqlite_detects_but_creates_empty_file",
+      "status": "FAIL",
+      "seconds": 0.0691,
+      "errorType": "RuntimeError",
+      "assertion": "ISOLATED_PROBE_ERROR"
+    },
+    {
+      "name": "restore_knowledge_sqlite_exact_isolated_copy",
+      "status": "FAIL",
+      "seconds": 0.0015,
+      "errorType": "FileNotFoundError",
+      "assertion": "ISOLATED_PROBE_ERROR"
+    },
+    {
+      "name": "corrupt_agent_sqlite_startup_gap_recorded",
+      "status": "PASS",
+      "seconds": 0.0631,
+      "detail": {
+        "observedBehavior": "app factory raises before HTTP listener can start",
+        "exceptionType": "DatabaseError",
+        "limitation": "corrupt writable Agent database blocks whole startup rather than degraded API",
+        "fixtureOnly": true
+      }
+    },
+    {
+      "name": "read_only_history_missing_never_creates_database",
+      "status": "PASS",
+      "seconds": 0.0004,
+      "detail": {
+        "listTotal": 0,
+        "detailStatus": 404,
+        "detailCode": "AGENT_TASK_NOT_FOUND",
+        "missingFileCreated": false
+      }
+    },
+    {
+      "name": "readonly_corrupt_sqlite_returns_safe_503",
+      "status": "PASS",
+      "seconds": 0.0082,
+      "detail": {
+        "code": "AGENT_HISTORY_UNAVAILABLE",
+        "status": 503,
+        "message": "历史记录暂时无法读取，请稍后重新查询。",
+        "sensitivePathLeaked": false
+      }
+    },
+    {
+      "name": "blank_runtime_truthful_empty_not_recovery",
+      "status": "FAIL",
+      "seconds": 0.0755,
+      "errorType": "RuntimeError",
+      "assertion": "ISOLATED_PROBE_ERROR"
+    },
+    {
+      "name": "actual_glb_isolated_removal_http_error_exact_restoration",
+      "status": "FAIL",
+      "seconds": 0.3485,
+      "errorType": "RuntimeError",
+      "assertion": "ISOLATED_PROBE_ERROR"
+    }
+  ],
+  "passed": 4,
+  "failed": 9,
+  "skipped": 0,
+  "paidApiCalls": 0,
+  "neural4dApiCalls": 0,
+  "auditCounts": {
+    "blockedNetwork": 7,
+    "blockedFile": 0,
+    "blockedSqlite": 0
+  },
+  "productionAccess": "BGE snapshot read-only only; other production runtime and private config guarded",
+  "knownGaps": [
+    "generic KNOWLEDGE_LOAD_FAILED diagnostic",
+    "KnowledgeStore and VectorStore create empty missing target before validation fails",
+    "corrupt Agent SQLite prevents app startup",
+    "wrong writable data path initializes truthful but empty operation stores"
+  ]
+}

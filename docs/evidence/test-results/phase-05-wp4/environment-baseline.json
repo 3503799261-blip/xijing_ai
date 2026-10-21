@@ -1,0 +1,434 @@
+{
+  "at": "2026-10-20T12:36:58.773301+00:00",
+  "repository": "D:\\京剧\\京剧",
+  "branch": "feature/phase5-competition-delivery",
+  "head": "74b3e6e03c227c4b7ab00fe5b650b172d3a6c9e9",
+  "status": "",
+  "recentCommits": [
+    "74b3e6e docs(phase5): deliver WP3 demo acceptance report",
+    "45d1dcc test(phase5): archive WP3 fallback and viewer validation",
+    "76dbba0 fix(phase5): finish cancelled local checks clearly",
+    "e36c1e5 feat(phase5): add guided demo and graceful fallback",
+    "60e1590 docs(phase5): deliver WP2 history acceptance report",
+    "f8a1f47 test(phase5): archive history regression and invariants",
+    "9e3516d feat(phase5): add read-only agent history",
+    "ea0f4fc test(phase5): archive isolated WP1 validation and evidence"
+  ],
+  "python": "3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)]",
+  "normalVenvSystemPackages": true,
+  "portsListening": {
+    "8000": false,
+    "8011": false,
+    "8012": false
+  },
+  "disk": {
+    "freeD": 164190527488
+  },
+  "installedDistributions": [
+    {
+      "name": "addict",
+      "version": "2.4.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "baidu-aip",
+      "version": "4.16.13",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "bce-python-sdk",
+      "version": "0.9.69",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.2.25",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "chardet",
+      "version": "7.4.0.post2",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.7",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.2",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "crc32c",
+      "version": "2.8",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.143.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "filelock",
+      "version": "3.25.2",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.3.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "future",
+      "version": "1.0.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "grpcio",
+      "version": "1.84.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "h2",
+      "version": "4.4.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.7.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "hpack",
+      "version": "4.2.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "1.33.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "hyperframe",
+      "version": "6.1.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "idna",
+      "version": "3.11",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "joblib",
+      "version": "1.6.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.3",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "modelscope",
+      "version": "1.35.3",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "narwhals",
+      "version": "2.26.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "networkx",
+      "version": "3.6.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "numpy",
+      "version": "2.4.4",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "opencv-python",
+      "version": "4.13.0.92",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.45.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "packaging",
+      "version": "26.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "pillow",
+      "version": "12.2.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "pip",
+      "version": "22.3.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "pip",
+      "version": "26.0.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "portalocker",
+      "version": "3.2.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "pycryptodome",
+      "version": "3.23.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.14.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.15.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.50.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.4",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "pywin32",
+      "version": "312",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "qdrant-client",
+      "version": "1.19.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.29",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "requests",
+      "version": "2.33.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.9.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "scipy",
+      "version": "1.17.1",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "sentence-transformers",
+      "version": "6.1.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "setuptools",
+      "version": "65.5.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "setuptools",
+      "version": "65.5.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "starlette",
+      "version": "1.7.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.7.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.3",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "torch",
+      "version": "2.11.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.67.3",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "transformers",
+      "version": "5.19.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "typer",
+      "version": "0.27.3",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.15.0",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.6.3",
+      "source": "existing installed distribution; no inference of original download source"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0",
+      "source": "existing installed distribution; no inference of original download source"
+    }
+  ]
+}

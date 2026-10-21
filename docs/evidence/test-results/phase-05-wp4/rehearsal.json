@@ -1,0 +1,898 @@
+{
+  "startedAt": "2026-10-20T12:51:34.414Z",
+  "kind": "TIMED_AUTOMATED_LOCAL_REHEARSAL",
+  "humanNarration": "NOT_TESTED",
+  "physicalPhone": "NOT_TESTED",
+  "externalAi": "NOT_TESTED",
+  "paidRequests": 0,
+  "newModels": 0,
+  "normal": [
+    {
+      "name": "首页与文化定位",
+      "actualPage": "/index.html",
+      "expected": "京剧文化首页与工坊入口",
+      "fallback": "说明本地页面故障，不伪装成功",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:51:35.198Z",
+      "plannedDwellMs": 30000,
+      "actual": {
+        "http": 200,
+        "title": "梨园风华｜首页"
+      },
+      "status": "PASS",
+      "operationSeconds": 1.554,
+      "totalSeconds": 30.005
+    },
+    {
+      "name": "进入六步导览与免费条件检查",
+      "actualPage": "/about.html#ai-workshop-demo",
+      "expected": "六步说明和本地资源状态",
+      "fallback": "历史与资产仍可独立读取",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:52:05.204Z",
+      "plannedDwellMs": 30000,
+      "actual": {
+        "steps": 6,
+        "conditionSummary": "本地后端与知识检索条件 · 可读取\n\n本地知识检索条件可用，资料12份、片段35条。此快照未记录正在执行的Agent任务。LLM配置及既有验证状态不代表今日DeepSeek网络连通性，本次未调用模型。\n\n已保存Agent历史记录 · 可读取\n\n可只读查询22条持久化历史。打开历史档案后仍需手动读取；这不是新Agent执行。\n\n已有写实模型登记信息 · 可读取\n\n“绛绣·戏韵”的历史真实GLB登记可读取。本项未下载或检查GLB渲染；实际加载与交互以Viewer当前状态为准。\n\nNeural4D额度台账与创建状态 · 可读取\n\n全局已用2/3、剩余1次未使用，真实创建关闭。用户已取消第三次建模；本次不提交任务、不修改次数。"
+      },
+      "status": "PASS",
+      "operationSeconds": 1.84,
+      "totalSeconds": 30.002
+    },
+    {
+      "name": "RAG界面与真实证据范围",
+      "actualPage": "/about.html#ai-workshop-qa",
+      "expected": "解释检索/引用，保留输入且不发送",
+      "fallback": "转已保存研究记录或离线检索报告",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:52:35.208Z",
+      "plannedDwellMs": 30000,
+      "actual": {
+        "input": "京剧主要使用哪两种声腔？（排练保留，不发送）",
+        "liveAnswerGenerated": false,
+        "localRetrievalEvidence": "separate real restored-index evaluation, not a new LLM answer"
+      },
+      "status": "PASS",
+      "operationSeconds": 0.443,
+      "totalSeconds": 30.007
+    },
+    {
+      "name": "查看真实Agent历史",
+      "actualPage": "/about.html#ai-workshop-history",
+      "expected": "同一历史任务的研究/设计/审校",
+      "fallback": "原任务不可读时显示真实错误，不重跑",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:53:05.216Z",
+      "plannedDwellMs": 30000,
+      "actual": {
+        "taskId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+        "historyLabel": "真实持久化记录 · 只读快照 · 本页不会执行Agent\n\n绛绣·戏韵\n记录状态：已确认完成\n任务ID：ca7007e7-e535-4b1f-a9b6-1932f10e20b4\n\n创建：2026-10-14 14:53:29.733000+00:00；开始：2026-10-14 14:53:29.743998+00:00；结束：2026-10-17 05:04:19.158585+00:00\n\n最后持久化更新时间：2026-10-17 05:04:19.158585+00:00；本次读取时间：2026-10-20 ",
+        "notRealtime": true
+      },
+      "status": "PASS",
+      "operationSeconds": 1.513,
+      "totalSeconds": 30.013
+    },
+    {
+      "name": "角色JSON与人工确认",
+      "actualPage": "/about.html#ai-workshop-history",
+      "expected": "已保存角色/审校/确认，不触碰状态",
+      "fallback": "记录缺项，不补造",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:53:35.230Z",
+      "plannedDwellMs": 30000,
+      "actual": {
+        "taskId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+        "readOnly": true,
+        "sectionsMentioned": [
+          "角色方案",
+          "文化审校",
+          "人工确认"
+        ],
+        "liveTaskStarted": false
+      },
+      "status": "PASS",
+      "operationSeconds": 0.121,
+      "totalSeconds": 30.001
+    },
+    {
+      "name": "内部Q版原模型",
+      "actualPage": "internal Q viewer",
+      "expected": "真实GLB Ready，保留内部用途说明",
+      "fallback": "仅重载原文件或展示历史报告",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:54:05.233Z",
+      "plannedDwellMs": 30000,
+      "actual": {
+        "state": "ready",
+        "degrees": 0,
+        "radius": 3.5987347811727006,
+        "theta": 0,
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "privateRehearsalOnly": true
+      },
+      "status": "PASS",
+      "operationSeconds": 1.474,
+      "totalSeconds": 30.007
+    },
+    {
+      "name": "写实主展示绛绣",
+      "actualPage": "existing realistic asset",
+      "expected": "已有关联GLB Ready，不生成",
+      "fallback": "重载同一资产，不请求供应商",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:54:35.241Z",
+      "plannedDwellMs": 30000,
+      "actual": {
+        "state": "ready",
+        "degrees": 0,
+        "radius": 3.9898317468431963,
+        "theta": 0,
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+      },
+      "status": "PASS",
+      "operationSeconds": 2.195,
+      "totalSeconds": 30.014
+    },
+    {
+      "name": "旋转缩放重置",
+      "actualPage": "existing realistic Viewer",
+      "expected": "连续鼠标至少260°、缩放、Reset",
+      "fallback": "保持模型ID，报告失败",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:55:05.257Z",
+      "plannedDwellMs": 30000,
+      "actual": {
+        "initial": {
+          "state": "ready",
+          "degrees": 0,
+          "radius": 3.9898317468431963,
+          "theta": 0,
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+        },
+        "rotated": {
+          "state": "ready",
+          "degrees": 356.5,
+          "radius": 3.9898317468431963,
+          "theta": 6.222103668421803,
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+        },
+        "zoomed": {
+          "state": "ready",
+          "degrees": 356.5,
+          "radius": 3.191865397474557,
+          "theta": 6.222103668421803,
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+        },
+        "reset": {
+          "state": "ready",
+          "degrees": 356.5,
+          "radius": 3.9898317468431963,
+          "theta": 0,
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+        }
+      },
+      "status": "PASS",
+      "operationSeconds": 17.579,
+      "totalSeconds": 30.001
+    },
+    {
+      "name": "企业需求边界",
+      "actualPage": "/about.html#ai-workshop-model",
+      "expected": "已有企业入口，无客户交付承诺",
+      "fallback": "仅说明当前能力，不提交",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:55:35.259Z",
+      "plannedDwellMs": 30000,
+      "actual": {
+        "enterpriseVisible": true,
+        "submitted": false,
+        "actualBoundary": "企业模式目前为游戏、动漫IP与地方文旅的需求入口和共用创作流程，没有真实企业客户、订单或企业交付案例。填写和带入简报不会自动提交；商用许可、生产规格与最终交付仍需另行核查。\n\n企业模式为用途需求与案例展示；商业许可、骨骼和游戏规格仍需实际核查。\n\n机构类型\n游戏公司\n文旅机构\nIP设计服务\n目标受众\n使用场景\n设计目标"
+      },
+      "status": "PASS",
+      "operationSeconds": 0.662,
+      "totalSeconds": 30.006
+    },
+    {
+      "name": "总结与额度关闭",
+      "actualPage": "/about.html#ai-workshop-demo",
+      "expected": "已用2/3余1，第三取消，无付费",
+      "fallback": "以历史报告注明范围",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:56:05.266Z",
+      "plannedDwellMs": 30000,
+      "actual": {
+        "mode": "backup",
+        "quota": "Neural4D额度台账与创建状态 · 可读取\n\n全局已用2/3、剩余1次未使用，真实创建关闭。用户已取消第三次建模；本次不提交任务、不修改次数。"
+      },
+      "status": "PASS",
+      "operationSeconds": 1.424,
+      "totalSeconds": 30.015
+    }
+  ],
+  "fault": [
+    {
+      "name": "注入条件查询503",
+      "actualPage": "/about.html#ai-workshop-demo",
+      "expected": "真实中文降级，不自动付费",
+      "fallback": "历史只读备用",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:56:35.284Z",
+      "plannedDwellMs": 10000,
+      "actual": {
+        "fault": "browser response double HTTP503, production resources untouched",
+        "message": "本地后端与知识检索条件 · 未就绪\n\n本地服务尚未就绪，请检查启动状态后手动重试。"
+      },
+      "status": "PASS",
+      "operationSeconds": 0.473,
+      "totalSeconds": 10.005
+    },
+    {
+      "name": "转历史只读备用",
+      "actualPage": "/about.html#ai-workshop-history",
+      "expected": "原保存任务仍可读取",
+      "fallback": "无记录时真实空/错误",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:56:45.290Z",
+      "plannedDwellMs": 10000,
+      "actual": {
+        "taskId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+        "readable": true,
+        "historyNotRerun": true
+      },
+      "status": "PASS",
+      "operationSeconds": 2.509,
+      "totalSeconds": 10.007
+    },
+    {
+      "name": "转已有真实资产",
+      "actualPage": "existing realistic Viewer",
+      "expected": "独立GLB Ready",
+      "fallback": "只重载原文件",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:56:55.299Z",
+      "plannedDwellMs": 10000,
+      "actual": {
+        "state": "ready",
+        "degrees": 0,
+        "radius": 3.9898317468431963,
+        "theta": 0,
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+      },
+      "status": "PASS",
+      "operationSeconds": 2.475,
+      "totalSeconds": 10.014
+    },
+    {
+      "name": "解除故障手动恢复",
+      "actualPage": "/about.html#ai-workshop-demo",
+      "expected": "原健康GET恢复，本地资料12份",
+      "fallback": "不能据此称DeepSeek恢复",
+      "externalServiceRequired": false,
+      "startedAt": "2026-10-20T12:57:05.314Z",
+      "plannedDwellMs": 10000,
+      "actual": {
+        "actualLocalRecovery": "本地后端与知识检索条件 · 可读取\n\n本地知识检索条件可用，资料12份、片段35条。此快照未记录正在执行的Agent任务。LLM配置及既有验证状态不代表今日DeepSeek网络连通性，本次未调用模型。",
+        "externalProviderVerified": false
+      },
+      "status": "PASS",
+      "operationSeconds": 0.724,
+      "totalSeconds": 10.012
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/index.html"
+    },
+    {
+      "method": "GET",
+      "path": "/css/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/index.css"
+    },
+    {
+      "method": "GET",
+      "path": "/images/intro4.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/images/home1.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/images/intro2.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/images/sheng.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/images/red1.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/images/art1.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/images/opera1.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/images/gallery7.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/images/art3.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/images/opera2.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/images/opera3.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/media/opera-audio.mp3"
+    },
+    {
+      "method": "GET",
+      "path": "/media/video1.mp4"
+    },
+    {
+      "method": "GET",
+      "path": "/images/home-banner.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/about.html"
+    },
+    {
+      "method": "GET",
+      "path": "/css/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop-history.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop-demo.css"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/main.js"
+    },
+    {
+      "method": "GET",
+      "path": "/images/about.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/services.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/agent-workflow.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/demo-guide.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/agent-history.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/digital-assets.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/capabilities"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/demo-status.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/model-viewer-adapter.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/history-contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/history-services.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/usage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop.css"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/internal-viewer.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/model-viewer-adapter.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0"
+    },
+    {
+      "method": "GET",
+      "path": "/js/vendor/model-viewer/model-viewer.min.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file"
+    },
+    {
+      "method": "GET",
+      "path": "/about.html"
+    },
+    {
+      "method": "GET",
+      "path": "/css/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop-history.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop-demo.css"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/main.js"
+    },
+    {
+      "method": "GET",
+      "path": "/images/about.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/services.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/agent-workflow.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/demo-guide.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/agent-history.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/digital-assets.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/capabilities"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/demo-status.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/model-viewer-adapter.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/history-contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/history-services.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/usage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+    },
+    {
+      "method": "GET",
+      "path": "/js/vendor/model-viewer/model-viewer.min.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/characters"
+    },
+    {
+      "method": "GET",
+      "path": "/about.html"
+    },
+    {
+      "method": "GET",
+      "path": "/css/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop-history.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop-demo.css"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/main.js"
+    },
+    {
+      "method": "GET",
+      "path": "/images/about.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/services.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/agent-workflow.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/demo-guide.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/agent-history.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/capabilities"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/digital-assets.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/history-contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/history-services.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/demo-status.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/model-viewer-adapter.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/usage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/usage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4"
+    },
+    {
+      "method": "GET",
+      "path": "/about.html"
+    },
+    {
+      "method": "GET",
+      "path": "/css/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop-history.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop-demo.css"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/main.js"
+    },
+    {
+      "method": "GET",
+      "path": "/images/about.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/services.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/agent-workflow.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/demo-guide.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/agent-history.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/capabilities"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/digital-assets.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/demo-status.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/history-contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/history-services.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/model-viewer-adapter.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/usage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+    },
+    {
+      "method": "GET",
+      "path": "/js/vendor/model-viewer/model-viewer.min.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file"
+    },
+    {
+      "method": "GET",
+      "path": "/about.html"
+    },
+    {
+      "method": "GET",
+      "path": "/css/style.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop-history.css"
+    },
+    {
+      "method": "GET",
+      "path": "/css/ai-workshop-demo.css"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/main.js"
+    },
+    {
+      "method": "GET",
+      "path": "/images/about.jpg"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/services.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/agent-workflow.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/demo-guide.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/agent-history.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/capabilities"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/digital-assets.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/demo-status.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/model-viewer-adapter.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/history-contracts.js"
+    },
+    {
+      "method": "GET",
+      "path": "/js/ai-workshop/history-services.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agent/history"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/usage"
+    }
+  ],
+  "blocked": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ],
+  "pageErrors": [],
+  "expectedHttpFaults": [
+    {
+      "path": "/api/v1/health",
+      "status": 503
+    }
+  ],
+  "notes": [
+    "30 second minimum per normal step includes explicit reading/illustration dwell; no claim of live spoken delivery or finished competition MP4.",
+    "Q model is shown only in this private loopback rehearsal; public recording permission is not expanded."
+  ],
+  "chrome": "155.0.8059.85",
+  "normalFinishedAt": "2026-10-20T12:56:35.282Z",
+  "finishedAt": "2026-10-20T12:57:15.327Z",
+  "normalSeconds": 300.071,
+  "faultSeconds": 40.038,
+  "counts": {
+    "pass": 14,
+    "fail": 0,
+    "notTested": [
+      "human spoken video rehearsal",
+      "physical smartphone",
+      "real external API"
+    ]
+  }
+}

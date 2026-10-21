@@ -1,0 +1,38 @@
+{
+  "startedAt": "2026-10-20T12:39:30.820652+00:00",
+  "includeSystemSitePackages": false,
+  "requirementsChanged": false,
+  "providerRequests": 0,
+  "steps": [
+    {
+      "command": [
+        "D:\\京剧\\.runtime\\phase5-wp4\\cold-env\\Scripts\\python.exe",
+        "-m",
+        "ensurepip",
+        "--upgrade",
+        "--default-pip"
+      ],
+      "exitCode": 1,
+      "elapsedSeconds": 1.973,
+      "privateOutputFile": "cold-install-attempt01-ensurepip-diagnostic.private-output.txt",
+      "redactedFailureLines": [
+        "ERROR: Exception:",
+        "PermissionError: [WinError 5] 拒绝访问。: 'C:/Users/<user>"
+      ]
+    },
+    {
+      "command": [
+        "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe",
+        "-m",
+        "venv",
+        "D:\\京剧\\.runtime\\phase5-wp4\\cold-env-attempt02"
+      ],
+      "exitCode": 1,
+      "elapsedSeconds": 2.349,
+      "privateOutputFile": "cold-install-attempt02-venv.private-output.txt",
+      "redactedFailureLines": []
+    }
+  ],
+  "updatedAt": "2026-10-20T12:39:35.144424+00:00",
+  "status": "VENV_FAILED"
+}

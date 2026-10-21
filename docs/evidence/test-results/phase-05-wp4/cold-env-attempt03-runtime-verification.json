@@ -1,0 +1,92 @@
+{
+  "at": "2026-10-20T12:48:22.841483+00:00",
+  "pythonVersion": "3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)]",
+  "includeSystemSitePackages": false,
+  "venvConfig": "home = C:/Users/<user>\ninclude-system-site-packages = false\nversion = 3.11.1\nexecutable = D:\\京剧\\京剧\\.venv\\Scripts\\python.exe\ncommand = D:\\京剧\\京剧\\.venv\\Scripts\\python.exe -m venv D:\\京剧\\.runtime\\phase5-wp4\\cold-env-attempt03\n",
+  "outsideVenvSitePackagesOnSysPath": [],
+  "imports": [
+    {
+      "distribution": "fastapi",
+      "version": "0.143.0",
+      "status": "PASS",
+      "loadedFromThisVenv": true,
+      "elapsedSeconds": 1.008
+    },
+    {
+      "distribution": "uvicorn",
+      "version": "0.54.0",
+      "status": "PASS",
+      "loadedFromThisVenv": true,
+      "elapsedSeconds": 0.137
+    },
+    {
+      "distribution": "pydantic-settings",
+      "version": "2.15.0",
+      "status": "PASS",
+      "loadedFromThisVenv": true,
+      "elapsedSeconds": 0.073
+    },
+    {
+      "distribution": "httpx",
+      "version": "0.28.1",
+      "status": "PASS",
+      "loadedFromThisVenv": true,
+      "elapsedSeconds": 0.252
+    },
+    {
+      "distribution": "qdrant-client",
+      "version": "1.19.1",
+      "status": "PASS",
+      "loadedFromThisVenv": true,
+      "elapsedSeconds": 1.682
+    },
+    {
+      "distribution": "sentence-transformers",
+      "version": "6.1.0",
+      "status": "PASS",
+      "loadedFromThisVenv": true,
+      "elapsedSeconds": 19.966
+    },
+    {
+      "distribution": "torch",
+      "version": "2.11.0+cpu",
+      "status": "PASS",
+      "loadedFromThisVenv": true,
+      "elapsedSeconds": 0.003
+    },
+    {
+      "distribution": "numpy",
+      "version": "2.4.4",
+      "status": "PASS",
+      "loadedFromThisVenv": true,
+      "elapsedSeconds": 0.002
+    },
+    {
+      "distribution": "pytest",
+      "version": "9.1.1",
+      "status": "PASS",
+      "loadedFromThisVenv": true,
+      "elapsedSeconds": 0.214
+    },
+    {
+      "distribution": "Pillow",
+      "version": "12.2.0",
+      "status": "PASS",
+      "loadedFromThisVenv": true,
+      "elapsedSeconds": 0.003
+    },
+    {
+      "distribution": "portalocker",
+      "version": "3.2.0",
+      "status": "PASS",
+      "loadedFromThisVenv": true,
+      "elapsedSeconds": 0.021
+    }
+  ],
+  "elapsedSeconds": 23.364,
+  "requirementsSha256": "c9cb3e800f1ca11b447047803a15179838e2e1b7f2003009c116aa6c4efc0b85",
+  "installedDistributions": 66,
+  "blockedNetworkAttempts": 0,
+  "providerRequests": 0,
+  "status": "PASS"
+}

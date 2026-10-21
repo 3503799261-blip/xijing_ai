@@ -1,0 +1,20 @@
+....FF........                                                           [100%]
+================================== FAILURES ===================================
+_ test_missing_resources_rejected_before_any_knowledge_constructor[vector_storage-VECTOR_INDEX_MISSING] _
+backend\tests\test_runtime_resources.py:86: in test_missing_resources_rejected_before_any_knowledge_constructor
+    assert runtime.diagnostic == code
+E   AssertionError: assert 'EMBEDDING_LOAD_FAILED' == 'VECTOR_INDEX_MISSING'
+E     
+E     - VECTOR_INDEX_MISSING
+E     + EMBEDDING_LOAD_FAILED
+_ test_missing_qdrant_collection_declaration_is_rejected_before_constructors __
+backend\tests\test_runtime_resources.py:114: in test_missing_qdrant_collection_declaration_is_rejected_before_constructors
+    assert runtime.diagnostic == 'VECTOR_INDEX_MISSING'
+E   AssertionError: assert 'EMBEDDING_LOAD_FAILED' == 'VECTOR_INDEX_MISSING'
+E     
+E     - VECTOR_INDEX_MISSING
+E     + EMBEDDING_LOAD_FAILED
+=========================== short test summary info ===========================
+FAILED backend/tests/test_runtime_resources.py::test_missing_resources_rejected_before_any_knowledge_constructor[vector_storage-VECTOR_INDEX_MISSING]
+FAILED backend/tests/test_runtime_resources.py::test_missing_qdrant_collection_declaration_is_rejected_before_constructors
+2 failed, 12 passed in 4.11s

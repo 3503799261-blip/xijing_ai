@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-20T12:36:44.615117+00:00",
+  "targetPid": 21240,
+  "method": "AttachConsole then CTRL_C_EVENT; no terminate/kill",
+  "attached": true,
+  "attachError": 0,
+  "ctrlCSent": true,
+  "controlError": 0,
+  "portClosed": true
+}

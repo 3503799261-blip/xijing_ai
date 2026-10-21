@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-20T12:37:00.203887+00:00",
+  "privateEnvExists": true,
+  "secretFields": {
+    "DEEPSEEK_API_KEY": true,
+    "NEURAL4D_API_KEY": true,
+    "NEURAL4D_ADMIN_TOKEN": false
+  },
+  "generationEnabled": false,
+  "protocolVerified": false,
+  "externalProviderChecked": false,
+  "valuesSuppressed": true
+}

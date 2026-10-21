@@ -1,0 +1,5231 @@
+{
+  "startedAt": "2026-10-20T12:49:27.976Z",
+  "scope": "WP4_24_REAL_LOCAL_PAGE_VIEWPORT_PAIRS_GET_HEAD_ONLY",
+  "cases": [
+    {
+      "file": "index.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "startedAt": "2026-10-20T12:49:28.451Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/index.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/index.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery7.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home-banner.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "fetch"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpStatus": 200,
+      "observed": {
+        "title": "梨园风华｜首页",
+        "h1": "梨园风华",
+        "h1Visible": true,
+        "mainTextLength": 3339,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/index.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [
+          {
+            "tag": "AUDIO",
+            "path": "/media/opera-audio.mp3",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 218.976
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video1.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 168.066667
+          }
+        ],
+        "brokenImages": [],
+        "imageCount": 13,
+        "horizontalOverflow": false,
+        "scrollWidth": 1920,
+        "innerWidth": 1920,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "1920x1080-index.png",
+      "mediaProbes": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "status": 206,
+          "contentType": "audio/mpeg",
+          "contentRange": "bytes 0-0/5255474",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video1.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/11808060",
+          "length": "1",
+          "sampleBytes": 1
+        }
+      ],
+      "expectedMediaCancellations": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:30.372Z",
+      "elapsedMs": 1921
+    },
+    {
+      "file": "history.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "startedAt": "2026-10-20T12:49:30.380Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/history.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/history.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B21.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B22.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B23.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B24.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B25.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF1.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "京剧发展历史｜梨园风华",
+        "h1": "京剧发展历史",
+        "h1Visible": true,
+        "mainTextLength": 4510,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/history.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 10,
+        "horizontalOverflow": false,
+        "scrollWidth": 1920,
+        "innerWidth": 1920,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "1920x1080-history.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:31.372Z",
+      "elapsedMs": 992
+    },
+    {
+      "file": "roles.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "startedAt": "2026-10-20T12:49:31.378Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/roles.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/roles.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/dan.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/chou.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF2.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "行当介绍｜梨园风华",
+        "h1": "生旦净丑",
+        "h1Visible": true,
+        "mainTextLength": 2624,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/roles.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 4,
+        "horizontalOverflow": false,
+        "scrollWidth": 1920,
+        "innerWidth": 1920,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "1920x1080-roles.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:32.137Z",
+      "elapsedMs": 759
+    },
+    {
+      "file": "facial.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "startedAt": "2026-10-20T12:49:32.143Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/facial.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/facial.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%84%B8%E8%B0%B1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/black.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/white.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/blue.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/glod.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/black1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/blue1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/white1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/glod1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-red.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "脸谱艺术｜梨园风华",
+        "h1": "脸谱艺术",
+        "h1Visible": true,
+        "mainTextLength": 2740,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/facial.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 12,
+        "horizontalOverflow": false,
+        "scrollWidth": 1920,
+        "innerWidth": 1920,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "1920x1080-facial.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:32.943Z",
+      "elapsedMs": 800
+    },
+    {
+      "file": "music.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "startedAt": "2026-10-20T12:49:32.950Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/music.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/music.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E4%BA%AC%E8%83%A1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "fetch"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpStatus": 200,
+      "observed": {
+        "title": "唱腔与乐器｜梨园风华",
+        "h1": "唱腔与乐器",
+        "h1Visible": true,
+        "mainTextLength": 2228,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/music.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [
+          {
+            "tag": "AUDIO",
+            "path": "/media/opera-audio.mp3",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 218.976
+          }
+        ],
+        "brokenImages": [],
+        "imageCount": 1,
+        "horizontalOverflow": false,
+        "scrollWidth": 1920,
+        "innerWidth": 1920,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "1920x1080-music.png",
+      "mediaProbes": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "status": 206,
+          "contentType": "audio/mpeg",
+          "contentRange": "bytes 0-0/5255474",
+          "length": "1",
+          "sampleBytes": 1
+        }
+      ],
+      "expectedMediaCancellations": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:33.751Z",
+      "elapsedMs": 800
+    },
+    {
+      "file": "gallery.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "startedAt": "2026-10-20T12:49:33.758Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/gallery.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/gallery.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery11.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery12.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery5.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery6.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery7.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery8.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera5.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/dan.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/chou.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-red.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-black.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-blue.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-gold.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E4%BA%AC%E8%83%A1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home-banner.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF1.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "艺术画廊｜梨园风华",
+        "h1": "京剧艺术画廊",
+        "h1Visible": true,
+        "mainTextLength": 3998,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/gallery.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 28,
+        "horizontalOverflow": false,
+        "scrollWidth": 1920,
+        "innerWidth": 1920,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "1920x1080-gallery.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:34.777Z",
+      "elapsedMs": 1019
+    },
+    {
+      "file": "video.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "startedAt": "2026-10-20T12:49:34.785Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/video.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/video.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video2.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video3.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video4.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera5.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video2.mp4",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video3.mp4",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video4.mp4",
+          "resourceType": "fetch"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/video2.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video3.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video4.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpStatus": 200,
+      "observed": {
+        "title": "视频欣赏｜梨园风华",
+        "h1": "视频欣赏",
+        "h1Visible": true,
+        "mainTextLength": 1702,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/video.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [
+          {
+            "tag": "VIDEO",
+            "path": "/media/video1.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 168.066667
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video2.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 63.6
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video3.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 138.7
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video4.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 78.4
+          }
+        ],
+        "brokenImages": [],
+        "imageCount": 0,
+        "horizontalOverflow": false,
+        "scrollWidth": 1920,
+        "innerWidth": 1920,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "1920x1080-video.png",
+      "mediaProbes": [
+        {
+          "path": "/media/video1.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/11808060",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video2.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/5513081",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video3.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/10515522",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video4.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/10028576",
+          "length": "1",
+          "sampleBytes": 1
+        }
+      ],
+      "expectedMediaCancellations": [
+        {
+          "path": "/media/video2.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video3.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video4.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:35.634Z",
+      "elapsedMs": 849
+    },
+    {
+      "file": "about.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "startedAt": "2026-10-20T12:49:35.641Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js",
+          "resourceType": "script"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "AI戏韵工坊｜梨园风华",
+        "h1": "AI赋能京剧非遗，让传统文化焕发新生",
+        "h1Visible": true,
+        "mainTextLength": 9623,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/ai-workshop.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/ai-workshop-history.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/ai-workshop-demo.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [
+          {
+            "path": "/js/ai-workshop/main.js",
+            "type": "module"
+          }
+        ],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 0,
+        "horizontalOverflow": false,
+        "scrollWidth": 1920,
+        "innerWidth": 1920,
+        "workshopPresent": true
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "1920x1080-about.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:36.693Z",
+      "elapsedMs": 1052
+    },
+    {
+      "file": "index.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "startedAt": "2026-10-20T12:49:36.701Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/index.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/index.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery7.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home-banner.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "fetch"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpStatus": 200,
+      "observed": {
+        "title": "梨园风华｜首页",
+        "h1": "梨园风华",
+        "h1Visible": true,
+        "mainTextLength": 3339,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/index.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [
+          {
+            "tag": "AUDIO",
+            "path": "/media/opera-audio.mp3",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 218.976
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video1.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 168.066667
+          }
+        ],
+        "brokenImages": [],
+        "imageCount": 13,
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "768x1024-index.png",
+      "mediaProbes": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "status": 206,
+          "contentType": "audio/mpeg",
+          "contentRange": "bytes 0-0/5255474",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video1.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/11808060",
+          "length": "1",
+          "sampleBytes": 1
+        }
+      ],
+      "expectedMediaCancellations": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:37.517Z",
+      "elapsedMs": 816
+    },
+    {
+      "file": "history.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "startedAt": "2026-10-20T12:49:37.526Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/history.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/history.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B21.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B22.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B23.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B24.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B25.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF1.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "京剧发展历史｜梨园风华",
+        "h1": "京剧发展历史",
+        "h1Visible": true,
+        "mainTextLength": 4510,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/history.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 10,
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "768x1024-history.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:38.230Z",
+      "elapsedMs": 704
+    },
+    {
+      "file": "roles.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "startedAt": "2026-10-20T12:49:38.236Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/roles.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/roles.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/dan.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/chou.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF2.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "行当介绍｜梨园风华",
+        "h1": "生旦净丑",
+        "h1Visible": true,
+        "mainTextLength": 2624,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/roles.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 4,
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "768x1024-roles.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:38.853Z",
+      "elapsedMs": 616
+    },
+    {
+      "file": "facial.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "startedAt": "2026-10-20T12:49:38.861Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/facial.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/facial.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%84%B8%E8%B0%B1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/black.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/white.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/blue.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/glod.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/black1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/blue1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/white1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/glod1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-red.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "脸谱艺术｜梨园风华",
+        "h1": "脸谱艺术",
+        "h1Visible": true,
+        "mainTextLength": 2740,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/facial.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 12,
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "768x1024-facial.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:39.554Z",
+      "elapsedMs": 693
+    },
+    {
+      "file": "music.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "startedAt": "2026-10-20T12:49:39.561Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/music.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/music.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E4%BA%AC%E8%83%A1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "fetch"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpStatus": 200,
+      "observed": {
+        "title": "唱腔与乐器｜梨园风华",
+        "h1": "唱腔与乐器",
+        "h1Visible": true,
+        "mainTextLength": 2228,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/music.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [
+          {
+            "tag": "AUDIO",
+            "path": "/media/opera-audio.mp3",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 218.976
+          }
+        ],
+        "brokenImages": [],
+        "imageCount": 1,
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "768x1024-music.png",
+      "mediaProbes": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "status": 206,
+          "contentType": "audio/mpeg",
+          "contentRange": "bytes 0-0/5255474",
+          "length": "1",
+          "sampleBytes": 1
+        }
+      ],
+      "expectedMediaCancellations": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:40.223Z",
+      "elapsedMs": 662
+    },
+    {
+      "file": "gallery.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "startedAt": "2026-10-20T12:49:40.231Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/gallery.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/gallery.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery11.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery12.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery5.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery6.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery7.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery8.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera5.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/dan.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/chou.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-red.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-black.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-blue.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-gold.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E4%BA%AC%E8%83%A1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home-banner.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF1.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "艺术画廊｜梨园风华",
+        "h1": "京剧艺术画廊",
+        "h1Visible": true,
+        "mainTextLength": 3998,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/gallery.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 28,
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "768x1024-gallery.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:41.016Z",
+      "elapsedMs": 785
+    },
+    {
+      "file": "video.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "startedAt": "2026-10-20T12:49:41.024Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/video.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/video.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video2.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video3.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video4.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera5.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video2.mp4",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video3.mp4",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video4.mp4",
+          "resourceType": "fetch"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/video4.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video3.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video2.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpStatus": 200,
+      "observed": {
+        "title": "视频欣赏｜梨园风华",
+        "h1": "视频欣赏",
+        "h1Visible": true,
+        "mainTextLength": 1702,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/video.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [
+          {
+            "tag": "VIDEO",
+            "path": "/media/video1.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 168.066667
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video2.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 63.6
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video3.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 138.7
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video4.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 78.4
+          }
+        ],
+        "brokenImages": [],
+        "imageCount": 0,
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "768x1024-video.png",
+      "mediaProbes": [
+        {
+          "path": "/media/video1.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/11808060",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video2.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/5513081",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video3.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/10515522",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video4.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/10028576",
+          "length": "1",
+          "sampleBytes": 1
+        }
+      ],
+      "expectedMediaCancellations": [
+        {
+          "path": "/media/video4.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video3.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video2.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:41.715Z",
+      "elapsedMs": 691
+    },
+    {
+      "file": "about.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "startedAt": "2026-10-20T12:49:41.724Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js",
+          "resourceType": "script"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "AI戏韵工坊｜梨园风华",
+        "h1": "AI赋能京剧非遗，让传统文化焕发新生",
+        "h1Visible": true,
+        "mainTextLength": 9623,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/ai-workshop.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/ai-workshop-history.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/ai-workshop-demo.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [
+          {
+            "path": "/js/ai-workshop/main.js",
+            "type": "module"
+          }
+        ],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 0,
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "workshopPresent": true
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "768x1024-about.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:42.510Z",
+      "elapsedMs": 786
+    },
+    {
+      "file": "index.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "startedAt": "2026-10-20T12:49:42.516Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/index.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/index.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery7.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home-banner.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "fetch"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpStatus": 200,
+      "observed": {
+        "title": "梨园风华｜首页",
+        "h1": "梨园风华",
+        "h1Visible": true,
+        "mainTextLength": 3339,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/index.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [
+          {
+            "tag": "AUDIO",
+            "path": "/media/opera-audio.mp3",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 218.976
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video1.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 168.066667
+          }
+        ],
+        "brokenImages": [],
+        "imageCount": 13,
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "390x844-index.png",
+      "mediaProbes": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "status": 206,
+          "contentType": "audio/mpeg",
+          "contentRange": "bytes 0-0/5255474",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video1.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/11808060",
+          "length": "1",
+          "sampleBytes": 1
+        }
+      ],
+      "expectedMediaCancellations": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:43.213Z",
+      "elapsedMs": 696
+    },
+    {
+      "file": "history.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "startedAt": "2026-10-20T12:49:43.224Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/history.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/history.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/intro4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B21.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B22.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B23.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B24.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E5%8E%86%E5%8F%B25.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF1.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "京剧发展历史｜梨园风华",
+        "h1": "京剧发展历史",
+        "h1Visible": true,
+        "mainTextLength": 4510,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/history.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 10,
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "390x844-history.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:43.880Z",
+      "elapsedMs": 656
+    },
+    {
+      "file": "roles.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "startedAt": "2026-10-20T12:49:43.887Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/roles.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/roles.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/dan.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/chou.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF2.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "行当介绍｜梨园风华",
+        "h1": "生旦净丑",
+        "h1Visible": true,
+        "mainTextLength": 2624,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/roles.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 4,
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "390x844-roles.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:44.474Z",
+      "elapsedMs": 586
+    },
+    {
+      "file": "facial.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "startedAt": "2026-10-20T12:49:44.481Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/facial.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/facial.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%84%B8%E8%B0%B1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/black.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/white.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/blue.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/glod.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/red1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/black1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/blue1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/white1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/glod1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-red.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "脸谱艺术｜梨园风华",
+        "h1": "脸谱艺术",
+        "h1Visible": true,
+        "mainTextLength": 2740,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/facial.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 12,
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "390x844-facial.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:45.084Z",
+      "elapsedMs": 603
+    },
+    {
+      "file": "music.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "startedAt": "2026-10-20T12:49:45.091Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/music.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/music.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E4%BA%AC%E8%83%A1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "fetch"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpStatus": 200,
+      "observed": {
+        "title": "唱腔与乐器｜梨园风华",
+        "h1": "唱腔与乐器",
+        "h1Visible": true,
+        "mainTextLength": 2228,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/music.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [
+          {
+            "tag": "AUDIO",
+            "path": "/media/opera-audio.mp3",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 218.976
+          }
+        ],
+        "brokenImages": [],
+        "imageCount": 1,
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "390x844-music.png",
+      "mediaProbes": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "status": 206,
+          "contentType": "audio/mpeg",
+          "contentRange": "bytes 0-0/5255474",
+          "length": "1",
+          "sampleBytes": 1
+        }
+      ],
+      "expectedMediaCancellations": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:45.723Z",
+      "elapsedMs": 632
+    },
+    {
+      "file": "gallery.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "startedAt": "2026-10-20T12:49:45.730Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/gallery.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/gallery.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery11.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery12.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery5.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery6.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery7.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/gallery8.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera2.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera5.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/sheng.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/dan.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/jing.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/chou.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-red.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-black.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-blue.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/mask-gold.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/art4.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E4%BA%AC%E8%83%A1.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/home-banner.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/%E8%83%8C%E6%99%AF1.jpg",
+          "resourceType": "image"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "艺术画廊｜梨园风华",
+        "h1": "京剧艺术画廊",
+        "h1Visible": true,
+        "mainTextLength": 3998,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/gallery.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 28,
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "390x844-gallery.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:46.469Z",
+      "elapsedMs": 739
+    },
+    {
+      "file": "video.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "startedAt": "2026-10-20T12:49:46.478Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/video.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/video.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video2.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video3.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video4.mp4",
+          "resourceType": "media"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera3.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/images/opera5.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video1.mp4",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video2.mp4",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video3.mp4",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/media/video4.mp4",
+          "resourceType": "fetch"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/video2.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video4.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video3.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpStatus": 200,
+      "observed": {
+        "title": "视频欣赏｜梨园风华",
+        "h1": "视频欣赏",
+        "h1Visible": true,
+        "mainTextLength": 1702,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/video.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [],
+        "media": [
+          {
+            "tag": "VIDEO",
+            "path": "/media/video1.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 168.066667
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video2.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 63.6
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video3.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 138.7
+          },
+          {
+            "tag": "VIDEO",
+            "path": "/media/video4.mp4",
+            "readyState": 4,
+            "networkState": 1,
+            "error": null,
+            "duration": 78.4
+          }
+        ],
+        "brokenImages": [],
+        "imageCount": 0,
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "workshopPresent": false
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "390x844-video.png",
+      "mediaProbes": [
+        {
+          "path": "/media/video1.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/11808060",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video2.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/5513081",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video3.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/10515522",
+          "length": "1",
+          "sampleBytes": 1
+        },
+        {
+          "path": "/media/video4.mp4",
+          "status": 206,
+          "contentType": "video/mp4",
+          "contentRange": "bytes 0-0/10028576",
+          "length": "1",
+          "sampleBytes": 1
+        }
+      ],
+      "expectedMediaCancellations": [
+        {
+          "path": "/media/video2.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video4.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video3.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "resourceType": "media",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:47.111Z",
+      "elapsedMs": 633
+    },
+    {
+      "file": "about.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "startedAt": "2026-10-20T12:49:47.119Z",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html",
+          "resourceType": "document"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css",
+          "resourceType": "stylesheet"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg",
+          "resourceType": "image"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js",
+          "resourceType": "script"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js",
+          "resourceType": "script"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "failedResources": [],
+      "httpStatus": 200,
+      "observed": {
+        "title": "AI戏韵工坊｜梨园风华",
+        "h1": "AI赋能京剧非遗，让传统文化焕发新生",
+        "h1Visible": true,
+        "mainTextLength": 9623,
+        "nav": [
+          {
+            "label": "首页",
+            "href": "index.html",
+            "path": "/index.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "发展历史",
+            "href": "history.html",
+            "path": "/history.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "行当介绍",
+            "href": "roles.html",
+            "path": "/roles.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "脸谱艺术",
+            "href": "facial.html",
+            "path": "/facial.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "唱腔乐器",
+            "href": "music.html",
+            "path": "/music.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "视频欣赏",
+            "href": "video.html",
+            "path": "/video.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "艺术画廊",
+            "href": "gallery.html",
+            "path": "/gallery.html",
+            "origin": "http://127.0.0.1:8000"
+          },
+          {
+            "label": "AI戏韵工坊",
+            "href": "about.html#ai-workshop",
+            "path": "/about.html",
+            "origin": "http://127.0.0.1:8000"
+          }
+        ],
+        "stylesheets": [
+          {
+            "path": "/css/style.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/ai-workshop.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/ai-workshop-history.css",
+            "loaded": true
+          },
+          {
+            "path": "/css/ai-workshop-demo.css",
+            "loaded": true
+          }
+        ],
+        "scripts": [
+          {
+            "path": "/js/ai-workshop/main.js",
+            "type": "module"
+          }
+        ],
+        "media": [],
+        "brokenImages": [],
+        "imageCount": 0,
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "workshopPresent": true
+      },
+      "navToggleNotApplicable": "Desktop uses the visible navigation; the collapsible trigger is intentionally hidden.",
+      "screenshot": "390x844-about.png",
+      "mediaProbes": [],
+      "expectedMediaCancellations": [],
+      "blockingFailedResources": [],
+      "assertions": {
+        "http200": true,
+        "meaningfulContent": true,
+        "exactEightLocalNavigationLinks": true,
+        "stylesheetsLoaded": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBlockingJavascriptErrors": true,
+        "noConsoleErrors": true,
+        "noHttpErrors": true,
+        "noBlockingFailedResources": true,
+        "mediaMetadataAndFilesAvailable": true,
+        "noWriteOrExternalRequests": true,
+        "navOpenCloseWorks": true,
+        "workshopIfExpected": true
+      },
+      "finishedAt": "2026-10-20T12:49:47.783Z",
+      "elapsedMs": 664
+    }
+  ],
+  "paidRequests": 0,
+  "supplierRequests": 0,
+  "physicalMobile": "NOT_TESTED",
+  "serviceWorkers": "blocked",
+  "chromeVersion": "155.0.8059.85",
+  "nodeVersion": "v24.19.0",
+  "finishedAt": "2026-10-20T12:49:47.918Z",
+  "passed": 24,
+  "failed": 0,
+  "skipped": 0,
+  "expectedCases": 24,
+  "blockedWrites": 0,
+  "blockedExternal": 0,
+  "status": "PASS"
+}

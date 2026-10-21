@@ -1,0 +1,460 @@
+{
+  "at": "2026-10-21T12:16:01.843246+00:00",
+  "scope": "REAL_LOCAL_HTTP_NO_PAID_PROVIDERS",
+  "port": 8000,
+  "checks": [
+    {
+      "name": "health_local_knowledge",
+      "path": "/api/v1/health",
+      "method": "GET",
+      "status": "PASS",
+      "httpStatus": 200,
+      "elapsedSeconds": 0.01463,
+      "responseKeys": [
+        "status",
+        "knowledge",
+        "embedding",
+        "llmConfigured",
+        "llmVerified",
+        "diagnostic",
+        "documents",
+        "chunks",
+        "budget",
+        "agents"
+      ],
+      "errorCode": null
+    },
+    {
+      "name": "capabilities_creation_closed",
+      "path": "/api/v1/capabilities",
+      "method": "GET",
+      "status": "PASS",
+      "httpStatus": 200,
+      "elapsedSeconds": 0.00393,
+      "responseKeys": [
+        "questionAnswering",
+        "knowledgeSearch",
+        "agentWorkflow",
+        "conceptImage",
+        "imageToModel",
+        "assetManagement",
+        "modelViewer",
+        "checkedAt"
+      ],
+      "errorCode": null
+    },
+    {
+      "name": "sources",
+      "path": "/api/v1/knowledge/sources",
+      "method": "GET",
+      "status": "PASS",
+      "httpStatus": 200,
+      "elapsedSeconds": 0.00328,
+      "responseKeys": [
+        "sources"
+      ],
+      "errorCode": null
+    },
+    {
+      "name": "real_cpu_vector_search",
+      "path": "/api/v1/knowledge/search",
+      "method": "POST",
+      "status": "PASS",
+      "httpStatus": 200,
+      "elapsedSeconds": 0.05618,
+      "responseKeys": [
+        "question",
+        "evidence",
+        "uncertain",
+        "retrievalMode",
+        "matchedEntities",
+        "elapsedSeconds",
+        "threshold",
+        "candidateScores",
+        "requestId"
+      ],
+      "errorCode": null
+    },
+    {
+      "name": "invalid_empty_search",
+      "path": "/api/v1/knowledge/search",
+      "method": "POST",
+      "status": "PASS",
+      "httpStatus": 422,
+      "elapsedSeconds": 0.00263,
+      "responseKeys": [
+        "error",
+        "requestId"
+      ],
+      "errorCode": "INVALID_REQUEST"
+    },
+    {
+      "name": "invalid_long_search",
+      "path": "/api/v1/knowledge/search",
+      "method": "POST",
+      "status": "PASS",
+      "httpStatus": 422,
+      "elapsedSeconds": 0.02805,
+      "responseKeys": [
+        "error",
+        "requestId"
+      ],
+      "errorCode": "INVALID_REQUEST"
+    },
+    {
+      "name": "history_page_one",
+      "path": "/api/v1/agent/history?page=1&pageSize=10",
+      "method": "GET",
+      "status": "PASS",
+      "httpStatus": 200,
+      "elapsedSeconds": 0.0203,
+      "responseKeys": [
+        "items",
+        "page",
+        "pageSize",
+        "total",
+        "totalPages",
+        "availableStates",
+        "availableTaskTypes",
+        "source",
+        "requestId"
+      ],
+      "errorCode": null
+    },
+    {
+      "name": "history_page_two",
+      "path": "/api/v1/agent/history?page=2&pageSize=10",
+      "method": "GET",
+      "status": "PASS",
+      "httpStatus": 200,
+      "elapsedSeconds": 0.00964,
+      "responseKeys": [
+        "items",
+        "page",
+        "pageSize",
+        "total",
+        "totalPages",
+        "availableStates",
+        "availableTaskTypes",
+        "source",
+        "requestId"
+      ],
+      "errorCode": null
+    },
+    {
+      "name": "history_completed_filter",
+      "path": "/api/v1/agent/history?state=completed&page=1&pageSize=10",
+      "method": "GET",
+      "status": "PASS",
+      "httpStatus": 200,
+      "elapsedSeconds": 0.0055,
+      "responseKeys": [
+        "items",
+        "page",
+        "pageSize",
+        "total",
+        "totalPages",
+        "availableStates",
+        "availableTaskTypes",
+        "source",
+        "requestId"
+      ],
+      "errorCode": null
+    },
+    {
+      "name": "saved_formal_role_details",
+      "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "method": "GET",
+      "status": "PASS",
+      "httpStatus": 200,
+      "elapsedSeconds": 0.03363,
+      "responseKeys": [
+        "task",
+        "brief",
+        "agents",
+        "result",
+        "citations",
+        "culturalReview",
+        "humanConfirmation",
+        "events",
+        "eventPage",
+        "eventPageSize",
+        "eventTotal",
+        "eventTotalPages",
+        "assets",
+        "assetAssociationStatus",
+        "missingFields",
+        "source",
+        "snapshotAt",
+        "requestId"
+      ],
+      "errorCode": null
+    },
+    {
+      "name": "missing_history_404",
+      "path": "/api/v1/agent/history/00000000-0000-4000-8000-000000000001",
+      "method": "GET",
+      "status": "PASS",
+      "httpStatus": 404,
+      "elapsedSeconds": 0.00378,
+      "responseKeys": [
+        "error",
+        "requestId"
+      ],
+      "errorCode": "AGENT_TASK_NOT_FOUND"
+    },
+    {
+      "name": "global_ledger",
+      "path": "/api/v1/assets/usage",
+      "method": "GET",
+      "status": "PASS",
+      "httpStatus": 200,
+      "elapsedSeconds": 0.00309,
+      "responseKeys": [
+        "projectId",
+        "policyVersion",
+        "max_creation_attempts",
+        "max_models",
+        "modelCount",
+        "historicalUsageVerified",
+        "historical_used_attempts",
+        "used_attempts",
+        "reserved_attempts",
+        "occupied_attempts",
+        "remaining_attempts",
+        "attemptStates",
+        "creationHalted",
+        "haltCode",
+        "automaticGenerationRetry",
+        "creationPaused",
+        "pauseCode",
+        "unreconciled_attempts",
+        "realHttpRequests",
+        "mockHttpRequests",
+        "recordedActualCredits",
+        "max_calls",
+        "used_calls",
+        "remaining_calls",
+        "history_verified",
+        "realEnabled",
+        "providerConfigured",
+        "protocolVerified",
+        "readiness",
+        "imageGenerationConfigured",
+        "requestId"
+      ],
+      "errorCode": null
+    },
+    {
+      "name": "protected_backend",
+      "path": "/backend/app/main.py",
+      "method": "GET",
+      "status": "PASS",
+      "httpStatus": 404,
+      "elapsedSeconds": 0.00204,
+      "responseKeys": [
+        "error",
+        "requestId"
+      ],
+      "errorCode": "NOT_FOUND"
+    },
+    {
+      "name": "protected_configuration",
+      "path": "/.env",
+      "method": "GET",
+      "status": "PASS",
+      "httpStatus": 404,
+      "elapsedSeconds": 0.00224,
+      "responseKeys": [
+        "error",
+        "requestId"
+      ],
+      "errorCode": "NOT_FOUND"
+    }
+  ],
+  "counts": {
+    "pass": 14,
+    "fail": 0
+  },
+  "modelGenerationRequests": 0,
+  "paidApiRequests": 0,
+  "liveLlmConnectivity": "NOT_TESTED",
+  "freeSearchEvidence": {
+    "question": "京剧主要使用哪两种声腔？",
+    "evidence": [
+      {
+        "id": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+        "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+        "sourceId": "ihchina-jingju",
+        "sectionId": "ihchina-jingju-music",
+        "title": "京剧",
+        "locator": "项目正文第二段：唱腔 · 入库片段 1/1",
+        "url": "https://www.ihchina.cn/project_details/13201",
+        "excerpt": "京剧主要使用西皮和二簧声腔。\n概括而言，二簧较舒缓凝重，西皮较明快起伏；\n这是声腔特点的基础介绍，具体情绪表达仍须结合唱段。",
+        "contentKind": "original_fact_summary",
+        "category": "京剧历史",
+        "entityNames": [
+          "京剧",
+          "西皮",
+          "二簧"
+        ],
+        "vectorScore": 0.7424196534311045,
+        "keywordScore": null,
+        "entityMatchCount": 0,
+        "acceptedBy": "vector_threshold",
+        "rank": 1,
+        "reviewStatus": "source_checked_by_assistant"
+      },
+      {
+        "id": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+        "chunkId": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+        "sourceId": "ihchina-jingju",
+        "sectionId": "ihchina-jingju-accompaniment",
+        "title": "京剧",
+        "locator": "项目正文第二段：伴奏 · 入库片段 1/1",
+        "url": "https://www.ihchina.cn/project_details/13201",
+        "excerpt": "京剧伴奏分文场、武场。\n文场以京胡等丝竹乐器为主，武场以鼓板以及大小锣等打击乐器为主；\n两类伴奏共同服务舞台表演。",
+        "contentKind": "original_fact_summary",
+        "category": "京剧历史",
+        "entityNames": [
+          "京剧",
+          "文场",
+          "武场",
+          "京胡",
+          "鼓板",
+          "小锣",
+          "大锣"
+        ],
+        "vectorScore": 0.6541868959259725,
+        "keywordScore": null,
+        "entityMatchCount": 0,
+        "acceptedBy": "vector_threshold",
+        "rank": 2,
+        "reviewStatus": "source_checked_by_assistant"
+      },
+      {
+        "id": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+        "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+        "sourceId": "ihchina-jingju",
+        "sectionId": "ihchina-jingju-history",
+        "title": "京剧",
+        "locator": "项目正文第一段 · 入库片段 1/1",
+        "url": "https://www.ihchina.cn/project_details/13201",
+        "excerpt": "京剧形成于清代的剧种交流过程。\n三庆、四喜、春台、和春徽班进京后，与汉调艺人合作，并吸收昆曲、秦腔等艺术因素。\n徽班进京是发展节点，不能等同于一日完成剧种形成。",
+        "contentKind": "original_fact_summary",
+        "category": "京剧历史",
+        "entityNames": [
+          "京剧",
+          "三庆",
+          "四喜",
+          "春台",
+          "和春",
+          "汉调",
+          "昆曲",
+          "秦腔"
+        ],
+        "vectorScore": 0.6163966328668183,
+        "keywordScore": null,
+        "entityMatchCount": 0,
+        "acceptedBy": "vector_threshold",
+        "rank": 3,
+        "reviewStatus": "source_checked_by_assistant"
+      },
+      {
+        "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+        "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+        "sourceId": "fujian-roles",
+        "sectionId": "fujian-roles-system",
+        "title": "京剧的行当分类是什么？",
+        "locator": "正文第一段及末段 · 入库片段 1/1",
+        "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+        "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+        "contentKind": "original_fact_summary",
+        "category": "京剧行当",
+        "entityNames": [
+          "京剧",
+          "行当",
+          "生",
+          "旦",
+          "净",
+          "丑",
+          "唱念做打"
+        ],
+        "vectorScore": 0.5751532586331203,
+        "keywordScore": null,
+        "entityMatchCount": 0,
+        "acceptedBy": "vector_threshold",
+        "rank": 4,
+        "reviewStatus": "source_checked_by_assistant"
+      }
+    ],
+    "uncertain": false,
+    "retrievalMode": "hybrid",
+    "matchedEntities": [],
+    "elapsedSeconds": 0.051,
+    "threshold": 0.57,
+    "candidateScores": [
+      {
+        "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+        "score": 0.7424196534311045
+      },
+      {
+        "chunkId": "chunk_c42e1bc513a6fb8cc2d03373a4cc724600cdd8be51ca07e02f2c54b29a5815a9",
+        "score": 0.6541868959259725
+      },
+      {
+        "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+        "score": 0.6163966328668183
+      },
+      {
+        "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+        "score": 0.5751532586331203
+      },
+      {
+        "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+        "score": 0.5628836978954868
+      },
+      {
+        "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+        "score": 0.5316415574030198
+      },
+      {
+        "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+        "score": 0.5302106633353041
+      },
+      {
+        "chunkId": "chunk_eba2a0b8b78f35deb139ca978314152ee74e3c66b9ec7bcc2b66c8d3377e41b2",
+        "score": 0.5245151880605294
+      },
+      {
+        "chunkId": "chunk_ef3abbfbfcbac0f86d4f47955bf29bba01eb214a76fe47c155efcbba3859945c",
+        "score": 0.48477852766537666
+      },
+      {
+        "chunkId": "chunk_20620832fe3d9595b1e167fa586a06d2a3319cff1d703acb00709a674645a517",
+        "score": 0.48295179400368166
+      }
+    ],
+    "requestId": "03eae418-ef0e-42cf-b496-dabc4bf6057c"
+  },
+  "savedHistoryResponseKeys": [
+    "task",
+    "brief",
+    "agents",
+    "result",
+    "citations",
+    "culturalReview",
+    "humanConfirmation",
+    "events",
+    "eventPage",
+    "eventPageSize",
+    "eventTotal",
+    "eventTotalPages",
+    "assets",
+    "assetAssociationStatus",
+    "missingFields",
+    "source",
+    "snapshotAt",
+    "requestId"
+  ]
+}

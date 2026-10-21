@@ -1,0 +1,69 @@
+{
+  "kind": "WP4_FRESH_OFFLINE_FRONTEND_REGRESSION",
+  "pythonVersion": "3.11.1",
+  "nodeVersion": "v24.19.0",
+  "records": [
+    {
+      "suite": "qa",
+      "status": "PASS",
+      "passed": 25,
+      "failed": 0,
+      "elapsedMilliseconds": 452,
+      "durationSource": "PowerShell Stopwatch around original executed Node process",
+      "evidenceFile": "qa.json",
+      "sha256": "51593F1948981290539DF1CC6919BCB05CD14A76A5C5707CB721E0CBC48EAC04",
+      "realProviderCalls": 0,
+      "scope": "Explicit DOM/Fetch doubles and static checks; not real browser/model/provider proof"
+    },
+    {
+      "suite": "agents",
+      "status": "PASS",
+      "passed": 25,
+      "failed": 0,
+      "elapsedMilliseconds": 130,
+      "durationSource": "PowerShell Stopwatch around original executed Node process",
+      "evidenceFile": "agents.json",
+      "sha256": "E7F47073F210F935FA98CB4093E4F63C9B92A3D462377FDEF830F7679B5035CC",
+      "realProviderCalls": 0,
+      "scope": "Explicit DOM/Fetch doubles and static checks; not real browser/model/provider proof"
+    },
+    {
+      "suite": "history",
+      "status": "PASS",
+      "passed": 34,
+      "failed": 0,
+      "elapsedMilliseconds": 107,
+      "durationSource": "PowerShell Stopwatch around original executed Node process",
+      "evidenceFile": "history.json",
+      "sha256": "70FC7B3BD1D63D33197583DFBED40A1867DDFE893A3893AA7F98D2DF88FE28A4",
+      "realProviderCalls": 0,
+      "scope": "Explicit DOM/Fetch doubles and static checks; not real browser/model/provider proof"
+    },
+    {
+      "suite": "assets",
+      "status": "PASS",
+      "passed": 42,
+      "failed": 0,
+      "elapsedMilliseconds": 97,
+      "durationSource": "PowerShell Stopwatch around original executed Node process",
+      "evidenceFile": "assets.json",
+      "sha256": "C47AA4DCD8B19BDC6C546C4BF129691DD450E90FD7A8E1B8BDA4CD1BE54C0A5E",
+      "realProviderCalls": 0,
+      "scope": "Explicit DOM/Fetch doubles and static checks; not real browser/model/provider proof"
+    },
+    {
+      "suite": "demo",
+      "status": "PASS",
+      "passed": 34,
+      "failed": 0,
+      "elapsedMilliseconds": 84,
+      "durationSource": "PowerShell Stopwatch around original executed Node process",
+      "evidenceFile": "demo.json",
+      "sha256": "A371F9FEB3FB26403AA0DEC47D4D523EB11E4BC15D33DED7F85E8B4D10C7677A",
+      "realProviderCalls": 0,
+      "scope": "Explicit DOM/Fetch doubles and static checks; not real browser/model/provider proof"
+    }
+  ],
+  "sourceEdits": 0,
+  "dependencyInstalls": 0
+}

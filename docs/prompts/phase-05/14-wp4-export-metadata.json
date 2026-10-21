@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-21T12:19:30.600647+00:00",
+  "attachmentBytes": 22760,
+  "attachmentSha256": "46d6a3c3ee3d8aa7680c3e45ef1ef9ff53dd1bf5f8f11744d49ef35a252410e0",
+  "copiedAttachmentByteIdentical": true,
+  "sourceSnapshotSha256": "c44a04954d978a93127348d1f3756adfe5b4a7d577bad297bdca7a40875bd95c",
+  "sourceStartLine": 13315,
+  "sourceSnapshotLineCount": 13885,
+  "sourcePartialLastLineOmitted": false,
+  "publicRecordCount": 111,
+  "publicSnapshotSha256": "bcf25cea4aa40c7563e8edc4fb3d63b3c87df5b503e515c85e983d01722b866f",
+  "filteredCollaborationCallCount": 11,
+  "skippedPrivateRecordCounts": {
+    "event_msg": 238,
+    "token_usage_record": 60,
+    "world_state": 5,
+    "reasoning": 62,
+    "inter_agent_communication_metadata": 35,
+    "agent_message": 35,
+    "turn_context": 1,
+    "private_message": 2
+  },
+  "sourceIdentityPublished": false,
+  "hiddenReasoningExported": false,
+  "scope": "WP4 exact attachment plus public snapshot only; later report/commit/final response after this snapshot are not claimed included."
+}

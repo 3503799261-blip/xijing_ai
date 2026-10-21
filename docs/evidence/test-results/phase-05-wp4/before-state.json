@@ -1,0 +1,1911 @@
+{
+  "checkedAtUtc": "2026-10-20T12:33:51.439413+00:00",
+  "clientDate": "2026-10-20",
+  "kind": "WP4_READ_ONLY_COMPLETE_BUSINESS_INVARIANTS",
+  "credentialFilesRead": false,
+  "appImported": false,
+  "httpRequests": 0,
+  "productionWrites": 0,
+  "databases": {
+    "agents": {
+      "relativeRuntimeDatabase": "xijing-ai/agent-tasks.sqlite3",
+      "tables": {
+        "agent_artifacts": {
+          "count": 59,
+          "canonicalSha256": "b89cc38db598d96d606600f8a8a17db28382e4bfcd2bbeec63a9c331dc399b26",
+          "schemaSha256": "8628b2ac22cc5c07d16a3656d7272eddf62493ba74a415f926b191364c0f566f",
+          "columns": [
+            "task_id",
+            "agent_id",
+            "version",
+            "content_json",
+            "content_hash",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "task_id",
+            "agent_id",
+            "version"
+          ]
+        },
+        "agent_events": {
+          "count": 194,
+          "canonicalSha256": "5d0dce9e1d9061f4999636705c820ae4b95f7045947b8880e637c34f92821d68",
+          "schemaSha256": "d9aa4894dea210d16b750bdc9ba103230a2e383915c2e9e15ea5dff1859d4b37",
+          "columns": [
+            "task_id",
+            "sequence",
+            "payload_json"
+          ],
+          "primaryKeyColumns": [
+            "task_id",
+            "sequence"
+          ]
+        },
+        "agent_steps": {
+          "count": 88,
+          "canonicalSha256": "7a311605a4f640e4baddda826afdf6c60467d7b697e375818d1b2e158b6d5b19",
+          "schemaSha256": "e1be5eea27bbad12d72234f151f31ff8d7d5c101d248a5783f45a2d5460f7a29",
+          "columns": [
+            "task_id",
+            "agent_id",
+            "state",
+            "summary",
+            "started_at",
+            "finished_at",
+            "error_code"
+          ],
+          "primaryKeyColumns": [
+            "task_id",
+            "agent_id"
+          ]
+        },
+        "agent_tasks": {
+          "count": 22,
+          "canonicalSha256": "8e5dc92743b968de5436c48e439a56649b6bbc73b6307be531cba9f11fc159bb",
+          "schemaSha256": "c8de06926ece4dee8830ce78d5cd0b934ee95126afad9cf8440e4f3ac80eae4c",
+          "columns": [
+            "task_id",
+            "idempotency_key",
+            "signature",
+            "brief_json",
+            "state",
+            "sequence",
+            "current_agent",
+            "confirmation_json",
+            "result_json",
+            "cancel_requested",
+            "created_at",
+            "updated_at"
+          ],
+          "primaryKeyColumns": [
+            "task_id"
+          ]
+        }
+      },
+      "databaseCanonicalSha256": "7c6e7deb90a252f2f1f4e363b63a7ccaab2f7c3bcb6a7392cff5eae5b194725e",
+      "mode": "ro",
+      "queryOnly": true
+    },
+    "catalog": {
+      "relativeRuntimeDatabase": "xijing-ai/assets/catalog.sqlite3",
+      "tables": {
+        "asset_images": {
+          "count": 1,
+          "canonicalSha256": "349bc59ec5cc0ecede47da576bc12cffc1ba64f591ce859deec067805712bc91",
+          "schemaSha256": "0ce983c09fd876bd5c392d4cceb04e929464d3ac4644a3c289fb363454041e1d",
+          "columns": [
+            "image_id",
+            "asset_id",
+            "content_json",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "image_id"
+          ]
+        },
+        "asset_models": {
+          "count": 4,
+          "canonicalSha256": "957e63e6dffaac3c82c22fbf5065a9736330983a3719744cbe43ccfefa3c5cf0",
+          "schemaSha256": "dfb48cf75761e7fb6dc9964be206ed5ff0fafb66a98b0e2ea8dd226b8a504a37",
+          "columns": [
+            "model_id",
+            "asset_id",
+            "content_json",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "model_id"
+          ]
+        },
+        "character_assets": {
+          "count": 3,
+          "canonicalSha256": "5f14b68b257744eb13acf70527faeefcd083e7bb14e13f0c216ac2d50aab6573",
+          "schemaSha256": "eb69f2fc0be24c76f3d5f7ce1623e4f93815024b0cbc739959c334c2736a25d6",
+          "columns": [
+            "asset_id",
+            "signature",
+            "content_json",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "asset_id"
+          ]
+        },
+        "concept_candidates": {
+          "count": 3,
+          "canonicalSha256": "4b258b61ff72431cceadd2e8a5731fcadfa619cd2745bd1e006e0a50942aaf3b",
+          "schemaSha256": "d7a27a702fafbdb89d471493dbde1c660bb416bea7fd29101e928fe12e4efb32",
+          "columns": [
+            "candidate_id",
+            "scope",
+            "version",
+            "signature",
+            "content_json",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "candidate_id"
+          ]
+        },
+        "neural4d_frozen_approvals": {
+          "count": 2,
+          "canonicalSha256": "b02bbbe0b5698a6f779bb979b86a9f4d2688cc21e1fd19bf11f1ac867b5dc3ec",
+          "schemaSha256": "e9be2ac9a6c97d565fb329bd3a3fdc2e37288a841f329804de83573dec675c6a",
+          "columns": [
+            "approval_id",
+            "payload_json"
+          ],
+          "primaryKeyColumns": [
+            "approval_id"
+          ]
+        },
+        "neural4d_query_limits": {
+          "count": 2,
+          "canonicalSha256": "675a8f043a701aeddc0e177ee8de3a9464ed887e1e782ac7ca801f90504430ad",
+          "schemaSha256": "17735dd7f91f2b4033ccaad01f4d286187b18a73b8bcdd637d568e3388580bef",
+          "columns": [
+            "job_id",
+            "last_query",
+            "series_start",
+            "series_count",
+            "total_count"
+          ],
+          "primaryKeyColumns": [
+            "job_id"
+          ]
+        }
+      },
+      "databaseCanonicalSha256": "6cd781985de61c2b330bc0a24abe7ea170addf989603d0599873b810e097a962",
+      "mode": "ro",
+      "queryOnly": true
+    },
+    "neural4dUsage": {
+      "relativeRuntimeDatabase": "neural4d-usage.sqlite3",
+      "tables": {
+        "neural4d_attempt_events": {
+          "count": 17,
+          "canonicalSha256": "428facec2ab2738f5fec62b85158fb5902d74beae1b1aa88d58fb7e7d703c7ed",
+          "schemaSha256": "ba24a59834e969ec324193e08aa14a66d716cbd2ce05407201f7c3f645222b0c",
+          "columns": [
+            "sequence",
+            "attempt_id",
+            "state",
+            "recorded_at",
+            "provider_task_id",
+            "error_code",
+            "http_status"
+          ],
+          "primaryKeyColumns": [
+            "sequence"
+          ]
+        },
+        "neural4d_creation_attempts": {
+          "count": 2,
+          "canonicalSha256": "3aa7bcdf3f30e797670b3f64beb482fa59a7de4c67e17bfd7f93027507feaca8",
+          "schemaSha256": "fd4817045bbad4af30ad9b425479204ec3cdd214f7d79f34962f9c85baa076cb",
+          "columns": [
+            "attempt_id",
+            "project_id",
+            "idempotency_key",
+            "approval_id",
+            "payload_hash",
+            "payload_json",
+            "purpose",
+            "estimated_credits",
+            "state",
+            "reserved_at",
+            "started_at",
+            "updated_at",
+            "provider_task_id",
+            "error_code",
+            "http_status"
+          ],
+          "primaryKeyColumns": [
+            "attempt_id"
+          ]
+        },
+        "neural4d_model_approvals": {
+          "count": 2,
+          "canonicalSha256": "276bb538d4a72c2de34d12837adb5b49b8ccdd2569bfb2ac1893face3affe701",
+          "schemaSha256": "0671019a48a9cc825cf540d45b6a3f944744594994e93e3129c1953e47d18529",
+          "columns": [
+            "approval_id",
+            "payload_hash",
+            "purpose",
+            "estimated_credits",
+            "confirmed_at",
+            "expires_at",
+            "consumed_attempt_id"
+          ],
+          "primaryKeyColumns": [
+            "approval_id"
+          ]
+        },
+        "neural4d_operational_requests": {
+          "count": 18,
+          "canonicalSha256": "6bb8a39fe23942d6cbca6f35748da0dc0fd9957ed3435e345e5859639793c487",
+          "schemaSha256": "7902936be9ade38d1c4452233184743afefbef961a16c329ccf5baf480f89fa9",
+          "columns": [
+            "request_id",
+            "operation",
+            "attempt_id",
+            "is_mock",
+            "recorded_at",
+            "http_status",
+            "duration_ms",
+            "actual_credits",
+            "error_code"
+          ],
+          "primaryKeyColumns": [
+            "request_id"
+          ]
+        },
+        "neural4d_usage_policy": {
+          "count": 1,
+          "canonicalSha256": "b355fd10cb861dca9765e1a36180e25f484217eb7390d830ad66655aa6bd00d2",
+          "schemaSha256": "334031efcea910887f888a8a23a69dfca3baca520529292adfee25213626aa9d",
+          "columns": [
+            "project_id",
+            "policy_version",
+            "max_attempts",
+            "historical_used",
+            "historical_note",
+            "historical_verified_at",
+            "creation_halted",
+            "halt_code",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "project_id"
+          ]
+        }
+      },
+      "databaseCanonicalSha256": "35e980b5c6c3b0fdeeb1ffa9e44fe068a63ecb768670b787a713208438fd81ad",
+      "mode": "ro",
+      "queryOnly": true
+    },
+    "llmBudget": {
+      "relativeRuntimeDatabase": "xijing-ai/api-budget.sqlite3",
+      "tables": {
+        "budget_scopes": {
+          "count": 1,
+          "canonicalSha256": "8dfedfcd2fd8edb350b440f6a42d4646de2a816b087c030575199bd650b72cbf",
+          "schemaSha256": "1078f71d5b895291e2ec3fdd6d29de631d30aed6c2b5e07ad2cd2cfe98f3ca4d",
+          "columns": [
+            "name",
+            "budget_cny",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "name"
+          ]
+        },
+        "call_scopes": {
+          "count": 45,
+          "canonicalSha256": "d432efe76c0512621083ee4639f74066cc61711b74de2d62459a2955e6870fd6",
+          "schemaSha256": "3b2e4b06a6f3d685f94d50a5db24f4c3aecbeab00268b9d520387c728de0327c",
+          "columns": [
+            "request_id",
+            "scope"
+          ],
+          "primaryKeyColumns": [
+            "request_id"
+          ]
+        },
+        "calls": {
+          "count": 107,
+          "canonicalSha256": "aab8e166afdd459ea14ec5b95a3aba2f9d2c854b59f66cd3f652a95fe7b53143",
+          "schemaSha256": "38be5703cf90a8a57068f3895e8a3c8367d26f919c1ca3e7eaab29db8b028ca5",
+          "columns": [
+            "request_id",
+            "created_at",
+            "status",
+            "reserved",
+            "cost",
+            "usage_json"
+          ],
+          "primaryKeyColumns": [
+            "request_id"
+          ]
+        }
+      },
+      "databaseCanonicalSha256": "0c6b22855dd34c85a3ffb7a208b8838daa7376aa55373be8464f63d90cad1617",
+      "mode": "ro",
+      "queryOnly": true
+    }
+  },
+  "tasks": [
+    {
+      "taskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "state": "completed",
+      "sequence": 12,
+      "createdAt": "2026-10-11T05:51:58.347908+00:00",
+      "updatedAt": "2026-10-11T05:54:18.901780+00:00",
+      "briefSha256": "b9bd4976b043eb9e9cb847fcc26ae33d50246a3c289cc6a492ad4ec155e40d88",
+      "confirmationSha256": "3a75ae5eeb045c47ff68a9b2a9904155a4d0f8a665ab71756c2b0cc0b2bbde48",
+      "resultSha256": "7dd802e39912545aad533eba8b6da3649b19214867c9fd402890aa4b9769e8e3",
+      "designSha256": "c7054169b601082afcb0002f1840f16e40a3b1eb1c8b5dac03193c2f394deec3",
+      "reviewSha256": "e82f4d2cc15dc2f46ee40a404b2e4378a6f4609e0351f14983214ad3f44b72f5",
+      "citationsSha256": "f8d905a650b2e6f5faae3a76336bd2942640a0fe299dda88f6a9577fc56d3029",
+      "reviewVerdict": "pass",
+      "userConfirmed": true,
+      "publicationAllowed": true,
+      "artifactCount": 4,
+      "eventCount": 12,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:51:59.614262+00:00",
+          "finishedAt": "2026-10-11T05:52:01.520460+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:51:58.362240+00:00",
+          "finishedAt": "2026-10-11T05:51:59.560892+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:51:59.565399+00:00",
+          "finishedAt": "2026-10-11T05:51:59.607712+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:52:01.525973+00:00",
+          "finishedAt": "2026-10-11T05:52:02.331440+00:00",
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "f7a422f8f9801398a842908b79fb3180d9cc0df62a8dffa3fb109baa20e51fa1",
+      "artifactsSha256": "47aaa6ea20f4a5e16a46044df389a903d2be2bf9db73fc6ab2fbc41e5487e11e",
+      "eventsSha256": "7ed219836b0f44eca9e1d9405f80f856d0af5ee4bfb8057648332d3099b28369",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": []
+    },
+    {
+      "taskId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "state": "awaiting_confirmation",
+      "sequence": 11,
+      "createdAt": "2026-10-11T06:17:44.908601+00:00",
+      "updatedAt": "2026-10-11T06:17:49.325983+00:00",
+      "briefSha256": "1a0ca544545600ec953f63c9d269b4d1b0299b9fa347c1a494d8f031886eecdb",
+      "confirmationSha256": "f81fd4968b086cb963cb21d54dda9ceefcc352abcefe1ac414892cc93375f74e",
+      "resultSha256": "af2e9829b9bc7db29c11d28d0d8ce7d36a923112aad715eeed48b7bc187a7057",
+      "designSha256": "2a80c35fbeed05b35bc54838406d127a21ef3ea949a0050b67c76be2983520dc",
+      "reviewSha256": "5b580aa61be25b5e73cbccabd5318fc90e31c3c575be89e06647ac85b5c30527",
+      "citationsSha256": "1fbb4d6b88f66c6e2bfaaca127d1e1839156155d9006102570379da66a4e2c60",
+      "reviewVerdict": "pass",
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 4,
+      "eventCount": 11,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:17:46.103208+00:00",
+          "finishedAt": "2026-10-11T06:17:48.239325+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:17:44.918648+00:00",
+          "finishedAt": "2026-10-11T06:17:46.059725+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:17:46.063524+00:00",
+          "finishedAt": "2026-10-11T06:17:46.097634+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:17:48.244417+00:00",
+          "finishedAt": "2026-10-11T06:17:49.321319+00:00",
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "38e5c59115737a0db1ab7448c0f25a71b7ce65fe37902726cc57b2fb5ab755e1",
+      "artifactsSha256": "a5c440a267e32d652e0b7a45cbb7b7e8f3dca50588b449e78b89aa49371534c8",
+      "eventsSha256": "f8344797c52f2c1847398170889b4c9ed0b987e0720d176b82087602cd1af415",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+      "state": "cancelled",
+      "sequence": 12,
+      "createdAt": "2026-10-11T05:47:04.356780+00:00",
+      "updatedAt": "2026-10-11T06:08:01.976565+00:00",
+      "briefSha256": "4ad408447ade08e9fe3b833370eb668fbbb43f9a31293f97a857bad71105fad6",
+      "confirmationSha256": "0318d0b68968e57c723d02e83d2264a041815373dc9abde12a1876a42de33041",
+      "resultSha256": "b730951bc7f14f9bb298864d172736f371a8265a383c1a0204bb0b145cb5b1a9",
+      "designSha256": "8adf93218c4603aeed5e80eb48919e68e29644538e12aebfb6b0c27ee79e1ed6",
+      "reviewSha256": "008c1979507dfb9d2ff5b6baa1f6015567bd2ea14b42b22fe2f4ba1031cc2de4",
+      "citationsSha256": "617878e80b2e53f7c5f6553800caaf1879a92d9927913798b986f807dd3c79c3",
+      "reviewVerdict": "pass",
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 4,
+      "eventCount": 12,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:47:05.717231+00:00",
+          "finishedAt": "2026-10-11T05:47:07.931489+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:47:04.367532+00:00",
+          "finishedAt": "2026-10-11T05:47:05.667308+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:47:05.671656+00:00",
+          "finishedAt": "2026-10-11T05:47:05.709798+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:47:07.935990+00:00",
+          "finishedAt": "2026-10-11T05:47:08.846015+00:00",
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "91360b323966a7986e5e304ac74f0cd5cd10c603d769f746453aab1073e78c05",
+      "artifactsSha256": "9e9e28d83b34f4063db66790d47933579a42a1c4f264771e0010681a58eecf87",
+      "eventsSha256": "a031a091741bfe289185c9e78af6ef9b0bf3c727e7e2a13e8e6fceb5b4665fa9",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "174e97bf-4df1-4970-83e0-108afc81ec73",
+      "state": "awaiting_confirmation",
+      "sequence": 11,
+      "createdAt": "2026-10-11T06:21:35.838270+00:00",
+      "updatedAt": "2026-10-11T06:21:40.143494+00:00",
+      "briefSha256": "665bf4842e24d23d51a85e33d0c24d5fd554364cfbd0b63880c2f807bee04d1b",
+      "confirmationSha256": "a6ac6e87f135ed4a26559b8b0c93c4e5cd4b1f18a2679d341e7222c7001f6647",
+      "resultSha256": "5d2817142ddb455941fba9d2b1cff0d5925bfa9e3de9e2de2edb1f1115d682a3",
+      "designSha256": "ffb9bfde183b60f83d8aec69c791d73384fa8ec0655a690cb233a4513395606d",
+      "reviewSha256": "15d38b2a905091c2429e4c9526f1db2e6f40a2cf7d9935a5ae35d6c986a68df2",
+      "citationsSha256": "1fbb4d6b88f66c6e2bfaaca127d1e1839156155d9006102570379da66a4e2c60",
+      "reviewVerdict": "pass",
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 4,
+      "eventCount": 11,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:21:37.191791+00:00",
+          "finishedAt": "2026-10-11T06:21:39.336737+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:21:35.851925+00:00",
+          "finishedAt": "2026-10-11T06:21:37.146250+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:21:37.150193+00:00",
+          "finishedAt": "2026-10-11T06:21:37.185498+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:21:39.340934+00:00",
+          "finishedAt": "2026-10-11T06:21:40.139097+00:00",
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "022eefae99cf087cb679e0f107d58742543fffc713005b6bb463dc542fd02051",
+      "artifactsSha256": "4b7c35944ed5dbf5e4ee8a7104c6463cc6fcf84ba9ff9db2e1a09b079536642d",
+      "eventsSha256": "e53bdb949167863e594bc20dfc25c8f239cf2e7fb81b09d76153a50757506d57",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": []
+    },
+    {
+      "taskId": "1a18ff2c-93bb-47fb-8060-3de45378a721",
+      "state": "awaiting_confirmation",
+      "sequence": 11,
+      "createdAt": "2026-10-11T06:52:26.871878+00:00",
+      "updatedAt": "2026-10-11T06:52:30.891275+00:00",
+      "briefSha256": "baf545cbecea9cab82169451d05e94bf76d1529e32cfafe5d9591e36cd259f7d",
+      "confirmationSha256": "7129d4b56d82e91d1c0bd75604229a1f2a4941a67991f443a9074d000439717a",
+      "resultSha256": "620adf2f1032de3bc9ac5f102989a85f847a87e1945bf1dfbc9946a0c899c321",
+      "designSha256": "9b5bc51f63a87e3327b9f75ca8a1b90e8964a5c65330467acdc5839522e844e7",
+      "reviewSha256": "855871cd6909beb4e885fc536b26807a6f4e2efdd3d93d9036ab01ee2d52752a",
+      "citationsSha256": "7fab6eb14343fc4bc9723094fa93644c60c49c0d96b40306d91f7d99a4a255e0",
+      "reviewVerdict": "pass",
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 4,
+      "eventCount": 11,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:52:27.978821+00:00",
+          "finishedAt": "2026-10-11T06:52:29.918654+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:52:26.885162+00:00",
+          "finishedAt": "2026-10-11T06:52:27.948388+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:52:27.953177+00:00",
+          "finishedAt": "2026-10-11T06:52:27.972815+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:52:29.924655+00:00",
+          "finishedAt": "2026-10-11T06:52:30.884996+00:00",
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "01a417fc476118f28678db2fb762cb34633389576f2588093c144d819f5aeafb",
+      "artifactsSha256": "298d40f74199b0d36b88155999c5813875054b4efa2d96088d20ba99be9f41e5",
+      "eventsSha256": "5d11f44450ba8f241585319a7108d4a3e59ac4203aebb149fd980dd8ca499c0a",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": []
+    },
+    {
+      "taskId": "1b61f794-f3e8-498e-9bc3-c6f832ef6aa7",
+      "state": "failed",
+      "sequence": 5,
+      "createdAt": "2026-10-11T06:17:50.146910+00:00",
+      "updatedAt": "2026-10-11T06:17:51.346202+00:00",
+      "briefSha256": "4c5e34312adf944f94fddfb068c3c22ca14d91f6c39e280b331eb1bba89a0ef8",
+      "confirmationSha256": null,
+      "resultSha256": null,
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": null,
+      "publicationAllowed": null,
+      "artifactCount": 0,
+      "eventCount": 5,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "failed",
+          "startedAt": "2026-10-11T06:17:50.156911+00:00",
+          "finishedAt": "2026-10-11T06:17:51.341725+00:00",
+          "errorCode": "AGENT_PLAN_INVALID"
+        },
+        {
+          "agentId": "researcher",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "e160e8bd7ce00f586c0b864a6ea1ec6edb70c4c6ba5d3928d9c8cb72372ca8c2",
+      "artifactsSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "eventsSha256": "5a070f8132a155f4e79b808abbba04b8bda137d89343b17e481843e3a5b0f6be",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "25086162-e04d-4ce8-8077-913b1f4b191a",
+      "state": "awaiting_confirmation",
+      "sequence": 11,
+      "createdAt": "2026-10-11T06:17:39.665934+00:00",
+      "updatedAt": "2026-10-11T06:17:44.025729+00:00",
+      "briefSha256": "4ad408447ade08e9fe3b833370eb668fbbb43f9a31293f97a857bad71105fad6",
+      "confirmationSha256": "5d55148f1bd7fcb44bc316d82b99055af74b22e5f89de9709732b220f45e938e",
+      "resultSha256": "1ba51c795edaee186b638d64f89c930f3d9f53c4d007ce2f2555248b14746658",
+      "designSha256": "b3b3c435b1b5039d545a2ea98d33bc8f32f48de1ab61566aaeab7bf3b996f36b",
+      "reviewSha256": "6fdf242f47705121ebfdebaea3553e35a4192de38b93adb47ee3464479069285",
+      "citationsSha256": "b940d517b56632361760b5d184416393d58f174e15f0930c24b59018c7cfa71f",
+      "reviewVerdict": "pass",
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 4,
+      "eventCount": 11,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:17:40.835966+00:00",
+          "finishedAt": "2026-10-11T06:17:43.429447+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:17:39.676871+00:00",
+          "finishedAt": "2026-10-11T06:17:40.808006+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:17:40.813125+00:00",
+          "finishedAt": "2026-10-11T06:17:40.829465+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:17:43.435449+00:00",
+          "finishedAt": "2026-10-11T06:17:44.020491+00:00",
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "9de80518da43f5b9b69d5b01be9875e6d59e853ece5eab548bf939291494f757",
+      "artifactsSha256": "f4f5446f4d0ddc1ffaa4314c5ca3b3b7be0be45e051175371244fa109d2b1f7b",
+      "eventsSha256": "24d9c52549653057ee2eaa7b72dfc1dd94f784b66e7a9d2544f3589b2911e6a0",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "27e165c1-24fc-4eea-8e53-c595fbd0cce0",
+      "state": "awaiting_confirmation",
+      "sequence": 7,
+      "createdAt": "2026-10-11T06:17:37.952895+00:00",
+      "updatedAt": "2026-10-11T06:17:39.001833+00:00",
+      "briefSha256": "cd6d1108c208b750426ecc13e7e1b4ab38b26439194e765169bff530cae1ad44",
+      "confirmationSha256": "877ce416390d103ddf3ccf537b4d40ce874d9e639aab4e73f7c6e980f6ec3485",
+      "resultSha256": "eb2c7cfc1f403b5b9459042bfec7b7b7b053260580fa6afa733cd2b4c2d5547c",
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 2,
+      "eventCount": 7,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:17:37.974877+00:00",
+          "finishedAt": "2026-10-11T06:17:38.959324+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "awaiting_confirmation",
+          "startedAt": "2026-10-11T06:17:38.963724+00:00",
+          "finishedAt": "2026-10-11T06:17:38.995328+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "1e4ece74d363d9331b19a31e3dffc253acb14cb1c46426d757bbdadcb9f2b467",
+      "artifactsSha256": "62ad8492ad18525a44aa3717ab99f94d037230d03f74cf0cd4b59030a87a2ec7",
+      "eventsSha256": "d7d5bcf6ef376c860471a4cff1d252d1c5ab524024bc52f1200c2c49bc42cb40",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+      "state": "awaiting_confirmation",
+      "sequence": 7,
+      "createdAt": "2026-10-11T05:47:13.926424+00:00",
+      "updatedAt": "2026-10-11T05:47:15.067228+00:00",
+      "briefSha256": "72c68c8408bbcf2c9835b70bd97e644478d5e2d77776d9d88ab4d1248ba7ff6a",
+      "confirmationSha256": "b8b487e96e93480882a581f75a510959454152c70301603e3d90b8c5b3a40fe0",
+      "resultSha256": "bc99f9d72f2e67dc3230fcb157bab906be3874d5c3318bba4a35c4b0912c58d6",
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 2,
+      "eventCount": 7,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:47:13.938284+00:00",
+          "finishedAt": "2026-10-11T05:47:15.023504+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "awaiting_confirmation",
+          "startedAt": "2026-10-11T05:47:15.027919+00:00",
+          "finishedAt": "2026-10-11T05:47:15.059464+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "e1a5fea602938224f31c7e459070d830b56987d87bc1779b957a3a49ef55e231",
+      "artifactsSha256": "b8eab5f396f1d03b9381a0b9fe89fc5ecf62bc8069549c94e0660bc3ebd04ede",
+      "eventsSha256": "f2fcecdfe558b2be7c86948759c5adafc52563f3c9cd74a1674c1e4b0b5966d2",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+      "state": "awaiting_confirmation",
+      "sequence": 11,
+      "createdAt": "2026-10-11T06:10:04.855444+00:00",
+      "updatedAt": "2026-10-11T06:10:10.136463+00:00",
+      "briefSha256": "4ad408447ade08e9fe3b833370eb668fbbb43f9a31293f97a857bad71105fad6",
+      "confirmationSha256": "2d3ba740db8e7e8b089cc9dd6f6a6dcbfc6ec5a4e27c75e33d1d4dfc34504445",
+      "resultSha256": "91db96ff33b5439d6f07689ad9a2c3a75ab2fc0aec5dd166a3414a32a4b46f21",
+      "designSha256": "123586915eac3b0850e6432e3ce858121db877ac9885377caec468a43e9bd1e7",
+      "reviewSha256": "69ef2762f2a45e41a29540e22c54e92305f02d86352e3c613722d967f39b8ed2",
+      "citationsSha256": "aa17421eefd7d5c920a970ce8e46e1f60a9997e9cc9bde69ef0bfb47477ed691",
+      "reviewVerdict": "needs_revision",
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 4,
+      "eventCount": 11,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:10:06.063139+00:00",
+          "finishedAt": "2026-10-11T06:10:08.769564+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:10:04.865443+00:00",
+          "finishedAt": "2026-10-11T06:10:06.016515+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:10:06.020954+00:00",
+          "finishedAt": "2026-10-11T06:10:06.057139+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:10:08.775564+00:00",
+          "finishedAt": "2026-10-11T06:10:10.130316+00:00",
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "ef5c03427875b0f2556537a613bafbc7355cb31c8c121ae0d9008fa8a5db20e1",
+      "artifactsSha256": "32c06d3b8233947440860c345bd2a4eeabba12e988bfe99c901c139534cc853e",
+      "eventsSha256": "96ac4e493ad3998651ba1df84b65e2ddc476c57a58df3d8b53e67ae3973eea6b",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+      "state": "failed",
+      "sequence": 5,
+      "createdAt": "2026-10-11T06:10:02.641383+00:00",
+      "updatedAt": "2026-10-11T06:10:03.890238+00:00",
+      "briefSha256": "cd6d1108c208b750426ecc13e7e1b4ab38b26439194e765169bff530cae1ad44",
+      "confirmationSha256": null,
+      "resultSha256": null,
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": null,
+      "publicationAllowed": null,
+      "artifactCount": 0,
+      "eventCount": 5,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "failed",
+          "startedAt": "2026-10-11T06:10:02.665322+00:00",
+          "finishedAt": "2026-10-11T06:10:03.887245+00:00",
+          "errorCode": "AGENT_PLAN_INVALID"
+        },
+        {
+          "agentId": "researcher",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "8b949680fc39198a39fc272051d44745161c0219f10f7e0c1b100c88ac0acf2e",
+      "artifactsSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "eventsSha256": "76bc68effc60d9b46942f33144cba2e32d9e2ec4ef3516fc14d25021bf889b2e",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "75783c7e-d83a-4129-8e7d-5d9482df05f9",
+      "state": "cancelled",
+      "sequence": 8,
+      "createdAt": "2026-10-11T06:22:40.318946+00:00",
+      "updatedAt": "2026-10-11T06:24:30.981546+00:00",
+      "briefSha256": "dec74b6ce9c91d718d233f1e4c6c4222a85163e8c925e240fb7cf5dcf86ef211",
+      "confirmationSha256": "ab9c72bd7b03454b1e6d509786fca1788a3d5d4ecee8ee77e81bff42c23070d4",
+      "resultSha256": "407f95dc1e48fe8b9ffc69124e1a7f19afc727ce4a487a026d5e19296fc5fca5",
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 2,
+      "eventCount": 8,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:22:40.330889+00:00",
+          "finishedAt": "2026-10-11T06:22:41.810186+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "awaiting_confirmation",
+          "startedAt": "2026-10-11T06:22:41.815411+00:00",
+          "finishedAt": "2026-10-11T06:22:41.845081+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "fec067998daa7c0e16d03ed6b98fc2af273b738a4f746df2cf41985605644aea",
+      "artifactsSha256": "ec7b5e670aec8b36d4a92cf39acc72fbeadd12c36d72ac7b89dc633ac946b8a2",
+      "eventsSha256": "f311766909ececbb67f895520dfa0743c2373fdc02d8b5e04671748db5b24aed",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": []
+    },
+    {
+      "taskId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "state": "awaiting_confirmation",
+      "sequence": 11,
+      "createdAt": "2026-10-11T05:44:59.501080+00:00",
+      "updatedAt": "2026-10-11T05:45:04.746938+00:00",
+      "briefSha256": "48f889b4724c41952e8d39ba6aa8a25f07bfe9d1e7f154f072437949d83a8332",
+      "confirmationSha256": "c7504f373c318f43dcc9c42f225087f90df0d00bccf734d8df0e829cd9f40ccb",
+      "resultSha256": "529dc1578d04fb767f05c01cd2eb75a218f6c630af3e644ce678bae0cf5e2511",
+      "designSha256": "e59ab26f456135be0d33bfb8d8a87b6d424ea2942eafa2901b77c7586a2749d0",
+      "reviewSha256": "476318374ed4930dbb4ece05e62752dadf22b0075d8f0bc40a925c7f529c1044",
+      "citationsSha256": "acabb8a12c3aad03c5d61cd7350c754d877c8f1d726df58968f17e49b7417298",
+      "reviewVerdict": "pass",
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 4,
+      "eventCount": 11,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:45:01.050464+00:00",
+          "finishedAt": "2026-10-11T05:45:03.404965+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:44:59.522131+00:00",
+          "finishedAt": "2026-10-11T05:45:00.950660+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:45:00.954986+00:00",
+          "finishedAt": "2026-10-11T05:45:01.045467+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:45:03.410161+00:00",
+          "finishedAt": "2026-10-11T05:45:04.742712+00:00",
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "c3a109411b4938682d387674cf90a82d16bda3ee11b59bf7dfccf5689f0895c4",
+      "artifactsSha256": "dd1358a6b46200932556754fcfdd0a50662025266aeebe97794719a5adad2793",
+      "eventsSha256": "4948a2c7642978fec1c4b9aa393512269036a5867c7fb0600d6957a8ef48875f",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "8055928d-6279-4258-a2f5-23abeaad9308",
+      "state": "awaiting_confirmation",
+      "sequence": 11,
+      "createdAt": "2026-10-11T06:48:04.506552+00:00",
+      "updatedAt": "2026-10-11T06:48:09.796666+00:00",
+      "briefSha256": "cd6d1108c208b750426ecc13e7e1b4ab38b26439194e765169bff530cae1ad44",
+      "confirmationSha256": "d305b9821d05daad3fff71ca1d7513048b6ec89341d82d21b3e150134fbbe017",
+      "resultSha256": "ab5ce57c125614756fb2425036d5df61923d5569976de9268d46478ad16df1b5",
+      "designSha256": "4824607a9956b6d8ad186d01283c983942a3cd0b85eb0ce59958020659a54319",
+      "reviewSha256": "a8cb40d7eab1039d826a07b2740efdc238ccad36a2e30f262c3d3421d7d19f22",
+      "citationsSha256": "c25e23697a7a1fba9175d17d353dce0287ac218f6d8e13315e1b88eab14c1923",
+      "reviewVerdict": "needs_revision",
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 4,
+      "eventCount": 11,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:48:05.505134+00:00",
+          "finishedAt": "2026-10-11T06:48:08.004241+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:48:04.529283+00:00",
+          "finishedAt": "2026-10-11T06:48:05.457788+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:48:05.463169+00:00",
+          "finishedAt": "2026-10-11T06:48:05.498131+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:48:08.009355+00:00",
+          "finishedAt": "2026-10-11T06:48:09.792056+00:00",
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "3a4a6ae4ad4eb078c30587ed211b0d144c0eefdc74c33f2bc66460a3153fccc9",
+      "artifactsSha256": "b7fa216e384d04c2a5e6f745045bb90bce67c3f996f7b77b94810ade194e2847",
+      "eventsSha256": "27602f6f03b07cc8047c44ca5e9084d945523abde1ecc2b7b426cb2f34cb9293",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+      "state": "awaiting_confirmation",
+      "sequence": 7,
+      "createdAt": "2026-10-11T06:10:13.258451+00:00",
+      "updatedAt": "2026-10-11T06:10:14.268193+00:00",
+      "briefSha256": "72c68c8408bbcf2c9835b70bd97e644478d5e2d77776d9d88ab4d1248ba7ff6a",
+      "confirmationSha256": "5389c491d5724c9db3f93c710a529ba0654bdba131f11eaa6f12b55cea4aebca",
+      "resultSha256": "c76341a793af40fedec4a107ef5870e20c0728e02905917461414d6ad95849b2",
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 2,
+      "eventCount": 7,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:10:13.269852+00:00",
+          "finishedAt": "2026-10-11T06:10:14.234497+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "awaiting_confirmation",
+          "startedAt": "2026-10-11T06:10:14.238552+00:00",
+          "finishedAt": "2026-10-11T06:10:14.261841+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "39c126af86f2df0e20fdc270252556b1d81c571f2c8f41e26ff1061eb99c32f3",
+      "artifactsSha256": "ab5ab5c0a4d78d1781e8bd87c23418ac753286d98683b8d028d42fa12d1df41f",
+      "eventsSha256": "56be3945add2fe3a9f9d27ef4daef5ac9658735836f40663a319bdebf859579e",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "state": "failed",
+      "sequence": 9,
+      "createdAt": "2026-10-11T05:47:09.621380+00:00",
+      "updatedAt": "2026-10-11T05:47:12.797961+00:00",
+      "briefSha256": "94dd66070f1a96c01fb5da0434251d5c6f8a34acc62c7f7c8a662b235c276a4a",
+      "confirmationSha256": null,
+      "resultSha256": null,
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": null,
+      "publicationAllowed": null,
+      "artifactCount": 2,
+      "eventCount": 9,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "failed",
+          "startedAt": "2026-10-11T05:47:10.693311+00:00",
+          "finishedAt": "2026-10-11T05:47:12.793854+00:00",
+          "errorCode": "AGENT_DESIGN_INVALID"
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:47:09.632387+00:00",
+          "finishedAt": "2026-10-11T05:47:10.656948+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:47:10.661832+00:00",
+          "finishedAt": "2026-10-11T05:47:10.687311+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "c67a879f3f1fa276febd671af6e6b49f45d6e35a5f016ad210fdce3571465521",
+      "artifactsSha256": "d124a9e082b4c38b36646765a55a700ddda62a000fe4bc26726e5f52b40983ec",
+      "eventsSha256": "e8c4d8e43f8af556d408534a9c4b9c3c2c0d12e33cfdedbf5dd38fb967985c11",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "a2a43828-773f-4f81-8908-5ff762ced750",
+      "state": "awaiting_confirmation",
+      "sequence": 7,
+      "createdAt": "2026-10-14T14:01:36.948553+00:00",
+      "updatedAt": "2026-10-14T14:01:38.904471+00:00",
+      "briefSha256": "5d9a4af014f5e46a6b64060da4090541ce9d47ef9e8aca2a56b6440498045602",
+      "confirmationSha256": "2cdb1f6593a0ae4d3be57973c19f3b8bee37386d02ea4a6f14a2c1660c0f76b7",
+      "resultSha256": "355b1cf648026ec843d9b20e7ef773e12ed7d8ada2deac1fcf767171d70d331b",
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 2,
+      "eventCount": 7,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-14T14:01:36.991319+00:00",
+          "finishedAt": "2026-10-14T14:01:38.684085+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "awaiting_confirmation",
+          "startedAt": "2026-10-14T14:01:38.693174+00:00",
+          "finishedAt": "2026-10-14T14:01:38.886445+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "cc1ccb27707d6b7cbbd05968221d0bc03e5ce917c7eed14aa062729e1e5063f9",
+      "artifactsSha256": "d3cb5ee74ea5dfebaa7afdf93ba366a14ae83c9da02991ec864b1e8c33784f1d",
+      "eventsSha256": "94871195ce936dc50b8c6bf9b0802cdc96c7236437a2ce2d3b3a5fa1f821618d",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": []
+    },
+    {
+      "taskId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "state": "completed",
+      "sequence": 12,
+      "createdAt": "2026-10-14T14:53:29.733000+00:00",
+      "updatedAt": "2026-10-17T05:04:19.158585+00:00",
+      "briefSha256": "d2b4a8eb54e126c83bdf300ee0128b0acd6de8f4d0f2d517052d36a180537b27",
+      "confirmationSha256": "70b929b98145bdcd62911748f6a2c6d05f9cc99ac3503e65e7ca575ef48501c6",
+      "resultSha256": "bdd3c10f62eefb60d903dbc4460e6a1199a4de1bd1d536c7901d8623b1a0bd28",
+      "designSha256": "5d9a5571311ef74b68964a0081677d74592f613c0fe4c9005eb46e3b4ba9866e",
+      "reviewSha256": "0164a2b48c40471889ed5a96726ed52994620cd781f05d1e03b3a8ed44099c31",
+      "citationsSha256": "6d2cdf84e6c36b686e984da5cfc8cc311577168d4042b6617c3d80aa5fd2faa0",
+      "reviewVerdict": "pass",
+      "userConfirmed": true,
+      "publicationAllowed": true,
+      "artifactCount": 4,
+      "eventCount": 12,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "completed",
+          "startedAt": "2026-10-14T14:53:31.476039+00:00",
+          "finishedAt": "2026-10-14T14:53:33.931844+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-14T14:53:29.750995+00:00",
+          "finishedAt": "2026-10-14T14:53:31.413334+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "completed",
+          "startedAt": "2026-10-14T14:53:31.420029+00:00",
+          "finishedAt": "2026-10-14T14:53:31.463038+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "completed",
+          "startedAt": "2026-10-14T14:53:33.939795+00:00",
+          "finishedAt": "2026-10-14T14:53:34.998579+00:00",
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "ae2b8ac49436ed37b10d0c32448b70364f3993bc5c2b1cd17e124ba10427addb",
+      "artifactsSha256": "b55fce338b3a47b28738f7ba7fbc8545ecb9bad1eb5c55e308e4592e3135e1cb",
+      "eventsSha256": "f9e16a25dc8e14d7a65847238748639e5b34571ce9f18d3f364bc89aafce7368",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": []
+    },
+    {
+      "taskId": "dcd4d353-ebce-446d-a284-632be8f29736",
+      "state": "awaiting_confirmation",
+      "sequence": 7,
+      "createdAt": "2026-10-11T06:32:47.322170+00:00",
+      "updatedAt": "2026-10-11T06:32:48.497797+00:00",
+      "briefSha256": "cd6d1108c208b750426ecc13e7e1b4ab38b26439194e765169bff530cae1ad44",
+      "confirmationSha256": "1318b001d978046c3970c3ce865fc66ae36b437da233b7a7b4d34ec974f3a56a",
+      "resultSha256": "2b82dd3e470ef912c10b69d30545293d3cbb6968e3402179a000f474bbe3abce",
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 2,
+      "eventCount": 7,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:32:47.345023+00:00",
+          "finishedAt": "2026-10-11T06:32:48.464939+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "awaiting_confirmation",
+          "startedAt": "2026-10-11T06:32:48.470234+00:00",
+          "finishedAt": "2026-10-11T06:32:48.492797+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "7400189ce05c7872dcbd5f9a7b1e53183795b82460094374293edc4d31312f45",
+      "artifactsSha256": "38072060e133c29ead7db049bc694622445443a29a49d424d31355df7b3a37f3",
+      "eventsSha256": "e00cb84d3f9bfa0eb818c3dfcc420f3ca21fc29cf528b41071ea443d403bdf42",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "e9e5929f-546b-4e92-878a-6fc43e4becdf",
+      "state": "awaiting_confirmation",
+      "sequence": 5,
+      "createdAt": "2026-10-11T06:32:49.523025+00:00",
+      "updatedAt": "2026-10-11T06:32:50.662884+00:00",
+      "briefSha256": "4c5e34312adf944f94fddfb068c3c22ca14d91f6c39e280b331eb1bba89a0ef8",
+      "confirmationSha256": "e08eab28ec24a46449c554759bc8d24d54494e2ea99cb53f90fecf2455ba0eb1",
+      "resultSha256": "72ea61144088d39340f9a6837038d7ed0b4527921efbb358d125c418bfc664bc",
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 1,
+      "eventCount": 5,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "awaiting_confirmation",
+          "startedAt": "2026-10-11T06:32:49.534832+00:00",
+          "finishedAt": "2026-10-11T06:32:50.658669+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "ffbbced04d468c7fb509de3dbfad73495fe6ae47722884f14d2ec475c8c29288",
+      "artifactsSha256": "c0c6482363eb15d041fb139e7f4d6e663ee05a3f782a9e432eee1af9371b9908",
+      "eventsSha256": "f39d1a5befbcc7b1abaff6829cc957c2fa07e1f3e46d5e95e114fba535968459",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "ecf0770b-f059-492d-9028-86cbebaa66d3",
+      "state": "awaiting_confirmation",
+      "sequence": 7,
+      "createdAt": "2026-10-11T05:47:02.163460+00:00",
+      "updatedAt": "2026-10-11T05:47:03.339986+00:00",
+      "briefSha256": "cd6d1108c208b750426ecc13e7e1b4ab38b26439194e765169bff530cae1ad44",
+      "confirmationSha256": "44960d94db5a14ea6646f8c328cb904242c1f8643bc8063cd7e8ee9d7b3290dc",
+      "resultSha256": "a34ad9845a1f5872d90f6e631ce9fb7b081162d0aed80832d135d7f7aaf7c24f",
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 2,
+      "eventCount": 7,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T05:47:02.174894+00:00",
+          "finishedAt": "2026-10-11T05:47:03.292822+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "awaiting_confirmation",
+          "startedAt": "2026-10-11T05:47:03.297831+00:00",
+          "finishedAt": "2026-10-11T05:47:03.333631+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "3ae4f9978d3963a548627e07dc2d66729ddf3fa6bacbed0ec448744be4cf6790",
+      "artifactsSha256": "1f6af64d03c5880a9efd33e6507db239e9df2a1002184bfb90bd3b0c97efd18e",
+      "eventsSha256": "667511981cbcb92d895d60fa3578b1d6dcfe14f97173678655468af476750b0e",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    },
+    {
+      "taskId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+      "state": "awaiting_confirmation",
+      "sequence": 7,
+      "createdAt": "2026-10-11T06:10:11.078563+00:00",
+      "updatedAt": "2026-10-11T06:10:12.289138+00:00",
+      "briefSha256": "94dd66070f1a96c01fb5da0434251d5c6f8a34acc62c7f7c8a662b235c276a4a",
+      "confirmationSha256": "bd94daa0ee8f0e7c2a13b0f7da65119572a8507807bd3f14121f8a164e3571ce",
+      "resultSha256": "134630a213d3f245968ba9b0293b30efad1b3c192cc4edfba26c0bea67c453ad",
+      "designSha256": null,
+      "reviewSha256": null,
+      "citationsSha256": null,
+      "reviewVerdict": null,
+      "userConfirmed": false,
+      "publicationAllowed": false,
+      "artifactCount": 2,
+      "eventCount": 7,
+      "steps": [
+        {
+          "agentId": "designer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        },
+        {
+          "agentId": "planner",
+          "state": "completed",
+          "startedAt": "2026-10-11T06:10:11.089218+00:00",
+          "finishedAt": "2026-10-11T06:10:12.253483+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "researcher",
+          "state": "awaiting_confirmation",
+          "startedAt": "2026-10-11T06:10:12.258298+00:00",
+          "finishedAt": "2026-10-11T06:10:12.282133+00:00",
+          "errorCode": null
+        },
+        {
+          "agentId": "reviewer",
+          "state": "pending",
+          "startedAt": null,
+          "finishedAt": null,
+          "errorCode": null
+        }
+      ],
+      "stepsSha256": "f5d61fa29d3952d8d4d9b6c542cd0f79d71e564c846084ed400137d1dfe16ffb",
+      "artifactsSha256": "b7ff58cee16cf5e3e53a6578d1af327bc4cce45be9ff0f51f33b16284b13c2d8",
+      "eventsSha256": "875cadf85662f2a7642a069ba15bc5a1696f17958e0505250d12b1eb598f6d30",
+      "eventSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "provenance": "persisted_local_record_execution_origin_not_attested_by_schema",
+      "provenanceSignals": [
+        "idempotency-marker:eval"
+      ]
+    }
+  ],
+  "taskIds": [
+    "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+    "0b771020-036f-4e68-96e8-1d9289e00bf3",
+    "0f997418-f27c-4c29-a615-6f69168e0e92",
+    "174e97bf-4df1-4970-83e0-108afc81ec73",
+    "1a18ff2c-93bb-47fb-8060-3de45378a721",
+    "1b61f794-f3e8-498e-9bc3-c6f832ef6aa7",
+    "25086162-e04d-4ce8-8077-913b1f4b191a",
+    "27e165c1-24fc-4eea-8e53-c595fbd0cce0",
+    "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+    "5dc6d493-5607-4964-b62f-23675ddb6503",
+    "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+    "75783c7e-d83a-4129-8e7d-5d9482df05f9",
+    "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+    "8055928d-6279-4258-a2f5-23abeaad9308",
+    "8317c2f1-1bf2-4927-b811-047da0e320b1",
+    "92ec4d81-7853-4b54-9ca3-978bab642f11",
+    "a2a43828-773f-4f81-8908-5ff762ced750",
+    "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+    "dcd4d353-ebce-446d-a284-632be8f29736",
+    "e9e5929f-546b-4e92-878a-6fc43e4becdf",
+    "ecf0770b-f059-492d-9028-86cbebaa66d3",
+    "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44"
+  ],
+  "taskStates": {
+    "completed": 2,
+    "awaiting_confirmation": 15,
+    "cancelled": 2,
+    "failed": 3
+  },
+  "liveTaskIds": [],
+  "models": [
+    {
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "contentSha256": "b6b033c2b369a928e4e8859e54869c6b8809ca7fe52acef97b23dc9e587becc1",
+      "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+      "origin": "neural4d",
+      "styleMode": "realistic",
+      "internalUseOnly": null,
+      "publicationAllowed": null,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5.glb",
+          "exists": true,
+          "sha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "sizeBytes": 15158668,
+          "glbHeaderMatches": true
+        }
+      ]
+    },
+    {
+      "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+      "assetId": null,
+      "contentSha256": "e4c338c7930093f21523e08ee8ea88543377efda7565ad86ec012615b3c757fc",
+      "providerTaskId": "bb074c31-1905-45b6-b763-22d065ddc616",
+      "origin": "neural4d_technical_test",
+      "styleMode": "chibi",
+      "internalUseOnly": true,
+      "publicationAllowed": false,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a.glb",
+          "exists": true,
+          "sha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+          "sizeBytes": 8827324,
+          "glbHeaderMatches": true
+        }
+      ]
+    },
+    {
+      "modelId": "3e8a0a55-f124-42a5-8265-7a7bb9b4d9d8",
+      "assetId": null,
+      "contentSha256": "b80be3fc269f5570a666035d2ffc55e800e92da27e5b543f44a9bf431100943d",
+      "providerTaskId": null,
+      "origin": "local_test_fixture",
+      "styleMode": null,
+      "internalUseOnly": null,
+      "publicationAllowed": null,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5.glb",
+          "exists": true,
+          "sha256": "65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5",
+          "sizeBytes": 120484,
+          "glbHeaderMatches": true
+        }
+      ]
+    },
+    {
+      "modelId": "5ac8ea03-8bcd-4da8-bad5-af6da78269bf",
+      "assetId": null,
+      "contentSha256": "c5bcadb3e5c8cedcbf8b01bd000b0711ee95be7bc0387dc923b0b1e6dd10eac9",
+      "providerTaskId": null,
+      "origin": "local_test_fixture",
+      "styleMode": null,
+      "internalUseOnly": null,
+      "publicationAllowed": null,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df.glb",
+          "exists": true,
+          "sha256": "782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df",
+          "sizeBytes": 120556,
+          "glbHeaderMatches": true
+        }
+      ]
+    }
+  ],
+  "quota": {
+    "maxAttempts": 3,
+    "externalHistoricalUsed": 0,
+    "used": 2,
+    "remaining": 1,
+    "attemptStates": [
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ],
+    "attemptCanonicalSha256": "a4623f255d409efcf78cb3e734dbc03fd266ad7219d1b63c4418c09cba03ca0a",
+    "policyCanonicalSha256": "b355fd10cb861dca9765e1a36180e25f484217eb7390d830ad66655aa6bd00d2",
+    "unconsumedApprovals": 0,
+    "operationalRequestCount": 18,
+    "recordedCredits": 60.0
+  },
+  "llmCalls": 107,
+  "htmlSha256": {
+    "index.html": "bc0ace24da3667201354787613a5653a6107e080c35b189e28d4370c85675cd4",
+    "history.html": "e787849317758ccf549879bdec048fe24ff93bcdaf437f96f456813402f362f7",
+    "roles.html": "25103c713ecef22784e9cd49241b157095e1c36d142c19453d2986db96a322ac",
+    "facial.html": "3a4bc57dc1e83d16e3c594b7a6c4432cb4f8f44e7e7fe68f3761e9bcf3443d9e",
+    "music.html": "7fc8945972707e068984fecb8bdec8817974c3eb94a77b97a1a80c3ac1a24626",
+    "gallery.html": "d359e4232b9d042ede82839400cdfd63dcde6f3ec941c7102e30819135147030",
+    "video.html": "eae28dffb204a62aca0dd8aa371ce73a108bb1c5f67f5c7f0b10ca43de470abf",
+    "about.html": "b70eff78a3c87b05d82fd32244307aa0a914193aa20975f8309402e025f5a2e8"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "startedAt": "2026-10-20T12:41:17.402438+00:00",
+  "attempt": 3,
+  "includeSystemSitePackages": false,
+  "requirementsChanged": false,
+  "providerRequests": 0,
+  "networkPurpose": "official PyPI and CPU package-index dependency installation only",
+  "steps": [
+    {
+      "command": [
+        "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe",
+        "-m",
+        "venv",
+        "D:\\京剧\\.runtime\\phase5-wp4\\cold-env-attempt03"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 10.52,
+      "privateOutputFile": "cold-install-attempt03-venv.private-output.txt",
+      "redactedFailureLines": []
+    },
+    {
+      "command": [
+        "D:\\京剧\\.runtime\\phase5-wp4\\cold-env-attempt03\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--disable-pip-version-check",
+        "--retries",
+        "0",
+        "--timeout",
+        "20",
+        "--index-url",
+        "https://pypi.org/simple",
+        "-r",
+        "D:\\京剧\\.runtime\\phase5-wp4\\recovery-workspace\\source\\backend\\requirements.txt"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 348.549,
+      "privateOutputFile": "cold-install-attempt03-pip.private-output.txt",
+      "redactedFailureLines": []
+    },
+    {
+      "command": [
+        "D:\\京剧\\.runtime\\phase5-wp4\\cold-env-attempt03\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 1.366,
+      "privateOutputFile": "cold-install-attempt03-pip-check.private-output.txt",
+      "redactedFailureLines": []
+    },
+    {
+      "command": [
+        "D:\\京剧\\.runtime\\phase5-wp4\\cold-env-attempt03\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "list",
+        "--format=json"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 1.943,
+      "privateOutputFile": "cold-install-attempt03-pip-list.private-output.txt",
+      "redactedFailureLines": []
+    },
+    {
+      "command": [
+        "D:\\京剧\\.runtime\\phase5-wp4\\cold-env-attempt03\\Scripts\\python.exe",
+        "-c",
+        "import json,sys,importlib.metadata as m; print(json.dumps({\"version\":sys.version,\"prefix\":sys.prefix,\"basePrefix\":sys.base_prefix,\"basePackagesOnSysPath\":any(p.endswith(\"Lib\\\\site-packages\") and not p.startswith(sys.prefix) for p in sys.path),\"versions\":{n:m.version(n) for n in [\"fastapi\",\"uvicorn\",\"pydantic-settings\",\"httpx\",\"qdrant-client\",\"sentence-transformers\",\"torch\",\"numpy\",\"pytest\",\"Pillow\",\"portalocker\"]}}))"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.195,
+      "privateOutputFile": "cold-install-attempt03-runtime-probe.private-output.txt",
+      "redactedFailureLines": []
+    }
+  ],
+  "updatedAt": "2026-10-20T12:47:19.978503+00:00",
+  "status": "INSTALLED"
+}

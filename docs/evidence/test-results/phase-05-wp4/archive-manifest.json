@@ -1,0 +1,893 @@
+{
+  "at": "2026-10-21T12:22:23.863507+00:00",
+  "files": [
+    {
+      "source": "phase5-wp4/before-state.json",
+      "file": "before-state.json",
+      "sourceSha256": "abbbb52de0ca4c6bab47c7ebe4429fc3b98cf6014b5bed8762c7b27e4c6820f6",
+      "archiveSha256": "abbbb52de0ca4c6bab47c7ebe4429fc3b98cf6014b5bed8762c7b27e4c6820f6",
+      "bytes": 67497,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/after-state.json",
+      "file": "after-state.json",
+      "sourceSha256": "10a92ddfeb53df7f27dcebff015909c94a4271501d74130bc6986e85b56152d3",
+      "archiveSha256": "10a92ddfeb53df7f27dcebff015909c94a4271501d74130bc6986e85b56152d3",
+      "bytes": 67851,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/before-provenance.json",
+      "file": "before-provenance.json",
+      "sourceSha256": "ae20ef68999df0d055cc4b3f6c50705fe9be68d72845b0b045cf1a171609be6b",
+      "archiveSha256": "ae20ef68999df0d055cc4b3f6c50705fe9be68d72845b0b045cf1a171609be6b",
+      "bytes": 27897,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/after-provenance.json",
+      "file": "after-provenance.json",
+      "sourceSha256": "3605cf2f1a24a9b2b969218fb525be64cec0c59bb3e12affd41012f763391feb",
+      "archiveSha256": "3605cf2f1a24a9b2b969218fb525be64cec0c59bb3e12affd41012f763391feb",
+      "bytes": 28038,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/knowledge-before.json",
+      "file": "knowledge-before.json",
+      "sourceSha256": "8cbb01079143c3e5eaf4a497218ec49c874d3680ce5644ff33bb13b274473284",
+      "archiveSha256": "8cbb01079143c3e5eaf4a497218ec49c874d3680ce5644ff33bb13b274473284",
+      "bytes": 5688,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/knowledge-after.json",
+      "file": "knowledge-after.json",
+      "sourceSha256": "aabb0ce5c5961bd6828a7c61f36e9eaf110f52fd44e4a8375d9adf16089a8d0d",
+      "archiveSha256": "aabb0ce5c5961bd6828a7c61f36e9eaf110f52fd44e4a8375d9adf16089a8d0d",
+      "bytes": 6505,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/configuration-presence.json",
+      "file": "configuration-presence.json",
+      "sourceSha256": "8c583980b0ecc2914356f3211bdce4ed8f8ef883566b49dff270fdbe66353d81",
+      "archiveSha256": "8c583980b0ecc2914356f3211bdce4ed8f8ef883566b49dff270fdbe66353d81",
+      "bytes": 330,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/environment-baseline.json",
+      "file": "environment-baseline.json",
+      "sourceSha256": "6c6972c7bc5dd795384e647226af29b80cdf070fcde022741b33f0f061f5d826",
+      "archiveSha256": "6c6972c7bc5dd795384e647226af29b80cdf070fcde022741b33f0f061f5d826",
+      "bytes": 14327,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/resource-copy-manifest.json",
+      "file": "resource-copy-manifest.json",
+      "sourceSha256": "4ecc20d782e22c612a7b5e8bd0d6fd5a70ab8e79173fae8c9cc3b57678da0dbc",
+      "archiveSha256": "4ecc20d782e22c612a7b5e8bd0d6fd5a70ab8e79173fae8c9cc3b57678da0dbc",
+      "bytes": 12925,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/initial-stop.json",
+      "file": "initial-stop.json",
+      "sourceSha256": "934ddc30f2df2b730033f9cb8ad4656bedf7e69a6a429a778a90dfd03cca61eb",
+      "archiveSha256": "934ddc30f2df2b730033f9cb8ad4656bedf7e69a6a429a778a90dfd03cca61eb",
+      "bytes": 247,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-stop-01.json",
+      "file": "normal-stop-01.json",
+      "sourceSha256": "70ec461c00ae310681f580c8d7bc591a0305327191ceacca2cb4f1fea6b5d904",
+      "archiveSha256": "70ec461c00ae310681f580c8d7bc591a0305327191ceacca2cb4f1fea6b5d904",
+      "bytes": 248,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-stop-03-sandbox.json",
+      "file": "normal-stop-03-sandbox.json",
+      "sourceSha256": "611574bf96b1b12d777a57668a118cb61f93dd6838e1f71c019ab8b4b730e7e0",
+      "archiveSha256": "611574bf96b1b12d777a57668a118cb61f93dd6838e1f71c019ab8b4b730e7e0",
+      "bytes": 296,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-stop-04.json",
+      "file": "normal-stop-04.json",
+      "sourceSha256": "f356d4c3f0bff7d73a6305146c4bb9784d8a05b8ed344bb50765f3336a8cb53d",
+      "archiveSha256": "f356d4c3f0bff7d73a6305146c4bb9784d8a05b8ed344bb50765f3336a8cb53d",
+      "bytes": 296,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-stop-05.json",
+      "file": "normal-stop-05.json",
+      "sourceSha256": "9ef1235a154492d5645b0a21828ce6e9d2cbfd1fe7a8a1fd33be59747e0efc43",
+      "archiveSha256": "9ef1235a154492d5645b0a21828ce6e9d2cbfd1fe7a8a1fd33be59747e0efc43",
+      "bytes": 295,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/http-helper-initial-failure.json",
+      "file": "http-helper-initial-failure.json",
+      "sourceSha256": "0ea88f5499f740eae451bae550e41195be65c4ae5d0a0c887a7aa395ef91e0c0",
+      "archiveSha256": "0ea88f5499f740eae451bae550e41195be65c4ae5d0a0c887a7aa395ef91e0c0",
+      "bytes": 389,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/http-before-restart-retest.json",
+      "file": "http-before-restart-retest.json",
+      "sourceSha256": "5d57aeaa58913742187eadea164f483d02937f43bc9af871734d99b1421c5815",
+      "archiveSha256": "5d57aeaa58913742187eadea164f483d02937f43bc9af871734d99b1421c5815",
+      "bytes": 13735,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/http-after-restart.json",
+      "file": "http-after-restart.json",
+      "sourceSha256": "d14424baf7399a155841cbee4569634352916c7e6caa0820eec157e3fafebe24",
+      "archiveSha256": "d14424baf7399a155841cbee4569634352916c7e6caa0820eec157e3fafebe24",
+      "bytes": 13736,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/http-isolated-restored.json",
+      "file": "http-isolated-restored.json",
+      "sourceSha256": "b9435e4e8c35c30cf05c3b28b273dae66488b1d176b82f19eb68b3c5dd0f76fd",
+      "archiveSha256": "b9435e4e8c35c30cf05c3b28b273dae66488b1d176b82f19eb68b3c5dd0f76fd",
+      "bytes": 13734,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/http-normal-start-04.json",
+      "file": "http-normal-start-04.json",
+      "sourceSha256": "8c2ff633463ed740fb6f2c47ec37839fa16f50c38b95508556cfb9e43c3a23c9",
+      "archiveSha256": "8c2ff633463ed740fb6f2c47ec37839fa16f50c38b95508556cfb9e43c3a23c9",
+      "bytes": 13735,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/http-normal-restart-05.json",
+      "file": "http-normal-restart-05.json",
+      "sourceSha256": "65c777daa797b51937871e3e99710f2beeafaa782a1d489217121f88f687c635",
+      "archiveSha256": "65c777daa797b51937871e3e99710f2beeafaa782a1d489217121f88f687c635",
+      "bytes": 13733,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/cold-install-attempt02-result.json",
+      "file": "cold-install-attempt02-result.json",
+      "sourceSha256": "1dd50030260e8a3afd87e0ad985314bbcd8ec983c780570a9fa5b4f7dc71b09e",
+      "archiveSha256": "80b27c5498ef9fc7e8ff2ecb8f15b2cc9952d9c486c2149c661d0a1075d145cb",
+      "bytes": 1118,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/cold-install-attempt03-result.json",
+      "file": "cold-install-attempt03-result.json",
+      "sourceSha256": "a11db62ec363139b37e04a7a343b79707076158580c270e468347f2fdbfe4546",
+      "archiveSha256": "a11db62ec363139b37e04a7a343b79707076158580c270e468347f2fdbfe4546",
+      "bytes": 2871,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/cold-env-attempt03-runtime-verification.json",
+      "file": "cold-env-attempt03-runtime-verification.json",
+      "sourceSha256": "54069dcb71c2ccb74067fa5eb5b52d7d0db9251f10e76ed6b2572fc4f941da1d",
+      "archiveSha256": "8a2a3ad5cac884ec17f0be5afac6f86ef41829d387c30bb8df06070e00b54c18",
+      "bytes": 2646,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/cold-install-attempt01-ensurepip-diagnostic.private-output.txt",
+      "file": "cold-install-attempt01-ensurepip-diagnostic.redacted.txt",
+      "sourceSha256": "a893fbd062f641d7373395374102e044ae89ad647eb8fc45b943b07b20f109a8",
+      "archiveSha256": "ced3659eea07ba1586856f3e87a520110c7302055b84f232fbd97ee0e7211d16",
+      "bytes": 4637,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/cold-install-attempt02-venv.private-output.txt",
+      "file": "cold-install-attempt02-venv.redacted.txt",
+      "sourceSha256": "790899544028298ad285bdc3a74ec1bc33b8e22e968c1c57ca9f8479ab956fa1",
+      "archiveSha256": "790899544028298ad285bdc3a74ec1bc33b8e22e968c1c57ca9f8479ab956fa1",
+      "bytes": 178,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/cold-install-attempt03-pip.private-output.txt",
+      "file": "cold-install-attempt03-pip.redacted.txt",
+      "sourceSha256": "4f6e241b8e0a0af84004fbbc7183ff4e104ab092b08a76f5002b49232a1d1203",
+      "archiveSha256": "4f6e241b8e0a0af84004fbbc7183ff4e104ab092b08a76f5002b49232a1d1203",
+      "bytes": 16051,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/cold-install-attempt03-pip-check.private-output.txt",
+      "file": "cold-install-attempt03-pip-check.redacted.txt",
+      "sourceSha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "archiveSha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/cold-install-attempt03-pip-list.private-output.txt",
+      "file": "cold-install-attempt03-pip-list.redacted.txt",
+      "sourceSha256": "0a4bfa4fe9fdd280833766f0404e0476c20f752dcdb4cf6319da34462dc21ce2",
+      "archiveSha256": "0a4bfa4fe9fdd280833766f0404e0476c20f752dcdb4cf6319da34462dc21ce2",
+      "bytes": 3037,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-start-01/startup-result.json",
+      "file": "normal-start-01.json",
+      "sourceSha256": "0c631367cacfddb52f8bebdacbaa362ef9098ab926eb208f23a59a4936483bad",
+      "archiveSha256": "0c631367cacfddb52f8bebdacbaa362ef9098ab926eb208f23a59a4936483bad",
+      "bytes": 7962,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-start-01/server-error.log",
+      "file": "normal-start-01-server-log.redacted.txt",
+      "sourceSha256": "cd0124d6e4e70ca72884b06a9b7b84664f3bdd95b7525cba00868dfc8f1a6aea",
+      "archiveSha256": "de98a3b85ddfbe293e4c3ad5cce46e1fe589883f176848cf1a1750c23e9a0a76",
+      "bytes": 171343,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-start-03/startup-result.json",
+      "file": "normal-start-03.json",
+      "sourceSha256": "bea8890d8669f976dd4c29eea4c77f4e4199023c9bf4c33e1d013bbb304ff001",
+      "archiveSha256": "bea8890d8669f976dd4c29eea4c77f4e4199023c9bf4c33e1d013bbb304ff001",
+      "bytes": 555,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-start-03/server-error.log",
+      "file": "normal-start-03-server-log.redacted.txt",
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-start-04/startup-result.json",
+      "file": "normal-start-04.json",
+      "sourceSha256": "78ddb5f16969469ba549ae67aad4ff1ceb7fd7fd9a229e858e21e7a1b9313d8e",
+      "archiveSha256": "78ddb5f16969469ba549ae67aad4ff1ceb7fd7fd9a229e858e21e7a1b9313d8e",
+      "bytes": 7994,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-start-04/server-error.log",
+      "file": "normal-start-04-server-log.redacted.txt",
+      "sourceSha256": "795780fa0248dc63000827eed7c937bd89e03500a0ff5382be7bb5639fcbcf02",
+      "archiveSha256": "795780fa0248dc63000827eed7c937bd89e03500a0ff5382be7bb5639fcbcf02",
+      "bytes": 2317,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-start-05/startup-result.json",
+      "file": "normal-start-05.json",
+      "sourceSha256": "4bd165c212f9040df66ceac837bb42fc0e2136d94cf6eb8544f1e107ebc39b3b",
+      "archiveSha256": "4bd165c212f9040df66ceac837bb42fc0e2136d94cf6eb8544f1e107ebc39b3b",
+      "bytes": 7993,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/normal-start-05/server-error.log",
+      "file": "normal-start-05-server-log.redacted.txt",
+      "sourceSha256": "7923cc5a83a59c3b73984a4081a524ad76fa1077c4145e0170bd6270b817c8a1",
+      "archiveSha256": "3a866dad60ad8d28b7bff627cb3cf79e2a8f776a3ad1befa370816ebad73ae41",
+      "bytes": 16026,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/cold-start-01/startup-result.json",
+      "file": "cold-start-01.json",
+      "sourceSha256": "f315c57790c0dd60d5d628a0f0ba89ab469b79bbaefa8f327fdc60325d938903",
+      "archiveSha256": "f315c57790c0dd60d5d628a0f0ba89ab469b79bbaefa8f327fdc60325d938903",
+      "bytes": 8039,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/cold-start-01/server-error.log",
+      "file": "cold-start-01-server-log.redacted.txt",
+      "sourceSha256": "361ef1005f585d21a91095108a46c2616a79b4cab252042645527f4f338a1f4d",
+      "archiveSha256": "3c11acc63f2e667b87b070cfcb042a96cc8865f2fe43d96674d97770ea0d489a",
+      "bytes": 16936,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-offline-20261020-01/isolation-result.json",
+      "file": "backend-baseline.json",
+      "sourceSha256": "b366cf2ae9e96ac7197fe478ac885c522b7fe18b4f997e47f4aa6d0483623d8d",
+      "archiveSha256": "b366cf2ae9e96ac7197fe478ac885c522b7fe18b4f997e47f4aa6d0483623d8d",
+      "bytes": 1066,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-offline-20261020-01/pytest.xml",
+      "file": "backend-baseline.xml",
+      "sourceSha256": "18700f23c295d0d5e66d934c54d8efe01c279ac2d02bedcb08ac7656a821a74f",
+      "archiveSha256": "18700f23c295d0d5e66d934c54d8efe01c279ac2d02bedcb08ac7656a821a74f",
+      "bytes": 127917,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-offline-20261020-01/pytest-output.redacted.txt",
+      "file": "backend-baseline-output.txt",
+      "sourceSha256": "1490db72e360a6169b5fd40ac012b638632b6ca50a5e6f5fba5cc4bd4ef5131a",
+      "archiveSha256": "1490db72e360a6169b5fd40ac012b638632b6ca50a5e6f5fba5cc4bd4ef5131a",
+      "bytes": 1309,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-offline-fixed-20261020-01/isolation-result.json",
+      "file": "backend-intermediate.json",
+      "sourceSha256": "885e6888b2e4b662ed048b509cfad1a00d98ce09587b9a4b1f2305b48eb338c5",
+      "archiveSha256": "885e6888b2e4b662ed048b509cfad1a00d98ce09587b9a4b1f2305b48eb338c5",
+      "bytes": 1066,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-offline-fixed-20261020-01/pytest.xml",
+      "file": "backend-intermediate.xml",
+      "sourceSha256": "c7f24481c749c99d9b5312426fd5c8ee75fec8ff774435774a317d06d4cfea50",
+      "archiveSha256": "c7f24481c749c99d9b5312426fd5c8ee75fec8ff774435774a317d06d4cfea50",
+      "bytes": 130015,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-offline-fixed-20261020-01/pytest-output.redacted.txt",
+      "file": "backend-intermediate-output.txt",
+      "sourceSha256": "be5fd6c5cb71709097c16748c63969b97f10c8066c1ba61bd4f614dfbea4dd4f",
+      "archiveSha256": "be5fd6c5cb71709097c16748c63969b97f10c8066c1ba61bd4f614dfbea4dd4f",
+      "bytes": 1309,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-offline-final-20261020-01/isolation-result.json",
+      "file": "backend-final.json",
+      "sourceSha256": "173a115e3e2e77f9c6b31c2aec7ca89c1df91ba47d3397bf78804737a2611bdd",
+      "archiveSha256": "173a115e3e2e77f9c6b31c2aec7ca89c1df91ba47d3397bf78804737a2611bdd",
+      "bytes": 1066,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-offline-final-20261020-01/pytest.xml",
+      "file": "backend-final.xml",
+      "sourceSha256": "43bd89e8d95f171d79febf5f3f985ef1d2ed41d681ccaab3426f9459ac4ef63a",
+      "archiveSha256": "43bd89e8d95f171d79febf5f3f985ef1d2ed41d681ccaab3426f9459ac4ef63a",
+      "bytes": 130355,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-offline-final-20261020-01/pytest-output.redacted.txt",
+      "file": "backend-final-output.txt",
+      "sourceSha256": "154e9c15f5f109bfe49e75b257c1f4f1a3a4568e034350f08a965993d680d361",
+      "archiveSha256": "154e9c15f5f109bfe49e75b257c1f4f1a3a4568e034350f08a965993d680d361",
+      "bytes": 1310,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-baseline/isolation-result.json",
+      "file": "resource-red.json",
+      "sourceSha256": "6f084bbb021facba61e601bddd23e440ad8e8af100291e5ea97f28b7fcdd3be1",
+      "archiveSha256": "6f084bbb021facba61e601bddd23e440ad8e8af100291e5ea97f28b7fcdd3be1",
+      "bytes": 2423,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-baseline/pytest.xml",
+      "file": "resource-red.xml",
+      "sourceSha256": "7e21361e4da6048fad43a0aafff64a228fb65f854bd217015286fac889aa2e5b",
+      "archiveSha256": "7e21361e4da6048fad43a0aafff64a228fb65f854bd217015286fac889aa2e5b",
+      "bytes": 7813,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-baseline/pytest-output.redacted.txt",
+      "file": "resource-red-output.txt",
+      "sourceSha256": "4997fd919c3f0f8b97ec130f2d5cc87736706bb770545d14385adfe373ce6e89",
+      "archiveSha256": "4997fd919c3f0f8b97ec130f2d5cc87736706bb770545d14385adfe373ce6e89",
+      "bytes": 5830,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-fixed/isolation-result.json",
+      "file": "resource-intermediate.json",
+      "sourceSha256": "760d4558050ce95ece237b7678a7129ab530bcab7ddaea1c48bf41bdc29519ff",
+      "archiveSha256": "760d4558050ce95ece237b7678a7129ab530bcab7ddaea1c48bf41bdc29519ff",
+      "bytes": 1065,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-fixed/pytest.xml",
+      "file": "resource-intermediate.xml",
+      "sourceSha256": "59747b676f873909ea61d10c7753889ebbe0f619f1397939d5caea85b3438569",
+      "archiveSha256": "59747b676f873909ea61d10c7753889ebbe0f619f1397939d5caea85b3438569",
+      "bytes": 2341,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-fixed/pytest-output.redacted.txt",
+      "file": "resource-intermediate-output.txt",
+      "sourceSha256": "2bc681b793a67a0496a4a7addc29f66dc77ea0fc43807688007ec8055a9e0c49",
+      "archiveSha256": "2bc681b793a67a0496a4a7addc29f66dc77ea0fc43807688007ec8055a9e0c49",
+      "bytes": 101,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-qdrant-baseline/isolation-result.json",
+      "file": "resource-qdrant-red.json",
+      "sourceSha256": "58ae2555773aefa21da6354d5dee67c2020f54d1f2a8191325e4b11b86564ecb",
+      "archiveSha256": "58ae2555773aefa21da6354d5dee67c2020f54d1f2a8191325e4b11b86564ecb",
+      "bytes": 1343,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-qdrant-baseline/pytest.xml",
+      "file": "resource-qdrant-red.xml",
+      "sourceSha256": "2bfa1f92a584b4e443bd65ad4b9904885835e6f4e1df3088123cf6ff5878251d",
+      "archiveSha256": "2bfa1f92a584b4e443bd65ad4b9904885835e6f4e1df3088123cf6ff5878251d",
+      "bytes": 3657,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-qdrant-baseline/pytest-output.redacted.txt",
+      "file": "resource-qdrant-red-output.txt",
+      "sourceSha256": "28437786da3538152caa64a358f9b56e7e7b7d8382ac30bc978f1733edaf654e",
+      "archiveSha256": "28437786da3538152caa64a358f9b56e7e7b7d8382ac30bc978f1733edaf654e",
+      "bytes": 1363,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-final/isolation-result.json",
+      "file": "resource-final.json",
+      "sourceSha256": "c90ffb0c0d6e96bc7241e0ed6e93d73b95fc633eaf80bb8f67868a0a1b1356c6",
+      "archiveSha256": "c90ffb0c0d6e96bc7241e0ed6e93d73b95fc633eaf80bb8f67868a0a1b1356c6",
+      "bytes": 1065,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-final/pytest.xml",
+      "file": "resource-final.xml",
+      "sourceSha256": "d6b07d359ea5934899b64c80bb5d14c1581c66e4d2a39aee9e605d2339884cc1",
+      "archiveSha256": "d6b07d359ea5934899b64c80bb5d14c1581c66e4d2a39aee9e605d2339884cc1",
+      "bytes": 2680,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-pytest-final/pytest-output.redacted.txt",
+      "file": "resource-final-output.txt",
+      "sourceSha256": "d2705225e806e9ed7cd582e2645e10c312c87b1cfd5c5dae3488f21d89946610",
+      "archiveSha256": "d2705225e806e9ed7cd582e2645e10c312c87b1cfd5c5dae3488f21d89946610",
+      "bytes": 101,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/recovery-workspace/.runtime/phase5-wp4-offline-clean-01/isolation-result.json",
+      "file": "backend-clean-env.json",
+      "sourceSha256": "173a115e3e2e77f9c6b31c2aec7ca89c1df91ba47d3397bf78804737a2611bdd",
+      "archiveSha256": "173a115e3e2e77f9c6b31c2aec7ca89c1df91ba47d3397bf78804737a2611bdd",
+      "bytes": 1066,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/recovery-workspace/.runtime/phase5-wp4-offline-clean-01/pytest.xml",
+      "file": "backend-clean-env.xml",
+      "sourceSha256": "9a09143214ffd7cbe999086ad838b54500b5b434f7f1ec7b8590ef6404ebccb9",
+      "archiveSha256": "9a09143214ffd7cbe999086ad838b54500b5b434f7f1ec7b8590ef6404ebccb9",
+      "bytes": 130354,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/recovery-workspace/.runtime/phase5-wp4-offline-clean-01/pytest-output.redacted.txt",
+      "file": "backend-clean-env-output.txt",
+      "sourceSha256": "92891b84f61a8d48486db85f1b78877f66250907fe8e22d77643838d55f528e6",
+      "archiveSha256": "92891b84f61a8d48486db85f1b78877f66250907fe8e22d77643838d55f528e6",
+      "bytes": 1167,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/recovery-workspace/.runtime/restored-after-state.json",
+      "file": "restored-after-state.json",
+      "sourceSha256": "3a4dc3895cad4c0fca002ef0320027ad35af68fcc2760ad63d281459e0632822",
+      "archiveSha256": "3a4dc3895cad4c0fca002ef0320027ad35af68fcc2760ad63d281459e0632822",
+      "bytes": 67851,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-frontend-20261020-01/qa.json",
+      "file": "frontend-qa.json",
+      "sourceSha256": "51593f1948981290539df1cc6919bcb05cd14a76a5c5707cb721e0cbc48eac04",
+      "archiveSha256": "51593f1948981290539df1cc6919bcb05cd14a76a5c5707cb721e0cbc48eac04",
+      "bytes": 3154,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-frontend-20261020-01/agents.json",
+      "file": "frontend-agents.json",
+      "sourceSha256": "e7f47073f210f935fa98cb4093e4f63c9b92a3d462377fdef830f7679b5035cc",
+      "archiveSha256": "e7f47073f210f935fa98cb4093e4f63c9b92a3d462377fdef830f7679b5035cc",
+      "bytes": 3665,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-frontend-20261020-01/history.json",
+      "file": "frontend-history.json",
+      "sourceSha256": "70fc7b3bd1d63d33197583dfbed40a1867ddfe893a3893aa7f98d2df88fe28a4",
+      "archiveSha256": "70fc7b3bd1d63d33197583dfbed40a1867ddfe893a3893aa7f98d2df88fe28a4",
+      "bytes": 4476,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-frontend-20261020-01/assets.json",
+      "file": "frontend-assets.json",
+      "sourceSha256": "c47aa4dcd8b19bdc6c546c4bf129691dd450e90fd7a8e1b8bda4cd1be54c0a5e",
+      "archiveSha256": "c47aa4dcd8b19bdc6c546c4bf129691dd450e90fd7a8e1b8bda4cd1be54c0a5e",
+      "bytes": 6182,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-frontend-20261020-01/demo.json",
+      "file": "frontend-demo.json",
+      "sourceSha256": "a371f9feb3fb26403aa0dec47d4d523eb11e4bc15d33ded7f85e8b4d10c7677a",
+      "archiveSha256": "a371f9feb3fb26403aa0dec47d4d523eb11e4bc15d33ded7f85e8b4d10c7677a",
+      "bytes": 4887,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-frontend-20261020-01/execution-summary.json",
+      "file": "frontend-execution-summary.json",
+      "sourceSha256": "ec1e7e0ff7300ca37b6b588a1a19a557dd3e201bc4dc9d5cc485001ab975b2a4",
+      "archiveSha256": "ec1e7e0ff7300ca37b6b588a1a19a557dd3e201bc4dc9d5cc485001ab975b2a4",
+      "bytes": 2600,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-frontend-20261020-01/runner-adaptation.json",
+      "file": "frontend-runner-adaptation.json",
+      "sourceSha256": "0f76d974faf8d091498a0eb6e42d0aff04a942e9d50afb86ebe5c3808976ca3c",
+      "archiveSha256": "0f76d974faf8d091498a0eb6e42d0aff04a942e9d50afb86ebe5c3808976ca3c",
+      "bytes": 305,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-browser-01/browser-result.json",
+      "file": "guide-browser.json",
+      "sourceSha256": "b151f68f971d4dc77e20ce3e3df285a726b429030e24d3776859dbe43f4d46bb",
+      "archiveSha256": "b151f68f971d4dc77e20ce3e3df285a726b429030e24d3776859dbe43f4d46bb",
+      "bytes": 41159,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-model-browser-01/smoke-result.json",
+      "file": "models-browser.json",
+      "sourceSha256": "875aa43493a2b3ca4e88acd9c28ece2943e3402a32b7f0b69b5bfc2fa68ea247",
+      "archiveSha256": "875aa43493a2b3ca4e88acd9c28ece2943e3402a32b7f0b69b5bfc2fa68ea247",
+      "bytes": 10574,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-restart-model-browser-01/smoke-result.json",
+      "file": "models-restart-browser.json",
+      "sourceSha256": "cdc2203302ed6fbc926afa38f2078e46dc95aa57254a9cb69c87ce9b0bc96ec6",
+      "archiveSha256": "cdc2203302ed6fbc926afa38f2078e46dc95aa57254a9cb69c87ce9b0bc96ec6",
+      "bytes": 10966,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-cold-model-browser-01/smoke-result.json",
+      "file": "models-cold-browser.json",
+      "sourceSha256": "dd4b8b506630738baed8c3d643a80065265da8ad1882fb2c7b34bf913aff1dc7",
+      "archiveSha256": "dd4b8b506630738baed8c3d643a80065265da8ad1882fb2c7b34bf913aff1dc7",
+      "bytes": 10693,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-layout-matrix-01/layout-matrix-result.json",
+      "file": "layout-initial.json",
+      "sourceSha256": "2b6d557bedc9c17ca1e9e1dcc0e5b5b61bf34908a29fcc2735b6a5d2da691935",
+      "archiveSha256": "2b6d557bedc9c17ca1e9e1dcc0e5b5b61bf34908a29fcc2735b6a5d2da691935",
+      "bytes": 5864,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-layout-matrix-02/layout-matrix-result.json",
+      "file": "layout-failed-02.json",
+      "sourceSha256": "a98874d44c07406c9b138208058e901874067a793096b548f078b00a6cb90261",
+      "archiveSha256": "a98874d44c07406c9b138208058e901874067a793096b548f078b00a6cb90261",
+      "bytes": 123119,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-layout-matrix-03/layout-matrix-result.json",
+      "file": "layout-failed-03.json",
+      "sourceSha256": "e2f000a8007dab143d997fe4cf75b104346e635352a0ee8e4d7251df0f3e32e1",
+      "archiveSha256": "e2f000a8007dab143d997fe4cf75b104346e635352a0ee8e4d7251df0f3e32e1",
+      "bytes": 149968,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-layout-matrix-04/layout-matrix-result.json",
+      "file": "layout-final.json",
+      "sourceSha256": "dc25e29d48b01523a4ab0582e09ed2058cc08ba4d9e98dba346108746d81978e",
+      "archiveSha256": "dc25e29d48b01523a4ab0582e09ed2058cc08ba4d9e98dba346108746d81978e",
+      "bytes": 142922,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-touch-browser-01/touch-result.json",
+      "file": "touch-initial.json",
+      "sourceSha256": "267552e34d5c086c4ab9d292544be0ffc2082c472313c849cdaa8dbce96fc8b5",
+      "archiveSha256": "267552e34d5c086c4ab9d292544be0ffc2082c472313c849cdaa8dbce96fc8b5",
+      "bytes": 8399,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-touch-browser-02/touch-result.json",
+      "file": "touch-final.json",
+      "sourceSha256": "f790e0ed93851a776b35e6034441d29ef7a0b3f58f2898e65b51b12cf458d3ae",
+      "archiveSha256": "f790e0ed93851a776b35e6034441d29ef7a0b3f58f2898e65b51b12cf458d3ae",
+      "bytes": 20649,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-rehearsal-01/rehearsal-result.json",
+      "file": "rehearsal.json",
+      "sourceSha256": "081b6fa9bbce6f83069e6ace9bd7b2ffdc5f3d690be1d0ddcea0effe4a12f444",
+      "archiveSha256": "081b6fa9bbce6f83069e6ace9bd7b2ffdc5f3d690be1d0ddcea0effe4a12f444",
+      "bytes": 24092,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-probe-01/resource-probe-result.json",
+      "file": "resource-probe-initial.json",
+      "sourceSha256": "ec22482f8959fbb6c3fb7ef49d6bb3372824f29f2ed1dcf97f1e376b1f2b2bda",
+      "archiveSha256": "ec22482f8959fbb6c3fb7ef49d6bb3372824f29f2ed1dcf97f1e376b1f2b2bda",
+      "bytes": 5023,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-probe-02/resource-probe-result.json",
+      "file": "resource-probe-original.json",
+      "sourceSha256": "e3f86be55994cbcd9d534732ae27f0d7eb37c464d20b48de5a6d3d4d77ee50cc",
+      "archiveSha256": "e3f86be55994cbcd9d534732ae27f0d7eb37c464d20b48de5a6d3d4d77ee50cc",
+      "bytes": 9615,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-probe-fixed-03/resource-probe-result.json",
+      "file": "resource-probe-intermediate.json",
+      "sourceSha256": "505cb8a5d026c3e0c2f97c52cbb71ca93b5ea487aa6c614ea5559d80ef0c59bb",
+      "archiveSha256": "505cb8a5d026c3e0c2f97c52cbb71ca93b5ea487aa6c614ea5559d80ef0c59bb",
+      "bytes": 9678,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-probe-final-04/resource-probe-result.json",
+      "file": "resource-probe-final.json",
+      "sourceSha256": "8a6cf74d595673b4bb1315f3589c8796cf435224748de1d6b343fdc83f35a20e",
+      "archiveSha256": "8a6cf74d595673b4bb1315f3589c8796cf435224748de1d6b343fdc83f35a20e",
+      "bytes": 12740,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/retrieval-evaluation/phase-02-retrieval-wp4-isolated-restored-comparison.json",
+      "file": "phase-02-retrieval-wp4-isolated-restored-comparison.json",
+      "sourceSha256": "91dde111d53502330c120e3606a7026108befe5f27838af25f1c728da612abd4",
+      "archiveSha256": "91dde111d53502330c120e3606a7026108befe5f27838af25f1c728da612abd4",
+      "bytes": 4145,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/retrieval-evaluation/phase-02-retrieval-wp4-isolated-restored-hybrid.json",
+      "file": "phase-02-retrieval-wp4-isolated-restored-hybrid.json",
+      "sourceSha256": "69af3321e55f205994ca0476fc066df65b4083d702f7a84f2f5ab0508c8b0793",
+      "archiveSha256": "69af3321e55f205994ca0476fc066df65b4083d702f7a84f2f5ab0508c8b0793",
+      "bytes": 217689,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/retrieval-evaluation/phase-02-retrieval-wp4-isolated-restored-vector.json",
+      "file": "phase-02-retrieval-wp4-isolated-restored-vector.json",
+      "sourceSha256": "b8e938d84902a21cca9b48ce36587f9337ce7d2bf75e2bc5c9f582e9d2a651ca",
+      "archiveSha256": "b8e938d84902a21cca9b48ce36587f9337ce7d2bf75e2bc5c9f582e9d2a651ca",
+      "bytes": 143019,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-offline-bootstrap.py",
+      "file": "phase5-wp4-offline-bootstrap.py",
+      "sourceSha256": "e54ceb00ef419f085dc26232310fcaa5f20b02bec5d538ec0780f0718dab9006",
+      "archiveSha256": "e54ceb00ef419f085dc26232310fcaa5f20b02bec5d538ec0780f0718dab9006",
+      "bytes": 15236,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-prepare.py",
+      "file": "phase5-wp4-prepare.py",
+      "sourceSha256": "c49a70bc737eca89b095e11acb13cfca79e6e05cf7ef3fd3f2c171e57b1fdc08",
+      "archiveSha256": "c49a70bc737eca89b095e11acb13cfca79e6e05cf7ef3fd3f2c171e57b1fdc08",
+      "bytes": 5517,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-install.py",
+      "file": "phase5-wp4-install.py",
+      "sourceSha256": "4e35c0ff1b193969e6a3c736bd0222711819b595632abfa1031ae5bfd35249e5",
+      "archiveSha256": "4e35c0ff1b193969e6a3c736bd0222711819b595632abfa1031ae5bfd35249e5",
+      "bytes": 1471,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-install-attempt02.py",
+      "file": "phase5-wp4-install-attempt02.py",
+      "sourceSha256": "1090755fb1a1a3147801dad0804e18b83977c31cae963bfc143a48057546dfb1",
+      "archiveSha256": "e962c6c64a31b8d7e3eef16cc64e53f2edb09fd3c3315127a23e97c5534fe2f1",
+      "bytes": 4018,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-install-attempt03.py",
+      "file": "phase5-wp4-install-attempt03.py",
+      "sourceSha256": "2df50586147610481c47e14422961047b5a7cd8c58b0221e1197e7349198a991",
+      "archiveSha256": "2df50586147610481c47e14422961047b5a7cd8c58b0221e1197e7349198a991",
+      "bytes": 2817,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-clean-runtime-probe.py",
+      "file": "phase5-wp4-clean-runtime-probe.py",
+      "sourceSha256": "01f5d8c188af2ea9538fdb37a799b2b4f99283e615c60c6fc2cd00e0eb41c854",
+      "archiveSha256": "01f5d8c188af2ea9538fdb37a799b2b4f99283e615c60c6fc2cd00e0eb41c854",
+      "bytes": 3240,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-http-check.py",
+      "file": "phase5-wp4-http-check.py",
+      "sourceSha256": "dbfb8491cc797972fb0a6f9b50952d7bead599bc71e46a49fe8ee6c7221cbb60",
+      "archiveSha256": "dbfb8491cc797972fb0a6f9b50952d7bead599bc71e46a49fe8ee6c7221cbb60",
+      "bytes": 3672,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-server-control.py",
+      "file": "phase5-wp4-server-control.py",
+      "sourceSha256": "7e3c57c8a5fd36db4f792303e4554a811969f218ab64238b9c944de2c90509c6",
+      "archiveSha256": "7e3c57c8a5fd36db4f792303e4554a811969f218ab64238b9c944de2c90509c6",
+      "bytes": 3849,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-stop-console.py",
+      "file": "phase5-wp4-stop-console.py",
+      "sourceSha256": "059c093a4370008ec8e1599f20557a75d9c48c532f6392e5777faba906041e8f",
+      "archiveSha256": "059c093a4370008ec8e1599f20557a75d9c48c532f6392e5777faba906041e8f",
+      "bytes": 1619,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-state.py",
+      "file": "phase5-wp4-state.py",
+      "sourceSha256": "b4895d8cb9ffec5058c1571031a82c428e9e23f51bc57f4bd90dfaea89ed1f75",
+      "archiveSha256": "b4895d8cb9ffec5058c1571031a82c428e9e23f51bc57f4bd90dfaea89ed1f75",
+      "bytes": 10939,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-provenance.py",
+      "file": "phase5-wp4-provenance.py",
+      "sourceSha256": "76aab16da7d69279cf595e2a364affeacb8bedcd330ec7169c957d3f69510c41",
+      "archiveSha256": "76aab16da7d69279cf595e2a364affeacb8bedcd330ec7169c957d3f69510c41",
+      "bytes": 6616,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-browser.mjs",
+      "file": "phase5-wp4-browser.mjs",
+      "sourceSha256": "3748aa5afa42aef03f38c894062690007b93e5c6d38545669b009c6bffe4c1f5",
+      "archiveSha256": "3748aa5afa42aef03f38c894062690007b93e5c6d38545669b009c6bffe4c1f5",
+      "bytes": 20254,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-layout-matrix.mjs",
+      "file": "phase5-wp4-layout-matrix.mjs",
+      "sourceSha256": "fe7a776b801d0629c6356a7b3a9ea80b3213f468bfba5f406416c5a2f93742bb",
+      "archiveSha256": "fe7a776b801d0629c6356a7b3a9ea80b3213f468bfba5f406416c5a2f93742bb",
+      "bytes": 10163,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-touch-browser.mjs",
+      "file": "phase5-wp4-touch-browser.mjs",
+      "sourceSha256": "e4ec2f86caefbde3de35687dce654f811402445f4adac8724ed766df9f4b286f",
+      "archiveSha256": "e4ec2f86caefbde3de35687dce654f811402445f4adac8724ed766df9f4b286f",
+      "bytes": 10734,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-cold-model-browser.mjs",
+      "file": "phase5-wp4-cold-model-browser.mjs",
+      "sourceSha256": "3c12d8b55ae91912e721d10ed4a79ed7f4d4cccccf47cd895ef81ac4b4762e8b",
+      "archiveSha256": "3c12d8b55ae91912e721d10ed4a79ed7f4d4cccccf47cd895ef81ac4b4762e8b",
+      "bytes": 11395,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-rehearsal.mjs",
+      "file": "phase5-wp4-rehearsal.mjs",
+      "sourceSha256": "57c5c02dea794658c4673b83af32dd0b3cfefdbe7b88a2f2057d1a1c9deafd90",
+      "archiveSha256": "57c5c02dea794658c4673b83af32dd0b3cfefdbe7b88a2f2057d1a1c9deafd90",
+      "bytes": 12059,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-final-inventory.py",
+      "file": "phase5-wp4-final-inventory.py",
+      "sourceSha256": "bd51d7db708288ee68b4b7ea92ec351b7bd8869363b4e4a6b7c9928d72f86971",
+      "archiveSha256": "bd51d7db708288ee68b4b7ea92ec351b7bd8869363b4e4a6b7c9928d72f86971",
+      "bytes": 2773,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/model-browser-original-executed.mjs",
+      "file": "models-original-check.mjs",
+      "sourceSha256": "cd26d00c0e25425eedf8f0832c9401e6abd81ea0f8cb89f6ced49c74a840fb1e",
+      "archiveSha256": "cd26d00c0e25425eedf8f0832c9401e6abd81ea0f8cb89f6ced49c74a840fb1e",
+      "bytes": 11369,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-model-browser.mjs",
+      "file": "models-restart-check.mjs",
+      "sourceSha256": "f80a82d00a74aa400fa7eec6a40d3d15976810d67532cd5d445fb87e75a800ee",
+      "archiveSha256": "f80a82d00a74aa400fa7eec6a40d3d15976810d67532cd5d445fb87e75a800ee",
+      "bytes": 11388,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4-resource-probe-final-04/executed-helper.py",
+      "file": "resource-probe-final-helper.py",
+      "sourceSha256": "747d3c17f802608942039639adcc36ea65b9b1503699588a829ee057b8bdc8e5",
+      "archiveSha256": "747d3c17f802608942039639adcc36ea65b9b1503699588a829ee057b8bdc8e5",
+      "bytes": 20670,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/server-helper-before-console-fix.py",
+      "file": "server-helper-before-console-fix.py",
+      "sourceSha256": "63e831f02660a92eef77f249ec9d590e42c8f13c988e51ca1a09db3cb438c23c",
+      "archiveSha256": "63e831f02660a92eef77f249ec9d590e42c8f13c988e51ca1a09db3cb438c23c",
+      "bytes": 3651,
+      "redacted": true
+    },
+    {
+      "source": "phase5-wp4/http-helper-initial-failure.py",
+      "file": "http-helper-initial-failure.py",
+      "sourceSha256": "75f7807ed70fedcbaae9ab008ee99fd6251cf1922b623342ddd64359e69bddad",
+      "archiveSha256": "75f7807ed70fedcbaae9ab008ee99fd6251cf1922b623342ddd64359e69bddad",
+      "bytes": 3654,
+      "redacted": true
+    }
+  ],
+  "copiedFileCount": 110,
+  "secretsCopied": false,
+  "privateAssetsCopied": false,
+  "notes": [
+    "Text evidence only; source and redacted archive hashes are separately recorded.",
+    "Executed helpers may contain absolute private-run paths and refuse overwriting; they are traceability evidence, not a new production deployment/asset distribution system.",
+    "Earlier helper variants are only claimed preserved when explicitly named; failure outputs remain separate."
+  ]
+}

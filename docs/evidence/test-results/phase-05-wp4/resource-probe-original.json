@@ -1,0 +1,313 @@
+{
+  "kind": "WP4_ISOLATED_RESOURCE_MISSING_AND_RECOVERY",
+  "scope": "real local CPU BGE + versioned public corpus + real temporary SQLite/Qdrant + actual licensed Duck; synthetic saved task; NOT live provider/browser proof",
+  "results": [
+    {
+      "name": "real_bge_corpus_ingestion_in_isolated_root",
+      "status": "PASS",
+      "seconds": 17.9313,
+      "detail": {
+        "ingest": {
+          "status": "built",
+          "added": 12,
+          "updated": 0,
+          "skipped": 0,
+          "failed": 0,
+          "generation_id": "gen-20261020T123917-5feef579",
+          "corpus_hash": "12a8e8511e6e6c46b887442fbea1833dd577d996b42aa4122f032b706056f934",
+          "documents": 12,
+          "chunks": 35,
+          "duplicates_skipped": 0,
+          "model_id": "BAAI/bge-small-zh-v1.5",
+          "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+          "dimension": 512,
+          "distance": "Cosine",
+          "chunking": {
+            "target_chars": 350,
+            "overlap_chars": 70,
+            "max_tokens": 480,
+            "vector_text": "content"
+          },
+          "created_at": "2026-10-20T12:39:34.934971+00:00",
+          "review_scope": "assistant source-checked original facts; human review pending",
+          "elapsed_seconds": 17.8515
+        },
+        "fixtureHistory": "one synthetic completed task; no provider execution",
+        "embeddingDimension": 512
+      }
+    },
+    {
+      "name": "normal_local_cpu_search_and_missing_key_no_generation",
+      "status": "PASS",
+      "seconds": 0.6892,
+      "detail": {
+        "healthKnowledge": true,
+        "healthOverall": "degraded",
+        "searchStatus": 200,
+        "evidenceCount": 5,
+        "missingKeyChat": {
+          "status": 503,
+          "code": "LLM_KEY_MISSING",
+          "message": "尚未配置DeepSeek密钥，请在本机私有.env填写后重启后端。"
+        },
+        "historyTotal": 1,
+        "eightPageStatuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ]
+      }
+    },
+    {
+      "name": "missing_bge_degrades_only_knowledge",
+      "status": "PASS",
+      "seconds": 0.2991,
+      "detail": {
+        "healthKnowledge": false,
+        "diagnostic": "KNOWLEDGE_LOAD_FAILED",
+        "search": {
+          "status": 503,
+          "code": "KNOWLEDGE_LOAD_FAILED",
+          "message": "知识库未就绪，请先完成入库；本地索引只能由一个应用进程持有。"
+        },
+        "historyTotal": 1,
+        "eightPageStatuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "diagnosticLimitation": "generic code does not distinguish missing BGE from missing/corrupt SQLite or Qdrant"
+      }
+    },
+    {
+      "name": "bge_restored_by_reconfiguring_existing_local_snapshot",
+      "status": "PASS",
+      "seconds": 0.6064,
+      "detail": {
+        "healthKnowledge": true,
+        "healthOverall": "degraded",
+        "searchStatus": 200,
+        "evidenceCount": 5,
+        "missingKeyChat": {
+          "status": 503,
+          "code": "LLM_KEY_MISSING",
+          "message": "尚未配置DeepSeek密钥，请在本机私有.env填写后重启后端。"
+        },
+        "historyTotal": 1,
+        "eightPageStatuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ]
+      }
+    },
+    {
+      "name": "missing_qdrant_cannot_fake_evidence",
+      "status": "PASS",
+      "seconds": 0.3466,
+      "detail": {
+        "healthKnowledge": false,
+        "diagnostic": "KNOWLEDGE_LOAD_FAILED",
+        "search": {
+          "status": 503,
+          "code": "KNOWLEDGE_LOAD_FAILED",
+          "message": "知识库未就绪，请先完成入库；本地索引只能由一个应用进程持有。"
+        },
+        "historyTotal": 1,
+        "eightPageStatuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "diagnosticLimitation": "generic code does not distinguish missing BGE from missing/corrupt SQLite or Qdrant",
+        "missingPathWasAutoCreated": true,
+        "emptyCollectionCreatedBeforeMismatch": true
+      }
+    },
+    {
+      "name": "restore_qdrant_exact_isolated_copy",
+      "status": "PASS",
+      "seconds": 0.2808,
+      "detail": {
+        "healthKnowledge": true,
+        "healthOverall": "degraded",
+        "searchStatus": 200,
+        "evidenceCount": 5,
+        "missingKeyChat": {
+          "status": 503,
+          "code": "LLM_KEY_MISSING",
+          "message": "尚未配置DeepSeek密钥，请在本机私有.env填写后重启后端。"
+        },
+        "historyTotal": 1,
+        "eightPageStatuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ]
+      }
+    },
+    {
+      "name": "missing_knowledge_sqlite_detects_but_creates_empty_file",
+      "status": "PASS",
+      "seconds": 0.3124,
+      "detail": {
+        "healthKnowledge": false,
+        "diagnostic": "KNOWLEDGE_LOAD_FAILED",
+        "search": {
+          "status": 503,
+          "code": "KNOWLEDGE_LOAD_FAILED",
+          "message": "知识库未就绪，请先完成入库；本地索引只能由一个应用进程持有。"
+        },
+        "historyTotal": 1,
+        "eightPageStatuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "diagnosticLimitation": "generic code does not distinguish missing BGE from missing/corrupt SQLite or Qdrant",
+        "missingSqliteWasAutoCreated": true,
+        "autoCreatedBytes": 0
+      }
+    },
+    {
+      "name": "restore_knowledge_sqlite_exact_isolated_copy",
+      "status": "PASS",
+      "seconds": 0.2964,
+      "detail": {
+        "healthKnowledge": true,
+        "healthOverall": "degraded",
+        "searchStatus": 200,
+        "evidenceCount": 5,
+        "missingKeyChat": {
+          "status": 503,
+          "code": "LLM_KEY_MISSING",
+          "message": "尚未配置DeepSeek密钥，请在本机私有.env填写后重启后端。"
+        },
+        "historyTotal": 1,
+        "eightPageStatuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ]
+      }
+    },
+    {
+      "name": "corrupt_agent_sqlite_startup_gap_recorded",
+      "status": "PASS",
+      "seconds": 0.0925,
+      "detail": {
+        "observedBehavior": "app factory raises before HTTP listener can start",
+        "exceptionType": "DatabaseError",
+        "limitation": "corrupt writable Agent database blocks whole startup rather than degraded API",
+        "fixtureOnly": true
+      }
+    },
+    {
+      "name": "read_only_history_missing_never_creates_database",
+      "status": "PASS",
+      "seconds": 0.0004,
+      "detail": {
+        "listTotal": 0,
+        "detailStatus": 404,
+        "detailCode": "AGENT_TASK_NOT_FOUND",
+        "missingFileCreated": false
+      }
+    },
+    {
+      "name": "readonly_corrupt_sqlite_returns_safe_503",
+      "status": "PASS",
+      "seconds": 0.0032,
+      "detail": {
+        "code": "AGENT_HISTORY_UNAVAILABLE",
+        "status": 503,
+        "message": "历史记录暂时无法读取，请稍后重新查询。",
+        "sensitivePathLeaked": false
+      }
+    },
+    {
+      "name": "blank_runtime_truthful_empty_not_recovery",
+      "status": "PASS",
+      "seconds": 0.153,
+      "detail": {
+        "diagnostic": "KNOWLEDGE_NOT_INITIALIZED",
+        "historyTotal": 0,
+        "writableAgentDbCreated": true,
+        "catalogCreated": true,
+        "limitation": "new wrong-but-writable RAG_DATA_DIR initializes empty operational stores; empty is not restored history"
+      }
+    },
+    {
+      "name": "actual_glb_isolated_removal_http_error_exact_restoration",
+      "status": "PASS",
+      "seconds": 0.4324,
+      "detail": {
+        "fixture": "licensed actual Duck GLB; not either private opera model",
+        "hash": "65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5",
+        "bytes": 120484,
+        "embeddedImages": 1,
+        "embeddedTexturePixels": 262144,
+        "missingFile": {
+          "status": 404,
+          "code": "ASSET_FILE_UNAVAILABLE",
+          "message": "已登记的文件无法读取，请检查本地资产。"
+        },
+        "restoredStatus": 200,
+        "hashUnchanged": true,
+        "viewerBrowserNotClaimed": true
+      }
+    }
+  ],
+  "passed": 13,
+  "failed": 0,
+  "skipped": 0,
+  "paidApiCalls": 0,
+  "neural4dApiCalls": 0,
+  "auditCounts": {
+    "blockedNetwork": 0,
+    "blockedFile": 0,
+    "blockedSqlite": 0,
+    "allowedAsyncioLoopbackControlSockets": 9
+  },
+  "productionAccess": "BGE snapshot read-only only; other production runtime and private config guarded",
+  "knownGaps": [
+    "generic KNOWLEDGE_LOAD_FAILED diagnostic",
+    "KnowledgeStore and VectorStore create empty missing target before validation fails",
+    "corrupt Agent SQLite prevents app startup",
+    "wrong writable data path initializes truthful but empty operation stores"
+  ]
+}

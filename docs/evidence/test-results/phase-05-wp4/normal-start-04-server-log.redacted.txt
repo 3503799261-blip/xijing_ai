@@ -1,0 +1,30 @@
+INFO:     Started server process [42340]
+INFO:     Waiting for application startup.
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 2124.02it/s]
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+request_id=70a998a2-96e8-4c82-a9ec-216c8540b46a method=GET status=200 elapsed_ms=16.4
+request_id=78e1b0d4-14e6-428a-9d00-a290fcc54f96 method=GET status=200 elapsed_ms=146.9
+request_id=228f15f1-df2d-4478-97bb-b7179e55c1ef method=GET status=200 elapsed_ms=1.2
+request_id=7a3743c0-e511-46af-a7ef-7809981ec90b method=GET status=200 elapsed_ms=2.5
+request_id=10f8d9bc-43c0-449a-8a4f-334eb30faa48 method=GET status=200 elapsed_ms=14.4
+request_id=a6999bb6-d89f-4970-830b-04785c80b3bb method=GET status=200 elapsed_ms=9.6
+request_id=6b2055d8-148a-4bae-85fd-a0db56c3ddf3 method=GET status=200 elapsed_ms=1.8
+request_id=a067cc4a-d306-4fe7-bb5b-c1910b5d0b0b method=GET status=200 elapsed_ms=2.9
+request_id=3601e696-8bee-4cf3-b33d-1948e1d5d9fd method=GET status=200 elapsed_ms=1.9
+request_id=9a069d9e-8291-465c-b759-6450e57faab3 method=GET status=200 elapsed_ms=1.5
+request_id=03eae418-ef0e-42cf-b496-dabc4bf6057c method=POST status=200 elapsed_ms=54.4
+request_id=537c16a8-22ba-420d-b19c-e15ebb9c2479 method=POST status=422 elapsed_ms=0.7
+request_id=13185536-e45b-4512-914c-a2cf4cd350b0 method=POST status=422 elapsed_ms=2.3
+request_id=d10bf3c4-40e0-485b-b281-23354fa93bda method=GET status=200 elapsed_ms=7.8
+request_id=a971a82b-fe8b-4732-9c13-293cc50aca3d method=GET status=200 elapsed_ms=7.6
+request_id=834ac87a-1941-425c-9df3-94562a51a24b method=GET status=200 elapsed_ms=3.5
+request_id=ac111f70-9041-4737-94cf-08b4d7548518 method=GET status=200 elapsed_ms=10.5
+request_id=e0ed717b-805c-459b-9aad-cf67e6f21ba3 method=GET status=404 elapsed_ms=2.1
+request_id=de33253a-2400-4099-9b05-cec6472e7181 method=GET status=200 elapsed_ms=1.6
+request_id=d0dd5e29-700f-4fe9-b733-502a806c0f14 method=GET status=404 elapsed_ms=0.3
+request_id=54b2b879-1bbc-470a-961f-d60f63f38619 method=GET status=404 elapsed_ms=0.4
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [42340]

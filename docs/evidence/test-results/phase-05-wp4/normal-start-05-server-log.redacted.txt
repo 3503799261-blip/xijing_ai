@@ -1,0 +1,193 @@
+INFO:     Started server process [7152]
+INFO:     Waiting for application startup.
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 2389.67it/s]
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+request_id=89a81ad1-3aaa-4090-9d9b-5b29054e8ed7 method=GET status=200 elapsed_ms=11.8
+request_id=ec6e21b1-3002-4450-9f17-5166be66455e method=GET status=200 elapsed_ms=143.8
+request_id=90a2d18f-b7d8-444a-9f70-41a81d6b5587 method=GET status=200 elapsed_ms=1.2
+request_id=08712378-acf2-4b30-9084-0b17f8ac0720 method=GET status=200 elapsed_ms=2.8
+request_id=a0041919-1a27-494e-814b-ea9e151014c9 method=GET status=200 elapsed_ms=12.0
+request_id=8150e359-7a1b-45ae-9447-e7476f2bca71 method=GET status=200 elapsed_ms=9.6
+request_id=eecd76e2-1443-4a21-bcff-27c493d92f20 method=GET status=200 elapsed_ms=2.1
+request_id=443fed33-01d7-489f-ba53-10c54eae483b method=GET status=200 elapsed_ms=2.9
+request_id=4bc8d791-f20c-4e2c-a2ce-9d25be831792 method=GET status=200 elapsed_ms=1.9
+request_id=f676dfc9-1dd3-429f-b080-335eb6c34153 method=GET status=200 elapsed_ms=2.1
+request_id=f0e7178a-fa76-4864-8b7d-6c59ef6823b6 method=POST status=200 elapsed_ms=20.6
+request_id=3252020c-4e6a-4cf6-b4bf-be5e6ab04cff method=POST status=422 elapsed_ms=0.5
+request_id=f50d765a-930c-4010-8ebf-c9643580ea71 method=POST status=422 elapsed_ms=1.3
+request_id=f9f01b7f-4a58-4290-8599-6c20f03465f2 method=GET status=200 elapsed_ms=5.1
+request_id=607951b3-3172-4fd5-a02f-d1c85db1dfa1 method=GET status=200 elapsed_ms=4.9
+request_id=51be3d3f-668e-4065-b70a-f30c1dcb4726 method=GET status=200 elapsed_ms=3.2
+request_id=468a76e5-d79b-4f6c-8237-131fb9cdd0a7 method=GET status=200 elapsed_ms=10.1
+request_id=9a2bb8f3-3844-41e0-b3cf-dd8ab21a2639 method=GET status=404 elapsed_ms=2.4
+request_id=4aac69c8-64bf-4a66-adc6-e6146ce5cbc0 method=GET status=200 elapsed_ms=2.0
+request_id=a5d23100-b13a-463e-81e9-6e9e88d7a1de method=GET status=404 elapsed_ms=0.3
+request_id=b57fdc8a-663e-457f-ac0c-356c0fc176de method=GET status=404 elapsed_ms=0.2
+request_id=a5c3c7b7-52fb-4dcc-81fc-198df1a182ef method=GET status=200 elapsed_ms=1.7
+request_id=22059f61-a88d-4433-b516-ce82f9ece084 method=GET status=200 elapsed_ms=5.8
+request_id=66a8c8ee-3e62-4eef-a336-566d2a5bffe1 method=GET status=200 elapsed_ms=8.4
+request_id=10a5a1e5-3e3b-4f86-bbc9-4eb2e1047924 method=GET status=200 elapsed_ms=7.6
+request_id=23a361e5-525c-4ac3-8084-72bbe18b1bb0 method=GET status=200 elapsed_ms=6.0
+request_id=84722688-bcac-4752-a64f-53b6ca482cfd method=GET status=200 elapsed_ms=5.7
+request_id=2f8dfc05-94bd-4bda-86fd-a585f039408d method=GET status=200 elapsed_ms=3.5
+request_id=53a7c774-4c60-40f9-aa74-3cfc7e93b3f1 method=GET status=200 elapsed_ms=3.3
+request_id=634b72c3-a05e-4e9b-962f-c21a3ee914ed method=GET status=200 elapsed_ms=2.4
+request_id=62fbbcab-2339-4e5f-a462-d1c0bd29dc02 method=GET status=200 elapsed_ms=5.6
+request_id=24e0fa3d-4196-4412-a793-8e4c4dc716d6 method=GET status=200 elapsed_ms=4.1
+request_id=d5501071-bd9b-4eeb-9524-9ac084555df9 method=GET status=200 elapsed_ms=4.2
+request_id=e1cca880-366f-4e6f-b619-013c80499c88 method=GET status=200 elapsed_ms=2.7
+request_id=d24866f3-0b23-44d0-96e8-e0aa2ed4b438 method=GET status=200 elapsed_ms=1.8
+request_id=11e47346-1c83-4c51-92a0-c7f3e8348223 method=GET status=206 elapsed_ms=3.0
+request_id=343abca9-ddb1-4cff-9ab1-5d11564032d0 method=GET status=206 elapsed_ms=2.3
+request_id=615c9640-888b-4f79-9a9f-9e757deb087a method=GET status=200 elapsed_ms=1.7
+request_id=0c6a64e6-999c-4039-9adb-bbbc77d81c0b method=GET status=200 elapsed_ms=1.6
+request_id=e434d42a-df42-4e6d-a894-cbe000365ba8 method=GET status=200 elapsed_ms=1.4
+request_id=4655cc9a-6235-412f-8f5f-f5149147b597 method=GET status=200 elapsed_ms=5.0
+request_id=f52ec1af-a63a-40d1-aa2b-bcaa8d31c6c6 method=GET status=200 elapsed_ms=7.2
+request_id=45d1715b-492f-4987-9933-f2dc4fc0a2d5 method=GET status=200 elapsed_ms=6.8
+request_id=a3ea8325-e97c-4e89-89bf-bb13f5e2953a method=GET status=200 elapsed_ms=5.7
+request_id=a8a30dca-d96d-47d2-a783-fdc0433540ca method=GET status=200 elapsed_ms=4.9
+request_id=71245c8b-81d4-4b13-a249-82e78ee3c84d method=GET status=200 elapsed_ms=3.7
+request_id=2923e74c-1024-40e9-a621-0db57bee9874 method=GET status=200 elapsed_ms=2.4
+request_id=12a4c655-da5c-4f2b-b8f2-5498f1ebac4d method=GET status=200 elapsed_ms=2.3
+request_id=d6931636-5105-4e6d-9395-9e91d25d277b method=GET status=200 elapsed_ms=2.8
+request_id=b8ea7119-0c83-4fa2-961d-49d514f2c33f method=GET status=200 elapsed_ms=2.4
+request_id=81c1e15d-7796-46e7-941a-c510b112989f method=GET status=200 elapsed_ms=5.5
+request_id=b2e6f871-fcf1-421d-ae4e-cc4b596271d4 method=GET status=200 elapsed_ms=1.5
+request_id=672e59cc-dca1-4ae1-bd5e-ee50a8c3c7c8 method=GET status=200 elapsed_ms=2.3
+request_id=c87bf853-a351-488a-b285-c2f6835351c8 method=GET status=200 elapsed_ms=1.5
+request_id=cd248aae-6387-4a77-9559-3c86410f2bf5 method=GET status=200 elapsed_ms=4.4
+request_id=5d302722-bbcb-4250-8bde-ef57093152f3 method=GET status=200 elapsed_ms=4.2
+request_id=d73a4058-944e-4c8c-9cdd-baaaa1c348b3 method=GET status=200 elapsed_ms=3.5
+request_id=4240588f-a9f3-4336-a7a6-bd5998680919 method=GET status=200 elapsed_ms=3.6
+request_id=b4c6fb06-81af-4b9a-90ab-80c41a7d6ad4 method=GET status=200 elapsed_ms=1.8
+request_id=bd6b8ab2-8629-4ff0-adea-542457548acc method=GET status=200 elapsed_ms=1.7
+request_id=a060c1d6-4701-4b79-a5db-6e7e239c03e1 method=GET status=200 elapsed_ms=4.2
+request_id=c535f6e6-8dae-4fda-b1fb-19005bc6acec method=GET status=200 elapsed_ms=3.6
+request_id=75eb40ce-4013-4367-a824-4e47c3f38294 method=GET status=200 elapsed_ms=2.4
+request_id=1a790fae-13a4-43e1-a614-512e5f461e8b method=GET status=200 elapsed_ms=4.1
+request_id=17f9bc4f-b219-4432-b8cc-50ea1a51a47e method=GET status=200 elapsed_ms=3.5
+request_id=3b0ae921-995a-4e5a-9b0f-93182b53df3f method=GET status=200 elapsed_ms=2.6
+request_id=f4604c1f-8eab-48f3-a6ed-688847746b9c method=GET status=200 elapsed_ms=2.8
+request_id=4719c161-06d3-4efd-85ac-80235b9d5d47 method=GET status=200 elapsed_ms=2.9
+request_id=c33eaf88-84f5-4f1c-8f23-5702dadf297f method=GET status=200 elapsed_ms=2.0
+request_id=75a318ec-56f4-4b77-b8bf-6d88120270a3 method=GET status=200 elapsed_ms=4.7
+request_id=205a6491-54c1-44e6-8386-0a6e42a5d40c method=GET status=200 elapsed_ms=5.6
+request_id=ffbc30c3-1475-4cee-99c2-c5506c9ae36d method=GET status=200 elapsed_ms=5.1
+request_id=d89ede50-28b1-4f0c-83aa-b5840f3cc61a method=GET status=200 elapsed_ms=5.5
+request_id=286e5cb3-b1d1-48d7-8578-7e802a510e0e method=GET status=200 elapsed_ms=3.9
+request_id=48b80516-4abb-4271-b5d7-eb5ee9978ff9 method=GET status=200 elapsed_ms=1.7
+request_id=e1fb8b9d-6953-446f-b6ad-083f1baa6c03 method=GET status=200 elapsed_ms=1.5
+request_id=787cc1d2-6398-4987-b792-b4c579459eeb method=GET status=200 elapsed_ms=2.6
+request_id=ba0b3f69-198d-445c-a360-4e112bbbf135 method=GET status=200 elapsed_ms=3.2
+request_id=4415bfc9-9219-4d2c-a388-62814b6fab85 method=GET status=200 elapsed_ms=2.3
+request_id=98930559-e9ef-4f94-9cda-f31d031b554b method=GET status=206 elapsed_ms=1.6
+Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:/Users/<user>\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:/Users/<user>\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+request_id=8aad787b-0d87-4908-9494-117823b92fbb method=GET status=200 elapsed_ms=1.6
+request_id=03f8ba78-5054-43ec-9ee7-beb39411b317 method=GET status=200 elapsed_ms=1.9
+Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:/Users/<user>\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:/Users/<user>\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+request_id=2466c8fd-eda8-40d3-ba4f-a901c4510de2 method=GET status=200 elapsed_ms=4.9
+request_id=f452c3e9-84b7-4ab2-a5c3-14bcc1b9e0d1 method=GET status=200 elapsed_ms=4.1
+request_id=7d90a97b-09fa-4ca5-a198-ba04b12ca12e method=GET status=200 elapsed_ms=4.5
+request_id=8f4defcb-c805-4861-bb5d-21928478d2d4 method=GET status=200 elapsed_ms=2.9
+request_id=adf4362f-1f46-48f8-b4b3-12e0f225dde2 method=GET status=200 elapsed_ms=4.2
+request_id=4760eb27-6ca0-4849-81d8-96032f5fbcdf method=GET status=200 elapsed_ms=4.5
+request_id=30cd197f-b3ca-4f1d-a42b-d56c0fc6e7ab method=GET status=200 elapsed_ms=3.0
+request_id=619ffde8-4d5a-442c-b782-0257e5672ff5 method=GET status=200 elapsed_ms=2.8
+request_id=1e808037-1e03-4034-a52a-c340025d5bc2 method=GET status=200 elapsed_ms=2.0
+request_id=a20de95e-2386-414e-ad3d-3fe26d265a09 method=GET status=200 elapsed_ms=2.3
+request_id=c810a677-fee5-4ab2-9afa-a729e8233657 method=GET status=200 elapsed_ms=5.0
+request_id=7df01d19-23c7-48d2-bee1-4566a250c56a method=GET status=200 elapsed_ms=4.4
+request_id=fe6bb97b-a807-4b06-b6c1-6f6323d5d457 method=GET status=200 elapsed_ms=4.7
+request_id=6470f176-703b-4a04-ae8f-c9facd8dfce2 method=GET status=200 elapsed_ms=2.7
+request_id=c720786c-26e5-4348-992d-626e1690ff64 method=GET status=200 elapsed_ms=2.2
+request_id=2e5d2311-0eb0-4b77-920f-f162d27a8baf method=GET status=200 elapsed_ms=3.1
+request_id=5a6afa53-9d1e-449d-85e6-61ee55255cba method=GET status=200 elapsed_ms=2.2
+request_id=e1a46f7d-2850-4a59-9660-0f76e30e378e method=GET status=200 elapsed_ms=3.8
+request_id=bd5879a5-c3d5-495c-99c8-9af68f7bfa47 method=GET status=200 elapsed_ms=2.5
+request_id=35066be8-db8d-48a2-8410-386202c7b6a0 method=GET status=200 elapsed_ms=2.9
+request_id=ccc98d81-88e7-4b41-a0db-3f89053bf7eb method=GET status=200 elapsed_ms=3.8
+request_id=146eda2c-8e67-4382-93d8-1f5875b1b92e method=GET status=200 elapsed_ms=2.8
+request_id=dea6edde-8f38-4d6c-b323-7692fb4fe3a6 method=GET status=200 elapsed_ms=2.8
+request_id=bf0c699a-2a6e-4024-8c19-04a1b2890a96 method=GET status=200 elapsed_ms=3.6
+request_id=18d2d0e6-4378-4b58-871c-c16ce2057784 method=GET status=200 elapsed_ms=2.7
+request_id=299d791a-2e22-4479-800c-74ff66277ae0 method=GET status=200 elapsed_ms=2.0
+request_id=7c52caf8-2060-48e2-9afb-81bee1fc8a76 method=GET status=200 elapsed_ms=2.0
+request_id=2339c8cb-c4f6-4768-b11c-55299a9a4278 method=GET status=200 elapsed_ms=1.8
+request_id=269d31a2-4012-4a72-96da-3c87a2d5ae0a method=GET status=200 elapsed_ms=4.7
+request_id=6da64133-7200-4528-894d-b00ab36c8b58 method=GET status=206 elapsed_ms=3.1
+request_id=b7b2cc88-2eef-4d63-82cf-37a9af63c5c7 method=GET status=206 elapsed_ms=3.2
+request_id=8ba4ce38-f243-4b5c-9ddc-ce20820c050f method=GET status=200 elapsed_ms=5.0
+request_id=c48606f1-6d52-4028-ace7-4553e4e4ef4a method=GET status=206 elapsed_ms=2.4
+request_id=4da898a6-72b1-4545-89c8-b367ec9fe826 method=GET status=206 elapsed_ms=1.8
+request_id=419b1ab8-1f27-404b-b9ac-60890b45e33a method=GET status=200 elapsed_ms=2.1
+request_id=daffa371-0c8f-4b35-9fb3-037c2b02bb3c method=GET status=200 elapsed_ms=5.5
+request_id=0e48dafe-e98c-4e65-86ac-10613746e52b method=GET status=200 elapsed_ms=6.7
+request_id=ba8f17b0-4588-43c7-8449-a622b297ef07 method=GET status=200 elapsed_ms=5.9
+request_id=32482e46-61c3-4faa-a73d-c287f313ea0d method=GET status=200 elapsed_ms=4.9
+request_id=a27e8532-63e0-487a-aee3-c2133cba0006 method=GET status=200 elapsed_ms=4.5
+request_id=240140ef-3613-4b5a-a50f-a9d91719126e method=GET status=200 elapsed_ms=3.9
+request_id=8afffb02-7092-415c-82dd-97722169a7bf method=GET status=200 elapsed_ms=4.2
+request_id=6b4407e1-ccb8-453c-a210-1fc0be8a35eb method=GET status=200 elapsed_ms=2.7
+request_id=62fe8250-0eb8-408f-900c-b91e485f5730 method=GET status=200 elapsed_ms=1.7
+request_id=43560f7b-e54b-4d5e-98eb-82c8f3b6fdad method=GET status=200 elapsed_ms=6.2
+request_id=803e3468-ba68-46aa-8cb6-3597d0cca222 method=GET status=200 elapsed_ms=2.7
+request_id=305487d7-a5e1-4757-8823-4c33c30b4128 method=GET status=200 elapsed_ms=5.3
+request_id=3860a3a4-6909-4eb4-a1d8-a088d6f3bb05 method=GET status=200 elapsed_ms=5.6
+request_id=86bb536c-42ae-4127-a874-3d1b8cd2a2bf method=GET status=200 elapsed_ms=5.2
+request_id=c817fd56-5bf0-4f4f-a111-7db2b756d1b9 method=GET status=200 elapsed_ms=4.5
+request_id=748e9fff-dd8c-4978-9574-7017294ab35c method=GET status=200 elapsed_ms=4.9
+request_id=e37c38e5-70d7-4a84-afba-1faa56a4f956 method=GET status=200 elapsed_ms=2.9
+request_id=3a4eca9f-4df3-4377-b5fe-7aa370d13f6c method=GET status=200 elapsed_ms=1.7
+request_id=28a4882e-67fd-417e-b18b-9c49a82218b2 method=GET status=200 elapsed_ms=4.3
+request_id=114e11e5-3e6e-4f45-b29e-9425de2e626b method=GET status=200 elapsed_ms=5.1
+request_id=0d7b474f-1bc1-46f6-98be-e0639c1d41c2 method=GET status=200 elapsed_ms=4.0
+request_id=acc5928d-d5ca-4ed6-9859-c1eeabfd4808 method=GET status=200 elapsed_ms=3.3
+request_id=d8a57ca7-d6c0-4781-84bd-e697b6bacb1b method=GET status=200 elapsed_ms=2.7
+request_id=497f6cf9-4c30-4a67-b658-25f6d804b93d method=GET status=200 elapsed_ms=4.1
+request_id=dc861328-21b6-41e5-ac91-c2f7e7519754 method=GET status=200 elapsed_ms=2.9
+request_id=2b3730ab-7193-4a91-a00a-3704afeb3565 method=GET status=200 elapsed_ms=4.4
+request_id=9af02416-7387-48e1-8f84-fa6ad4010852 method=GET status=200 elapsed_ms=3.4
+request_id=16d540a4-de80-443c-b6d7-fee1ae08a18d method=GET status=200 elapsed_ms=5.9
+request_id=27464359-5262-44ca-a2c2-9bd9d6ae55a6 method=GET status=200 elapsed_ms=3.5
+request_id=6eb1ac4d-5eaf-47c1-b6c8-0c77572d1026 method=GET status=200 elapsed_ms=5.8
+request_id=df10c0c5-521c-4cde-b19f-0f6afc391c0b method=GET status=200 elapsed_ms=5.0
+request_id=08fc4ba1-e03f-4e40-afad-87cd7bb1d182 method=GET status=200 elapsed_ms=5.3
+request_id=9bccdfc0-c360-4bab-88f3-97c6b559b71e method=GET status=200 elapsed_ms=4.3
+request_id=4774698c-9cc6-4129-847c-66cd04526ab1 method=GET status=200 elapsed_ms=4.1
+request_id=2f4f5021-5577-485b-a82a-c52fab3e716b method=GET status=200 elapsed_ms=2.8
+request_id=1efa7a65-469b-427f-9567-32fa21a6cb83 method=GET status=200 elapsed_ms=3.5
+request_id=236e516e-f445-44f2-80a1-f7a569d4799c method=GET status=200 elapsed_ms=1.9
+request_id=35b6b975-1e90-4232-81aa-ff9d08dd22d9 method=GET status=200 elapsed_ms=4.5
+request_id=9572350f-e86c-4c15-8db0-f678f6139499 method=GET status=200 elapsed_ms=2.4
+request_id=f6d0be67-5e46-4e30-87f4-bc1485d1510c method=GET status=200 elapsed_ms=11.7
+request_id=2add684a-208c-4fe0-885b-989b73b0dd0c method=GET status=200 elapsed_ms=25.1
+request_id=5a69a690-f180-467c-a6dd-f7bde46173d0 method=GET status=200 elapsed_ms=4.9
+request_id=0276d5a6-92b3-4e9f-844d-368351ff8db0 method=GET status=200 elapsed_ms=4.0
+request_id=328c1ba5-57f8-4a77-8a55-7ebb9e8a5fae method=GET status=200 elapsed_ms=2.3
+request_id=c1bb4f80-58e1-4205-9ceb-8a2eddf5ce53 method=GET status=200 elapsed_ms=3.0
+request_id=d86a2307-590d-4747-b20b-519bb8aa37b2 method=GET status=200 elapsed_ms=1.9
+request_id=3f09f029-015b-4266-a694-89e362ac71a8 method=GET status=200 elapsed_ms=2.7
+request_id=047fd010-8d02-46ab-9273-0d87396394b0 method=GET status=200 elapsed_ms=1.9
+request_id=3f51911a-482a-493a-8700-5143c61a368f method=GET status=200 elapsed_ms=1.9
+request_id=d158ae6e-9c82-4d46-a6ed-4aa3d765e3ea method=GET status=200 elapsed_ms=1.7
+request_id=9c74220b-89e1-4914-8357-8d826e357f71 method=GET status=200 elapsed_ms=17.7
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7152]

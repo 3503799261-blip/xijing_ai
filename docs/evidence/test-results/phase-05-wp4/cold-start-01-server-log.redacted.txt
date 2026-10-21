@@ -1,0 +1,204 @@
+INFO:     Started server process [50784]
+INFO:     Waiting for application startup.
+W1020 20:48:54.694000 50784 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 2206.45it/s]
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8011 (Press CTRL+C to quit)
+request_id=5f74683e-d0ce-4940-9ae0-b5e2b9cd0bf8 method=GET status=200 elapsed_ms=2.6
+request_id=cea09be4-56b0-47c1-952d-5410cba1a0cc method=GET status=200 elapsed_ms=111.4
+request_id=cbb6cbfe-a2ae-4b3d-a38d-2b93db972bca method=GET status=200 elapsed_ms=2.1
+request_id=25a8c557-1381-4dfd-a704-32205bdc6b05 method=GET status=200 elapsed_ms=1.9
+request_id=132d398c-d44a-4cbb-90df-ec8fab29b28c method=GET status=200 elapsed_ms=5.6
+request_id=66290ac1-2bbb-400a-9ab3-db2ba996566a method=GET status=200 elapsed_ms=3.8
+request_id=9576a0df-8243-41fc-ae25-4f5717f9a64e method=GET status=200 elapsed_ms=2.2
+request_id=cebfe7cc-7ca6-428e-aa74-a3d66b2ca15d method=GET status=200 elapsed_ms=2.4
+request_id=583047ce-e275-49a1-8f53-5a71574e3669 method=GET status=200 elapsed_ms=1.9
+request_id=5e038bb7-2ea7-4f49-b295-23d3b3a1efcb method=GET status=200 elapsed_ms=2.6
+request_id=9361bc6d-2e03-4ab4-b7ac-b2b7519f75e9 method=POST status=200 elapsed_ms=32.5
+request_id=d0ef594a-38ac-4be6-8974-0d756a6ea098 method=POST status=422 elapsed_ms=1.0
+request_id=1cfe0a56-30f2-4d42-b26f-68d4885045f2 method=POST status=422 elapsed_ms=0.7
+request_id=0afd910b-fb86-4327-8fe9-e8785e5218a5 method=GET status=200 elapsed_ms=12.8
+request_id=417ae302-c609-4613-a6b7-1dc0386d2ab6 method=GET status=200 elapsed_ms=9.7
+request_id=0be9dd6f-5445-4e5d-b362-86160cba1470 method=GET status=200 elapsed_ms=5.9
+request_id=d4acba0d-70ac-4028-a679-6f56fee3cd56 method=GET status=200 elapsed_ms=21.8
+request_id=d208e7fe-21d8-4b75-95b1-18bb379fd9e0 method=GET status=404 elapsed_ms=4.9
+request_id=09c3cff6-5a0f-4ba9-9293-ddde6269f5c3 method=GET status=200 elapsed_ms=3.4
+request_id=104354c4-6377-4726-833c-84e0dddcf795 method=GET status=404 elapsed_ms=0.7
+request_id=03eda950-ad48-4ffa-bef5-7d3d0257d177 method=GET status=404 elapsed_ms=0.5
+request_id=9c911e00-1428-4e4c-9546-9b421fa88696 method=GET status=200 elapsed_ms=2.1
+request_id=9181497a-e0fe-4328-81f4-3b04f24a69a2 method=GET status=200 elapsed_ms=5.7
+request_id=828e1fcd-d44d-429f-8b86-15fdcf3b16c2 method=GET status=200 elapsed_ms=9.7
+request_id=98b0f3b0-ab14-4abd-98a5-e35d9a9230c9 method=GET status=200 elapsed_ms=8.4
+request_id=ac45a182-001f-46ff-b75d-08ca040ff770 method=GET status=200 elapsed_ms=8.4
+request_id=bb7738fb-7292-411d-8ec6-eb2c590e8400 method=GET status=200 elapsed_ms=6.1
+request_id=3cab3cb8-b3c2-42f2-90ff-d9d798bb1e7d method=GET status=200 elapsed_ms=4.9
+request_id=c392c9d2-6d51-4184-a98f-192e2f2a9929 method=GET status=200 elapsed_ms=1.9
+request_id=0863f6aa-7ae7-49c2-8a58-621e8abf0f94 method=GET status=200 elapsed_ms=2.8
+request_id=ffee232b-8b2f-4d60-8c77-312c441c662f method=GET status=200 elapsed_ms=3.1
+request_id=6acaf378-d199-464c-8a8b-92a038026996 method=GET status=200 elapsed_ms=3.3
+request_id=289b802d-de3f-48e0-addc-8bbfde2cf12b method=GET status=200 elapsed_ms=4.5
+request_id=e9cec708-0cb5-4d5c-abb1-5bed442ed1ad method=GET status=200 elapsed_ms=3.8
+request_id=28a6780f-8fad-40bd-9a26-04af0d224687 method=GET status=200 elapsed_ms=3.0
+request_id=1ccfa8d3-9bf0-4cc3-9479-3f4e4aba53c1 method=GET status=206 elapsed_ms=2.6
+request_id=c6eecc3a-dff2-4695-8c42-485f5dc95332 method=GET status=206 elapsed_ms=3.1
+request_id=ef9cfe83-2710-4a2c-889d-561dd2879db3 method=GET status=200 elapsed_ms=1.9
+Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:/Users/<user>\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:/Users/<user>\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+request_id=c30aa01f-d3a0-4588-b91a-f667947c8120 method=GET status=200 elapsed_ms=2.0
+request_id=aff2ff32-159b-42a5-a507-460b650e0087 method=GET status=200 elapsed_ms=1.8
+request_id=abf322be-bd46-4dff-848e-2cac77b0ab0e method=GET status=200 elapsed_ms=6.6
+request_id=7780d99a-7822-4f55-b27f-766f238d91e8 method=GET status=200 elapsed_ms=6.5
+request_id=0f22027b-1f97-4ae4-803f-545b8d64e66e method=GET status=200 elapsed_ms=5.6
+request_id=5d2c2b41-7911-4490-913a-ec192bccf0ab method=GET status=200 elapsed_ms=5.9
+request_id=93325fe8-8e3c-4d8f-ae5a-7e7a493e201c method=GET status=200 elapsed_ms=5.0
+request_id=ebbb3bba-d74e-4ab0-b314-4bf7fc664fb7 method=GET status=200 elapsed_ms=4.0
+request_id=7286ec17-7623-45f7-ac1d-cdc66fef23d6 method=GET status=200 elapsed_ms=3.9
+request_id=4c95f205-49b7-4594-bd83-cf6d9e251209 method=GET status=200 elapsed_ms=4.3
+request_id=ef4873bb-7192-4b75-87b5-cd0dfe1b215c method=GET status=200 elapsed_ms=3.1
+request_id=c296ba1a-ccf3-415c-98e9-71310ba34b99 method=GET status=200 elapsed_ms=2.7
+request_id=4a6c9544-4332-46ac-a321-593742197753 method=GET status=200 elapsed_ms=2.4
+request_id=b693b1d6-4f16-4f5a-a198-68ec9a89209c method=GET status=200 elapsed_ms=2.1
+request_id=8362ab51-4817-4364-b93b-158f83c058d4 method=GET status=200 elapsed_ms=6.0
+request_id=cb8ae57b-b756-4719-af70-9e38853edc89 method=GET status=200 elapsed_ms=6.3
+request_id=dddc7064-b7a5-4b0f-9058-a71af75269e0 method=GET status=200 elapsed_ms=6.6
+request_id=d972eb30-f883-4516-9345-e1ad41b096fb method=GET status=200 elapsed_ms=6.9
+request_id=d4a98800-7d54-47ca-b9fb-6a879cedc9d2 method=GET status=200 elapsed_ms=7.0
+request_id=d663892f-9426-4ffb-b808-bf5a158d1a0b method=GET status=200 elapsed_ms=4.0
+request_id=15fd5072-5915-43ee-8ffa-b88ff91f1f15 method=GET status=200 elapsed_ms=1.7
+request_id=4f99af04-05c8-49ba-ba29-016d46a8e3c1 method=GET status=200 elapsed_ms=2.3
+request_id=4ba68a35-611b-40c4-82e4-e5ec50dced39 method=GET status=200 elapsed_ms=7.6
+request_id=b9889d82-6d28-476f-81d5-2ed77a22aa18 method=GET status=200 elapsed_ms=6.8
+request_id=0f458bae-5fdc-4def-9fcc-90f8f74a6a07 method=GET status=200 elapsed_ms=7.2
+request_id=e9266db3-2498-49da-ad3e-e92e964b82c6 method=GET status=200 elapsed_ms=7.6
+request_id=921b7754-3cea-43c7-a7cb-de5603837630 method=GET status=200 elapsed_ms=4.8
+request_id=d10b3da2-e2aa-4fd9-8125-468239735eb9 method=GET status=200 elapsed_ms=5.1
+request_id=199d66cb-9864-43c9-bc47-517f48346e8b method=GET status=200 elapsed_ms=1.2
+request_id=f40e5a6c-96d0-4583-989f-5a060ee51c4f method=GET status=200 elapsed_ms=3.3
+request_id=b7e1efa3-c505-41a7-a3cd-440275af4c9c method=GET status=200 elapsed_ms=3.1
+request_id=5021af83-8160-4a64-8037-a32663a62c91 method=GET status=200 elapsed_ms=4.8
+request_id=c8b91a2f-d830-4a66-8e9a-14a4774ea774 method=GET status=200 elapsed_ms=5.0
+request_id=5facf6f1-521e-4eb2-8a3f-158b488ee48c method=GET status=200 elapsed_ms=3.6
+request_id=0e2d8607-dc1a-418a-a5b4-e671020286da method=GET status=200 elapsed_ms=3.8
+request_id=e67b91c2-e92e-4a4c-93a0-68a13da7ea12 method=GET status=200 elapsed_ms=2.8
+request_id=c9266837-9542-4efc-aaae-972314c5f598 method=GET status=200 elapsed_ms=2.6
+request_id=8336d61e-0957-49f8-86c0-1af0a0ef181d method=GET status=200 elapsed_ms=1.9
+request_id=a6a94239-d0f4-4572-8903-53ac2f3a3616 method=GET status=200 elapsed_ms=3.5
+request_id=9e22d9d0-66be-4d70-af2b-f30d7221e5d4 method=GET status=200 elapsed_ms=3.3
+request_id=d706a2e0-91df-4b78-9ff6-c7b8acf0cd22 method=GET status=200 elapsed_ms=3.6
+request_id=7e4ae293-f0e5-41ff-a779-5979e6256e59 method=GET status=206 elapsed_ms=3.0
+Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:/Users/<user>\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:/Users/<user>\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+request_id=13fe75bf-53af-4b11-9b0b-ef4e3e9c16ce method=GET status=200 elapsed_ms=1.8
+request_id=d0f8f9e5-fa8e-496a-8e56-d5e958120839 method=GET status=200 elapsed_ms=1.8
+request_id=12762a63-2f76-4f01-a5d0-f2944cc7991f method=GET status=200 elapsed_ms=7.9
+request_id=fc186e71-53fb-413e-a2c4-e31b94dabee4 method=GET status=200 elapsed_ms=6.5
+request_id=53ccd842-78c7-4cbe-8c01-d9e0b1596422 method=GET status=200 elapsed_ms=7.0
+request_id=433a46c5-b0c0-4f6c-9a7b-ad620cb723ef method=GET status=200 elapsed_ms=7.5
+request_id=ed4f25ac-10cd-4ccf-afb7-688bd09a6e76 method=GET status=200 elapsed_ms=5.6
+request_id=d8e2ab1a-1bec-42f9-8cb0-7e2b6581aa36 method=GET status=200 elapsed_ms=3.0
+request_id=dc114774-3092-4525-905c-7b3f0742d6ee method=GET status=200 elapsed_ms=2.3
+request_id=2ddd649f-cde6-494f-b1aa-70ab2728adff method=GET status=200 elapsed_ms=2.4
+request_id=d1d5af6e-3a99-43b8-8180-f67cae174f57 method=GET status=200 elapsed_ms=4.2
+request_id=a52e4108-e335-4b2b-97a3-aa09a4c5ca55 method=GET status=200 elapsed_ms=2.9
+request_id=c478dbbe-901d-4533-a685-b3205fc6ed82 method=GET status=200 elapsed_ms=6.2
+request_id=65e71870-784c-4ae2-b1fa-91f4e258d368 method=GET status=200 elapsed_ms=5.3
+request_id=f8ad6e3e-bf8e-4a70-a425-e46c6a3d2a83 method=GET status=200 elapsed_ms=6.9
+request_id=ce7955ff-bcb0-49e1-a826-d572628a62bf method=GET status=200 elapsed_ms=6.4
+request_id=de7cca94-5486-44b6-8233-f587b61c5e0f method=GET status=200 elapsed_ms=3.3
+request_id=fe3e6341-32c1-4a59-b6de-c4b9ce19453e method=GET status=200 elapsed_ms=3.6
+request_id=353a1f17-1a1a-4eb6-b92d-f0c04695f7e6 method=GET status=200 elapsed_ms=5.4
+request_id=1333761f-e1df-464f-99b4-eaed2d66a4e7 method=GET status=200 elapsed_ms=4.7
+request_id=d7e2c137-2da7-4b18-8718-71e737bb5050 method=GET status=200 elapsed_ms=3.3
+request_id=1f4bd0ef-6fa4-4185-8fbf-07fd2669e556 method=GET status=200 elapsed_ms=2.3
+request_id=3d5125b1-dd5c-44df-9118-5e40366334de method=GET status=200 elapsed_ms=3.9
+request_id=0656b677-fd45-40ce-98f9-e1cc94f65434 method=GET status=200 elapsed_ms=3.4
+request_id=99f0e705-070c-45dc-81a0-5e1a08a36055 method=GET status=200 elapsed_ms=2.6
+request_id=d9871566-cc62-40a9-bd56-edb966b209da method=GET status=200 elapsed_ms=1.9
+request_id=d1cfa3d2-74da-4f05-8ebf-c34a43f98e52 method=GET status=200 elapsed_ms=5.4
+request_id=f668526a-11fb-45de-a780-91a97866ac10 method=GET status=200 elapsed_ms=2.3
+request_id=e5a5d161-ed22-4fed-a146-a21292af654f method=GET status=200 elapsed_ms=2.5
+request_id=0387de5c-abe3-4402-89bc-b1a144b384db method=GET status=200 elapsed_ms=1.7
+request_id=88c3236b-2ac3-4e06-84d5-681029cbc919 method=GET status=200 elapsed_ms=6.8
+request_id=26117381-fe80-4547-9e38-ecd810dcc260 method=GET status=200 elapsed_ms=5.6
+request_id=fb4f65c0-c6a2-47f2-bbd1-d1d5050310e9 method=GET status=206 elapsed_ms=6.6
+request_id=6f241609-c5ec-45f1-ac84-55893d6c908f method=GET status=206 elapsed_ms=7.1
+request_id=2c9fd369-511d-474e-ba89-bae750343fbd method=GET status=206 elapsed_ms=5.5
+request_id=e37f74c7-3224-4d55-aea7-e31969ca4f29 method=GET status=206 elapsed_ms=4.5
+request_id=787be3df-fc43-460f-bcbf-2909ecedef9d method=GET status=200 elapsed_ms=3.1
+request_id=1b0f83f3-7de0-4ad8-8d2a-283df83700b4 method=GET status=200 elapsed_ms=4.7
+request_id=f9dfc5d9-1519-44e4-ba33-d76cb17443e5 method=GET status=200 elapsed_ms=4.2
+Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:/Users/<user>\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:/Users/<user>\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:/Users/<user>\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:/Users/<user>\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+request_id=a01b8e94-94dd-45b8-b5fe-5800ff0421a4 method=GET status=200 elapsed_ms=5.3
+request_id=609232a3-5144-4141-8e46-ba31ac6f1ecc method=GET status=200 elapsed_ms=5.5
+request_id=59958036-81b3-4709-90ba-052b6e79d0e5 method=GET status=200 elapsed_ms=5.0
+request_id=bf794259-7d29-462a-b2bb-a169fc511370 method=GET status=200 elapsed_ms=5.2
+request_id=d54771e1-9cfb-481d-a9aa-2d401a2c16d4 method=GET status=200 elapsed_ms=4.1
+request_id=ac76f41e-c126-4b6b-9bf0-30870ef76c6a method=GET status=200 elapsed_ms=2.1
+request_id=21af98d5-d276-4caa-aef1-9e90ea947584 method=GET status=200 elapsed_ms=4.3
+request_id=4fcde5e9-d07a-413e-8000-95216af9aad4 method=GET status=200 elapsed_ms=4.3
+request_id=3a6bd933-99e0-4506-b9b0-7134d9aa015c method=GET status=200 elapsed_ms=3.8
+request_id=164331d6-1286-472a-af4a-0a9fdd16fdd4 method=GET status=200 elapsed_ms=1.8
+request_id=e251b9a5-5fb8-42c9-a6dc-63f0124b1a52 method=GET status=200 elapsed_ms=1.3
+request_id=c4814baf-c200-4ee0-bd76-1da1398c01e5 method=GET status=200 elapsed_ms=4.7
+request_id=9d5d5913-dc3e-4e59-9f7d-803f253f23fc method=GET status=200 elapsed_ms=5.2
+request_id=0a490f87-8370-4953-bd4e-5e85cea35b03 method=GET status=200 elapsed_ms=2.3
+request_id=23487360-a15d-4608-b48a-bba020761d24 method=GET status=200 elapsed_ms=5.1
+request_id=5ffa1a0f-eb42-4b9f-834b-cfac37e89894 method=GET status=200 elapsed_ms=4.8
+request_id=3fd08104-d6da-4b78-8c3f-bc368980ffcb method=GET status=200 elapsed_ms=4.3
+request_id=c72f9d9b-73c8-4ebe-b36a-42f50c143119 method=GET status=200 elapsed_ms=3.0
+request_id=d6eded73-bcf8-4d45-b3bd-0f9f46cdd054 method=GET status=200 elapsed_ms=4.6
+request_id=bcdfef5e-2e13-4e16-acb7-9efc02fbca9d method=GET status=200 elapsed_ms=3.3
+request_id=859b346d-8341-436f-b1fa-9d6f6e459df0 method=GET status=200 elapsed_ms=3.8
+request_id=d6720c12-b8c0-4991-8e32-708bb6eada73 method=GET status=200 elapsed_ms=5.1
+request_id=acd49583-a4dd-4915-9a6e-473423262dce method=GET status=200 elapsed_ms=1.7
+request_id=81a28a64-a0b0-4f42-9bce-589f96f3ad63 method=GET status=200 elapsed_ms=5.0
+request_id=1cc2b62b-ad3c-4692-ba78-304920f9bcc7 method=GET status=200 elapsed_ms=2.0
+request_id=064615b5-9b76-48dc-9fa5-1d6bf856082d method=GET status=200 elapsed_ms=6.7
+request_id=21b7fc4e-b755-4c97-8d7e-3927459db2a5 method=GET status=200 elapsed_ms=5.7
+request_id=13e4634a-fe73-4754-adf8-7b45134bc6e4 method=GET status=200 elapsed_ms=5.2
+request_id=1a7d986c-eb90-430e-ac53-548699a117af method=GET status=200 elapsed_ms=3.4
+request_id=8f268938-e3d5-4074-9511-fcc3921a13eb method=GET status=200 elapsed_ms=5.0
+request_id=829f85cf-7d2a-440f-9790-2c4ec1f7c638 method=GET status=200 elapsed_ms=4.0
+request_id=dada8a52-fe1b-438f-8a27-bb8d7b51c3c1 method=GET status=200 elapsed_ms=2.6
+request_id=8564a9e8-aae3-4be3-aae7-6b8b92044067 method=GET status=200 elapsed_ms=2.4
+request_id=1e562c9f-6448-4be2-adb1-76995c09451f method=GET status=200 elapsed_ms=4.2
+request_id=7c9a89f8-cf3c-4ff8-ade6-ef85e6936bc2 method=GET status=200 elapsed_ms=2.8
+request_id=b6c2dadd-6ed8-43bf-a35c-fd079fa668b4 method=GET status=200 elapsed_ms=5.3
+request_id=4ba9003a-1cd2-47ac-9939-64433a82d3c4 method=GET status=200 elapsed_ms=18.4
+request_id=aac91d82-8378-4547-bf3e-4784d6f02901 method=GET status=200 elapsed_ms=4.9
+request_id=f4d7af27-bf5a-4137-8660-ca72171bceaf method=GET status=200 elapsed_ms=4.1
+request_id=d3985a36-e877-42a3-8f5e-6c9376aa118e method=GET status=200 elapsed_ms=2.3
+request_id=862cca06-c96d-48d2-ac86-48d642cbf4a4 method=GET status=200 elapsed_ms=3.5
+request_id=e2ce3088-aefe-4d10-99aa-487e43c68f75 method=GET status=200 elapsed_ms=2.4
+request_id=f993e95e-5216-4c80-8a73-0c55405f5fd2 method=GET status=200 elapsed_ms=2.8
+request_id=d3d28ef5-03c2-46c1-87b7-12ef51a0e399 method=GET status=200 elapsed_ms=2.5
+request_id=129e7b94-8702-457c-bcae-318a94eaadba method=GET status=200 elapsed_ms=1.8
+request_id=8f4e33cd-5fe8-4aae-8d0a-ffa96c2ed71d method=GET status=200 elapsed_ms=1.7
+request_id=3e149c21-1986-485e-8b8b-50f6d3d6dfc5 method=GET status=200 elapsed_ms=11.6

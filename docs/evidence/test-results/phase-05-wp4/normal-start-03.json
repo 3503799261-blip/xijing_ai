@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-21T12:12:50.722607+00:00",
+  "command": [
+    "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe",
+    "-m",
+    "uvicorn",
+    "backend.app.main:app",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8000",
+    "--workers",
+    "1"
+  ],
+  "cwd": "D:\\京剧\\京剧",
+  "launcherPid": 46160,
+  "networkPolicy": "process-local audit denies external DNS/connect; no production config changed",
+  "consoleCtrlCEnabled": true,
+  "checks": [],
+  "httpReady": false,
+  "readySeconds": 91.783,
+  "elapsedSeconds": 91.783
+}

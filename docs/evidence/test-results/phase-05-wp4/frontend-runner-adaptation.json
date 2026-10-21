@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "scope": "Only private runner description and new run-root prefix changed; production guards unchanged",
+  "sourceHash": "B9811936A2C7DD0CB5FF94D2F944B9855813EAA73C5E6F5AB9C33E964774F11A",
+  "adapterHash": "E54CEB00EF419F085DC26232310FCAA5F20B02BEC5D538EC0780F0718DAB9006"
+}

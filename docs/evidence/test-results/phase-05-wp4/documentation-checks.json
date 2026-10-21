@@ -1,0 +1,5083 @@
+{
+  "at": "2026-10-21T12:33:15.063886+00:00",
+  "scope": "Documentation/archive checks, not application tests; pattern scan is not a guarantee against every unknown secret.",
+  "checks": [
+    {
+      "name": "archive-copy-count",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:before-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:before-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:after-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:knowledge-before.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:knowledge-after.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:configuration-presence.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:environment-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-copy-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:initial-stop.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-stop-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-stop-03-sandbox.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-stop-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-stop-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:http-helper-initial-failure.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:http-before-restart-retest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:http-after-restart.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:http-isolated-restored.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:http-normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:http-normal-restart-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:cold-install-attempt02-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:cold-install-attempt03-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:cold-env-attempt03-runtime-verification.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:cold-install-attempt01-ensurepip-diagnostic.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:cold-install-attempt02-venv.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:cold-install-attempt03-pip.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:cold-install-attempt03-pip-check.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:cold-install-attempt03-pip-list.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-start-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-start-03-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-start-04-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-start-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:normal-start-05-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:cold-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:cold-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-baseline.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-baseline-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-qdrant-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-qdrant-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-qdrant-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-clean-env.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-clean-env.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:backend-clean-env-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:restored-after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:frontend-qa.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:frontend-agents.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:frontend-history.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:frontend-assets.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:frontend-demo.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:frontend-execution-summary.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:frontend-runner-adaptation.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:guide-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:models-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:models-restart-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:models-cold-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:layout-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:layout-failed-02.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:layout-failed-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:layout-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:touch-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:touch-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:rehearsal.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-probe-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-probe-original.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-probe-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-probe-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase-02-retrieval-wp4-isolated-restored-comparison.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase-02-retrieval-wp4-isolated-restored-hybrid.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase-02-retrieval-wp4-isolated-restored-vector.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-offline-bootstrap.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-prepare.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-install.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-install-attempt02.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-install-attempt03.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-clean-runtime-probe.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-http-check.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-server-control.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-stop-console.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-state.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-provenance.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-layout-matrix.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-touch-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-cold-model-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-rehearsal.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:phase5-wp4-final-inventory.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:models-original-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:models-restart-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:resource-probe-final-helper.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:server-helper-before-console-fix.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "archive-hash:http-helper-initial-failure.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-browser-01/backup-history.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-browser-01/guide-desktop.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-browser-01/guide-mobile.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-browser-01/viewer-error.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-browser-01/viewer-recovered.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-cold-model-browser-01/first-internal-ready.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-cold-model-browser-01/home-1920.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-cold-model-browser-01/same-character-chibi-missing.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-cold-model-browser-01/second-realistic-ready.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/1920x1080-about.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/1920x1080-facial.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/1920x1080-gallery.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/1920x1080-history.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/1920x1080-index.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/1920x1080-music.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/1920x1080-roles.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/1920x1080-video.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/390x844-about.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/390x844-facial.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/390x844-gallery.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/390x844-history.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/390x844-index.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/390x844-music.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/390x844-roles.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/390x844-video.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/768x1024-about.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/768x1024-facial.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/768x1024-gallery.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/768x1024-history.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/768x1024-index.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/768x1024-music.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/768x1024-roles.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-02/768x1024-video.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/1920x1080-about.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/1920x1080-facial.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/1920x1080-gallery.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/1920x1080-history.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/1920x1080-index.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/1920x1080-music.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/1920x1080-roles.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/1920x1080-video.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/390x844-about.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/390x844-facial.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/390x844-gallery.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/390x844-history.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/390x844-index.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/390x844-music.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/390x844-roles.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/390x844-video.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/768x1024-about.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/768x1024-facial.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/768x1024-gallery.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/768x1024-history.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/768x1024-index.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/768x1024-music.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/768x1024-roles.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-03/768x1024-video.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/1920x1080-about.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/1920x1080-facial.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/1920x1080-gallery.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/1920x1080-history.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/1920x1080-index.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/1920x1080-music.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/1920x1080-roles.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/1920x1080-video.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/390x844-about.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/390x844-facial.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/390x844-gallery.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/390x844-history.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/390x844-index.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/390x844-music.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/390x844-roles.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/390x844-video.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/768x1024-about.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/768x1024-facial.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/768x1024-gallery.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/768x1024-history.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/768x1024-index.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/768x1024-music.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/768x1024-roles.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-layout-matrix-04/768x1024-video.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-model-browser-01/first-internal-ready.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-model-browser-01/home-1920.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-model-browser-01/same-character-chibi-missing.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-model-browser-01/second-realistic-ready.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/fault-1.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/fault-2.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/fault-3.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/fault-4.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/normal-1.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/normal-10.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/normal-2.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/normal-3.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/normal-4.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/normal-5.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/normal-6.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/normal-7.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/normal-8.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-rehearsal-01/normal-9.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-restart-model-browser-01/first-internal-ready.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-restart-model-browser-01/home-1920.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-restart-model-browser-01/same-character-chibi-missing.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-restart-model-browser-01/second-realistic-ready.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-touch-browser-01/realistic-mobile-ready.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-touch-browser-02/internal-chibi-mobile-error.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-touch-browser-02/internal-chibi-mobile-ready.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-touch-browser-02/internal-chibi-mobile-recovered.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-touch-browser-02/realistic-mobile-error.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-touch-browser-02/realistic-mobile-ready.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "private-image:phase5-wp4-touch-browser-02/realistic-mobile-recovered.png",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend-final:counts",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend-final:isolation",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend-final:junit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend-clean-env:counts",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend-clean-env:isolation",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend-clean-env:junit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "invariant18tables",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "restored18tables",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "original-and-compatible-files",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "knowledge-and-bge",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "creation-closed",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "paid-call-ledger-unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "quota2of3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "original-prompt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "public-snapshot",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "public-roles",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "public-assistant-phases",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-hidden-records",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-04-final-acceptance.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-05-work-package-01.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-05-work-package-02.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-05-work-package-03.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-05-work-package-04.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/architecture/knowledge-provenance.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/architecture/phase-02-rag.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/architecture/ai-workshop-contracts.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-04-final-acceptance.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-02.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-05-work-package-02.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-03/browser-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/architecture/phase-03-agents.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-03/real-cases-summary.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-04-real-modeling-plan.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-04-final-acceptance.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase4-browser-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-05-wp1-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase4-windows-file-race.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-cached-reproduction-final-hybrid.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-ingest-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-real-lifecycle.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-provider-probe-success.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-frontend-unit.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-final-unit-regression.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-retrieval-final-entity-metadata-same20-comparison.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-answers-rag20-final-hybrid.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-answers-rag20-final-hybrid-assistant-review.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-direct-vs-rag-five.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-browser-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-02-api-usage.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/evidence/test-results/phase-03/api-usage-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-01.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-04-first-internal-modeling.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-04-realistic-preparation.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-04-second-model-approval.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/prompts/phase-04/realistic-model-v1.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-04-second-model-execution.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-01.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-02.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-03.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-04-final-acceptance.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-05-project-audit.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-05-work-package-01.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-05-work-package-02.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/reports/phase-05-work-package-03.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/prompts/phase-01/README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/prompts/phase-02/README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/prompts/phase-03/README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/prompts/phase-04/README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:docs/prompts/phase-05/README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-work-package-04.md:../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-work-package-04.md:../evidence/test-results/phase-05-wp4/after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-work-package-04.md:../evidence/test-results/phase-05-wp4/knowledge-after.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-work-package-04.md:../evidence/test-results/phase-05-wp4/rehearsal.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-work-package-04.md:../../README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-work-package-04.md:../prompts/phase-05/12-wp4-approved-user-request.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-work-package-04.md:../prompts/phase-05/README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/backend-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/backend-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/backend-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/backend-clean-env.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/backend-clean-env.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/frontend-execution-summary.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/resource-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/resource-qdrant-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/resource-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/resource-probe-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-comparison.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/http-isolated-restored.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/http-normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/http-normal-restart-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/guide-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/layout-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/models-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/touch-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/models-cold-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/models-restart-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/rehearsal.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/after-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/knowledge-after.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/initial-stop.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/normal-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/normal-stop-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/normal-start-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/normal-stop-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/normal-start-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/normal-stop-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/cold-install-attempt03-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/cold-env-attempt03-runtime-verification.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/cold-install-attempt02-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/cold-install-attempt01-ensurepip-diagnostic.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/resource-copy-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/restored-after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/resource-probe-original.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/resource-probe-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/rehearsal.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/layout-failed-02.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/layout-failed-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/layout-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/touch-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/http-helper-initial-failure.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/archive-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/screenshot-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/normal-start-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/cold-install-attempt03-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/cold-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/phase5-wp4-prepare.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/resource-probe-final-helper.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/phase5-wp4-state.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/phase5-wp4-http-check.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/phase5-wp4-server-control.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:phase-05-wp4-test-report.md:phase-05-wp4/phase5-wp4-stop-console.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:00-original-user-request.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:01-checkpoint-a-public-conversation.jsonl",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:02-export-metadata.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../reports/phase-05-project-audit.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../reports/phase-05-implementation-proposal.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../reports/phase-05-demo-plan.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../phase-01/00-original-user-request.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../reports/phase-02.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../reports/phase-03.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../reports/phase-04-final-acceptance.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:03-wp1-approved-user-request.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:04-wp1-public-conversation.jsonl",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:05-wp1-export-metadata.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../reports/phase-05-work-package-01.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../evidence/test-results/phase-05-wp1-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:06-wp2-approved-user-request.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:07-wp2-public-conversation.jsonl",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:08-wp2-export-metadata.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../reports/phase-05-work-package-02.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../evidence/test-results/phase-05-wp2-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:09-wp3-approved-user-request.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:10-wp3-public-conversation.jsonl",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:11-wp3-export-metadata.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../reports/phase-05-work-package-03.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../evidence/test-results/phase-05-wp3-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:12-wp4-approved-user-request.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:13-wp4-public-conversation.jsonl",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:14-wp4-export-metadata.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../reports/phase-05-work-package-04.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "link:README.md:../../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:.env.example",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:.env.example",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:.env.example",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:.env.example",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:.env.example",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:backend/app/services/runtime.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:backend/app/services/runtime.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:backend/app/services/runtime.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:backend/app/services/runtime.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:backend/app/services/runtime.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:backend/tests/test_runtime_resources.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:backend/tests/test_runtime_resources.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:backend/tests/test_runtime_resources.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:backend/tests/test_runtime_resources.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:backend/tests/test_runtime_resources.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/after-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/after-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/after-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/after-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/after-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/archive-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/archive-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/archive-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/archive-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/archive-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-baseline-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-baseline-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-baseline-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-baseline-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-baseline-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-baseline.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-baseline.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-baseline.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-baseline.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-baseline.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-clean-env-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-clean-env-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-clean-env-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-clean-env-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-clean-env-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-clean-env.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-clean-env.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-clean-env.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-clean-env.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-clean-env.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-clean-env.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-clean-env.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-clean-env.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-clean-env.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-clean-env.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/backend-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/backend-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/backend-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/backend-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/backend-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/before-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/before-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/before-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/before-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/before-provenance.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/before-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/before-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/before-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/before-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/before-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/cold-env-attempt03-runtime-verification.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/cold-env-attempt03-runtime-verification.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/cold-env-attempt03-runtime-verification.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/cold-env-attempt03-runtime-verification.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/cold-env-attempt03-runtime-verification.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/cold-install-attempt01-ensurepip-diagnostic.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/cold-install-attempt01-ensurepip-diagnostic.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/cold-install-attempt01-ensurepip-diagnostic.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/cold-install-attempt01-ensurepip-diagnostic.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/cold-install-attempt01-ensurepip-diagnostic.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/cold-install-attempt02-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/cold-install-attempt02-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/cold-install-attempt02-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/cold-install-attempt02-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/cold-install-attempt02-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/cold-install-attempt02-venv.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/cold-install-attempt02-venv.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/cold-install-attempt02-venv.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/cold-install-attempt02-venv.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/cold-install-attempt02-venv.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip-check.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip-check.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip-check.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip-check.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip-check.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip-list.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip-list.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip-list.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip-list.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip-list.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-pip.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/cold-install-attempt03-result.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/cold-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/cold-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/cold-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/cold-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/cold-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/cold-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/cold-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/cold-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/cold-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/cold-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/configuration-presence.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/configuration-presence.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/configuration-presence.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/configuration-presence.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/configuration-presence.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/environment-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/environment-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/environment-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/environment-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/environment-baseline.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/frontend-agents.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/frontend-agents.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/frontend-agents.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/frontend-agents.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/frontend-agents.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/frontend-assets.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/frontend-assets.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/frontend-assets.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/frontend-assets.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/frontend-assets.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/frontend-demo.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/frontend-demo.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/frontend-demo.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/frontend-demo.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/frontend-demo.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/frontend-execution-summary.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/frontend-execution-summary.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/frontend-execution-summary.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/frontend-execution-summary.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/frontend-execution-summary.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/frontend-history.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/frontend-history.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/frontend-history.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/frontend-history.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/frontend-history.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/frontend-qa.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/frontend-qa.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/frontend-qa.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/frontend-qa.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/frontend-qa.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/frontend-runner-adaptation.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/frontend-runner-adaptation.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/frontend-runner-adaptation.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/frontend-runner-adaptation.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/frontend-runner-adaptation.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/guide-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/guide-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/guide-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/guide-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/guide-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/http-after-restart.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/http-after-restart.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/http-after-restart.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/http-after-restart.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/http-after-restart.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/http-before-restart-retest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/http-before-restart-retest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/http-before-restart-retest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/http-before-restart-retest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/http-before-restart-retest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/http-helper-initial-failure.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/http-helper-initial-failure.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/http-helper-initial-failure.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/http-helper-initial-failure.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/http-helper-initial-failure.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/http-helper-initial-failure.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/http-helper-initial-failure.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/http-helper-initial-failure.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/http-helper-initial-failure.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/http-helper-initial-failure.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/http-isolated-restored.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/http-isolated-restored.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/http-isolated-restored.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/http-isolated-restored.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/http-isolated-restored.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/http-normal-restart-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/http-normal-restart-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/http-normal-restart-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/http-normal-restart-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/http-normal-restart-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/http-normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/http-normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/http-normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/http-normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/http-normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/initial-stop.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/initial-stop.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/initial-stop.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/initial-stop.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/initial-stop.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/knowledge-after.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/knowledge-after.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/knowledge-after.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/knowledge-after.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/knowledge-after.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/knowledge-before.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/knowledge-before.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/knowledge-before.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/knowledge-before.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/knowledge-before.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/layout-failed-02.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/layout-failed-02.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/layout-failed-02.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/layout-failed-02.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/layout-failed-02.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/layout-failed-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/layout-failed-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/layout-failed-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/layout-failed-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/layout-failed-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/layout-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/layout-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/layout-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/layout-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/layout-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/layout-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/layout-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/layout-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/layout-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/layout-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/models-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/models-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/models-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/models-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/models-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/models-cold-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/models-cold-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/models-cold-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/models-cold-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/models-cold-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/models-original-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/models-original-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/models-original-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/models-original-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/models-original-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/models-restart-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/models-restart-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/models-restart-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/models-restart-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/models-restart-browser.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/models-restart-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/models-restart-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/models-restart-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/models-restart-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/models-restart-check.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-start-01-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-start-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-start-03-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-start-03-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-start-03-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-start-03-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-start-03-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-start-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-start-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-start-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-start-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-start-03.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-start-04-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-start-04-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-start-04-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-start-04-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-start-04-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-start-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-start-05-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-start-05-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-start-05-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-start-05-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-start-05-server-log.redacted.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-start-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-start-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-start-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-start-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-start-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-stop-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-stop-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-stop-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-stop-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-stop-01.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-stop-03-sandbox.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-stop-03-sandbox.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-stop-03-sandbox.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-stop-03-sandbox.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-stop-03-sandbox.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-stop-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-stop-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-stop-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-stop-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-stop-04.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/normal-stop-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/normal-stop-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/normal-stop-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/normal-stop-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/normal-stop-05.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-comparison.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-comparison.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-comparison.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-comparison.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-comparison.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-hybrid.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-hybrid.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-hybrid.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-hybrid.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-hybrid.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-vector.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-vector.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-vector.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-vector.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-vector.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-clean-runtime-probe.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-clean-runtime-probe.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-clean-runtime-probe.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-clean-runtime-probe.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-clean-runtime-probe.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-cold-model-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-cold-model-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-cold-model-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-cold-model-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-cold-model-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-final-inventory.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-final-inventory.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-final-inventory.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-final-inventory.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-final-inventory.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-http-check.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-http-check.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-http-check.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-http-check.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-http-check.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install-attempt02.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install-attempt02.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install-attempt02.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install-attempt02.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install-attempt02.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install-attempt03.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install-attempt03.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install-attempt03.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install-attempt03.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install-attempt03.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-install.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-layout-matrix.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-layout-matrix.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-layout-matrix.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-layout-matrix.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-layout-matrix.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-offline-bootstrap.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-offline-bootstrap.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-offline-bootstrap.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-offline-bootstrap.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-offline-bootstrap.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-prepare.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-prepare.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-prepare.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-prepare.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-prepare.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-provenance.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-provenance.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-provenance.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-provenance.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-provenance.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-rehearsal.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-rehearsal.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-rehearsal.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-rehearsal.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-rehearsal.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-server-control.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-server-control.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-server-control.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-server-control.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-server-control.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-state.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-state.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-state.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-state.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-state.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-stop-console.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-stop-console.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-stop-console.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-stop-console.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-stop-console.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/phase5-wp4-touch-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/phase5-wp4-touch-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/phase5-wp4-touch-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/phase5-wp4-touch-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/phase5-wp4-touch-browser.mjs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/rehearsal.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/rehearsal.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/rehearsal.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/rehearsal.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/rehearsal.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-copy-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-copy-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-copy-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-copy-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-copy-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-final-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-final.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-intermediate-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-intermediate.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-probe-final-helper.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-probe-final-helper.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-probe-final-helper.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-probe-final-helper.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-probe-final-helper.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-probe-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-probe-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-probe-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-probe-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-probe-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-probe-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-probe-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-probe-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-probe-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-probe-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-probe-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-probe-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-probe-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-probe-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-probe-intermediate.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-probe-original.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-probe-original.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-probe-original.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-probe-original.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-probe-original.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-qdrant-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-red-output.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-red.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/resource-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/resource-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/resource-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/resource-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/resource-red.xml",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/restored-after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/restored-after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/restored-after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/restored-after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/restored-after-state.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/screenshot-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/screenshot-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/screenshot-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/screenshot-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/screenshot-manifest.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/server-helper-before-console-fix.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/server-helper-before-console-fix.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/server-helper-before-console-fix.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/server-helper-before-console-fix.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/server-helper-before-console-fix.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/touch-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/touch-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/touch-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/touch-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/touch-final.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/evidence/test-results/phase-05-wp4/touch-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/evidence/test-results/phase-05-wp4/touch-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/evidence/test-results/phase-05-wp4/touch-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/evidence/test-results/phase-05-wp4/touch-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/evidence/test-results/phase-05-wp4/touch-initial.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/prompts/phase-05/12-wp4-approved-user-request.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/prompts/phase-05/12-wp4-approved-user-request.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/prompts/phase-05/12-wp4-approved-user-request.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/prompts/phase-05/12-wp4-approved-user-request.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/prompts/phase-05/12-wp4-approved-user-request.txt",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/prompts/phase-05/13-wp4-public-conversation.jsonl",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/prompts/phase-05/13-wp4-public-conversation.jsonl",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/prompts/phase-05/13-wp4-public-conversation.jsonl",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/prompts/phase-05/13-wp4-public-conversation.jsonl",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/prompts/phase-05/13-wp4-public-conversation.jsonl",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/prompts/phase-05/14-wp4-export-metadata.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/prompts/phase-05/14-wp4-export-metadata.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/prompts/phase-05/14-wp4-export-metadata.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/prompts/phase-05/14-wp4-export-metadata.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/prompts/phase-05/14-wp4-export-metadata.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/prompts/phase-05/README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/prompts/phase-05/README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/prompts/phase-05/README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/prompts/phase-05/README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/prompts/phase-05/README.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "allowed-change:docs/reports/phase-05-work-package-04.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-private-binary:docs/reports/phase-05-work-package-04.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:credential:docs/reports/phase-05-work-package-04.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:bearer:docs/reports/phase-05-work-package-04.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitive-pattern:signed-resource:docs/reports/phase-05-work-package-04.md",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "env-template-values-unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "ancestor:f58888b",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "ancestor:ea0f4fc",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "ancestor:9e3516d",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "ancestor:f8a1f47",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "ancestor:60e1590",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "ancestor:e36c1e5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "ancestor:76dbba0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "ancestor:45d1dcc",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "ancestor:74b3e6e",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "html-unchanged:index.html",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "html-unchanged:history.html",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "html-unchanged:roles.html",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "html-unchanged:facial.html",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "html-unchanged:music.html",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "html-unchanged:gallery.html",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "html-unchanged:video.html",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "html-unchanged:about.html",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "passed": 1015,
+  "failed": 0
+}

@@ -1,0 +1,667 @@
+{
+  "at": "2026-10-21T12:22:23.862506+00:00",
+  "screenshots": [
+    {
+      "privateRuntimePath": "phase5-wp4-browser-01/backup-history.png",
+      "bytes": 296884,
+      "sha256": "f8eff97985c80208148183d21c9d677ac1cb8bdfa9a6e0cecc090db10f046124",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-browser-01/guide-desktop.png",
+      "bytes": 366847,
+      "sha256": "ddd4965cf997be9716b5d60282d177e15fd107bb7128a4f7b2e82dedeff602a5",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-browser-01/guide-mobile.png",
+      "bytes": 93246,
+      "sha256": "2dc1a8395f57f7a6af30aba3f99bacad86f2440e8699d33bb257b6ad475fbc8c",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-browser-01/viewer-error.png",
+      "bytes": 468248,
+      "sha256": "c44f98726ca6ce33b126da62f4f8e08d24d6cfa64a1b100295a8d2e6a4c250b4",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-browser-01/viewer-recovered.png",
+      "bytes": 581276,
+      "sha256": "a41394bb692d6f5f268748788fae8f35ca7ca4fbac039367d5ded2e699f453b9",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-cold-model-browser-01/first-internal-ready.png",
+      "bytes": 356174,
+      "sha256": "a5baa0bf8eb3ff6710a7743ba65922e33d6707686a12f84d369ff00ab53f4c60",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-cold-model-browser-01/home-1920.png",
+      "bytes": 1664520,
+      "sha256": "c91da4919369a9f815de624f684d6f35c11bb787740faa2a63481d1a9256c52d",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-cold-model-browser-01/same-character-chibi-missing.png",
+      "bytes": 408698,
+      "sha256": "afc24941c83193eb1d1511e8360fcfa02d8b9eace48111c3811e36bb421742c1",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-cold-model-browser-01/second-realistic-ready.png",
+      "bytes": 586854,
+      "sha256": "c88ce02f5225a2e8e69cabed1822153dd6e147167752b011a2bd5a1b1dbf9c8a",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/1920x1080-about.png",
+      "bytes": 894948,
+      "sha256": "0d0b871cbb6aabab59dfd63ce031fedd66c3bc9c7086ef1d09003ff5c2555e3d",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/1920x1080-facial.png",
+      "bytes": 1160150,
+      "sha256": "83b1ea3fa09d8aba83e2318a23838d620efd505f64d4636e62db6ad68d8c0745",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/1920x1080-gallery.png",
+      "bytes": 1472892,
+      "sha256": "777e2f49a45ca9174a2c755926e879e46a0a432260ed2e20512923b1b37f5791",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/1920x1080-history.png",
+      "bytes": 1515822,
+      "sha256": "effd2c33cdf35e881b15893354f00d7566f5dbfd0f59d2dc72c558f4ed09443e",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/1920x1080-index.png",
+      "bytes": 1635521,
+      "sha256": "dd00b4541ca88d78ceb2fdfb9d04427ffd96831cc6b30338cb3faef67afe0c47",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/1920x1080-music.png",
+      "bytes": 819546,
+      "sha256": "466866d465ccdceae88f75475a2052c28cfd071647d492331434157824f78fb1",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/1920x1080-roles.png",
+      "bytes": 778216,
+      "sha256": "eafd82105fa7092191005184004cbe8138cddc2ee1602b52d743e8d948514d43",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/1920x1080-video.png",
+      "bytes": 874754,
+      "sha256": "155eb13f4431fa156222199b770320e8acfdc64970a968f462bf97a302889acb",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/390x844-about.png",
+      "bytes": 323280,
+      "sha256": "490e81448d8da7f317a66555ee3516059f260545eeff010247ff3a50d012ec84",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/390x844-facial.png",
+      "bytes": 271288,
+      "sha256": "0d220e120c7e89a5ce0e57591c49d0a7f8ec853ebf48f12f9e1a67f2e540775e",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/390x844-gallery.png",
+      "bytes": 239135,
+      "sha256": "ee1f25032f0b272b3442823f6d8beb3bdd5e0136ef70d9a17a4198e64220482e",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/390x844-history.png",
+      "bytes": 349420,
+      "sha256": "a4d32df1928beaf64d7b372fd49d007ca7a2c2b85ac8b7b079aa89c4b52a692c",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/390x844-index.png",
+      "bytes": 345203,
+      "sha256": "2194db304bdbeb2d7ea610ab0a0e572d1bc83fd110ce15e95ad25a3f1c67c0fd",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/390x844-music.png",
+      "bytes": 199997,
+      "sha256": "a9522f85660e57d52219fc09373d765a7a0aea48fd61a8aad2c0d698f0824646",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/390x844-roles.png",
+      "bytes": 179204,
+      "sha256": "1a8f4d81114dbda9856836a42d68be27dd25d94b66be13c5e2b31c79ee68caaa",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/390x844-video.png",
+      "bytes": 181604,
+      "sha256": "37afdf29594d079f012e444881c6269cd86f1aa7b5f7639e964812ea6ab173f6",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/768x1024-about.png",
+      "bytes": 492175,
+      "sha256": "574527e67b9e5da94d751976cc6fda90b1382468208ce498e902cd0b728ac7ac",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/768x1024-facial.png",
+      "bytes": 638571,
+      "sha256": "abb3ee33fbc81419a348c1e29b259170cb34fc25b708a983b395669b8c70031b",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/768x1024-gallery.png",
+      "bytes": 614048,
+      "sha256": "b1c6714c072112d31d3355280b6cf78bc283bb34e88594263492de7fa494bdf7",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/768x1024-history.png",
+      "bytes": 705587,
+      "sha256": "19740795f7041473496e8b91b97004732b55ce62f1eba5d48feb4a5c85538c16",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/768x1024-index.png",
+      "bytes": 743473,
+      "sha256": "801f43463be9e2830504b5faa314a85c6841bc268f856491e751e7e585ac4998",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/768x1024-music.png",
+      "bytes": 378978,
+      "sha256": "8735124a1705a0666efd62c0cecc2145bc18927ffbb86df62905d7f552bd7ffd",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/768x1024-roles.png",
+      "bytes": 351297,
+      "sha256": "c107424311c0c7407709cd9c3a77fa3bf86cfe907451ee28226c416c81f63425",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-02/768x1024-video.png",
+      "bytes": 372388,
+      "sha256": "a427e1d6a025955518d60b7456f9a89dd179df62da20d388769867391193697e",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/1920x1080-about.png",
+      "bytes": 894948,
+      "sha256": "0d0b871cbb6aabab59dfd63ce031fedd66c3bc9c7086ef1d09003ff5c2555e3d",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/1920x1080-facial.png",
+      "bytes": 1159145,
+      "sha256": "8ec25d5b9a3cc2ad95094c62697e8e9712531728d49847f6d0c17c70881d789b",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/1920x1080-gallery.png",
+      "bytes": 1472708,
+      "sha256": "b67f9ba4fafb6559f2c7b249889aaa86efbb3149b7b4fa2debe8e5625fc87afd",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/1920x1080-history.png",
+      "bytes": 1518031,
+      "sha256": "aba3f1e1b2ab0c2c32b02fd2fbc5e3ba7b375f3c31b9593b2af00a35398b778b",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/1920x1080-index.png",
+      "bytes": 1642137,
+      "sha256": "ceee6c4a48b26b2ed6ef75154d3726d2cbcb9dbfe3d9d75f31076c2cd6ced33e",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/1920x1080-music.png",
+      "bytes": 819546,
+      "sha256": "466866d465ccdceae88f75475a2052c28cfd071647d492331434157824f78fb1",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/1920x1080-roles.png",
+      "bytes": 781130,
+      "sha256": "741f212f51657c0b972498d5570592d85f266596d16056658c1d426ca61d554f",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/1920x1080-video.png",
+      "bytes": 874810,
+      "sha256": "f78a3f86237cec26af589c55fa2f40faad6918d3163ded43d063074d3c7aac07",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/390x844-about.png",
+      "bytes": 323056,
+      "sha256": "154a9728918ce0da031ac3bab8f54998e5bdae8c2333411a312948eaa3271967",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/390x844-facial.png",
+      "bytes": 273292,
+      "sha256": "ead33da9f7cd9f7be43d9c557313e1e5ff50c57c4eb04c668e111fd68f616871",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/390x844-gallery.png",
+      "bytes": 239471,
+      "sha256": "95a05bf0ec4d2827f3efa45ebbf52632c569526489f8af6c804a994058671340",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/390x844-history.png",
+      "bytes": 349420,
+      "sha256": "a4d32df1928beaf64d7b372fd49d007ca7a2c2b85ac8b7b079aa89c4b52a692c",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/390x844-index.png",
+      "bytes": 337934,
+      "sha256": "15c55a6b00605511f3cbce6c8feaf5bf6720fd5234ac6272114554c9967dd5ea",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/390x844-music.png",
+      "bytes": 199997,
+      "sha256": "a9522f85660e57d52219fc09373d765a7a0aea48fd61a8aad2c0d698f0824646",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/390x844-roles.png",
+      "bytes": 179204,
+      "sha256": "1a8f4d81114dbda9856836a42d68be27dd25d94b66be13c5e2b31c79ee68caaa",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/390x844-video.png",
+      "bytes": 181604,
+      "sha256": "37afdf29594d079f012e444881c6269cd86f1aa7b5f7639e964812ea6ab173f6",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/768x1024-about.png",
+      "bytes": 493583,
+      "sha256": "b4f3df2a305d31ad3824c5882482d6ea82c0cf0d27ef31f6fcbbc1c086a96633",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/768x1024-facial.png",
+      "bytes": 638571,
+      "sha256": "abb3ee33fbc81419a348c1e29b259170cb34fc25b708a983b395669b8c70031b",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/768x1024-gallery.png",
+      "bytes": 614551,
+      "sha256": "b065e7e55340f8e99c35ea787a76643cf18b32ddf78841c311c7878c124e8329",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/768x1024-history.png",
+      "bytes": 705587,
+      "sha256": "19740795f7041473496e8b91b97004732b55ce62f1eba5d48feb4a5c85538c16",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/768x1024-index.png",
+      "bytes": 736872,
+      "sha256": "3f79e289175b0591d36a7789fa60e0021404f37acc2cd6da73c53ce807172fb1",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/768x1024-music.png",
+      "bytes": 379286,
+      "sha256": "b4b304fbdf163de54f372e669da9c7cc2e148d35c37447d3da79ada695237d20",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/768x1024-roles.png",
+      "bytes": 351297,
+      "sha256": "c107424311c0c7407709cd9c3a77fa3bf86cfe907451ee28226c416c81f63425",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-03/768x1024-video.png",
+      "bytes": 372388,
+      "sha256": "a427e1d6a025955518d60b7456f9a89dd179df62da20d388769867391193697e",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/1920x1080-about.png",
+      "bytes": 894948,
+      "sha256": "0d0b871cbb6aabab59dfd63ce031fedd66c3bc9c7086ef1d09003ff5c2555e3d",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/1920x1080-facial.png",
+      "bytes": 1160150,
+      "sha256": "83b1ea3fa09d8aba83e2318a23838d620efd505f64d4636e62db6ad68d8c0745",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/1920x1080-gallery.png",
+      "bytes": 1471406,
+      "sha256": "ce7ae4b8d83692c8bd6a4cb3b8f7e2b72cfd2b5a9eca2b0d49dff6e0d6095062",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/1920x1080-history.png",
+      "bytes": 1518031,
+      "sha256": "aba3f1e1b2ab0c2c32b02fd2fbc5e3ba7b375f3c31b9593b2af00a35398b778b",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/1920x1080-index.png",
+      "bytes": 1649492,
+      "sha256": "aa8ba00bded91eb52b7bac0dfceb9cf722341304cfcb88d5e4cedd4940107736",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/1920x1080-music.png",
+      "bytes": 819550,
+      "sha256": "2924913f64931fc0ea2765ac3e9351df74e4a0c05ea9569ec26250e81b7eb2dd",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/1920x1080-roles.png",
+      "bytes": 778216,
+      "sha256": "eafd82105fa7092191005184004cbe8138cddc2ee1602b52d743e8d948514d43",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/1920x1080-video.png",
+      "bytes": 874754,
+      "sha256": "155eb13f4431fa156222199b770320e8acfdc64970a968f462bf97a302889acb",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/390x844-about.png",
+      "bytes": 323056,
+      "sha256": "154a9728918ce0da031ac3bab8f54998e5bdae8c2333411a312948eaa3271967",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/390x844-facial.png",
+      "bytes": 273292,
+      "sha256": "ead33da9f7cd9f7be43d9c557313e1e5ff50c57c4eb04c668e111fd68f616871",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/390x844-gallery.png",
+      "bytes": 239263,
+      "sha256": "1d65e8eec88821a392afc4a44c5bd60e33039723eaa05bce2c84101f9fbe5bc7",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/390x844-history.png",
+      "bytes": 351514,
+      "sha256": "5c0f40a7c9c439f9ca801d5d0f79ad4ac57f437087d5ac6bc3b8f54fcfd2a216",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/390x844-index.png",
+      "bytes": 341870,
+      "sha256": "442e8a6a1db96df94d4afae93776ae02de5e9bcc59fa096697f6453a5d935a54",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/390x844-music.png",
+      "bytes": 200158,
+      "sha256": "8d2b1d186636a454ad00874f9f18baa5fd00a34e5fb617fb5d824dfb2ab33add",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/390x844-roles.png",
+      "bytes": 179204,
+      "sha256": "1a8f4d81114dbda9856836a42d68be27dd25d94b66be13c5e2b31c79ee68caaa",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/390x844-video.png",
+      "bytes": 181604,
+      "sha256": "37afdf29594d079f012e444881c6269cd86f1aa7b5f7639e964812ea6ab173f6",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/768x1024-about.png",
+      "bytes": 492175,
+      "sha256": "574527e67b9e5da94d751976cc6fda90b1382468208ce498e902cd0b728ac7ac",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/768x1024-facial.png",
+      "bytes": 638592,
+      "sha256": "2acac0cab9545171aacda033925451420d0a0efbd780f6bed35932701d3d10d2",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/768x1024-gallery.png",
+      "bytes": 614960,
+      "sha256": "5ead0e2b2681a20c0e785ce7da2043c7e0a49b2dec93a4b51b8845d8a82653b4",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/768x1024-history.png",
+      "bytes": 702292,
+      "sha256": "89ecb7c8733545c9d15dbec78b2a40ec7012bfa4a2aca83aa1a810123fd3a6cc",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/768x1024-index.png",
+      "bytes": 749677,
+      "sha256": "e1565899d2ddf96fd0417c047438b8d444b959c5a0dd3d341f600b8d7b6bb04e",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/768x1024-music.png",
+      "bytes": 378978,
+      "sha256": "8735124a1705a0666efd62c0cecc2145bc18927ffbb86df62905d7f552bd7ffd",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/768x1024-roles.png",
+      "bytes": 351297,
+      "sha256": "c107424311c0c7407709cd9c3a77fa3bf86cfe907451ee28226c416c81f63425",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-layout-matrix-04/768x1024-video.png",
+      "bytes": 372388,
+      "sha256": "a427e1d6a025955518d60b7456f9a89dd179df62da20d388769867391193697e",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-model-browser-01/first-internal-ready.png",
+      "bytes": 356174,
+      "sha256": "a5baa0bf8eb3ff6710a7743ba65922e33d6707686a12f84d369ff00ab53f4c60",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-model-browser-01/home-1920.png",
+      "bytes": 1833233,
+      "sha256": "451590bea74a76daa9f4a8c8202d2730712ab344c0d97cb03d4764409535635e",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-model-browser-01/same-character-chibi-missing.png",
+      "bytes": 408698,
+      "sha256": "afc24941c83193eb1d1511e8360fcfa02d8b9eace48111c3811e36bb421742c1",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-model-browser-01/second-realistic-ready.png",
+      "bytes": 586394,
+      "sha256": "83e7bfb6aa5a69249a1408690679548a3afe0dbdaf0a2fd45b04027242ab66df",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/fault-1.png",
+      "bytes": 302849,
+      "sha256": "56418ae452ad33a4a2440dd5fade8b8413315259b8a280b8048e75419922ec93",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/fault-2.png",
+      "bytes": 309636,
+      "sha256": "f1ddec255b24ea8d5492e7f0f3038b4e95feafce21db13d5cc795cf5b12cf3d1",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/fault-3.png",
+      "bytes": 581277,
+      "sha256": "7f0cff33db6f7326729514eefb5e4ad494c2a3f06a52d5e4dfa27acbeeffb40a",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/fault-4.png",
+      "bytes": 318618,
+      "sha256": "4b8352135edb54764348b4f2840bd471fe2a79e2acad28af6d5013e2562e16c5",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/normal-1.png",
+      "bytes": 1835397,
+      "sha256": "d97168c69999310fb564120b280f3d33fca9510900c1b0dc84b8d81057d015de",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/normal-10.png",
+      "bytes": 339824,
+      "sha256": "bbeeecd761c72f68f065d737b8df621f6657663fe4f5c0623ebc182a6994a232",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/normal-2.png",
+      "bytes": 342249,
+      "sha256": "ad70ff072f6a34fadc79f0b6de88b2e3b84111f8f5b2497f034227ef57f228dc",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/normal-3.png",
+      "bytes": 164614,
+      "sha256": "e125aba79d091b1cdc312bb1f83e3a8635e56344c3d8ad53de0dda4b0718501a",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/normal-4.png",
+      "bytes": 268391,
+      "sha256": "b0ae8540f9520809fd95a5ae6b8903296d249311600fc782eaf0917038cb4af0",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/normal-5.png",
+      "bytes": 266262,
+      "sha256": "673268aa873b1c40f7d2d5de04ba7b9a72fe496c41877bd1978e67b73fa88360",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/normal-6.png",
+      "bytes": 356110,
+      "sha256": "e7e5736ac5cb6f4d30a6b2c1daf83166bde903c4289811fd6bdb923bcbc402c2",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/normal-7.png",
+      "bytes": 581276,
+      "sha256": "a41394bb692d6f5f268748788fae8f35ca7ca4fbac039367d5ded2e699f453b9",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/normal-8.png",
+      "bytes": 586854,
+      "sha256": "c88ce02f5225a2e8e69cabed1822153dd6e147167752b011a2bd5a1b1dbf9c8a",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-rehearsal-01/normal-9.png",
+      "bytes": 404625,
+      "sha256": "e9ec3e877b4f0dfe2a5094bc49ae574137ba52c9b69215ad631b962fd10f2209",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-restart-model-browser-01/first-internal-ready.png",
+      "bytes": 356174,
+      "sha256": "a5baa0bf8eb3ff6710a7743ba65922e33d6707686a12f84d369ff00ab53f4c60",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-restart-model-browser-01/home-1920.png",
+      "bytes": 1809592,
+      "sha256": "710352c13981aa0a15794cb9d32d3c9a90b3ee6fb59130afcdccf66d11c4097a",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-restart-model-browser-01/same-character-chibi-missing.png",
+      "bytes": 408698,
+      "sha256": "afc24941c83193eb1d1511e8360fcfa02d8b9eace48111c3811e36bb421742c1",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-restart-model-browser-01/second-realistic-ready.png",
+      "bytes": 586854,
+      "sha256": "c88ce02f5225a2e8e69cabed1822153dd6e147167752b011a2bd5a1b1dbf9c8a",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-touch-browser-01/realistic-mobile-ready.png",
+      "bytes": 205706,
+      "sha256": "bf46c4dabc2b0020ee64beb6d1931d4c3b0b51468dd88132fd7f219bccadea0e",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-touch-browser-02/internal-chibi-mobile-error.png",
+      "bytes": 25894,
+      "sha256": "b657b4a9ce93bbdb82d7b1fa59a611ab771832dcb8d3ea2b4db4776394c49026",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-touch-browser-02/internal-chibi-mobile-ready.png",
+      "bytes": 183118,
+      "sha256": "9799dfd1b1eb8329bc866d3930796414a6b25c5164fb0520aca0f6909d466d1b",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-touch-browser-02/internal-chibi-mobile-recovered.png",
+      "bytes": 196251,
+      "sha256": "17f57b1a157967e630b0348d680d1b6cc3e718c45b8f0e7a030ea50389bb0194",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-touch-browser-02/realistic-mobile-error.png",
+      "bytes": 223006,
+      "sha256": "c7e36119165f3ce6cae9bc0be9affe83dd845da87e82135550812ebef7f36fb4",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-touch-browser-02/realistic-mobile-ready.png",
+      "bytes": 205706,
+      "sha256": "bf46c4dabc2b0020ee64beb6d1931d4c3b0b51468dd88132fd7f219bccadea0e",
+      "publiclyDistributed": false
+    },
+    {
+      "privateRuntimePath": "phase5-wp4-touch-browser-02/realistic-mobile-recovered.png",
+      "bytes": 169643,
+      "sha256": "a602943d861f80a0fddebd606e13964e1b6fb32e3528d9be64d2128e998f699f",
+      "publiclyDistributed": false
+    }
+  ],
+  "count": 110,
+  "note": "Actual private screenshots; Q model rights remain internal-only. No binary assets copied to Git."
+}

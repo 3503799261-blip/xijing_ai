@@ -1,0 +1,95 @@
+{
+  "status": "completed",
+  "metadata": {
+    "executionStartedAt": "2026-10-20T20:41:11.147365+08:00",
+    "runLabel": "wp4-isolated-restored",
+    "evaluationKind": "local_embedding_retrieval_candidates",
+    "annotationScope": "assistant_source_checked_candidate",
+    "humanGoldLabels": false,
+    "llmProviderInvoked": false,
+    "topK": 5,
+    "modeOrder": "alternating per question, after one vector warmup; model loading excluded from per-query latency",
+    "thresholdSource": "Settings.retrieval_min_score",
+    "parameterSelectionDisclosure": "Threshold reruns on questions used for parameter selection are diagnostics, not independent validation.",
+    "questionSetFile": "questions.json",
+    "scriptSHA256": "f40268ce5eb64e5fe31bdc8b699fe5f056f4e8b2db0279d808f51bf61079fafb",
+    "pythonVersion": "3.11.1",
+    "dependencies": {
+      "sentence-transformers": "6.1.0",
+      "torch": "2.11.0",
+      "qdrant-client": "1.19.1",
+      "pydantic-settings": "2.15.0"
+    },
+    "questionSetSHA256": "9734e4e6484c3450e2177d91602c19e11501e3611faa82d65cc26d99e155ed1d",
+    "threshold": 0.57,
+    "modelAndIndexLoadSeconds": 10.537514,
+    "index": {
+      "generation_id": "gen-20261010T104704-f628d57b",
+      "corpus_hash": "12a8e8511e6e6c46b887442fbea1833dd577d996b42aa4122f032b706056f934",
+      "documents": 12,
+      "chunks": 35,
+      "model_id": "BAAI/bge-small-zh-v1.5",
+      "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+      "dimension": 512,
+      "distance": "Cosine",
+      "review_scope": "assistant source-checked original facts; human review pending"
+    },
+    "annotationIndexIssues": [],
+    "warmupSeconds": 0.018215,
+    "executionFinishedAt": "2026-10-20T20:41:22.127996+08:00"
+  },
+  "summaries": {
+    "vector": {
+      "metricScope": "Assistant source-checked candidate annotations; not human gold Recall@5 or answer correctness.",
+      "questionCount": 20,
+      "completedCount": 20,
+      "failedCount": 0,
+      "supportedCandidateCount": 18,
+      "insufficientCandidateCount": 2,
+      "candidateEvidenceCoverageAt5Macro": 0.9861111111111112,
+      "candidateEvidenceCoverageAt5Micro": 0.9629629629629629,
+      "candidateSourceCoverageAt5Macro": 1.0,
+      "allCandidateSectionsFoundCount": 17,
+      "anyCandidateSectionFoundCount": 18,
+      "candidateInsufficiencyAgreement": 1,
+      "supportedCandidatesWithoutEvidence": [],
+      "insufficientCandidatesWithAcceptedEvidence": [],
+      "candidateEvidenceMissingQuestions": [
+        "opera-q04"
+      ],
+      "canonicalEvidenceIntegrityRate": 1.0,
+      "canonicalEvidenceChecks": 46,
+      "meanRetrievalSeconds": 0.008964999999999999,
+      "minRetrievalSeconds": 0.0073,
+      "maxRetrievalSeconds": 0.0106
+    },
+    "hybrid": {
+      "metricScope": "Assistant source-checked candidate annotations; not human gold Recall@5 or answer correctness.",
+      "questionCount": 20,
+      "completedCount": 20,
+      "failedCount": 0,
+      "supportedCandidateCount": 18,
+      "insufficientCandidateCount": 2,
+      "candidateEvidenceCoverageAt5Macro": 1.0,
+      "candidateEvidenceCoverageAt5Micro": 1.0,
+      "candidateSourceCoverageAt5Macro": 1.0,
+      "allCandidateSectionsFoundCount": 18,
+      "anyCandidateSectionFoundCount": 18,
+      "candidateInsufficiencyAgreement": 1,
+      "supportedCandidatesWithoutEvidence": [],
+      "insufficientCandidatesWithAcceptedEvidence": [],
+      "candidateEvidenceMissingQuestions": [],
+      "canonicalEvidenceIntegrityRate": 1.0,
+      "canonicalEvidenceChecks": 63,
+      "meanRetrievalSeconds": 0.010285,
+      "minRetrievalSeconds": 0.0085,
+      "maxRetrievalSeconds": 0.0151
+    }
+  },
+  "reports": {
+    "vector": "phase-02-retrieval-wp4-isolated-restored-vector.json",
+    "hybrid": "phase-02-retrieval-wp4-isolated-restored-hybrid.json"
+  },
+  "latencyLimitation": "Local CPU timing for this run; alternating order reduces but does not eliminate warm/cache effects. No LLM latency or API charges are measured.",
+  "hybridMinusVectorCandidateCoverageAt5": 0.01388888888888884
+}

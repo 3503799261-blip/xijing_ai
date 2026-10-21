@@ -1,0 +1,39 @@
+{
+  "kind": "OFFLINE_TEST_PROCESS_ISOLATION",
+  "pytestReturned": true,
+  "pytestExitCode": 1,
+  "bootstrapExitCode": 1,
+  "runnerError": null,
+  "scope": "Explicit test doubles and temporary stores only; not live provider or browser evidence.",
+  "isolation": {
+    "freshProcess": true,
+    "emptyPrivateEnv": true,
+    "emptyProviderKeys": true,
+    "realGenerationDisabled": true,
+    "temporaryRagAndModelPaths": true,
+    "moduleLevelAppIsolatedBeforeCollection": true,
+    "canonicalLedgerPathsAgreeInsideRunRoot": true,
+    "realHttpTransportsDenied": true,
+    "mockTransportsPermitted": true,
+    "productionFilesAndSqliteGuarded": true,
+    "externalPytestPluginAutoloadDisabled": true
+  },
+  "passed": 12,
+  "failedReports": 2,
+  "skippedReports": 0,
+  "collectionErrors": 0,
+  "failedNodes": [
+    "backend/tests/test_runtime_resources.py::test_missing_resources_rejected_before_any_knowledge_constructor[vector_storage-VECTOR_INDEX_MISSING]",
+    "backend/tests/test_runtime_resources.py::test_missing_qdrant_collection_declaration_is_rejected_before_constructors"
+  ],
+  "auditCounts": {
+    "blockedFileAccess": 0,
+    "blockedSqlite": 0,
+    "blockedRealHttp": 0
+  },
+  "guardDiagnostics": [],
+  "outputs": {
+    "junit": "pytest.xml",
+    "terminal": "pytest-output.redacted.txt"
+  }
+}

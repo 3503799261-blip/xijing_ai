@@ -1,0 +1,887 @@
+{
+  "checkedAtUtc": "2026-10-21T12:19:31.986467+00:00",
+  "readOnly": true,
+  "credentialFilesRead": false,
+  "httpRequests": 0,
+  "kind": "WP4_PERSISTENCE_PROVENANCE_AND_ORIGINALS",
+  "taskInventory": [
+    {
+      "taskId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.001616
+        },
+        {
+          "agentId": "designer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.005182
+        },
+        {
+          "agentId": "reviewer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.003654
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": true,
+      "cultureReviewSaved": true,
+      "reviewVerdict": "pass",
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 11,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher",
+        "designer",
+        "reviewer"
+      ]
+    },
+    {
+      "taskId": "ecf0770b-f059-492d-9028-86cbebaa66d3",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0012771199999999999
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 7,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher"
+      ]
+    },
+    {
+      "taskId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+      "state": "cancelled",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00137912
+        },
+        {
+          "agentId": "designer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00422024
+        },
+        {
+          "agentId": "reviewer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00300112
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": true,
+      "cultureReviewSaved": true,
+      "reviewVerdict": "pass",
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 12,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher",
+        "designer",
+        "reviewer"
+      ]
+    },
+    {
+      "taskId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+      "state": "failed",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0012771199999999999
+        },
+        {
+          "agentId": "designer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00343824
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": false,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": false,
+      "humanAccepted": false,
+      "eventCount": 9,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher"
+      ]
+    },
+    {
+      "taskId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0012391199999999998
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 7,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher"
+      ]
+    },
+    {
+      "taskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "state": "completed",
+      "sourceCategory": "persisted_creation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0014631199999999998
+        },
+        {
+          "agentId": "designer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.004476239999999999
+        },
+        {
+          "agentId": "reviewer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0029322399999999996
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": true,
+      "cultureReviewSaved": true,
+      "reviewVerdict": "pass",
+      "confirmationSaved": true,
+      "humanAccepted": true,
+      "eventCount": 12,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher",
+        "designer",
+        "reviewer"
+      ]
+    },
+    {
+      "taskId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+      "state": "failed",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00156
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": false,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": false,
+      "humanAccepted": false,
+      "eventCount": 5,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": []
+    },
+    {
+      "taskId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0015071199999999998
+        },
+        {
+          "agentId": "designer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.006362
+        },
+        {
+          "agentId": "reviewer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.004502
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": true,
+      "cultureReviewSaved": true,
+      "reviewVerdict": "needs_revision",
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 11,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher",
+        "designer",
+        "reviewer"
+      ]
+    },
+    {
+      "taskId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00146112
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 7,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher"
+      ]
+    },
+    {
+      "taskId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0012951199999999999
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 7,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher"
+      ]
+    },
+    {
+      "taskId": "27e165c1-24fc-4eea-8e53-c595fbd0cce0",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.001614
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 7,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher"
+      ]
+    },
+    {
+      "taskId": "25086162-e04d-4ce8-8077-913b1f4b191a",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00143312
+        },
+        {
+          "agentId": "designer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.005378
+        },
+        {
+          "agentId": "reviewer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.003612
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": true,
+      "cultureReviewSaved": true,
+      "reviewVerdict": "pass",
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 11,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher",
+        "designer",
+        "reviewer"
+      ]
+    },
+    {
+      "taskId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00157712
+        },
+        {
+          "agentId": "designer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00445224
+        },
+        {
+          "agentId": "reviewer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0029882399999999996
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": true,
+      "cultureReviewSaved": true,
+      "reviewVerdict": "pass",
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 11,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher",
+        "designer",
+        "reviewer"
+      ]
+    },
+    {
+      "taskId": "1b61f794-f3e8-498e-9bc3-c6f832ef6aa7",
+      "state": "failed",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0010631199999999999
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": false,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": false,
+      "humanAccepted": false,
+      "eventCount": 5,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": []
+    },
+    {
+      "taskId": "174e97bf-4df1-4970-83e0-108afc81ec73",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_creation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00147424
+        },
+        {
+          "agentId": "designer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00468824
+        },
+        {
+          "agentId": "reviewer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00310424
+        }
+      ],
+      "parentTaskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": true,
+      "cultureReviewSaved": true,
+      "reviewVerdict": "pass",
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 11,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher",
+        "designer",
+        "reviewer"
+      ]
+    },
+    {
+      "taskId": "75783c7e-d83a-4129-8e7d-5d9482df05f9",
+      "state": "cancelled",
+      "sourceCategory": "persisted_creation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0014811199999999998
+        }
+      ],
+      "parentTaskId": "174e97bf-4df1-4970-83e0-108afc81ec73",
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 8,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher"
+      ]
+    },
+    {
+      "taskId": "dcd4d353-ebce-446d-a284-632be8f29736",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00171
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 7,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher"
+      ]
+    },
+    {
+      "taskId": "e9e5929f-546b-4e92-878a-6fc43e4becdf",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00088424
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 5,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner"
+      ]
+    },
+    {
+      "taskId": "8055928d-6279-4258-a2f5-23abeaad9308",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_evaluation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00120824
+        },
+        {
+          "agentId": "designer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00450824
+        },
+        {
+          "agentId": "reviewer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0037142399999999997
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": true,
+      "cultureReviewSaved": true,
+      "reviewVerdict": "needs_revision",
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 11,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher",
+        "designer",
+        "reviewer"
+      ]
+    },
+    {
+      "taskId": "1a18ff2c-93bb-47fb-8060-3de45378a721",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_creation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00170112
+        },
+        {
+          "agentId": "designer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00456624
+        },
+        {
+          "agentId": "reviewer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0031162399999999997
+        }
+      ],
+      "parentTaskId": "75783c7e-d83a-4129-8e7d-5d9482df05f9",
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": true,
+      "cultureReviewSaved": true,
+      "reviewVerdict": "pass",
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 11,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher",
+        "designer",
+        "reviewer"
+      ]
+    },
+    {
+      "taskId": "a2a43828-773f-4f81-8908-5ff762ced750",
+      "state": "awaiting_confirmation",
+      "sourceCategory": "persisted_creation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00213512
+        }
+      ],
+      "parentTaskId": null,
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": false,
+      "cultureReviewSaved": false,
+      "reviewVerdict": null,
+      "confirmationSaved": true,
+      "humanAccepted": false,
+      "eventCount": 7,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher"
+      ]
+    },
+    {
+      "taskId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "state": "completed",
+      "sourceCategory": "persisted_creation_run",
+      "categoryBasis": "idempotency prefix and persisted rows; does not alone attest external provider origin",
+      "paidLedgerCorrelations": [
+        {
+          "agentId": "planner",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00212512
+        },
+        {
+          "agentId": "designer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.0042482399999999995
+        },
+        {
+          "agentId": "reviewer",
+          "ledgerStatus": "success",
+          "tokenUsageSaved": true,
+          "recordedCostCny": 0.00267024
+        }
+      ],
+      "parentTaskId": "a2a43828-773f-4f81-8908-5ff762ced750",
+      "taskTypeStored": false,
+      "taskLevelStartedAtStored": false,
+      "taskLevelFinishedAtStored": false,
+      "resultSaved": true,
+      "designSaved": true,
+      "cultureReviewSaved": true,
+      "reviewVerdict": "pass",
+      "confirmationSaved": true,
+      "humanAccepted": true,
+      "eventCount": 12,
+      "sequenceContiguous": true,
+      "stepCount": 4,
+      "artifactAgents": [
+        "planner",
+        "researcher",
+        "designer",
+        "reviewer"
+      ]
+    }
+  ],
+  "summary": {
+    "taskCategories": {
+      "persisted_evaluation_run": 16,
+      "persisted_creation_run": 6
+    },
+    "allTasksHaveLedgerCorrelation": true,
+    "correlatedCalls": 43,
+    "unattributedHistoricalCalls": 64,
+    "taskResultCount": 19,
+    "designCount": 10,
+    "reviewCount": 10,
+    "humanAcceptanceCount": 2,
+    "allEventSequencesContiguous": true,
+    "allTasksHaveFourSeededSteps": true
+  },
+  "protectedModelsAndOriginals": [
+    {
+      "classification": "first_provider_original",
+      "sha256": "8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885",
+      "sizeBytes": 26600184,
+      "glbHeaderValid": true
+    },
+    {
+      "classification": "second_provider_original",
+      "sha256": "51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e",
+      "sizeBytes": 18266484,
+      "glbHeaderValid": true
+    },
+    {
+      "classification": "first_compatible_viewer",
+      "sha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "sizeBytes": 8827324,
+      "glbHeaderValid": true
+    },
+    {
+      "classification": "second_compatible_viewer",
+      "sha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "sizeBytes": 15158668,
+      "glbHeaderValid": true
+    }
+  ],
+  "limitations": [
+    "No authenticated per-task provider-origin discriminator is stored; ledger correlations and evaluation prefixes are evidence, not independent provider attestation.",
+    "No Meeting/Decision/Timeline tables exist; real timeline is agent_events. Step inputs are not independently persisted in agent_steps.",
+    "Research artifact in agent_artifacts is persisted; query-only history must not rerun RAG."
+  ],
+  "orphanRows": {
+    "steps": 0,
+    "artifacts": 0,
+    "events": 0
+  },
+  "comparison": {
+    "taskInventory": true,
+    "summary": true,
+    "protectedModelsAndOriginals": true,
+    "orphanRows": true
+  }
+}

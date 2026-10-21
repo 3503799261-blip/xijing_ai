@@ -1,0 +1,57 @@
+ERROR: Exception:
+Traceback (most recent call last):
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\cli\base_command.py", line 160, in exc_logging_wrapper
+    status = run_func(*args)
+             ^^^^^^^^^^^^^^^
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\cli\req_command.py", line 247, in wrapper
+    return func(self, options, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\commands\install.py", line 326, in run
+    session = self.get_default_session(options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\cli\req_command.py", line 98, in get_default_session
+    self._session = self.enter_context(self._build_session(options))
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\cli\req_command.py", line 125, in _build_session
+    session = PipSession(
+              ^^^^^^^^^^^
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\network\session.py", line 343, in __init__
+    self.headers["User-Agent"] = user_agent()
+                                 ^^^^^^^^^^^^
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\network\session.py", line 175, in user_agent
+    setuptools_dist = get_default_environment().get_distribution("setuptools")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\metadata\importlib\_envs.py", line 188, in get_distribution
+    return next(matches, None)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\metadata\importlib\_envs.py", line 183, in <genexpr>
+    matches = (
+              ^
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\metadata\base.py", line 612, in iter_all_distributions
+    for dist in self._iter_distributions():
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\metadata\importlib\_envs.py", line 176, in _iter_distributions
+    for dist in finder.find_eggs(location):
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\metadata\importlib\_envs.py", line 144, in find_eggs
+    yield from self._find_eggs_in_dir(location)
+  File "C:/Users/<user>\AppData\Local\Temp\tmp46vtplhk\pip-22.3.1-py3-none-any.whl\pip\_internal\metadata\importlib\_envs.py", line 115, in _find_eggs_in_dir
+    with os.scandir(location) as it:
+         ^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] 拒绝访问。: 'C:/Users/<user>
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:/Users/<user>\Lib\ensurepip\__main__.py", line 5, in <module>
+    sys.exit(ensurepip._main())
+             ^^^^^^^^^^^^^^^^^
+  File "C:/Users/<user>\Lib\ensurepip\__init__.py", line 286, in _main
+    return _bootstrap(
+           ^^^^^^^^^^^
+  File "C:/Users/<user>\Lib\ensurepip\__init__.py", line 202, in _bootstrap
+    return _run_pip([*args, *_PACKAGE_NAMES], additional_paths)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:/Users/<user>\Lib\ensurepip\__init__.py", line 103, in _run_pip
+    return subprocess.run(cmd, check=True).returncode
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:/Users/<user>\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['D:\\京剧\\.runtime\\phase5-wp4\\cold-env\\Scripts\\python.exe', '-W', 'ignore::DeprecationWarning', '-c', '\nimport runpy\nimport sys\nsys.path = [\'C:/Users/<user>\\\\AppData\\\\Local\\\\Temp\\\\tmp46vtplhk\\\\setuptools-65.5.0-py3-none-any.whl\', \'C:/Users/<user>\\\\AppData\\\\Local\\\\Temp\\\\tmp46vtplhk\\\\pip-22.3.1-py3-none-any.whl\'] + sys.path\nsys.argv[1:] = [\'install\', \'--no-cache-dir\', \'--no-index\', \'--find-links\', \'C:/Users/<user>\\\\AppData\\\\Local\\\\Temp\\\\tmp46vtplhk\', \'--upgrade\', \'setuptools\', \'pip\']\nrunpy.run_module("pip", run_name="__main__", alter_sys=True)\n']' returned non-zero exit status 2.

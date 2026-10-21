@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="9" skipped="0" tests="12" time="3.240" timestamp="2026-10-20T20:42:05.784702+08:00" hostname="wenwen"><testcase classname="backend.tests.test_runtime_resources" name="test_missing_resources_rejected_before_any_knowledge_constructor[model-EMBEDDING_MODEL_MISSING]" time="1.305"><failure message="AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'EMBEDDING_MODEL_MISSING'&#10;  &#10;  - EMBEDDING_MODEL_MISSING&#10;  + KNOWLEDGE_LOAD_FAILED">backend\tests\test_runtime_resources.py:85: in test_missing_resources_rejected_before_any_knowledge_constructor
+    assert runtime.diagnostic == code
+E   AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'EMBEDDING_MODEL_MISSING'
+E     
+E     - EMBEDDING_MODEL_MISSING
+E     + KNOWLEDGE_LOAD_FAILED</failure></testcase><testcase classname="backend.tests.test_runtime_resources" name="test_missing_resources_rejected_before_any_knowledge_constructor[knowledge-KNOWLEDGE_DATABASE_MISSING]" time="0.089"><failure message="AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'KNOWLEDGE_DATABASE_MISSING'&#10;  &#10;  - KNOWLEDGE_DATABASE_MISSING&#10;  + KNOWLEDGE_LOAD_FAILED">backend\tests\test_runtime_resources.py:85: in test_missing_resources_rejected_before_any_knowledge_constructor
+    assert runtime.diagnostic == code
+E   AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'KNOWLEDGE_DATABASE_MISSING'
+E     
+E     - KNOWLEDGE_DATABASE_MISSING
+E     + KNOWLEDGE_LOAD_FAILED</failure></testcase><testcase classname="backend.tests.test_runtime_resources" name="test_missing_resources_rejected_before_any_knowledge_constructor[vector_directory-VECTOR_INDEX_MISSING]" time="0.106"><failure message="AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'VECTOR_INDEX_MISSING'&#10;  &#10;  - VECTOR_INDEX_MISSING&#10;  + KNOWLEDGE_LOAD_FAILED">backend\tests\test_runtime_resources.py:85: in test_missing_resources_rejected_before_any_knowledge_constructor
+    assert runtime.diagnostic == code
+E   AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'VECTOR_INDEX_MISSING'
+E     
+E     - VECTOR_INDEX_MISSING
+E     + KNOWLEDGE_LOAD_FAILED</failure></testcase><testcase classname="backend.tests.test_runtime_resources" name="test_missing_resources_rejected_before_any_knowledge_constructor[vector_metadata-VECTOR_INDEX_MISSING]" time="0.171"><failure message="AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'VECTOR_INDEX_MISSING'&#10;  &#10;  - VECTOR_INDEX_MISSING&#10;  + KNOWLEDGE_LOAD_FAILED">backend\tests\test_runtime_resources.py:85: in test_missing_resources_rejected_before_any_knowledge_constructor
+    assert runtime.diagnostic == code
+E   AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'VECTOR_INDEX_MISSING'
+E     
+E     - VECTOR_INDEX_MISSING
+E     + KNOWLEDGE_LOAD_FAILED</failure></testcase><testcase classname="backend.tests.test_runtime_resources" name="test_existing_resource_load_failure_has_safe_stage_diagnostic[embedding-EmbeddingService-EMBEDDING_LOAD_FAILED]" time="0.096"><failure message="AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'EMBEDDING_LOAD_FAILED'&#10;  &#10;  - EMBEDDING_LOAD_FAILED&#10;  + KNOWLEDGE_LOAD_FAILED">backend\tests\test_runtime_resources.py:113: in test_existing_resource_load_failure_has_safe_stage_diagnostic
+    assert runtime.diagnostic == code
+E   AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'EMBEDDING_LOAD_FAILED'
+E     
+E     - EMBEDDING_LOAD_FAILED
+E     + KNOWLEDGE_LOAD_FAILED</failure></testcase><testcase classname="backend.tests.test_runtime_resources" name="test_existing_resource_load_failure_has_safe_stage_diagnostic[store-KnowledgeStore-KNOWLEDGE_DATABASE_UNAVAILABLE]" time="0.101"><failure message="AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'KNOWLEDGE_DA...E_UNAVAILABLE'&#10;  &#10;  - KNOWLEDGE_DATABASE_UNAVAILABLE&#10;  + KNOWLEDGE_LOAD_FAILED">backend\tests\test_runtime_resources.py:113: in test_existing_resource_load_failure_has_safe_stage_diagnostic
+    assert runtime.diagnostic == code
+E   AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'KNOWLEDGE_DA...E_UNAVAILABLE'
+E     
+E     - KNOWLEDGE_DATABASE_UNAVAILABLE
+E     + KNOWLEDGE_LOAD_FAILED</failure></testcase><testcase classname="backend.tests.test_runtime_resources" name="test_existing_resource_load_failure_has_safe_stage_diagnostic[vector_store-VectorStore-VECTOR_INDEX_UNAVAILABLE]" time="0.127"><failure message="AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'VECTOR_INDEX_UNAVAILABLE'&#10;  &#10;  - VECTOR_INDEX_UNAVAILABLE&#10;  + KNOWLEDGE_LOAD_FAILED">backend\tests\test_runtime_resources.py:113: in test_existing_resource_load_failure_has_safe_stage_diagnostic
+    assert runtime.diagnostic == code
+E   AssertionError: assert 'KNOWLEDGE_LOAD_FAILED' == 'VECTOR_INDEX_UNAVAILABLE'
+E     
+E     - VECTOR_INDEX_UNAVAILABLE
+E     + KNOWLEDGE_LOAD_FAILED</failure></testcase><testcase classname="backend.tests.test_runtime_resources" name="test_explicit_local_restoration_recovers_real_temp_store_and_vector_search[model]" time="0.147" /><testcase classname="backend.tests.test_runtime_resources" name="test_explicit_local_restoration_recovers_real_temp_store_and_vector_search[knowledge]" time="0.123"><failure message="AssertionError: assert (None is None and not True)&#10; +  where None = &lt;backend.app.services.runtime.Runtime object at 0x000002B144724790&gt;.search_service&#10; +  and   True = exists()&#10; +    where exists = WindowsPath('D:/京剧/.runtime/phase5-wp4-resource-pytest-baseline/pytest-temp/test_explicit_local_restoratio1/runtime/generations/gen-offline-resource-fixture/knowledge.sqlite3').exists">backend\tests\test_runtime_resources.py:133: in test_explicit_local_restoration_recovers_real_temp_store_and_vector_search
+    assert runtime.search_service is None and not resource.exists()
+E   AssertionError: assert (None is None and not True)
+E    +  where None = &lt;backend.app.services.runtime.Runtime object at 0x000002B144724790&gt;.search_service
+E    +  and   True = exists()
+E    +    where exists = WindowsPath('D:/京剧/.runtime/phase5-wp4-resource-pytest-baseline/pytest-temp/test_explicit_local_restoratio1/runtime/generations/gen-offline-resource-fixture/knowledge.sqlite3').exists</failure></testcase><testcase classname="backend.tests.test_runtime_resources" name="test_explicit_local_restoration_recovers_real_temp_store_and_vector_search[vector]" time="0.175"><failure message="AssertionError: assert (None is None and not True)&#10; +  where None = &lt;backend.app.services.runtime.Runtime object at 0x000002B114103410&gt;.search_service&#10; +  and   True = exists()&#10; +    where exists = WindowsPath('D:/京剧/.runtime/phase5-wp4-resource-pytest-baseline/pytest-temp/test_explicit_local_restoratio2/runtime/generations/gen-offline-resource-fixture/qdrant').exists">backend\tests\test_runtime_resources.py:133: in test_explicit_local_restoration_recovers_real_temp_store_and_vector_search
+    assert runtime.search_service is None and not resource.exists()
+E   AssertionError: assert (None is None and not True)
+E    +  where None = &lt;backend.app.services.runtime.Runtime object at 0x000002B114103410&gt;.search_service
+E    +  and   True = exists()
+E    +    where exists = WindowsPath('D:/京剧/.runtime/phase5-wp4-resource-pytest-baseline/pytest-temp/test_explicit_local_restoratio2/runtime/generations/gen-offline-resource-fixture/qdrant').exists</failure></testcase><testcase classname="backend.tests.test_runtime_resources" name="test_existing_index_lock_preserves_locked_diagnostic" time="0.110" /><testcase classname="backend.tests.test_runtime_resources" name="test_vector_link_integrity_failure_retains_generic_index_validation_failure" time="0.163" /></testsuite></testsuites>
