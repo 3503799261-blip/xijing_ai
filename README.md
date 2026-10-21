@@ -2,11 +2,24 @@
 
 在原有「梨园风华」8页京剧文化网站上建设AI戏韵工坊。前端保留HTML/CSS/原生ES Module与酒红、金色、米白视觉；Phase 2提供真实RAG问答，Phase 3加入规划、文化研究、角色设计、文化审校的真实协作与人工确认。Phase 4提供双风格资产与真实GLB查看器，已逐次批准并实际提交Q版技术模型与写实主展示模型各一次；平台图像生成仍未接入。
 
-当前状态（2026-10-20）：Phase 1～3已按各自范围验收，Phase 4已在两模型范围验收通过；Phase 5 WP1、WP2已获用户验收，**WP3：比赛导览与异常降级已实现，等待人工验收**（`PHASE_5_WP3_WAITING_ACCEPTANCE`）。WP4、WP5未执行。当前本地分支`feature/phase5-competition-delivery`保留WP1/WP2历史，未合并main、未推送；不能假设远端克隆已包含最新本地成果。
+当前状态（2026-10-21）：Phase 1～3、Phase 4两模型范围及Phase 5 WP1～3已获用户验收。**WP4已完成最终回归、同机隔离安装/受控资源恢复和自动化排练，等待人工验收（PHASE_5_WP4_WAITING_ACCEPTANCE）。** WP5未执行。分支feature/phase5-competition-delivery保留原历史，未合并main、未推送；不能假设远端克隆已包含最新本地成果。
 
 两个真实Neural4D模型均已人工验收，累计实际60积分；**已用2/3、剩1未使用，第三次用户决定不执行，创建保持关闭**。平台图像生成仍未接入，现有图片来自导入。首个Q版仅内部技术用途；写实“绛绣·戏韵”为已生成主展示资产，不是每次新需求即时生成的结果。实体手机未验证。私有GLB、图片、任务及资产数据库不随Git分发，空环境只能先使用合法测试夹具验证Viewer，不能用Duck冒充京剧成品。
 
 [公开仓库](https://github.com/3503799261-blip/xijing_ai) · [Phase 4最终验收](docs/reports/phase-04-final-acceptance.md) · [WP1流程](docs/reports/phase-05-work-package-01.md) · [WP2历史档案](docs/reports/phase-05-work-package-02.md) · [WP3导览及降级报告](docs/reports/phase-05-work-package-03.md) · [WP3实际测试](docs/evidence/test-results/phase-05-wp3-test-report.md)。历史阶段与测试仍由其原报告保留，不把旧状态混作当前状态。
+
+## WP4实际启动与恢复结果
+
+[WP4报告](docs/reports/phase-05-work-package-04.md) · [本次测试与命令](docs/evidence/test-results/phase-05-wp4-test-report.md)。2026-10-20～21重新验证，而非仅引用旧报告：
+
+- 原环境与全新普通venv各712项后端通过；前端25/25/34/42/34项；8页×桌面/平板/手机模拟24组合、两个真实GLB及故障恢复通过。真实外部API未验证，本轮调用0。
+- 新venv不复用system-site-packages；按原requirements安装348.549秒，11个顶层固定依赖、66个实际包，pip check及实际导入通过。前两次沙箱权限失败保留。没有改变现有venv、requirements或依赖版本。
+- 使用已有本地BGE、停止源服务后建立的受控SQLite/索引/资产副本及空Key配置，在独立父目录/8011启动成功；历史、完整台账和原GLB均可读取。这是同机不同目录验证，**不是Git克隆自带私有资源或另一台空白电脑十分钟保证**。没有首次重新下载BGE，没有一键私有资产分发包。
+- 缺BGE、知识SQLite或Qdrant时服务明确分类503，不创建空知识文件/集合；恢复确切资源后检索正常。**损坏的可写Agent业务DB仍会阻断启动；错误但可写的数据目录仍会初始化空业务库**。先核对路径与真实备份，不能删库或把空历史当恢复完成。
+- 18业务表、22任务ID、8个HTML、BGE/知识/向量文件和四原始/兼容模型Hash不变；全局仍2/3余1、第三取消、创建关闭。
+- 自动化流程排练正常300.071秒、故障40.038秒，包含明确阅读停留；不是已录真人讲解或合格比赛MP4。实体手机、真人讲解/成片、今日付费API和跨机器交付未测。
+
+本包Hash核对后已按正常方式停止测试服务。下方“已准备本机”命令可启动正常服务；不需要运行安装、重建或供应商探测。后文明确标为WP1～3/旧阶段的“本轮未安装”等描述属于当时边界；当前安装/恢复证据以本节及WP4报告为准。
 
 ## 已准备本机：免费启动与已有成果
 
@@ -106,7 +119,7 @@ if (-not (Test-Path -LiteralPath $privateEnvFile)) {
 
 | 资源 | 当前位置/用途 | 准备方式及缺失时行为 |
 |---|---|---|
-| Python/venv与依赖 | 仓库`.venv`，本机存在 | 新机器按真实requirements安装；本轮不安装，冷机时间未验证 |
+| Python/venv与依赖 | 仓库`.venv`，本机存在 | 新机器按真实requirements安装；WP1当时未安装；WP4实测范围见顶部 |
 | 私有env/Key | 仓库父目录`.private-config/.env` | 本机手工配置，绝不入Git；没有Key时实时问答/Agent不可用，不生成假答案 |
 | BGE缓存 | 父目录`.runtime/models/bge-small-zh-v1.5` | 固定revision下载见下节；缺失则知识能力降级，不换成随机向量 |
 | SQLite知识/Qdrant | 父目录`.runtime/xijing-ai/active.json`选择`generations/<generation>/knowledge.sqlite3`及`qdrant/` | 从knowledge入库；不能误找RAG根下不存在的knowledge.sqlite3；缺失/锁冲突会提示未就绪 |
@@ -307,7 +320,7 @@ Phase 3实际40次供应商请求、39986 tokens，增量保守估算 **0.107774
 
 Phase 1真实历史、备份与截图保留，见 [阶段报告](docs/reports/phase-01.md)。Phase 2方案、批准Prompt、真实工具过程、参数改动、失败与修复归档在docs；协作导出排除秘密与隐藏推理，不补造对话。历史报告描述的是当时状态，不能当作当前能力证明。
 
-当前Phase 4两模型范围、WP1与WP2已验收；WP3完成导览/备用入口与必要错误恢复，等待验收。“首次建模”旧文案已在本包校准为已有两模型、第三取消及创建关闭。完整最终测试包和交付材料仍待后续工作包逐项批准，本包不等同WP4最终回归。
+当前Phase 4两模型范围、WP1～3已验收；WP4最终回归与受控恢复已执行，等待验收，详见本文顶部。本地资料/成品、设备和外网限制仍按实际报告保留；比赛交付材料WP5尚未执行。
 
 ### 第1次内部真实模型恢复（2026-10-13）
 

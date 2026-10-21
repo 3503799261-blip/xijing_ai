@@ -1,6 +1,6 @@
 # Phase 5 · 检查点A真实Prompt与方案记录
 
-更新日期：2026-10-20（Asia/Shanghai）。**用户已验收WP1/WP2，并以完整消息授权WP3。当前状态：`PHASE_5_WP3_WAITING_ACCEPTANCE`。** 第1～6节为检查点A历史，第7/8节为WP1/WP2当时记录；本轮见第9节。旧停止文字不代表后来未批准，不自动进入WP4。
+更新日期：2026-10-21（Asia/Shanghai）。**用户已验收WP1～3，并以完整附件授权WP4。当前状态：PHASE_5_WP4_WAITING_ACCEPTANCE。** 第1～9节保留各包当时状态；本轮见第10节。旧停止文字不代表后来未批准，本包不自动进入WP5。
 
 ## 1. 本次原文及公开快照
 
@@ -141,3 +141,31 @@
 真实产品提交`e36c1e51090907a7a4e0f55e25d125fd066498e8`；退出提示修复`76dbba0e443877745fa866a3d2e4c55641671a8b`；测试/证据`45d1dcc1399fb68c1fb978d88f0a8f9a2a3fd92f`。最终文档Hash及干净工作区以实际Git/最终回复为准。没有合并、推送或改写历史。
 
 状态：`PHASE_5_WP3_WAITING_ACCEPTANCE`。用户未验收前不进入WP4；真实外部API、设备、冷机与材料交付的未完成范围已在报告明确。
+
+## 10. WP4实际回归、隔离安装和排练
+
+用户原附件明确批准WP4，并禁止付费AI、任何Neural4D请求/新建、改额度/原GLB/真实业务库。执行日期2026-10-20～21；中断续接保留此前结果，不当成当日全部重跑。
+
+| 文件 | 实际来源/边界 |
+|---|---|
+| [12-wp4-approved-user-request.txt](12-wp4-approved-user-request.txt) | 原粘贴附件逐字节复制，22760字节；SHA-256 46d6a3c3ee3d8aa7680c3e45ef1ef9ff53dd1bf5f8f11744d49ef35a252410e0 |
+| [13-wp4-public-conversation.jsonl](13-wp4-public-conversation.jsonl) | 从该附件真实用户消息开始的公开时间快照；不含隐藏推理、系统/开发者或内部子Agent通信 |
+| [14-wp4-export-metadata.json](14-wp4-export-metadata.json) | 实际时间/起始行/111条公开记录、源与导出Hash、11组内部协作调用过滤；后续报告/提交/最终回复不声称已在快照 |
+| [WP4报告](../../reports/phase-05-work-package-04.md) | 当前结果、边界、风险及验收清单 |
+| [WP4测试](../../evidence/test-results/phase-05-wp4-test-report.md) | 命令、安装、712后端、浏览器/20题检索/排练、真实失败和复测 |
+
+以下为工程摘要，不能当作额外发生的用户对话：
+
+1. 实际74b3e6e干净起点，核对WP1～3、18表、22任务ID和四模型原始/兼容文件；先只读基线再操作。
+2. 识别原服务/端口，正常停止；在独立父目录用真实SQLite只读backup和现有资源建立受控本地副本，不复制Key或重置额度。
+3. 原版本完整698通过；新14项资源回归先3通过9失败，定位缺SQLite/Qdrant会自动创建空资源。只改Runtime加载前预检和分类中文提示，补集合/存储缺失检查；14项最终通过，两环境完整712各通过。
+4. 资源探针实际CPU BGE/12资料35片段512维、临时索引和Duck；Windows self-pipe审计误拦截保留，最终15个观察断言通过。明确其中损坏Agent库仍阻断启动、错误可写目录仍创建空业务库，不把观察PASS说成恢复能力通过。
+5. 干净普通venv两次ensurepip权限失败，第三次按原requirements安装通过348.549秒，66包/11顶层版本匹配、pip check通过；新环境启动恢复副本、8页/两真实GLB/历史正常，非空白机或跨机器承诺。
+6. 本地20题vector/hybrid真实检索与引用核对，不调用LLM、不称人工Gold Recall。8页三视口24组合、模型/风格/错误恢复、CDP触摸通过；保留媒体ERR_ABORTED、HEAD405及隐藏reload按钮的辅助失败。实体手机未测。
+7. 自动化排练10步300.071秒（含停留）与故障4步40.038秒，不是录好的真人演讲。只展示同一历史绛绣与已有模型，内部Q权限不扩大。
+8. 正常停止/重启早期辅助控制失败和续接权限失败保留；21日按正常Ctrl+C退出/重启、14项HTTP/两模型再通过；最终停服后核对受锁Qdrant文件，未删锁或强杀未知进程。
+9. 18业务表、四模型、知识/向量/BGE、8HTML全部不变。LLM107，Neural4D18操作/60历史积分、2/3余1、无UNKNOWN/在途/未消费批准，创建关闭；真实付费/API/Neural4D均0。
+
+产品修复真实Commit：84b1d2358c90e41b259724f541edfb6d2c5484bd，fix(phase5): guard missing knowledge resources on startup。测试证据/失败及Prompt快照提交：834483dd3fdd023c8432ffabc20c446f458f708c，test(phase5): archive cold-start and end-to-end validation。最终文档另行本地提交，最终Hash由实际Git及最终回复提供，不预造自身Hash，无merge/push。
+
+本包状态：PHASE_5_WP4_WAITING_ACCEPTANCE。已完成范围内验证并记录两个资源配置缺口；真人/实体设备/空白机/真实外网未测。等待用户验收，不进入WP5。
