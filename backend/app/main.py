@@ -40,11 +40,18 @@ def create_app(settings=None, *, assets_usage_override=None):
     assets = model_service = None
     try:
         assets = AssetService(settings, supervisor.store)
-        assets.usage = assets_usage_override if assets_usage_override is not None else UsageManager(USAGE_LEDGER_PATH)
-        model_service = ModelService(settings, assets, assets.usage)
-        assets.model_service = model_service
     except (ServiceError, OSError, sqlite3.Error):
-        assets = model_service = None
+        assets = None
+    if assets:
+        try:
+            assets.usage = assets_usage_override if assets_usage_override is not None else UsageManager(USAGE_LEDGER_PATH)
+            model_service = ModelService(settings, assets, assets.usage)
+            assets.model_service = model_service
+        except (ServiceError, OSError, sqlite3.Error):
+            # Existing model files/catalog do not need a healthy creation
+            # ledger or Agent DB. Only provider operations remain unavailable.
+            model_service = None
+            assets.model_service = None
     runtime.asset_service = assets
     @asynccontextmanager
     async def lifespan(app):

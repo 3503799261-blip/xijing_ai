@@ -5,6 +5,8 @@ import json
 import time
 from datetime import datetime, timezone
 import httpx
+import sqlite3
+import logging
 from ..errors import ServiceError
 from .budget import BudgetLedger
 
@@ -12,8 +14,14 @@ class DeepSeekProvider:
     def __init__(self, settings, transport=None):
         self.settings = settings
         self.transport = transport
-        self.ledger = BudgetLedger(settings.rag_data_dir / 'api-budget.sqlite3', settings.rag_test_budget_cny,
-                                   scope='phase3', scope_limit=settings.agent_test_budget_cny)
+        self.ledger = None
+        self.database_error = None
+        try:
+            self.ledger = BudgetLedger(settings.rag_data_dir / 'api-budget.sqlite3', settings.rag_test_budget_cny,
+                                       scope='phase3', scope_limit=settings.agent_test_budget_cny)
+        except (ServiceError, OSError, sqlite3.Error):
+            self.database_error = ServiceError('BUDGET_DATABASE_UNAVAILABLE', '模型预算数据库缺失、路径错误或不可读取，已停止付费调用；请检查配置并恢复原库。', 503)
+            logging.getLogger('xijing.requests').warning('component=budget_database status=unavailable code=BUDGET_DATABASE_UNAVAILABLE')
         self.probe_path = settings.rag_data_dir / 'provider-readiness.json'
         # One provider instance serves chat and all workflow roles in the process.
         self.capacity = asyncio.Semaphore(2)
@@ -28,6 +36,8 @@ class DeepSeekProvider:
 
     @property
     def verified(self):
+        if self.database_error is not None:
+            return False
         if not self.configured: return False
         try:
             data = json.loads(self.probe_path.read_text(encoding='utf-8'))
@@ -35,6 +45,8 @@ class DeepSeekProvider:
         except (OSError, ValueError): return False
 
     async def generate(self, messages: list, request_id: str, json_mode=True, max_output=None) -> dict:
+        if self.database_error is not None:
+            raise self.database_error
         if not self.configured:
             raise ServiceError('LLM_KEY_MISSING', '尚未配置DeepSeek密钥，请在本机私有.env填写后重启后端。')
         limit = self.settings.deepseek_max_output_tokens if max_output is None else max_output

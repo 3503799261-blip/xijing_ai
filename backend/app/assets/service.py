@@ -81,14 +81,16 @@ def cultural_artifact(value, role):
 
 
 class AssetService:
-    def __init__(self, settings, task_store):
+    def __init__(self, settings, task_store, *, create=False):
         self.settings, self.task_store = settings, task_store
         self.root = (Path(settings.rag_data_dir) / 'assets').resolve()
-        self.store = AssetStore(self.root)
+        self.store = AssetStore(self.root, create=create)
         self.usage = None
         self.model_service = None
 
     def authoritative_result(self, task_id):
+        if self.task_store is None:
+            raise ServiceError('AGENT_DATABASE_UNAVAILABLE', '角色来源数据库不可用，已有资产仍可只读查看；未创建或确认新的角色资产。', 503)
         status = self.task_store.status(task_id)
         if (status['state'] != 'completed' or status['completedSteps'] != 4
                 or {agent['id'] for agent in status['agents']} != {'planner', 'researcher', 'designer', 'reviewer'}

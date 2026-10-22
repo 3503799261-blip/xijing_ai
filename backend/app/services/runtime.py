@@ -1,6 +1,7 @@
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
 import json
+import sqlite3
 from datetime import datetime, timezone
 import portalocker
 from ..errors import ServiceError
@@ -121,8 +122,30 @@ class Runtime:
             model_available = bool(models and models.available())
         except (ServiceError, OSError):
             model_available = False
-        return {'questionAnswering': bool(self.search_service and self.provider.verified), 'knowledgeSearch': bool(self.search_service), 'agentWorkflow': bool(supervisor and supervisor.available()), 'conceptImage': False, 'imageToModel': model_available, 'assetManagement': bool(assets), 'modelViewer': bool(assets), 'checkedAt': datetime.now(timezone.utc).isoformat()}
+        _, budget_ready = self.budget_status()
+        return {'questionAnswering': bool(self.search_service and budget_ready and self.provider.verified), 'knowledgeSearch': bool(self.search_service), 'agentWorkflow': bool(supervisor and supervisor.available()), 'conceptImage': False, 'imageToModel': model_available, 'assetManagement': bool(assets), 'modelViewer': bool(assets), 'checkedAt': datetime.now(timezone.utc).isoformat()}
+
+    def budget_status(self):
+        try:
+            if getattr(self.provider, 'database_error', None) is not None:
+                raise self.provider.database_error
+            return self.provider.ledger.summary(), True
+        except (ServiceError, OSError, sqlite3.Error, AttributeError):
+            return {'available': False, 'diagnostic': 'BUDGET_DATABASE_UNAVAILABLE',
+                    'message': '模型预算数据库不可用，已停止付费调用；请检查配置并恢复原库。'}, False
 
     def health(self):
         supervisor = getattr(self, 'agent_supervisor', None)
-        return {'status': 'ready' if self.capabilities()['questionAnswering'] else 'degraded', 'knowledge': bool(self.search_service), 'embedding': bool(self.search_service), 'llmConfigured': self.provider.configured, 'llmVerified': self.provider.verified, 'diagnostic': self.diagnostic, 'documents': self.manifest.get('documents', 0) if self.manifest else 0, 'chunks': self.manifest.get('chunks', 0) if self.manifest else 0, 'budget': self.provider.ledger.summary(), 'agents': {'supervisorReady': bool(supervisor and supervisor.ready and supervisor.worker and not supervisor.worker.done()), 'activeTaskId': supervisor.current_task if supervisor else None, 'enabled': self.settings.agent_workflow_enabled, 'diagnostic': supervisor.diagnostic if supervisor else 'NOT_STARTED'}}
+        budget, budget_ready = self.budget_status()
+        agents = supervisor.database_status() if supervisor else {'available': False, 'diagnostic': 'NOT_STARTED'}
+        return {'status': 'ready' if self.capabilities()['questionAnswering'] and agents['available'] else 'degraded',
+                'application': {'available': True},
+                'databases': {'agent': agents, 'budget': {'available': budget_ready, 'diagnostic': None if budget_ready else 'BUDGET_DATABASE_UNAVAILABLE'}},
+                'knowledge': bool(self.search_service), 'embedding': bool(self.search_service),
+                'llmConfigured': self.provider.configured, 'llmVerified': bool(budget_ready and self.provider.verified),
+                'diagnostic': self.diagnostic, 'documents': self.manifest.get('documents', 0) if self.manifest else 0,
+                'chunks': self.manifest.get('chunks', 0) if self.manifest else 0, 'budget': budget,
+                'agents': {'supervisorReady': bool(agents['available'] and supervisor and supervisor.ready and supervisor.worker and not supervisor.worker.done()),
+                           'databaseAvailable': agents['available'], 'activeTaskId': supervisor.current_task if supervisor else None,
+                           'enabled': self.settings.agent_workflow_enabled,
+                           'diagnostic': agents.get('diagnostic') or (supervisor.diagnostic if supervisor else 'NOT_STARTED')}}

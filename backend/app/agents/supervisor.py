@@ -1,22 +1,54 @@
 """One supervised creator, bounded persistent queue, no paid automatic retry."""
 import asyncio
 import portalocker
+import sqlite3
+import logging
 from ..errors import ServiceError
-from .store import TaskStore
+from .store import TaskStore, TASK_DATABASE_MESSAGE
 
 class Supervisor:
     def __init__(self, runtime, runner=None):
         self.runtime = runtime
-        self.store = TaskStore(runtime.settings.rag_data_dir / 'agent-tasks.sqlite3')
+        self.store_path = runtime.settings.rag_data_dir / 'agent-tasks.sqlite3'
+        self.store = None
+        self.database_error = None
+        try:
+            self.store = TaskStore(self.store_path)
+        except (ServiceError, OSError, sqlite3.Error):
+            self.database_error = ServiceError('AGENT_DATABASE_UNAVAILABLE', TASK_DATABASE_MESSAGE, 503)
+            logging.getLogger('xijing.requests').warning('component=agent_database status=unavailable code=AGENT_DATABASE_UNAVAILABLE')
         self.runner = runner
         self.wakeup = asyncio.Event()
         self.worker = None
         self.ready = False
         self.current_task = None
         self.owner_lock = None
-        self.diagnostic = None
+        self.diagnostic = self.database_error.code if self.database_error else None
+
+    def require_database(self):
+        if self.database_error is not None:
+            raise self.database_error
+        try:
+            # Revalidate the configured existing file, never reconnect with a
+            # creating mode if it disappears or is replaced after startup.
+            TaskStore(self.store_path)
+        except (ServiceError, OSError, sqlite3.Error):
+            self.database_error = ServiceError('AGENT_DATABASE_UNAVAILABLE', TASK_DATABASE_MESSAGE, 503)
+            self.diagnostic = self.database_error.code
+            raise self.database_error from None
+        return self.store
+
+    def database_status(self):
+        try:
+            self.require_database()
+            return {'available': True, 'diagnostic': None}
+        except ServiceError as error:
+            return {'available': False, 'diagnostic': error.code, 'message': error.message}
 
     async def start(self):
+        if self.database_error is not None:
+            self.ready = False
+            return
         if self.worker and not self.worker.done():
             return
         self.ready = False
@@ -31,12 +63,22 @@ class Supervisor:
             # owned by the first application, even if its RAG lock also fails.
             self.diagnostic = 'AGENT_TASKS_LOCKED'
             return
+        except OSError:
+            self.diagnostic = 'AGENT_TASKS_LOCK_UNAVAILABLE'
+            return
         self.owner_lock = lock
         try:
             self.store.recover()
             self.worker = asyncio.create_task(self._work(), name='opera-agent-supervisor')
             self.ready = True
             self.diagnostic = None
+        except (ServiceError, OSError, sqlite3.Error):
+            self.owner_lock.release()
+            self.owner_lock = None
+            self.worker = None
+            self.database_error = ServiceError('AGENT_DATABASE_UNAVAILABLE', TASK_DATABASE_MESSAGE, 503)
+            self.diagnostic = self.database_error.code
+            return
         except BaseException:
             self.owner_lock.release()
             self.owner_lock = None
@@ -56,15 +98,25 @@ class Supervisor:
                 self.owner_lock = None
 
     def available(self):
+        if self.database_error is not None or self.store is None:
+            return False
+        try:
+            self.require_database()
+        except ServiceError:
+            return False
         if not self.ready or not self.worker or self.worker.done() or not self.runtime.settings.agent_workflow_enabled:
             return False
         if not self.runtime.search_service or not self.runtime.provider.verified:
             return False
-        budget = self.runtime.provider.ledger.summary()
+        try:
+            budget = self.runtime.provider.ledger.summary()
+        except (ServiceError, OSError, sqlite3.Error, AttributeError):
+            return False
         scope = budget.get('activeScope')
         return budget['estimatedUpperCostCny'] < budget['budgetCny'] and (not scope or scope['estimatedUpperCostCny'] < scope['budgetCny'])
 
     def create(self, brief, key):
+        self.require_database()
         existing = self.store.existing(key, brief)
         if existing:
             return existing

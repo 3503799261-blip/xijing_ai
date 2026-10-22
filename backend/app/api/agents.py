@@ -33,8 +33,9 @@ class CancelRequest(BaseModel):
 
 def register_agents(app, supervisor):
     router = APIRouter(prefix='/api/v1/agent')
-    history = HistoryReader(supervisor.store.path, supervisor.store.path.parent / 'assets' / 'catalog.sqlite3')
+    history = HistoryReader(supervisor.store_path, supervisor.store_path.parent / 'assets' / 'catalog.sqlite3')
     def status(task_id, request, after=0):
+        supervisor.require_database()
         return {**supervisor.store.status(task_id, after), 'requestId': request.state.request_id}
 
     @router.get('/history')
@@ -45,6 +46,7 @@ def register_agents(app, supervisor):
                      taskType: str | None = Query(default=None, min_length=1, max_length=64),
                      taskId: str | None = Query(default=None, min_length=1, max_length=128)):
         response.headers['Cache-Control'] = 'no-store'
+        supervisor.require_database()
         return {**history.list(page, pageSize, state, taskType, taskId), 'requestId': request.state.request_id}
 
     @router.get('/history/{task_id}')
@@ -52,6 +54,7 @@ def register_agents(app, supervisor):
                             eventPage: int = Query(default=1, ge=1, le=100000),
                             eventPageSize: int = Query(default=30, ge=1, le=100)):
         response.headers['Cache-Control'] = 'no-store'
+        supervisor.require_database()
         if len(task_id) > 128:
             raise ServiceError('AGENT_TASK_NOT_FOUND', '未找到这个历史任务，请检查任务标识。', 404)
         return {**history.detail(task_id, eventPage, eventPageSize), 'requestId': request.state.request_id}
@@ -73,15 +76,18 @@ def register_agents(app, supervisor):
 
     @router.get('/result/{task_id}')
     async def result(task_id: str, request: Request):
+        supervisor.require_database()
         return {**supervisor.store.result(task_id), 'requestId': request.state.request_id}
 
     @router.post('/confirm/{task_id}')
     async def confirm(task_id: str, data: ConfirmRequest, request: Request):
+        supervisor.require_database()
         supervisor.store.confirm(task_id, str(data.confirmationId), data.expectedSequence)
         return status(task_id, request)
 
     @router.post('/cancel/{task_id}')
     async def cancel(task_id: str, data: CancelRequest, request: Request):
+        supervisor.require_database()
         supervisor.store.cancel(task_id, data.expectedSequence)
         return status(task_id, request)
 
