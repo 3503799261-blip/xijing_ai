@@ -1,0 +1,255 @@
+{
+  "kind": "WP4_REPAIR_ISOLATED_FIELD_STAGE",
+  "atUtc": "2026-10-22T07:50:49.825766+00:00",
+  "stage": "corrupt",
+  "checks": {
+    "healthProcessAvailable": true,
+    "health200": true,
+    "eightPages200": true,
+    "wrongRootNeverCreated": true,
+    "budgetFileUnchanged": true,
+    "catalogFileUnchanged": true,
+    "quotaFileUnchanged": true,
+    "agentUnavailable": true,
+    "agentDiagnostic": true,
+    "historySafe503": true,
+    "corruptFileNotOverwritten": true
+  },
+  "responses": {
+    "/api/v1/health": {
+      "status": 200,
+      "body": {
+        "status": "degraded",
+        "application": {
+          "available": true
+        },
+        "databases": {
+          "agent": {
+            "available": false,
+            "diagnostic": "AGENT_DATABASE_UNAVAILABLE",
+            "message": "Agent任务数据库缺失、路径错误或不可读取，请检查配置并恢复原库；未自动创建或修复。"
+          },
+          "budget": {
+            "available": true,
+            "diagnostic": null
+          }
+        },
+        "knowledge": true,
+        "embedding": true,
+        "llmConfigured": false,
+        "llmVerified": false,
+        "diagnostic": null,
+        "documents": 12,
+        "chunks": 35,
+        "budget": {
+          "calls": 107,
+          "estimatedUpperCostCny": 0.25501584,
+          "budgetCny": 3.0,
+          "priceVerifiedAt": "2026-10-11",
+          "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+          "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+          "activeScope": {
+            "name": "phase3",
+            "calls": 45,
+            "estimatedUpperCostCny": 0.1215816,
+            "budgetCny": 0.5
+          },
+          "scopes": {
+            "phase3": {
+              "name": "phase3",
+              "calls": 45,
+              "estimatedUpperCostCny": 0.1215816,
+              "budgetCny": 0.5
+            }
+          }
+        },
+        "agents": {
+          "supervisorReady": false,
+          "databaseAvailable": false,
+          "activeTaskId": null,
+          "enabled": false,
+          "diagnostic": "AGENT_DATABASE_UNAVAILABLE"
+        }
+      }
+    },
+    "/api/v1/agent/history?page=1&pageSize=50": {
+      "status": 503,
+      "body": {
+        "error": {
+          "code": "AGENT_DATABASE_UNAVAILABLE",
+          "message": "Agent任务数据库缺失、路径错误或不可读取，请检查配置并恢复原库；未自动创建或修复。",
+          "retryable": false
+        },
+        "requestId": "917a1365-c1eb-455d-8cad-28193b9fbdf2"
+      }
+    },
+    "/api/v1/assets/usage": {
+      "status": 200,
+      "body": {
+        "projectId": "xijing-ai-neural4d-project-v4",
+        "policyVersion": "phase4-generation-attempts-v4",
+        "max_creation_attempts": 3,
+        "max_models": 3,
+        "modelCount": 1,
+        "historicalUsageVerified": true,
+        "historical_used_attempts": 0,
+        "used_attempts": 2,
+        "reserved_attempts": 0,
+        "occupied_attempts": 2,
+        "remaining_attempts": 1,
+        "attemptStates": {
+          "SUCCEEDED": 2
+        },
+        "creationHalted": false,
+        "haltCode": null,
+        "automaticGenerationRetry": false,
+        "creationPaused": false,
+        "pauseCode": null,
+        "unreconciled_attempts": 0,
+        "realHttpRequests": 18,
+        "mockHttpRequests": 0,
+        "recordedActualCredits": 60.0,
+        "max_calls": 3,
+        "used_calls": 2,
+        "remaining_calls": 1,
+        "history_verified": true,
+        "realEnabled": false,
+        "providerConfigured": false,
+        "protocolVerified": false,
+        "readiness": [
+          "真实建模默认关闭；本次开发授权不等于单次真实建模授权。",
+          "需逐次人工确认、后端鉴权、费用及已核实的历史额度。"
+        ],
+        "imageGenerationConfigured": false,
+        "requestId": "ca05db84-b772-413d-b422-bc5137d2d088"
+      }
+    },
+    "/index.html": {
+      "status": 200
+    },
+    "/history.html": {
+      "status": 200
+    },
+    "/roles.html": {
+      "status": 200
+    },
+    "/facial.html": {
+      "status": 200
+    },
+    "/music.html": {
+      "status": 200
+    },
+    "/gallery.html": {
+      "status": 200
+    },
+    "/video.html": {
+      "status": 200
+    },
+    "/about.html": {
+      "status": 200
+    }
+  },
+  "fileHashes": {
+    "agents": {
+      "sha256": "22ae2950531634ab5eb7f890b1fb4d75a9b23c28fe1b132d3d9c284c0201b403",
+      "unchangedFromFieldInitial": true
+    },
+    "assets": {
+      "sha256": "9a7a795c75d33ff2957051b88ff677be3965faf9cc9e2ee493c392abe3d28eff",
+      "unchangedFromFieldInitial": true
+    },
+    "budget": {
+      "sha256": "82181e214aaa592e39f6af1d88f9d22782433e46b861dc9700649a79cad8151b",
+      "unchangedFromFieldInitial": true
+    },
+    "usage": {
+      "sha256": "549ffdc5fd8045690c6861dffbf1b5b62c1d0280156084a86ba19b2b24473808",
+      "unchangedFromFieldInitial": true
+    }
+  },
+  "logicalTables": {
+    "assets": {
+      "asset_images": {
+        "count": 1,
+        "schemaHash": "a28e67deac63f8cfa4f2e8d813c1e6a05c98c35a8050b8b742c5482989e7bc61",
+        "rowsHash": "dee568a659779ec4529226dfe7dfaa99ccb33618e5a8421a8d44d8375b779d09"
+      },
+      "asset_models": {
+        "count": 4,
+        "schemaHash": "39109879ffb921257b0aafaaa8acd1e6f24f9ca104a60c5ac97adffcd4fe600d",
+        "rowsHash": "823f1f67d63599686131510188cd9123bae5ae06a2a183cfdf6978ac9e34cafe"
+      },
+      "character_assets": {
+        "count": 3,
+        "schemaHash": "7444823a5295d331223544d0f6ca85a0670ca035c0bc6d9a9a53f869395632d3",
+        "rowsHash": "1aa1c107a5534f54faefde55e90df391c129b09c0702536a4405e879bd26c2cb"
+      },
+      "concept_candidates": {
+        "count": 3,
+        "schemaHash": "18db1e054a82651ce6123099f3eb9cd0ba91bc9eef2a7329e2809c0bd8df0a3b",
+        "rowsHash": "5bab53800d77716fa64455f1a0e2369ed4255cb141c373f24f9460720ad12dc9"
+      },
+      "neural4d_frozen_approvals": {
+        "count": 2,
+        "schemaHash": "ddfe3e1d11419ac5633fb771ba663c20f284cd16bb7789940357f31b8ae69e6c",
+        "rowsHash": "64797e3b96a350b7afe0a2df8314fbb570c4ea75a855135fe7c4badb42735c4e"
+      },
+      "neural4d_query_limits": {
+        "count": 2,
+        "schemaHash": "a54abe93753de8d3024df1bd22665f54b356fd7a9eef6cd34951455838068cb5",
+        "rowsHash": "288dccae563d4e9a12d613ad48cf92794e4e2174c6dcca054870c8715cceaea3"
+      }
+    },
+    "budget": {
+      "budget_scopes": {
+        "count": 1,
+        "schemaHash": "0b42d75ff4c5fe32d7ddacad909d0cc2c6c791fb4710377f5d2ea3549e4ede5f",
+        "rowsHash": "c602f3420c0111b929a239043ad836f8db51023ba04dc5c237f8ea0826e20b80"
+      },
+      "call_scopes": {
+        "count": 45,
+        "schemaHash": "a070130f67f8fbe7e82946e812beeb50bfe033af706b95033435d316918f4d86",
+        "rowsHash": "7d6e6fb870f2853d82f7bcbfea069dcb835f6961dfff23c7c59676eb0c3316f0"
+      },
+      "calls": {
+        "count": 107,
+        "schemaHash": "f1a20886064e988340c70353bbbd583de9477c0b4b284319aa42c67bb490fcc4",
+        "rowsHash": "1a0b81b799a36d40fedccfc412d32ee7c591c148edebc5c5780039fbd17bed86"
+      }
+    },
+    "usage": {
+      "neural4d_attempt_events": {
+        "count": 17,
+        "schemaHash": "a352662672177241cfd1eee628153efbca002eddf3105090086ebb919b352901",
+        "rowsHash": "d3a530a11df0a8602bc92dc7cb9ef289a6837a7313894e61078750f350862598"
+      },
+      "neural4d_creation_attempts": {
+        "count": 2,
+        "schemaHash": "0ee1ef081ddf4f6c7e16df3b71860544bd3593137e646967a7f76a6b5fa8588a",
+        "rowsHash": "43561f9a979cde61000b33996c356694586d861f526743f8dd3ed5369fd07c0f"
+      },
+      "neural4d_model_approvals": {
+        "count": 2,
+        "schemaHash": "29d10f0e42734033b5273a8253a194c3f5eadf4d3ce40c72f0a1b8d4c1283e4d",
+        "rowsHash": "c1a82706fa6d5606bb9cfb88f3e35320cb31e41b174d53fc51ed0bad5cf7551b"
+      },
+      "neural4d_operational_requests": {
+        "count": 18,
+        "schemaHash": "0ae7df1f0140fdcb9f2b7135a2fc429d11615ca28e9191d3651b9067366f1622",
+        "rowsHash": "011c76f863ed08821595f926b12d970462a3b43c60ab8eeac3c0495098ea88a1"
+      },
+      "neural4d_usage_policy": {
+        "count": 1,
+        "schemaHash": "9f6e7b0611f8831af6a61b63eba9226dabb4921a89a388be86f98c48f88ca2b1",
+        "rowsHash": "12c36f5deefb7783c2e2f331c8a8e0c4a8bda9e481905c8f9c3b7bd31dd71695"
+      }
+    }
+  },
+  "passed": 11,
+  "failed": 0,
+  "skipped": 0,
+  "productionWrites": 0,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "scope": "real local isolated 8011 GET and readonly filesystem/SQLite"
+}

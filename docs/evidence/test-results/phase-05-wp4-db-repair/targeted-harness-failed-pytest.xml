@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="38" failures="0" skipped="0" tests="38" time="1.978" timestamp="2026-10-21T21:21:58.625645+08:00" hostname="wenwen"><testcase classname="backend.tests.test_database_safety" name="test_default_open_missing_does_not_create_file_or_parent[agent]" time="0.004"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_default_open_missing_does_not_create_file_or_parent[budget]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_default_open_missing_does_not_create_file_or_parent[asset]" time="0.004"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_default_open_missing_does_not_create_file_or_parent[quota]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[directory-agent]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[directory-budget]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[directory-asset]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[directory-quota]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-agent]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-budget]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-asset]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-quota]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[partial-agent]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[partial-budget]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[partial-asset]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[partial-quota]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-agent]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-budget]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-asset]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-quota]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_explicit_first_initialization_and_strict_reopen[agent]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_explicit_first_initialization_and_strict_reopen[budget]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_explicit_first_initialization_and_strict_reopen[asset]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_explicit_first_initialization_and_strict_reopen[quota]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_file_removed_after_open_is_not_recreated_by_connection[agent]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_file_removed_after_open_is_not_recreated_by_connection[budget]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_file_removed_after_open_is_not_recreated_by_connection[asset]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_file_removed_after_open_is_not_recreated_by_connection[quota]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_valid_initialized_business_stores_keep_read_write_behavior" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_explicit_initializer_preflights_all_existing_files_before_any_creation" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_wrong_nonexistent_rag_path_serves_static_and_reports_unavailable_without_files" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[missing]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[corrupt]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[missing_table]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[directory]" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_budget_failure_isolated_and_generation_fails_before_network" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_catalog_reading_survives_missing_creation_ledger_without_new_quota" time="0.004"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase><testcase classname="backend.tests.test_database_safety" name="test_schema_validation_is_read_only_and_does_not_add_required_table" time="0.003"><error message="failed on setup with &quot;IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED&quot;">C:/Users/<user>\Lib\shutil.py:759: in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:/Users/<user>\Lib\shutil.py:620: in _rmtree_unsafe
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED</error></testcase></testsuite></testsuites>

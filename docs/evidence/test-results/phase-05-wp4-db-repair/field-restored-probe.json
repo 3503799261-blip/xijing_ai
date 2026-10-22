@@ -1,0 +1,836 @@
+{
+  "kind": "WP4_REPAIR_ISOLATED_FIELD_STAGE",
+  "atUtc": "2026-10-22T07:54:15.034092+00:00",
+  "stage": "restored",
+  "checks": {
+    "healthProcessAvailable": true,
+    "health200": true,
+    "eightPages200": true,
+    "wrongRootNeverCreated": true,
+    "budgetFileUnchanged": true,
+    "catalogFileUnchanged": true,
+    "quotaFileUnchanged": true,
+    "agentAvailable": true,
+    "history22": true,
+    "restoredOriginalExact": true
+  },
+  "responses": {
+    "/api/v1/health": {
+      "status": 200,
+      "body": {
+        "status": "degraded",
+        "application": {
+          "available": true
+        },
+        "databases": {
+          "agent": {
+            "available": true,
+            "diagnostic": null
+          },
+          "budget": {
+            "available": true,
+            "diagnostic": null
+          }
+        },
+        "knowledge": true,
+        "embedding": true,
+        "llmConfigured": false,
+        "llmVerified": false,
+        "diagnostic": null,
+        "documents": 12,
+        "chunks": 35,
+        "budget": {
+          "calls": 107,
+          "estimatedUpperCostCny": 0.25501584,
+          "budgetCny": 3.0,
+          "priceVerifiedAt": "2026-10-11",
+          "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+          "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+          "activeScope": {
+            "name": "phase3",
+            "calls": 45,
+            "estimatedUpperCostCny": 0.1215816,
+            "budgetCny": 0.5
+          },
+          "scopes": {
+            "phase3": {
+              "name": "phase3",
+              "calls": 45,
+              "estimatedUpperCostCny": 0.1215816,
+              "budgetCny": 0.5
+            }
+          }
+        },
+        "agents": {
+          "supervisorReady": true,
+          "databaseAvailable": true,
+          "activeTaskId": null,
+          "enabled": false,
+          "diagnostic": null
+        }
+      }
+    },
+    "/api/v1/agent/history?page=1&pageSize=50": {
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "taskId": "ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+            "taskType": "character_creation",
+            "title": "绛绣·戏韵",
+            "state": "completed",
+            "createdAt": "2026-10-14T14:53:29.733000+00:00",
+            "updatedAt": "2026-10-17T05:04:19.158585+00:00",
+            "startedAt": "2026-10-14T14:53:29.743998+00:00",
+            "finishedAt": "2026-10-17T05:04:19.158585+00:00",
+            "executedAgents": [
+              "planner",
+              "researcher",
+              "designer",
+              "reviewer"
+            ],
+            "completedSteps": 4,
+            "totalSteps": 4,
+            "resultReadable": true,
+            "hasSavedResult": true,
+            "eventCount": 12,
+            "lastSequence": 12,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "a2a43828-773f-4f81-8908-5ff762ced750",
+            "taskType": "character_creation",
+            "title": "为用户选定的红金写实参考图建立原创京剧风格数字角色JSON，角色名固定为“绛绣·戏韵”，写实自然人体比例，用途比赛主展示。\n参考图可见外观（助手观察，不是历史文化证据）：单人物全身站姿，红金长袍与花鸟式装饰，蓝银冠饰、红色绒球、珠帘及两侧垂饰，白色长袖延展，手部部分遮挡，袍摆拖地。保持主体外观，不增加武器、旗帜或图中不",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-14T14:01:36.948553+00:00",
+            "updatedAt": "2026-10-14T14:01:38.904471+00:00",
+            "startedAt": "2026-10-14T14:01:36.964681+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher"
+            ],
+            "completedSteps": 1,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": true,
+            "eventCount": 7,
+            "lastSequence": 7,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "1a18ff2c-93bb-47fb-8060-3de45378a721",
+            "taskType": "character_creation",
+            "title": "蓝云",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T06:52:26.871878+00:00",
+            "updatedAt": "2026-10-11T06:52:30.891275+00:00",
+            "startedAt": "2026-10-11T06:52:26.879256+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher",
+              "designer",
+              "reviewer"
+            ],
+            "completedSteps": 4,
+            "totalSteps": 4,
+            "resultReadable": true,
+            "hasSavedResult": true,
+            "eventCount": 11,
+            "lastSequence": 11,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "8055928d-6279-4258-a2f5-23abeaad9308",
+            "taskType": "character_creation",
+            "title": "玄翎将帅·原创舞台角色",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T06:48:04.506552+00:00",
+            "updatedAt": "2026-10-11T06:48:09.796666+00:00",
+            "startedAt": "2026-10-11T06:48:04.514310+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher",
+              "designer",
+              "reviewer"
+            ],
+            "completedSteps": 4,
+            "totalSteps": 4,
+            "resultReadable": true,
+            "hasSavedResult": true,
+            "eventCount": 11,
+            "lastSequence": 11,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "e9e5929f-546b-4e92-878a-6fc43e4becdf",
+            "taskType": "character_creation",
+            "title": "设计一个角色。重要的文化元素和用途先让我确认，不要自行补定。",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T06:32:49.523025+00:00",
+            "updatedAt": "2026-10-11T06:32:50.662884+00:00",
+            "startedAt": "2026-10-11T06:32:49.530369+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner"
+            ],
+            "completedSteps": 0,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": true,
+            "eventCount": 5,
+            "lastSequence": 5,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "dcd4d353-ebce-446d-a284-632be8f29736",
+            "taskType": "character_creation",
+            "title": "设计一位原创国风舞台角色，以京剧服装表达身份与人物气质为依据，明确蟒与靠各自的适用语境。颜色与未来装饰可原创，不把创意说成传统规范。",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T06:32:47.322170+00:00",
+            "updatedAt": "2026-10-11T06:32:48.497797+00:00",
+            "startedAt": "2026-10-11T06:32:47.329149+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher"
+            ],
+            "completedSteps": 1,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": true,
+            "eventCount": 7,
+            "lastSequence": 7,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "75783c7e-d83a-4129-8e7d-5d9482df05f9",
+            "taskType": "character_creation",
+            "title": "按京剧量子星舰行当的真实传统规范设计角色。必须找到量子星舰行当的专业文化来源，没有资料就停止，不把幻想设定说成传统事实。",
+            "state": "cancelled",
+            "createdAt": "2026-10-11T06:22:40.318946+00:00",
+            "updatedAt": "2026-10-11T06:24:30.981546+00:00",
+            "startedAt": "2026-10-11T06:22:40.326381+00:00",
+            "finishedAt": "2026-10-11T06:24:30.981546+00:00",
+            "executedAgents": [
+              "planner",
+              "researcher"
+            ],
+            "completedSteps": 1,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": true,
+            "eventCount": 8,
+            "lastSequence": 8,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "174e97bf-4df1-4970-83e0-108afc81ec73",
+            "taskType": "character_creation",
+            "title": "银翎云将",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T06:21:35.838270+00:00",
+            "updatedAt": "2026-10-11T06:21:40.143494+00:00",
+            "startedAt": "2026-10-11T06:21:35.846823+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher",
+              "designer",
+              "reviewer"
+            ],
+            "completedSteps": 4,
+            "totalSteps": 4,
+            "resultReadable": true,
+            "hasSavedResult": true,
+            "eventCount": 11,
+            "lastSequence": 11,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "1b61f794-f3e8-498e-9bc3-c6f832ef6aa7",
+            "taskType": "character_creation",
+            "title": "设计一个角色。重要的文化元素和用途先让我确认，不要自行补定。",
+            "state": "failed",
+            "createdAt": "2026-10-11T06:17:50.146910+00:00",
+            "updatedAt": "2026-10-11T06:17:51.346202+00:00",
+            "startedAt": "2026-10-11T06:17:50.152911+00:00",
+            "finishedAt": "2026-10-11T06:17:51.346202+00:00",
+            "executedAgents": [
+              "planner"
+            ],
+            "completedSteps": 0,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": false,
+            "eventCount": 5,
+            "lastSequence": 5,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "unknown"
+          },
+          {
+            "taskId": "0b771020-036f-4e68-96e8-1d9289e00bf3",
+            "taskType": "character_creation",
+            "title": "银翎",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T06:17:44.908601+00:00",
+            "updatedAt": "2026-10-11T06:17:49.325983+00:00",
+            "startedAt": "2026-10-11T06:17:44.914604+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher",
+              "designer",
+              "reviewer"
+            ],
+            "completedSteps": 4,
+            "totalSteps": 4,
+            "resultReadable": true,
+            "hasSavedResult": true,
+            "eventCount": 11,
+            "lastSequence": 11,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "25086162-e04d-4ce8-8077-913b1f4b191a",
+            "taskType": "character_creation",
+            "title": "墨垣·玄面净影",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T06:17:39.665934+00:00",
+            "updatedAt": "2026-10-11T06:17:44.025729+00:00",
+            "startedAt": "2026-10-11T06:17:39.673443+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher",
+              "designer",
+              "reviewer"
+            ],
+            "completedSteps": 4,
+            "totalSteps": 4,
+            "resultReadable": true,
+            "hasSavedResult": true,
+            "eventCount": 11,
+            "lastSequence": 11,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "27e165c1-24fc-4eea-8e53-c595fbd0cce0",
+            "taskType": "character_creation",
+            "title": "设计一位原创国风舞台角色，以京剧服装表达身份与人物气质为依据，明确蟒与靠各自的适用语境。颜色与未来装饰可原创，不把创意说成传统规范。",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T06:17:37.952895+00:00",
+            "updatedAt": "2026-10-11T06:17:39.001833+00:00",
+            "startedAt": "2026-10-11T06:17:37.960628+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher"
+            ],
+            "completedSteps": 1,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": true,
+            "eventCount": 7,
+            "lastSequence": 7,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "8317c2f1-1bf2-4927-b811-047da0e320b1",
+            "taskType": "character_creation",
+            "title": "按京剧量子星舰行当的真实传统规范设计角色。必须查到量子星舰行当的专业来源，没有资料不能把幻想设定当作传统事实。",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T06:10:13.258451+00:00",
+            "updatedAt": "2026-10-11T06:10:14.268193+00:00",
+            "startedAt": "2026-10-11T06:10:13.265621+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher"
+            ],
+            "completedSteps": 1,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": true,
+            "eventCount": 7,
+            "lastSequence": 7,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "fd51edb9-7dc7-4607-8cb8-bdcaa9251d44",
+            "taskType": "character_creation",
+            "title": "以京剧演员司雨青澜在1932年首演的代表作为历史依据设计角色。必须核实此人和剧目，找不到资料就停止，不用相似人物替代。",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T06:10:11.078563+00:00",
+            "updatedAt": "2026-10-11T06:10:12.289138+00:00",
+            "startedAt": "2026-10-11T06:10:11.085261+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher"
+            ],
+            "completedSteps": 1,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": true,
+            "eventCount": 7,
+            "lastSequence": 7,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "5dc6d493-5607-4964-b62f-23675ddb6503",
+            "taskType": "character_creation",
+            "title": "墨面玄甲将",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T06:10:04.855444+00:00",
+            "updatedAt": "2026-10-11T06:10:10.136463+00:00",
+            "startedAt": "2026-10-11T06:10:04.862449+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher",
+              "designer",
+              "reviewer"
+            ],
+            "completedSteps": 4,
+            "totalSteps": 4,
+            "resultReadable": true,
+            "hasSavedResult": true,
+            "eventCount": 11,
+            "lastSequence": 11,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "5e33473b-ab53-4e38-a578-3206d1d6ef37",
+            "taskType": "character_creation",
+            "title": "设计一位原创国风舞台角色，以京剧服装表达身份与人物气质为依据，明确蟒与靠各自的适用语境。颜色与未来装饰可原创，不把创意说成传统规范。",
+            "state": "failed",
+            "createdAt": "2026-10-11T06:10:02.641383+00:00",
+            "updatedAt": "2026-10-11T06:10:03.890238+00:00",
+            "startedAt": "2026-10-11T06:10:02.648614+00:00",
+            "finishedAt": "2026-10-11T06:10:03.890238+00:00",
+            "executedAgents": [
+              "planner"
+            ],
+            "completedSteps": 0,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": false,
+            "eventCount": 5,
+            "lastSequence": 5,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "unknown"
+          },
+          {
+            "taskId": "0a808e2b-182e-4457-b0bb-5e4f39a66263",
+            "taskType": "character_creation",
+            "title": "青旌将·霄羽",
+            "state": "completed",
+            "createdAt": "2026-10-11T05:51:58.347908+00:00",
+            "updatedAt": "2026-10-11T05:54:18.901780+00:00",
+            "startedAt": "2026-10-11T05:51:58.356572+00:00",
+            "finishedAt": "2026-10-11T05:54:18.901780+00:00",
+            "executedAgents": [
+              "planner",
+              "researcher",
+              "designer",
+              "reviewer"
+            ],
+            "completedSteps": 4,
+            "totalSteps": 4,
+            "resultReadable": true,
+            "hasSavedResult": true,
+            "eventCount": 12,
+            "lastSequence": 12,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "3658476f-6e36-4b23-9f3b-7f1488d043cf",
+            "taskType": "character_creation",
+            "title": "按京剧量子星舰行当的真实传统规范设计角色。必须查到量子星舰行当的专业来源，没有资料不能把幻想设定当作传统事实。",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T05:47:13.926424+00:00",
+            "updatedAt": "2026-10-11T05:47:15.067228+00:00",
+            "startedAt": "2026-10-11T05:47:13.934035+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher"
+            ],
+            "completedSteps": 1,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": true,
+            "eventCount": 7,
+            "lastSequence": 7,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "92ec4d81-7853-4b54-9ca3-978bab642f11",
+            "taskType": "character_creation",
+            "title": "以京剧演员司雨青澜在1932年首演的代表作为历史依据设计角色。必须核实此人和剧目，找不到资料就停止，不用相似人物替代。",
+            "state": "failed",
+            "createdAt": "2026-10-11T05:47:09.621380+00:00",
+            "updatedAt": "2026-10-11T05:47:12.797961+00:00",
+            "startedAt": "2026-10-11T05:47:09.628380+00:00",
+            "finishedAt": "2026-10-11T05:47:12.797961+00:00",
+            "executedAgents": [
+              "planner",
+              "researcher",
+              "designer"
+            ],
+            "completedSteps": 2,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": false,
+            "eventCount": 9,
+            "lastSequence": 9,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "0f997418-f27c-4c29-a615-6f69168e0e92",
+            "taskType": "character_creation",
+            "title": "墨垣",
+            "state": "cancelled",
+            "createdAt": "2026-10-11T05:47:04.356780+00:00",
+            "updatedAt": "2026-10-11T06:08:01.976565+00:00",
+            "startedAt": "2026-10-11T05:47:04.363534+00:00",
+            "finishedAt": "2026-10-11T06:08:01.976565+00:00",
+            "executedAgents": [
+              "planner",
+              "researcher",
+              "designer",
+              "reviewer"
+            ],
+            "completedSteps": 4,
+            "totalSteps": 4,
+            "resultReadable": true,
+            "hasSavedResult": true,
+            "eventCount": 12,
+            "lastSequence": 12,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "ecf0770b-f059-492d-9028-86cbebaa66d3",
+            "taskType": "character_creation",
+            "title": "设计一位原创国风舞台角色，以京剧服装表达身份与人物气质为依据，明确蟒与靠各自的适用语境。颜色与未来装饰可原创，不把创意说成传统规范。",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T05:47:02.163460+00:00",
+            "updatedAt": "2026-10-11T05:47:03.339986+00:00",
+            "startedAt": "2026-10-11T05:47:02.170070+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher"
+            ],
+            "completedSteps": 1,
+            "totalSteps": 4,
+            "resultReadable": false,
+            "hasSavedResult": true,
+            "eventCount": 7,
+            "lastSequence": 7,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          },
+          {
+            "taskId": "7f61a8d8-8300-4332-9947-8e1e2cabadbf",
+            "taskType": "character_creation",
+            "title": "云翎",
+            "state": "awaiting_confirmation",
+            "createdAt": "2026-10-11T05:44:59.501080+00:00",
+            "updatedAt": "2026-10-11T05:45:04.746938+00:00",
+            "startedAt": "2026-10-11T05:44:59.506689+00:00",
+            "finishedAt": null,
+            "executedAgents": [
+              "planner",
+              "researcher",
+              "designer",
+              "reviewer"
+            ],
+            "completedSteps": 4,
+            "totalSteps": 4,
+            "resultReadable": true,
+            "hasSavedResult": true,
+            "eventCount": 11,
+            "lastSequence": 11,
+            "historyCompleteness": "complete",
+            "missingFields": [],
+            "sourceType": "persisted_history",
+            "executionType": "model_metadata_recorded"
+          }
+        ],
+        "page": 1,
+        "pageSize": 50,
+        "total": 22,
+        "totalPages": 1,
+        "availableStates": [
+          "awaiting_confirmation",
+          "cancelled",
+          "completed",
+          "failed"
+        ],
+        "availableTaskTypes": [
+          "character_creation"
+        ],
+        "source": {
+          "kind": "persisted_history",
+          "readOnly": true,
+          "note": "真实持久化历史记录；仅展示保存内容，不重新执行。模型执行元数据不是本次API调用证明。"
+        },
+        "requestId": "450a8f86-cf3d-4323-937a-6d39ec0d74d1"
+      }
+    },
+    "/api/v1/assets/usage": {
+      "status": 200,
+      "body": {
+        "projectId": "xijing-ai-neural4d-project-v4",
+        "policyVersion": "phase4-generation-attempts-v4",
+        "max_creation_attempts": 3,
+        "max_models": 3,
+        "modelCount": 1,
+        "historicalUsageVerified": true,
+        "historical_used_attempts": 0,
+        "used_attempts": 2,
+        "reserved_attempts": 0,
+        "occupied_attempts": 2,
+        "remaining_attempts": 1,
+        "attemptStates": {
+          "SUCCEEDED": 2
+        },
+        "creationHalted": false,
+        "haltCode": null,
+        "automaticGenerationRetry": false,
+        "creationPaused": false,
+        "pauseCode": null,
+        "unreconciled_attempts": 0,
+        "realHttpRequests": 18,
+        "mockHttpRequests": 0,
+        "recordedActualCredits": 60.0,
+        "max_calls": 3,
+        "used_calls": 2,
+        "remaining_calls": 1,
+        "history_verified": true,
+        "realEnabled": false,
+        "providerConfigured": false,
+        "protocolVerified": false,
+        "readiness": [
+          "真实建模默认关闭；本次开发授权不等于单次真实建模授权。",
+          "需逐次人工确认、后端鉴权、费用及已核实的历史额度。"
+        ],
+        "imageGenerationConfigured": false,
+        "requestId": "857bba18-216a-40f0-a85c-173bd9a581cc"
+      }
+    },
+    "/index.html": {
+      "status": 200
+    },
+    "/history.html": {
+      "status": 200
+    },
+    "/roles.html": {
+      "status": 200
+    },
+    "/facial.html": {
+      "status": 200
+    },
+    "/music.html": {
+      "status": 200
+    },
+    "/gallery.html": {
+      "status": 200
+    },
+    "/video.html": {
+      "status": 200
+    },
+    "/about.html": {
+      "status": 200
+    }
+  },
+  "fileHashes": {
+    "agents": {
+      "sha256": "0808c4b607acd4b4955dce44d9ba880aa5ed32776fc24bf2556d2c07364f9c94",
+      "unchangedFromFieldInitial": false
+    },
+    "assets": {
+      "sha256": "9a7a795c75d33ff2957051b88ff677be3965faf9cc9e2ee493c392abe3d28eff",
+      "unchangedFromFieldInitial": true
+    },
+    "budget": {
+      "sha256": "82181e214aaa592e39f6af1d88f9d22782433e46b861dc9700649a79cad8151b",
+      "unchangedFromFieldInitial": true
+    },
+    "usage": {
+      "sha256": "549ffdc5fd8045690c6861dffbf1b5b62c1d0280156084a86ba19b2b24473808",
+      "unchangedFromFieldInitial": true
+    }
+  },
+  "logicalTables": {
+    "agents": {
+      "agent_artifacts": {
+        "count": 59,
+        "schemaHash": "ac78fe5ba20610bab8e1b52be65c22de5aaddc122c8a0d5be09bcec3cfb66137",
+        "rowsHash": "398cf59d968bf5ed18d521c78cbc98702fa5073c1a98e900950bf4676d2817e3"
+      },
+      "agent_events": {
+        "count": 194,
+        "schemaHash": "cf7406ee57b69dd73ffec80e0ca482e20b981f951fc2d343d1b04ba5018eb459",
+        "rowsHash": "c659f8f3c0d82f8f508682e60e92b7cba0dc99d920e52fe26c6d334ae033b4d7"
+      },
+      "agent_steps": {
+        "count": 88,
+        "schemaHash": "e9f64cd649891500ea1e1bcfe113b11dd903956d2b792c6ade70b559491efb7c",
+        "rowsHash": "c072603ebaa036f9179b29272c3b64fb75a309b156c311c88d44ab1ee8f0d03d"
+      },
+      "agent_tasks": {
+        "count": 22,
+        "schemaHash": "4f9494a6d19ea3086e5c92e202ce41e241b3715dfe088ef37745cb9a4f5c652b",
+        "rowsHash": "ed347bdcd1c6cec8884f84c3b85d507c0728f4571aa5cc1bde9032888a2a6db6"
+      }
+    },
+    "assets": {
+      "asset_images": {
+        "count": 1,
+        "schemaHash": "a28e67deac63f8cfa4f2e8d813c1e6a05c98c35a8050b8b742c5482989e7bc61",
+        "rowsHash": "dee568a659779ec4529226dfe7dfaa99ccb33618e5a8421a8d44d8375b779d09"
+      },
+      "asset_models": {
+        "count": 4,
+        "schemaHash": "39109879ffb921257b0aafaaa8acd1e6f24f9ca104a60c5ac97adffcd4fe600d",
+        "rowsHash": "823f1f67d63599686131510188cd9123bae5ae06a2a183cfdf6978ac9e34cafe"
+      },
+      "character_assets": {
+        "count": 3,
+        "schemaHash": "7444823a5295d331223544d0f6ca85a0670ca035c0bc6d9a9a53f869395632d3",
+        "rowsHash": "1aa1c107a5534f54faefde55e90df391c129b09c0702536a4405e879bd26c2cb"
+      },
+      "concept_candidates": {
+        "count": 3,
+        "schemaHash": "18db1e054a82651ce6123099f3eb9cd0ba91bc9eef2a7329e2809c0bd8df0a3b",
+        "rowsHash": "5bab53800d77716fa64455f1a0e2369ed4255cb141c373f24f9460720ad12dc9"
+      },
+      "neural4d_frozen_approvals": {
+        "count": 2,
+        "schemaHash": "ddfe3e1d11419ac5633fb771ba663c20f284cd16bb7789940357f31b8ae69e6c",
+        "rowsHash": "64797e3b96a350b7afe0a2df8314fbb570c4ea75a855135fe7c4badb42735c4e"
+      },
+      "neural4d_query_limits": {
+        "count": 2,
+        "schemaHash": "a54abe93753de8d3024df1bd22665f54b356fd7a9eef6cd34951455838068cb5",
+        "rowsHash": "288dccae563d4e9a12d613ad48cf92794e4e2174c6dcca054870c8715cceaea3"
+      }
+    },
+    "budget": {
+      "budget_scopes": {
+        "count": 1,
+        "schemaHash": "0b42d75ff4c5fe32d7ddacad909d0cc2c6c791fb4710377f5d2ea3549e4ede5f",
+        "rowsHash": "c602f3420c0111b929a239043ad836f8db51023ba04dc5c237f8ea0826e20b80"
+      },
+      "call_scopes": {
+        "count": 45,
+        "schemaHash": "a070130f67f8fbe7e82946e812beeb50bfe033af706b95033435d316918f4d86",
+        "rowsHash": "7d6e6fb870f2853d82f7bcbfea069dcb835f6961dfff23c7c59676eb0c3316f0"
+      },
+      "calls": {
+        "count": 107,
+        "schemaHash": "f1a20886064e988340c70353bbbd583de9477c0b4b284319aa42c67bb490fcc4",
+        "rowsHash": "1a0b81b799a36d40fedccfc412d32ee7c591c148edebc5c5780039fbd17bed86"
+      }
+    },
+    "usage": {
+      "neural4d_attempt_events": {
+        "count": 17,
+        "schemaHash": "a352662672177241cfd1eee628153efbca002eddf3105090086ebb919b352901",
+        "rowsHash": "d3a530a11df0a8602bc92dc7cb9ef289a6837a7313894e61078750f350862598"
+      },
+      "neural4d_creation_attempts": {
+        "count": 2,
+        "schemaHash": "0ee1ef081ddf4f6c7e16df3b71860544bd3593137e646967a7f76a6b5fa8588a",
+        "rowsHash": "43561f9a979cde61000b33996c356694586d861f526743f8dd3ed5369fd07c0f"
+      },
+      "neural4d_model_approvals": {
+        "count": 2,
+        "schemaHash": "29d10f0e42734033b5273a8253a194c3f5eadf4d3ce40c72f0a1b8d4c1283e4d",
+        "rowsHash": "c1a82706fa6d5606bb9cfb88f3e35320cb31e41b174d53fc51ed0bad5cf7551b"
+      },
+      "neural4d_operational_requests": {
+        "count": 18,
+        "schemaHash": "0ae7df1f0140fdcb9f2b7135a2fc429d11615ca28e9191d3651b9067366f1622",
+        "rowsHash": "011c76f863ed08821595f926b12d970462a3b43c60ab8eeac3c0495098ea88a1"
+      },
+      "neural4d_usage_policy": {
+        "count": 1,
+        "schemaHash": "9f6e7b0611f8831af6a61b63eba9226dabb4921a89a388be86f98c48f88ca2b1",
+        "rowsHash": "12c36f5deefb7783c2e2f331c8a8e0c4a8bda9e481905c8f9c3b7bd31dd71695"
+      }
+    }
+  },
+  "passed": 10,
+  "failed": 0,
+  "skipped": 0,
+  "productionWrites": 0,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "scope": "real local isolated 8011 GET and readonly filesystem/SQLite"
+}

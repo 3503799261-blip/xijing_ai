@@ -1,0 +1,100 @@
+{
+  "scope": "Actual browser screenshots retained privately; internal Q model rights unchanged, no media redistributed",
+  "screenshots": [
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-model-browser-01/first-internal-ready.png",
+      "bytes": 356174,
+      "sha256": "a5baa0bf8eb3ff6710a7743ba65922e33d6707686a12f84d369ff00ab53f4c60"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-model-browser-01/home-1920.png",
+      "bytes": 1642586,
+      "sha256": "a8ecc1be68e720fe45a51745ebb09c2c1b6f137ff6862da549d59dfb46581559"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-model-browser-01/same-character-chibi-missing.png",
+      "bytes": 408698,
+      "sha256": "afc24941c83193eb1d1511e8360fcfa02d8b9eace48111c3811e36bb421742c1"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-model-browser-01/second-realistic-ready.png",
+      "bytes": 586854,
+      "sha256": "c88ce02f5225a2e8e69cabed1822153dd6e147167752b011a2bd5a1b1dbf9c8a"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-guide-browser-01/backup-history.png",
+      "bytes": 281270,
+      "sha256": "1fca62f8c5cf4a6d9fac5dbf1f62e7170a14c616a57bda2612838c4ef7d581ce"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-guide-browser-01/guide-desktop.png",
+      "bytes": 321376,
+      "sha256": "7b0a074abb32502257e8bf931f6aa51bf1b4fcf326348f19463f55f0ac4098ae"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-guide-browser-01/guide-mobile.png",
+      "bytes": 108118,
+      "sha256": "31edb01e06a676081866558ea15ba28da69bc75c293951c96f7360bcb09ec4f5"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-guide-browser-01/viewer-error.png",
+      "bytes": 467894,
+      "sha256": "64b70157002e7413acd3f216b7a8aa657e3d5cafe1e339b1ebe392f74196e74c"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-guide-browser-01/viewer-recovered.png",
+      "bytes": 580777,
+      "sha256": "1178a3c9c56cd7778a1e490f63b479dcac21687f83476b76e402b6c31d468978"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-touch-browser-01/internal-chibi-mobile-error.png",
+      "bytes": 25894,
+      "sha256": "b657b4a9ce93bbdb82d7b1fa59a611ab771832dcb8d3ea2b4db4776394c49026"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-touch-browser-01/internal-chibi-mobile-ready.png",
+      "bytes": 183118,
+      "sha256": "9799dfd1b1eb8329bc866d3930796414a6b25c5164fb0520aca0f6909d466d1b"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-touch-browser-01/internal-chibi-mobile-recovered.png",
+      "bytes": 196251,
+      "sha256": "17f57b1a157967e630b0348d680d1b6cc3e718c45b8f0e7a030ea50389bb0194"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-touch-browser-01/realistic-mobile-error.png",
+      "bytes": 127541,
+      "sha256": "3f539c73b8921c24462335166990bdf9ad70dc9b19529e28ebf0b32394fb560b"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-touch-browser-01/realistic-mobile-ready.png",
+      "bytes": 205706,
+      "sha256": "bf46c4dabc2b0020ee64beb6d1931d4c3b0b51468dd88132fd7f219bccadea0e"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-touch-browser-01/realistic-mobile-recovered.png",
+      "bytes": 169643,
+      "sha256": "a602943d861f80a0fddebd606e13964e1b6fb32e3528d9be64d2128e998f699f"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-field-01/corrupt-model-browser-01/first-internal-ready.png",
+      "bytes": 356174,
+      "sha256": "a5baa0bf8eb3ff6710a7743ba65922e33d6707686a12f84d369ff00ab53f4c60"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-field-01/corrupt-model-browser-01/home-1920.png",
+      "bytes": 1632839,
+      "sha256": "641e75770cb267bbb26f7f4a97bd730818c4fefe28d86cbe3712313ddb77aa31"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-field-01/corrupt-model-browser-01/same-character-chibi-missing.png",
+      "bytes": 408714,
+      "sha256": "01cbb8523bf281b2c129811da00b817847c02c8c874b071bf9431fbaaae743d7"
+    },
+    {
+      "privateRuntimeRelative": "phase5-wp4-db-repair-field-01/corrupt-model-browser-01/second-realistic-ready.png",
+      "bytes": 586394,
+      "sha256": "83e7bfb6aa5a69249a1408690679548a3afe0dbdaf0a2fd45b04027242ab66df"
+    }
+  ]
+}

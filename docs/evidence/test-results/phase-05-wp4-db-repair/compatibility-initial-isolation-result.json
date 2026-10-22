@@ -1,0 +1,40 @@
+{
+  "kind": "OFFLINE_TEST_PROCESS_ISOLATION",
+  "pytestReturned": true,
+  "pytestExitCode": 1,
+  "bootstrapExitCode": 1,
+  "runnerError": null,
+  "scope": "Explicit test doubles and temporary stores only; not live provider or browser evidence.",
+  "isolation": {
+    "freshProcess": true,
+    "emptyPrivateEnv": true,
+    "emptyProviderKeys": true,
+    "realGenerationDisabled": true,
+    "temporaryRagAndModelPaths": true,
+    "moduleLevelAppIsolatedBeforeCollection": true,
+    "canonicalLedgerPathsAgreeInsideRunRoot": true,
+    "realHttpTransportsDenied": true,
+    "mockTransportsPermitted": true,
+    "productionFilesAndSqliteGuarded": true,
+    "externalPytestPluginAutoloadDisabled": true
+  },
+  "passed": 710,
+  "failedReports": 3,
+  "skippedReports": 0,
+  "collectionErrors": 0,
+  "failedNodes": [
+    "backend/tests/test_agent_history.py::test_reads_never_mutate_bytes_rows_or_call_store_workflow",
+    "backend/tests/test_agent_history.py::test_http_get_only_no_store_requestid_and_query_validation",
+    "backend/tests/test_phase4_candidates.py::test_candidates_survive_reopening_and_metadata_cannot_be_mutated"
+  ],
+  "auditCounts": {
+    "blockedFileAccess": 0,
+    "blockedSqlite": 0,
+    "blockedRealHttp": 0
+  },
+  "guardDiagnostics": [],
+  "outputs": {
+    "junit": "pytest.xml",
+    "terminal": "pytest-output.redacted.txt"
+  }
+}

@@ -1,0 +1,466 @@
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE                                   [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of test_default_open_missing_does_not_create_file_or_parent[agent] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_default_open_missing_does_not_create_file_or_parent[budget] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_default_open_missing_does_not_create_file_or_parent[asset] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_default_open_missing_does_not_create_file_or_parent[quota] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[directory-agent] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[directory-budget] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[directory-asset] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[directory-quota] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-agent] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-budget] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-asset] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-quota] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[partial-agent] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[partial-budget] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[partial-asset] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[partial-quota] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-agent] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-budget] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-asset] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-quota] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_explicit_first_initialization_and_strict_reopen[agent] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_explicit_first_initialization_and_strict_reopen[budget] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_explicit_first_initialization_and_strict_reopen[asset] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_explicit_first_initialization_and_strict_reopen[quota] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_file_removed_after_open_is_not_recreated_by_connection[agent] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_file_removed_after_open_is_not_recreated_by_connection[budget] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_file_removed_after_open_is_not_recreated_by_connection[asset] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_file_removed_after_open_is_not_recreated_by_connection[quota] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_valid_initialized_business_stores_keep_read_write_behavior _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_explicit_initializer_preflights_all_existing_files_before_any_creation _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_wrong_nonexistent_rag_path_serves_static_and_reports_unavailable_without_files _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[missing] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[corrupt] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[missing_table] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[directory] _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_budget_failure_isolated_and_generation_fails_before_network _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_catalog_reading_survives_missing_creation_ledger_without_new_quota _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+_ ERROR at setup of test_schema_validation_is_read_only_and_does_not_add_required_table _
+<absolute-path>
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<absolute-path>
+    os.unlink(fullname)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:185: in audit
+    guard_file(values[0], True, event)
+..\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py:160: in guard_file
+    raise IsolationViolation("OFFLINE_FILE_BOUNDARY_BLOCKED")
+E   IsolationViolation: OFFLINE_FILE_BOUNDARY_BLOCKED
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  <isolated-path>\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR backend/tests/test_database_safety.py::test_default_open_missing_does_not_create_file_or_parent[agent]
+ERROR backend/tests/test_database_safety.py::test_default_open_missing_does_not_create_file_or_parent[budget]
+ERROR backend/tests/test_database_safety.py::test_default_open_missing_does_not_create_file_or_parent[asset]
+ERROR backend/tests/test_database_safety.py::test_default_open_missing_does_not_create_file_or_parent[quota]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[directory-agent]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[directory-budget]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[directory-asset]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[directory-quota]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-agent]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-budget]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-asset]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-quota]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[partial-agent]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[partial-budget]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[partial-asset]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[partial-quota]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-agent]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-budget]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-asset]
+ERROR backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-quota]
+ERROR backend/tests/test_database_safety.py::test_explicit_first_initialization_and_strict_reopen[agent]
+ERROR backend/tests/test_database_safety.py::test_explicit_first_initialization_and_strict_reopen[budget]
+ERROR backend/tests/test_database_safety.py::test_explicit_first_initialization_and_strict_reopen[asset]
+ERROR backend/tests/test_database_safety.py::test_explicit_first_initialization_and_strict_reopen[quota]
+ERROR backend/tests/test_database_safety.py::test_file_removed_after_open_is_not_recreated_by_connection[agent]
+ERROR backend/tests/test_database_safety.py::test_file_removed_after_open_is_not_recreated_by_connection[budget]
+ERROR backend/tests/test_database_safety.py::test_file_removed_after_open_is_not_recreated_by_connection[asset]
+ERROR backend/tests/test_database_safety.py::test_file_removed_after_open_is_not_recreated_by_connection[quota]
+ERROR backend/tests/test_database_safety.py::test_valid_initialized_business_stores_keep_read_write_behavior
+ERROR backend/tests/test_database_safety.py::test_explicit_initializer_preflights_all_existing_files_before_any_creation
+ERROR backend/tests/test_database_safety.py::test_wrong_nonexistent_rag_path_serves_static_and_reports_unavailable_without_files
+ERROR backend/tests/test_database_safety.py::test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[missing]
+ERROR backend/tests/test_database_safety.py::test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[corrupt]
+ERROR backend/tests/test_database_safety.py::test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[missing_table]
+ERROR backend/tests/test_database_safety.py::test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[directory]
+ERROR backend/tests/test_database_safety.py::test_budget_failure_isolated_and_generation_fails_before_network
+ERROR backend/tests/test_database_safety.py::test_catalog_reading_survives_missing_creation_ledger_without_new_quota
+ERROR backend/tests/test_database_safety.py::test_schema_validation_is_read_only_and_does_not_add_required_table
+1 warning, 38 errors in 1.98s

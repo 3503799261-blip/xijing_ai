@@ -1,0 +1,158 @@
+{
+  "kind": "WP4_REPAIR_FIELD_ISOLATED_SERVER",
+  "atUtc": "2026-10-22T07:55:30.635280+00:00",
+  "pid": 23804,
+  "command": [
+    "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe",
+    "-m",
+    "uvicorn",
+    "backend.app.main:app",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8011",
+    "--workers",
+    "1"
+  ],
+  "source": "current product snapshot in independent workspace",
+  "mode": "wrong configured root",
+  "keys": "blank, never copied source secrets",
+  "network": "external DNS/connect denied process-locally",
+  "neural4dCalls": 0,
+  "paidCalls": 0,
+  "checks": [
+    {
+      "path": "/api/v1/agent/history?page=1&pageSize=1",
+      "status": 503,
+      "bytes": 248,
+      "response": {
+        "error": {
+          "code": "AGENT_DATABASE_UNAVAILABLE",
+          "message": "Agent任务数据库缺失、路径错误或不可读取，请检查配置并恢复原库；未自动创建或修复。",
+          "retryable": false
+        },
+        "requestId": "da995e3e-3fda-4442-a880-1313f35ceb0f"
+      }
+    },
+    {
+      "path": "/api/v1/capabilities",
+      "status": 200,
+      "bytes": 206,
+      "response": {
+        "questionAnswering": false,
+        "knowledgeSearch": false,
+        "agentWorkflow": false,
+        "conceptImage": false,
+        "imageToModel": false,
+        "assetManagement": false,
+        "modelViewer": false,
+        "checkedAt": "2026-10-22T07:55:32.240623+00:00"
+      }
+    },
+    {
+      "path": "/api/v1/assets/usage",
+      "status": 503,
+      "bytes": 194,
+      "response": {
+        "error": {
+          "code": "ASSET_SERVICE_UNAVAILABLE",
+          "message": "资产服务未就绪，文化网页与知识问答仍可使用。",
+          "retryable": false
+        },
+        "requestId": "e3fbb303-d301-499e-8d1e-5cc350228972"
+      }
+    },
+    {
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "status": 503,
+      "bytes": 194,
+      "response": {
+        "error": {
+          "code": "ASSET_SERVICE_UNAVAILABLE",
+          "message": "资产服务未就绪，文化网页与知识问答仍可使用。",
+          "retryable": false
+        },
+        "requestId": "776ff986-80cb-495d-af50-d06b68906dcd"
+      }
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "bytes": 12256
+    },
+    {
+      "path": "/history.html",
+      "status": 200,
+      "bytes": 13006
+    },
+    {
+      "path": "/roles.html",
+      "status": 200,
+      "bytes": 9213
+    },
+    {
+      "path": "/facial.html",
+      "status": 200,
+      "bytes": 9259
+    },
+    {
+      "path": "/music.html",
+      "status": 200,
+      "bytes": 8360
+    },
+    {
+      "path": "/gallery.html",
+      "status": 200,
+      "bytes": 12687
+    },
+    {
+      "path": "/video.html",
+      "status": 200,
+      "bytes": 7157
+    },
+    {
+      "path": "/about.html",
+      "status": 200,
+      "bytes": 50874
+    }
+  ],
+  "health": {
+    "status": "degraded",
+    "application": {
+      "available": true
+    },
+    "databases": {
+      "agent": {
+        "available": false,
+        "diagnostic": "AGENT_DATABASE_UNAVAILABLE",
+        "message": "Agent任务数据库缺失、路径错误或不可读取，请检查配置并恢复原库；未自动创建或修复。"
+      },
+      "budget": {
+        "available": false,
+        "diagnostic": "BUDGET_DATABASE_UNAVAILABLE"
+      }
+    },
+    "knowledge": false,
+    "embedding": false,
+    "llmConfigured": false,
+    "llmVerified": false,
+    "diagnostic": "KNOWLEDGE_NOT_INITIALIZED",
+    "documents": 0,
+    "chunks": 0,
+    "budget": {
+      "available": false,
+      "diagnostic": "BUDGET_DATABASE_UNAVAILABLE",
+      "message": "模型预算数据库不可用，已停止付费调用；请检查配置并恢复原库。"
+    },
+    "agents": {
+      "supervisorReady": false,
+      "databaseAvailable": false,
+      "activeTaskId": null,
+      "enabled": false,
+      "diagnostic": "AGENT_DATABASE_UNAVAILABLE"
+    }
+  },
+  "httpReady": true,
+  "readySeconds": 1.573,
+  "wrongRootExists": false
+}

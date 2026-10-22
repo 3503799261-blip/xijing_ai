@@ -1,0 +1,35 @@
+{
+  "kind": "WP4_REPAIR_BASELINE_EXECUTION_INDEX",
+  "clientDate": "2026-10-21",
+  "frozenCommit": "3b40aa27b3b642e3a695c60ad149678a87487ae0",
+  "sourceArchiveSha256": "4c2a62dd102a5b69cc0a5636ec99943664adb15ee28481890e6611ee9928271a",
+  "command": "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe D:\\京剧\\.runtime\\phase5-wp4-db-repair-baseline-01\\executed-helper-attempt04.py",
+  "result": "isolated-04/baseline-result.json",
+  "passed": 4,
+  "failed": 0,
+  "skipped": 0,
+  "paidCalls": 0,
+  "neural4dCalls": 0,
+  "notes": [
+    "Cases A/B/C reproduce unsafe old behavior; PASS is observation success, not fixed acceptance.",
+    "Attempt01 TestClient Windows socketpair stalled; user test script interrupted, files preserved.",
+    "Attempt02 faulthandler confirms Windows asyncio socketpair accept before app lifespan; interrupted and stack preserved.",
+    "Attempt03 no HTTP factory-only run: A/B/C passed, D fixture write PermissionError; not a product defect, original failure preserved.",
+    "Attempt04 exact frozen source under local temporary-file/loopback permission succeeded all four cases.",
+    "Readonly state helper retained its historical clientDate constant 2026-10-20; checkedAtUtc and this invocation date identify actual 2026-10-21 read.",
+    "production state/provenance snapshots preceded any app imports, are mode=ro/query_only.",
+    "physical resource inventory is also readonly, captured after frozen-source isolated tests; no production app was imported."
+  ],
+  "artifacts": [
+    "before-state.json",
+    "before-provenance.json",
+    "physical-resources-before.json",
+    "executed-helper-attempt01.py",
+    "executed-helper-attempt02.py",
+    "executed-helper-attempt03.py",
+    "executed-helper-attempt04.py",
+    "isolated-02/hang-trace.log",
+    "isolated-03/baseline-result.json",
+    "isolated-04/baseline-result.json"
+  ]
+}

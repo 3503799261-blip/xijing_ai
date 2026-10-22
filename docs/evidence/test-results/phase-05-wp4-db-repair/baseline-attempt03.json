@@ -1,0 +1,115 @@
+{
+  "kind": "WP4_DATABASE_REPAIR_PRECHANGE_BASELINE",
+  "frozenSourceCommit": "3b40aa2",
+  "sourceLocation": "source-at-3b40aa2.zip",
+  "results": [
+    {
+      "name": "A_wrong_nonexistent_business_path_creates_empty_databases",
+      "status": "PASS",
+      "meaning": "baseline behavior observed, not repaired acceptance",
+      "detail": {
+        "vulnerabilityReproduced": true,
+        "configuredRootPreviouslyExisted": false,
+        "createdFiles": {
+          "agent-tasks.sqlite3": {
+            "bytes": 40960,
+            "sha256": "bcc2745a64c76f17d24af635746f272749ca5030f26137be34c029898da125a4"
+          },
+          "api-budget.sqlite3": {
+            "bytes": 32768,
+            "sha256": "3d80469d65a02ab2bf2ccff7768f56fea981de623914afdca982737c58de81a8"
+          },
+          "assets/catalog.sqlite3": {
+            "bytes": 81920,
+            "sha256": "154494ea7614925148bfd474d1ab87e1877ba50351e4775b4c863b93ce8e1454"
+          }
+        },
+        "app": {
+          "appFactorySucceeded": true,
+          "historyTotal": 0,
+          "httpChecks": "BLOCKED: Windows asyncio socketpair stalled before TestClient app startup in managed sandbox; separately retried with guarded local allowance"
+        }
+      }
+    },
+    {
+      "name": "B_missing_existing_agent_database_recreated_as_empty",
+      "status": "PASS",
+      "meaning": "baseline behavior observed, not repaired acceptance",
+      "detail": {
+        "vulnerabilityReproduced": true,
+        "preservedOriginalHash": "3903aff8469cc83347c6c331cec71120d15cb97ccd1050cf19078b71b739cbf5",
+        "savedTaskId": "2a009ced-0c74-4915-b9b5-a9897df2e0c0",
+        "newEmptyAgentDatabase": true,
+        "createdFiles": {
+          "agent-tasks.sqlite3": {
+            "bytes": 40960,
+            "sha256": "bcc2745a64c76f17d24af635746f272749ca5030f26137be34c029898da125a4"
+          },
+          "api-budget.sqlite3": {
+            "bytes": 32768,
+            "sha256": "3f552d0bec9f91b82cfec2fd21e75a5c69152afc25e44e1683f97fa056dcd1f9"
+          },
+          "saved-original-agent.sqlite3": {
+            "bytes": 40960,
+            "sha256": "3903aff8469cc83347c6c331cec71120d15cb97ccd1050cf19078b71b739cbf5"
+          },
+          "assets/catalog.sqlite3": {
+            "bytes": 81920,
+            "sha256": "154494ea7614925148bfd474d1ab87e1877ba50351e4775b4c863b93ce8e1454"
+          }
+        },
+        "app": {
+          "appFactorySucceeded": true,
+          "historyTotal": 0,
+          "httpChecks": "BLOCKED: Windows asyncio socketpair stalled before TestClient app startup in managed sandbox; separately retried with guarded local allowance"
+        }
+      }
+    },
+    {
+      "name": "C_corrupt_agent_database_blocks_whole_app_factory",
+      "status": "PASS",
+      "meaning": "baseline behavior observed, not repaired acceptance",
+      "detail": {
+        "vulnerabilityReproduced": true,
+        "factoryRaises": "DatabaseError",
+        "failureLocation": "create_app -> Supervisor.__init__ -> TaskStore.__init__ -> executescript",
+        "staticAndGlbUnavailableBecauseNoAppConstructed": true,
+        "corruptHashUnchanged": true,
+        "corruptSha256": "1ecda64bdef4cc7eb14a27c8a92f3c3955765f0ff9698f37bc17364e15efa5f8",
+        "createdFiles": {
+          "agent-tasks.sqlite3": {
+            "bytes": 59,
+            "sha256": "1ecda64bdef4cc7eb14a27c8a92f3c3955765f0ff9698f37bc17364e15efa5f8"
+          },
+          "api-budget.sqlite3": {
+            "bytes": 32768,
+            "sha256": "8314dcb4c5bd8e686fdde0e966210b985df9ea3ea37015552adb800d07cb8e24"
+          },
+          "valid-original.sqlite3": {
+            "bytes": 40960,
+            "sha256": "bcc2745a64c76f17d24af635746f272749ca5030f26137be34c029898da125a4"
+          }
+        }
+      }
+    },
+    {
+      "name": "D_valid_isolated_database_history_and_real_glb_http",
+      "status": "FAIL",
+      "errorType": "PermissionError",
+      "error": "ISOLATED_BASELINE_ERROR"
+    }
+  ],
+  "passed": 3,
+  "failed": 1,
+  "skipped": 0,
+  "auditCounts": {
+    "blockedNetwork": 0,
+    "blockedFile": 0,
+    "blockedSqlite": 0,
+    "allowedAsyncioLoopbackControlSockets": 0
+  },
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "productionDatabaseAccess": "none; separate readonly snapshot executed before harness",
+  "scope": "Frozen app factory, readonly history, actual isolated SQLite and licensed test GLB file roundtrip; TestClient blocked by managed Windows socketpair before lifespan; no HTTP/browser claim"
+}

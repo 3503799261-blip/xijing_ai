@@ -1,0 +1,19 @@
+{
+  "scenario": "late missing budget with locally ready Agent/knowledge conditions",
+  "actual": [
+    {
+      "name": "health",
+      "raised": "BUDGET_DATABASE_UNAVAILABLE",
+      "message": "模型预算数据库缺失、路径错误或不可读取，已停止付费调用；请检查配置并恢复原库。"
+    },
+    {
+      "name": "capabilities",
+      "raised": "BUDGET_DATABASE_UNAVAILABLE",
+      "message": "模型预算数据库缺失、路径错误或不可读取，已停止付费调用；请检查配置并恢复原库。"
+    }
+  ],
+  "expected": "health/capabilities return degraded structured conditions rather than throwing",
+  "externalRequests": 0,
+  "productionAccess": 0,
+  "isolation": "fresh temporary business stores; provider readiness uses an explicit local stub"
+}

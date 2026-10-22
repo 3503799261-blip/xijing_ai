@@ -1,0 +1,155 @@
+{
+  "kind": "WP4_DATABASE_REPAIR_PRECHANGE_BASELINE",
+  "frozenSourceCommit": "3b40aa2",
+  "sourceLocation": "source-at-3b40aa2.zip",
+  "results": [
+    {
+      "name": "A_wrong_nonexistent_business_path_creates_empty_databases",
+      "status": "PASS",
+      "meaning": "baseline behavior observed, not repaired acceptance",
+      "detail": {
+        "vulnerabilityReproduced": true,
+        "configuredRootPreviouslyExisted": false,
+        "createdFiles": {
+          "agent-tasks-owner.lock": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "agent-tasks.sqlite3": {
+            "bytes": 40960,
+            "sha256": "bcc2745a64c76f17d24af635746f272749ca5030f26137be34c029898da125a4"
+          },
+          "api-budget.sqlite3": {
+            "bytes": 32768,
+            "sha256": "2fc4753cf232f579a9dcfcc7ffce903b58f831e14bc108fdc231794e3a0f1ce8"
+          },
+          "assets/catalog.sqlite3": {
+            "bytes": 81920,
+            "sha256": "154494ea7614925148bfd474d1ab87e1877ba50351e4775b4c863b93ce8e1454"
+          }
+        },
+        "app": {
+          "healthStatus": 200,
+          "knowledgeDiagnostic": "KNOWLEDGE_NOT_INITIALIZED",
+          "historyStatus": 200,
+          "historyTotal": 0,
+          "pageStatuses": {
+            "index": 200,
+            "history": 200,
+            "roles": 200,
+            "facial": 200,
+            "music": 200,
+            "video": 200,
+            "gallery": 200,
+            "about": 200
+          }
+        }
+      }
+    },
+    {
+      "name": "B_missing_existing_agent_database_recreated_as_empty",
+      "status": "PASS",
+      "meaning": "baseline behavior observed, not repaired acceptance",
+      "detail": {
+        "vulnerabilityReproduced": true,
+        "preservedOriginalHash": "a67f0f979c7f215deead12e09e6b71f43542db89ae835bc4ad1f6097b9f6e97c",
+        "savedTaskId": "09f27e12-2a51-42b0-baf1-e754b654facd",
+        "newEmptyAgentDatabase": true,
+        "createdFiles": {
+          "agent-tasks-owner.lock": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "agent-tasks.sqlite3": {
+            "bytes": 40960,
+            "sha256": "bcc2745a64c76f17d24af635746f272749ca5030f26137be34c029898da125a4"
+          },
+          "api-budget.sqlite3": {
+            "bytes": 32768,
+            "sha256": "ea291c8680612dc7074c8cf83d7d06a62bfb1028069ceffd65fa7cc6ea016401"
+          },
+          "saved-original-agent.sqlite3": {
+            "bytes": 40960,
+            "sha256": "a67f0f979c7f215deead12e09e6b71f43542db89ae835bc4ad1f6097b9f6e97c"
+          },
+          "assets/catalog.sqlite3": {
+            "bytes": 81920,
+            "sha256": "154494ea7614925148bfd474d1ab87e1877ba50351e4775b4c863b93ce8e1454"
+          }
+        },
+        "app": {
+          "healthStatus": 200,
+          "knowledgeDiagnostic": "KNOWLEDGE_NOT_INITIALIZED",
+          "historyStatus": 200,
+          "historyTotal": 0,
+          "pageStatuses": {
+            "index": 200,
+            "history": 200,
+            "roles": 200,
+            "facial": 200,
+            "music": 200,
+            "video": 200,
+            "gallery": 200,
+            "about": 200
+          }
+        }
+      }
+    },
+    {
+      "name": "C_corrupt_agent_database_blocks_whole_app_factory",
+      "status": "PASS",
+      "meaning": "baseline behavior observed, not repaired acceptance",
+      "detail": {
+        "vulnerabilityReproduced": true,
+        "factoryRaises": "DatabaseError",
+        "failureLocation": "create_app -> Supervisor.__init__ -> TaskStore.__init__ -> executescript",
+        "staticAndGlbUnavailableBecauseNoAppConstructed": true,
+        "corruptHashUnchanged": true,
+        "corruptSha256": "1ecda64bdef4cc7eb14a27c8a92f3c3955765f0ff9698f37bc17364e15efa5f8",
+        "createdFiles": {
+          "agent-tasks.sqlite3": {
+            "bytes": 59,
+            "sha256": "1ecda64bdef4cc7eb14a27c8a92f3c3955765f0ff9698f37bc17364e15efa5f8"
+          },
+          "api-budget.sqlite3": {
+            "bytes": 32768,
+            "sha256": "74a14744ca7fa1346c599999257b17fd9747e7da25e8d5bc4a01216591fcaee1"
+          },
+          "valid-original.sqlite3": {
+            "bytes": 40960,
+            "sha256": "bcc2745a64c76f17d24af635746f272749ca5030f26137be34c029898da125a4"
+          }
+        }
+      }
+    },
+    {
+      "name": "D_valid_isolated_database_history_and_real_glb_http",
+      "status": "PASS",
+      "meaning": "baseline behavior observed, not repaired acceptance",
+      "detail": {
+        "vulnerabilityReproduced": false,
+        "validHistoryTaskId": "fdbad285-f6cc-42f1-8856-a35584a50376",
+        "historyTotal": 1,
+        "aboutStatus": 200,
+        "actualLicensedGlbStatus": 200,
+        "glbHash": "65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5",
+        "glbBytes": 120484,
+        "viewerBrowserTestClaimed": false,
+        "noKnowledgeResourcesRequired": true
+      }
+    }
+  ],
+  "passed": 4,
+  "failed": 0,
+  "skipped": 0,
+  "auditCounts": {
+    "blockedNetwork": 0,
+    "blockedFile": 0,
+    "blockedSqlite": 0,
+    "allowedAsyncioLoopbackControlSockets": 3
+  },
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "productionDatabaseAccess": "none; separate readonly snapshot executed before harness",
+  "scope": "TestClient in-process HTTP, actual isolated SQLite and licensed test GLB; no browser or real model creation"
+}

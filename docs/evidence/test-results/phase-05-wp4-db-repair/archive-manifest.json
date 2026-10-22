@@ -1,0 +1,782 @@
+{
+  "atUtc": "2026-10-22T08:00:40.512365+00:00",
+  "scope": "Explicit text only; no DB/model/texture/image/env/credential; source failures preserved",
+  "files": [
+    {
+      "file": "baseline-execution-index.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-baseline-01/execution-index.json",
+      "sourceBytes": 1903,
+      "sourceSha256": "dbc870469637e7e37c95d008bdf9309a7ddb2e0d9978d23537fa548286cc5711",
+      "archiveBytes": 1903,
+      "archiveSha256": "dbc870469637e7e37c95d008bdf9309a7ddb2e0d9978d23537fa548286cc5711",
+      "redacted": false
+    },
+    {
+      "file": "baseline-before-state.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-baseline-01/before-state.json",
+      "sourceBytes": 67497,
+      "sourceSha256": "56f0a85cd9f6cb5aa8692c7a583b486c48c28687198851dcbf23d147e6b74d15",
+      "archiveBytes": 67497,
+      "archiveSha256": "56f0a85cd9f6cb5aa8692c7a583b486c48c28687198851dcbf23d147e6b74d15",
+      "redacted": false
+    },
+    {
+      "file": "baseline-before-provenance.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-baseline-01/before-provenance.json",
+      "sourceBytes": 27897,
+      "sourceSha256": "d988ee1e415ada4b2485fe2210cbaf7f693d0061028b543fae00c0340fd227c4",
+      "archiveBytes": 27897,
+      "archiveSha256": "d988ee1e415ada4b2485fe2210cbaf7f693d0061028b543fae00c0340fd227c4",
+      "redacted": false
+    },
+    {
+      "file": "baseline-physical-resources-before.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-baseline-01/physical-resources-before.json",
+      "sourceBytes": 28990,
+      "sourceSha256": "02818a76b85d03e4a5bb77e579493a771ced80632a80121b2638346a171190ff",
+      "archiveBytes": 28990,
+      "archiveSha256": "02818a76b85d03e4a5bb77e579493a771ced80632a80121b2638346a171190ff",
+      "redacted": false
+    },
+    {
+      "file": "baseline-executed-helper-attempt01.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-baseline-01/executed-helper-attempt01.py",
+      "sourceBytes": 10063,
+      "sourceSha256": "71664aa302c99bc7cc233464c7cb59f6974455ef595f51eac92c2929d9e2e6b2",
+      "archiveBytes": 10063,
+      "archiveSha256": "71664aa302c99bc7cc233464c7cb59f6974455ef595f51eac92c2929d9e2e6b2",
+      "redacted": false
+    },
+    {
+      "file": "baseline-executed-helper-attempt02.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-baseline-01/executed-helper-attempt02.py",
+      "sourceBytes": 10277,
+      "sourceSha256": "ee10827cc3845ec5b38771cb5029bab5175acb3db207575772dfa04809449310",
+      "archiveBytes": 10277,
+      "archiveSha256": "ee10827cc3845ec5b38771cb5029bab5175acb3db207575772dfa04809449310",
+      "redacted": false
+    },
+    {
+      "file": "baseline-executed-helper-attempt03.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-baseline-01/executed-helper-attempt03.py",
+      "sourceBytes": 10024,
+      "sourceSha256": "752f3b320c0acbc28db9a8680c6f5c4fd70533e667bc5574c85c83b7a86ae6d0",
+      "archiveBytes": 10024,
+      "archiveSha256": "752f3b320c0acbc28db9a8680c6f5c4fd70533e667bc5574c85c83b7a86ae6d0",
+      "redacted": false
+    },
+    {
+      "file": "baseline-executed-helper-attempt04.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-baseline-01/executed-helper-attempt04.py",
+      "sourceBytes": 10277,
+      "sourceSha256": "9807ee2f047abf4e77b0830f54abe9c4cf33a63b5865ff58818185d19bc6dccc",
+      "archiveBytes": 10277,
+      "archiveSha256": "9807ee2f047abf4e77b0830f54abe9c4cf33a63b5865ff58818185d19bc6dccc",
+      "redacted": false
+    },
+    {
+      "file": "baseline-hang-trace.txt",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-baseline-01/isolated-02/hang-trace.log",
+      "sourceBytes": 4484,
+      "sourceSha256": "191fde478243ebe1176a05599b4d7a4b7f4ad364b71aeb2d77d7acc5bd00a70b",
+      "archiveBytes": 4516,
+      "archiveSha256": "d618bd06d1928d08b554df0a975d5afbf9b1f31f0606bff716ffde90b6c97ae5",
+      "redacted": true
+    },
+    {
+      "file": "baseline-attempt03.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-baseline-01/isolated-03/baseline-result.json",
+      "sourceBytes": 4603,
+      "sourceSha256": "d8921a42cf4ad9310aa87123405c097e7d3036d50d06842f852702f2637fdd26",
+      "archiveBytes": 4603,
+      "archiveSha256": "d8921a42cf4ad9310aa87123405c097e7d3036d50d06842f852702f2637fdd26",
+      "redacted": false
+    },
+    {
+      "file": "baseline-final.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-baseline-01/isolated-04/baseline-result.json",
+      "sourceBytes": 5661,
+      "sourceSha256": "7aa1b64092d0e81c9c0d3306cac169c798461bfe8a7899825d184d68d0028494",
+      "archiveBytes": 5661,
+      "archiveSha256": "7aa1b64092d0e81c9c0d3306cac169c798461bfe8a7899825d184d68d0028494",
+      "redacted": false
+    },
+    {
+      "file": "compatibility-initial-isolation-result.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-fixture-01/isolation-result.json",
+      "sourceBytes": 1390,
+      "sourceSha256": "ca116f28978a7f92aa1c645c3a7c59b57c5085fc4e320bacc5e6f3d6dd939377",
+      "archiveBytes": 1390,
+      "archiveSha256": "ca116f28978a7f92aa1c645c3a7c59b57c5085fc4e320bacc5e6f3d6dd939377",
+      "redacted": false
+    },
+    {
+      "file": "compatibility-initial-pytest-output.redacted.txt",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-fixture-01/pytest-output.redacted.txt",
+      "sourceBytes": 3589,
+      "sourceSha256": "2b52311527f6d31817d38c203c4acd98403a7b50f74b9ce6bd70d335fff2ea1e",
+      "archiveBytes": 3589,
+      "archiveSha256": "2b52311527f6d31817d38c203c4acd98403a7b50f74b9ce6bd70d335fff2ea1e",
+      "redacted": false
+    },
+    {
+      "file": "compatibility-initial-pytest.xml",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-fixture-01/pytest.xml",
+      "sourceBytes": 132389,
+      "sourceSha256": "4ab76c667e1fca57c9f36e11b29be0fea4620ca0555b5384d6918baff50c938f",
+      "archiveBytes": 132390,
+      "archiveSha256": "02420a4438a6b7cc4a9e7620e1b2860fe671879c906993676d6d22401dc7186e",
+      "redacted": true
+    },
+    {
+      "file": "compatibility-retest-isolation-result.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-fixture-target-01/isolation-result.json",
+      "sourceBytes": 1065,
+      "sourceSha256": "a2452f6b5ce96aeb5769eefd11661bc789ece8e0e5f7807d5d3b7e5bb3bd459a",
+      "archiveBytes": 1065,
+      "archiveSha256": "a2452f6b5ce96aeb5769eefd11661bc789ece8e0e5f7807d5d3b7e5bb3bd459a",
+      "redacted": false
+    },
+    {
+      "file": "compatibility-retest-pytest-output.redacted.txt",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-fixture-target-01/pytest-output.redacted.txt",
+      "sourceBytes": 568,
+      "sourceSha256": "cac8a913f95d4527488af5c1560b44f789c0b0606bf5dfd3023e0f467b26910e",
+      "archiveBytes": 568,
+      "archiveSha256": "cac8a913f95d4527488af5c1560b44f789c0b0606bf5dfd3023e0f467b26910e",
+      "redacted": false
+    },
+    {
+      "file": "compatibility-retest-pytest.xml",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-fixture-target-01/pytest.xml",
+      "sourceBytes": 6753,
+      "sourceSha256": "c7ba592ff4577eb809509bb603a53c6318d985b49e4d2b1c4b38d23d0f5a0103",
+      "archiveBytes": 6753,
+      "archiveSha256": "c7ba592ff4577eb809509bb603a53c6318d985b49e4d2b1c4b38d23d0f5a0103",
+      "redacted": false
+    },
+    {
+      "file": "targeted-harness-failed-isolation-result.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-targeted-01/isolation-result.json",
+      "sourceBytes": 49406,
+      "sourceSha256": "a6fd7b6d1e038f23f8ba2643afe2bf6e65f8cb0cff9cbdae34e4b17ddf5ac7c5",
+      "archiveBytes": 49406,
+      "archiveSha256": "a6fd7b6d1e038f23f8ba2643afe2bf6e65f8cb0cff9cbdae34e4b17ddf5ac7c5",
+      "redacted": false
+    },
+    {
+      "file": "targeted-harness-failed-pytest-output.redacted.txt",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-targeted-01/pytest-output.redacted.txt",
+      "sourceBytes": 25844,
+      "sourceSha256": "ccdbe5fbec296c7f779bf3e13877f926bb4ab1d0e55e02e9a5c5aa227015594d",
+      "archiveBytes": 25844,
+      "archiveSha256": "ccdbe5fbec296c7f779bf3e13877f926bb4ab1d0e55e02e9a5c5aa227015594d",
+      "redacted": false
+    },
+    {
+      "file": "targeted-harness-failed-pytest.xml",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-targeted-01/pytest.xml",
+      "sourceBytes": 29768,
+      "sourceSha256": "a7ed39056d8d7967cc698af5ece9daefe03df745ac923e0730043cf42d5ee493",
+      "archiveBytes": 29844,
+      "archiveSha256": "cd84c0215e34c8af722b66415b6ff92be885dbd846c9d4737b591d299092008b",
+      "redacted": true
+    },
+    {
+      "file": "targeted-initial-isolation-result.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-targeted-02/isolation-result.json",
+      "sourceBytes": 1065,
+      "sourceSha256": "f9f669df95ef78675ab89ff0c9b03fb14edfcf830aa34ad3c6759c881222e183",
+      "archiveBytes": 1065,
+      "archiveSha256": "f9f669df95ef78675ab89ff0c9b03fb14edfcf830aa34ad3c6759c881222e183",
+      "redacted": false
+    },
+    {
+      "file": "targeted-initial-pytest-output.redacted.txt",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-targeted-02/pytest-output.redacted.txt",
+      "sourceBytes": 568,
+      "sourceSha256": "d86284f24d0a1f02bc9a119842c90834002f4e5aecfd983b15565f8f1d89e910",
+      "archiveBytes": 568,
+      "archiveSha256": "d86284f24d0a1f02bc9a119842c90834002f4e5aecfd983b15565f8f1d89e910",
+      "redacted": false
+    },
+    {
+      "file": "targeted-initial-pytest.xml",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-targeted-02/pytest.xml",
+      "sourceBytes": 6017,
+      "sourceSha256": "2424c1ac3ef21575c0401b63d4ee58a48f3850d45fcb1f10e7b1078d03dbea55",
+      "archiveBytes": 6017,
+      "archiveSha256": "2424c1ac3ef21575c0401b63d4ee58a48f3850d45fcb1f10e7b1078d03dbea55",
+      "redacted": false
+    },
+    {
+      "file": "targeted-final-isolation-result.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-targeted-04/isolation-result.json",
+      "sourceBytes": 1065,
+      "sourceSha256": "a02011ebaf9182aed9630287e6387d70f27807ea5770cffa3fc411f871775f68",
+      "archiveBytes": 1065,
+      "archiveSha256": "a02011ebaf9182aed9630287e6387d70f27807ea5770cffa3fc411f871775f68",
+      "redacted": false
+    },
+    {
+      "file": "targeted-final-pytest-output.redacted.txt",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-targeted-04/pytest-output.redacted.txt",
+      "sourceBytes": 568,
+      "sourceSha256": "3db287564e90ff3d24fe5fdd8f716f0431c5543c28ae5354b01a0f7053c39f5e",
+      "archiveBytes": 568,
+      "archiveSha256": "3db287564e90ff3d24fe5fdd8f716f0431c5543c28ae5354b01a0f7053c39f5e",
+      "redacted": false
+    },
+    {
+      "file": "targeted-final-pytest.xml",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-targeted-04/pytest.xml",
+      "sourceBytes": 6452,
+      "sourceSha256": "4edc2af1cadfdac38cb7f06624152fa488dc94c616772eee578ed9e10634848b",
+      "archiveBytes": 6452,
+      "archiveSha256": "4edc2af1cadfdac38cb7f06624152fa488dc94c616772eee578ed9e10634848b",
+      "redacted": false
+    },
+    {
+      "file": "full-intermediate-isolation-result.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-full-01/isolation-result.json",
+      "sourceBytes": 1066,
+      "sourceSha256": "95be095c7c17f2b30efc0185ec6e0d2df54ec2898d579ed32d54889db2636679",
+      "archiveBytes": 1066,
+      "archiveSha256": "95be095c7c17f2b30efc0185ec6e0d2df54ec2898d579ed32d54889db2636679",
+      "redacted": false
+    },
+    {
+      "file": "full-intermediate-pytest-output.redacted.txt",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-full-01/pytest-output.redacted.txt",
+      "sourceBytes": 1391,
+      "sourceSha256": "46ff4fd46868182b01a722cd0b60a0023a9c8d1e9ff8db01fb456f072bfa7987",
+      "archiveBytes": 1391,
+      "archiveSha256": "46ff4fd46868182b01a722cd0b60a0023a9c8d1e9ff8db01fb456f072bfa7987",
+      "redacted": false
+    },
+    {
+      "file": "full-intermediate-pytest.xml",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-full-01/pytest.xml",
+      "sourceBytes": 136264,
+      "sourceSha256": "0e038049609e87c151f4fe1b252b29e620afaa2e9e071a3dc328a9f62a085000",
+      "archiveBytes": 136264,
+      "archiveSha256": "0e038049609e87c151f4fe1b252b29e620afaa2e9e071a3dc328a9f62a085000",
+      "redacted": false
+    },
+    {
+      "file": "full-final-isolation-result.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-full-02/isolation-result.json",
+      "sourceBytes": 1066,
+      "sourceSha256": "d3e6528846eddaddb107881569c3ddcbd483ec188f4af1ea30e41ca9978a9d0b",
+      "archiveBytes": 1066,
+      "archiveSha256": "d3e6528846eddaddb107881569c3ddcbd483ec188f4af1ea30e41ca9978a9d0b",
+      "redacted": false
+    },
+    {
+      "file": "full-final-pytest-output.redacted.txt",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-full-02/pytest-output.redacted.txt",
+      "sourceBytes": 1391,
+      "sourceSha256": "f03d0b435cc5162818bd86dd97260b76e9f5385601b2331610779662894bbd9d",
+      "archiveBytes": 1391,
+      "archiveSha256": "f03d0b435cc5162818bd86dd97260b76e9f5385601b2331610779662894bbd9d",
+      "redacted": false
+    },
+    {
+      "file": "full-final-pytest.xml",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-full-02/pytest.xml",
+      "sourceBytes": 136699,
+      "sourceSha256": "398988ac2557b04ed860ca3d02c17185b609655fb3b2c39a6b3e0c468f075ded",
+      "archiveBytes": 136699,
+      "archiveSha256": "398988ac2557b04ed860ca3d02c17185b609655fb3b2c39a6b3e0c468f075ded",
+      "redacted": false
+    },
+    {
+      "file": "store-smoke.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-store-smoke/result-02.json",
+      "sourceBytes": 1096,
+      "sourceSha256": "156f689d0381b945ddf7f4041c8dcf9ab514b54a758bb3ec41166085f87ba707",
+      "archiveBytes": 1096,
+      "archiveSha256": "156f689d0381b945ddf7f4041c8dcf9ab514b54a758bb3ec41166085f87ba707",
+      "redacted": false
+    },
+    {
+      "file": "explicit-init-cli.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-init-cli-01/result.json",
+      "sourceBytes": 1243,
+      "sourceSha256": "29ecaadf6bd69df2bba000f71ed7a302803425fb2e02835ac77d99b089f84cfa",
+      "archiveBytes": 1243,
+      "archiveSha256": "29ecaadf6bd69df2bba000f71ed7a302803425fb2e02835ac77d99b089f84cfa",
+      "redacted": false
+    },
+    {
+      "file": "late-budget-before-fix.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-store-review/late-budget-ready-path.json",
+      "sourceBytes": 813,
+      "sourceSha256": "b6c311cbe6da7117087485ef6254bb16e69ce007bbd08233d915c0986b01c298",
+      "archiveBytes": 813,
+      "archiveSha256": "b6c311cbe6da7117087485ef6254bb16e69ce007bbd08233d915c0986b01c298",
+      "redacted": false
+    },
+    {
+      "file": "state-after.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-state-after.json",
+      "sourceBytes": 67851,
+      "sourceSha256": "b6fe89cb9230c22e87932a4843be62fa22424fe16ccd21d5cee476e73b3e7d3e",
+      "archiveBytes": 67851,
+      "archiveSha256": "b6fe89cb9230c22e87932a4843be62fa22424fe16ccd21d5cee476e73b3e7d3e",
+      "redacted": false
+    },
+    {
+      "file": "provenance-after.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-provenance-after.json",
+      "sourceBytes": 28038,
+      "sourceSha256": "2087966c067f4f36c8df6d7c434e32938070ce305e3a14280bae1315a72c6ffd",
+      "archiveBytes": 28038,
+      "archiveSha256": "2087966c067f4f36c8df6d7c434e32938070ce305e3a14280bae1315a72c6ffd",
+      "redacted": false
+    },
+    {
+      "file": "physical-first-comparison.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-physical-after.json",
+      "sourceBytes": 29177,
+      "sourceSha256": "e13444a62aa7bc227c3d67133f29334d4ce84ee261fc988feb844ae11c3798ca",
+      "archiveBytes": 29177,
+      "archiveSha256": "e13444a62aa7bc227c3d67133f29334d4ce84ee261fc988feb844ae11c3798ca",
+      "redacted": false
+    },
+    {
+      "file": "physical-final-comparison.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-physical-after-02.json",
+      "sourceBytes": 29176,
+      "sourceSha256": "70e8a5250f93d0760fbe07baa9a51edc2321e449e44d1deb1919f8b98f120a4b",
+      "archiveBytes": 29176,
+      "archiveSha256": "70e8a5250f93d0760fbe07baa9a51edc2321e449e44d1deb1919f8b98f120a4b",
+      "redacted": false
+    },
+    {
+      "file": "normal-01.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-normal-01/startup-result.json",
+      "sourceBytes": 8279,
+      "sourceSha256": "562182414a045c07e6948ea5507393698ecfcde6609ef97ab624f6eca95752b5",
+      "archiveBytes": 8279,
+      "archiveSha256": "562182414a045c07e6948ea5507393698ecfcde6609ef97ab624f6eca95752b5",
+      "redacted": false
+    },
+    {
+      "file": "normal-02.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-normal-02/startup-result.json",
+      "sourceBytes": 8279,
+      "sourceSha256": "3dfa61c7569656f57794bd289c6dc4f8be93ddfa90f323641485b529bebf069d",
+      "archiveBytes": 8279,
+      "archiveSha256": "3dfa61c7569656f57794bd289c6dc4f8be93ddfa90f323641485b529bebf069d",
+      "redacted": false
+    },
+    {
+      "file": "normal-stop-01.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-normal-stop-01.json",
+      "sourceBytes": 296,
+      "sourceSha256": "491877f504e64819e65a32053b729278365842c262dc604ecc9e6c58110927d1",
+      "archiveBytes": 296,
+      "archiveSha256": "491877f504e64819e65a32053b729278365842c262dc604ecc9e6c58110927d1",
+      "redacted": false
+    },
+    {
+      "file": "http-01.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-http-01.json",
+      "sourceBytes": 13782,
+      "sourceSha256": "ac2679b8a4ae634089e1bf7d945afcc4faef8644cb227220c0ce95bb22da5ed5",
+      "archiveBytes": 13782,
+      "archiveSha256": "ac2679b8a4ae634089e1bf7d945afcc4faef8644cb227220c0ce95bb22da5ed5",
+      "redacted": false
+    },
+    {
+      "file": "normal-stop-02.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-normal-stop-02.json",
+      "sourceBytes": 296,
+      "sourceSha256": "23dadc4cd389d18f301587305a23f4e3bc738154d18809269c32b5c9d8d95d65",
+      "archiveBytes": 296,
+      "archiveSha256": "23dadc4cd389d18f301587305a23f4e3bc738154d18809269c32b5c9d8d95d65",
+      "redacted": false
+    },
+    {
+      "file": "http-02.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-http-02.json",
+      "sourceBytes": 13784,
+      "sourceSha256": "2c7e56f3256827a89cd30d1c86541b9f46cbbec290338e70914d3e7fff9d016c",
+      "archiveBytes": 13784,
+      "archiveSha256": "2c7e56f3256827a89cd30d1c86541b9f46cbbec290338e70914d3e7fff9d016c",
+      "redacted": false
+    },
+    {
+      "file": "frontend-phase2_frontend_test.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-frontend-01/phase2_frontend_test.txt",
+      "sourceBytes": 3193,
+      "sourceSha256": "11ffde324e6cc6ccd9b9299a23c7b184cdf24b3913ed580e76aba7b209272c59",
+      "archiveBytes": 3193,
+      "archiveSha256": "11ffde324e6cc6ccd9b9299a23c7b184cdf24b3913ed580e76aba7b209272c59",
+      "redacted": false
+    },
+    {
+      "file": "frontend-phase3_frontend_test.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-frontend-01/phase3_frontend_test.txt",
+      "sourceBytes": 3700,
+      "sourceSha256": "c04b31043bda3a878612a7f501c1b68cb8ddce1784e328d2cb2d2c6f05520365",
+      "archiveBytes": 3700,
+      "archiveSha256": "c04b31043bda3a878612a7f501c1b68cb8ddce1784e328d2cb2d2c6f05520365",
+      "redacted": false
+    },
+    {
+      "file": "frontend-phase5_wp2_frontend_test.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-frontend-01/phase5_wp2_frontend_test.txt",
+      "sourceBytes": 4621,
+      "sourceSha256": "b5b7e757fd5d468ebaddf2c36e70db439b0e6f7e5acf2587f50502aace592f06",
+      "archiveBytes": 4621,
+      "archiveSha256": "b5b7e757fd5d468ebaddf2c36e70db439b0e6f7e5acf2587f50502aace592f06",
+      "redacted": false
+    },
+    {
+      "file": "frontend-phase4_frontend_test.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-frontend-01/phase4_frontend_test.txt",
+      "sourceBytes": 6285,
+      "sourceSha256": "975a34902b2960fdb960f35c4a66281544ba593dfc46fc41ff9bff68ec7b775c",
+      "archiveBytes": 6285,
+      "archiveSha256": "975a34902b2960fdb960f35c4a66281544ba593dfc46fc41ff9bff68ec7b775c",
+      "redacted": false
+    },
+    {
+      "file": "frontend-phase5_wp3_frontend_test.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-frontend-01/phase5_wp3_frontend_test.txt",
+      "sourceBytes": 5032,
+      "sourceSha256": "f839b5e2679d4cd5b00db15076db924c115f75858f8253fc21dfdfc5e722ec83",
+      "archiveBytes": 5032,
+      "archiveSha256": "f839b5e2679d4cd5b00db15076db924c115f75858f8253fc21dfdfc5e722ec83",
+      "redacted": false
+    },
+    {
+      "file": "normal-model-browser.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-model-browser-01/smoke-result.json",
+      "sourceBytes": 10574,
+      "sourceSha256": "24a38ec0f999459266ce15d17a35e255476142d758d9f77f0ce89c392840028a",
+      "archiveBytes": 10574,
+      "archiveSha256": "24a38ec0f999459266ce15d17a35e255476142d758d9f77f0ce89c392840028a",
+      "redacted": false
+    },
+    {
+      "file": "guide-browser.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-guide-browser-01/browser-result.json",
+      "sourceBytes": 41159,
+      "sourceSha256": "de81fe798f758ce7f619b9feb1a62589fae2545ab2becda05b88d55adf3d4484",
+      "archiveBytes": 41159,
+      "archiveSha256": "de81fe798f758ce7f619b9feb1a62589fae2545ab2becda05b88d55adf3d4484",
+      "redacted": false
+    },
+    {
+      "file": "touch-browser.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-touch-browser-01/touch-result.json",
+      "sourceBytes": 20649,
+      "sourceSha256": "8f7a268d6f366bb3613053ed899bbc19dde5fcafa6a4f0d05cf0816b8b5c18ec",
+      "archiveBytes": 20649,
+      "archiveSha256": "8f7a268d6f366bb3613053ed899bbc19dde5fcafa6a4f0d05cf0816b8b5c18ec",
+      "redacted": false
+    },
+    {
+      "file": "field-preparation.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/preparation.json",
+      "sourceBytes": 171234,
+      "sourceSha256": "8349780cdf38837e84bfa046698c978e007933a6b03c888e77ceaf0b08e3e119",
+      "archiveBytes": 171234,
+      "archiveSha256": "8349780cdf38837e84bfa046698c978e007933a6b03c888e77ceaf0b08e3e119",
+      "redacted": false
+    },
+    {
+      "file": "field-corrupt-model-browser.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/corrupt-model-browser-01/smoke-result.json",
+      "sourceBytes": 10997,
+      "sourceSha256": "c26033a1a3a92f3f586bac7f3180ea0136af2b6b2c38186f87206c15a352399b",
+      "archiveBytes": 10997,
+      "archiveSha256": "c26033a1a3a92f3f586bac7f3180ea0136af2b6b2c38186f87206c15a352399b",
+      "redacted": false
+    },
+    {
+      "file": "field-corrupt-probe.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/corrupt-field-probe.json",
+      "sourceBytes": 8879,
+      "sourceSha256": "56e5f40158003340b1dbe1155eac6a3c5ddfc24e1cec70ebef3144d7c3eaef4b",
+      "archiveBytes": 8879,
+      "archiveSha256": "56e5f40158003340b1dbe1155eac6a3c5ddfc24e1cec70ebef3144d7c3eaef4b",
+      "redacted": false
+    },
+    {
+      "file": "field-restored-probe.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/restored-field-probe.json",
+      "sourceBytes": 33170,
+      "sourceSha256": "381590b114d5899aa63f2c9003551c6b1fb0bca7a1083fb4a222d5bef56f38f8",
+      "archiveBytes": 33170,
+      "archiveSha256": "381590b114d5899aa63f2c9003551c6b1fb0bca7a1083fb4a222d5bef56f38f8",
+      "redacted": false
+    },
+    {
+      "file": "field-misconfigured-probe.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/misconfigured-field-probe.json",
+      "sourceBytes": 8290,
+      "sourceSha256": "7cbd1a4b480315db91d00a2a8216ad78ebbd97e90ea01e4dae10c5771c112872",
+      "archiveBytes": 8290,
+      "archiveSha256": "7cbd1a4b480315db91d00a2a8216ad78ebbd97e90ea01e4dae10c5771c112872",
+      "redacted": false
+    },
+    {
+      "file": "field-recovered-probe.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/recovered-field-probe.json",
+      "sourceBytes": 33171,
+      "sourceSha256": "44f8059ae7255931d5f4c10e97194a867ba3e9bc14e8af5b54ec2a131f42d8cc",
+      "archiveBytes": 33171,
+      "archiveSha256": "44f8059ae7255931d5f4c10e97194a867ba3e9bc14e8af5b54ec2a131f42d8cc",
+      "redacted": false
+    },
+    {
+      "file": "field-corrupt-start-02.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/corrupt-start-02/startup-result.json",
+      "sourceBytes": 7782,
+      "sourceSha256": "82bf2db606b1b40bc6bd383a6bd250ab390ee8bb553754811fd75892316d1b0b",
+      "archiveBytes": 7782,
+      "archiveSha256": "82bf2db606b1b40bc6bd383a6bd250ab390ee8bb553754811fd75892316d1b0b",
+      "redacted": false
+    },
+    {
+      "file": "field-restored-start-01.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/restored-start-01/startup-result.json",
+      "sourceBytes": 8933,
+      "sourceSha256": "e1c5918ce7490fdc76e77244889a2f08f71664f9395329bcca4d5ceac345a879",
+      "archiveBytes": 8933,
+      "archiveSha256": "e1c5918ce7490fdc76e77244889a2f08f71664f9395329bcca4d5ceac345a879",
+      "redacted": false
+    },
+    {
+      "file": "field-misconfigured-start-01.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/misconfigured-start-01/startup-result.json",
+      "sourceBytes": 4199,
+      "sourceSha256": "4f2a18a3e67d1bef45483d382d153bcadbef90a0407d9003aee5aa23738606ec",
+      "archiveBytes": 4199,
+      "archiveSha256": "4f2a18a3e67d1bef45483d382d153bcadbef90a0407d9003aee5aa23738606ec",
+      "redacted": false
+    },
+    {
+      "file": "field-recovered-start-01.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/recovered-start-01/startup-result.json",
+      "sourceBytes": 8932,
+      "sourceSha256": "c696c0fb25ee6fee940228584ae1f02d2ece36833a3685cb343382672d2ff7ea",
+      "archiveBytes": 8932,
+      "archiveSha256": "c696c0fb25ee6fee940228584ae1f02d2ece36833a3685cb343382672d2ff7ea",
+      "redacted": false
+    },
+    {
+      "file": "field-corrupt-stop-02.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/corrupt-stop-02.json",
+      "sourceBytes": 296,
+      "sourceSha256": "e7aaae3ecc112587ba16c093380bc855cab36d73e9f451ac9530a0db2d719c39",
+      "archiveBytes": 296,
+      "archiveSha256": "e7aaae3ecc112587ba16c093380bc855cab36d73e9f451ac9530a0db2d719c39",
+      "redacted": false
+    },
+    {
+      "file": "field-restored-stop-01.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/restored-stop-01.json",
+      "sourceBytes": 296,
+      "sourceSha256": "c0084db7eaece048c3bfe2d389acc6d54e6a34e8d1755bdde8c94babc61014f2",
+      "archiveBytes": 296,
+      "archiveSha256": "c0084db7eaece048c3bfe2d389acc6d54e6a34e8d1755bdde8c94babc61014f2",
+      "redacted": false
+    },
+    {
+      "file": "field-misconfigured-stop-01.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/misconfigured-stop-01.json",
+      "sourceBytes": 296,
+      "sourceSha256": "645501306e25655294c2780702b7fc5ce15720c45aa9aa57c22f491e23785b61",
+      "archiveBytes": 296,
+      "archiveSha256": "645501306e25655294c2780702b7fc5ce15720c45aa9aa57c22f491e23785b61",
+      "redacted": false
+    },
+    {
+      "file": "field-recovered-stop-01.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/recovered-stop-01.json",
+      "sourceBytes": 295,
+      "sourceSha256": "7013e7926506adb86b6c31df90d7ff22b5346c264f91c2ff08f815f01276b003",
+      "archiveBytes": 295,
+      "archiveSha256": "7013e7926506adb86b6c31df90d7ff22b5346c264f91c2ff08f815f01276b003",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-offline-bootstrap.py",
+      "sourceRuntimeRelative": "phase5-wp4-offline-bootstrap.py",
+      "sourceBytes": 15236,
+      "sourceSha256": "e54ceb00ef419f085dc26232310fcaa5f20b02bec5d538ec0780f0718dab9006",
+      "archiveBytes": 15236,
+      "archiveSha256": "e54ceb00ef419f085dc26232310fcaa5f20b02bec5d538ec0780f0718dab9006",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-targeted-bootstrap.py",
+      "sourceBytes": 15260,
+      "sourceSha256": "816065b56e3cbec8dffcd2ab93b7c2ea31efe31db0dcf913e98abf31f374720b",
+      "archiveBytes": 15260,
+      "archiveSha256": "816065b56e3cbec8dffcd2ab93b7c2ea31efe31db0dcf913e98abf31f374720b",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-db-repair-fixture-target.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-fixture-target.py",
+      "sourceBytes": 15313,
+      "sourceSha256": "34b3896b7772a2554b8d47e6a30d2bc09cd06ad276d4ef861b6775303e671e72",
+      "archiveBytes": 15313,
+      "archiveSha256": "34b3896b7772a2554b8d47e6a30d2bc09cd06ad276d4ef861b6775303e671e72",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-db-repair-inventory.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-inventory.py",
+      "sourceBytes": 2985,
+      "sourceSha256": "6a2b035868a49bf85b9d35c5d97e37d32c97072287f6c78ba940ed59f6013f7c",
+      "archiveBytes": 2985,
+      "archiveSha256": "6a2b035868a49bf85b9d35c5d97e37d32c97072287f6c78ba940ed59f6013f7c",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-db-repair-init-cli.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-init-cli.py",
+      "sourceBytes": 3420,
+      "sourceSha256": "e9c052fb51501f0d6dda753cfc54fb70178828dcf45ee2baeee9871cf1ee0e60",
+      "archiveBytes": 3420,
+      "archiveSha256": "e9c052fb51501f0d6dda753cfc54fb70178828dcf45ee2baeee9871cf1ee0e60",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-state.py",
+      "sourceRuntimeRelative": "phase5-wp4-state.py",
+      "sourceBytes": 10939,
+      "sourceSha256": "b4895d8cb9ffec5058c1571031a82c428e9e23f51bc57f4bd90dfaea89ed1f75",
+      "archiveBytes": 10939,
+      "archiveSha256": "b4895d8cb9ffec5058c1571031a82c428e9e23f51bc57f4bd90dfaea89ed1f75",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-provenance.py",
+      "sourceRuntimeRelative": "phase5-wp4-provenance.py",
+      "sourceBytes": 6616,
+      "sourceSha256": "76aab16da7d69279cf595e2a364affeacb8bedcd330ec7169c957d3f69510c41",
+      "archiveBytes": 6616,
+      "archiveSha256": "76aab16da7d69279cf595e2a364affeacb8bedcd330ec7169c957d3f69510c41",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-server-control.py",
+      "sourceRuntimeRelative": "phase5-wp4-server-control.py",
+      "sourceBytes": 3849,
+      "sourceSha256": "7e3c57c8a5fd36db4f792303e4554a811969f218ab64238b9c944de2c90509c6",
+      "archiveBytes": 3849,
+      "archiveSha256": "7e3c57c8a5fd36db4f792303e4554a811969f218ab64238b9c944de2c90509c6",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-stop-console.py",
+      "sourceRuntimeRelative": "phase5-wp4-stop-console.py",
+      "sourceBytes": 1619,
+      "sourceSha256": "059c093a4370008ec8e1599f20557a75d9c48c532f6392e5777faba906041e8f",
+      "archiveBytes": 1619,
+      "archiveSha256": "059c093a4370008ec8e1599f20557a75d9c48c532f6392e5777faba906041e8f",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-http-check.py",
+      "sourceRuntimeRelative": "phase5-wp4-http-check.py",
+      "sourceBytes": 3672,
+      "sourceSha256": "dbfb8491cc797972fb0a6f9b50952d7bead599bc71e46a49fe8ee6c7221cbb60",
+      "archiveBytes": 3672,
+      "archiveSha256": "dbfb8491cc797972fb0a6f9b50952d7bead599bc71e46a49fe8ee6c7221cbb60",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-model-browser.mjs",
+      "sourceRuntimeRelative": "phase5-wp4-model-browser.mjs",
+      "sourceBytes": 11388,
+      "sourceSha256": "f80a82d00a74aa400fa7eec6a40d3d15976810d67532cd5d445fb87e75a800ee",
+      "archiveBytes": 11388,
+      "archiveSha256": "f80a82d00a74aa400fa7eec6a40d3d15976810d67532cd5d445fb87e75a800ee",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-browser.mjs",
+      "sourceRuntimeRelative": "phase5-wp4-browser.mjs",
+      "sourceBytes": 20254,
+      "sourceSha256": "3748aa5afa42aef03f38c894062690007b93e5c6d38545669b009c6bffe4c1f5",
+      "archiveBytes": 20254,
+      "archiveSha256": "3748aa5afa42aef03f38c894062690007b93e5c6d38545669b009c6bffe4c1f5",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-touch-browser.mjs",
+      "sourceRuntimeRelative": "phase5-wp4-touch-browser.mjs",
+      "sourceBytes": 10734,
+      "sourceSha256": "e4ec2f86caefbde3de35687dce654f811402445f4adac8724ed766df9f4b286f",
+      "archiveBytes": 10734,
+      "archiveSha256": "e4ec2f86caefbde3de35687dce654f811402445f4adac8724ed766df9f4b286f",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-db-repair-field-prepare.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-prepare.py",
+      "sourceBytes": 4851,
+      "sourceSha256": "ee7cbc9b8bc7a6f3fa064090d57f99fda4178644adff71c8ff1f6e7dbe4d0e51",
+      "archiveBytes": 4851,
+      "archiveSha256": "ee7cbc9b8bc7a6f3fa064090d57f99fda4178644adff71c8ff1f6e7dbe4d0e51",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-db-repair-field-start.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-start.py",
+      "sourceBytes": 5062,
+      "sourceSha256": "cf7644211bfa68714279a2e4da4f6c0965ed6230168c5481902f3f8a76f58a53",
+      "archiveBytes": 5062,
+      "archiveSha256": "cf7644211bfa68714279a2e4da4f6c0965ed6230168c5481902f3f8a76f58a53",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-db-repair-field-probe.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-probe.py",
+      "sourceBytes": 4786,
+      "sourceSha256": "ce967c28bc953d4c07119cf4e8fe4260eb26fd03f4ac1128ae866a2da3971a32",
+      "archiveBytes": 4786,
+      "archiveSha256": "ce967c28bc953d4c07119cf4e8fe4260eb26fd03f4ac1128ae866a2da3971a32",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-db-repair-field-model-browser.mjs",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-model-browser.mjs",
+      "sourceBytes": 11419,
+      "sourceSha256": "14d10eaee7fe8561cc45d4f9e1c21a8a799be44dec8db70f526627671342ca51",
+      "archiveBytes": 11419,
+      "archiveSha256": "14d10eaee7fe8561cc45d4f9e1c21a8a799be44dec8db70f526627671342ca51",
+      "redacted": false
+    },
+    {
+      "file": "field-final-summary.json",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-field-01/field-final-summary.json",
+      "sourceBytes": 24646,
+      "sourceSha256": "159623b7074418612ef04241005499fbbccbb75c02d018d8b0dffa57a01fb1a2",
+      "archiveBytes": 24646,
+      "archiveSha256": "159623b7074418612ef04241005499fbbccbb75c02d018d8b0dffa57a01fb1a2",
+      "redacted": false
+    },
+    {
+      "file": "phase5-wp4-db-repair-document-check.py",
+      "sourceRuntimeRelative": "phase5-wp4-db-repair-document-check.py",
+      "sourceBytes": 5080,
+      "sourceSha256": "e9af8f03152d2b1d847309fb49da81a59ed42998c7949551091c6b985434efa0",
+      "archiveBytes": 5080,
+      "archiveSha256": "e9af8f03152d2b1d847309fb49da81a59ed42998c7949551091c6b985434efa0",
+      "redacted": false
+    }
+  ],
+  "textEvidenceFiles": 86,
+  "privateScreenshotCount": 19
+}

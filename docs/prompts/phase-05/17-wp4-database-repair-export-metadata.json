@@ -1,0 +1,29 @@
+{
+  "exportedAtUtc": "2026-10-22T07:51:59.102780+00:00",
+  "sourceStartLine": 14081,
+  "requestTimestamp": "2026-10-21T13:00:31.490Z",
+  "requestBytes": 18840,
+  "requestSha256": "73f62bc74beec3feb8c29453b2430edf4ababa34e07d31f8ed083267790d8bf4",
+  "requestExactUtf8Match": true,
+  "sourceSnapshotSha256": "f845fceb220627a69bded94bc00196b5d8f672791bec90e8762fbbf717db901a",
+  "sourceSnapshotLineCount": 14690,
+  "sourcePartialLastLineOmitted": false,
+  "publicRecordCount": 83,
+  "publicSnapshotSha256": "64bca93714ee4b7e071be319c3195714fa131e97017f0993ba156acbb6a6ec26",
+  "filteredCollaborationCallCount": 24,
+  "skippedPrivateRecordCounts": {
+    "event_msg": 243,
+    "token_usage_record": 61,
+    "reasoning": 58,
+    "world_state": 7,
+    "inter_agent_communication_metadata": 50,
+    "agent_message": 50,
+    "compacted": 1,
+    "turn_context": 2,
+    "private_message": 6,
+    "additional_tools": 1
+  },
+  "hiddenReasoningExported": false,
+  "sourceIdentityPublished": false,
+  "scope": "Actual database safety repair prompt and public snapshot; future final evidence/report/commits are not claimed included."
+}

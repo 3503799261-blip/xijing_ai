@@ -1,0 +1,39 @@
+{
+  "kind": "REAL_EXPLICIT_INITIALIZATION_CLI",
+  "atUtc": "2026-10-22T07:58:54.946069+00:00",
+  "commands": [
+    [
+      "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe",
+      "-m",
+      "backend.scripts.initialize_business_databases"
+    ],
+    [
+      "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe",
+      "-m",
+      "backend.scripts.initialize_business_databases",
+      "--initialize-new-installation"
+    ]
+  ],
+  "checks": {
+    "missingExplicitFlagRefused": true,
+    "refusalCreatesNothing": true,
+    "firstExit0": true,
+    "threeBusinessFiles": true,
+    "firstStatesNew": true,
+    "secondExit0": true,
+    "existingStatesValidated": true,
+    "repeatBytesUnchanged": true,
+    "noNeuralLedger": true
+  },
+  "passed": 9,
+  "failed": 0,
+  "files": {
+    "data\\agent-tasks.sqlite3": "bcc2745a64c76f17d24af635746f272749ca5030f26137be34c029898da125a4",
+    "data\\api-budget.sqlite3": "2a200afb93a605df2c4ef7969482d1e0b6123ad8574d97cad771dd951cecff26",
+    "data\\assets\\catalog.sqlite3": "5d0e3c32b31a73ed061c55efea090c658227c94d11c66407abf05da707441d3a"
+  },
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "productionDbAccess": "forbidden by child audit",
+  "network": "all forbidden"
+}

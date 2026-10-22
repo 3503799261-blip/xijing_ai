@@ -1,0 +1,1900 @@
+{
+  "kind": "OFFLINE_TEST_PROCESS_ISOLATION",
+  "pytestReturned": true,
+  "pytestExitCode": 1,
+  "bootstrapExitCode": 1,
+  "runnerError": null,
+  "scope": "Explicit test doubles and temporary stores only; not live provider or browser evidence.",
+  "isolation": {
+    "freshProcess": true,
+    "emptyPrivateEnv": true,
+    "emptyProviderKeys": true,
+    "realGenerationDisabled": true,
+    "temporaryRagAndModelPaths": true,
+    "moduleLevelAppIsolatedBeforeCollection": true,
+    "canonicalLedgerPathsAgreeInsideRunRoot": true,
+    "realHttpTransportsDenied": true,
+    "mockTransportsPermitted": true,
+    "productionFilesAndSqliteGuarded": true,
+    "externalPytestPluginAutoloadDisabled": true
+  },
+  "passed": 0,
+  "failedReports": 38,
+  "skippedReports": 0,
+  "collectionErrors": 0,
+  "failedNodes": [
+    "backend/tests/test_database_safety.py::test_default_open_missing_does_not_create_file_or_parent[agent]",
+    "backend/tests/test_database_safety.py::test_default_open_missing_does_not_create_file_or_parent[budget]",
+    "backend/tests/test_database_safety.py::test_default_open_missing_does_not_create_file_or_parent[asset]",
+    "backend/tests/test_database_safety.py::test_default_open_missing_does_not_create_file_or_parent[quota]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[directory-agent]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[directory-budget]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[directory-asset]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[directory-quota]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-agent]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-budget]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-asset]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[corrupt-quota]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[partial-agent]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[partial-budget]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[partial-asset]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[partial-quota]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-agent]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-budget]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-asset]",
+    "backend/tests/test_database_safety.py::test_invalid_existing_store_is_never_repaired_or_overwritten[unreadable-quota]",
+    "backend/tests/test_database_safety.py::test_explicit_first_initialization_and_strict_reopen[agent]",
+    "backend/tests/test_database_safety.py::test_explicit_first_initialization_and_strict_reopen[budget]",
+    "backend/tests/test_database_safety.py::test_explicit_first_initialization_and_strict_reopen[asset]",
+    "backend/tests/test_database_safety.py::test_explicit_first_initialization_and_strict_reopen[quota]",
+    "backend/tests/test_database_safety.py::test_file_removed_after_open_is_not_recreated_by_connection[agent]",
+    "backend/tests/test_database_safety.py::test_file_removed_after_open_is_not_recreated_by_connection[budget]",
+    "backend/tests/test_database_safety.py::test_file_removed_after_open_is_not_recreated_by_connection[asset]",
+    "backend/tests/test_database_safety.py::test_file_removed_after_open_is_not_recreated_by_connection[quota]",
+    "backend/tests/test_database_safety.py::test_valid_initialized_business_stores_keep_read_write_behavior",
+    "backend/tests/test_database_safety.py::test_explicit_initializer_preflights_all_existing_files_before_any_creation",
+    "backend/tests/test_database_safety.py::test_wrong_nonexistent_rag_path_serves_static_and_reports_unavailable_without_files",
+    "backend/tests/test_database_safety.py::test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[missing]",
+    "backend/tests/test_database_safety.py::test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[corrupt]",
+    "backend/tests/test_database_safety.py::test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[missing_table]",
+    "backend/tests/test_database_safety.py::test_agent_failure_leaves_pages_and_existing_glb_available_then_recovers[directory]",
+    "backend/tests/test_database_safety.py::test_budget_failure_isolated_and_generation_fails_before_network",
+    "backend/tests/test_database_safety.py::test_catalog_reading_survives_missing_creation_ledger_without_new_quota",
+    "backend/tests/test_database_safety.py::test_schema_validation_is_read_only_and_does_not_add_required_table"
+  ],
+  "auditCounts": {
+    "blockedFileAccess": 38,
+    "blockedSqlite": 0,
+    "blockedRealHttp": 0
+  },
+  "guardDiagnostics": [
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "event": "os.remove",
+      "category": "external",
+      "basename": "tmp964dc_pd",
+      "writing": true,
+      "frames": [
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "guard_file",
+          "line": 159
+        },
+        {
+          "file": "phase5-wp4-db-repair-targeted-bootstrap.py",
+          "function": "audit",
+          "line": 185
+        },
+        {
+          "file": "shutil.py",
+          "function": "_rmtree_unsafe",
+          "line": 620
+        },
+        {
+          "file": "shutil.py",
+          "function": "rmtree",
+          "line": 759
+        },
+        {
+          "file": "pathlib.py",
+          "function": "rm_rf",
+          "line": 169
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "getbasetemp",
+          "line": 157
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "_ensure_relative_to_basetemp",
+          "line": 117
+        },
+        {
+          "file": "tmpdir.py",
+          "function": "mktemp",
+          "line": 136
+        }
+      ]
+    }
+  ],
+  "outputs": {
+    "junit": "pytest.xml",
+    "terminal": "pytest-output.redacted.txt"
+  }
+}

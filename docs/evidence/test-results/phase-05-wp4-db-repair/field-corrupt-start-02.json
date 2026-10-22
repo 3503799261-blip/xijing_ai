@@ -1,0 +1,240 @@
+{
+  "kind": "WP4_REPAIR_FIELD_ISOLATED_SERVER",
+  "atUtc": "2026-10-22T07:49:53.369691+00:00",
+  "pid": 10440,
+  "command": [
+    "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe",
+    "-m",
+    "uvicorn",
+    "backend.app.main:app",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8011",
+    "--workers",
+    "1"
+  ],
+  "source": "current product snapshot in independent workspace",
+  "mode": "existing isolated root",
+  "keys": "blank, never copied source secrets",
+  "network": "external DNS/connect denied process-locally",
+  "neural4dCalls": 0,
+  "paidCalls": 0,
+  "checks": [
+    {
+      "path": "/api/v1/agent/history?page=1&pageSize=1",
+      "status": 503,
+      "bytes": 248,
+      "response": {
+        "error": {
+          "code": "AGENT_DATABASE_UNAVAILABLE",
+          "message": "Agent任务数据库缺失、路径错误或不可读取，请检查配置并恢复原库；未自动创建或修复。",
+          "retryable": false
+        },
+        "requestId": "6ee2b6da-c462-4315-8cb7-320d2c4e094f"
+      }
+    },
+    {
+      "path": "/api/v1/capabilities",
+      "status": 200,
+      "bytes": 203,
+      "response": {
+        "questionAnswering": false,
+        "knowledgeSearch": true,
+        "agentWorkflow": false,
+        "conceptImage": false,
+        "imageToModel": false,
+        "assetManagement": true,
+        "modelViewer": true,
+        "checkedAt": "2026-10-22T07:50:23.955708+00:00"
+      }
+    },
+    {
+      "path": "/api/v1/assets/usage",
+      "status": 200,
+      "bytes": 942,
+      "response": {
+        "projectId": "xijing-ai-neural4d-project-v4",
+        "policyVersion": "phase4-generation-attempts-v4",
+        "max_creation_attempts": 3,
+        "max_models": 3,
+        "modelCount": 1,
+        "historicalUsageVerified": true,
+        "historical_used_attempts": 0,
+        "used_attempts": 2,
+        "reserved_attempts": 0,
+        "occupied_attempts": 2,
+        "remaining_attempts": 1,
+        "attemptStates": {
+          "SUCCEEDED": 2
+        },
+        "creationHalted": false,
+        "haltCode": null,
+        "automaticGenerationRetry": false,
+        "creationPaused": false,
+        "pauseCode": null,
+        "unreconciled_attempts": 0,
+        "realHttpRequests": 18,
+        "mockHttpRequests": 0,
+        "recordedActualCredits": 60.0,
+        "max_calls": 3,
+        "used_calls": 2,
+        "remaining_calls": 1,
+        "history_verified": true,
+        "realEnabled": false,
+        "providerConfigured": false,
+        "protocolVerified": false,
+        "readiness": [
+          "真实建模默认关闭；本次开发授权不等于单次真实建模授权。",
+          "需逐次人工确认、后端鉴权、费用及已核实的历史额度。"
+        ],
+        "imageGenerationConfigured": false,
+        "requestId": "a998dfe5-f2de-4a22-8e90-14f6dad0064d"
+      }
+    },
+    {
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "status": 200,
+      "bytes": 1857,
+      "response": {
+        "characterId": "29c8a710-2760-5079-a2c6-0b6d3f1067b1",
+        "styleMode": "realistic",
+        "styleVersion": 1,
+        "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+        "assetVersion": 1,
+        "citationHash": "6d2cdf84e6c36b686e984da5cfc8cc311577168d4042b6617c3d80aa5fd2faa0",
+        "createdAt": "2026-10-17T05:20:18.676250+00:00",
+        "format": "glb",
+        "hash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "imageHash": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+        "imageId": "0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d",
+        "licenseNote": "用户声明允许比赛展示、Neural4D上传及3D衍生；非商业销售许可。第二次供应商原模型SHA-256=51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e；本地纹理转换版本=second_formal_embedded_jpeg_textures_2048_v1；仅JPEG MIME与2048纹理优化，几何不变。详细谱系SHA-256=0934dbe65254eab9e7ade199a17fc1cb16f51e2fbecb66eff1bbfd9c1469999e；未产生新建模或费用。",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "origin": "neural4d",
+        "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+        "size": 15158668,
+        "sourceResultHash": "e6639f0486adc05039a2a46399dc0c21a06930a1376a73a9fdec399ab124f76d",
+        "title": "绛绣·戏韵",
+        "validation": {
+          "decodedTexturePixels": 8388608,
+          "embeddedImagesDecoded": true,
+          "externalResources": 0,
+          "format": "glb",
+          "fullConformanceChecked": false,
+          "hash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "imageCount": 2,
+          "materialCount": 1,
+          "meshCount": 1,
+          "primitiveCount": 1,
+          "selfContained": true,
+          "size": 15158668,
+          "textureCount": 2,
+          "triangleCount": 500000,
+          "valid": true,
+          "validator": "xijing_glb_structural_v2",
+          "version": 2,
+          "vertexCount": 305024
+        },
+        "fileUrl": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+        "downloadUrl": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/download",
+        "requestId": "b23b4995-f8bf-42fb-97a7-b7ecf04af51b"
+      }
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "bytes": 12256
+    },
+    {
+      "path": "/history.html",
+      "status": 200,
+      "bytes": 13006
+    },
+    {
+      "path": "/roles.html",
+      "status": 200,
+      "bytes": 9213
+    },
+    {
+      "path": "/facial.html",
+      "status": 200,
+      "bytes": 9259
+    },
+    {
+      "path": "/music.html",
+      "status": 200,
+      "bytes": 8360
+    },
+    {
+      "path": "/gallery.html",
+      "status": 200,
+      "bytes": 12687
+    },
+    {
+      "path": "/video.html",
+      "status": 200,
+      "bytes": 7157
+    },
+    {
+      "path": "/about.html",
+      "status": 200,
+      "bytes": 50874
+    }
+  ],
+  "health": {
+    "status": "degraded",
+    "application": {
+      "available": true
+    },
+    "databases": {
+      "agent": {
+        "available": false,
+        "diagnostic": "AGENT_DATABASE_UNAVAILABLE",
+        "message": "Agent任务数据库缺失、路径错误或不可读取，请检查配置并恢复原库；未自动创建或修复。"
+      },
+      "budget": {
+        "available": true,
+        "diagnostic": null
+      }
+    },
+    "knowledge": true,
+    "embedding": true,
+    "llmConfigured": false,
+    "llmVerified": false,
+    "diagnostic": null,
+    "documents": 12,
+    "chunks": 35,
+    "budget": {
+      "calls": 107,
+      "estimatedUpperCostCny": 0.25501584,
+      "budgetCny": 3.0,
+      "priceVerifiedAt": "2026-10-11",
+      "priceSource": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "estimateBasis": "conservative peak tariff; unknown outcomes retain reservation; not provider billing cap",
+      "activeScope": {
+        "name": "phase3",
+        "calls": 45,
+        "estimatedUpperCostCny": 0.1215816,
+        "budgetCny": 0.5
+      },
+      "scopes": {
+        "phase3": {
+          "name": "phase3",
+          "calls": 45,
+          "estimatedUpperCostCny": 0.1215816,
+          "budgetCny": 0.5
+        }
+      }
+    },
+    "agents": {
+      "supervisorReady": false,
+      "databaseAvailable": false,
+      "activeTaskId": null,
+      "enabled": false,
+      "diagnostic": "AGENT_DATABASE_UNAVAILABLE"
+    }
+  },
+  "httpReady": true,
+  "readySeconds": 30.536,
+  "wrongRootExists": false
+}

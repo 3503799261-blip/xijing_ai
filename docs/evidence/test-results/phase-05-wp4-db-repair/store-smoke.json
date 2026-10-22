@@ -1,0 +1,34 @@
+{
+  "groups": 6,
+  "passed": 6,
+  "failed": 0,
+  "results": [
+    {
+      "scenario": "agent existing-only,fresh,unchanged-reopen,corrupt-no-repair",
+      "status": "PASS"
+    },
+    {
+      "scenario": "budget existing-only,fresh,unchanged-reopen,corrupt-no-repair",
+      "status": "PASS"
+    },
+    {
+      "scenario": "quota existing-only,fresh,unchanged-reopen,corrupt-no-repair",
+      "status": "PASS"
+    },
+    {
+      "scenario": "knowledge existing-only,fresh,unchanged-reopen,corrupt-no-repair",
+      "status": "PASS"
+    },
+    {
+      "scenario": "asset complete six-table explicit initialization;unchanged-reopen",
+      "status": "PASS"
+    },
+    {
+      "scenario": "explicit installation and repeat validates; no quota creation",
+      "status": "PASS"
+    }
+  ],
+  "paidRequests": 0,
+  "neural4dRequests": 0,
+  "previousRun": "Assertions reached six groups; temporary helper retained a direct sqlite handle and its automatic temporary-directory cleanup failed on Windows. Helper now closes the handle and preserves the evidence directory."
+}

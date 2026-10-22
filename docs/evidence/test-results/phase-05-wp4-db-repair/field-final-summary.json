@@ -1,0 +1,521 @@
+{
+  "kind": "WP4_DB_REPAIR_ISOLATED_FIELD_FINAL_SUMMARY",
+  "atUtc": "2026-10-22T08:00:01.382095+00:00",
+  "sourceComparison": {
+    "files": 80,
+    "differences": [],
+    "allSame": true,
+    "hashes": {
+      "about.html": {
+        "snapshotSha256": "b70eff78a3c87b05d82fd32244307aa0a914193aa20975f8309402e025f5a2e8",
+        "currentProductSha256": "b70eff78a3c87b05d82fd32244307aa0a914193aa20975f8309402e025f5a2e8",
+        "same": true
+      },
+      "backend/app/__init__.py": {
+        "snapshotSha256": "7faac9680a0550f406dbc027d8d8b9ce504edd86e980a4fc4a8945eb829610be",
+        "currentProductSha256": "7faac9680a0550f406dbc027d8d8b9ce504edd86e980a4fc4a8945eb829610be",
+        "same": true
+      },
+      "backend/app/agents/__init__.py": {
+        "snapshotSha256": "0816f9e2f08b9c4817b98add8ddb6bce84eac58b29d95509223818fa7ef01897",
+        "currentProductSha256": "0816f9e2f08b9c4817b98add8ddb6bce84eac58b29d95509223818fa7ef01897",
+        "same": true
+      },
+      "backend/app/agents/designer.py": {
+        "snapshotSha256": "d1c61d9192b1124f9c8bef505abac3d9f79ba6272da068ffc07fb01c87a7ef25",
+        "currentProductSha256": "d1c61d9192b1124f9c8bef505abac3d9f79ba6272da068ffc07fb01c87a7ef25",
+        "same": true
+      },
+      "backend/app/agents/history.py": {
+        "snapshotSha256": "05b8e211ef7557c7d0eba3ec290480e7d91d561fc089634a5fb87f3f3fbfa5c7",
+        "currentProductSha256": "05b8e211ef7557c7d0eba3ec290480e7d91d561fc089634a5fb87f3f3fbfa5c7",
+        "same": true
+      },
+      "backend/app/agents/planner.py": {
+        "snapshotSha256": "901929dda0e05b73cd6e159c5c1cc0ad3b62ecb2989383fb4bedb632fe4f74d3",
+        "currentProductSha256": "901929dda0e05b73cd6e159c5c1cc0ad3b62ecb2989383fb4bedb632fe4f74d3",
+        "same": true
+      },
+      "backend/app/agents/researcher.py": {
+        "snapshotSha256": "4385ed4c558a8de0eb6e0e94a5536646759796a714637e833a2822cefe8e694d",
+        "currentProductSha256": "4385ed4c558a8de0eb6e0e94a5536646759796a714637e833a2822cefe8e694d",
+        "same": true
+      },
+      "backend/app/agents/reviewer.py": {
+        "snapshotSha256": "030b19f6feb9647cf21ff0e09099f7e9cf05405d29e7997fdb48fecd182fe171",
+        "currentProductSha256": "030b19f6feb9647cf21ff0e09099f7e9cf05405d29e7997fdb48fecd182fe171",
+        "same": true
+      },
+      "backend/app/agents/schemas.py": {
+        "snapshotSha256": "0b3d67f09b01fe857ef06e6c86597a873e5ff262d10652e2a6612c460034f7ed",
+        "currentProductSha256": "0b3d67f09b01fe857ef06e6c86597a873e5ff262d10652e2a6612c460034f7ed",
+        "same": true
+      },
+      "backend/app/agents/store.py": {
+        "snapshotSha256": "789321b0fe6b9b846c6f97c95ad1267962b3557c4ea757fad8f43f42f0c29d84",
+        "currentProductSha256": "789321b0fe6b9b846c6f97c95ad1267962b3557c4ea757fad8f43f42f0c29d84",
+        "same": true
+      },
+      "backend/app/agents/supervisor.py": {
+        "snapshotSha256": "988e9be346da9b90aeefb22ecf0fb14e41802ad4d29d1f4b535efff8220a84c1",
+        "currentProductSha256": "988e9be346da9b90aeefb22ecf0fb14e41802ad4d29d1f4b535efff8220a84c1",
+        "same": true
+      },
+      "backend/app/agents/workflow.py": {
+        "snapshotSha256": "272dbf2b62a2536401e8d220db4e63fa9bc6b258ef46f3f2df6db53e70cba7e7",
+        "currentProductSha256": "272dbf2b62a2536401e8d220db4e63fa9bc6b258ef46f3f2df6db53e70cba7e7",
+        "same": true
+      },
+      "backend/app/api/__init__.py": {
+        "snapshotSha256": "571dad796d48af4dddc479722fb37b560703d05d10b4effa3def3bb475a477a9",
+        "currentProductSha256": "571dad796d48af4dddc479722fb37b560703d05d10b4effa3def3bb475a477a9",
+        "same": true
+      },
+      "backend/app/api/agents.py": {
+        "snapshotSha256": "d404744f5a32cb5d4b7f7cd1530a5ebc518d0b08928ccf7c69c2aa5ffbe22d6c",
+        "currentProductSha256": "d404744f5a32cb5d4b7f7cd1530a5ebc518d0b08928ccf7c69c2aa5ffbe22d6c",
+        "same": true
+      },
+      "backend/app/api/assets.py": {
+        "snapshotSha256": "8010b7d1057767fc34cea4370a38ca44edbfc5f11337c0b1c378118533d3397b",
+        "currentProductSha256": "8010b7d1057767fc34cea4370a38ca44edbfc5f11337c0b1c378118533d3397b",
+        "same": true
+      },
+      "backend/app/assets/__init__.py": {
+        "snapshotSha256": "97cf16dbe4acaaa1fab8fd6580f56eac21b69c135c880ecb99a565609a123608",
+        "currentProductSha256": "97cf16dbe4acaaa1fab8fd6580f56eac21b69c135c880ecb99a565609a123608",
+        "same": true
+      },
+      "backend/app/assets/candidate_preview.py": {
+        "snapshotSha256": "1395f148cab269c0b58509649ba8b6c83e0f0ce9b3e4e48ea6b5d364db93f76d",
+        "currentProductSha256": "1395f148cab269c0b58509649ba8b6c83e0f0ce9b3e4e48ea6b5d364db93f76d",
+        "same": true
+      },
+      "backend/app/assets/candidates.py": {
+        "snapshotSha256": "b0f4587af1cc6a01ba1c4f3e96f4bfb5fffde4e7e5bf1781f98afb36da208a1b",
+        "currentProductSha256": "b0f4587af1cc6a01ba1c4f3e96f4bfb5fffde4e7e5bf1781f98afb36da208a1b",
+        "same": true
+      },
+      "backend/app/assets/internal_viewer.py": {
+        "snapshotSha256": "2fc07b0a4dfdcdb5f4d80dbbcdf59465f176b297e6cd43590e1f6403aff58554",
+        "currentProductSha256": "2fc07b0a4dfdcdb5f4d80dbbcdf59465f176b297e6cd43590e1f6403aff58554",
+        "same": true
+      },
+      "backend/app/assets/neural_service.py": {
+        "snapshotSha256": "e101ac2869038242e4704d1b34d4000e2cc4af00339c1d70807c3749e53d047b",
+        "currentProductSha256": "e101ac2869038242e4704d1b34d4000e2cc4af00339c1d70807c3749e53d047b",
+        "same": true
+      },
+      "backend/app/assets/schemas.py": {
+        "snapshotSha256": "e35d17612963feae65002fa871bc35e8e702d7e853def31b392afb3c58af46f3",
+        "currentProductSha256": "e35d17612963feae65002fa871bc35e8e702d7e853def31b392afb3c58af46f3",
+        "same": true
+      },
+      "backend/app/assets/service.py": {
+        "snapshotSha256": "105eb41a77b91b242107b760ed8f77c1626943120e2f75fcf8370386fa11d18c",
+        "currentProductSha256": "105eb41a77b91b242107b760ed8f77c1626943120e2f75fcf8370386fa11d18c",
+        "same": true
+      },
+      "backend/app/assets/store.py": {
+        "snapshotSha256": "6d2dcb8abf5df79b0b2e2cebfbaaf172820eb25d2899e982e67c41b1d23747cf",
+        "currentProductSha256": "6d2dcb8abf5df79b0b2e2cebfbaaf172820eb25d2899e982e67c41b1d23747cf",
+        "same": true
+      },
+      "backend/app/assets/technical_test.py": {
+        "snapshotSha256": "70407cb0847444cb6a206205d248b802fc50af16000260b3b9d566ee16982163",
+        "currentProductSha256": "70407cb0847444cb6a206205d248b802fc50af16000260b3b9d566ee16982163",
+        "same": true
+      },
+      "backend/app/assets/usage.py": {
+        "snapshotSha256": "fe1c0619ae1408c5f7b2b434c6163752a2c91682ba82895eccd98434277af06d",
+        "currentProductSha256": "fe1c0619ae1408c5f7b2b434c6163752a2c91682ba82895eccd98434277af06d",
+        "same": true
+      },
+      "backend/app/assets/validation.py": {
+        "snapshotSha256": "e713f0c7050265b985735b49fa14c3c07e29a58838d59a744cb1c008f84b4439",
+        "currentProductSha256": "e713f0c7050265b985735b49fa14c3c07e29a58838d59a744cb1c008f84b4439",
+        "same": true
+      },
+      "backend/app/assets/visual_prompt.py": {
+        "snapshotSha256": "11368ae72d91ca1a432ec2a91733d504589d0795b15d94d15b39569edc7b8fee",
+        "currentProductSha256": "11368ae72d91ca1a432ec2a91733d504589d0795b15d94d15b39569edc7b8fee",
+        "same": true
+      },
+      "backend/app/config.py": {
+        "snapshotSha256": "33e2cee99df985f3044eeaa063c6a161fe418d223174e70515265040c0f54b3b",
+        "currentProductSha256": "33e2cee99df985f3044eeaa063c6a161fe418d223174e70515265040c0f54b3b",
+        "same": true
+      },
+      "backend/app/database.py": {
+        "snapshotSha256": "7d4ddc1b3016ed1e009ea53291dde13a81d404051f75a1db274f7b584b47fb7e",
+        "currentProductSha256": "7d4ddc1b3016ed1e009ea53291dde13a81d404051f75a1db274f7b584b47fb7e",
+        "same": true
+      },
+      "backend/app/errors.py": {
+        "snapshotSha256": "2e488fce15079d6147a2decb40e8fbcb1bdc22e2843fc52e03ca2b1b830d4a2a",
+        "currentProductSha256": "2e488fce15079d6147a2decb40e8fbcb1bdc22e2843fc52e03ca2b1b830d4a2a",
+        "same": true
+      },
+      "backend/app/knowledge/__init__.py": {
+        "snapshotSha256": "53978ddea251425871edeca8e138ba6cd97254bc25fd1caefaf1be4ab1b63a47",
+        "currentProductSha256": "53978ddea251425871edeca8e138ba6cd97254bc25fd1caefaf1be4ab1b63a47",
+        "same": true
+      },
+      "backend/app/knowledge/chunking.py": {
+        "snapshotSha256": "bb5852e3171b4394fbe551ce7b7cd6779859ff0b8c33e0acb7cbea1b38affd52",
+        "currentProductSha256": "bb5852e3171b4394fbe551ce7b7cd6779859ff0b8c33e0acb7cbea1b38affd52",
+        "same": true
+      },
+      "backend/app/knowledge/embedding.py": {
+        "snapshotSha256": "4a476a36e6e565f449f6668f0fa4b48ef1d4cf023e3bc514a0be7b648424c973",
+        "currentProductSha256": "4a476a36e6e565f449f6668f0fa4b48ef1d4cf023e3bc514a0be7b648424c973",
+        "same": true
+      },
+      "backend/app/knowledge/store.py": {
+        "snapshotSha256": "d60ef8a47bd247b58c11855af3251692b99771f9649ba487773d6d806eeeaf86",
+        "currentProductSha256": "d60ef8a47bd247b58c11855af3251692b99771f9649ba487773d6d806eeeaf86",
+        "same": true
+      },
+      "backend/app/knowledge/vector_store.py": {
+        "snapshotSha256": "849e5cde568064530c53a9d9cc25f45e49d5cb23eda2f4172a50facea2aa481f",
+        "currentProductSha256": "849e5cde568064530c53a9d9cc25f45e49d5cb23eda2f4172a50facea2aa481f",
+        "same": true
+      },
+      "backend/app/main.py": {
+        "snapshotSha256": "5f3464c98d73731b1e00ebff02d76c4cd6b5a3327348724b34b71b5fefcd1c0d",
+        "currentProductSha256": "5f3464c98d73731b1e00ebff02d76c4cd6b5a3327348724b34b71b5fefcd1c0d",
+        "same": true
+      },
+      "backend/app/providers/__init__.py": {
+        "snapshotSha256": "d4d0d7c7566fc2c7745c65202394c71aaf3296492b2f33c85af041e2b08a1ede",
+        "currentProductSha256": "d4d0d7c7566fc2c7745c65202394c71aaf3296492b2f33c85af041e2b08a1ede",
+        "same": true
+      },
+      "backend/app/providers/budget.py": {
+        "snapshotSha256": "663cb3eaf4cb81ffd5d5caa61c615fc4a2be0c6c3bc15cf288e45f3206e58f9e",
+        "currentProductSha256": "663cb3eaf4cb81ffd5d5caa61c615fc4a2be0c6c3bc15cf288e45f3206e58f9e",
+        "same": true
+      },
+      "backend/app/providers/llm.py": {
+        "snapshotSha256": "f46e62fa85dbde51692892c1240e483f43f63e710158aaed68d76467f24cf993",
+        "currentProductSha256": "f46e62fa85dbde51692892c1240e483f43f63e710158aaed68d76467f24cf993",
+        "same": true
+      },
+      "backend/app/providers/neural4d.py": {
+        "snapshotSha256": "9d0a89aeb8a955f7ec0cf4cb69baf5cc098e7d99c74a90930bbb148b9dfb504d",
+        "currentProductSha256": "9d0a89aeb8a955f7ec0cf4cb69baf5cc098e7d99c74a90930bbb148b9dfb504d",
+        "same": true
+      },
+      "backend/app/providers/safe_model_download.py": {
+        "snapshotSha256": "1a1b656a604312c7167a323eac408f4c830fd27b62413d6a4d2befc2944ef2b0",
+        "currentProductSha256": "1a1b656a604312c7167a323eac408f4c830fd27b62413d6a4d2befc2944ef2b0",
+        "same": true
+      },
+      "backend/app/schemas.py": {
+        "snapshotSha256": "dba9841d4bbb22f321f56ded2426838911b45f485502ec7cbd64c5fd4cb3b9af",
+        "currentProductSha256": "dba9841d4bbb22f321f56ded2426838911b45f485502ec7cbd64c5fd4cb3b9af",
+        "same": true
+      },
+      "backend/app/services/__init__.py": {
+        "snapshotSha256": "99879f3007d95d0b9faf672a7c54a3e6c58553106be2e54bc9988ca389185bc5",
+        "currentProductSha256": "99879f3007d95d0b9faf672a7c54a3e6c58553106be2e54bc9988ca389185bc5",
+        "same": true
+      },
+      "backend/app/services/chat.py": {
+        "snapshotSha256": "769df319c8572a19eb0d72c99b335301e285e6e70216a6940e99ebb78b76f611",
+        "currentProductSha256": "769df319c8572a19eb0d72c99b335301e285e6e70216a6940e99ebb78b76f611",
+        "same": true
+      },
+      "backend/app/services/runtime.py": {
+        "snapshotSha256": "c42a82e167042a1f4052a77264184a1a2e123795b32f930a904d5d5e16d58707",
+        "currentProductSha256": "c42a82e167042a1f4052a77264184a1a2e123795b32f930a904d5d5e16d58707",
+        "same": true
+      },
+      "backend/app/services/search.py": {
+        "snapshotSha256": "dad80f2d28ba0f3ff4ee82e4360a9da375bb944266f4620001852a02aacb2192",
+        "currentProductSha256": "dad80f2d28ba0f3ff4ee82e4360a9da375bb944266f4620001852a02aacb2192",
+        "same": true
+      },
+      "backend/app/static_frontend.py": {
+        "snapshotSha256": "21676cb0f896974523ed27031927a8b9bd64c4127d74397071564a5ac487cd7d",
+        "currentProductSha256": "21676cb0f896974523ed27031927a8b9bd64c4127d74397071564a5ac487cd7d",
+        "same": true
+      },
+      "css/about.css": {
+        "snapshotSha256": "885ea26cad372cb272ed203051af88d0e36ab6f1871e1d31c110176ebccc00bd",
+        "currentProductSha256": "885ea26cad372cb272ed203051af88d0e36ab6f1871e1d31c110176ebccc00bd",
+        "same": true
+      },
+      "css/ai-workshop-demo.css": {
+        "snapshotSha256": "83a73e37713b34535f43331247021612251ed0aefc65668919517d0f49a5822c",
+        "currentProductSha256": "83a73e37713b34535f43331247021612251ed0aefc65668919517d0f49a5822c",
+        "same": true
+      },
+      "css/ai-workshop-history.css": {
+        "snapshotSha256": "3698e477c072d25f6aa5942875c3438b6f984a3354eb64beda36119233c73b0b",
+        "currentProductSha256": "3698e477c072d25f6aa5942875c3438b6f984a3354eb64beda36119233c73b0b",
+        "same": true
+      },
+      "css/ai-workshop.css": {
+        "snapshotSha256": "39b1da34db9b5d7034ba836fbe732ec7b610148893da576f5ea0fad319538a66",
+        "currentProductSha256": "39b1da34db9b5d7034ba836fbe732ec7b610148893da576f5ea0fad319538a66",
+        "same": true
+      },
+      "css/facial.css": {
+        "snapshotSha256": "aacf63ffbf44453bff688aca3eb054201d467136cd235bbbca75630e850c76fc",
+        "currentProductSha256": "aacf63ffbf44453bff688aca3eb054201d467136cd235bbbca75630e850c76fc",
+        "same": true
+      },
+      "css/gallery.css": {
+        "snapshotSha256": "6f2588f7a68ccf0ae98b2d576b9f4f48c89c17873d43fad441c8109a3608579c",
+        "currentProductSha256": "6f2588f7a68ccf0ae98b2d576b9f4f48c89c17873d43fad441c8109a3608579c",
+        "same": true
+      },
+      "css/history.css": {
+        "snapshotSha256": "da3e24f80f040418fbae874975dab90497f5f2af4c877ade99a9719fc0bf3528",
+        "currentProductSha256": "da3e24f80f040418fbae874975dab90497f5f2af4c877ade99a9719fc0bf3528",
+        "same": true
+      },
+      "css/index.css": {
+        "snapshotSha256": "b0bcb5f2704b48b08c4f22711b7542923d9ac3d9d84de9bbc8f8756f3b319a54",
+        "currentProductSha256": "b0bcb5f2704b48b08c4f22711b7542923d9ac3d9d84de9bbc8f8756f3b319a54",
+        "same": true
+      },
+      "css/music.css": {
+        "snapshotSha256": "f4609c55f017cee88f7877f453afe5fefc66e11cd8b11f2c604cea5b40aa5a54",
+        "currentProductSha256": "f4609c55f017cee88f7877f453afe5fefc66e11cd8b11f2c604cea5b40aa5a54",
+        "same": true
+      },
+      "css/roles.css": {
+        "snapshotSha256": "2e4b44fa509d16d2de2e8825b129dd92d24dfa134ed4c020785af6dfc5e7b830",
+        "currentProductSha256": "2e4b44fa509d16d2de2e8825b129dd92d24dfa134ed4c020785af6dfc5e7b830",
+        "same": true
+      },
+      "css/style.css": {
+        "snapshotSha256": "3cd88181cb835dbf909ba03101778b445024307e871b812832948eb0e983c7f9",
+        "currentProductSha256": "3cd88181cb835dbf909ba03101778b445024307e871b812832948eb0e983c7f9",
+        "same": true
+      },
+      "css/video.css": {
+        "snapshotSha256": "9219bd165ab7778bcb49f8815becdd508190ed5d2d3e259b1f21b4e584f49523",
+        "currentProductSha256": "9219bd165ab7778bcb49f8815becdd508190ed5d2d3e259b1f21b4e584f49523",
+        "same": true
+      },
+      "facial.html": {
+        "snapshotSha256": "3a4bc57dc1e83d16e3c594b7a6c4432cb4f8f44e7e7fe68f3761e9bcf3443d9e",
+        "currentProductSha256": "3a4bc57dc1e83d16e3c594b7a6c4432cb4f8f44e7e7fe68f3761e9bcf3443d9e",
+        "same": true
+      },
+      "gallery.html": {
+        "snapshotSha256": "d359e4232b9d042ede82839400cdfd63dcde6f3ec941c7102e30819135147030",
+        "currentProductSha256": "d359e4232b9d042ede82839400cdfd63dcde6f3ec941c7102e30819135147030",
+        "same": true
+      },
+      "history.html": {
+        "snapshotSha256": "e787849317758ccf549879bdec048fe24ff93bcdaf437f96f456813402f362f7",
+        "currentProductSha256": "e787849317758ccf549879bdec048fe24ff93bcdaf437f96f456813402f362f7",
+        "same": true
+      },
+      "index.html": {
+        "snapshotSha256": "bc0ace24da3667201354787613a5653a6107e080c35b189e28d4370c85675cd4",
+        "currentProductSha256": "bc0ace24da3667201354787613a5653a6107e080c35b189e28d4370c85675cd4",
+        "same": true
+      },
+      "js/ai-workshop/agent-history.js": {
+        "snapshotSha256": "b28b47b1765d506ea572656f5fe1289f61598f104b24c7dbda8f1214323b2121",
+        "currentProductSha256": "b28b47b1765d506ea572656f5fe1289f61598f104b24c7dbda8f1214323b2121",
+        "same": true
+      },
+      "js/ai-workshop/agent-workflow.js": {
+        "snapshotSha256": "095a87a6ae63d390e369a8cc6235855496e93601d90c5e5cb1082242726623f4",
+        "currentProductSha256": "095a87a6ae63d390e369a8cc6235855496e93601d90c5e5cb1082242726623f4",
+        "same": true
+      },
+      "js/ai-workshop/contracts.js": {
+        "snapshotSha256": "bec92aae042392ea24d23249f188786cc9e1e919a66a7dbabba5bed4dd33e8dd",
+        "currentProductSha256": "bec92aae042392ea24d23249f188786cc9e1e919a66a7dbabba5bed4dd33e8dd",
+        "same": true
+      },
+      "js/ai-workshop/demo-guide.js": {
+        "snapshotSha256": "fe80119db9bbd1a09b6206482b1f9c4b580a7361dcc22216078cffaf5de9eb69",
+        "currentProductSha256": "fe80119db9bbd1a09b6206482b1f9c4b580a7361dcc22216078cffaf5de9eb69",
+        "same": true
+      },
+      "js/ai-workshop/demo-status.js": {
+        "snapshotSha256": "3bc2455e314e1385276baf3525ec66b5d7ebfacae0bba6a62c636b672f7a0c56",
+        "currentProductSha256": "3bc2455e314e1385276baf3525ec66b5d7ebfacae0bba6a62c636b672f7a0c56",
+        "same": true
+      },
+      "js/ai-workshop/digital-assets.js": {
+        "snapshotSha256": "77d5944758b0025c2701ddf92c2cf3068b03b0b23a1e507b4176617557c0fa00",
+        "currentProductSha256": "77d5944758b0025c2701ddf92c2cf3068b03b0b23a1e507b4176617557c0fa00",
+        "same": true
+      },
+      "js/ai-workshop/history-contracts.js": {
+        "snapshotSha256": "8d4a3088d108b4adcee35c02171af4a9dc138fbeec125380b42140c1b31ea407",
+        "currentProductSha256": "8d4a3088d108b4adcee35c02171af4a9dc138fbeec125380b42140c1b31ea407",
+        "same": true
+      },
+      "js/ai-workshop/history-services.js": {
+        "snapshotSha256": "aae5eb2bc566fba92763eb6433de18bb2fb8cc8944ed720e3e8099fe342a090e",
+        "currentProductSha256": "aae5eb2bc566fba92763eb6433de18bb2fb8cc8944ed720e3e8099fe342a090e",
+        "same": true
+      },
+      "js/ai-workshop/internal-viewer.js": {
+        "snapshotSha256": "abe06bebdd28fc54672f3e11a8a976feff2a243775921957ce9626c120d0c52f",
+        "currentProductSha256": "abe06bebdd28fc54672f3e11a8a976feff2a243775921957ce9626c120d0c52f",
+        "same": true
+      },
+      "js/ai-workshop/main.js": {
+        "snapshotSha256": "08653aced8dafe21a329665e56de04946f2fa3550cf4724a3daf02fff5e14675",
+        "currentProductSha256": "08653aced8dafe21a329665e56de04946f2fa3550cf4724a3daf02fff5e14675",
+        "same": true
+      },
+      "js/ai-workshop/model-viewer-adapter.js": {
+        "snapshotSha256": "0de6c8c3c3a39ab7ab7125976c697f728163fda5a31e94487fb46b26f47db400",
+        "currentProductSha256": "0de6c8c3c3a39ab7ab7125976c697f728163fda5a31e94487fb46b26f47db400",
+        "same": true
+      },
+      "js/ai-workshop/services.js": {
+        "snapshotSha256": "cdfbea60d4965d4fe49f99b5bfb710a001808a7ec5b8947a4810d1967d2c844f",
+        "currentProductSha256": "cdfbea60d4965d4fe49f99b5bfb710a001808a7ec5b8947a4810d1967d2c844f",
+        "same": true
+      },
+      "js/vendor/model-viewer/LICENSE": {
+        "snapshotSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "currentProductSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "same": true
+      },
+      "js/vendor/model-viewer/model-viewer.min.js": {
+        "snapshotSha256": "18b2e711035aa4705ee281530a55dc2338ff05eed3d70ae16d54105282a75ed5",
+        "currentProductSha256": "18b2e711035aa4705ee281530a55dc2338ff05eed3d70ae16d54105282a75ed5",
+        "same": true
+      },
+      "music.html": {
+        "snapshotSha256": "7fc8945972707e068984fecb8bdec8817974c3eb94a77b97a1a80c3ac1a24626",
+        "currentProductSha256": "7fc8945972707e068984fecb8bdec8817974c3eb94a77b97a1a80c3ac1a24626",
+        "same": true
+      },
+      "roles.html": {
+        "snapshotSha256": "25103c713ecef22784e9cd49241b157095e1c36d142c19453d2986db96a322ac",
+        "currentProductSha256": "25103c713ecef22784e9cd49241b157095e1c36d142c19453d2986db96a322ac",
+        "same": true
+      },
+      "video.html": {
+        "snapshotSha256": "eae28dffb204a62aca0dd8aa371ce73a108bb1c5f67f5c7f0b10ca43de470abf",
+        "currentProductSha256": "eae28dffb204a62aca0dd8aa371ce73a108bb1c5f67f5c7f0b10ca43de470abf",
+        "same": true
+      }
+    }
+  },
+  "stages": {
+    "corrupt": {
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0
+    },
+    "restored": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    },
+    "misconfigured": {
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0
+    },
+    "recovered": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "checksPassed": 42,
+  "checksFailed": 0,
+  "stops": {
+    "corrupt-stop-02.json": {
+      "at": "2026-10-22T07:51:14.415175+00:00",
+      "targetPid": 10440,
+      "port": 8011,
+      "method": "AttachConsole then CTRL_C_EVENT; no terminate/kill",
+      "attached": true,
+      "attachError": 0,
+      "ctrlCSent": true,
+      "controlError": 0,
+      "portClosed": true,
+      "targetProcessExited": true
+    },
+    "restored-stop-01.json": {
+      "at": "2026-10-22T07:54:53.721448+00:00",
+      "targetPid": 40392,
+      "port": 8011,
+      "method": "AttachConsole then CTRL_C_EVENT; no terminate/kill",
+      "attached": true,
+      "attachError": 0,
+      "ctrlCSent": true,
+      "controlError": 0,
+      "portClosed": true,
+      "targetProcessExited": true
+    },
+    "misconfigured-stop-01.json": {
+      "at": "2026-10-22T07:56:31.520720+00:00",
+      "targetPid": 23804,
+      "port": 8011,
+      "method": "AttachConsole then CTRL_C_EVENT; no terminate/kill",
+      "attached": true,
+      "attachError": 0,
+      "ctrlCSent": true,
+      "controlError": 0,
+      "portClosed": true,
+      "targetProcessExited": true
+    },
+    "recovered-stop-01.json": {
+      "at": "2026-10-22T07:58:39.284128+00:00",
+      "targetPid": 5432,
+      "port": 8011,
+      "method": "AttachConsole then CTRL_C_EVENT; no terminate/kill",
+      "attached": true,
+      "attachError": 0,
+      "ctrlCSent": true,
+      "controlError": 0,
+      "portClosed": true,
+      "targetProcessExited": true
+    }
+  },
+  "port8011Closed": true,
+  "corruptFile": {
+    "bytes": 71,
+    "sha256": "22ae2950531634ab5eb7f890b1fb4d75a9b23c28fe1b132d3d9c284c0201b403",
+    "sameAsOriginal": true,
+    "note": "Legacy descriptive filename says69B; actual71B preserved exactly"
+  },
+  "validAgentRestored": true,
+  "protectedDatabaseFiles": {
+    "assets": {
+      "sha256": "9a7a795c75d33ff2957051b88ff677be3965faf9cc9e2ee493c392abe3d28eff",
+      "sameAsInitial": true
+    },
+    "budget": {
+      "sha256": "82181e214aaa592e39f6af1d88f9d22782433e46b861dc9700649a79cad8151b",
+      "sameAsInitial": true
+    },
+    "usage": {
+      "sha256": "549ffdc5fd8045690c6861dffbf1b5b62c1d0280156084a86ba19b2b24473808",
+      "sameAsInitial": true
+    }
+  },
+  "browserExistingEvidence": {
+    "path": "corrupt-model-browser-01/smoke-result.json",
+    "groups": {
+      "eightPages": true,
+      "secondRealistic": true,
+      "styleSwitch": true,
+      "firstInternal": true
+    },
+    "paidApiRequests": 0,
+    "supplierRequests": 0
+  },
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "productionWrites": 0
+}

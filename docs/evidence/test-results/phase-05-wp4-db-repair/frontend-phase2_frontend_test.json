@@ -1,0 +1,111 @@
+{
+  "kind": "OFFLINE_TEST_DOUBLES_AND_STATIC_CHECKS",
+  "disclaimer": "Not a real LLM, RAG, browser, CSS layout or API availability test.",
+  "executedAt": "2026-10-21T13:24:39.191Z",
+  "nodeVersion": "v24.19.0",
+  "command": "node scripts/phase2_frontend_test.mjs",
+  "results": [
+    {
+      "name": "grounded response and original fact-summary metadata",
+      "passed": true
+    },
+    {
+      "name": "reject certain answer without evidence",
+      "passed": true
+    },
+    {
+      "name": "explicit insufficient evidence may have no citations",
+      "passed": true
+    },
+    {
+      "name": "reject duplicate citation identifiers",
+      "passed": true
+    },
+    {
+      "name": "reject malformed answer fields",
+      "passed": true
+    },
+    {
+      "name": "AI capabilities follow backend gates, while default image/model stay off",
+      "passed": true
+    },
+    {
+      "name": "reject incomplete capabilities",
+      "passed": true
+    },
+    {
+      "name": "source URL protocol and credential validation",
+      "passed": true
+    },
+    {
+      "name": "concurrent capability requests coalesce",
+      "passed": true
+    },
+    {
+      "name": "same-origin chat and idempotency header",
+      "passed": true
+    },
+    {
+      "name": "one-argument askOperaQuestion remains compatible",
+      "passed": true
+    },
+    {
+      "name": "capability cache recovers after network failure",
+      "passed": true
+    },
+    {
+      "name": "failed chat immediately invalidates cached ready capabilities",
+      "passed": true
+    },
+    {
+      "name": "earlier capability request cannot restore readiness after a chat connection failure",
+      "passed": true
+    },
+    {
+      "name": "typed backend error preserves real request identifier",
+      "passed": true
+    },
+    {
+      "name": "upstream model timeout invalidates readiness without automatically retrying chat",
+      "passed": true
+    },
+    {
+      "name": "service rejects malformed successful response",
+      "passed": true
+    },
+    {
+      "name": "55-second budget aborts with no automatic retry (accelerated test clock)",
+      "passed": true
+    },
+    {
+      "name": "image and model services return unavailable without a network request",
+      "passed": true
+    },
+    {
+      "name": "UI capabilities and status are driven by fetched state (DOM double)",
+      "passed": true
+    },
+    {
+      "name": "UI pending lock blocks duplicate submissions and preserves a newer input (DOM double)",
+      "passed": true
+    },
+    {
+      "name": "UI keeps each answer citation identity and uses text nodes (DOM double)",
+      "passed": true
+    },
+    {
+      "name": "UI free capability recheck preserves the error, retry and history; manual retry reuses its key (DOM double)",
+      "passed": true
+    },
+    {
+      "name": "UI trims whole turns to twelve and rejects overlong input (DOM double)",
+      "passed": true
+    },
+    {
+      "name": "HTML bindings, safe rendering and complete import version chain (static)",
+      "passed": true
+    }
+  ],
+  "passed": 25,
+  "failed": 0
+}
