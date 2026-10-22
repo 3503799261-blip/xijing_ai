@@ -1,0 +1,3888 @@
+{
+  "checkedAtUtc": "2026-10-22T12:27:25.939998+00:00",
+  "scope": "Documentation, local links, prior test evidence, hashes and Git only; not new app/browser tests",
+  "branch": "feature/phase5-competition-delivery",
+  "headAtCheck": "61064b0842e5f3789c01b107dd0b2a3f45c55adb",
+  "baselineHead": "61064b0842e5f3789c01b107dd0b2a3f45c55adb",
+  "passed": 960,
+  "failed": 1,
+  "skipped": 0,
+  "localLinksChecked": 445,
+  "historical754Includes41": true,
+  "introCounts": [
+    {
+      "title": "精简介绍（约100字）",
+      "nonWhitespaceCharacters": 122,
+      "hanCharacters": 104
+    },
+    {
+      "title": "标准简介（约300字）",
+      "nonWhitespaceCharacters": 353,
+      "hanCharacters": 294
+    },
+    {
+      "title": "详细介绍（约800字）",
+      "nonWhitespaceCharacters": 973,
+      "hanCharacters": 754
+    }
+  ],
+  "checks": [
+    {
+      "name": "clean_start",
+      "status": "PASS"
+    },
+    {
+      "name": "branch_preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:.env.example",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:.gitignore",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:about.html",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:audio/6月19日.mp3",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/__init__.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/__init__.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/agents/__init__.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/agents/designer.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/agents/history.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/agents/planner.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/agents/researcher.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/agents/reviewer.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/agents/schemas.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/agents/store.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/agents/supervisor.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/agents/workflow.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/api/__init__.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/api/agents.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/api/assets.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/__init__.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/candidate_preview.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/candidates.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/internal_viewer.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/neural_service.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/schemas.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/service.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/store.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/technical_test.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/usage.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/validation.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/assets/visual_prompt.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/config.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/database.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/errors.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/knowledge/__init__.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/knowledge/chunking.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/knowledge/embedding.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/knowledge/store.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/knowledge/vector_store.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/main.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/providers/__init__.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/providers/budget.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/providers/llm.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/providers/neural4d.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/providers/safe_model_download.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/schemas.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/services/__init__.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/services/chat.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/services/runtime.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/services/search.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/app/static_frontend.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/agent_designer_v1.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/agent_designer_v2.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/agent_designer_v3.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/agent_planner_v1.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/agent_planner_v2.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/agent_planner_v3.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/agent_planner_v4.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/agent_reviewer_v1.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/agent_reviewer_v2.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/agent_reviewer_v3.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/rag_answer_v1.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/prompts/rag_answer_v2.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/requirements.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/__init__.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/apply_assistant_review.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/archive_agent_evidence.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/archive_final_review.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/check_provider.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/download_model.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/evaluate_agent_api.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/evaluate_agent_workflow.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/evaluate_answers.md",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/evaluate_answers.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/evaluate_baseline.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/evaluate_retrieval.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/experiment_embedding_context.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/export_budget.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/ingest.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/initialize_business_databases.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/internal_neural4d_test.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/neural4d_history.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/normalize_first_recovered_glb.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/normalize_second_recovered_glb.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/prepare_phase4_assets.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/prepare_realistic_showcase.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/recover_first_internal_model.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/register_phase4_candidate.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/reproduce_smoke.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/verify_lifecycle.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/scripts/verify_neural4d_balance.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/conftest.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/fixtures/phase4/Duck-README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/fixtures/phase4/Duck.glb",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/fixtures/phase4/SCEA-LICENSE.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/fixtures/phase4/confirmed-character-export-regression.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/fixtures/phase4/manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_agent_budget.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_agent_history.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_agent_lifespan.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_agent_roles.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_agent_tasks.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_api.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_database_safety.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_hybrid.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_ingestion.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_knowledge_units.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase42_preparation.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_assets.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_balance_probe.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_candidate_api.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_candidates.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_internal_integration.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_neural4d.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_prompt_export.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_recovery_cli.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_recovery_conversion.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_safe_download.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_second_recovery_conversion.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_styles.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_technical_test.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_phase4_usage.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_provider.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:backend/tests/test_runtime_resources.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/about.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/ai-workshop-demo.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/ai-workshop-history.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/ai-workshop.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/facial.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/gallery.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/history.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/index.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/music.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/roles.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/style.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:css/video.css",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:facial.html",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:gallery.html",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:history.html",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/about.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/art1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/art2.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/art3.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/art4.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/black.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/black1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/blue.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/blue1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/chou.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/dan.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery10.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery11.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery12.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery2.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery3.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery4.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery5.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery6.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery7.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery8.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/gallery9.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/glod.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/glod1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/home-banner.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/home1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/home2.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/home3.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/intro1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/intro2.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/intro3.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/intro4.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/jing.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/mask-black.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/mask-blue.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/mask-gold.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/mask-red.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/mask-white.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/opera1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/opera2.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/opera3.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/opera4.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/opera5.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/red.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/red1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/sheng.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/white.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/white1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/京胡.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/历史1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/历史2.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/历史3.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/历史4.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/历史5.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/生.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/背景1.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/背景2.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/背景3.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:images/脸谱.jpg",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/agent-history.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/agent-workflow.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/contracts.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/demo-guide.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/demo-status.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/digital-assets.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/history-contracts.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/history-services.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/internal-viewer.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/main.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/model-viewer-adapter.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/ai-workshop/services.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/vendor/model-viewer/LICENSE",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:js/vendor/model-viewer/model-viewer.min.js",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/cnpoc-bao.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/cnpoc-bawang.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/cnpoc-costume.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/cnpoc-dan.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/cnpoc-face.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/cnpoc-jing.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/cnpoc-mei.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/cnpoc-muguiying.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/cnpoc-sanchakou.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/fujian-roles.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/ihchina-jingju.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/documents/ncfta-male-roles.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/evaluation/assistant-review-decisions.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/evaluation/corpus-validation.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/evaluation/holdout-questions.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/evaluation/questions.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/evaluation/recommended-questions.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/review/source-checks.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:knowledge/sources.json",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:media/opera-audio.mp3",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:media/video1.mp4",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:media/video2.mp4",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:media/video3.mp4",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:media/video4.mp4",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:music.html",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:roles.html",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/check_public_secrets.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/export_phase2_prompt.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/export_phase3_prompt.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/export_phase4_prompt.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/export_phase_prompt.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase2_frontend_test.mjs",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase2_http_smoke.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase3_frontend_test.mjs",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase4_browser_failure_fixture.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase4_candidate_http_check.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase4_frontend_test.mjs",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase4_http_smoke.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase4_local_audit.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase4_modeling_preflight.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase4_recovered_model_failure_fixture.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase4_style_readback.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase5_wp2_frontend_test.mjs",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/phase5_wp3_frontend_test.mjs",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/prepare_phase4_viewer_fixture.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:scripts/verify_phase1_static.py",
+      "status": "PASS"
+    },
+    {
+      "name": "protected_tracked:video.html",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/evidence/test-results/phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/evidence/test-results/phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/evidence/test-results/phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/evidence/test-results/phase-05-wp5/safety-flags.json",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/evidence/test-results/phase-05-wp5/safety-flags.json",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/evidence/test-results/phase-05-wp5/safety-flags.json",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/evidence/test-results/phase-05-wp5/validate_materials.py",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/evidence/test-results/phase-05-wp5/validate_materials.py",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/evidence/test-results/phase-05-wp5/validate_materials.py",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/evidence/test-results/phase-05-wp5/validation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/evidence/test-results/phase-05-wp5/validation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/evidence/test-results/phase-05-wp5/validation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/prompts/phase-05/18-wp5-delivery-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/prompts/phase-05/18-wp5-delivery-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/prompts/phase-05/18-wp5-delivery-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/prompts/phase-05/19-wp5-delivery-public-conversation.jsonl",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/prompts/phase-05/19-wp5-delivery-public-conversation.jsonl",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/prompts/phase-05/19-wp5-delivery-public-conversation.jsonl",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/prompts/phase-05/20-wp5-delivery-export-metadata.json",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/prompts/phase-05/20-wp5-delivery-export-metadata.json",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/prompts/phase-05/20-wp5-delivery-export-metadata.json",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/prompts/phase-05/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/prompts/phase-05/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/prompts/phase-05/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/reports/phase-05-competition-submission-brief.md",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/reports/phase-05-competition-submission-brief.md",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/reports/phase-05-competition-submission-brief.md",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/reports/phase-05-demo-script.md",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/reports/phase-05-demo-script.md",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/reports/phase-05-demo-script.md",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/reports/phase-05-deployment-and-recovery.md",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/reports/phase-05-deployment-and-recovery.md",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/reports/phase-05-deployment-and-recovery.md",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/reports/phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/reports/phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/reports/phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/reports/phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/reports/phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/reports/phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/reports/phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/reports/phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/reports/phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/reports/phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/reports/phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/reports/phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "allowed_change:docs/reports/phase-05-work-package-05.md",
+      "status": "PASS"
+    },
+    {
+      "name": "text_only:docs/reports/phase-05-work-package-05.md",
+      "status": "PASS"
+    },
+    {
+      "name": "size_limit:docs/reports/phase-05-work-package-05.md",
+      "status": "PASS"
+    },
+    {
+      "name": "document_exists:phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../about.html",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/static_frontend.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4/layout-final.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/normal-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/knowledge/embedding.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/knowledge/store.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/knowledge/vector_store.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/services/search.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/scripts/ingest.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-02-ingest-initial.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-02-real-lifecycle.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-comparison.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/services/chat.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/providers/llm.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/services.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/main.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-02-answers-rag20-final-hybrid.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-02-answers-rag20-final-hybrid-assistant-review.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/frontend-phase2_frontend_test.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-02-answers-rag20-final-hybrid.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/agents/supervisor.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/agents/workflow.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/agents/planner.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/agents/researcher.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/agents/designer.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/agents/reviewer.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/agent-workflow.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-03/real-cases-summary.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-03/browser-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/full-final-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/agents/schemas.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/agents/store.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/api/agents.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-03/browser-confirmed-character.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-04-second-role-v2-review.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp2/http-attempt-04.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/agents/history.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/api/agents.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/agent-history.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/history-contracts.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp2/pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp2/http-attempt-04.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/frontend-phase5_wp2_frontend_test.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/assets/schemas.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/assets/service.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/assets/visual_prompt.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/digital-assets.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/frontend-phase4_frontend_test.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/normal-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/assets/validation.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/assets/service.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/assets/visual_prompt.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../prompts/phase-04/realistic-model-v1.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-04-final-acceptance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/phase-04/final-acceptance/asset-ledger-readback.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/assets/neural_service.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/providers/neural4d.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/providers/safe_model_download.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-04-first-internal-modeling.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-04-second-model-execution.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/phase-04/final-acceptance/asset-ledger-after-free-tests.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/assets/usage.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/assets/neural_service.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/phase-04/final-acceptance/asset-ledger-after-free-tests.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/full-final-pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/assets/internal_viewer.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-04-final-acceptance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/normal-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-04-final-acceptance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-04-second-model-execution.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/normal-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/model-viewer-adapter.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/internal-viewer.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/api/assets.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/normal-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/touch-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/field-corrupt-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/digital-assets.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/assets/schemas.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp3/browser-attempt-final.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/guide-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/demo-guide.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../css/ai-workshop-demo.css",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp3/demo-exit-final-34.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/guide-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/demo-guide.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/demo-status.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp3-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/guide-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/database.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/scripts/initialize_business_databases.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/targeted-final-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/explicit-init-cli.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/field-final-summary.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/main.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/agents/supervisor.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/services/runtime.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/api/agents.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/field-corrupt-probe.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/field-restored-probe.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-db-repair/field-corrupt-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/requirements.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4/resource-copy-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4/cold-install-attempt03-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4/cold-env-attempt03-runtime-verification.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4/models-cold-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/tests/fixtures/phase4/Duck.glb",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/tests/fixtures/phase4/Duck-README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/tests/fixtures/phase4/SCEA-LICENSE.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../js/ai-workshop/contracts.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/services/runtime.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-04-final-acceptance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../../backend/app/services/runtime.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:../evidence/test-results/phase-02-answers-rag20-final-hybrid-assistant-review.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-05-competition-submission-brief.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-05-demo-script.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-05-deployment-and-recovery.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-project-facts.md:phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no_sensitive_signed_links:phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "document_exists:phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:../prompts/phase-01/00-original-user-request.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:../prompts/phase-05/18-wp5-delivery-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:../prompts/phase-01/00-original-user-request.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:../prompts/phase-02/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:../prompts/phase-03/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:../prompts/phase-04/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:../../README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:phase-05-deployment-and-recovery.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:phase-05-demo-script.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:phase-05-competition-submission-brief.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-requirements-evidence-map.md:phase-05-work-package-04.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no_sensitive_signed_links:phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "document_exists:phase-05-competition-submission-brief.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../backend/app/services/search.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../backend/app/services/chat.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:phase-02.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../backend/app/agents/workflow.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:phase-03.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../backend/app/agents/store.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../backend/app/assets/service.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:phase-04-second-model-execution.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../js/ai-workshop/demo-guide.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../backend/app/database.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:phase-05-work-package-04.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../backend/app/main.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../backend/app/config.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../backend/app/services/runtime.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../backend/app/api/agents.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:../../backend/app/assets/neural_service.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-competition-submission-brief.md:phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no_sensitive_signed_links:phase-05-competition-submission-brief.md",
+      "status": "PASS"
+    },
+    {
+      "name": "document_exists:phase-05-demo-script.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../evidence/test-results/phase-05-wp4/rehearsal.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../prompts/phase-01/00-original-user-request.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-deployment-and-recovery.md",
+      "status": "PASS"
+    },
+    {
+      "name": "safe_link_scheme:http://127.0.0.1:8000/about.html#ai-workshop-demo",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "safe_link_scheme:http://127.0.0.1:8000/index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "safe_link_scheme:http://127.0.0.1:8000/about.html#ai-workshop-demo",
+      "status": "PASS"
+    },
+    {
+      "name": "safe_link_scheme:http://127.0.0.1:8000/about.html#ai-workshop-qa",
+      "status": "PASS"
+    },
+    {
+      "name": "safe_link_scheme:http://127.0.0.1:8000/about.html#ai-workshop-history",
+      "status": "PASS"
+    },
+    {
+      "name": "safe_link_scheme:http://127.0.0.1:8000/about.html?assetId=9e2b42e1-bbad-4a2f-ab1b-aeda18015dee#ai-workshop-model",
+      "status": "PASS"
+    },
+    {
+      "name": "safe_link_scheme:http://127.0.0.1:8000/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer",
+      "status": "PASS"
+    },
+    {
+      "name": "safe_link_scheme:http://127.0.0.1:8000/about.html#ai-workshop-model",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-work-package-01.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../evidence/test-results/phase-05-wp4-db-repair/normal-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-02.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../prompts/phase-02/04-development-evolution.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../evidence/test-results/phase-05-wp3-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-work-package-02.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../evidence/test-results/phase-05-wp2-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-04-second-model-execution.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-04-second-role-v2-review.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../prompts/phase-04/22-second-role-human-acceptance.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../../js/ai-workshop/agent-history.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-04-final-acceptance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../../js/ai-workshop/model-viewer-adapter.js",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-work-package-03.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../../about.html",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../prompts/phase-05/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../evidence/test-results/phase-05-wp4-db-repair/archive-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../prompts/phase-02/04-development-evolution.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-02.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-04-second-model-execution.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../prompts/phase-04/second-agent-brief-v2.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../prompts/phase-04/21-second-agent-v2-one-run-approval.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../prompts/phase-04/22-second-role-human-acceptance.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-04-first-internal-modeling.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-04-second-model-execution.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-04-final-acceptance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-work-package-04.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-04-first-internal-modeling.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-demo-script.md:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no_sensitive_signed_links:phase-05-demo-script.md",
+      "status": "PASS"
+    },
+    {
+      "name": "document_exists:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/layout-final.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/normal-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-02-ingest-initial.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-02-real-lifecycle.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/resource-probe-final.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/phase-02-retrieval-wp4-isolated-restored-comparison.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-02-answers-rag20-final-hybrid.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-02-answers-rag20-final-hybrid-assistant-review.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-02-direct-vs-rag-five.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-03/real-cases-summary.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-03/api-http-checks.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-03/browser-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp2/pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp2/frontend-history.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp2/http-attempt-04.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp2/browser-attempt-verified.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-03/browser-confirmed-character.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-04-second-role-v2-review.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/phase-04/final-acceptance/asset-ledger-readback.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/provenance-after.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp2/http-attempt-04.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-04-second-role-v2-review.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/provenance-after.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-04-first-internal-modeling.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/phase-04/final-acceptance/asset-ledger-after-free-tests.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/physical-final-comparison.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-04-first-internal-modeling.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-04-second-model-execution.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/phase-04/final-acceptance/asset-ledger-readback.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/normal-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/touch-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp3/browser-attempt-final.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/touch-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/frontend-phase4_frontend_test.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/normal-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp3/demo-exit-final-34.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/guide-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp3-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/guide-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/baseline-final.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/targeted-final-pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/explicit-init-cli.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/field-misconfigured-probe.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/field-corrupt-probe.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/field-corrupt-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/field-restored-probe.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/field-final-summary.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/cold-install-attempt03-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/cold-env-attempt03-runtime-verification.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/resource-copy-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/models-cold-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/normal-02.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/normal-stop-02.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/layout-final.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/guide-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/touch-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-02-api-usage.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-03/api-usage-final.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/phase-04/final-acceptance/asset-ledger-after-free-tests.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/state-after.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-work-package-01.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-work-package-02.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-work-package-03.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-work-package-04.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-work-package-05.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/state-after.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/provenance-after.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/physical-final-comparison.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp5/validation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-work-package-05.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../prompts/phase-02/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../prompts/phase-03/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../prompts/phase-04/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../prompts/phase-05/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../prompts/phase-05/15-wp4-database-repair-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-04-final-acceptance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../prompts/phase-04/23-two-model-acceptance-third-cancelled.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-04-final-acceptance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp1/offline-final.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp2/pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp3/pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/backend-final.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/backend-clean-env.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/full-final-pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/full-final-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/targeted-final-pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/targeted-final-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/explicit-init-cli.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/field-final-summary.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/touch-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/rehearsal.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp1/browser-private-screenshot-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp2/screenshot-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp3/screenshot-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/screenshot-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/screenshot-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4/archive-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp4-db-repair/archive-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:../evidence/test-results/phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-evidence-index.md:phase-05-work-package-05.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no_sensitive_signed_links:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "document_exists:phase-05-deployment-and-recovery.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../backend/app/config.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../backend/app/main.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../.env.example",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../evidence/test-results/phase-05-wp4/cold-install-attempt03-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../evidence/test-results/phase-05-wp4/cold-env-attempt03-runtime-verification.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../evidence/test-results/phase-05-wp4/resource-copy-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../evidence/test-results/phase-05-wp4/http-isolated-restored.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../evidence/test-results/phase-05-wp4/models-cold-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../evidence/test-results/phase-05-wp4-db-repair/explicit-init-cli.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../evidence/test-results/phase-05-wp4-db-repair/field-final-summary.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../evidence/test-results/phase-05-wp4-db-repair/physical-final-comparison.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../evidence/test-results/phase-05-wp4-db-repair/provenance-after.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../backend/requirements.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../backend/app/config.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../backend/app/static_frontend.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../.env.example",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../backend/scripts/initialize_business_databases.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../backend/scripts/download_model.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../backend/scripts/ingest.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:phase-04-final-acceptance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../backend/app/database.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:../../.gitignore",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:phase-05-demo-script.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-deployment-and-recovery.md:phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no_sensitive_signed_links:phase-05-deployment-and-recovery.md",
+      "status": "PASS"
+    },
+    {
+      "name": "document_exists:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../knowledge/documents",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../knowledge/sources.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../architecture/knowledge-provenance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../knowledge/review/source-checks.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../knowledge/evaluation/questions.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../knowledge/evaluation/assistant-review-decisions.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../backend/scripts/ingest.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:project-audit.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:phase-01.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:project-audit.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../prompts/phase-04/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../prompts/phase-04/10-internal-history-and-image-permission-reply.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:phase-04-first-internal-modeling.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../prompts/phase-04/19-second-image-permission-and-agent-reply.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:phase-04-second-model-execution.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:phase-04-final-acceptance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../evidence/phase-04/final-acceptance/asset-ledger-readback.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../evidence/phase-04/modeling/01-chibi/recovery-08-local-texture-conversion.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:phase-04-second-model-execution.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../css/style.css",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../css/ai-workshop.css",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../js/vendor/model-viewer/LICENSE",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../backend/tests/fixtures/phase4/manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../backend/tests/fixtures/phase4/Duck-README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../backend/tests/fixtures/phase4/SCEA-LICENSE.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../backend/tests/fixtures/phase4/manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../backend/scripts/download_model.py",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../../backend/requirements.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../evidence/test-results/phase-05-wp4/cold-env-attempt03-runtime-verification.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:../evidence/test-results/phase-05-wp4-db-repair/screenshot-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-asset-provenance-and-permissions.md:phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no_sensitive_signed_links:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "document_exists:phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:phase-05-competition-submission-brief.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:phase-05-demo-script.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:phase-05-deployment-and-recovery.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:phase-05-work-package-05.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:../evidence/test-results/phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:../prompts/phase-05/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:../../README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-submission-checklist.md:../evidence/test-results/phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no_sensitive_signed_links:phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "document_exists:phase-05-work-package-05.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-work-package-05.md:phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-work-package-05.md:phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-work-package-05.md:phase-05-competition-submission-brief.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-work-package-05.md:phase-05-demo-script.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-work-package-05.md:phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-work-package-05.md:phase-05-deployment-and-recovery.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-work-package-05.md:phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-work-package-05.md:phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-work-package-05.md:../evidence/test-results/phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-work-package-05.md:../prompts/phase-05/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-work-package-05.md:../evidence/test-results/phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no_sensitive_signed_links:phase-05-work-package-05.md",
+      "status": "PASS"
+    },
+    {
+      "name": "document_exists:README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:00-original-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:01-checkpoint-a-public-conversation.jsonl",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:02-export-metadata.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-05-project-audit.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-05-implementation-proposal.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-05-demo-plan.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../phase-01/00-original-user-request.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-02.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-03.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-04-final-acceptance.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:03-wp1-approved-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:04-wp1-public-conversation.jsonl",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:05-wp1-export-metadata.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-05-work-package-01.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../evidence/test-results/phase-05-wp1-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:06-wp2-approved-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:07-wp2-public-conversation.jsonl",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:08-wp2-export-metadata.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-05-work-package-02.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../evidence/test-results/phase-05-wp2-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:09-wp3-approved-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:10-wp3-public-conversation.jsonl",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:11-wp3-export-metadata.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-05-work-package-03.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../evidence/test-results/phase-05-wp3-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:12-wp4-approved-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:13-wp4-public-conversation.jsonl",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:14-wp4-export-metadata.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-05-work-package-04.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:15-wp4-database-repair-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:16-wp4-database-repair-public-conversation.jsonl",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:17-wp4-database-repair-export-metadata.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-05-work-package-04.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../evidence/test-results/phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../evidence/test-results/phase-05-wp4-db-repair/archive-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:18-wp5-delivery-user-request.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:19-wp5-delivery-public-conversation.jsonl",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:20-wp5-delivery-export-metadata.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-05-work-package-05.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../reports/phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:README.md:../../evidence/test-results/phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no_sensitive_signed_links:README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "document_exists:phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-wp5-test-report.md:phase-05-wp4-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-wp5-test-report.md:phase-05-wp5/validation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "local_link:phase-05-wp5-test-report.md:phase-05-wp5/validate_materials.py",
+      "status": "PASS"
+    },
+    {
+      "name": "no_sensitive_signed_links:phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:04b2c57",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:0955d0f",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:0955d0f98db5886955359e121ddbe8e544b9b9ba",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:2b08f36",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:2bb1b69",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:374df8c",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:381d62e",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:3b40aa2",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:452a0c2",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:452a0c299f1c0468087ff60b8cebf01930bc938d",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:45d1dcc",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:45d1dcc1399fb68c1fb978d88f0a8f9a2a3fd92f",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:60bfc38",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:60e1590",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:61064b0",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:61064b0842e5f3789c01b107dd0b2a3f45c55adb",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:638028e",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:74b3e6e",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:76dbba0",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:76dbba0e443877745fa866a3d2e4c55641671a8b",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:7999e1d3359715c523056ef9478215996d62a620",
+      "status": "FAIL"
+    },
+    {
+      "name": "actual_commit_ancestor:81dd451",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:834483d",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:84b1d23",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:8a5499e",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:8d5de53",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:8e6a78a",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:903fe1d",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:9e3516d",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:9e3516dc6a7ada53d067a929383c5225368e902d",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:a95c774",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:ae2783e",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:ae2783ee2b241d36abf34df707cca8336a414e2a",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:bf96dd6",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:bf96dd6b3073c7dd9d20c7cfd409fc40f5bce2ba",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:c873c31",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:c89e63e",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:e36c1e5",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:e36c1e51090907a7a4e0f55e25d125fd066498e8",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:e371019",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:e72d237",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:ea0f4fc",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:ee90f14",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:f58888b",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:f7dee30",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:f8a1f47",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_commit_ancestor:f8a1f47126b1104f1f004a4d4a62ba6fc4ad582f",
+      "status": "PASS"
+    },
+    {
+      "name": "full754_actual_nodes",
+      "status": "PASS"
+    },
+    {
+      "name": "specialized41_in754",
+      "status": "PASS"
+    },
+    {
+      "name": "full_contains41_database_safety",
+      "status": "PASS"
+    },
+    {
+      "name": "original_result:full-final-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_result:targeted-final-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "separate_cli9",
+      "status": "PASS"
+    },
+    {
+      "name": "separate_field42",
+      "status": "PASS"
+    },
+    {
+      "name": "field_source80_match",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:baseline-execution-index.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:baseline-before-state.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:baseline-before-provenance.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:baseline-physical-resources-before.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:baseline-executed-helper-attempt01.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:baseline-executed-helper-attempt02.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:baseline-executed-helper-attempt03.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:baseline-executed-helper-attempt04.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:baseline-hang-trace.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:baseline-attempt03.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:baseline-final.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:compatibility-initial-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:compatibility-initial-pytest-output.redacted.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:compatibility-initial-pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:compatibility-retest-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:compatibility-retest-pytest-output.redacted.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:compatibility-retest-pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:targeted-harness-failed-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:targeted-harness-failed-pytest-output.redacted.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:targeted-harness-failed-pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:targeted-initial-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:targeted-initial-pytest-output.redacted.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:targeted-initial-pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:targeted-final-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:targeted-final-pytest-output.redacted.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:targeted-final-pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:full-intermediate-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:full-intermediate-pytest-output.redacted.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:full-intermediate-pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:full-final-isolation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:full-final-pytest-output.redacted.txt",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:full-final-pytest.xml",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:store-smoke.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:explicit-init-cli.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:late-budget-before-fix.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:state-after.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:provenance-after.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:physical-first-comparison.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:physical-final-comparison.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:normal-01.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:normal-02.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:normal-stop-01.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:http-01.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:normal-stop-02.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:http-02.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:frontend-phase2_frontend_test.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:frontend-phase3_frontend_test.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:frontend-phase5_wp2_frontend_test.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:frontend-phase4_frontend_test.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:frontend-phase5_wp3_frontend_test.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:normal-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:guide-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:touch-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-preparation.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-corrupt-model-browser.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-corrupt-probe.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-restored-probe.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-misconfigured-probe.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-recovered-probe.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-corrupt-start-02.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-restored-start-01.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-misconfigured-start-01.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-recovered-start-01.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-corrupt-stop-02.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-restored-stop-01.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-misconfigured-stop-01.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-recovered-stop-01.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-offline-bootstrap.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-db-repair-targeted-bootstrap.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-db-repair-fixture-target.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-db-repair-inventory.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-db-repair-init-cli.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-state.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-provenance.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-server-control.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-stop-console.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-http-check.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-model-browser.mjs",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-browser.mjs",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-touch-browser.mjs",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-db-repair-field-prepare.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-db-repair-field-start.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-db-repair-field-probe.py",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-db-repair-field-model-browser.mjs",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:field-final-summary.json",
+      "status": "PASS"
+    },
+    {
+      "name": "original_evidence_hash:phase5-wp4-db-repair-document-check.py",
+      "status": "PASS"
+    },
+    {
+      "name": "unchanged_private:databases",
+      "status": "PASS"
+    },
+    {
+      "name": "unchanged_private:activeManifestSha256",
+      "status": "PASS"
+    },
+    {
+      "name": "unchanged_private:generation",
+      "status": "PASS"
+    },
+    {
+      "name": "unchanged_private:generationFiles",
+      "status": "PASS"
+    },
+    {
+      "name": "unchanged_private:bgeFiles",
+      "status": "PASS"
+    },
+    {
+      "name": "unchanged_private:assetFiles",
+      "status": "PASS"
+    },
+    {
+      "name": "matches_WP4_original_resources",
+      "status": "PASS"
+    },
+    {
+      "name": "exact_user_prompt",
+      "status": "PASS"
+    },
+    {
+      "name": "actual_public_snapshot",
+      "status": "PASS"
+    },
+    {
+      "name": "no_hidden_reasoning_export",
+      "status": "PASS"
+    },
+    {
+      "name": "three_intro_versions",
+      "status": "PASS"
+    },
+    {
+      "name": "public_secret_patterns",
+      "status": "PASS"
+    },
+    {
+      "name": "tracked_diff_whitespace",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/evidence/test-results/phase-05-wp5-test-report.md",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/evidence/test-results/phase-05-wp5/safety-flags.json",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/evidence/test-results/phase-05-wp5/validate_materials.py",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/evidence/test-results/phase-05-wp5/validation-result.json",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/prompts/phase-05/19-wp5-delivery-public-conversation.jsonl",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/prompts/phase-05/20-wp5-delivery-export-metadata.json",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/prompts/phase-05/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/reports/phase-05-competition-submission-brief.md",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/reports/phase-05-demo-script.md",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/reports/phase-05-deployment-and-recovery.md",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/reports/phase-05-evidence-index.md",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/reports/phase-05-project-facts.md",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/reports/phase-05-requirements-evidence-map.md",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/reports/phase-05-submission-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "name": "new_text_whitespace:docs/reports/phase-05-work-package-05.md",
+      "status": "PASS"
+    }
+  ],
+  "secretScan": {
+    "success": true,
+    "textFilesChecked": 910,
+    "findings": [],
+    "scope": "tracked and nonignored public UTF-8 files; no matched values logged"
+  },
+  "paidApiCalls": 0,
+  "neural4dRequests": 0,
+  "appImportedOrStarted": false,
+  "newApplicationTestsRun": 0,
+  "newBrowserRehearsalRun": false,
+  "mergePushPerformed": false,
+  "privateFilesPublished": false
+}

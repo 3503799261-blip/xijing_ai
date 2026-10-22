@@ -199,3 +199,29 @@
 真实产品提交：`ae2783ee2b241d36abf34df707cca8336a414e2a`（require explicit business database initialization）、`452a0c299f1c0468087ff60b8cebf01930bc938d`（isolate unavailable agent and budget databases）。测试证据提交：`0955d0f98db5886955359e121ddbe8e544b9b9ba`（archive database safety and recovery evidence）。最终文档独立本地提交，实际Hash由最终git log提供，不预造自身Hash。
 
 剩余边界：真实Windows ACL破坏、实体手机、跨机器/首次BGE下载、实时外部API未测试；另一个已存在有效库的身份仍需核对；坏库恢复须重启、不自动修复/迁移。当前无未解决关键安全阻断，状态**PHASE_5_WP4_WAITING_ACCEPTANCE**，停止等待人工验收。
+
+## 12. WP5比赛最终交付材料与证据索引（2026-10-22）
+
+用户明确确认WP1～4已验收，授权本轮最终材料整理，不增加业务功能、不调用付费API或Neural4D。实际起点`feature/phase5-competition-delivery` / `61064b0842e5f3789c01b107dd0b2a3f45c55adb`，工作区干净；核对16个WP1～4关键祖先提交，先只读审查再写材料。
+
+| 文件 | 实际来源与范围 |
+|---|---|
+| [18-wp5-delivery-user-request.txt](18-wp5-delivery-user-request.txt) | 从当前会话精确提取的完整用户Prompt，23950 UTF-8字节；SHA-256 `735655ac1a7801660b56d8b76cd6d664154d822a864a1a13d0dd8b4483379dbb` |
+| [19-wp5-delivery-public-conversation.jsonl](19-wp5-delivery-public-conversation.jsonl) | 本轮实际公开消息与匹配工具的时间快照26条；剔除10组内部协作调用，排除隐藏推理/系统/开发者记录；敏感模式及个人路径脱敏 |
+| [20-wp5-delivery-export-metadata.json](20-wp5-delivery-export-metadata.json) | 原始时间/行范围、实际导出时间、Hash/字节核对；不声称包含快照后的最终校验、Commit或最终回复 |
+| [WP5总结](../../reports/phase-05-work-package-05.md) | 实际只读范围、材料清单、限制、提交及验收状态 |
+| [事实表](../../reports/phase-05-project-facts.md)、[证据索引](../../reports/phase-05-evidence-index.md) | 当前实现与原始结果对应，不把历史测试写成当天重跑 |
+| [WP5核查报告](../../evidence/test-results/phase-05-wp5-test-report.md) | 本轮链接/Hash/提交/统计/修改范围/敏感模式的实际核查，非新754项应用回归 |
+
+实际工程过程：
+
+1. 核对干净基线、WP1～4原报告与原始JSON/JUnit、README/配置/主要业务入口；先记录263个非docs已跟踪文件及私有库/索引/模型的只读基线，没有初始化或启动服务。
+2. 没有找到独立官方赛事通知。将历史用户评分/MP4/PDF目标与正式规则待核分开；异步请求官方资料，未收到时继续通用底稿，不编比赛名或截止时间。
+3. 确认历史754全量包含41专项，CLI9和现场42单独列口径；保留各WP历史失败和复测，不制造“项目测试总量”。
+4. 在既有实现上整理事实表、要求对应表、三版简介/四项特色/Mermaid、演示脚本、证据索引、部署恢复、许可清单、检查表和总结；不改已验收业务/依赖/语料。提交前发现README顶部与本次用户验收状态矛盾，仅修正第5行，其余运行内容/换行不变并单独核对。
+5. 保留“Q版仅内部、写实用户声明但作者及书面证据未独立核实、两模型不同谱系、平台绘图未接入、企业无客户交付、手机/跨机/ACL/当前API未测”等边界。新稿时间是预估，不冒称完成新排练或成片。
+6. 首轮材料核查960通过/1失败，BGE的40位模型revision被辅助误判为本Git提交；保留原结果/执行源码并分别核对模型版本与Git，第二轮974/0复测通过。交叉审读还纠正演示稿访问拒绝举例403为当前门禁404；只改材料，没有发明检索Bug或模型生成失败。最终核查补上JUnit失败/错误/跳过节点断言，实际数量、修改与Git以核查报告和真实git log为准。
+
+材料提交已实际形成：`2472284b220b65b56b29aa280516a38021d13a8e`（`docs(phase5): prepare competition materials and traceable evidence index`）。核查与Prompt/总结另行归档，自身最终Hash以实际Git和最后回复为准，不预造。
+
+本轮付费API0、真实外部AI0、Neural4D所有请求0；无生产数据写入、无模型/额度变化。保留2/3已用、剩1未使用、第三用户取消、创建关闭。文档核查后状态`PHASE_5_WP5_WAITING_ACCEPTANCE`，等待人工验收，不自动公开资产、推送或创建新工作包。正式规则、公开许可、成片/PDF等交付条件仍待确认，不宣称全部参赛要求满足。

@@ -1,0 +1,25 @@
+{
+  "exportedAtUtc": "2026-10-22T12:22:58.685344+00:00",
+  "sourceStartLine": 14935,
+  "requestTimestamp": "2026-10-22T12:12:06.775Z",
+  "requestBytes": 23950,
+  "requestSha256": "735655ac1a7801660b56d8b76cd6d664154d822a864a1a13d0dd8b4483379dbb",
+  "requestExactUtf8Match": true,
+  "sourceSnapshotSha256": "1ace7d9d76e82e1c90205f18f15a691bd291dd7b6f26c3d18fe2a7f49b32782d",
+  "sourceSnapshotLineCount": 15107,
+  "sourcePartialLastLineOmitted": false,
+  "publicRecordCount": 26,
+  "publicSnapshotSha256": "3bca09ea7102f679358ac2f2460d5e919d670f905e3ef986fa4de335c417a7d1",
+  "filteredCollaborationCallCount": 10,
+  "skippedPrivateRecordCounts": {
+    "event_msg": 71,
+    "token_usage_record": 21,
+    "reasoning": 14,
+    "world_state": 3,
+    "inter_agent_communication_metadata": 9,
+    "agent_message": 9
+  },
+  "hiddenReasoningExported": false,
+  "sourceIdentityPublished": false,
+  "scope": "Actual WP5 delivery request and public snapshot; excludes hidden reasoning and collaboration internals; future validation, final commits and reply are not claimed included."
+}

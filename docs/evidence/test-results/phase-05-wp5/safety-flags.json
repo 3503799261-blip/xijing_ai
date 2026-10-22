@@ -1,0 +1,11 @@
+{
+  "checkedAtUtc": "2026-10-22T12:27:19.266858+00:00",
+  "scope": "Only two allowlisted nonsecret boolean fields; no API key or admin token extracted or logged",
+  "flags": {
+    "NEURAL4D_GENERATION_ENABLED": false,
+    "NEURAL4D_PROTOCOL_VERIFIED": false
+  },
+  "unknownBoolean": false,
+  "paidApiCalls": 0,
+  "neural4dRequests": 0
+}
