@@ -169,3 +169,33 @@
 产品修复真实Commit：84b1d2358c90e41b259724f541edfb6d2c5484bd，fix(phase5): guard missing knowledge resources on startup。测试证据/失败及Prompt快照提交：834483dd3fdd023c8432ffabc20c446f458f708c，test(phase5): archive cold-start and end-to-end validation。最终文档另行本地提交，最终Hash由实际Git及最终回复提供，不预造自身Hash，无merge/push。
 
 本包状态：PHASE_5_WP4_WAITING_ACCEPTANCE。已完成范围内验证并记录两个资源配置缺口；真人/实体设备/空白机/真实外网未测。等待用户验收，不进入WP5。
+
+## 11. WP4数据库安全修复与最终复验
+
+用户随后明确批准只修复“错误/缺失业务库自动创建空库”和“Agent坏库阻断整站”两项，不扩大架构、不进入WP5。21日实施并验证主要代码，22日续接完成现场恢复探针及最终归档；未把两日结果说成同一天全部重跑。
+
+| 文件 | 真实来源及范围 |
+|---|---|
+| [15-wp4-database-repair-user-request.txt](15-wp4-database-repair-user-request.txt) | 从本会话真实用户消息提取的完整直接Prompt；18840字节，SHA-256 73f62bc74beec3feb8c29453b2430edf4ababa34e07d31f8ed083267790d8bf4 |
+| [16-wp4-database-repair-public-conversation.jsonl](16-wp4-database-repair-public-conversation.jsonl) | 真实公开用户/助手与匹配工具时间快照，83条；排除隐藏推理、系统/开发者及24组内部协作调用，凭证/签名URL/个人路径脱敏 |
+| [17-wp4-database-repair-export-metadata.json](17-wp4-database-repair-export-metadata.json) | 原始消息时间、实际导出范围、UTF-8逐字节比较与Hash；快照之后的报告/提交/最终回复不伪称已纳入 |
+| [WP4报告追加第7节](../../reports/phase-05-work-package-04.md) | 两问题的真实根因、最小修复、初始化/恢复边界、当前验收结论 |
+| [WP4测试追加第10节](../../evidence/test-results/phase-05-wp4-test-report.md) | 修复前四观察、41专项、754完整、CLI9、前端/浏览器/现场恢复和全资源不变性，失败与Mock分别标注 |
+| [追加证据清单](../../evidence/test-results/phase-05-wp4-db-repair/archive-manifest.json) | 86份文字证据源/脱敏Hash；19张截图只留私有Hash，不公开内部Q版/私有库/模型 |
+
+以下是实际工程摘要，不伪装额外用户反馈或未发生的Bug：
+
+1. 核对3b40aa2干净起点及旧WP4三提交；只读保存4业务库、18表、所有任务ID/事件/角色/人审、BGE/Qdrant及原始/兼容模型基线，再冻结原源码复现。
+2. 原版实际创建Agent/预算/catalog空库；缺Agent时历史变0；坏Agent在TaskStore建表处中断应用工厂。先向用户报告根因和最小方案，再修改连接层/启动隔离，没有新架构审批或擅自扩大范围。
+3. 新增existing-only mode=rw/ro与只读校验；显式首次安装才初始化。已有坏/缺表库不修复、不覆写、不自动迁移；candidate/模型服务原建表集中到同一资产库的明确初始化。canonical配额算法/次数不改，显式命令不建配额池。
+4. Supervisor/Provider保存故障诊断，Agent坏库不启动worker；历史/写操作503，独立catalog/已有GLB及文化页继续服务；预算故障先于外部HTTP拒绝。后续审查发现晚期预算丢失可拖垮健康，增加预算捕获及晚期Agent检查/owner锁OSError隔离，新增3项真实临时库或明确Mock回归。
+5. 首轮完整710/3真实失败：两处历史测试stub需新只读前检契约，一处AssetStore误吞约束IntegrityError。保留失败，修正后局部50通过；中间751、最终754通过。原测试成功夹具明确初始化，保留既有Schema/不可变/并发与历史只读断言。
+6. 专项初次TEMP/basetemp冲突导致38个setup error，未运行用例；分目录且不放宽生产守卫，38再41通过。第三次专项中断无正式结果不算成功，第四次41完整通过。CLI9项实际执行验证首次/重复/缺确认参数流程，不在生产初始化。
+7. 正常环境按README实际启停重启、两轮HTTP14；Chrome两模型/8页4组、导览8组、手机模拟2组，旋转/缩放/Reset/Loading/Error恢复，0写/外网请求。首个Q仍内部技术用途，写实角色与资产原关联不变。
+8. 源服务正常停止后核对并复制资源到独立8011工作区；只坏副本Agent，8页/既有两GLB仍正常。22日完成损坏11、恢复10、误配11、恢复配置10项，四次正常Ctrl+C停止；71B原损坏字节与有效副本均保留。80产品文件Hash证明前日真实坏库GLB结果适用当前代码，不声称重复运行。
+9. 生产18表、4库字节/对象、22任务/194事件、知识/向量5文件、BGE26、资产14及8HTML全部不变；初次物理综合false来自辅助元组/JSON列表比较，保留初次并统一序列化复测全true，没有改生产数据。
+10. 只更新README初始化/恢复、追加旧WP4报告/证据；没有删除旧失败，没有付费/Neural4D调用，没有更改2/3余1、第三取消或创建关闭状态，没有安装依赖、合并main、push或进入WP5。
+
+真实产品提交：`ae2783ee2b241d36abf34df707cca8336a414e2a`（require explicit business database initialization）、`452a0c299f1c0468087ff60b8cebf01930bc938d`（isolate unavailable agent and budget databases）。测试证据提交：`0955d0f98db5886955359e121ddbe8e544b9b9ba`（archive database safety and recovery evidence）。最终文档独立本地提交，实际Hash由最终git log提供，不预造自身Hash。
+
+剩余边界：真实Windows ACL破坏、实体手机、跨机器/首次BGE下载、实时外部API未测试；另一个已存在有效库的身份仍需核对；坏库恢复须重启、不自动修复/迁移。当前无未解决关键安全阻断，状态**PHASE_5_WP4_WAITING_ACCEPTANCE**，停止等待人工验收。

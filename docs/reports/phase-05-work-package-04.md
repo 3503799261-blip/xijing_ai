@@ -2,6 +2,8 @@
 
 执行日期：2026-10-20～21，Asia/Shanghai。状态：**PHASE_5_WP4_WAITING_ACCEPTANCE**。
 
+**2026-10-22修订：用户另行批准的数据库安全修复与复验已完成，当前仍为PHASE_5_WP4_WAITING_ACCEPTANCE。** 下方第1～6节保留前次执行的真实结果与当时缺口，不覆盖失败历史；两个数据库问题的最新结论见第7节。没有进入WP5。
+
 用户已验收WP1～3并授权本包。启动、资源副本恢复、完整离线及浏览器回归、自动化现场流程排练均已执行；必要修复完成。当前等待人工验收，**没有进入WP5**。本报告不将已知故障、未测设备或受限资源说成全部无条件通过。
 
 ## 1. 实际起点与修改范围
@@ -110,3 +112,83 @@ Q版技术模型仍是内部非公开资产，无正式Phase 3角色关联；写
 | 不变性、Git、Prompt、零付费/零建模、未进入WP5 | PASS |
 
 因此：**本包实施与验证交付完成，等待带已知限制的人工验收；不能宣称无条件可移植、所有数据库故障已解决或全新机器十分钟复现。** 不自动进入WP5，不执行第三次模型。
+
+## 7. 数据库安全修复与最终复验（2026-10-21～22）
+
+### 7.1 实际起点和根因
+
+本次实际起点为`3b40aa27b3b642e3a695c60ad149678a87487ae0`，原分支`feature/phase5-competition-delivery`，工作区干净。84b1d23、834483d、WP1～3及Phase 1～4历史均保留。先冻结该提交源码并只读记录生产库与资源，再在独立临时目录复现，未在真实库上删文件或模拟损坏。
+
+问题A：`create_app → Runtime → DeepSeekProvider → BudgetLedger`、`create_app → Supervisor → TaskStore`及AssetStore构造使用普通SQLite连接并执行建表。错误但可写的RAG根目录会创建预算、Agent和资产空库；已有Agent库缺失时重新建为零记录，历史接口200/0条掩盖数据缺失。不是环境变量悄悄回退，而是错误配置目标被当成首次安装。
+
+问题B：`create_app → Supervisor.__init__ → TaskStore.__init__ → executescript`读取坏库直接抛DatabaseError，应用尚未注册静态路由，因而不依赖Agent的文化页/资产也无法访问。修复前A/B/损坏C/正常D四个观察均实际复现；其中观察PASS表示看到了原问题，不等于安全验收通过。
+
+### 7.2 最小实现与实际文件
+
+| 文件/范围 | 本次实际修复 |
+|---|---|
+| backend/app/database.py（新增） | 正常连接要求已有文件并使用mode=rw/ro；只读quick_check及所需Schema检查；显式首次初始化独占创建，拒绝覆盖、修复或补齐已有坏库 |
+| agents/store.py、providers/budget.py、assets/store.py、assets/usage.py、knowledge/store.py | 默认只校验并打开已有数据库；显式create路径保留合法首次建库；连接后文件丢失也不会重建；预算范围只能维持或收紧 |
+| assets/candidates.py、assets/neural_service.py | 将原普通构造时的建表移入同一资产库的显式初始化，Schema不变 |
+| backend/scripts/initialize_business_databases.py（新增） | 仅全新安装的明确命令；先检查全部已有Agent/预算/资产库，再创建缺失库；不创建或改写全局Neural4D账本，不入库/下载/调用供应商 |
+| agents/supervisor.py、api/agents.py | 启动及晚期DB故障安全降级；Agent历史/状态/结果/写操作先检查配置库；缺库503不冒充空历史；owner锁无法访问不拖垮整站 |
+| providers/llm.py、services/runtime.py | 预算库不可用时先于网络拒绝生成；健康区分应用、Agent库、预算库，能力关闭；不伪造零费用或模型可用状态 |
+| main.py、assets/service.py | Agent故障与独立catalog/已有GLB读取解耦；额度库不可用时模型创建关闭，不创建新额度池；新资产仍须原Agent权威结果 |
+| backend/tests/test_database_safety.py（新增）、16个已有测试文件 | 41项安全测试；原成功夹具显式初始化，保留正常重开/历史只读/并发与不可变断言；补1项完整预算Schema历史归属测试 |
+| README.md及本包报告/Prompt/证据 | 校准正常启动、首次安装与恢复边界；保留旧失败与真实复测 |
+
+没有修改8页HTML、前端JS/CSS、RAG策略/语料、Agent提示词/角色协议或模型内容；没有业务数据转换、Schema迁移、大型依赖或新阶段开发。
+
+### 7.3 实际复验结果
+
+| 测试 | 当前结果 | 真实范围 |
+|---|---|---|
+| 数据库安全专项 | PASS，41/0失败/0跳过 | 实际临时SQLite的缺失、错误/不存在路径、目录、损坏、缺表、重复初始化、读写、晚期删除、恢复；ACL/owner锁拒绝为受控Mock |
+| 完整后端最终回归 | PASS，754/0/0，120.20秒 | 收集前空Key/临时库与账本隔离，拒绝真实HTTP/生产文件写入；41专项是该集合子集，不能重复累加 |
+| 显式初始化CLI | PASS，9项 | 不带确认参数拒绝且不建目录；带参数建立3业务库；重复执行只验证且字节不变；不创建Neural4D账本 |
+| 原前端五组 | PASS，25/25/34/42/34 | 问答、Agent、WP2历史、资产与双风格、WP3导览；明确DOM/Fetch替身，无真实外部API |
+| 正常本机HTTP/启动恢复 | PASS，两轮各14项 | README单worker命令、真实免费检索、历史、额度、8页及模型；正常Ctrl+C停止、重启再停止 |
+| 正常Chrome实测 | PASS，模型4组、导览8组、手机模拟2组 | 8页、历史/导览/备用/错误恢复、两真实GLB、缺失风格；鼠标325.9°/453.7°，触摸模拟382.6°/300.7°，缩放、重置及三态恢复 |
+| 坏Agent库隔离现场 | PASS，11项及既有GLB浏览器4组 | 独立8011真实资源副本；坏库保持原71字节，历史503、健康degraded、8页200；两真实GLB鼠标324.5°/453.7°，缩放/重置通过 |
+| 恢复有效Agent库 | PASS，10项 | 仅恢复隔离副本，重启后22条历史可读、库字节恢复原值 |
+| 配错不存在数据根目录 | PASS，11项 | 不创建目录/Agent/预算/资产空库；健康明确故障，文化8页可访问 |
+| 恢复正确配置 | PASS，10项 | 无需初始化，重启后历史22条；四次副本服务均正常停止 |
+| 真实数据和资源不变性 | PASS | 18业务表完整行/Schema、所有任务ID/事件/角色/人审/关联；4库字节及对象、5个知识/向量文件、26个BGE文件、14个资产文件与8HTML均不变 |
+
+副本在源服务正常停用后复制，所有资源先与生产只读基线逐字节核对；不复制密钥。副本80个产品文件与最终产品Hash一致，故21日完成的坏库真实GLB浏览器结果仍适用，22日完成其余启动/恢复探针；没有将它们写成22日全部重跑。实体手机NOT_TESTED。
+
+详细命令、初始失败、修复与复测见[测试报告第10节](../evidence/test-results/phase-05-wp4-test-report.md#10-数据库安全修复与最终复验2026-10-2122)；[新证据清单](../evidence/test-results/phase-05-wp4-db-repair/archive-manifest.json)归档86份文字证据，19张真实截图只在私有.runtime保留Hash，不公开内部Q版媒体或数据库。
+
+### 7.4 保护、恢复方式和剩余限制
+
+生产原库未执行初始化/迁移/破坏性测试，实际18表及物理Hash全部未变：22任务、88步骤、59产物、194事件、107条既往LLM记录；角色JSON/文化审校/人审、3个角色资产及4个模型登记均原样。两个真实GLB及供应商原件Hash沿用第4节且本轮重新核对。Neural4D仍**已用2/3、余1未使用、原累计60积分、18条历史操作，无未知/在途/待消费审批，第三次用户取消，真实创建关闭**。
+
+故障恢复须正常停服，核对RAG_DATA_DIR及原备份的任务ID/数量/Hash，保留坏文件用于诊断，在授权受控恢复后重启；不能用初始化命令制造空历史、空预算或新额度池。首次安装才显式运行README的新命令，旧calls-only预算库不自动升级。
+
+已存在且Schema有效的另一份数据库无法仅凭Schema判断是否为预期历史，仍需核对路径、ID与Hash；未引入身份注册或迁移系统。quick_check加表/列/对象名验证不等于完整SQL约束防篡改或业务JSON语义审核。损坏Agent状态锁存，恢复须重启，不宣称热修复。资产库自身也坏时既有GLB目录不能绕过catalog安全服务；没有承诺所有故障下整站功能完整可用。
+
+ACL拒绝/owner锁拒绝为明确Mock，真实Windows ACL破坏NOT_TESTED；真实文件损坏/缺表/移除/错误路径均在临时目录实际执行。实体手机、跨机器、无缓存安装及外部API连通性本轮NOT_TESTED。没有新增关键安全阻断；不扩大历史交付资源限制。
+
+### 7.5 Git、Prompt与最终验收清单
+
+真实本地产品提交：
+
+- `ae2783ee2b241d36abf34df707cca8336a414e2a` — fix(phase5): require explicit business database initialization。
+- `452a0c299f1c0468087ff60b8cebf01930bc938d` — fix(phase5): isolate unavailable agent and budget databases。
+
+测试与恢复证据提交：`0955d0f98db5886955359e121ddbe8e544b9b9ba` — test(phase5): archive database safety and recovery evidence。最后文档独立本地提交，实际Hash由最终git log和回复提供，不预造自身Hash。所有旧阶段提交保留，无merge/push或重写历史。完整真实用户Prompt见[15号原文](../prompts/phase-05/15-wp4-database-repair-user-request.txt)，18840字节、SHA-256 `73f62bc74beec3feb8c29453b2430edf4ababa34e07d31f8ed083267790d8bf4`；公开对话为真实时间快照，非隐藏推理或伪造开发历史。
+
+| 本次强制验收项 | 状态 |
+|---|---|
+| 原两问题复现、根因及最小修复 | PASS |
+| 缺失/错误路径不自动建空库，坏库不自动重建或覆盖 | PASS |
+| 显式首次初始化及正常读写 | PASS |
+| Agent坏库隔离，数据库接口明确503，独立静态页/已有GLB保留 | PASS |
+| 正确数据库恢复后重启，不产生第二个空库 | PASS |
+| 真实18表/任务/事件/角色/人审/模型、BGE/Qdrant/原件不变 | PASS |
+| 专项、完整后端、五组前端、8页、WP2/WP3、两GLB核心交互 | PASS |
+| 报告、Prompt和可追溯本地提交 | PASS，最终归档状态以git log/最终回复核实 |
+| 付费API/真实外部AI/Neural4D请求 | 均0；没有更改额度或创建锁 |
+| 未合并/未推送/未进入WP5 | PASS |
+
+当前结论：**PHASE_5_WP4_WAITING_ACCEPTANCE**。两个关键数据库安全问题已修复并通过真实复验；保留上述未测与边界，停止等待人工验收，不进入WP5。

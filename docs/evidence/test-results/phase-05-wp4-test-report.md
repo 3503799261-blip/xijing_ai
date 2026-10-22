@@ -2,6 +2,8 @@
 
 执行：2026-10-20～21（Asia/Shanghai）。状态：**PHASE_5_WP4_WAITING_ACCEPTANCE**。10月20日完成安装、资源副本、离线/浏览器回归与自动化排练；10月21日续接，补正常退出/重启及最后不变性核对。旧结果没有冒充续接后的重新执行。
 
+**数据库安全追加复验：2026-10-21～22，最新结论PHASE_5_WP4_WAITING_ACCEPTANCE。** 第1～9节保留此前结果和原两项FAIL；第10节记录本次经单独授权的修复、失败和真实复测，不将旧712项或旧安装/排练冒充本轮重新执行。
+
 ## 1. 环境、边界与结果分类
 
 Windows/Python3.11.1；原venv复用system-site-packages，另建**普通隔离venv**，没有改原环境/依赖版本。Node24.19.0；10月20日Chrome155.0.8059.85，21日重启后155.0.8059.86。已有Playwright、SwiftShader。桌面1920×1080、平板768×1024、手机模拟390×844；实体手机NOT_TESTED。
@@ -184,3 +186,141 @@ node D:\京剧\.runtime\phase5-wp4-model-browser.mjs D:\京剧\.runtime\phase5-w
 - [资源复制辅助](phase-05-wp4/phase5-wp4-prepare.py)、[最终资源探针](phase-05-wp4/resource-probe-final-helper.py)、[状态快照](phase-05-wp4/phase5-wp4-state.py)：只在指定受控新目录运行，不是新的资产分发或迁移功能。
 - [HTTP辅助](phase-05-wp4/phase5-wp4-http-check.py)：仅允许POST本地检索；其余GET，不提供付费调用入口。
 - [启动辅助](phase-05-wp4/phase5-wp4-server-control.py)、[退出辅助](phase-05-wp4/phase5-wp4-stop-console.py)：测试级网络守卫与正常控制台退出；不用于替代README普通终端启动。
+
+## 10. 数据库安全修复与最终复验（2026-10-21～22）
+
+### 10.1 环境、隔离和修复前执行路径
+
+仓库D:\京剧\京剧，起点3b40aa27b3b642e3a695c60ad149678a87487ae0，分支feature/phase5-competition-delivery，实际工作区干净。Windows/Python3.11.1、原venv、Node24.19.0、Chrome155.0.8059.86、已有Playwright；本轮没有安装/升级依赖。21日执行源码复现、产品修改、后端/前端/浏览器与正常启动，22日完成隔离副本恢复/误配/恢复配置、最终不变性及归档。
+
+生产SQLite均以mode=ro/query_only建立基线；冻结原提交源码到私有.runtime副本再运行A～D，不将后来的工作树修改误算为修复前代码。所有损坏、删除、缺表、路径误配、初始化和写入均在新建临时目录或停服核对后的独立副本；没有对生产执行迁移、初始化、清空、损坏或重建。
+
+原问题A调用链：create_app→Runtime→DeepSeekProvider→BudgetLedger，以及Supervisor→TaskStore、AssetService→AssetStore。构造阶段普通sqlite3.connect遇缺失自动建文件，随后executescript建表。配置是直接使用RAG_DATA_DIR，没有悄悄回退；错误但可写目录被当作新安装。
+
+原问题B调用链：create_app→Supervisor.__init__→TaskStore.__init__→executescript；坏库抛DatabaseError终止工厂，静态路由未注册。不是Neural4D或前端Viewer错误。
+
+| 原版隔离场景 | 实际观察 | 安全含义 |
+|---|---|---|
+| A：不存在的错误RAG根目录 | 创建Agent40960B、预算32768B、catalog81920B；历史200/0条 | 原缺陷复现 |
+| B：原有临时Agent库缺失 | 重新建空Agent库；原任务未恢复、历史0条 | 原缺陷复现 |
+| C：独立坏Agent文件 | DatabaseError中断create_app；原坏字节未覆盖但无法服务静态页 | 原缺陷复现 |
+| D：有效隔离数据库 | 1条明确合成历史可读，8页及合法Duck真实GLB200/Hash相符 | 正常对照 |
+
+[最终修复前结果](phase-05-wp4-db-repair/baseline-final.json)4/0/0表示观察成功，**不是四项安全能力通过**；[执行索引](phase-05-wp4-db-repair/baseline-execution-index.json)保存原源码Hash、命令、初次环境失败和实际时间。真实京剧成品不用于破坏性测试。
+
+### 10.2 修复机制与专项覆盖
+
+普通连接先查文件/只读完整性和所需Schema，再以URI mode=rw/ro打开；第二次连接时文件消失仍不会创建。普通启动不建表、不补Schema、不迁移、不覆盖。独占新文件的显式初始化先预检全部已有业务库，任何旧坏库/缺表拒绝，只有明确首次安装才建3业务库；canonical全局Neural4D账本保持独立且不创建。
+
+Supervisor保存安全故障诊断，坏库不启动worker、不持owner锁、不重跑Agent；相关历史/状态/结果/创建/确认/取消先校验并503。应用保留静态路由；独立catalog和文件有效时仍提供已有模型。预算不可用时问答/协作能力关闭且生成在HTTP前失败。健康分别反映应用、Agent库和预算库；不能把应用可用说成AI服务已恢复。
+
+[41项专项](phase-05-wp4-db-repair/targeted-final-isolation-result.json)，5.48秒、0失败/0跳过；完整754包含同41项，不重复相加：
+
+| 验证项 | 实际方式 | 结果 |
+|---|---|---|
+| 四类Store默认缺失/目标不存在 | 临时目录真实文件系统断言，父目录也不创建 | PASS，4项 |
+| 路径指目录/文件损坏/不完整表/不可读 | 四Store×四故障，普通与显式打开均拒绝；文件Hash/目录不变 | PASS，16项；不可读为PermissionError Mock |
+| 显式首次初始化及正常重开 | 四Store，quick_check成功，重复初始化字节不变 | PASS，4项 |
+| 打开后文件丢失 | 四Store删除临时文件后连接失败且不重建 | PASS，4项 |
+| 三业务库正常读写/显式初始化预检 | 实际任务写读、仅合成预算行；先拒绝坏catalog、不顺带建其他空库 | PASS，2项 |
+| 错误RAG目录应用 | TestClient真实启动，8页200、历史503、能力关闭且根目录不存在 | PASS，1项 |
+| Agent缺失/损坏/缺表/目录及恢复 | 四次实际临时故障，接口503、无worker、8页/Duck200、坏文件不覆盖，恢复后原任务可读 | PASS，4项 |
+| 预算损坏/额度库缺失/Schema只读 | 生成先于网络拒绝，独立catalog GLB可读，未知额度不写成0/3，不补表 | PASS，3项 |
+| 晚期预算/Agent库丢失、owner锁不可访问 | 已启动后删除临时库；能力/健康安全降级且不建空库；owner ACL为Mock | PASS，3项 |
+
+只读审查另发现晚期预算丢失时available()原可抛异常，健康被拖成503；[修复前局部证据](phase-05-wp4-db-repair/late-budget-before-fix.json)保留，增加最后3项前后安全检查。没有付费调用。
+
+[显式CLI实测](phase-05-wp4-db-repair/explicit-init-cli.json)9/0：无`--initialize-new-installation`时退出2且不建目录；带参数退出0建立3业务库；重跑退出0且只validate、3库字节不变、不建新Neural账本。子进程空Key、全部网络和非测试目录SQLite被拒绝。此结果不是对生产执行初始化。
+
+### 10.3 完整回归、页面及两个真实GLB
+
+| 本轮执行 | PASS | FAIL | SKIP | 证据/边界 |
+|---|---:|---:|---:|---|
+| 首轮完整兼容 | 710 | 3 | 0 | [初次结果](phase-05-wp4-db-repair/compatibility-initial-isolation-result.json)，保留真实失败 |
+| 修复后历史/candidate局部 | 50 | 0 | 0 | [复测](phase-05-wp4-db-repair/compatibility-retest-isolation-result.json) |
+| 专项初版 | 38 | 0 | 0 | [38项](phase-05-wp4-db-repair/targeted-initial-isolation-result.json) |
+| 中间完整 | 751 | 0 | 0 | [751项](phase-05-wp4-db-repair/full-intermediate-isolation-result.json)，130.11秒 |
+| 最终完整 | 754 | 0 | 0 | [最终结果](phase-05-wp4-db-repair/full-final-isolation-result.json)、[JUnit](phase-05-wp4-db-repair/full-final-pytest.xml)，120.20秒 |
+| 最终安全专项 | 41 | 0 | 0 | 754子集，另一次实际执行5.48秒 |
+| 问答/Agent/历史/资产/导览前端 | 25/25/34/42/34 | 各0 | 各0 | frontend-*.json，明确DOM/Fetch替身 |
+| 正常HTTP两轮 | 各14 | 各0 | 各0 | [01](phase-05-wp4-db-repair/http-01.json)、[重启02](phase-05-wp4-db-repair/http-02.json)，本地免费知识检索，无LLM |
+| 正常模型Chrome | 4组 | 0 | 0 | [正常模型/8页/风格](phase-05-wp4-db-repair/normal-model-browser.json) |
+| WP2/WP3导览/历史/异常Chrome | 8组 | 0 | 0 | [导览及降级](phase-05-wp4-db-repair/guide-browser.json)，POST仅浏览器替身 |
+| 手机模拟两模型 | 2组 | 0 | 0 | [CDP触摸及三态](phase-05-wp4-db-repair/touch-browser.json)，非实体手机 |
+
+最终完整回归所有守卫拒绝计数为0：没有触生产文件/SQLite，也没有尝试真实HTTP。存在1条原TestClient依赖的非阻断warning，原输出保留；没有跳过失败用例。现有测试只把首次创建夹具改为明确create=True，普通重开仍严格，旧calls-only预算测试改为验证拒绝自动迁移且原行不变，新增当前完整Schema历史归属测试；不删历史不可变性/并发覆盖。
+
+8页逐一浏览器200、原图片加载、AI入口链接和布局正常。正常模型鼠标：写实325.9°、Q版453.7°；手机模拟触摸：382.6°、300.7°。滚轮、双指、放大/缩小、Reset、Loading→Ready→Error→Ready均通过。Error采用拦截**既有GLB文件GET**，恢复只重新读取同一Hash，不调用供应商。风格切换无对应资产诚实空状态，切回原模型恢复。
+
+### 10.4 停服副本、损坏与现场恢复
+
+正常环境使用README命令在8000单worker启动：[第一次](phase-05-wp4-db-repair/normal-01.json)11.617秒、[普通Ctrl+C停](phase-05-wp4-db-repair/normal-stop-01.json)；最新代码[重启](phase-05-wp4-db-repair/normal-02.json)11.127秒、再14项HTTP通过、[停止](phase-05-wp4-db-repair/normal-stop-02.json)。两次均精确本轮PID、端口关闭、进程退出，不杀未知进程、不删owner锁。
+
+源服务停止后，按只读基线逐字节核对4业务库、5知识/向量文件、26BGE和14资产，复制到新独立父目录。旧WP4资源副本因SQLite字节布局不同/少缓存文件主动弃用，**未覆盖旧副本或把不匹配说成成功**。[副本准备](phase-05-wp4-db-repair/field-preparation.json)记录源HEAD及当时未提交工作树全部文件Hash，不复制Key。副本启动使用空Key、Agent执行关闭、进程外网及非副本SQLite拒绝，canonical配额副本保留2次历史，不建零额度池。
+
+| 8011场景 | PASS/FAIL/SKIP | 实际结果 |
+|---|---|---|
+| corrupt | 11/0/0 | [损坏探针](phase-05-wp4-db-repair/field-corrupt-probe.json)：health200/degraded、Agent故障、历史503、8页200、坏字节不变 |
+| restored | 10/0/0 | [恢复有效库](phase-05-wp4-db-repair/field-restored-probe.json)：22条原历史、ID保留，正常重启，无建库 |
+| misconfigured | 11/0/0 | [错误路径](phase-05-wp4-db-repair/field-misconfigured-probe.json)：不存在RAG根目录从未创建，相关数据库明确不可用，8页200 |
+| recovered | 10/0/0 | [恢复配置](phase-05-wp4-db-repair/field-recovered-probe.json)：无需初始化，原库/历史正常 |
+
+合计42观察断言/0失败/0跳过；四次各自正常Ctrl+C退出/端口释放。坏库真实GLB浏览器[4组通过](phase-05-wp4-db-repair/field-corrupt-model-browser.json)：写实324.5°、Q版453.7°、缩放/Reset/8页/风格恢复。21日完成该浏览器运行，22日[汇总](phase-05-wp4-db-repair/field-final-summary.json)确认80个产品文件与最终源码Hash相同，未声称22日重新跑该浏览器。
+
+坏Agent文件实际71字节（旧辅助文件名写69B，不作为大小依据），SHA-256 `22ae2950531634ab5eb7f890b1fb4d75a9b23c28fe1b132d3d9c284c0201b403`，保存在私有副本，不覆盖。恢复后Agent与原有效副本逐字节相同，预算、catalog和全局额度副本各自Hash均始终不变。
+
+### 10.5 真实不变性、失败记录及未测范围
+
+[全表after](phase-05-wp4-db-repair/state-after.json)逐项对比[before](phase-05-wp4-db-repair/baseline-before-state.json)：18表Schema+规范化全行、22个任务及ID、88步骤、59产物、194事件、角色JSON/文化审校/人审/资产关联全部相同；[追踪盘点](phase-05-wp4-db-repair/provenance-after.json)也全相同、无孤立事件。107条LLM记录、18条Neural4D历史操作和60历史积分没有增加。2个SUCCEEDED，已用2/3、剩1未用，无UNKNOWN/在途/待消费审批，创建关闭且第三用户取消。
+
+[物理最终对比](phase-05-wp4-db-repair/physical-final-comparison.json)4个业务DB字节、全部sqlite_master对象及sidecar状态、active版本、5知识/Qdrant文件、26BGE和14资产文件一致；8HTML也一致。两GLB及供应商原件/内嵌纹理沿用第8节四Hash并重新实测，未转换、覆盖或重建。
+
+保留以下失败/中断，不能冒充通过：
+
+1. 修复前复现前两轮Windows asyncio socketpair受沙箱阻断，第三轮正常对照临时写入权限失败；第四轮在相同隔离守卫下获得本地执行条件后4观察通过。
+2. 首轮完整710/3：两处历史SimpleNamespace夹具缺新只读契约；一处产品连接层误吞原约束IntegrityError。补夹具并保留约束异常，50项复测及最终754通过。
+3. 专项第一次38个setup error、0执行：pytest的basetemp误与TEMP共用，初始化清理探测文件触发严格目录守卫；换独立pytest-temp，不放宽生产边界，38再41通过。[原结果](phase-05-wp4-db-repair/targeted-harness-failed-isolation-result.json)保留。
+4. targeted-03中断未产出正式result，NOT_TESTED/不计通过；最终targeted-04完整41通过。不用目录存在代替测试结果。
+5. 首次Store辅助自身未关闭SQLite连接导致Windows清理失败；关闭辅助连接后6组通过。不是产品库损坏修复，不制造额外产品Bug。
+6. 物理Hash首次综合comparison误报false：内存Schema元组与JSON列表比较。序列化后全部字段逐项相等，修正辅助为统一列表后重新只读盘点；[初次false](phase-05-wp4-db-repair/physical-first-comparison.json)和最终全true均保留，生产库未改动。
+
+历史状态盘点辅助沿用旧clientDate常量2026-10-20/21，实际执行以checkedAtUtc和各结果时间为准；没有修改旧输出伪造日期。22日归档不代表所有测试22日重跑。
+
+限制：真实Windows ACL更改/不可读为NOT_TESTED，权限失败映射使用明确Mock；实际坏文件/缺表/删除/误配均真实临时文件。Schema校验为quick_check+所需表/列/对象名称，不是完整业务JSON/约束SQL防篡改认证。另一个已存在且有效的数据库仍须人工核对身份；恢复后须重启；catalog本身不可用时不能绕过资产安全服务读取目录。实体手机、跨机器、公网/多用户、当日外部API连通性NOT_TESTED；冷安装、BGE首次下载和排练本轮未重跑，沿用前次已明确日期的证据。第三次建模NOT_APPLICABLE（用户取消，不是失败）。
+
+### 10.6 实际命令、归档和停止点
+
+下列为本轮真实执行，私有辅助源码在同目录归档，复跑必须选新的输出目录，不在生产上执行损坏测试：
+
+~~~powershell
+Set-Location -LiteralPath 'D:\京剧\京剧'
+.\.venv\Scripts\python.exe D:\京剧\.runtime\phase5-wp4-db-repair-baseline-01\executed-helper-attempt04.py
+.\.venv\Scripts\python.exe D:\京剧\.runtime\phase5-wp4-offline-bootstrap.py --run-root D:\京剧\.runtime\phase5-wp4-db-repair-full-02 --junitxml D:\京剧\.runtime\phase5-wp4-db-repair-full-02\pytest.xml --basetemp D:\京剧\.runtime\phase5-wp4-db-repair-full-02\pytest-temp
+.\.venv\Scripts\python.exe D:\京剧\.runtime\phase5-wp4-db-repair-targeted-bootstrap.py --run-root D:\京剧\.runtime\phase5-wp4-db-repair-targeted-04 --junitxml D:\京剧\.runtime\phase5-wp4-db-repair-targeted-04\pytest.xml --basetemp D:\京剧\.runtime\phase5-wp4-db-repair-targeted-04\pytest-temp
+.\.venv\Scripts\python.exe D:\京剧\.runtime\phase5-wp4-db-repair-init-cli.py
+
+# 五个已有前端脚本分别执行，实际输出归档frontend-*.json。
+node scripts/phase2_frontend_test.mjs
+node scripts/phase3_frontend_test.mjs
+node scripts/phase5_wp2_frontend_test.mjs
+node scripts/phase4_frontend_test.mjs
+node scripts/phase5_wp3_frontend_test.mjs
+
+# 新进程按README命令启动，辅助只加测试用网络拒绝，不改变生产配置。
+.\.venv\Scripts\python.exe D:\京剧\.runtime\phase5-wp4-server-control.py --repo D:\京剧\京剧 --python D:\京剧\京剧\.venv\Scripts\python.exe --output D:\京剧\.runtime\phase5-wp4-db-repair-normal-02
+.\.venv\Scripts\python.exe D:\京剧\.runtime\phase5-wp4-http-check.py --output D:\京剧\.runtime\phase5-wp4-db-repair-http-02.json
+.\.venv\Scripts\python.exe D:\京剧\.runtime\phase5-wp4-stop-console.py 45412 D:\京剧\.runtime\phase5-wp4-db-repair-normal-stop-02.json 8000
+
+node D:\京剧\.runtime\phase5-wp4-model-browser.mjs D:\京剧\.runtime\phase5-wp4-db-repair-model-browser-01
+node D:\京剧\.runtime\phase5-wp4-browser.mjs D:\京剧\.runtime\phase5-wp4-db-repair-guide-browser-01
+node D:\京剧\.runtime\phase5-wp4-touch-browser.mjs D:\京剧\.runtime\phase5-wp4-db-repair-touch-browser-01
+
+# 隔离副本各run、probe、stop命令/PID见field启动和停止JSON，不是生产修复脚本。
+.\.venv\Scripts\python.exe D:\京剧\.runtime\phase5-wp4-db-repair-field-start.py --run misconfigured-start-01 --wrong-root
+.\.venv\Scripts\python.exe D:\京剧\.runtime\phase5-wp4-db-repair-field-probe.py --stage misconfigured
+.\.venv\Scripts\python.exe D:\京剧\.runtime\phase5-wp4-db-repair-inventory.py --output D:\京剧\.runtime\phase5-wp4-db-repair-physical-after-02.json --compare D:\京剧\.runtime\phase5-wp4-db-repair-baseline-01\physical-resources-before.json
+~~~
+
+Node实际使用已有绝对runtime路径及XIJING_PLAYWRIGHT_PACKAGE包定位；没有安装npm依赖。最终修改/祖先/敏感内容/证据Hash核对另见同目录documentation-checks.json。归档86份文字，19张截图仅私有.runtime留存，公开[截图Hash索引](phase-05-wp4-db-repair/screenshot-manifest.json)；Q版权限不扩大，不提交DB/GLB/图片/原件/Key。原失败输出/实际执行辅助不改写；归档时git diff --check报告3处原执行辅助的EOF空行，保留原始证据，产品代码与本轮文档的格式检查通过。
+
+产品提交ae2783ee2b241d36abf34df707cca8336a414e2a、452a0c299f1c0468087ff60b8cebf01930bc938d；测试证据提交0955d0f98db5886955359e121ddbe8e544b9b9ba。最终文档Commit/干净工作区由最终git log核实，不预造自引用Hash。**本轮付费API0、真实外部AI0、Neural4D全部请求/创建0，生产业务数据写入0。** 关键安全验收通过，当前PHASE_5_WP4_WAITING_ACCEPTANCE，停止等待人工验收，不进入WP5。
