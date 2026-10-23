@@ -1,0 +1,9 @@
+{
+  "checkedAtUtc": "2026-10-23T05:36:22.774229+00:00",
+  "comparison": "private env and cultural files compared to an existing prior-day baseline, not a newly captured env baseline at this run start",
+  "baselineAtUtc": "2026-10-22T14:18:49.060508+00:00",
+  "privateEnvMatchesPriorBaseline": true,
+  "culturalFilesUnchanged": 73,
+  "culturalFilesChanged": [],
+  "secretsOrHashesOfCredentialsPublished": false
+}

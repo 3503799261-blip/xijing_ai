@@ -1,0 +1,341 @@
+{
+  "startedAt": "2026-10-23T05:19:33.485Z",
+  "scope": "WP4_NECESSARY_LOCAL_SMOKE",
+  "paidApiRequests": 0,
+  "supplierRequests": 0,
+  "mobile": "NOT_TESTED_PHYSICAL_OR_EMULATED_IN_THIS_SMOKE",
+  "tests": {
+    "eightPages": {
+      "pass": true,
+      "pages": [
+        {
+          "file": "index.html",
+          "status": 200,
+          "title": "梨园风华｜首页",
+          "brokenImages": [],
+          "workshopLinks": [
+            "about.html#ai-workshop",
+            "about.html#ai-workshop"
+          ],
+          "horizontalOverflow": false
+        },
+        {
+          "file": "history.html",
+          "status": 200,
+          "title": "京剧发展历史｜梨园风华",
+          "brokenImages": [],
+          "workshopLinks": [
+            "about.html#ai-workshop"
+          ],
+          "horizontalOverflow": false
+        },
+        {
+          "file": "roles.html",
+          "status": 200,
+          "title": "行当介绍｜梨园风华",
+          "brokenImages": [],
+          "workshopLinks": [
+            "about.html#ai-workshop",
+            "about.html#ai-workshop"
+          ],
+          "horizontalOverflow": false
+        },
+        {
+          "file": "facial.html",
+          "status": 200,
+          "title": "脸谱艺术｜梨园风华",
+          "brokenImages": [],
+          "workshopLinks": [
+            "about.html#ai-workshop",
+            "about.html#ai-workshop",
+            "about.html#ai-workshop"
+          ],
+          "horizontalOverflow": false
+        },
+        {
+          "file": "music.html",
+          "status": 200,
+          "title": "唱腔与乐器｜梨园风华",
+          "brokenImages": [],
+          "workshopLinks": [
+            "about.html#ai-workshop",
+            "about.html#ai-workshop"
+          ],
+          "horizontalOverflow": false
+        },
+        {
+          "file": "gallery.html",
+          "status": 200,
+          "title": "艺术画廊｜梨园风华",
+          "brokenImages": [],
+          "workshopLinks": [
+            "about.html#ai-workshop"
+          ],
+          "horizontalOverflow": false
+        },
+        {
+          "file": "video.html",
+          "status": 200,
+          "title": "视频欣赏｜梨园风华",
+          "brokenImages": [],
+          "workshopLinks": [
+            "about.html#ai-workshop"
+          ],
+          "horizontalOverflow": false
+        },
+        {
+          "file": "about.html",
+          "status": 200,
+          "title": "AI戏韵工坊｜梨园风华",
+          "brokenImages": [],
+          "workshopLinks": [
+            "about.html#ai-workshop"
+          ],
+          "horizontalOverflow": false
+        }
+      ]
+    },
+    "secondRealistic": {
+      "pass": true,
+      "initial": {
+        "state": "ready",
+        "srcPath": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "observedDegrees": 0,
+        "userEventCount": 0,
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+        "renderElements": 1
+      },
+      "dragged": {
+        "state": "ready",
+        "srcPath": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "orbit": {
+          "theta": 6.107834535238033,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "observedDegrees": 349.9,
+        "userEventCount": 50,
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+        "renderElements": 1
+      },
+      "zoomed": {
+        "state": "ready",
+        "srcPath": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "orbit": {
+          "theta": 6.107834535238033,
+          "phi": 1.3089969389957472,
+          "radius": 3.191865397474557
+        },
+        "observedDegrees": 349.9,
+        "userEventCount": 50,
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+        "renderElements": 1
+      },
+      "reset": {
+        "state": "ready",
+        "srcPath": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "observedDegrees": 349.9,
+        "userEventCount": 50,
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+        "renderElements": 1
+      },
+      "scope": "Real GLB Ready, single mouse drag, zoom-in, reset; no fault injection or mobile tests in WP4"
+    },
+    "styleSwitch": {
+      "pass": true,
+      "absent": {
+        "state": "idle",
+        "srcPath": null,
+        "modelId": null,
+        "modelHash": null,
+        "orbit": null,
+        "observedDegrees": 0,
+        "userEventCount": 0,
+        "status": "当前风格尚未生成3D模型",
+        "renderElements": 0
+      },
+      "restored": {
+        "state": "ready",
+        "srcPath": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "observedDegrees": 0,
+        "userEventCount": 0,
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+        "renderElements": 1
+      },
+      "creationDisabledBeforeAndAfter": true
+    },
+    "firstInternal": {
+      "pass": true,
+      "initial": {
+        "state": "ready",
+        "srcPath": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.5987347811727006
+        },
+        "observedDegrees": 0,
+        "userEventCount": 0,
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+        "renderElements": 1
+      },
+      "dragged": {
+        "state": "ready",
+        "srcPath": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "orbit": {
+          "theta": 7.91874630283902,
+          "phi": 1.3089969389957472,
+          "radius": 3.5987347811727006
+        },
+        "observedDegrees": 453.7,
+        "userEventCount": 51,
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+        "renderElements": 1
+      },
+      "zoomed": {
+        "state": "ready",
+        "srcPath": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "orbit": {
+          "theta": 7.91874630283902,
+          "phi": 1.3089969389957472,
+          "radius": 2.878987824938161
+        },
+        "observedDegrees": 453.7,
+        "userEventCount": 51,
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+        "renderElements": 1
+      },
+      "reset": {
+        "state": "ready",
+        "srcPath": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.5987347811727006
+        },
+        "observedDegrees": 453.7,
+        "userEventCount": 51,
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+        "renderElements": 1
+      },
+      "scope": "Real GLB Ready, single mouse drag, zoom-in, reset; no fault injection or mobile tests in WP4",
+      "scopeNotice": "真实Neural4D输出 · 技术验证用 · 非正式角色资产 · 不公开展示或分发。没有文化一致性通过声明。"
+    }
+  },
+  "contexts": [
+    {
+      "name": "eight-page-smoke",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video3.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video2.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video4.mp4",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "modelReads": []
+    },
+    {
+      "name": "second-realistic-and-style-switch",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedResources": [],
+      "httpErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "modelReads": [
+        "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file"
+      ]
+    },
+    {
+      "name": "first-internal-model",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedResources": [
+        {
+          "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "httpErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "modelReads": [
+        "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file"
+      ]
+    }
+  ],
+  "limitations": [
+    "No paid RAG or Agent execution",
+    "No physical phone test",
+    "Not the full WP4 regression suite"
+  ],
+  "chromeVersion": "155.0.8059.86",
+  "nodeVersion": "v24.19.0",
+  "finishedAt": "2026-10-23T05:20:07.385Z",
+  "blockedMutations": 0,
+  "blockedExternal": 0,
+  "noPaidRequestsSent": true,
+  "conclusion": "PASS"
+}

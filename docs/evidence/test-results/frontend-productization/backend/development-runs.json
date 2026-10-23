@@ -1,0 +1,160 @@
+{
+  "kind": "ACTUAL_OFFLINE_BACKEND_RUN_READBACK",
+  "readAtUtc": "2026-10-23T05:37:46.690698+00:00",
+  "runs": [
+    {
+      "privateRunName": "phase5-wp4-productization-chat-01",
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0,
+      "collectionErrors": 0,
+      "pytestExitCode": 0,
+      "guardCounts": {
+        "blockedFileAccess": 0,
+        "blockedSqlite": 0,
+        "blockedRealHttp": 0
+      },
+      "counting": "Earlier intermediate runs overlap; final chat-06 is included in full-04."
+    },
+    {
+      "privateRunName": "phase5-wp4-productization-chat-02",
+      "passed": 38,
+      "failed": 0,
+      "skipped": 0,
+      "collectionErrors": 0,
+      "pytestExitCode": 0,
+      "guardCounts": {
+        "blockedFileAccess": 0,
+        "blockedSqlite": 0,
+        "blockedRealHttp": 0
+      },
+      "counting": "Earlier intermediate runs overlap; final chat-06 is included in full-04."
+    },
+    {
+      "privateRunName": "phase5-wp4-productization-chat-03",
+      "passed": 40,
+      "failed": 0,
+      "skipped": 0,
+      "collectionErrors": 0,
+      "pytestExitCode": 0,
+      "guardCounts": {
+        "blockedFileAccess": 0,
+        "blockedSqlite": 0,
+        "blockedRealHttp": 0
+      },
+      "counting": "Earlier intermediate runs overlap; final chat-06 is included in full-04."
+    },
+    {
+      "privateRunName": "phase5-wp4-productization-chat-04",
+      "passed": 41,
+      "failed": 0,
+      "skipped": 0,
+      "collectionErrors": 0,
+      "pytestExitCode": 0,
+      "guardCounts": {
+        "blockedFileAccess": 0,
+        "blockedSqlite": 0,
+        "blockedRealHttp": 0
+      },
+      "counting": "Earlier intermediate runs overlap; final chat-06 is included in full-04."
+    },
+    {
+      "privateRunName": "phase5-wp4-productization-chat-05",
+      "passed": 42,
+      "failed": 0,
+      "skipped": 0,
+      "collectionErrors": 0,
+      "pytestExitCode": 0,
+      "guardCounts": {
+        "blockedFileAccess": 0,
+        "blockedSqlite": 0,
+        "blockedRealHttp": 0
+      },
+      "counting": "Earlier intermediate runs overlap; final chat-06 is included in full-04."
+    },
+    {
+      "privateRunName": "phase5-wp4-productization-chat-06",
+      "passed": 43,
+      "failed": 0,
+      "skipped": 0,
+      "collectionErrors": 0,
+      "pytestExitCode": 0,
+      "guardCounts": {
+        "blockedFileAccess": 0,
+        "blockedSqlite": 0,
+        "blockedRealHttp": 0
+      },
+      "counting": "Earlier intermediate runs overlap; final chat-06 is included in full-04."
+    },
+    {
+      "privateRunName": "phase5-wp4-productization-full-01",
+      "passed": 794,
+      "failed": 0,
+      "skipped": 0,
+      "collectionErrors": 0,
+      "pytestExitCode": 0,
+      "guardCounts": {
+        "blockedFileAccess": 0,
+        "blockedSqlite": 0,
+        "blockedRealHttp": 0
+      },
+      "counting": "Earlier intermediate runs overlap; final chat-06 is included in full-04."
+    },
+    {
+      "privateRunName": "phase5-wp4-productization-full-02",
+      "passed": 795,
+      "failed": 0,
+      "skipped": 0,
+      "collectionErrors": 0,
+      "pytestExitCode": 0,
+      "guardCounts": {
+        "blockedFileAccess": 0,
+        "blockedSqlite": 0,
+        "blockedRealHttp": 0
+      },
+      "counting": "Earlier intermediate runs overlap; final chat-06 is included in full-04."
+    },
+    {
+      "privateRunName": "phase5-wp4-productization-full-03",
+      "passed": 796,
+      "failed": 0,
+      "skipped": 0,
+      "collectionErrors": 0,
+      "pytestExitCode": 0,
+      "guardCounts": {
+        "blockedFileAccess": 0,
+        "blockedSqlite": 0,
+        "blockedRealHttp": 0
+      },
+      "counting": "Earlier intermediate runs overlap; final chat-06 is included in full-04."
+    },
+    {
+      "privateRunName": "phase5-wp4-productization-full-04",
+      "passed": 797,
+      "failed": 0,
+      "skipped": 0,
+      "collectionErrors": 0,
+      "pytestExitCode": 0,
+      "guardCounts": {
+        "blockedFileAccess": 0,
+        "blockedSqlite": 0,
+        "blockedRealHttp": 0
+      },
+      "counting": "Earlier intermediate runs overlap; final chat-06 is included in full-04."
+    }
+  ],
+  "sources": {
+    "target": "helpers/conversation-offline-bootstrap.py",
+    "full": "helpers/full-offline-bootstrap.py"
+  },
+  "executionArguments": {
+    "runRoot": "[private-runtime]/<privateRunName>",
+    "junitxml": "[private-runtime]/<privateRunName>/junit.xml",
+    "basetemp": "[private-runtime]/<privateRunName>/pytest-temp"
+  },
+  "notes": [
+    "Executors accept --run-root --junitxml --basetemp; output directories and counts verified from actual JSON/JUnit.",
+    "All listed offline runs passed; no failed backend run is invented.",
+    "Last 43 tests are included in the last full 797 tests, not added."
+  ]
+}

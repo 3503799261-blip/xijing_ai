@@ -1,0 +1,2632 @@
+{
+  "kind": "REAL_BROWSER_READ_ONLY_NAV_AND_LAYOUT",
+  "startedAt": "2026-10-23T05:24:27.378Z",
+  "phase": "after",
+  "realPaidCalls": 0,
+  "neural4dCalls": 0,
+  "contexts": [
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "blockedMutations": [],
+      "blockedExternal": [],
+      "httpErrors": [],
+      "failedResources": [
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/video1.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "path": "/media/opera-audio.mp3",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "file": "index.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "title": "梨园风华｜首页",
+      "navWrap": {
+        "x": 400,
+        "y": 0,
+        "width": 1120,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 886.453125,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 892.453125,
+        "y": 17.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "history.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "title": "京剧发展历史｜梨园风华",
+      "navWrap": {
+        "x": 400,
+        "y": 0,
+        "width": 1120,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 886.453125,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 892.453125,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "roles.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "title": "行当介绍｜梨园风华",
+      "navWrap": {
+        "x": 400,
+        "y": 0,
+        "width": 1120,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 886.453125,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 892.453125,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "facial.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "title": "脸谱艺术｜梨园风华",
+      "navWrap": {
+        "x": 400,
+        "y": 0,
+        "width": 1120,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 886.453125,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 892.453125,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "music.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "title": "唱腔与乐器｜梨园风华",
+      "navWrap": {
+        "x": 400,
+        "y": 0,
+        "width": 1120,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 886.453125,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 892.453125,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "gallery.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "title": "艺术画廊｜梨园风华",
+      "navWrap": {
+        "x": 400,
+        "y": 0,
+        "width": 1120,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 886.453125,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 892.453125,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "video.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "title": "视频欣赏｜梨园风华",
+      "navWrap": {
+        "x": 400,
+        "y": 0,
+        "width": 1120,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 886.453125,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 892.453125,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "about.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "title": "AI戏韵工坊｜梨园风华",
+      "navWrap": {
+        "x": 400,
+        "y": 0,
+        "width": 1120,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 885.203125,
+        "y": 13.8125,
+        "width": 634.796875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 891.203125,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 92.828125,
+          "scrollWidth": 91,
+          "clientWidth": 91
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [
+        "qa"
+      ],
+      "messageArea": {
+        "x": 578,
+        "y": 483.015625,
+        "width": 1021,
+        "height": 341.640625,
+        "gap": "24px",
+        "padding": "26px 54px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "inputArea": {
+        "x": 604,
+        "y": 891.65625,
+        "width": 969,
+        "height": 204.28125,
+        "gap": "12px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "grid"
+      },
+      "pass": true
+    },
+    {
+      "file": "index.html",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "status": 200,
+      "title": "梨园风华｜首页",
+      "navWrap": {
+        "x": 40.953125,
+        "y": 0,
+        "width": 942.078125,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 349.484375,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 355.484375,
+        "y": 17.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "history.html",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "status": 200,
+      "title": "京剧发展历史｜梨园风华",
+      "navWrap": {
+        "x": 40.953125,
+        "y": 0,
+        "width": 942.078125,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 349.484375,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 355.484375,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "roles.html",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "status": 200,
+      "title": "行当介绍｜梨园风华",
+      "navWrap": {
+        "x": 40.953125,
+        "y": 0,
+        "width": 942.078125,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 349.484375,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 355.484375,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "facial.html",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "status": 200,
+      "title": "脸谱艺术｜梨园风华",
+      "navWrap": {
+        "x": 40.953125,
+        "y": 0,
+        "width": 942.078125,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 349.484375,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 355.484375,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "music.html",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "status": 200,
+      "title": "唱腔与乐器｜梨园风华",
+      "navWrap": {
+        "x": 40.953125,
+        "y": 0,
+        "width": 942.078125,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 349.484375,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 355.484375,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "gallery.html",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "status": 200,
+      "title": "艺术画廊｜梨园风华",
+      "navWrap": {
+        "x": 40.953125,
+        "y": 0,
+        "width": 942.078125,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 349.484375,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 355.484375,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "video.html",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "status": 200,
+      "title": "视频欣赏｜梨园风华",
+      "navWrap": {
+        "x": 40.953125,
+        "y": 0,
+        "width": 942.078125,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 349.484375,
+        "y": 13.8125,
+        "width": 633.546875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 355.484375,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 91.578125,
+          "scrollWidth": 90,
+          "clientWidth": 90
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "about.html",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "status": 200,
+      "title": "AI戏韵工坊｜梨园风华",
+      "navWrap": {
+        "x": 40.953125,
+        "y": 0,
+        "width": 942.078125,
+        "height": 82,
+        "gap": "14px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 348.234375,
+        "y": 13.8125,
+        "width": 634.796875,
+        "height": 54.359375,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 354.234375,
+        "y": 19.8125,
+        "width": 49.84375,
+        "height": 42.359375,
+        "gap": "normal",
+        "padding": "8px 10px",
+        "fontSize": "13.92px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 49.84375,
+          "scrollWidth": 48,
+          "clientWidth": 48
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 77.6875,
+          "scrollWidth": 76,
+          "clientWidth": 76
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 92.828125,
+          "scrollWidth": 91,
+          "clientWidth": 91
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [
+        "qa"
+      ],
+      "messageArea": {
+        "x": 288.71875,
+        "y": 473.3125,
+        "width": 703.546875,
+        "height": 211.640625,
+        "gap": "24px",
+        "padding": "26px 40.96px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "inputArea": {
+        "x": 314.71875,
+        "y": 751.953125,
+        "width": 651.546875,
+        "height": 204.28125,
+        "gap": "12px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "grid"
+      },
+      "pass": true
+    },
+    {
+      "file": "index.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "梨园风华｜首页",
+      "navWrap": {
+        "x": 11.703125,
+        "y": 0,
+        "width": 366.59375,
+        "height": 157.765625,
+        "gap": "10px",
+        "padding": "12px 0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 11.703125,
+        "y": 60.078125,
+        "width": 366.59375,
+        "height": 85.6875,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 17.703125,
+        "y": 64.078125,
+        "width": 42.96875,
+        "height": 35.84375,
+        "gap": "normal",
+        "padding": "6px 8px",
+        "fontSize": "12.48px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 42.96875,
+          "scrollWidth": 41,
+          "clientWidth": 41
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 80.375,
+          "scrollWidth": 78,
+          "clientWidth": 78
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "history.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "京剧发展历史｜梨园风华",
+      "navWrap": {
+        "x": 11.703125,
+        "y": 0,
+        "width": 366.59375,
+        "height": 157.765625,
+        "gap": "10px",
+        "padding": "12px 0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 11.703125,
+        "y": 60.078125,
+        "width": 366.59375,
+        "height": 85.6875,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 17.703125,
+        "y": 66.078125,
+        "width": 42.96875,
+        "height": 35.84375,
+        "gap": "normal",
+        "padding": "6px 8px",
+        "fontSize": "12.48px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 42.96875,
+          "scrollWidth": 41,
+          "clientWidth": 41
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 80.375,
+          "scrollWidth": 78,
+          "clientWidth": 78
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "roles.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "行当介绍｜梨园风华",
+      "navWrap": {
+        "x": 11.703125,
+        "y": 0,
+        "width": 366.59375,
+        "height": 157.765625,
+        "gap": "10px",
+        "padding": "12px 0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 11.703125,
+        "y": 60.078125,
+        "width": 366.59375,
+        "height": 85.6875,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 17.703125,
+        "y": 66.078125,
+        "width": 42.96875,
+        "height": 35.84375,
+        "gap": "normal",
+        "padding": "6px 8px",
+        "fontSize": "12.48px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 42.96875,
+          "scrollWidth": 41,
+          "clientWidth": 41
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 80.375,
+          "scrollWidth": 78,
+          "clientWidth": 78
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "facial.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "脸谱艺术｜梨园风华",
+      "navWrap": {
+        "x": 11.703125,
+        "y": 0,
+        "width": 366.59375,
+        "height": 157.765625,
+        "gap": "10px",
+        "padding": "12px 0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 11.703125,
+        "y": 60.078125,
+        "width": 366.59375,
+        "height": 85.6875,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 17.703125,
+        "y": 66.078125,
+        "width": 42.96875,
+        "height": 35.84375,
+        "gap": "normal",
+        "padding": "6px 8px",
+        "fontSize": "12.48px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 42.96875,
+          "scrollWidth": 41,
+          "clientWidth": 41
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 80.375,
+          "scrollWidth": 78,
+          "clientWidth": 78
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "music.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "唱腔与乐器｜梨园风华",
+      "navWrap": {
+        "x": 11.703125,
+        "y": 0,
+        "width": 366.59375,
+        "height": 157.765625,
+        "gap": "10px",
+        "padding": "12px 0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 11.703125,
+        "y": 60.078125,
+        "width": 366.59375,
+        "height": 85.6875,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 17.703125,
+        "y": 66.078125,
+        "width": 42.96875,
+        "height": 35.84375,
+        "gap": "normal",
+        "padding": "6px 8px",
+        "fontSize": "12.48px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 42.96875,
+          "scrollWidth": 41,
+          "clientWidth": 41
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 80.375,
+          "scrollWidth": 78,
+          "clientWidth": 78
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "gallery.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "艺术画廊｜梨园风华",
+      "navWrap": {
+        "x": 11.703125,
+        "y": 0,
+        "width": 366.59375,
+        "height": 157.765625,
+        "gap": "10px",
+        "padding": "12px 0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 11.703125,
+        "y": 60.078125,
+        "width": 366.59375,
+        "height": 85.6875,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 17.703125,
+        "y": 66.078125,
+        "width": 42.96875,
+        "height": 35.84375,
+        "gap": "normal",
+        "padding": "6px 8px",
+        "fontSize": "12.48px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 42.96875,
+          "scrollWidth": 41,
+          "clientWidth": 41
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 80.375,
+          "scrollWidth": 78,
+          "clientWidth": 78
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "video.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "视频欣赏｜梨园风华",
+      "navWrap": {
+        "x": 11.703125,
+        "y": 0,
+        "width": 366.59375,
+        "height": 157.765625,
+        "gap": "10px",
+        "padding": "12px 0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 11.703125,
+        "y": 60.078125,
+        "width": 366.59375,
+        "height": 85.6875,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 17.703125,
+        "y": 66.078125,
+        "width": 42.96875,
+        "height": 35.84375,
+        "gap": "normal",
+        "padding": "6px 8px",
+        "fontSize": "12.48px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 42.96875,
+          "scrollWidth": 41,
+          "clientWidth": 41
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 80.375,
+          "scrollWidth": 78,
+          "clientWidth": 78
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [],
+      "messageArea": null,
+      "inputArea": null,
+      "pass": true
+    },
+    {
+      "file": "about.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "AI戏韵工坊｜梨园风华",
+      "navWrap": {
+        "x": 11.703125,
+        "y": 0,
+        "width": 366.59375,
+        "height": 157.765625,
+        "gap": "10px",
+        "padding": "12px 0px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "navList": {
+        "x": 11.703125,
+        "y": 60.078125,
+        "width": 366.59375,
+        "height": 85.6875,
+        "gap": "2px",
+        "padding": "5px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "firstNavLink": {
+        "x": 17.703125,
+        "y": 66.078125,
+        "width": 42.96875,
+        "height": 35.84375,
+        "gap": "normal",
+        "padding": "6px 8px",
+        "fontSize": "12.48px",
+        "display": "block"
+      },
+      "navLinks": [
+        {
+          "text": "首页",
+          "href": "index.html",
+          "width": 42.96875,
+          "scrollWidth": 41,
+          "clientWidth": 41
+        },
+        {
+          "text": "发展历史",
+          "href": "history.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "行当介绍",
+          "href": "roles.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "脸谱艺术",
+          "href": "facial.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "唱腔乐器",
+          "href": "music.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "视频欣赏",
+          "href": "video.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "艺术画廊",
+          "href": "gallery.html",
+          "width": 67.921875,
+          "scrollWidth": 66,
+          "clientWidth": 66
+        },
+        {
+          "text": "AI戏韵工坊",
+          "href": "about.html#ai-workshop",
+          "width": 81.5,
+          "scrollWidth": 80,
+          "clientWidth": 80
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "visiblePanels": [
+        "qa"
+      ],
+      "messageArea": {
+        "x": 12.703125,
+        "y": 569.921875,
+        "width": 364.59375,
+        "height": 296.3125,
+        "gap": "18px",
+        "padding": "20px 16px",
+        "fontSize": "16px",
+        "display": "flex"
+      },
+      "inputArea": {
+        "x": 26.703125,
+        "y": 931.234375,
+        "width": 336.59375,
+        "height": 204.28125,
+        "gap": "12px",
+        "padding": "0px",
+        "fontSize": "16px",
+        "display": "grid"
+      },
+      "pass": true
+    }
+  ],
+  "screenshots": [
+    "index-1920x1080.png",
+    "about-1920x1080.png",
+    "index-1024x768.png",
+    "about-1024x768.png",
+    "index-390x844.png",
+    "about-390x844.png"
+  ],
+  "physicalPhone": "NOT_TESTED",
+  "completedAt": "2026-10-23T05:24:40.180Z",
+  "passed": 24,
+  "failed": 0,
+  "skipped": 0,
+  "conclusion": "PASS"
+}

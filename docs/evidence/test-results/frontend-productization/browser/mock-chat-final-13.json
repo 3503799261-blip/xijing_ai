@@ -1,0 +1,474 @@
+{
+  "kind": "REAL_CHROME_UI_WITH_EXPLICIT_CHAT_FETCH_FIXTURES",
+  "disclaimer": "All chat answers/history are isolated MOCK fixtures, not DeepSeek/RAG output or production persisted chat evidence.",
+  "startedAt": "2026-10-23T05:24:40.462Z",
+  "realProviderRequests": 0,
+  "neural4dRequests": 0,
+  "productionChatWrites": 0,
+  "checks": [
+    {
+      "name": "opening empty history makes no chat/create POST, defaults to QA and settles real capability status",
+      "status": "PASS"
+    },
+    {
+      "name": "explicit create and pending send show loading, block duplicate submit and keep newer text",
+      "status": "PASS"
+    },
+    {
+      "name": "follow-up uses same conversationId and renders ordered answers with safe inline source details",
+      "status": "PASS"
+    },
+    {
+      "name": "new session is independent and history switch restores correct messages plus unsent draft",
+      "status": "PASS"
+    },
+    {
+      "name": "reload restores selected real-shaped server history without paid request or new session",
+      "status": "PASS"
+    },
+    {
+      "name": "HTTP timeout keeps question and manual retry reuses idempotency without duplicate UI or auto retry",
+      "status": "PASS"
+    },
+    {
+      "name": "network failure stops loading and preserves input without automatically posting again",
+      "status": "PASS"
+    },
+    {
+      "name": "uncertain answer keeps explicit insufficient-source notice",
+      "status": "PASS"
+    },
+    {
+      "name": "unknown provider result remains unresolved and cannot be retried automatically",
+      "status": "PASS"
+    },
+    {
+      "name": "history storage unavailable shows recoverable explicit error and never posts on read",
+      "status": "PASS"
+    },
+    {
+      "name": "missing historical conversation shows safe 404 and preserves current state without creating a task",
+      "status": "PASS"
+    },
+    {
+      "name": "history pagination recovers after failed next page and resets more button correctly",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile sidebar is collapsible; keyboard multiline and long thread keep stable visible input",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "input": {
+          "top": 238.5625,
+          "bottom": 346.125,
+          "width": 336.59375
+        },
+        "viewport": 844,
+        "messages": {
+          "scrollTop": 9025,
+          "scrollHeight": 9395,
+          "clientHeight": 370
+        },
+        "turns": 9
+      }
+    }
+  ],
+  "contexts": [
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mockRequests": [
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "POST",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "48a42a1e-70b6-4eb0-a7d2-e9334ea0711d",
+          "body": {
+            "question": "MOCK生旦净丑问题",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "69d04677-9b20-48ee-8e8a-2ba4ae5d706c",
+          "body": {
+            "question": "MOCK继续追问",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "POST",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "2816f4cb-28f4-4f1d-82d5-ec8ad8dcd8b0",
+          "body": {
+            "question": "MOCK第二独立会话",
+            "conversationId": "00000002-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations/00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations/00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "da7703f5-6687-40f3-925a-5a5dfe57193d",
+          "body": {
+            "question": "MOCK失败保持输入",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "da7703f5-6687-40f3-925a-5a5dfe57193d",
+          "body": {
+            "question": "MOCK失败保持输入",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "ae4863a9-a7e7-4c31-8413-497220e19ebf",
+          "body": {
+            "question": "MOCK网络断开",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "ae4863a9-a7e7-4c31-8413-497220e19ebf",
+          "body": {
+            "question": "MOCK网络断开",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "3f7f790b-5c97-4d3f-b6d2-1440f2700295",
+          "body": {
+            "question": "MOCK资料不足",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "d541f8bb-5bc9-44ff-9b41-680f61254810",
+          "body": {
+            "question": "MOCK未知结果",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations/00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations/00000002-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations/0000001b-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        }
+      ],
+      "forbiddenMutations": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 504 (Gateway Timeout)",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: the server responded with a status of 409 (Conflict)",
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "mockRequests": [
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "POST",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "0414212c-6f71-40e3-8d1a-ee44a1100a14",
+          "body": {
+            "question": "MOCK键盘",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "9b7a3fb9-a48b-410b-85a5-00726ea9dd17",
+          "body": {
+            "question": "MOCK长对话0",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "0fd70ec9-f79f-4029-b57b-563e08d797b4",
+          "body": {
+            "question": "MOCK长对话1",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "ab25fe7f-a773-4c2a-8e73-18c077fffb50",
+          "body": {
+            "question": "MOCK长对话2",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "9b2773ec-3f4b-4a6d-8754-f5ae09bb274f",
+          "body": {
+            "question": "MOCK长对话3",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "cdda463d-10bc-4a4f-8434-775eff8923d8",
+          "body": {
+            "question": "MOCK长对话4",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "8635715a-43c6-4164-b9f4-bd12ca4337ed",
+          "body": {
+            "question": "MOCK长对话5",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "5569e383-e77b-43bd-8d54-337d2e92eee2",
+          "body": {
+            "question": "MOCK长对话6",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        },
+        {
+          "path": "/api/v1/chat",
+          "method": "POST",
+          "key": "d4d3f7b0-5ab8-4405-bac5-d2ef7e4321dd",
+          "body": {
+            "question": "MOCK长对话7",
+            "conversationId": "00000001-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+          }
+        },
+        {
+          "path": "/api/v1/chat/conversations",
+          "method": "GET",
+          "key": null
+        }
+      ],
+      "forbiddenMutations": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": []
+    }
+  ],
+  "screenshots": [
+    "chat-desktop-empty.png",
+    "chat-desktop-loading.png",
+    "chat-desktop-context-references.png",
+    "chat-desktop-retry-recovered.png",
+    "chat-mobile-long-thread.png"
+  ],
+  "physicalPhone": "NOT_TESTED",
+  "finishedAt": "2026-10-23T05:24:45.057Z",
+  "passed": 13,
+  "failed": 0,
+  "conclusion": "PASS"
+}

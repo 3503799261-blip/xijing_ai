@@ -1,0 +1,88 @@
+{
+  "checkedAtUtc": "2026-10-23T05:32:47.156652+00:00",
+  "backend": {
+    "passed": 797,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 134.31,
+    "newConversationSubset": 43,
+    "counting": "43 new tests are included in 797; never add them as independent total."
+  },
+  "frontend": {
+    "qa": 32,
+    "agents": 25,
+    "assets": 42,
+    "history": 34,
+    "demo": 34,
+    "failed": 0
+  },
+  "browser": {
+    "navigationBefore": 24,
+    "navigationFinal": 24,
+    "mockChatFinal": 13,
+    "existingAgentHistory": 6,
+    "secondaryFinal": 5,
+    "realGlbDesktopGroups": 4,
+    "realGlbTouchModels": 2,
+    "notIndependentCounts": true
+  },
+  "http": {
+    "finalGet": 20,
+    "freeLocalRetrieval": 2,
+    "failedFinal": 0
+  },
+  "navigationMeasurement": [
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "beforeNavWrap": 1200,
+      "afterNavWrap": 1120,
+      "beforeNavList": 675.796875,
+      "afterNavList": 634.796875,
+      "changePx": -41.0,
+      "changePercent": -6.07
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "beforeNavWrap": 942.078125,
+      "afterNavWrap": 942.078125,
+      "beforeNavList": 675.796875,
+      "afterNavList": 634.796875,
+      "changePx": -41.0,
+      "changePercent": -6.07
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "beforeNavWrap": 366.59375,
+      "afterNavWrap": 366.59375,
+      "beforeNavList": 366.59375,
+      "afterNavList": 366.59375,
+      "changePx": 0.0,
+      "changePercent": 0.0
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "productionChatWrites": 0,
+  "productionChatDirectoryCreated": false,
+  "limits": [
+    "No new paid DeepSeek call; provider UI tests are explicitly MOCK.",
+    "Physical phone, current external API connectivity and cross-machine tests NOT_TESTED.",
+    "Existing model screenshots retained privately.",
+    "Original clientDate constants in reused invariant helpers are legacy labels; checkedAtUtc records this actual run."
+  ],
+  "knownFailureRecords": [
+    "First QA harness used assert.rejects for synchronous validation; fixed to assert.throws.",
+    "First secondary helper clicked disabled final-step skip; fixed to move previous before skip.",
+    "First final HTTP probe used unsupported HEAD on two GET-only model routes (405); repeated as actual GET with exact SHA checks.",
+    "First after screenshot showed stale checking status despite ready badge; product readiness display corrected and after-02/03 tested."
+  ]
+}

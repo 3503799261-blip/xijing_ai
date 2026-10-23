@@ -1,0 +1,179 @@
+{
+  "kind": "FINAL_FROZEN_SOURCE_LOCAL_GET_HEAD_HTTP_ONLY",
+  "results": [
+    {
+      "path": "/index.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 8.48
+    },
+    {
+      "path": "/history.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 13.98
+    },
+    {
+      "path": "/roles.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 2.36
+    },
+    {
+      "path": "/facial.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 2.69
+    },
+    {
+      "path": "/music.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 27.6
+    },
+    {
+      "path": "/gallery.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 15.31
+    },
+    {
+      "path": "/video.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 15.75
+    },
+    {
+      "path": "/about.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 15.73
+    },
+    {
+      "path": "/api/v1/health",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 22.08,
+      "health": {
+        "status": "ready",
+        "application": {
+          "available": true
+        },
+        "knowledge": true,
+        "embedding": true,
+        "databases": {
+          "agent": {
+            "available": true,
+            "diagnostic": null
+          },
+          "budget": {
+            "available": true,
+            "diagnostic": null
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/v1/capabilities",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 6.87
+    },
+    {
+      "path": "/api/v1/agent/history?page=1&pageSize=1",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 6.09,
+      "total": 22
+    },
+    {
+      "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 13.37
+    },
+    {
+      "path": "/api/v1/assets/usage",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 29.1,
+      "usage": {
+        "used_calls": 2,
+        "remaining_calls": 1,
+        "max_calls": 3,
+        "realEnabled": false
+      }
+    },
+    {
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 3.25
+    },
+    {
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 26.11
+    },
+    {
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+      "method": "HEAD",
+      "pass": false,
+      "errorType": "HTTPError"
+    },
+    {
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+      "method": "HEAD",
+      "pass": false,
+      "errorType": "HTTPError"
+    },
+    {
+      "path": "/api/v1/chat/conversations?limit=20&offset=0",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 16.84,
+      "chatList": {
+        "items": [],
+        "hasMore": false
+      },
+      "directoryExists": false
+    },
+    {
+      "path": "/api/v1/knowledge/sources",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 15.68
+    },
+    {
+      "path": "/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 15.77
+    }
+  ],
+  "passed": 18,
+  "failed": 2,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "productionChatWrites": 0,
+  "externalLLMConnectivity": "NOT_TESTED"
+}

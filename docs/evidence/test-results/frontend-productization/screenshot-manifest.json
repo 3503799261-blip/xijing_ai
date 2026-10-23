@@ -1,0 +1,176 @@
+{
+  "screenshots": [
+    {
+      "file": "screenshots/before/about-1024x768.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "8ff374b262823fe91cb35a66df4e41c40102bec982da2a41fb4934308c60030a",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/before/about-1920x1080.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "454b266f79730657b2bdf409bee81d9d45f17267f6af6965df462b2ec2ae6e55",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/before/about-390x844.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "b97f9d3cfdb0f702792aeae9e87b9b049fe2413c81cc274d2feebb2441930a68",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/before/index-1024x768.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "a72c4a7382140e2575477ef2e897aafe189d9389563a9f09a12c8bc010790057",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/before/index-1920x1080.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "db2c18cc5e2fb673b1d4d040d2343f297cab42c0c13d1aed24bb27663c786d87",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/before/index-390x844.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "afff9662fa4a17a6192526ab902709f93df2f11f11ad69809214fdf6cfc1a6d3",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/after/about-1024x768.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "27288cc545f69dbf87b543eb23d1c3b7b7feb87bf4052c9c8a4a4290b11ec244",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/after/about-1920x1080.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "e88e131e62f921fa382d54ddfb148dbb2efdcd476ce529acbd94c86279eca4e9",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/after/about-390x844.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "4e4840fc6c72a7fcaa415d93747ee6f481682214daec939d5aead9471356766b",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/after/index-1024x768.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "2d26e72043b0c3dddaebe9ffa6a46f91353c91958eb67502fd14d9427dfc98e1",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/after/index-1920x1080.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "79c31fc8e6601f461da86b5c7b8b5f8c3614f8cc31427705741c19086f988e9c",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/after/index-390x844.png",
+      "sourceKind": "ACTUAL_LOCAL_WEBSITE",
+      "sha256": "394f76641ea57cef1a470cc3dd7a85e0794d373449e5d09fdced83c079956be4",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/mock/chat-desktop-context-references.png",
+      "sourceKind": "EXPLICIT_MOCK_CHAT_FIXTURE",
+      "sha256": "7744565eaf5ca82abfc6b33ed3837db4c3178d204b0443437cd43cf667afc8be",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/mock/chat-desktop-empty.png",
+      "sourceKind": "EXPLICIT_MOCK_CHAT_FIXTURE",
+      "sha256": "ca6ef83fa4cfcf56ba81295584b7ab2ac56e9fb38458abdfd4d239f8fa578a81",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/mock/chat-desktop-loading.png",
+      "sourceKind": "EXPLICIT_MOCK_CHAT_FIXTURE",
+      "sha256": "c08551699fc9599b9aaa01a7e2ba4cbd01df9cb21d5a7a7b4faa635c46f3ea62",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/mock/chat-desktop-retry-recovered.png",
+      "sourceKind": "EXPLICIT_MOCK_CHAT_FIXTURE",
+      "sha256": "259b631252fdab827aeba9a88600967d866bef1b57a7167b4c20d7c750077e40",
+      "tracked": true
+    },
+    {
+      "file": "screenshots/mock/chat-mobile-long-thread.png",
+      "sourceKind": "EXPLICIT_MOCK_CHAT_FIXTURE",
+      "sha256": "983e04a134df3c2abb94ab5d940aa876defb5cb411aa466c2d700c196347e0ca",
+      "tracked": true
+    },
+    {
+      "file": "[private-runtime]/productization-model-browser-01/first-internal-ready.png",
+      "sourceKind": "REAL_EXISTING_ASSET_LOCAL_VALIDATION",
+      "sha256": "a5baa0bf8eb3ff6710a7743ba65922e33d6707686a12f84d369ff00ab53f4c60",
+      "tracked": false,
+      "reason": "Model screenshot is kept in private evidence; internal Q asset cannot be published."
+    },
+    {
+      "file": "[private-runtime]/productization-model-browser-01/home-1920.png",
+      "sourceKind": "REAL_EXISTING_ASSET_LOCAL_VALIDATION",
+      "sha256": "e0f3f2f04ca8a7012cabbaf5aa1d8129bca3977775cd6557e2b52f71e780df3e",
+      "tracked": false,
+      "reason": "Model screenshot is kept in private evidence; internal Q asset cannot be published."
+    },
+    {
+      "file": "[private-runtime]/productization-model-browser-01/same-character-chibi-missing.png",
+      "sourceKind": "REAL_EXISTING_ASSET_LOCAL_VALIDATION",
+      "sha256": "fc2ed635dec2a01b4fe02d23615f4af002a08c6989b8aaa46f913684efd3b5b0",
+      "tracked": false,
+      "reason": "Model screenshot is kept in private evidence; internal Q asset cannot be published."
+    },
+    {
+      "file": "[private-runtime]/productization-model-browser-01/second-realistic-ready.png",
+      "sourceKind": "REAL_EXISTING_ASSET_LOCAL_VALIDATION",
+      "sha256": "529af4a6d0e28ec322b044fc842a9e0e0ef4489812a8eb1ac971356429001714",
+      "tracked": false,
+      "reason": "Model screenshot is kept in private evidence; internal Q asset cannot be published."
+    },
+    {
+      "file": "[private-runtime]/productization-model-touch-01/internal-chibi-mobile-error.png",
+      "sourceKind": "REAL_EXISTING_ASSET_LOCAL_VALIDATION",
+      "sha256": "b657b4a9ce93bbdb82d7b1fa59a611ab771832dcb8d3ea2b4db4776394c49026",
+      "tracked": false,
+      "reason": "Model screenshot is kept in private evidence; internal Q asset cannot be published."
+    },
+    {
+      "file": "[private-runtime]/productization-model-touch-01/internal-chibi-mobile-ready.png",
+      "sourceKind": "REAL_EXISTING_ASSET_LOCAL_VALIDATION",
+      "sha256": "9799dfd1b1eb8329bc866d3930796414a6b25c5164fb0520aca0f6909d466d1b",
+      "tracked": false,
+      "reason": "Model screenshot is kept in private evidence; internal Q asset cannot be published."
+    },
+    {
+      "file": "[private-runtime]/productization-model-touch-01/internal-chibi-mobile-recovered.png",
+      "sourceKind": "REAL_EXISTING_ASSET_LOCAL_VALIDATION",
+      "sha256": "17f57b1a157967e630b0348d680d1b6cc3e718c45b8f0e7a030ea50389bb0194",
+      "tracked": false,
+      "reason": "Model screenshot is kept in private evidence; internal Q asset cannot be published."
+    },
+    {
+      "file": "[private-runtime]/productization-model-touch-01/realistic-mobile-error.png",
+      "sourceKind": "REAL_EXISTING_ASSET_LOCAL_VALIDATION",
+      "sha256": "1e05c20658d942bca544426a42fe8373a1b2a6c9d004b3e82d47b15f53166c86",
+      "tracked": false,
+      "reason": "Model screenshot is kept in private evidence; internal Q asset cannot be published."
+    },
+    {
+      "file": "[private-runtime]/productization-model-touch-01/realistic-mobile-ready.png",
+      "sourceKind": "REAL_EXISTING_ASSET_LOCAL_VALIDATION",
+      "sha256": "4ca2c27e2038352f7baa44a74ccac4f766b22fc5384b0cec9a9fdf066af75d34",
+      "tracked": false,
+      "reason": "Model screenshot is kept in private evidence; internal Q asset cannot be published."
+    },
+    {
+      "file": "[private-runtime]/productization-model-touch-01/realistic-mobile-recovered.png",
+      "sourceKind": "REAL_EXISTING_ASSET_LOCAL_VALIDATION",
+      "sha256": "497818ebacc8d405b66c5ac2a0ded9fbb18a75d60d43c60f1bb6010633e92c2b",
+      "tracked": false,
+      "reason": "Model screenshot is kept in private evidence; internal Q asset cannot be published."
+    }
+  ]
+}

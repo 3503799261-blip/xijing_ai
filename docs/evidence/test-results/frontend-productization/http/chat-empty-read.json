@@ -1,0 +1,14 @@
+{
+  "kind": "REAL_LOCAL_READ_ONLY_CHAT_HISTORY",
+  "status": 200,
+  "response": {
+    "items": [],
+    "hasMore": false
+  },
+  "storeExistedBefore": false,
+  "storeExistsAfter": false,
+  "requestMethod": "GET",
+  "modelCalls": 0,
+  "paidRequests": 0,
+  "neural4dRequests": 0
+}

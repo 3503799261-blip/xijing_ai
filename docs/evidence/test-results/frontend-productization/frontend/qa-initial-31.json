@@ -1,0 +1,135 @@
+{
+  "kind": "OFFLINE_TEST_DOUBLES_AND_STATIC_CHECKS",
+  "disclaimer": "Not a real LLM, RAG, browser, CSS layout or API availability test.",
+  "executedAt": "2026-10-23T05:15:13.437Z",
+  "nodeVersion": "v24.19.0",
+  "command": "node scripts/phase2_frontend_test.mjs --output D:\\京剧\\.runtime\\productization-frontend-qa-02.json",
+  "results": [
+    {
+      "name": "grounded response and original fact-summary metadata",
+      "passed": true
+    },
+    {
+      "name": "reject certain answer without evidence",
+      "passed": true
+    },
+    {
+      "name": "explicit insufficient evidence may have no citations",
+      "passed": true
+    },
+    {
+      "name": "reject duplicate citation identifiers",
+      "passed": true
+    },
+    {
+      "name": "reject malformed answer fields",
+      "passed": true
+    },
+    {
+      "name": "AI capabilities follow backend gates, while default image/model stay off",
+      "passed": true
+    },
+    {
+      "name": "reject incomplete capabilities",
+      "passed": true
+    },
+    {
+      "name": "source URL protocol and credential validation",
+      "passed": true
+    },
+    {
+      "name": "concurrent capability requests coalesce",
+      "passed": true
+    },
+    {
+      "name": "same-origin chat and idempotency header",
+      "passed": true
+    },
+    {
+      "name": "one-argument askOperaQuestion remains compatible",
+      "passed": true
+    },
+    {
+      "name": "capability cache recovers after network failure",
+      "passed": true
+    },
+    {
+      "name": "failed chat immediately invalidates cached ready capabilities",
+      "passed": true
+    },
+    {
+      "name": "earlier capability request cannot restore readiness after a chat connection failure",
+      "passed": true
+    },
+    {
+      "name": "typed backend error preserves real request identifier",
+      "passed": true
+    },
+    {
+      "name": "upstream model timeout invalidates readiness without automatically retrying chat",
+      "passed": true
+    },
+    {
+      "name": "service rejects malformed successful response",
+      "passed": true
+    },
+    {
+      "name": "55-second budget aborts with no automatic retry (accelerated test clock)",
+      "passed": true
+    },
+    {
+      "name": "image and model services return unavailable without a network request",
+      "passed": true
+    },
+    {
+      "name": "chat contracts accept separate durable conversation identities and complete citations",
+      "passed": true
+    },
+    {
+      "name": "chat contracts reject duplicate histories, traversal, invalid dates and invented answer evidence",
+      "passed": true
+    },
+    {
+      "name": "new controller reads empty persisted history without creating conversations or sending chat",
+      "passed": true
+    },
+    {
+      "name": "explicit new conversation creates one independent server session without a model request",
+      "passed": true
+    },
+    {
+      "name": "pending lock prevents duplicate sends and preserves a newer draft while provider result returns",
+      "passed": true
+    },
+    {
+      "name": "continuing a conversation forwards its real identifier and retains ordered per-answer citations safely",
+      "passed": true
+    },
+    {
+      "name": "new session has no previous messages and switching restores server messages and session draft",
+      "passed": true
+    },
+    {
+      "name": "failed send keeps input and manual retry reuses one key without duplicate UI turn or automatic request",
+      "passed": true
+    },
+    {
+      "name": "unknown historical request stays visibly unresolved without enabling automatic retry",
+      "passed": true
+    },
+    {
+      "name": "blank and overlong questions do not send; Enter sends while Shift+Enter and IME composition do not",
+      "passed": true
+    },
+    {
+      "name": "chat transport rejects invalid identities locally; list/create/detail routes stay separate from Agent history",
+      "passed": true
+    },
+    {
+      "name": "HTML bindings, safe text rendering and module chain remain complete (static)",
+      "passed": true
+    }
+  ],
+  "passed": 31,
+  "failed": 0
+}

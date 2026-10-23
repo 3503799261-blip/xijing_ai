@@ -1,0 +1,384 @@
+{
+  "kind": "REAL_LOCAL_BGE_QDRANT_RETRIEVAL_ONLY_NOT_LLM_ANSWER",
+  "checks": [
+    {
+      "question": "京剧中的生旦净丑有什么区别？",
+      "status": 200,
+      "elapsedMs": 44.84,
+      "result": {
+        "question": "京剧中的生旦净丑有什么区别？",
+        "evidence": [
+          {
+            "id": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+            "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+            "sourceId": "fujian-roles",
+            "sectionId": "fujian-roles-system",
+            "title": "京剧的行当分类是什么？",
+            "locator": "正文第一段及末段 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "行当是京剧角色分类的专门称谓，常见四大类为生、旦、净、丑。\n各行当拥有不同的唱念做打程式，分类描述的是剧中角色及其表演特点。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧行当",
+            "entityNames": [
+              "京剧",
+              "行当",
+              "生",
+              "旦",
+              "净",
+              "丑",
+              "唱念做打"
+            ],
+            "vectorScore": 0.6178295880648705,
+            "keywordScore": -6.059893590366162,
+            "entityMatchCount": 4,
+            "acceptedBy": "vector_threshold",
+            "rank": 1,
+            "reviewStatus": "source_checked_by_assistant"
+          },
+          {
+            "id": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "sourceId": "fujian-roles",
+            "sectionId": "fujian-roles-sheng-dan",
+            "title": "京剧的行当分类是什么？",
+            "locator": "正文“生”“旦”条目 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "生行主要表现净、丑之外的男性角色，常见老生、小生、武生等；\n旦行表现女性角色，常见青衣、花旦、刀马旦、武旦等。\n不同分支还有各自的表演程式。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧行当",
+            "entityNames": [
+              "生",
+              "旦",
+              "老生",
+              "小生",
+              "武生",
+              "青衣",
+              "花旦"
+            ],
+            "vectorScore": 0.6628829060321113,
+            "keywordScore": -6.238754802937484,
+            "entityMatchCount": 2,
+            "acceptedBy": "vector_threshold",
+            "rank": 2,
+            "reviewStatus": "source_checked_by_assistant"
+          },
+          {
+            "id": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+            "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+            "sourceId": "fujian-roles",
+            "sectionId": "fujian-roles-chou",
+            "title": "京剧的行当分类是什么？",
+            "locator": "正文“丑”条目 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "丑行常承担喜剧表演，鼻梁上的小块白色化妆使其有小花脸之称。\n文丑与武丑是常见分类，武丑另称开口跳。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧行当",
+            "entityNames": [
+              "丑",
+              "小花脸",
+              "文丑",
+              "武丑",
+              "开口跳"
+            ],
+            "vectorScore": 0.5582386316000003,
+            "keywordScore": -2.030869834232371,
+            "entityMatchCount": 1,
+            "acceptedBy": "exact_entity_keyword",
+            "rank": 3,
+            "reviewStatus": "source_checked_by_assistant"
+          },
+          {
+            "id": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+            "chunkId": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+            "sourceId": "cnpoc-dan",
+            "sectionId": "cnpoc-dan-qingyi-huadan",
+            "title": "京剧旦行小讲堂",
+            "locator": "正文（1）正旦、（2）花旦 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/202510/a326678b61884605ab9ed5bf511a83e8.shtml",
+            "excerpt": "青衣也称正旦，常表现举止稳重的中青年女性，重唱功。\n花旦常表现年轻、活泼的女性，更多侧重做功和说白；\n这属于入门概括。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧行当",
+            "entityNames": [
+              "旦",
+              "青衣",
+              "正旦",
+              "花旦"
+            ],
+            "vectorScore": 0.48169399945117986,
+            "keywordScore": -1.562864635720181,
+            "entityMatchCount": 1,
+            "acceptedBy": "exact_entity_keyword",
+            "rank": 4,
+            "reviewStatus": "source_checked_by_assistant"
+          },
+          {
+            "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "sourceId": "fujian-roles",
+            "sectionId": "fujian-roles-jing",
+            "title": "京剧的行当分类是什么？",
+            "locator": "正文“净”条目 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "净又称花脸，脸谱和洪亮的声音是常见表演特点，角色多为性格或形象鲜明的男性人物。\n净行的唱功、身段或武打侧重有不同分支。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧行当",
+            "entityNames": [
+              "净",
+              "花脸",
+              "脸谱"
+            ],
+            "vectorScore": 0.529145964832949,
+            "keywordScore": null,
+            "entityMatchCount": 1,
+            "acceptedBy": "exact_entity_metadata",
+            "rank": 5,
+            "reviewStatus": "source_checked_by_assistant"
+          }
+        ],
+        "uncertain": false,
+        "retrievalMode": "hybrid",
+        "matchedEntities": [
+          "丑",
+          "净",
+          "旦",
+          "生"
+        ],
+        "elapsedSeconds": 0.0215,
+        "threshold": 0.57,
+        "candidateScores": [
+          {
+            "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+            "score": 0.6633353131464425
+          },
+          {
+            "chunkId": "chunk_b76f5050a78c31f6581e7124e65a98ab0c02c2396dffba3e2b57b2ea96fbe072",
+            "score": 0.6628829060321113
+          },
+          {
+            "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+            "score": 0.6178295880648705
+          },
+          {
+            "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+            "score": 0.5761139590243101
+          },
+          {
+            "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+            "score": 0.5582386316000003
+          },
+          {
+            "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "score": 0.529145964832949
+          },
+          {
+            "chunkId": "chunk_00f61bdb2070a3b6c09afa8eaa4920e2813a83d16163e91285aab293639fee5b",
+            "score": 0.4928556901243557
+          },
+          {
+            "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+            "score": 0.48897238718851244
+          },
+          {
+            "chunkId": "chunk_ef3abbfbfcbac0f86d4f47955bf29bba01eb214a76fe47c155efcbba3859945c",
+            "score": 0.48564284076742925
+          },
+          {
+            "chunkId": "chunk_e1cabef0599df5a4867813621d2c8667d35d57fdde1d506969789853a86dc2dd",
+            "score": 0.48169399945117986
+          }
+        ],
+        "requestId": "952b1b88-3658-485f-8323-425787841142"
+      },
+      "pass": true
+    },
+    {
+      "question": "京剧脸谱的颜色有什么寓意？",
+      "status": 200,
+      "elapsedMs": 35.23,
+      "result": {
+        "question": "京剧脸谱的颜色有什么寓意？",
+        "evidence": [
+          {
+            "id": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "sourceId": "fujian-roles",
+            "sectionId": "fujian-roles-jing",
+            "title": "京剧的行当分类是什么？",
+            "locator": "正文“净”条目 · 入库片段 1/1",
+            "url": "https://wlt.fujian.gov.cn/hdjl/wdxd/202112/t20211208_5790384.htm",
+            "excerpt": "净又称花脸，脸谱和洪亮的声音是常见表演特点，角色多为性格或形象鲜明的男性人物。\n净行的唱功、身段或武打侧重有不同分支。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧行当",
+            "entityNames": [
+              "净",
+              "花脸",
+              "脸谱"
+            ],
+            "vectorScore": 0.5335655637939731,
+            "keywordScore": -1.4405874437927428,
+            "entityMatchCount": 1,
+            "acceptedBy": "exact_entity_keyword",
+            "rank": 1,
+            "reviewStatus": "source_checked_by_assistant"
+          },
+          {
+            "id": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+            "chunkId": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+            "sourceId": "cnpoc-face",
+            "sectionId": "cnpoc-face-colors",
+            "title": "二、京剧脸谱",
+            "locator": "脸谱的色彩—红色；京剧脸谱的分类第二段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+            "excerpt": "红色作主色时，常用于关羽等忠勇人物；\n作副色时可表达其他寓意。\n因此单个颜色不能脱离人物、谱式和使用部位解释成绝对人格标签。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧脸谱",
+            "entityNames": [
+              "脸谱",
+              "红色",
+              "主色",
+              "副色",
+              "关羽"
+            ],
+            "vectorScore": 0.5183287718368977,
+            "keywordScore": -1.4339877980039053,
+            "entityMatchCount": 1,
+            "acceptedBy": "exact_entity_keyword",
+            "rank": 2,
+            "reviewStatus": "source_checked_by_assistant"
+          },
+          {
+            "id": "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+            "chunkId": "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+            "sourceId": "cnpoc-face",
+            "sectionId": "cnpoc-face-symbolic",
+            "title": "二、京剧脸谱",
+            "locator": "京剧脸谱的分类—象形脸、神仙脸 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+            "excerpt": "象形脸常见于神话戏，依据神怪形象组织图案，不拘统一谱式。\n神仙脸可借金银色或线条表现神圣感；\n这是舞台造型语言，不是人物历史相貌。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧脸谱",
+            "entityNames": [
+              "象形脸",
+              "神仙脸",
+              "神话戏",
+              "金色",
+              "银色",
+              "脸谱"
+            ],
+            "vectorScore": 0.5234713741599801,
+            "keywordScore": -1.3956257980006868,
+            "entityMatchCount": 1,
+            "acceptedBy": "exact_entity_keyword",
+            "rank": 3,
+            "reviewStatus": "source_checked_by_assistant"
+          },
+          {
+            "id": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "chunkId": "chunk_2abe9910874768f0330681f4029bea959df5456309279854c10a1c2ddc03f445",
+            "sourceId": "cnpoc-face",
+            "sectionId": "cnpoc-face-three-tiles",
+            "title": "二、京剧脸谱",
+            "locator": "京剧脸谱的分类—三块瓦脸 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200807/f1f8824fe1f4433a8f95a53f8e9278fa.shtml",
+            "excerpt": "三块瓦脸在整脸基础上突出两块眉区与一块鼻窝，所以有三块瓦之称；\n其下还有正、尖、花、老等不同变式。",
+            "contentKind": "original_fact_summary",
+            "category": "京剧脸谱",
+            "entityNames": [
+              "脸谱",
+              "整脸",
+              "三块瓦脸",
+              "三块窝脸"
+            ],
+            "vectorScore": 0.42374232727547456,
+            "keywordScore": -1.6028801086411306,
+            "entityMatchCount": 1,
+            "acceptedBy": "exact_entity_keyword",
+            "rank": 4,
+            "reviewStatus": "source_checked_by_assistant"
+          },
+          {
+            "id": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+            "chunkId": "chunk_dfc61eacab5be9b915d95a81a80969481e24723f6e0a287bacd97cf5e6426641",
+            "sourceId": "cnpoc-bao",
+            "sectionId": "cnpoc-bao-black",
+            "title": "包公为什么画黑脸？",
+            "locator": "正文第一段、第三段 · 入库片段 1/1",
+            "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/09f53e26870c4beb84b4f6ddad52fda2.shtml",
+            "excerpt": "包拯的黑脸常表达刚正形象。\n黑色在别的扮相中还可关联勇猛、肤色或突出眉眼，不能据此判断所有黑脸角色都具有同一种性格。",
+            "contentKind": "original_fact_summary",
+            "category": "角色文化",
+            "entityNames": [
+              "包拯",
+              "包公",
+              "黑脸",
+              "黑色",
+              "脸谱"
+            ],
+            "vectorScore": 0.48590846491338574,
+            "keywordScore": -1.4209682659059866,
+            "entityMatchCount": 1,
+            "acceptedBy": "exact_entity_keyword",
+            "rank": 5,
+            "reviewStatus": "source_checked_by_assistant"
+          }
+        ],
+        "uncertain": false,
+        "retrievalMode": "hybrid",
+        "matchedEntities": [
+          "脸谱"
+        ],
+        "elapsedSeconds": 0.0128,
+        "threshold": 0.57,
+        "candidateScores": [
+          {
+            "chunkId": "chunk_f36efb933f274ac855076c93fbdd937b64e4c23b9336cc14b36fbfe35e41378f",
+            "score": 0.5852949999485214
+          },
+          {
+            "chunkId": "chunk_4157d898ba184261adf01e52597a3b55956277ad082d9172d6b4567b2d896ada",
+            "score": 0.5517905873655851
+          },
+          {
+            "chunkId": "chunk_dea75128ab6aa601ff5e9b1e832fe7fc598e7c8c5bee3721e9930f9b402e9826",
+            "score": 0.5500905365220001
+          },
+          {
+            "chunkId": "chunk_66121d8c2818e18a364665072fb845c6337bb74fc7b0f25f7806bfc8ab1453b7",
+            "score": 0.543141812076438
+          },
+          {
+            "chunkId": "chunk_b40ee72d545e8fc3fc08893ebebdfcde3da5babe4fe9cad964b83e118859418a",
+            "score": 0.5353240357321658
+          },
+          {
+            "chunkId": "chunk_a213b2dd2da517f13e7d386f6c8bd739a7808076a39a47fb08eeb88858131871",
+            "score": 0.5335655637939731
+          },
+          {
+            "chunkId": "chunk_bb68cff95f29c3f7eece71c7e429050bdb95e603abe03cc46369d45dbae607a6",
+            "score": 0.53321239025743
+          },
+          {
+            "chunkId": "chunk_5052828e7e4253738e2073bc92892c543398a41f8def9f697e0c87fca54a57da",
+            "score": 0.528496602670756
+          },
+          {
+            "chunkId": "chunk_eeb62df3095266c96d50bc3883a220b98bb2de1923b8b1c7bcbb153854b7def2",
+            "score": 0.5234713741599801
+          },
+          {
+            "chunkId": "chunk_f9354a5998a732f6a5a2c25fac5aab61f96ba6f65a5cc83c9f218535ad739cb4",
+            "score": 0.5183287718368977
+          }
+        ],
+        "requestId": "0f049d0f-d5c4-4179-984c-176c76f5ac4b"
+      },
+      "pass": true
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "chatWrites": 0,
+  "passed": 2,
+  "failed": 0
+}

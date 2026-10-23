@@ -1,0 +1,161 @@
+{
+  "kind": "FINAL_FROZEN_SOURCE_LOCAL_GET_HTTP_ONLY",
+  "scope": "GET matches supported asset-file routes; prior two HEAD405 observations retained separately",
+  "results": [
+    {
+      "path": "/index.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 9.49
+    },
+    {
+      "path": "/history.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 12.97
+    },
+    {
+      "path": "/roles.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 2.73
+    },
+    {
+      "path": "/facial.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 12.71
+    },
+    {
+      "path": "/music.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 15.29
+    },
+    {
+      "path": "/gallery.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 15.27
+    },
+    {
+      "path": "/video.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 2.52
+    },
+    {
+      "path": "/about.html",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 13.04
+    },
+    {
+      "path": "/api/v1/health",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 22.33
+    },
+    {
+      "path": "/api/v1/capabilities",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 28.25
+    },
+    {
+      "path": "/api/v1/agent/history?page=1&pageSize=1",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 6.15
+    },
+    {
+      "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 30.9
+    },
+    {
+      "path": "/api/v1/assets/usage",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 22.59
+    },
+    {
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 16.99
+    },
+    {
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 2.95
+    },
+    {
+      "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 98.4,
+      "sha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "bytes": 15158668
+    },
+    {
+      "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 56.81,
+      "sha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "bytes": 8827324
+    },
+    {
+      "path": "/api/v1/chat/conversations?limit=20&offset=0",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 16.42,
+      "chatList": {
+        "items": [],
+        "hasMore": false
+      },
+      "directoryExists": false
+    },
+    {
+      "path": "/api/v1/knowledge/sources",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 15.71
+    },
+    {
+      "path": "/api/v1/assets/internal-models/3777a880-fc8c-4766-aade-948d20c6b8f0/viewer",
+      "method": "GET",
+      "status": 200,
+      "pass": true,
+      "elapsedMs": 15.09
+    }
+  ],
+  "passed": 20,
+  "failed": 0,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "productionChatWrites": 0,
+  "externalLLMConnectivity": "NOT_TESTED"
+}

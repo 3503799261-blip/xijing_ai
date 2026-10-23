@@ -1,0 +1,13 @@
+{
+  "localLinkCheck": {
+    "kind": "ACTUAL_LOCAL_MARKDOWN_LINK_CHECK",
+    "filesChecked": 7,
+    "localLinksChecked": 121,
+    "broken": []
+  },
+  "archiveManifestEntries": 62,
+  "archiveHashMismatches": [],
+  "screenshotHashMismatches": [],
+  "unexpectedPrivateOrModelFilesStaged": [],
+  "archiveCommitParent": "cd18d85f0d265a06ebc210d77c430564294a7eb8"
+}
