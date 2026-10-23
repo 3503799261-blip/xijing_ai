@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="戏境AI戏韵工坊：京剧RAG问答、四Agent协作、只读历史与真实3D资产。提供比赛导览及本地备用路线，现有模型只读展示，新增建模已关闭。">
+    <meta name="description" content="在戏境AI戏韵工坊探索京剧知识，查阅资料来源，继续你的对话，也可进入角色创作与数字资产展示。">
     <meta name="ai-workshop-api-base" content="/api/v1">
     <title>
       AI戏韵工坊｜梨园风华
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/ai-workshop.css?v=phase4-1">
     <link rel="stylesheet" href="css/ai-workshop-history.css?v=phase5-wp2-1">
     <link rel="stylesheet" href="css/ai-workshop-demo.css?v=phase5-wp3-1">
+    <link rel="stylesheet" href="css/ai-workshop-chat.css?v=product-1">
   </head>
   <body>
     <header class="site-header">
@@ -53,34 +54,32 @@
       <section class="ai-workshop-hero" aria-labelledby="ai-workshop-title">
         <div class="ai-workshop-shell">
           <div class="ai-workshop-hero-copy">
-            <span class="ai-workshop-kicker">戏境 AI · AI戏韵工坊</span>
-            <h1 id="ai-workshop-title" class="ai-workshop-title">AI赋能京剧非遗，<br>让传统文化焕发新生</h1>
-            <p class="ai-workshop-subtitle">探索京剧知识，与智能体协作，创造属于未来的国风数字角色。</p>
-            <div class="ai-workshop-hero-actions">
-              <a class="ai-workshop-button" href="#ai-workshop-qa" data-ai-workshop-target="qa">探索京剧知识 <span aria-hidden="true">→</span></a>
-              <a class="ai-workshop-button ai-workshop-button-secondary" href="#ai-workshop-create" data-ai-workshop-target="create">开启角色创作 <span aria-hidden="true">↗</span></a>
-              <a class="ai-workshop-button ai-workshop-button-secondary" href="#ai-workshop-demo">比赛演示导览 <span aria-hidden="true">↓</span></a>
-            </div>
-            <p id="ai-workshop-hero-service-note" class="ai-workshop-hero-note">本地服务状态待检查 · 历史与已有资产需读取后核实 · 新增建模关闭</p>
+            <span class="ai-workshop-kicker">戏境 AI · 京剧文化</span>
+            <h1 id="ai-workshop-title" class="ai-workshop-title">AI戏韵工坊</h1>
+            <p class="ai-workshop-subtitle">聊聊京剧，循着资料认识行当、脸谱与戏曲之美。</p>
+            <details class="ai-workshop-product-service"><summary>服务说明</summary><p id="ai-workshop-hero-service-note" class="ai-workshop-hero-note">正在检查知识服务。已有角色与数字资产可从次级入口查看。</p><button id="ai-workshop-refresh-service" class="ai-workshop-text-link" type="button">重新检查服务</button></details>
           </div>
-          <div class="ai-workshop-hero-seal" aria-hidden="true"><span>戏</span><span>境</span><small>文脉新生</small></div>
         </div>
       </section>
 
       <div class="ai-workshop-shell">
-        <nav class="ai-workshop-nav" aria-label="AI戏韵工坊内部导航">
-          <a href="#ai-workshop-overview" data-ai-workshop-target="overview" aria-current="true">工坊总览</a>
-          <a href="#ai-workshop-qa" data-ai-workshop-target="qa">京剧问答</a>
-          <a href="#ai-workshop-agents" data-ai-workshop-target="agents">Agent协作</a>
-          <a href="#ai-workshop-create" data-ai-workshop-target="create">角色创作</a>
-          <a href="#ai-workshop-model" data-ai-workshop-target="model">数字IP中心</a>
+        <nav class="ai-workshop-nav ai-workshop-product-nav" aria-label="AI戏韵工坊内部导航">
+          <a href="#ai-workshop-qa" data-ai-workshop-target="qa" aria-current="true">京剧问答</a>
+          <details class="ai-workshop-secondary-nav"><summary>创作与数字资产</summary><div>
+            <a href="#ai-workshop-create" data-ai-workshop-target="create">角色创作</a>
+            <a href="#ai-workshop-agents" data-ai-workshop-target="agents">协作与任务档案</a>
+            <a href="#ai-workshop-model" data-ai-workshop-target="model">已有3D与企业需求</a>
+            <a href="#ai-workshop-overview" data-ai-workshop-target="overview">了解工坊</a>
+          </div></details>
+          <a class="ai-workshop-guide-link" href="#ai-workshop-demo">演示导览</a>
         </nav>
         <noscript><p class="ai-workshop-feedback">请启用JavaScript使用问答、历史档案及3D交互；下方仍可阅读静态功能说明。静态说明不代表服务已经连通。</p></noscript>
         <p id="ai-workshop-notice" class="ai-workshop-notice" role="status" aria-live="polite" hidden></p>
 
+        <details id="ai-workshop-demo-disclosure" class="ai-workshop-demo-disclosure"><summary>比赛演示导览与服务说明</summary>
         <section id="ai-workshop-demo" class="ai-workshop-card ai-workshop-demo" aria-labelledby="ai-workshop-demo-heading">
           <div class="ai-workshop-card-header ai-workshop-demo-heading"><h2 id="ai-workshop-demo-heading" tabindex="-1">比赛演示导览</h2><span class="ai-workshop-badge">文化有据 · 过程可追溯</span></div>
-          <p class="ai-workshop-description">六步了解京剧知识、Agent协作与已有3D成果。导览只引路，不发送问题、不提交创作、不生成模型。历史记录与实时体验分开展示。</p>
+          <p class="ai-workshop-description">六步了解京剧知识、角色创作与已有3D成果。导览只引路；历史任务与实时操作分开展示。</p>
           <div class="ai-workshop-demo-actions"><button id="ai-workshop-demo-start" class="ai-workshop-button" type="button">开始六步导览</button><button id="ai-workshop-demo-backup" class="ai-workshop-button ai-workshop-button-secondary" type="button">进入只读备用演示</button></div>
           <div id="ai-workshop-demo-content" class="ai-workshop-demo-content" hidden>
             <p id="ai-workshop-demo-source" class="ai-workshop-feedback ai-workshop-demo-source" role="status" aria-live="polite">静态导览说明，不是AI执行进度。</p>
@@ -88,9 +87,10 @@
             <div class="ai-workshop-demo-current"><h3 id="ai-workshop-demo-title" tabindex="-1">认识戏境AI</h3><p id="ai-workshop-demo-description"></p><div id="ai-workshop-demo-links" class="ai-workshop-demo-actions"></div></div>
             <div class="ai-workshop-demo-actions"><button id="ai-workshop-demo-prev" class="ai-workshop-button ai-workshop-button-secondary" type="button">上一步</button><button id="ai-workshop-demo-next" class="ai-workshop-button" type="button">下一步</button><button id="ai-workshop-demo-skip" class="ai-workshop-text-link" type="button">跳到最后一步</button><button id="ai-workshop-demo-exit" class="ai-workshop-text-link" type="button">退出导览，返回正常体验</button></div>
           </div>
-          <p id="ai-workshop-demo-feedback" class="ai-workshop-feedback ai-workshop-demo-feedback" role="status" aria-live="polite">尚未开始导览。可随时直接使用下方功能；刷新后不保留导览模式。</p>
-          <details class="ai-workshop-details"><summary>检查本地演示条件与查看故障建议</summary><p class="ai-workshop-description">免费检查仅访问本项目后端，不连接AI供应商，不验证今日DeepSeek余额或外网。已有GLB及历史数据库仍需本机文件与后端；备用演示不是离线大模型。后端不可用时仍可阅读静态文化页面和本段说明。</p><button id="ai-workshop-demo-check" class="ai-workshop-button ai-workshop-button-secondary" type="button">检查本地演示条件（免费）</button><p id="ai-workshop-demo-check-time" class="ai-workshop-feedback ai-workshop-demo-check-time" role="status" aria-live="polite">未检查；不默认判定服务正常。</p><ul id="ai-workshop-demo-conditions" class="ai-workshop-demo-conditions"><li>本地知识服务：未检查</li><li>历史档案：未检查</li><li>写实模型登记记录：未检查，实际加载以Viewer为准</li><li>建模创建门禁：未检查</li></ul><p class="ai-workshop-description">后端无法连接：按README启动本机单worker服务；知识模型或索引缺失：检查已准备的本地资源，仍可查看可用历史/GLB；历史或GLB缺失：恢复受控资产与记录，不自动重建。没有可用记录时显示真实空状态。不得以测试Duck替代京剧成品。</p></details>
+          <p id="ai-workshop-demo-feedback" class="ai-workshop-feedback ai-workshop-demo-feedback" role="status" aria-live="polite">按需开始，也可随时退出导览；刷新后回到正常体验。</p>
+          <details class="ai-workshop-details"><summary>服务检查与故障建议</summary><p class="ai-workshop-description">此检查仅访问本项目后端，不连接付费AI供应商。历史任务和已有3D仍需要本地记录与文件，外部服务不可用时可改用只读路线。</p><button id="ai-workshop-demo-check" class="ai-workshop-button ai-workshop-button-secondary" type="button">检查本地演示条件（免费）</button><p id="ai-workshop-demo-check-time" class="ai-workshop-feedback ai-workshop-demo-check-time" role="status" aria-live="polite">尚未检查。</p><ul id="ai-workshop-demo-conditions" class="ai-workshop-demo-conditions"><li>本地知识服务：未检查</li><li>历史档案：未检查</li><li>写实模型登记记录：未检查，实际加载以Viewer为准</li><li>模型创建状态：未检查</li></ul><p class="ai-workshop-description">服务无法连接时，请按运行指南启动项目；知识模型或索引缺失时，可查看仍可用的历史任务和3D。历史或模型文件缺失时需要恢复已有资源，不会自动重建。</p></details>
         </section>
+        </details>
 
         <section id="ai-workshop-overview" class="ai-workshop-panel" data-ai-workshop-panel="overview" aria-labelledby="ai-workshop-overview-heading">
           <div class="ai-workshop-section-head">
@@ -129,52 +129,61 @@
 
         <section id="ai-workshop-qa" class="ai-workshop-panel" data-ai-workshop-panel="qa" aria-labelledby="ai-workshop-qa-heading">
           <div class="ai-workshop-section-head">
-            <span class="ai-workshop-kicker">问一段历史 · 识一抹脸谱</span>
-            <h2 id="ai-workshop-qa-heading" class="ai-workshop-heading" tabindex="-1">京剧AI智能问答</h2>
-            <p class="ai-workshop-description">让每一个问题，都有可以追溯的文化依据。</p>
+            <h2 id="ai-workshop-qa-heading" class="ai-workshop-heading" tabindex="-1">京剧知识问答</h2>
+            <p class="ai-workshop-description">可以继续追问，也可以新建一段对话。</p>
           </div>
           <div class="ai-workshop-qa-layout">
-            <div class="ai-workshop-chat">
-              <div class="ai-workshop-card-header"><h3>与京剧知识相遇</h3><span class="ai-workshop-badge ai-workshop-badge-unavailable" data-ai-workshop-qa-capability>服务状态待检查</span></div>
-              <div id="ai-workshop-messages" class="ai-workshop-message-list" role="log" aria-label="京剧问答与服务通知" aria-live="polite" aria-relevant="additions" aria-busy="false">
-                <article class="ai-workshop-message" data-message-role="notice"><strong>问答说明</strong><p>可询问京剧历史、行当、脸谱、服饰和剧目。点击发送才会产生真实问答API请求；由后端检索经来源核对的项目摘要，再调用云模型解释，资料不足会如实说明。引用可展开核查。每次提问独立检索，不提供跨问题的对话记忆；外部服务不可用时不会保证实时成功或替换成假答案。</p></article>
+            <details id="ai-workshop-conversation-sidebar" class="ai-workshop-conversation-sidebar" open>
+              <summary>历史会话</summary>
+              <div class="ai-workshop-conversation-sidebar-body">
+                <button id="ai-workshop-new-conversation" class="ai-workshop-button ai-workshop-button-secondary" type="button">＋ 新建对话</button>
+                <p id="ai-workshop-conversation-status" class="ai-workshop-feedback" role="status" aria-live="polite">正在读取会话……</p>
+                <div id="ai-workshop-conversations" class="ai-workshop-conversations" aria-label="已保存的问答会话"></div>
+                <button id="ai-workshop-more-conversations" class="ai-workshop-text-link" type="button" hidden>更多会话</button>
+                <p class="ai-workshop-conversation-note">京剧问答与角色创作任务分别保存。<a href="#ai-workshop-history">查看角色任务档案 →</a></p>
               </div>
+            </details>
+            <div class="ai-workshop-chat">
+              <div class="ai-workshop-card-header ai-workshop-chat-heading"><h3 id="ai-workshop-current-conversation">新对话</h3><span class="ai-workshop-badge ai-workshop-badge-unavailable" data-ai-workshop-qa-capability>正在检查服务</span></div>
+              <div id="ai-workshop-messages" class="ai-workshop-message-list" role="log" aria-label="京剧问答与服务通知" aria-live="polite" aria-relevant="additions" aria-busy="false">
+                <article class="ai-workshop-message" data-message-role="notice"><strong>今天想了解什么？</strong><p>聊聊京剧历史、行当、脸谱、服饰或剧目。回答会附上资料来源，资料不足时会说明。</p></article>
+              </div>
+              <div class="ai-workshop-composer">
               <div class="ai-workshop-suggestions" aria-label="推荐问题">
-                <span class="ai-workshop-label">不妨从这些问题开始</span>
                 <button class="ai-workshop-question" type="button" data-ai-workshop-question="京剧中的生旦净丑有什么区别？">生旦净丑有什么区别？</button>
                 <button class="ai-workshop-question" type="button" data-ai-workshop-question="京剧脸谱的颜色有什么寓意？">脸谱颜色有什么寓意？</button>
                 <button class="ai-workshop-question" type="button" data-ai-workshop-question="京剧武生的服饰有什么特点？">武生服饰有什么特点？</button>
                 <button class="ai-workshop-question" type="button" data-ai-workshop-question="《霸王别姬》有哪些代表性人物？">《霸王别姬》有哪些人物？</button>
               </div>
               <form id="ai-workshop-question-form" class="ai-workshop-form" novalidate>
-                <label class="ai-workshop-label" for="ai-workshop-question">你的京剧问题</label>
-                <textarea id="ai-workshop-question" class="ai-workshop-input" rows="3" maxlength="600" placeholder="写下你想了解的京剧知识……" aria-describedby="ai-workshop-question-error ai-workshop-question-count ai-workshop-question-help"></textarea>
-                <p id="ai-workshop-question-help" class="ai-workshop-description ai-workshop-question-help">最多600字；较长问题还受检索模型长度限制，请尽量一次说明一个问题。</p>
+                <label class="ai-workshop-label ai-workshop-sr-only" for="ai-workshop-question">你的京剧问题</label>
+                <textarea id="ai-workshop-question" class="ai-workshop-input" rows="3" maxlength="600" placeholder="写下问题，或继续追问……" aria-describedby="ai-workshop-question-error ai-workshop-question-count ai-workshop-question-help"></textarea>
+                <p id="ai-workshop-question-help" class="ai-workshop-description ai-workshop-question-help">Enter发送 · Shift+Enter换行</p>
                 <p id="ai-workshop-question-error" class="ai-workshop-feedback ai-workshop-feedback-error" role="alert" hidden></p>
-                <div class="ai-workshop-form-footer"><span id="ai-workshop-question-count">0 / 600 字</span><button id="ai-workshop-send" class="ai-workshop-button" type="submit" disabled>发送问题 <span aria-hidden="true">↑</span></button></div>
+                <div class="ai-workshop-form-footer"><span id="ai-workshop-question-count">0 / 600 字</span><button id="ai-workshop-send" class="ai-workshop-button" type="submit" disabled>发送 <span aria-hidden="true">↑</span></button></div>
               </form>
               <p id="ai-workshop-qa-status" class="ai-workshop-feedback" role="status" aria-live="polite" data-service-state="checking">正在检查知识服务状态……</p>
-              <p id="ai-workshop-qa-loading" class="ai-workshop-feedback" role="status" hidden>正在等待知识服务返回回答与资料依据……</p>
+              <p id="ai-workshop-qa-loading" class="ai-workshop-feedback" role="status" hidden>正在查阅资料并组织回答……</p>
               <p id="ai-workshop-qa-service-error" class="ai-workshop-feedback ai-workshop-feedback-error" role="alert" hidden></p>
-              <div class="ai-workshop-service-actions"><button id="ai-workshop-retry-question" class="ai-workshop-button ai-workshop-button-secondary" type="button" hidden>重试这次提问</button><button id="ai-workshop-refresh-service" class="ai-workshop-text-link" type="button">重新检查服务</button></div>
-              <p class="ai-workshop-demo-fallback">实时问答不可用时，可主动<a href="#ai-workshop-demo">进入只读备用导览</a>或<a href="#ai-workshop-history">查看已有Agent研究依据</a>。这些是历史资料，不是本次问答；没有保存的聊天记录不会补造。</p>
+              <div class="ai-workshop-service-actions"><button id="ai-workshop-retry-question" class="ai-workshop-button ai-workshop-button-secondary" type="button" hidden>重试这次提问</button></div>
+
+              </div>
             </div>
-            <aside class="ai-workshop-reference" aria-labelledby="ai-workshop-reference-heading">
-              <span class="ai-workshop-icon" aria-hidden="true">据</span>
-              <h3 id="ai-workshop-reference-heading">知识来源与引用</h3>
+            <details class="ai-workshop-reference ai-workshop-last-references" aria-labelledby="ai-workshop-reference-heading">
+              <summary id="ai-workshop-reference-heading">最近回答的资料来源</summary>
               <div id="ai-workshop-citations" class="ai-workshop-citation-list"><p class="ai-workshop-reference-empty">暂无知识引用。发送问题后，此处展示对应回答的真实资料依据。</p></div>
-              <p class="ai-workshop-description">资料不足时，应如实说明不确定性，让文化传播有据可循。</p>
-            </aside>
+              <p class="ai-workshop-description">资料不足时，应如实说明不确定性，让文化传播有据可循。</p><p class="ai-workshop-demo-fallback">服务暂不可用时，可继续查看已保存对话，或<a href="#ai-workshop-demo">使用只读演示导览</a>。</p>
+            </details>
           </div>
         </section>
 
         <section id="ai-workshop-agents" class="ai-workshop-panel" data-ai-workshop-panel="agents" aria-labelledby="ai-workshop-agents-heading">
           <div class="ai-workshop-section-head">
             <span class="ai-workshop-kicker">各司其职 · 共成一戏</span>
-            <h2 id="ai-workshop-agents-heading" class="ai-workshop-heading" tabindex="-1">多Agent协作工作台</h2>
-            <p class="ai-workshop-description">任务规划 → RAG文化研究 → 角色设计 → 文化审校 → 人工确认。真实任务可能因澄清、资料不足或审校问题暂停；下方实时工作台与历史档案分开展示，不播放虚构进度。</p>
+            <h2 id="ai-workshop-agents-heading" class="ai-workshop-heading" tabindex="-1">角色协作与任务档案</h2>
+            <p class="ai-workshop-description">任务规划 → 文化研究 → 角色设计 → 文化审校 → 人工确认。资料不足或需要调整时，任务会暂停等待你的意见。</p>
             <a class="ai-workshop-text-link" href="#ai-workshop-history">查看真实历史记录（只读） ↓</a>
-            <p class="ai-workshop-demo-fallback">实时提交失败时保留需求，不自动重跑。可手动<a href="#ai-workshop-history">读取历史执行记录</a>或<a href="#ai-workshop-demo">返回演示导览</a>，历史成功不代表当前需求已经完成。</p>
+            <p class="ai-workshop-demo-fallback">提交未完成时保留需求，稍后可手动重试。也可<a href="#ai-workshop-history">查看已有任务档案</a>。</p>
           </div>
           <div class="ai-workshop-progress ai-workshop-agent-progress">
             <span id="ai-workshop-agent-service-state" class="ai-workshop-badge ai-workshop-badge-unavailable" data-ai-workshop-agent-capability>协作服务待检查</span>
@@ -188,7 +197,7 @@
             <button id="ai-workshop-agent-service-refresh" class="ai-workshop-text-link" type="button">重新检查协作服务</button>
             <button id="ai-workshop-agent-new" class="ai-workshop-text-link" type="button">填写新创作需求 →</button>
           </div>
-          <p id="ai-workshop-agent-feedback" class="ai-workshop-feedback ai-workshop-agent-feedback" role="status" aria-live="polite">尚未提交创作任务。可前往角色创作区填写需求；本页面不会自动启动模型。</p>
+          <p id="ai-workshop-agent-feedback" class="ai-workshop-feedback ai-workshop-agent-feedback" role="status" aria-live="polite">尚未提交创作任务，可先填写角色设想。</p>
           <div class="ai-workshop-agent-grid">
             <article class="ai-workshop-agent-card" data-agent-id="planner">
               <div class="ai-workshop-agent-top"><span class="ai-workshop-agent-number">01 · 筹</span><span class="ai-workshop-status" data-agent-status data-state="pending">待执行</span></div>
@@ -228,8 +237,8 @@
             <button id="ai-workshop-agent-to-assets" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>将已确认角色带入数字IP中心 →</button>
             <p class="ai-workshop-description">仅导出审校通过且由你确认的文字方案；没有自动调用概念图或Neural4D。</p>
           </section>
-          <div class="ai-workshop-card">
-            <h3>协作流程说明</h3>
+          <details class="ai-workshop-card ai-workshop-details">
+            <summary>了解协作流程与阶段状态</summary>
             <ol class="ai-workshop-flow"><li>你提出创作需求</li><li>任务规划</li><li>文化研究</li><li>角色设计</li><li>文化审校</li><li>你确认最终方案</li></ol>
             <p class="ai-workshop-description">资料不足或审校提出问题时，任务停下来请你调整；重新创作会保留上一任务记录，不自动循环调用模型。</p>
             <div class="ai-workshop-state-legend" aria-label="状态含义示意，非实时执行记录">
@@ -237,10 +246,10 @@
             </div>
             <small class="ai-workshop-description">以上为状态含义示意，非实时执行记录。</small>
             <details class="ai-workshop-details"><summary>查看真实任务事件</summary><p>仅记录公开阶段状态与摘要，不显示模型隐藏思维过程；最多保留本页面最近50条。</p><ol id="ai-workshop-agent-events" class="ai-workshop-agent-events"></ol></details>
-          </div>
+          </details>
           <section id="ai-workshop-history" class="ai-workshop-card ai-workshop-history" aria-labelledby="ai-workshop-history-heading" data-history-source="persisted_history">
             <div class="ai-workshop-card-header"><h3 id="ai-workshop-history-heading">Agent历史档案</h3><span class="ai-workshop-badge">真实持久化记录 · 只读快照</span></div>
-            <p class="ai-workshop-description">手动读取本地已保存的任务、公开阶段产物与文化依据。这里不重跑Agent、不确认或取消任务，也不创建角色及模型。历史中的“运行中”仅是记录状态，非实时监控。</p>
+            <p class="ai-workshop-description">查阅已保存的角色方案、文化依据和确认记录。档案为只读历史，其中状态是保存时的记录。</p>
             <form id="ai-workshop-history-form" class="ai-workshop-history-filters" novalidate>
               <div><label class="ai-workshop-label" for="ai-workshop-history-state">记录状态</label><select id="ai-workshop-history-state" class="ai-workshop-input"><option value="">全部状态</option></select></div>
               <div><label class="ai-workshop-label" for="ai-workshop-history-type">任务类型</label><select id="ai-workshop-history-type" class="ai-workshop-input"><option value="">全部类型</option><option value="character_creation">角色创作</option></select></div>
@@ -262,7 +271,7 @@
           <div class="ai-workshop-section-head">
             <span class="ai-workshop-kicker">以传统为灵感 · 以想象为笔</span>
             <h2 id="ai-workshop-create-heading" class="ai-workshop-heading" tabindex="-1">AI角色创作</h2>
-            <p class="ai-workshop-description">先写下你心中的角色。你可以只整理本页草稿，也可以明确提交给四个Agent协作设计文字方案。概念图生成尚未开放。</p>
+            <p class="ai-workshop-description">写下你心中的角色，先整理草稿，再提交协作创作。方案经过文化审校，最终由你确认。</p>
             <a class="ai-workshop-text-link" href="#ai-workshop-demo">返回比赛演示导览 ↑</a>
           </div>
           <div class="ai-workshop-create-layout">
@@ -291,7 +300,7 @@
           </div>
           <div class="ai-workshop-card ai-workshop-concept-card">
             <h3>角色概念图与数字资产</h3>
-            <div class="ai-workshop-placeholder"><span class="ai-workshop-icon" aria-hidden="true">绘</span><p>让角色方案拥有可追溯的视觉表达</p><small id="ai-workshop-concept-status">平台图像API供应商尚待确认。可在数字IP中心导入有使用权的真实概念图，明确记录来源、Hash及人工接受。</small></div>
+            <p id="ai-workshop-concept-status" class="ai-workshop-description">图像生成尚未开放。可在数字资产区导入有使用权的概念图，并保存来源与确认记录。</p>
             <a class="ai-workshop-text-link" href="#ai-workshop-agents" data-ai-workshop-target="agents">了解Agent协作流程 →</a>
             <a class="ai-workshop-text-link" href="#ai-workshop-model" data-ai-workshop-target="model">进入数字IP中心 →</a>
           </div>
@@ -300,14 +309,14 @@
         <section id="ai-workshop-model" class="ai-workshop-panel" data-ai-workshop-panel="model" aria-labelledby="ai-workshop-model-heading">
           <div class="ai-workshop-section-head">
             <span class="ai-workshop-kicker">从二维意象 · 到三维新境</span>
-            <h2 id="ai-workshop-model-heading" class="ai-workshop-heading" tabindex="-1">AI数字IP生成中心</h2>
+            <h2 id="ai-workshop-model-heading" class="ai-workshop-heading" tabindex="-1">角色与数字资产</h2>
             <a class="ai-workshop-text-link" href="#ai-workshop-demo">返回比赛演示导览 ↑</a>
-            <p class="ai-workshop-description">从有据的文化角色，到可自由观察的数字资产。角色方案、保存的JSON和真实GLB各有对应记录；当前展示两次历史建模成果，不再新建模型。</p>
+            <p class="ai-workshop-description">查阅角色方案、概念图与已经保存的3D。模型仅在存在关联记录时展示，当前不开放新建模型。</p>
           </div>
           <ol class="ai-workshop-asset-flow" aria-label="可追溯数字IP流程"><li>Planner · 规划</li><li>Research · 文化依据</li><li>Designer · 角色方案</li><li>Reviewer · 人工确认</li><li>概念图 · 视觉确认</li><li>3D资产 · 交互查看</li></ol>
           <p class="ai-workshop-description">Agent工作台保留真实执行过程；这里复用服务器确认的角色快照，不会因查看资产而启动Agent或重新生成。</p>
           <a class="ai-workshop-text-link" href="#ai-workshop-agents" data-ai-workshop-target="agents">查看Agent真实任务与文化依据 →</a>
-          <p id="ai-workshop-asset-feedback" class="ai-workshop-feedback ai-workshop-asset-feedback" role="status" aria-live="polite">先选择已确认角色，或直接查看合法的已有GLB测试模型。所有本地操作与真实建模分别管理。</p>
+          <p id="ai-workshop-asset-feedback" class="ai-workshop-feedback ai-workshop-asset-feedback" role="status" aria-live="polite">选择已确认角色，查看对应的概念图与已有模型。</p>
           <section class="ai-workshop-card ai-workshop-asset-registration" aria-labelledby="ai-workshop-asset-heading">
             <div class="ai-workshop-card-header"><h3 id="ai-workshop-asset-heading">角色方案与应用方向</h3><span class="ai-workshop-badge">保留文化来源</span></div>
             <form id="ai-workshop-asset-form" class="ai-workshop-form" novalidate>
@@ -319,8 +328,7 @@
               </div>
               <label class="ai-workshop-label" for="ai-workshop-asset-purpose">本次资产用途</label><input id="ai-workshop-asset-purpose" class="ai-workshop-input" maxlength="240" value="京剧文化体验与比赛演示" placeholder="说明具体用途，避免填写敏感信息">
               <div id="ai-workshop-enterprise-fields" class="ai-workshop-enterprise-fields" hidden>
-                <p class="ai-workshop-description">企业模式目前为游戏、动漫IP与地方文旅的需求入口和共用创作流程，没有真实企业客户、订单或企业交付案例。填写和带入简报不会自动提交；商用许可、生产规格与最终交付仍需另行核查。</p>
-                <p class="ai-workshop-description">企业模式为用途需求与案例展示；商业许可、骨骼和游戏规格仍需实际核查。</p>
+                <p class="ai-workshop-description">面向游戏、动漫IP与地方文旅的需求整理入口，共用现有创作流程；目前没有真实企业交付案例。商业授权、模型规格与最终交付需另行核查，填写不会自动提交。</p>
                 <div class="ai-workshop-asset-form-grid">
                   <div><label class="ai-workshop-label" for="ai-workshop-enterprise-type">机构类型</label><select id="ai-workshop-enterprise-type" class="ai-workshop-input" data-ai-workshop-enterprise="organizationType"><option value="game">游戏公司</option><option value="tourism">文旅机构</option><option value="ip_design">IP设计服务</option></select></div>
                   <div><label class="ai-workshop-label" for="ai-workshop-enterprise-audience">目标受众</label><input id="ai-workshop-enterprise-audience" class="ai-workshop-input" maxlength="160" data-ai-workshop-enterprise="audience" placeholder="例如：青年文化体验者"></div>
@@ -350,29 +358,31 @@
               <label class="ai-workshop-label" for="ai-workshop-asset-image-license">来源工具 / 作者 / 使用许可</label><textarea id="ai-workshop-asset-image-license" class="ai-workshop-input" rows="2" maxlength="1000" placeholder="填写实际出处和许可；外部AI图片不能标记为本平台API生成"></textarea>
               <label class="ai-workshop-checkbox"><input id="ai-workshop-asset-image-rights" type="checkbox">我确认有权导入并用于上述用途，且已如实填写来源。</label>
               <button class="ai-workshop-button" type="submit" disabled>保存实际概念图</button>
-              <p class="ai-workshop-description">平台图像生成供应商与费用尚待确认。图片来源、许可、Hash及人工接受将关联角色与文化资料。</p>
+              <p class="ai-workshop-description">图像生成尚未开放。导入图片会保存来源、许可、文件Hash与确认记录。</p>
             </form>
           </section>
           <div class="ai-workshop-model-layout">
             <div class="ai-workshop-viewer-card">
               <label class="ai-workshop-label" for="ai-workshop-style-model-select">当前角色风格的3D资产</label><select id="ai-workshop-style-model-select" class="ai-workshop-input"><option value="">当前风格尚未生成3D模型</option></select>
-              <div class="ai-workshop-test-model-picker"><label class="ai-workshop-label" for="ai-workshop-model-select">独立Viewer测试素材（非角色风格资产）</label><select id="ai-workshop-model-select" class="ai-workshop-input"><option value="">请选择已有合法GLB测试模型</option></select><small>测试素材用于检查真实3D交互，不是角色模型，不会伪称已生成两种风格。</small></div>
+              <details class="ai-workshop-test-model-picker"><summary>其他已登记素材</summary><label class="ai-workshop-label" for="ai-workshop-model-select">独立校验素材（非角色资产）</label><select id="ai-workshop-model-select" class="ai-workshop-input"><option value="">请选择已有合法GLB测试模型</option></select><small>这里的测试素材仅用于交互校验，不属于当前角色或其风格版本。</small></details>
               <div id="ai-workshop-viewer-host" class="ai-workshop-model-viewport" role="region" aria-label="实时3D模型查看器" aria-busy="false" data-viewer-state="idle"></div>
               <p id="ai-workshop-viewer-status" class="ai-workshop-feedback" role="status" aria-live="polite">选择一个已登记的GLB模型开始查看</p>
               <p id="ai-workshop-viewer-error" class="ai-workshop-feedback ai-workshop-feedback-error" role="alert" hidden></p>
               <div class="ai-workshop-viewer-controls" aria-label="3D相机控制"><button id="ai-workshop-viewer-zoom-in" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>放大 ＋</button><button id="ai-workshop-viewer-zoom-out" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>缩小 −</button><button id="ai-workshop-viewer-reset" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>重置视角</button><button id="ai-workshop-viewer-touch" class="ai-workshop-button ai-workshop-button-secondary" type="button" aria-pressed="false" disabled>进入触摸交互</button><button id="ai-workshop-viewer-reload" class="ai-workshop-text-link" type="button" hidden>重新加载原模型</button></div>
               <p id="ai-workshop-viewer-help" class="ai-workshop-description">桌面拖拽旋转、滚轮缩放；手机点击“进入触摸交互”后可自由拖拽和双指缩放。</p>
-              <p id="ai-workshop-model-info" class="ai-workshop-citation-meta">测试模型会明确标注“合法导入，非Neural4D生成”。没有使用静态图片、GIF或视频替代交互模型。</p>
+              <p id="ai-workshop-model-info" class="ai-workshop-citation-meta">模型加载后显示其真实来源与使用范围。</p>
               <a id="ai-workshop-model-download" class="ai-workshop-text-link" href="#ai-workshop-model" download hidden>下载当前已登记模型 ↓</a>
               <details class="ai-workshop-details"><summary>导入有使用权的已有GLB</summary><form id="ai-workshop-model-import-form" class="ai-workshop-form" novalidate><label class="ai-workshop-label" for="ai-workshop-model-import-file">GLB文件（≤50MB）</label><input id="ai-workshop-model-import-file" class="ai-workshop-input" type="file" accept=".glb,model/gltf-binary"><label class="ai-workshop-label" for="ai-workshop-model-import-license">模型来源与许可</label><textarea id="ai-workshop-model-import-license" class="ai-workshop-input" rows="2" maxlength="1000" placeholder="填写模型真实来源和使用许可"></textarea><button class="ai-workshop-button ai-workshop-button-secondary" type="submit" disabled>检查并登记合法模型</button></form></details>
             </div>
             <aside class="ai-workshop-card ai-workshop-generation-card">
+              <details><summary>模型使用范围与服务状态</summary>
               <span class="ai-workshop-badge ai-workshop-badge-unavailable">真实建模已关闭 · 第三次取消</span><h3>已有成果，只读展示</h3>
               <p id="ai-workshop-asset-quota" class="ai-workshop-feedback">全项目最多3次新建模型HTTP提交尝试，未知或失败不自动返还次数。</p>
               <div id="ai-workshop-model-approval-summary"></div>
               <p id="ai-workshop-model-status" class="ai-workshop-feedback">两个历史真实模型已验收；第三次由用户决定不执行，剩余次数不等于继续调用授权。当前仅查看已有资源，新增建模保持关闭。</p>
               <button id="ai-workshop-model-submit" class="ai-workshop-button" type="button" disabled aria-describedby="ai-workshop-model-status">新增建模已关闭</button>
               <p class="ai-workshop-description">Agent、页面加载、刷新、测试和模型重载均不会提交Neural4D任务。所有真实创建必须经过后端鉴权、人工批准和SQLite原子配额保护。</p>
+              </details>
             </aside>
           </div>
         </section>

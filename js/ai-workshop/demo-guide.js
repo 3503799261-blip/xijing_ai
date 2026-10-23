@@ -13,7 +13,7 @@ const STEPS = Object.freeze([
   { title: '已有真实3D模型', panel: 'model', description: '写实主展示与Q版内部技术模型来自两次历史Neural4D任务。打开原模型后手动拖拽、缩放和重置；GLB加载情况以Viewer当前状态为准。它们不属于同一角色的两个风格版本。', source: '历史真实生成资产。Q版仅限内部非公开技术验证；公开演示优先使用写实主模型。没有新建模。' },
   { title: '企业应用方向与交付边界', panel: 'model', target: 'ai-workshop-asset-form', description: '企业入口可说明机构、受众、用途与文化边界，共用文化研究和人工核查机制。请手动选择企业模式再阅读表单；当前没有真实企业商用交付案例，不强制绑定Q版或写实风格。', source: '已实现企业需求入口，企业商用交付仍是应用方向。缺少商业许可或模型时不会补造交付成果。' },
 ]);
-const MUTATION_IDS = new Set(['ai-workshop-send', 'ai-workshop-retry-question', 'ai-workshop-agent-start', 'ai-workshop-agent-submit', 'ai-workshop-agent-submit-retry', 'ai-workshop-agent-confirm', 'ai-workshop-agent-cancel', 'ai-workshop-visual-accept', 'ai-workshop-image-accept', 'ai-workshop-model-submit', 'ai-workshop-prompt-edit-save']);
+const MUTATION_IDS = new Set(['ai-workshop-new-conversation', 'ai-workshop-send', 'ai-workshop-retry-question', 'ai-workshop-agent-start', 'ai-workshop-agent-submit', 'ai-workshop-agent-submit-retry', 'ai-workshop-agent-confirm', 'ai-workshop-agent-cancel', 'ai-workshop-visual-accept', 'ai-workshop-image-accept', 'ai-workshop-model-submit', 'ai-workshop-prompt-edit-save']);
 function localLoopback() {
   return ['127.0.0.1', 'localhost', '[::1]', '::1'].includes(globalThis.location?.hostname || '127.0.0.1');
 }

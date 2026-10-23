@@ -114,117 +114,173 @@ await check('image and model services return unavailable without a network reque
   assert.equal(calls, 0);
 });
 
-// Minimal DOM double checks behavior and text construction only. It does not
-// implement a browser renderer, HTML parser, accessibility tree or CSS layout.
+// The current chat UI is tested independently of Agent and asset controllers.
+// All histories below are explicit in-memory test doubles, never real AI output.
+const chatContracts = await import(new URL('js/ai-workshop/chat-contracts.js?v=product-1', root));
+const chatUi = await import(new URL('js/ai-workshop/chat-controller.js?v=product-1', root));
+const originalStorage = globalThis.localStorage;
+const id1 = 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
+const id2 = 'bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb';
+const date = '2026-10-23T01:00:00Z';
+const summaries = new Map(); let currentCreate = 0; const apiCalls = [];
+const summary = (item) => ({ id: item.id, title: item.title, createdAt: item.createdAt, updatedAt: item.updatedAt, turnCount: item.turns.length });
+const completedTurn = (question, key, result = answer) => ({ id: key, idempotencyKey: key, question, status: 'completed', answer: result, createdAt: date });
+function makeConversation(id, turns = []) { const value = { id, title: '离线测试会话', createdAt: date, updatedAt: date, turns }; summaries.set(id, value); return value; }
+const valueCopy = (value) => structuredClone(value);
+await check('chat contracts accept separate durable conversation identities and complete citations', () => {
+  const detail = makeConversation(id1, [completedTurn('离线问题', 'offline-key-001')]);
+  assert.equal(chatContracts.validateConversation(detail).turns[0].answer.citations[0].id, citation.id);
+  assert.equal(chatContracts.validateConversationList({ items: [summary(detail)], hasMore: false }).items[0].id, id1);
+  summaries.clear();
+});
+await check('chat contracts reject duplicate histories, traversal, invalid dates and invented answer evidence', () => {
+  const item = { id: id1, title: '测试', createdAt: date, updatedAt: date, turns: [] };
+  assert.throws(() => chatContracts.conversationId('../agent/history'));
+  assert.throws(() => chatContracts.validateConversationList({ items: [summary(item), summary(item)], hasMore: false }));
+  assert.throws(() => chatContracts.validateConversation({ ...item, updatedAt: 'not-a-date' }));
+  assert.throws(() => chatContracts.validateConversation({ ...item, turns: [completedTurn('测试', 'offline-key-002', { ...answer, citations: [] })] }));
+});
 class Element {
-  constructor(tag = 'div') {
-    this.tagName = tag.toUpperCase(); this.children = []; this.dataset = {}; this.attributes = {};
-    this.listeners = new Map(); this.hidden = false; this.disabled = false; this.value = ''; this._text = '';
-    this.className = ''; this.classList = { add() {}, remove() {}, toggle() {} }; this.style = { setProperty() {} };
-    this.options = []; this.selectedIndex = 0; this.offsetHeight = 82; this.scrollHeight = 100;
-  }
+  constructor(tag = 'div') { this.tagName = tag.toUpperCase(); this.children = []; this.dataset = {}; this.attributes = {}; this.listeners = new Map(); this.hidden = false; this.disabled = false; this.value = ''; this._text = ''; this.className = ''; this.open = true; this.scrollHeight = 100; }
   set textContent(value) { this.children = []; this._text = String(value); }
-  get textContent() { return this._text + this.children.map((child) => child.textContent).join(''); }
+  get textContent() { return this._text + this.children.map(child => child.textContent).join(''); }
+  set innerHTML(_value) { throw new Error('Unsafe HTML injection'); }
   append(...elements) { for (const element of elements) { element.parent = this; this.children.push(element); } }
   replaceChildren(...elements) { this.children = []; this._text = ''; this.append(...elements); }
-  remove() { if (this.parent) this.parent.children = this.parent.children.filter((child) => child !== this); }
+  remove() { if (this.parent) this.parent.children = this.parent.children.filter(child => child !== this); }
   setAttribute(name, value) { this.attributes[name] = String(value); }
   removeAttribute(name) { delete this.attributes[name]; }
-  addEventListener(name, handler) { const list = this.listeners.get(name) || []; list.push(handler); this.listeners.set(name, list); }
-  fire(name, event = {}) { for (const handler of this.listeners.get(name) || []) handler({ preventDefault() {}, button: 0, ...event }); }
+  addEventListener(name, handler) { this.listeners.set(name, [...this.listeners.get(name) || [], handler]); }
+  fire(name, event = {}) { const value = { preventDefault() {}, ...event }; for (const handler of this.listeners.get(name) || []) handler(value); }
   focus() { this.focused = true; }
-  scrollIntoView() {}
-  reset() { this.value = ''; }
+  requestSubmit() { this.fire('submit'); }
+  querySelectorAll(selector) { const all = this.children.flatMap(child => [child, ...child.querySelectorAll('*')]); return all.filter(child => selector === '*' || selector === 'button' && child.tagName === 'BUTTON' || selector === 'button[data-conversation-id]' && child.tagName === 'BUTTON' && child.dataset.conversationId || selector === '.ai-workshop-turn' && child.className === 'ai-workshop-turn'); }
+  querySelector(selector) { return this.querySelectorAll(selector)[0] || null; }
 }
-const elements = new Map(); const workshop = new Element();
-const names = ['overview', 'qa', 'agents', 'create', 'model'];
-for (const name of names) {
-  elements.set(`[data-ai-workshop-panel="${name}"]`, new Element('section'));
-  elements.set(`[data-ai-workshop-panel="${name}"] h2[tabindex="-1"]`, new Element('h2'));
-}
-const ids = ['question-form', 'question', 'question-count', 'question-error', 'send', 'messages', 'qa-status', 'qa-loading', 'qa-service-error', 'retry-question', 'refresh-service', 'citations', 'hero-service-note', 'creation-form', 'brief', 'style', 'brief-error', 'draft-content', 'draft-status', 'save-draft', 'reset-draft', 'notice'];
-for (const id of ids) elements.set(`#ai-workshop-${id}`, new Element());
-const byId = (id) => elements.get(`#ai-workshop-${id}`);
-const nav = names.map((name) => { const link = new Element('a'); link.dataset.aiWorkshopTarget = name; return link; });
-const badges = [new Element('span'), new Element('span')];
-workshop.querySelector = (selector) => elements.get(selector) || null;
-workshop.querySelectorAll = (selector) => selector === '[data-ai-workshop-target]' ? nav : selector === '[data-ai-workshop-qa-capability]' ? badges : [];
-globalThis.document = { readyState: 'complete', querySelector: (selector) => selector === '#ai-workshop' ? workshop : selector === '.site-header' ? new Element('header') : null, createElement: (tag) => new Element(tag) };
-globalThis.window = { location: globalThis.location, history: { pushState(a, b, hash) { globalThis.location.hash = hash; } }, addEventListener() {} };
-globalThis.fetch = async (url) => reply(url.endsWith('/capabilities') ? enabled : answer);
-const flush = async () => { await new Promise((resolve) => originalTimeout(resolve, 0)); };
-const descendants = (element) => element.children.flatMap((child) => [child, ...descendants(child)]);
-const turns = () => byId('messages').children.filter((element) => element.className === 'ai-workshop-turn');
-await import(new URL('js/ai-workshop/main.js?v=phase3-1', root));
+const ids = ['question-form', 'question', 'send', 'messages', 'qa-service-error', 'retry-question', 'question-error', 'question-count', 'qa-loading', 'conversations', 'conversation-status', 'more-conversations', 'new-conversation', 'current-conversation', 'citations', 'conversation-sidebar'];
+const elements = new Map(ids.map(id => [`#ai-workshop-${id}`, new Element(id.includes('conversation') && id === 'new-conversation' ? 'button' : 'div')]));
+const rootElement = new Element();
+rootElement.querySelector = selector => elements.get(selector) || null;
+rootElement.querySelectorAll = () => [];
+const byId = id => elements.get(`#ai-workshop-${id}`);
+const descendants = element => element.children.flatMap(child => [child, ...descendants(child)]);
+const turns = () => byId('messages').children.filter(child => child.className === 'ai-workshop-turn');
+const storage = new Map();
+globalThis.localStorage = { getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value) };
+globalThis.document = { createElement: tag => new Element(tag), querySelector: () => null };
+globalThis.window = { location: globalThis.location };
+const defaultFetch = async (url, options = {}) => {
+  const request = { url, options }; apiCalls.push(request);
+  const parsed = new URL(url);
+  if (parsed.pathname === '/api/v1/chat/conversations') {
+    if (options.method === 'POST') return reply(valueCopy(makeConversation(currentCreate++ === 0 ? id1 : id2)));
+    return reply({ items: [...summaries.values()].map(summary), hasMore: false });
+  }
+  if (parsed.pathname.startsWith('/api/v1/chat/conversations/')) return reply(valueCopy(summaries.get(parsed.pathname.split('/').at(-1))));
+  if (parsed.pathname === '/api/v1/capabilities') return reply(enabled);
+  if (parsed.pathname === '/api/v1/chat') {
+    const body = JSON.parse(options.body); const item = summaries.get(body.conversationId); assert.ok(item, 'Existing selected conversation is required');
+    const key = options.headers['X-Idempotency-Key']; const result = { ...answer, requestId: `offline-${apiCalls.length}` };
+    if (!item.turns.some(turn => turn.idempotencyKey === key)) item.turns.push(completedTurn(body.question, key, result));
+    return reply(result);
+  }
+  throw new Error('Unexpected offline route');
+};
+globalThis.fetch = defaultFetch;
+const flush = async () => { for (let index = 0; index < 12; index += 1) await Promise.resolve(); await new Promise(resolve => originalTimeout(resolve, 0)); };
+const states = [];
+const controller = chatUi.initializeChat({ root: rootElement, setServiceState: (...values) => states.push(values), onServiceFailure() {} });
 await flush();
-
-await check('UI capabilities and status are driven by fetched state (DOM double)', () => {
-  assert.equal(byId('qa-status').dataset.serviceState, 'ready');
-  assert.equal(badges[0].dataset.serviceState, 'ready');
+const chatCalls = () => apiCalls.filter(call => new URL(call.url).pathname === '/api/v1/chat');
+await check('new controller reads empty persisted history without creating conversations or sending chat', () => {
+  assert.equal(apiCalls.filter(call => call.options.method === 'POST').length, 0);
+  assert.ok(byId('conversation-status').textContent.includes('还没有历史会话')); assert.equal(controller.isBusy(), false);
 });
-await check('UI pending lock blocks duplicate submissions and preserves a newer input (DOM double)', async () => {
-  let release; const waiting = new Promise((resolve) => { release = resolve; }); const calls = [];
-  globalThis.fetch = async (url, options) => { if (url.endsWith('/capabilities')) return reply(enabled); calls.push(options); await waiting; return reply(answer); };
-  byId('question').value = '离线第一题';
-  byId('question-form').fire('submit'); byId('question-form').fire('submit');
-  assert.equal(calls.length, 1); assert.equal(byId('send').disabled, true); assert.equal(byId('messages').attributes['aria-busy'], 'true');
+await check('explicit new conversation creates one independent server session without a model request', async () => {
+  byId('new-conversation').fire('click'); await flush();
+  assert.equal(summaries.size, 1); assert.equal(chatCalls().length, 0); assert.equal(storage.get('xijing-selected-chat-v1'), id1);
+});
+await check('pending lock prevents duplicate sends and preserves a newer draft while provider result returns', async () => {
+  let release; const pending = new Promise(resolve => { release = resolve; });
+  globalThis.fetch = async (url, options) => { if (new URL(url).pathname === '/api/v1/chat') await pending; return defaultFetch(url, options); };
+  byId('question').value = '离线第一题'; byId('question-form').fire('submit'); byId('question-form').fire('submit');
+  assert.equal(controller.isBusy(), true); assert.equal(byId('send').disabled, true); assert.equal(byId('messages').attributes['aria-busy'], 'true');
   byId('question').value = '等待期间编辑的新问题'; release(); await flush();
-  assert.equal(byId('question').value, '等待期间编辑的新问题'); assert.equal(byId('send').disabled, false);
-  assert.equal(byId('messages').attributes['aria-busy'], 'false');
-  assert.equal(turns().length, 1);
+  assert.equal(chatCalls().length, 1); assert.equal(byId('question').value, '等待期间编辑的新问题'); assert.equal(turns().length, 1); assert.equal(byId('send').disabled, false);
+  globalThis.fetch = defaultFetch;
 });
-await check('UI keeps each answer citation identity and uses text nodes (DOM double)', async () => {
-  const second = { ...answer, answer: '<img src=x onerror=alert(1)> 离线测试文本', requestId: 'test-request-2' };
-  globalThis.fetch = async () => reply(second);
-  byId('question').value = '离线第二题'; byId('question-form').fire('submit'); await flush();
-  assert.equal(byId('citations').dataset.requestId, 'test-request-2');
-  const firstAnswer = descendants(turns()[0]).find((element) => element.dataset.messageRole === 'assistant');
-  firstAnswer.children.find((element) => element.tagName === 'BUTTON').fire('click');
-  assert.equal(byId('citations').dataset.requestId, 'test-request');
-  assert.ok(byId('messages').textContent.includes('<img src=x onerror=alert(1)>'));
-  assert.equal(descendants(byId('messages')).filter((element) => element.tagName === 'IMG').length, 0);
-});
-await check('UI free capability recheck preserves the error, retry and history; manual retry reuses its key (DOM double)', async () => {
-  const keys = []; let fail = true; let backendOnline = false; let capabilityCalls = 0;
+await check('continuing a conversation forwards its real identifier and retains ordered per-answer citations safely', async () => {
+  const injected = { ...answer, answer: '<img src=x onerror=alert(1)>离线文本', requestId: 'offline-text-only' };
   globalThis.fetch = async (url, options) => {
-    if (url.endsWith('/capabilities')) { capabilityCalls += 1; if (!backendOnline) throw new TypeError('offline capabilities'); return reply(enabled); }
-    keys.push(options.headers['X-Idempotency-Key']);
-    if (fail) throw new TypeError('offline failure');
-    return reply({ ...answer, requestId: 'retry-request' });
+    const response = await defaultFetch(url, options);
+    if (new URL(url).pathname === '/api/v1/chat') { const item = summaries.get(id1); item.turns.at(-1).answer = injected; return reply(injected); }
+    return response;
   };
-  byId('question').value = '离线手动重试题'; byId('question-form').fire('submit'); await flush();
-  const count = turns().length; assert.equal(byId('retry-question').hidden, false);
-  const afterFailure = { calls: capabilityCalls, state: badges[0].dataset.serviceState, cache: s.getServiceCapabilities().questionAnswering, error: byId('qa-service-error').textContent, status: byId('qa-status').dataset.serviceState };
-  const historyRequestIds = descendants(byId('messages')).filter((element) => element.dataset.messageRole === 'assistant').map((element) => element.dataset.requestId);
-  backendOnline = true; byId('refresh-service').fire('click'); await flush();
-  const afterRecovery = { state: badges[0].dataset.serviceState, error: byId('qa-service-error').textContent, retryHidden: byId('retry-question').hidden, status: byId('qa-status').dataset.serviceState, chats: keys.length };
-  fail = false; byId('retry-question').fire('click'); await flush();
-  assert.equal(keys.length, 2); assert.equal(keys[0], keys[1]); assert.equal(turns().length, count);
-  assert.equal(byId('qa-service-error').hidden, true);
-  assert.equal(afterFailure.calls, 1); assert.equal(afterFailure.state, 'unavailable'); assert.equal(afterFailure.cache, false); assert.equal(afterFailure.status, 'error');
-  assert.ok(afterFailure.error.includes('无法连接知识服务')); assert.deepEqual(historyRequestIds, ['test-request', 'test-request-2']);
-  assert.equal(afterRecovery.state, 'ready'); assert.equal(afterRecovery.error, afterFailure.error); assert.equal(afterRecovery.retryHidden, false); assert.equal(afterRecovery.status, 'error'); assert.equal(afterRecovery.chats, 1);
+  byId('question').value = '离线追问题'; byId('question-form').fire('submit'); await flush();
+  assert.equal(JSON.parse(chatCalls().at(-1).options.body).conversationId, id1); assert.equal(turns().length, 2);
+  assert.equal(descendants(byId('messages')).filter(child => child.dataset.messageRole === 'assistant').length, 2);
+  assert.ok(byId('messages').textContent.includes('<img src=x onerror=alert(1)>'));
+  assert.equal(descendants(byId('messages')).filter(child => child.tagName === 'IMG').length, 0);
+  assert.equal(descendants(byId('messages')).filter(child => child.className === 'ai-workshop-answer-references').length, 2);
+  globalThis.fetch = defaultFetch;
 });
-await check('UI trims whole turns to twelve and rejects overlong input (DOM double)', async () => {
-  let calls = 0; globalThis.fetch = async () => { calls += 1; return reply({ ...answer, requestId: `history-${calls}` }); };
-  for (let index = 0; index < 11; index += 1) { byId('question').value = `离线历史题${index}`; byId('question-form').fire('submit'); await flush(); }
-  assert.equal(turns().length, 12);
-  assert.equal(descendants(byId('messages')).filter((element) => element.dataset.messageRole === 'assistant').length, 12);
-  byId('question').value = '字'.repeat(601); byId('question-form').fire('submit'); await flush();
-  assert.equal(calls, 11); assert.equal(byId('question').attributes['aria-invalid'], 'true');
+await check('new session has no previous messages and switching restores server messages and session draft', async () => {
+  byId('question').value = '第一会话未发送草稿'; byId('new-conversation').fire('click'); await flush();
+  assert.equal(storage.get('xijing-selected-chat-v1'), id2); assert.equal(turns().length, 0); assert.equal(byId('question').value, '');
+  byId('question').value = '第二会话独立问题'; byId('question-form').fire('submit'); await flush();
+  assert.equal(JSON.parse(chatCalls().at(-1).options.body).conversationId, id2); assert.equal(turns().length, 1);
+  byId('conversations').children.find(child => child.dataset.conversationId === id1).fire('click'); await flush();
+  assert.equal(turns().length, 2); assert.ok(!byId('messages').textContent.includes('第二会话独立问题')); assert.equal(byId('question').value, '第一会话未发送草稿');
 });
-await check('HTML bindings, safe rendering and complete import version chain (static)', async () => {
-  const html = await readFile(new URL('about.html', root), 'utf8');
-  const main = await readFile(new URL('js/ai-workshop/main.js', root), 'utf8');
-  const services = await readFile(new URL('js/ai-workshop/services.js', root), 'utf8');
-  const css = await readFile(new URL('css/ai-workshop.css', root), 'utf8');
-  const requiredIds = [...main.matchAll(/required\('#([^']+)'\)/g)].map((match) => match[1]);
-  for (const id of requiredIds) assert.ok(html.includes(`id="${id}"`), `missing HTML binding: ${id}`);
-  for (const code of [main, services]) assert.equal(/(?:innerHTML|outerHTML)\s*=|insertAdjacentHTML|eval\s*\(/.test(code), false);
-  assert.ok(main.includes("from './services.js?v=phase4-1'")); assert.ok(main.includes("from './contracts.js?v=phase4-1'"));
-  assert.ok(services.includes("from './contracts.js?v=phase4-1'")); assert.ok(html.includes('main.js?v=phase4-1')); assert.ok(html.includes('ai-workshop.css?v=phase4-1'));
-  assert.ok(css.includes('.ai-workshop-citation')); assert.ok(css.includes('prefers-reduced-motion'));
+await check('failed send keeps input and manual retry reuses one key without duplicate UI turn or automatic request', async () => {
+  const keys = []; let fail = true;
+  globalThis.fetch = async (url, options) => {
+    if (new URL(url).pathname === '/api/v1/chat') { keys.push(options.headers['X-Idempotency-Key']); if (fail) return reply({ error: { code: 'LLM_TIMEOUT', message: '离线测试：超时，未自动重发', retryable: true }, requestId: 'offline-timeout' }, 504); }
+    return defaultFetch(url, options);
+  };
+  byId('question').value = '离线失败重试'; byId('question-form').fire('submit'); await flush(); const count = turns().length;
+  assert.equal(keys.length, 1); assert.equal(byId('question').value, '离线失败重试'); assert.equal(byId('retry-question').hidden, false); assert.equal(controller.isBusy(), false);
+  await flush(); assert.equal(keys.length, 1); fail = false; byId('retry-question').fire('click'); await flush();
+  assert.deepEqual(keys, [keys[0], keys[0]]); assert.equal(turns().length, count); assert.equal(byId('qa-service-error').hidden, true); assert.equal(byId('question').value, '');
+  globalThis.fetch = defaultFetch;
 });
+await check('an older failed turn followed by a completed turn cannot be retried out of sequence', async () => {
+  const item = summaries.get(id2);
+  item.turns = [{ id: 'offline-old-failure', idempotencyKey: 'offline-old-failure', question: '旧失败请求', status: 'failed', error: { code: 'SEARCH_TIMEOUT', message: '离线旧失败', retryable: true }, createdAt: date }, completedTurn('后续已完成问题', 'offline-later-turn')];
+  const count = chatCalls().length; byId('conversations').children.find(child => child.dataset.conversationId === id2).fire('click'); await flush();
+  assert.equal(byId('retry-question').hidden, true); assert.ok(byId('messages').textContent.includes('后续已完成问题')); assert.equal(chatCalls().length, count);
+  byId('conversations').children.find(child => child.dataset.conversationId === id1).fire('click'); await flush();
+});
+await check('unknown historical request stays visibly unresolved without enabling automatic retry', async () => {
+  const item = summaries.get(id2); item.turns = [{ id: 'offline-unknown', idempotencyKey: 'offline-unknown', question: '离线未知请求', status: 'unknown', createdAt: date }];
+  const count = chatCalls().length; byId('conversations').children.find(child => child.dataset.conversationId === id2).fire('click'); await flush();
+  assert.ok(byId('messages').textContent.includes('结果尚未确认')); assert.equal(byId('retry-question').hidden, true); assert.equal(chatCalls().length, count);
+});
+await check('blank and overlong questions do not send; Enter sends while Shift+Enter and IME composition do not', async () => {
+  let count = chatCalls().length;
+  byId('question').value = '  '; byId('question-form').fire('submit'); await flush(); assert.equal(chatCalls().length, count);
+  byId('question').value = '字'.repeat(601); byId('question-form').fire('submit'); await flush(); assert.equal(chatCalls().length, count); assert.equal(byId('question').attributes['aria-invalid'], 'true');
+  byId('question').value = '离线键盘问题'; byId('question').fire('keydown', { key: 'Enter', shiftKey: true }); byId('question').fire('keydown', { key: 'Enter', isComposing: true }); await flush(); assert.equal(chatCalls().length, count);
+  byId('question').fire('keydown', { key: 'Enter' }); await flush(); assert.equal(chatCalls().length, count + 1);
+});
+await check('chat transport rejects invalid identities locally; list/create/detail routes stay separate from Agent history', async () => {
+  let calls = 0; globalThis.fetch = async () => { calls += 1; return reply({}); };
+  assert.throws(() => s.getConversation('../agent/history'), error => error.code === 'INVALID_CONVERSATION'); assert.equal(calls, 0);
+  assert.throws(() => s.listConversations(-1));
+  const routes = [];
+  globalThis.fetch = async (url, options) => { routes.push({ url, method: options.method }); return reply(options.method === 'POST' || new URL(url).pathname.endsWith(id1) ? summaries.get(id1) : { items: [], hasMore: false }); };
+  await s.listConversations(); await s.createConversation(); await s.getConversation(id1);
+  assert.equal(routes.length, 3); assert.ok(routes.every(route => new URL(route.url).pathname.startsWith('/api/v1/chat/conversations'))); assert.deepEqual(routes.map(route => route.method), ['GET', 'POST', 'GET']);
+  globalThis.fetch = defaultFetch;
+});
+await check('HTML bindings, safe text rendering and module chain remain complete (static)', async () => {
+  const html = await readFile(new URL('about.html', root), 'utf8'); const code = await readFile(new URL('js/ai-workshop/chat-controller.js', root), 'utf8'); const main = await readFile(new URL('js/ai-workshop/main.js', root), 'utf8'); const services = await readFile(new URL('js/ai-workshop/services.js', root), 'utf8'); const css = await readFile(new URL('css/ai-workshop.css', root), 'utf8');
+  const requiredIds = [...code.matchAll(/byId\('([^']+)'\)/g)].map(match => `ai-workshop-${match[1]}`);
+  for (const id of requiredIds) assert.ok(html.includes(`id="${id}"`), `missing chat HTML binding: ${id}`);
+  for (const source of [code, main, services]) assert.equal(/(?:innerHTML|outerHTML)\s*=|insertAdjacentHTML|eval\s*\(/.test(source), false);
+  assert.ok(main.includes('chat-controller.js?v=product-1')); assert.ok(services.includes('chat-contracts.js?v=product-1')); assert.ok(css.includes('.ai-workshop-citation')); assert.ok(css.includes('prefers-reduced-motion'));
+});
+globalThis.localStorage = originalStorage;
 
 globalThis.fetch = originalFetch;
 globalThis.setTimeout = originalTimeout;

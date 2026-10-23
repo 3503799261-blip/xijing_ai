@@ -1,4 +1,5 @@
 import { SERVICE_CAPABILITIES, SERVICE_MESSAGES, CREATION_STYLES, validateCapabilities, validateQuestionAnswer, validateServiceError, validateWorkflowCreated, validateWorkflowStatus, validateWorkflowResult, validateWorkflowTaskId, validateAssetIdentifier, validateCharacterAsset, validateCharacterAssetList, validateAssetImage, validateAssetModel, validateModelList, validateAssetUsage } from './contracts.js?v=phase4-1';
+import { conversationId, validateConversationList, validateConversation } from './chat-contracts.js?v=product-1';
 
 const CHAT_TIMEOUT_MS = 55000;
 const CAPABILITY_TIMEOUT_MS = 8000;
@@ -140,6 +141,25 @@ export async function askOperaQuestion(request, { idempotencyKey = createSubmiss
   } catch {
     throw new ServiceError('INVALID_RESPONSE', '知识服务回答或引用校验失败，未展示未经验证的回答。请检查后端后重试。', true);
   }
+}
+
+// Chat history is separate from Agent archives. Reads never create a conversation.
+async function conversationRequest(path, options, validator) {
+  const body = await requestJson(`chat/conversations${path}`, options, CAPABILITY_TIMEOUT_MS);
+  try { return validator(body); }
+  catch { throw new ServiceError('INVALID_CONVERSATION_RESPONSE', '会话记录暂时无法读取，请重新加载会话列表。', true); }
+}
+export function listConversations(offset = 0) {
+  if (!Number.isSafeInteger(offset) || offset < 0) throw new ServiceError('INVALID_PAGE', '会话页码无效。');
+  return conversationRequest(`?limit=20&offset=${offset}`, { method: 'GET', headers: { Accept: 'application/json' } }, validateConversationList);
+}
+export function createConversation() {
+  return conversationRequest('', { method: 'POST', headers: { Accept: 'application/json', 'Content-Type': 'application/json' }, body: '{}' }, validateConversation);
+}
+export function getConversation(id) {
+  try { conversationId(id); }
+  catch { throw new ServiceError('INVALID_CONVERSATION', '会话标识无效，请选择其他会话。'); }
+  return conversationRequest(`/${encodeURIComponent(id)}`, { method: 'GET', headers: { Accept: 'application/json' } }, validateConversation);
 }
 
 /** @param {import('./contracts.js').Capability} capability */

@@ -1,0 +1,235 @@
+/* Product layout: existing cultural pages and workshop business modules remain intact. */
+.ai-workshop {
+  --ai-workshop-shadow: none;
+  background: var(--cream, #f5edde);
+}
+
+.ai-workshop .ai-workshop-shell { width: min(1280px, 94%); }
+.ai-workshop-hero { min-height: 0; padding: 22px 0; }
+.ai-workshop-hero > .ai-workshop-shell { display: block; }
+.ai-workshop-hero::after { display: none; }
+.ai-workshop-hero-copy { max-width: none; position: relative; padding-right: 115px; }
+.ai-workshop-hero .ai-workshop-kicker { font-size: .8rem; letter-spacing: .12em; }
+.ai-workshop-title { margin: 4px 0 6px; font-size: clamp(1.65rem, 2.4vw, 2.1rem); line-height: 1.35; letter-spacing: .045em; }
+.ai-workshop-subtitle { font-size: 1rem; line-height: 1.7; }
+.ai-workshop-product-service { position: absolute; right: 0; top: 20px; z-index: 8; font-size: .9rem; }
+.ai-workshop-product-service > summary { cursor: pointer; color: #ead9b5; }
+.ai-workshop-product-service[open] { width: min(380px, 100%); padding: 14px 18px; border: 1px solid rgba(201,155,69,.4); border-radius: 8px; background: #3a080c; }
+.ai-workshop-product-service .ai-workshop-hero-note { margin: 12px 0 0; color: #eddfc7; }
+.ai-workshop-product-service .ai-workshop-text-link { color: #f1d58c; }
+
+.ai-workshop-product-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 16px 0 0;
+  padding: 0 0 12px;
+  border: 0;
+  border-bottom: 1px solid var(--ai-workshop-border);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.ai-workshop-product-nav > a,
+.ai-workshop-secondary-nav > summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px 14px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: var(--muted, #705d57);
+  font-size: .98rem;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.ai-workshop-product-nav > a.ai-workshop-is-active,
+.ai-workshop-product-nav > a[aria-current] {
+  color: var(--red, #8d1820);
+  background: #eadbc4;
+  border-color: rgba(151,91,36,.2);
+  box-shadow: none;
+}
+.ai-workshop-product-nav > .ai-workshop-guide-link { margin-left: auto; font-weight: 400; }
+.ai-workshop-secondary-nav { position: relative; }
+.ai-workshop-secondary-nav > summary { list-style-position: inside; }
+.ai-workshop-secondary-nav > summary::after { content: "⌄"; margin-left: 8px; }
+.ai-workshop-secondary-nav[open] > summary { color: var(--red, #8d1820); background: var(--paper, #fffaf0); }
+.ai-workshop-secondary-nav > div { position: absolute; z-index: 30; left: 0; top: calc(100% + 6px); min-width: 230px; padding: 6px; border: 1px solid var(--ai-workshop-border); border-radius: 8px; background: var(--paper, #fffaf0); box-shadow: 0 8px 20px rgba(58,17,14,.09); }
+.ai-workshop-secondary-nav a { display: block; min-height: 42px; padding: 9px 12px; border: 0; border-radius: 4px; font-size: .96rem; text-align: left; }
+.ai-workshop-secondary-nav a:hover,
+.ai-workshop-secondary-nav a.ai-workshop-is-active { color: var(--red, #8d1820); background: #efe2cd; box-shadow: none; }
+
+.ai-workshop-demo-disclosure { margin: 14px 0 0; color: var(--muted, #705d57); }
+.ai-workshop-demo-disclosure > summary { width: fit-content; cursor: pointer; font-size: .9rem; }
+.ai-workshop-demo-disclosure[open] > summary { margin-bottom: 14px; color: var(--red, #8d1820); }
+.ai-workshop-demo-disclosure:not([open]) { margin: 12px 0 0; }
+.ai-workshop-demo-disclosure .ai-workshop-demo { margin: 0; }
+
+.ai-workshop-panel { margin-top: 24px; animation: none; }
+#ai-workshop-qa > .ai-workshop-section-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin-bottom: 14px; padding-bottom: 0; border-bottom: 0; }
+#ai-workshop-qa > .ai-workshop-section-head .ai-workshop-heading { margin: 0; color: var(--red, #8d1820); font-size: 1.15rem; line-height: 1.6; letter-spacing: normal; }
+#ai-workshop-qa > .ai-workshop-section-head .ai-workshop-description { margin: 0; font-size: .94rem; }
+.ai-workshop-qa-layout { display: grid; grid-template-columns: 235px minmax(0, 1fr); align-items: start; gap: 0 22px; }
+.ai-workshop-conversation-sidebar { min-width: 0; padding: 16px 14px; border: 1px solid var(--ai-workshop-border); border-radius: 9px; background: #eee3d1; }
+.ai-workshop-conversation-sidebar > summary { cursor: pointer; color: var(--red, #8d1820); font-size: 1rem; font-weight: 700; }
+.ai-workshop-conversation-sidebar-body { padding-top: 16px; }
+.ai-workshop-conversation-sidebar .ai-workshop-button { width: 100%; justify-content: flex-start; padding: 9px 12px; }
+.ai-workshop-conversation-sidebar .ai-workshop-feedback { font-size: .88rem; line-height: 1.65; }
+.ai-workshop-conversations { display: grid; gap: 5px; max-height: 510px; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; }
+.ai-workshop-conversations button {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 56px;
+  padding: 11px 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #513c30;
+  background: transparent;
+  text-align: left;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+.ai-workshop-conversations button:hover { background: rgba(255,250,240,.65); }
+.ai-workshop-conversations button[aria-current="true"],
+.ai-workshop-conversations button[aria-current="page"],
+.ai-workshop-conversations button[data-selected="true"],
+.ai-workshop-conversations .ai-workshop-is-active { color: var(--red, #8d1820); background: var(--paper, #fffaf0); border-color: rgba(151,91,36,.24); }
+.ai-workshop-conversations button:disabled { cursor: wait; opacity: .65; }
+.ai-workshop-conversations strong,
+.ai-workshop-conversations time,
+.ai-workshop-conversations small { display: block; }
+.ai-workshop-conversations time,
+.ai-workshop-conversations small { margin-top: 4px; color: var(--muted, #705d57); font-size: .8rem; }
+.ai-workshop-conversation-note { margin: 20px 0 0; padding-top: 14px; border-top: 1px solid rgba(151,91,36,.15); color: var(--muted, #705d57); font-size: .84rem; line-height: 1.8; }
+.ai-workshop-conversation-note a { display: inline-block; color: var(--red, #8d1820); }
+
+.ai-workshop-chat {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: calc(100dvh - 350px);
+  min-height: 600px;
+  max-height: 900px;
+  padding: 0;
+  border-radius: 9px;
+  background: var(--paper, #fffaf0);
+  box-shadow: none;
+  overflow: hidden;
+}
+.ai-workshop-chat-heading { flex: 0 0 auto; min-height: 62px; padding: 17px 28px; border-bottom: 1px solid rgba(151,91,36,.14); }
+.ai-workshop-chat-heading h3 { max-width: 70%; color: #513c30; font-size: 1rem; line-height: 1.6; overflow-wrap: anywhere; }
+.ai-workshop-chat-heading .ai-workshop-badge { padding: 3px 8px; border: 0; border-radius: 4px; background: transparent; font-size: .78rem; font-weight: 400; }
+.ai-workshop-message-list {
+  flex: 1 1 auto;
+  min-height: 170px;
+  max-height: none;
+  margin: 0;
+  padding: 26px clamp(20px, 4vw, 54px);
+  gap: 24px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow-y: auto;
+  scroll-padding-bottom: 24px;
+}
+.ai-workshop-turn { gap: 20px; }
+.ai-workshop-message { max-width: 100%; padding: 0; border: 0; border-radius: 0; color: #3d3029; background: transparent; font-size: 1.03rem; line-height: 1.95; }
+.ai-workshop-message[data-message-role="notice"] { align-self: stretch; margin: auto 0; padding: 18px 0; color: var(--muted, #705d57); border: 0; background: transparent; }
+.ai-workshop-message[data-message-role="notice"] strong { margin-bottom: 10px; color: #62412f; font-size: 1.3rem; font-weight: 600; }
+.ai-workshop-message[data-message-role="user"],
+.ai-workshop-message--user { max-width: 88%; padding: 12px 18px; color: #513c30; background: #eee1cd; border: 0; border-radius: 12px 12px 3px 12px; }
+.ai-workshop-message--assistant { align-self: stretch; width: 100%; max-width: 850px; background: transparent; border: 0; }
+.ai-workshop-message-label { color: var(--muted, #705d57); font-size: .82rem; }
+.ai-workshop-message p { line-height: inherit; }
+.ai-workshop-answer-references { padding-top: 10px; margin-top: 16px; }
+.ai-workshop-answer-references > summary { font-size: .9rem; font-weight: 600; }
+.ai-workshop-citation { padding: 10px 12px; border-radius: 5px; background: #f5ecdc; }
+.ai-workshop-citation-meta { font-size: .85rem; line-height: 1.8; }
+.ai-workshop-composer { flex: 0 0 auto; min-width: 0; padding: 14px 26px 16px; border-top: 1px solid rgba(151,91,36,.14); background: var(--paper, #fffaf0); }
+.ai-workshop-composer .ai-workshop-suggestions { gap: 5px 14px; margin: 0 0 10px; }
+.ai-workshop-composer .ai-workshop-suggestions[hidden] { display: none; }
+.ai-workshop-composer .ai-workshop-question { padding: 4px 0; border: 0; border-radius: 0; color: var(--muted, #705d57); background: transparent; font-size: .86rem; line-height: 1.6; }
+.ai-workshop-composer .ai-workshop-question:hover { color: var(--red, #8d1820); text-decoration: underline; background: transparent; }
+.ai-workshop-composer .ai-workshop-form { margin: 0; padding: 0; }
+.ai-workshop-composer .ai-workshop-input { display: block; min-height: 85px; max-height: 180px; padding: 12px 14px; border-radius: 9px; font-size: 1rem; line-height: 1.7; resize: vertical; }
+.ai-workshop-composer .ai-workshop-question-help { display: inline-block; margin: 5px 0 0; font-size: .78rem; }
+.ai-workshop-composer .ai-workshop-form-footer { margin: 0; }
+.ai-workshop-composer .ai-workshop-form-footer > span { font-size: .78rem; }
+.ai-workshop-composer .ai-workshop-form-footer .ai-workshop-button { min-height: 40px; padding: 7px 18px; }
+.ai-workshop-composer .ai-workshop-feedback { margin: 6px 0 0; font-size: .86rem; line-height: 1.65; }
+.ai-workshop-composer .ai-workshop-service-actions { gap: 8px 14px; margin-top: 4px; }
+.ai-workshop-composer .ai-workshop-service-actions .ai-workshop-text-link { margin-top: 0; font-size: .84rem; }
+.ai-workshop-composer .ai-workshop-demo-fallback { margin: 6px 0 0; font-size: .78rem; line-height: 1.7; }
+.ai-workshop-last-references { grid-column: 2; margin-top: 12px; padding: 12px 16px; border-radius: 7px; background: transparent; box-shadow: none; font-size: .9rem; }
+.ai-workshop-last-references > summary { cursor: pointer; color: var(--muted, #705d57); }
+.ai-workshop-last-references .ai-workshop-description { margin-bottom: 0; }
+.ai-workshop-sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+.ai-workshop-button { border-radius: 7px; background: var(--red, #8d1820); box-shadow: none; transition: background .15s ease, border-color .15s ease; }
+.ai-workshop-button:hover:not(:disabled) { transform: none; background: #71121a; box-shadow: none; }
+.ai-workshop-button-secondary { color: var(--red, #8d1820); background: #fffaf0; border-color: rgba(151,91,36,.32); }
+.ai-workshop-button-secondary:hover:not(:disabled) { background: #efe2cd; }
+.ai-workshop-card,
+.ai-workshop-entry-card,
+.ai-workshop-agent-card { border-radius: 9px; box-shadow: none; }
+.ai-workshop-entry-card:hover,
+.ai-workshop-agent-card:hover { transform: none; box-shadow: none; }
+.ai-workshop-icon { box-shadow: none; }
+.ai-workshop-test-model-picker > summary { cursor: pointer; color: var(--muted, #705d57); font-size: .94rem; }
+.ai-workshop-test-model-picker[open] > summary { margin-bottom: 14px; }
+.ai-workshop-generation-card > details > summary { cursor: pointer; color: var(--red, #8d1820); font-weight: 700; }
+.ai-workshop-generation-card > details[open] > summary { margin-bottom: 20px; }
+
+@media (max-width: 1000px) {
+  .ai-workshop-qa-layout { grid-template-columns: 210px minmax(0, 1fr); gap: 0 15px; }
+  .ai-workshop-chat-heading { padding-inline: 20px; }
+  .ai-workshop-composer { padding-inline: 18px; }
+  .ai-workshop-chat { height: 690px; }
+}
+@media (max-width: 760px) {
+  .ai-workshop .ai-workshop-shell { width: 94%; }
+  .ai-workshop-hero { padding: 18px 0; }
+  .ai-workshop-hero-copy { padding-right: 0; }
+  .ai-workshop-hero .ai-workshop-kicker { display: none; }
+  .ai-workshop-title { font-size: 1.65rem; }
+  .ai-workshop-subtitle { max-width: 90%; font-size: .9rem; }
+  .ai-workshop-product-service { position: relative; top: auto; margin-top: 8px; font-size: .8rem; }
+  .ai-workshop-product-service[open] { width: 100%; }
+  .ai-workshop-product-nav { gap: 4px; margin-top: 10px; padding-bottom: 8px; }
+  .ai-workshop-product-nav > a,
+  .ai-workshop-secondary-nav > summary { padding: 8px 10px; font-size: .9rem; }
+  .ai-workshop-product-nav > a:last-child { grid-column: auto; }
+  .ai-workshop-product-nav > .ai-workshop-guide-link { margin-left: auto; }
+  .ai-workshop-secondary-nav > div { min-width: 205px; }
+  .ai-workshop-panel { margin-top: 18px; }
+  #ai-workshop-qa > .ai-workshop-section-head { margin-bottom: 10px; }
+  #ai-workshop-qa > .ai-workshop-section-head .ai-workshop-description { display: none; }
+  .ai-workshop-qa-layout { grid-template-columns: minmax(0,1fr); gap: 12px; }
+  .ai-workshop-conversation-sidebar { padding: 10px 14px; }
+  .ai-workshop-conversation-sidebar-body { padding-top: 12px; }
+  .ai-workshop-conversations { max-height: 230px; }
+  .ai-workshop-conversation-note { margin-top: 12px; padding-top: 10px; }
+  .ai-workshop-chat { height: 690px; min-height: 580px; }
+  .ai-workshop-chat-heading { min-height: 52px; padding: 12px 16px; }
+  .ai-workshop-chat-heading h3 { max-width: 100%; font-size: .95rem; }
+  .ai-workshop-message-list { gap: 18px; padding: 20px 16px; }
+  .ai-workshop-message { font-size: 1rem; line-height: 1.9; }
+  .ai-workshop-message[data-message-role="user"],
+  .ai-workshop-message--user { max-width: 94%; padding: 10px 14px; }
+  .ai-workshop-composer { padding: 12px 14px; }
+  .ai-workshop-composer .ai-workshop-suggestions { display: flex; flex-wrap: nowrap; gap: 12px; overflow-x: auto; max-width: 100%; }
+  .ai-workshop-composer .ai-workshop-suggestions > button { width: auto; flex: 0 0 auto; white-space: nowrap; }
+  .ai-workshop-composer .ai-workshop-form-footer { align-items: center; }
+  .ai-workshop-composer .ai-workshop-form-footer .ai-workshop-button { width: auto; flex: 0 0 auto; }
+  .ai-workshop-composer .ai-workshop-question { font-size: .8rem; }
+  .ai-workshop-composer .ai-workshop-input { min-height: 82px; max-height: 150px; }
+  .ai-workshop-last-references { grid-column: 1; margin: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ai-workshop * { scroll-behavior: auto !important; }
+}
