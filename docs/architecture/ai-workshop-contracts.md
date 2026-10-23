@@ -39,7 +39,7 @@ Phase 2及Phase 3保留8页结构、about地址、原文化导航及酒红/金/�
 
 默认meta `ai-workshop-api-base=/api/v1`。FastAPI在8000同时白名单提供页面与API；可选跨端口调试地址仅为公开API地址，绝不包含供应商Key。服务配置拒绝可执行协议和带凭证URL。主入口、services及contracts整条import链有相同缓存版本，静态后端同时采用no-store。
 
-聊天POST `/api/v1/chat` 输入question及可选conversationId；输出保留Phase 1约定的answer、citations、uncertain、requestId。每次提问独立检索，没有服务器语义对话记忆。客户端提交标识由客户端生成用于 `X-Idempotency-Key`，不冒充后端真实requestId。
+聊天POST `/api/v1/chat` 输入question及可选conversationId；输出保留Phase 1约定的answer、citations、uncertain、requestId。2026-10-23起，带conversationId时从独立后端会话记录加载最近4轮成功上下文；短复指问题补足主题再检索，历史回答不作为本轮引用。无conversationId的兼容请求仍为单轮。客户端提交标识由客户端生成用于 `X-Idempotency-Key`，不冒充后端真实requestId。
 
 Citation字段为id、title、sourceId、locator、url、excerpt，可加contentKind。后端必须从本次真实检索证据映射来源，不采用模型生成的来源标题/URL。前端校验类型/长度及重复引用ID；确定答案无引用会被拒绝显示。`uncertain=true`的资料不足说明可有空引用。
 
@@ -80,3 +80,19 @@ Agent的create/status/result/confirm/cancel五API详见[Phase 3架构](phase-03-
 ## 验证边界
 
 [前端25项离线检查](../evidence/test-results/phase-02-frontend-unit.json)是服务/DOM test double和静态检查。真实浏览器8页、桌面/手机、四推荐题、连续问答、展开来源、空输入、停机恢复与安全文字已分别验证，见 [实测报告](../evidence/test-results/phase-02-browser-test-report.md)。没有以Phase 1旧截图代替真实后端证据。网络故障立即失效ready能力，旧异步检查不会恢复过期状态；免费重查保留历史与手动重试。只在工坊根元素补充锚点滚动偏移，避免手机固定导航遮挡标题。
+
+
+## 普通问答会话（2026-10-23增量）
+
+与`/agent/history`的创作档案完全分离。沿用原`POST /api/v1/chat`四字段回答，不将客户端传入消息当作可信历史。
+
+| 方法 | 路径 | 行为 |
+|---|---|---|
+| GET | `/api/v1/chat/conversations?limit=20&offset=0` | `{items:[{id,title,createdAt,updatedAt,turnCount}],hasMore}`，真实分页；无目录返回空，不建库 |
+| POST | `/api/v1/chat/conversations` | 显式创建独立会话，返回201详情；不调用LLM |
+| GET | `/api/v1/chat/conversations/{id}` | `{id,title,createdAt,updatedAt,turns}`，恢复服务器保存的消息 |
+| POST | `/api/v1/chat` | `{question,conversationId}`，UUID会话，`X-Idempotency-Key`8～128位ASCII字母数字/下划线/短横线 |
+
+turn包含`id/question/status/answer/error/createdAt/idempotencyKey`。状态为`completed/failed/pending/unknown`；answer只有completed时包含原QuestionAnswer，error为安全中文`{code,message,retryable}`。已完成同key重放只返回原结果；不同问题不可复用key。每会话跨进程文件锁，发送前持久化pending；超时/未知结果不自动重付费。明确未发送生成请求的失败允许用户手动重试同key。读取不会把pending标成已完成，未知会话阻止继续生成。
+
+独立JSON在`RAG_DATA_DIR/chat-conversations`，文件最多4MB/会话200轮，损坏保留原字节并503，不改既有18业务表。需要已有RAG根目录；不把路径误配当成首次业务初始化。请求Origin存在时须属于既有精确白名单。仍是本机共享实例，没有新增多用户登录鉴权。前端仅本地记住所选会话ID，不在localStorage保存聊天正文。

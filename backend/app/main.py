@@ -19,6 +19,7 @@ from .services.chat import grounded_answer
 from .static_frontend import public_file
 from .agents.supervisor import Supervisor
 from .api.agents import register_agents
+from .api.conversations import register_conversations, answer_conversation
 from .assets.service import AssetService
 from .assets.usage import UsageManager
 from .assets.neural_service import ModelService
@@ -77,6 +78,7 @@ def create_app(settings=None, *, assets_usage_override=None):
     app.state.asset_service = assets
     app.add_middleware(CORSMiddleware, allow_origins=settings.allowed_origins, allow_credentials=False, allow_methods=['GET', 'POST'], allow_headers=['Content-Type', 'X-Idempotency-Key', 'X-Asset-Admin-Token'])
     cache, pending = OrderedDict(), {}
+    conversation_store = register_conversations(app, settings)
 
     @app.middleware('http')
     async def public_request(request: Request, call_next):
@@ -154,6 +156,8 @@ def create_app(settings=None, *, assets_usage_override=None):
         slot = key or str(uuid.uuid4())
         pending[slot] = signature
         try:
+            if data.conversationId:
+                return await answer_conversation(data, request, runtime, conversation_store, key)
             async with asyncio.timeout(settings.request_timeout_seconds):
                 retrieval = await runtime.knowledge(lambda: runtime.search_service.search(data.question, settings.retrieval_top_k, None, settings.retrieval_mode))
                 answer = await grounded_answer(data.question, retrieval, runtime.provider, request.state.request_id)
