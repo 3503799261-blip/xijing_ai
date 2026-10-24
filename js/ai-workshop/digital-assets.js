@@ -2,6 +2,7 @@ import { createCharacterAsset, getCharacterAsset, approveVisualPrompt, uploadAss
   listCharacterAssets, createPromptVersion, listAssetModels, getAssetUsage, importLicensedModel, ServiceError } from './services.js?v=phase4-1';
 import { safeAssetFileUrl, safeCitationUrl, validateAssetIdentifier } from './contracts.js?v=phase4-1';
 import { initializeModelViewer } from './model-viewer-adapter.js?v=phase4-1';
+import { initializeAssetLibrary } from './asset-library.js?v=workbench-1';
 
 const ASSET_STORAGE_KEY = 'xijing.ai.asset.v1';
 const STYLE_LABELS = { chibi: 'Q版卡通', realistic: '写实国风' };
@@ -50,8 +51,11 @@ export function initializeDigitalAssets({ root, selectPanel }) {
   const modelForm = find('model-import-form');
   const viewer = initializeModelViewer({ root });
   let asset = null;
+  let library = null;
+  let technicalSelection = null;
   let selectedImage = null;
   let imageVisible = false;
+  let localPreviewUrl = null;
   let models = [];
   let usage = null;
   let pending = false;
@@ -66,15 +70,20 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     feedback.textContent = message;
     feedback.classList.toggle('ai-workshop-feedback-error', isError);
   };
+  function resetUploadDrafts() {
+    if (localPreviewUrl) { URL.revokeObjectURL(localPreviewUrl); localPreviewUrl = null; }
+    imageFile.value = ''; imageLicense.value = ''; imageRights.checked = false;
+    find('model-import-file').value = ''; find('model-import-license').value = '';
+  }
   function updateControls() {
     form.querySelector('[type="submit"]').disabled = pending;
     mode.disabled = pending; styleMode.disabled = pending; sourceTask.disabled = pending;
     find('style-query').disabled = pending;
-    styleVersions.disabled = pending;
+    styleVersions.disabled = pending; styleModels.disabled = pending; modelSelector.disabled = pending;
     find('prompt-edit-save').disabled = pending || !asset;
     visualAccept.disabled = pending || !asset || asset.visualPrompt.approved || asset.culturalReviewRequired === true;
-    imageForm.querySelector('[type="submit"]').disabled = pending || !asset?.visualPrompt.approved || asset.culturalReviewRequired === true;
-    imageAccept.disabled = pending || !selectedImage || !imageVisible || selectedImage.accepted || asset?.culturalReviewRequired === true;
+    imageForm.querySelector('[type="submit"]').disabled = pending || !localPreviewUrl || !imageFile.files?.length || !asset?.visualPrompt.approved || asset.culturalReviewRequired === true;
+    imageAccept.disabled = pending || Boolean(localPreviewUrl) || !selectedImage || !imageVisible || selectedImage.accepted || asset?.culturalReviewRequired === true;
     modelForm.querySelector('[type="submit"]').disabled = pending || !asset || asset.culturalReviewRequired === true;
     find('asset-refresh').disabled = pending || refreshPending;
     // Both accepted model results are retained; the user cancelled the third creation.
@@ -86,7 +95,7 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     pending = true; updateControls(); say('正在处理本地资产记录……');
     try { await operation(); if (success) say(success); }
     catch (error) { say(error instanceof ServiceError ? error.message : error.message || '操作未完成，请检查本地服务。', true); }
-    finally { pending = false; updateControls(); }
+    finally { pending = false; updateControls(); void library?.refresh(); }
   }
   function enterpriseBrief() {
     return Object.fromEntries(enterpriseNames.map((name) => [name, root.querySelector(`[data-ai-workshop-enterprise="${name}"]`).value.trim()]));
@@ -99,15 +108,15 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     const used = usage?.used_calls === null || !usage ? '历史待核实' : `${usage.used_calls} / 3`;
     const remaining = usage?.remaining_calls === null || !usage ? '待核实，创建锁定' : `${usage.remaining_calls} 次`;
     const entries = [
-      ['角色', asset?.name || '尚未选择已确认角色'],
+      ['角色', asset?.name || (technicalSelection ? '内部技术验证，未关联正式角色' : '尚未选择已确认角色')],
       ['风格与版本', asset ? `${STYLE_LABELS[asset.styleMode]} · 风格版本${asset.styleVersion}` : `${STYLE_LABELS[styleMode.value]} · 尚未登记`],
-      ['概念图', selectedImage?.accepted ? '已人工接受实际图片' : '尚未接受图片'],
-      ['图片SHA-256', selectedImage?.hash || '暂无图片Hash'],
-      ['生成参数', `modelCount=1；mesh_quality=standard；faceNum=${(asset?.styleMode || styleMode.value) === 'chibi' ? 100000 : 500000}；disablePbr=0；onlyGenerateMesh=false；enableImageEnhancement=false（提交前再次核对）`],
+      ['概念图', technicalSelection ? '历史技术验证输入，非角色图片确认' : selectedImage?.accepted ? '已人工接受实际图片' : '尚未接受图片'],
+      ['图片SHA-256', technicalSelection?.model.imageHash || selectedImage?.hash || '暂无图片Hash'],
+      ['生成参数', `modelCount=1；mesh_quality=standard；faceNum=${(asset?.styleMode || styleMode.value) === 'chibi' ? 100000 : 500000}；disablePbr=0；onlyGenerateMesh=false；enableImageEnhancement=false（预留配置；建模已关闭）`],
       ['预计Credit', '本轮不创建模型，未查询新任务报价；历史费用不是实时价格'],
       ['历史费用', '验收归档记录：前两次合计60积分；不是当前账户余额或新任务报价'],
       ['已占用提交次数', used], ['剩余额度', remaining],
-      ['本次用途', asset?.purpose || find('asset-purpose').value.trim() || '尚未填写'],
+      ['本次用途', technicalSelection ? technicalSelection.model.purpose || '内部非公开技术验证' : asset?.purpose || find('asset-purpose').value.trim() || '尚未填写'],
       ['真实建模门禁', '保留两个已有真实模型成果；用户已取消第三次建模，创建入口保持关闭'],
     ];
     const list = document.createElement('dl'); list.className = 'ai-workshop-task-info ai-workshop-approval-info';
@@ -123,7 +132,9 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     quota.dataset.historyVerified = String(usage?.history_verified === true);
   }
   function renderAsset(value) {
+    if (technicalSelection || asset?.assetId !== value.assetId) resetUploadDrafts();
     asset = value;
+    technicalSelection = null;
     savedAssetId = null;
     summary.dataset.metadataState = 'saved_snapshot';
     summary.dataset.metadataReadAt = new Date().toISOString();
@@ -174,6 +185,7 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     renderImage(); renderStyleModels(); updateControls(); renderApproval();
   }
   function renderImage() {
+    if (localPreviewUrl) { URL.revokeObjectURL(localPreviewUrl); localPreviewUrl = null; }
     imageVisible = false;
     if (!selectedImage) { imagePreview.replaceChildren(text('p', '', '尚无登记概念图；上传不会调用图像生成或3D建模API。')); imageAccept.textContent = '核查并接受此概念图'; return; }
     const img = document.createElement('img'); img.className = 'ai-workshop-concept-image';
@@ -200,21 +212,35 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     else { selectedModelId = null; modelSelector.value = ''; }
     if (!models.length && !asset?.models.length) modelInfo.textContent = '当前风格尚未生成3D模型；概念图不能代替真正的3D模型。';
   }
-  function showModel(model, isFixture) {
-    if (!model) { download.hidden = true; selectedModelId = null; viewer?.clear('请选择当前风格模型或独立测试素材'); return; }
+  function modelHeading(model, title, subtitle) {
+    const heading = find('selected-model-title'); const note = find('selected-model-subtitle');
+    if (heading) heading.textContent = model ? title : '选择一个数字资产';
+    if (note) note.textContent = subtitle || '从右侧资产库选择已有模型。';
+  }
+  function showModel(model, isFixture, { internal = false } = {}) {
+    if (!model) { download.hidden = true; selectedModelId = null; library?.setSelected(null); modelHeading(null); viewer?.clear('请选择当前风格模型或独立测试素材'); return; }
     selectedModelId = model.modelId;
-    find('viewer-host').dataset.contentMode = isFixture ? 'legal_test_fixture' : 'character_style_asset';
-    find('viewer-host').dataset.styleMode = isFixture ? 'not_character_asset' : asset.styleMode;
-    modelInfo.textContent = `${isFixture ? '独立合法GLB测试素材，非角色模型、非Neural4D生成' : `${asset.name} · ${STYLE_LABELS[asset.styleMode]}版本${asset.styleVersion} · ${model.origin === 'neural4d' ? '真实Neural4D模型' : '合法导入模型，非Neural4D生成'}`} · ${(model.size / 1024).toFixed(1)}KB\n许可：${model.licenseNote}\nSHA-256：${model.hash}`;
+    const title = internal ? model.title || 'Q版内部技术验证' : isFixture ? model.title : asset.name;
+    const styleLabel = internal ? STYLE_LABELS.chibi : isFixture ? '独立校验素材' : STYLE_LABELS[asset.styleMode];
+    modelHeading(model, title, `${styleLabel} · ${internal ? '内部技术验证，仅本机查看，不公开分发' : isFixture ? '合法导入，非角色模型' : '已保存的真实3D资产'}`);
+    library?.setSelected(model.modelId);
+    find('viewer-host').dataset.contentMode = internal ? 'internal_technical_test' : isFixture ? 'legal_test_fixture' : 'character_style_asset';
+    find('viewer-host').dataset.styleMode = internal ? 'chibi' : isFixture ? 'not_character_asset' : asset.styleMode;
+    modelInfo.textContent = `${title} · ${styleLabel} · ${(model.size / 1024 / 1024).toFixed(1)}MB\n${internal ? '真实Neural4D技术模型，非正式角色资产，不公开展示或分发。' : isFixture ? '独立合法GLB测试素材，非角色模型、非Neural4D生成。' : model.origin === 'neural4d' ? '真实Neural4D模型。' : '合法导入模型，非Neural4D生成。'}\n许可：${model.licenseNote}\nSHA-256：${model.hash}`;
     download.href = safeAssetFileUrl(model.downloadUrl, 'models', model.modelId, 'download');
-    download.hidden = false;
-    void viewer?.load(model);
+    download.hidden = internal; // Internal viewing does not add a public distribution action.
+    return viewer?.load(model);
   }
   function chooseModel() {
+    if (pending) return;
+    const model = models.find((item) => item.modelId === modelSelector.value);
+    if (technicalSelection) clearCurrentStyle('独立GLB校验素材，不关联当前角色或技术概念图。');
     styleModels.value = '';
-    showModel(models.find((item) => item.modelId === modelSelector.value), true);
+    technicalSelection = null; renderApproval();
+    showModel(model, true);
   }
   function chooseStyleModel() {
+    if (pending && !asset) return;
     modelSelector.value = '';
     showModel(asset?.models.find((item) => item.modelId === styleModels.value), false);
   }
@@ -229,6 +255,7 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     if (asset?.models.length) { styleModels.value = asset.models[0].modelId; chooseStyleModel(); }
     else {
       styleModels.value = ''; modelSelector.value = ''; selectedModelId = null; download.hidden = true;
+      library?.setSelected(null); modelHeading(null, '', '当前角色的这个风格尚无模型，可从资产库选择其他已保存资产。');
       find('viewer-host').dataset.contentMode = 'style_asset_missing';
       find('viewer-host').dataset.styleMode = styleMode.value;
       viewer?.clear('当前风格尚未生成3D模型');
@@ -236,7 +263,8 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     }
   }
   function clearCurrentStyle(message, { modelStateUnknown = false } = {}) {
-    asset = null; selectedImage = null; imageVisible = false;
+    resetUploadDrafts();
+    asset = null; technicalSelection = null; selectedImage = null; imageVisible = false;
     savedAssetId = null;
     summary.dataset.metadataState = 'unavailable';
     delete summary.dataset.metadataReadAt;
@@ -350,8 +378,25 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     if (!imageRights.checked) { say('请先确认图片来源与使用权，并填写真实许可说明。', true); imageRights.focus(); return; }
     void action(async () => {
       await uploadAssetImage({ assetId: asset.assetId, file: imageFile.files[0], provenance: imageProvenance.value, licenseNote: imageLicense.value.trim() });
+      imageFile.value = '';
       renderAsset(await getCharacterAsset(asset.assetId));
     }, '实际图片已保存。请检查人物、服饰和构件，再接受此概念图。');
+  });
+  imageFile.addEventListener('change', () => {
+    if (pending) return;
+    const file = imageFile.files?.[0];
+    renderImage();
+    if (!file) { updateControls(); return; }
+    if (!['image/png', 'image/jpeg', 'image/webp'].includes(file.type) || file.size < 1 || file.size > 10 * 1024 * 1024) {
+      say('请选择不超过10MB的PNG、JPEG或WEBP图片。原登记图片未改变。', true); updateControls(); return;
+    }
+    localPreviewUrl = URL.createObjectURL(file);
+    const image = document.createElement('img'); image.className = 'ai-workshop-concept-image'; image.src = localPreviewUrl;
+    image.alt = '本地选择的待保存概念图';
+    const token = localPreviewUrl;
+    image.addEventListener('error', () => { if (localPreviewUrl === token) say('所选图片无法预览，请选择有效图片；未上传或保存。', true); });
+    imagePreview.replaceChildren(image, text('p', 'ai-workshop-citation-meta', '本地预览 · 尚未保存，当前3D仍为原资产。只有你明确保存后才会上传，不会调用图像生成或建模。'));
+    updateControls();
   });
   imageAccept.addEventListener('click', () => { if (imageAccept.disabled || !selectedImage) return; void action(async () => { await acceptAssetImage(selectedImage.imageId, selectedImage.hash); renderAsset(await getCharacterAsset(asset.assetId)); }, '概念图已接受。真实建模需要单独授权，当前不会提交。'); });
   modelForm.addEventListener('submit', (event) => {
@@ -400,15 +445,60 @@ export function initializeDigitalAssets({ root, selectPanel }) {
     const linked = new URLSearchParams(globalThis.location?.search || '').get('assetId');
     if (linked) savedAssetId = validateAssetIdentifier(linked);
   } catch { /* Invalid review links keep the existing safe storage fallback. */ }
+  library = initializeAssetLibrary({ root,
+    async onSelect(item) {
+      if (pending) return false;
+      const selectionGeneration = ++familyGeneration;
+      if (item.model.origin === 'neural4d_technical_test') {
+        pending = true; updateControls();
+        try {
+        sourceTask.value = ''; styleMode.value = 'chibi';
+        clearCurrentStyle('Q版内部技术验证素材，未关联正式角色；不会借用其他角色的文化确认。');
+        technicalSelection = item;
+        summary.replaceChildren(text('h3', '', item.title), text('p', '', '技术验证用，非正式角色资产。仅限内部查看，不公开分发。'));
+        summary.dataset.metadataState = 'internal_technical_snapshot';
+        styleState.textContent = 'Q版内部技术模型 · 无正式角色关联；风格切换不会生成模型。';
+        prompt.textContent = item.candidate?.promptSnapshot?.text || '历史Prompt见技术验证记录。没有新建或修改Prompt版本。';
+        if (item.candidate && item.imageUrl) {
+          const image = document.createElement('img'); image.className = 'ai-workshop-concept-image'; image.src = item.imageUrl;
+          image.alt = 'Q版技术验证的原登记概念图，仅供内部查看';
+          const note = text('p', 'ai-workshop-citation-meta', `历史技术验证输入 · 概念图，不是模型截图\nSHA-256：${item.candidate.hash}`);
+          image.addEventListener('error', () => say('原概念图暂时无法读取，已有GLB仍可独立查看。', true));
+          imagePreview.replaceChildren(image, note);
+        }
+        renderApproval(); updateControls(); await showModel(item.model, false, { internal: true });
+        say('已选择保存的Q版内部技术模型。仅限内部查看；没有创建或修改任何资产。');
+        return selectionGeneration === familyGeneration && selectedModelId === item.model.modelId;
+        } finally { pending = false; updateControls(); }
+      }
+      if (asset?.assetId !== item.model.assetId || !asset.models.some((model) => model.modelId === item.model.modelId)) {
+        if (!item.model.assetId || !await readExistingAsset(item.model.assetId)) return false;
+      }
+      const model = asset.models.find((value) => value.modelId === item.model.modelId);
+      if (!model) { say('这份模型与当前角色记录的关联尚未核实，已停止切换。', true); return false; }
+      if (selectionGeneration !== familyGeneration) return false;
+      pending = true; updateControls();
+      try {
+      resetUploadDrafts();
+      selectedImage = asset.images.find((image) => image.imageId === model.imageId && image.hash === model.imageHash) || null;
+      renderImage(); renderApproval();
+      modelSelector.value = ''; styleModels.value = model.modelId;
+      if (viewer?.diagnostics().modelId !== model.modelId || viewer?.diagnostics().modelHash !== model.hash) await showModel(model, false);
+      else selectedModelId = model.modelId;
+      return selectionGeneration === familyGeneration && selectedModelId === model.modelId;
+      } finally { pending = false; updateControls(); }
+    },
+    async onPendingSelected(value) { familyGeneration += 1; return await readExistingAsset(value.assetId); },
+  });
   return {
     async setVisible(value) {
       if (visible === value) return;
       visible = value;
       if (!value) return;
       await refreshLocal();
-      if (savedAssetId && !asset && !pending) {
-        await readExistingAsset(savedAssetId);
-      }
+      const requestedAsset = savedAssetId;
+      if (requestedAsset && !asset && !pending) await readExistingAsset(requestedAsset);
+      await library?.refresh({ selectDefault: !requestedAsset || Boolean(asset), preferredAssetId: asset?.assetId || requestedAsset });
     },
   };
 }

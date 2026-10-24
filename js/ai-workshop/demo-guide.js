@@ -89,7 +89,7 @@ export function initializeDemoGuide({ root, selectPanel, services = { checkDemoC
       } else links.push(node('p', 'Q版内部Viewer仅允许本机回环访问，不扩大非公开资产的访问范围。'));
       links.push(node('p', '备用保护仅在当前页面生效，刷新或新页面默认退出；原备用页仍可返回。新页不继承本页保护，请只查看已有Viewer，不提交问答、Agent或资产登记。', 'ai-workshop-demo-boundary'));
     }
-    if (current === 5) links.push(action('定位企业需求入口（不带入、不提交）', () => { selectPanel('model'); root.querySelector('#ai-workshop-asset-form')?.scrollIntoView?.({ block: 'start' }); feedback('已定位既有角色资产表单；请自行查看个人/企业选项。没有改动输入、登记资产或启动Agent。'); }));
+    if (current === 5) links.push(action('定位企业需求入口（不带入、不提交）', () => { selectPanel('model'); const disclosure = root.querySelector('#ai-workshop-asset-mode')?.closest?.('details'); if (disclosure) disclosure.open = true; root.querySelector('#ai-workshop-asset-form')?.scrollIntoView?.({ block: 'start' }); feedback('已定位既有角色资产表单；请自行查看个人/企业选项。没有改动输入、登记资产或启动Agent。'); }));
     elements['demo-links'].replaceChildren(...links);
     renderMode();
   }

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/ai-workshop-history.css?v=phase5-wp2-1">
     <link rel="stylesheet" href="css/ai-workshop-demo.css?v=phase5-wp3-1">
     <link rel="stylesheet" href="css/ai-workshop-chat.css?v=product-1">
+    <link rel="stylesheet" href="css/ai-workshop-assets.css?v=workbench-1">
   </head>
   <body>
     <header class="site-header">
@@ -307,82 +308,95 @@
         </section>
 
         <section id="ai-workshop-model" class="ai-workshop-panel" data-ai-workshop-panel="model" aria-labelledby="ai-workshop-model-heading">
-          <div class="ai-workshop-section-head">
-            <span class="ai-workshop-kicker">从二维意象 · 到三维新境</span>
-            <h2 id="ai-workshop-model-heading" class="ai-workshop-heading" tabindex="-1">角色与数字资产</h2>
-            <a class="ai-workshop-text-link" href="#ai-workshop-demo">返回比赛演示导览 ↑</a>
-            <p class="ai-workshop-description">查阅角色方案、概念图与已经保存的3D。模型仅在存在关联记录时展示，当前不开放新建模型。</p>
+          <div class="ai-workshop-section-head ai-workshop-workbench-heading">
+            <div><h2 id="ai-workshop-model-heading" class="ai-workshop-heading" tabindex="-1">数字资产与3D工作台</h2><p class="ai-workshop-description">选择已有资产，近看一身戏韵。概念图、角色方案与真实模型分别保留，不会自动生成。</p></div>
+            <a class="ai-workshop-text-link" href="#ai-workshop-agents" data-ai-workshop-target="agents">角色任务与文化依据 →</a>
           </div>
-          <ol class="ai-workshop-asset-flow" aria-label="可追溯数字IP流程"><li>Planner · 规划</li><li>Research · 文化依据</li><li>Designer · 角色方案</li><li>Reviewer · 人工确认</li><li>概念图 · 视觉确认</li><li>3D资产 · 交互查看</li></ol>
-          <p class="ai-workshop-description">Agent工作台保留真实执行过程；这里复用服务器确认的角色快照，不会因查看资产而启动Agent或重新生成。</p>
-          <a class="ai-workshop-text-link" href="#ai-workshop-agents" data-ai-workshop-target="agents">查看Agent真实任务与文化依据 →</a>
-          <p id="ai-workshop-asset-feedback" class="ai-workshop-feedback ai-workshop-asset-feedback" role="status" aria-live="polite">选择已确认角色，查看对应的概念图与已有模型。</p>
-          <section class="ai-workshop-card ai-workshop-asset-registration" aria-labelledby="ai-workshop-asset-heading">
-            <div class="ai-workshop-card-header"><h3 id="ai-workshop-asset-heading">角色方案与应用方向</h3><span class="ai-workshop-badge">保留文化来源</span></div>
-            <form id="ai-workshop-asset-form" class="ai-workshop-form" novalidate>
-              <div class="ai-workshop-asset-form-grid">
-                <div><label class="ai-workshop-label" for="ai-workshop-asset-source-task">已确认角色任务ID</label><input id="ai-workshop-asset-source-task" class="ai-workshop-input" maxlength="128" placeholder="从Agent工作台带入，或填写已确认任务ID" autocomplete="off"></div>
-                <div><label class="ai-workshop-label" for="ai-workshop-asset-mode">应用模式</label><select id="ai-workshop-asset-mode" class="ai-workshop-input"><option value="personal">个人 · 京剧文化体验</option><option value="enterprise">企业 · 游戏IP / 文旅创作</option></select></div>
-                <div><label class="ai-workshop-label" for="ai-workshop-asset-style">角色视觉风格</label><select id="ai-workshop-asset-style" class="ai-workshop-input"><option value="chibi">Q版卡通</option><option value="realistic" selected>写实国风</option></select></div>
-                <div class="ai-workshop-style-query"><p class="ai-workshop-description">两种风格复用同一角色与文化依据，各自保存Prompt、概念图、模型及确认。切换只读取已有资产，不自动生成。</p><button id="ai-workshop-style-query" class="ai-workshop-text-link" type="button">读取当前角色的已登记风格</button></div>
-              </div>
-              <label class="ai-workshop-label" for="ai-workshop-asset-purpose">本次资产用途</label><input id="ai-workshop-asset-purpose" class="ai-workshop-input" maxlength="240" value="京剧文化体验与比赛演示" placeholder="说明具体用途，避免填写敏感信息">
-              <div id="ai-workshop-enterprise-fields" class="ai-workshop-enterprise-fields" hidden>
-                <p class="ai-workshop-description">面向游戏、动漫IP与地方文旅的需求整理入口，共用现有创作流程；目前没有真实企业交付案例。商业授权、模型规格与最终交付需另行核查，填写不会自动提交。</p>
-                <div class="ai-workshop-asset-form-grid">
-                  <div><label class="ai-workshop-label" for="ai-workshop-enterprise-type">机构类型</label><select id="ai-workshop-enterprise-type" class="ai-workshop-input" data-ai-workshop-enterprise="organizationType"><option value="game">游戏公司</option><option value="tourism">文旅机构</option><option value="ip_design">IP设计服务</option></select></div>
-                  <div><label class="ai-workshop-label" for="ai-workshop-enterprise-audience">目标受众</label><input id="ai-workshop-enterprise-audience" class="ai-workshop-input" maxlength="160" data-ai-workshop-enterprise="audience" placeholder="例如：青年文化体验者"></div>
-                  <div><label class="ai-workshop-label" for="ai-workshop-enterprise-use">使用场景</label><input id="ai-workshop-enterprise-use" class="ai-workshop-input" maxlength="240" data-ai-workshop-enterprise="useCase" placeholder="例如：数字文旅角色展示"></div>
-                  <div><label class="ai-workshop-label" for="ai-workshop-enterprise-goal">设计目标</label><input id="ai-workshop-enterprise-goal" class="ai-workshop-input" maxlength="240" data-ai-workshop-enterprise="designGoal" placeholder="例如：结合武生服饰与原创国风角色"></div>
-                  <div><label class="ai-workshop-label" for="ai-workshop-enterprise-culture">文化边界</label><input id="ai-workshop-enterprise-culture" class="ai-workshop-input" maxlength="240" data-ai-workshop-enterprise="culturalBoundaries" placeholder="例如：区分传统依据与原创演绎"></div>
-                  <div><label class="ai-workshop-label" for="ai-workshop-enterprise-delivery">交付范围</label><input id="ai-workshop-enterprise-delivery" class="ai-workshop-input" maxlength="240" data-ai-workshop-enterprise="deliveryScope" value="角色方案、来源说明与网页3D展示"></div>
-                  <div><label class="ai-workshop-label" for="ai-workshop-enterprise-license">授权状态</label><select id="ai-workshop-enterprise-license" class="ai-workshop-input" data-ai-workshop-enterprise="licenseStatus"><option value="unverified">演示用途，商业授权待核查</option><option value="user_authorized">用户确认自有授权，供应商许可待核查</option></select></div>
-                </div>
-                <button id="ai-workshop-enterprise-to-agent" class="ai-workshop-text-link" type="button">将企业需求带入Agent创作（不自动提交） →</button>
-              </div>
-              <div class="ai-workshop-form-footer"><button class="ai-workshop-button" type="submit">核验并登记角色资产</button><button id="ai-workshop-asset-refresh" class="ai-workshop-button ai-workshop-button-secondary" type="button">读取本地模型与额度</button></div>
-            </form>
-              <div id="ai-workshop-asset-summary" class="ai-workshop-asset-summary"><p>尚未读取角色资产。角色创作方案、已保存角色JSON和已生成3D模型是三类成果；只有存在真实资产关联才展示对应GLB。无模型不会自动生成。后端只接受已审校通过并由你确认的真实Agent任务登记资产。</p></div>
-            <p id="ai-workshop-style-state" class="ai-workshop-feedback" role="status" aria-live="polite">当前风格尚未登记；登记需明确点击，不会调用图像或建模API。</p>
-            <label class="ai-workshop-label" for="ai-workshop-style-version-select">查看该风格已保存的版本</label><select id="ai-workshop-style-version-select" class="ai-workshop-input"><option value="">尚无已登记版本</option></select>
-          </section>
-          <section class="ai-workshop-card ai-workshop-asset-concept" aria-labelledby="ai-workshop-asset-concept-heading">
-            <h3 id="ai-workshop-asset-concept-heading">视觉Prompt与实际概念图</h3>
-            <div class="ai-workshop-asset-form-grid">
-              <div><p class="ai-workshop-description">本地模板保留角色文化元素，并增加全身、构件与背景约束；它是文字指令，不是已生成图片。</p><pre id="ai-workshop-asset-prompt" class="ai-workshop-draft">登记角色后展示版本化视觉Prompt。</pre><button id="ai-workshop-visual-accept" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>核查并确认此视觉Prompt</button></div>
-              <div><div id="ai-workshop-asset-image-preview" class="ai-workshop-placeholder ai-workshop-image-preview"><p>尚无登记概念图；上传不会调用图像生成或3D建模API。</p></div><button id="ai-workshop-image-accept" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>核查并接受此概念图</button></div>
-            </div>
-            <details class="ai-workshop-details"><summary>调整视觉Prompt并保存新版本</summary><p class="ai-workshop-description">原版本和既有图片、模型都会保留。全文编辑保存为待文化复核草稿，旧视觉/图片确认失效；需由Agent重新审校并由你确认后，才能用于生成。</p><form id="ai-workshop-prompt-edit-form" class="ai-workshop-form" novalidate><label class="ai-workshop-label" for="ai-workshop-prompt-edit-text">视觉Prompt</label><textarea id="ai-workshop-prompt-edit-text" class="ai-workshop-input" rows="7" maxlength="3000" placeholder="登记角色后可编辑；不要将无依据内容写成文化事实"></textarea><label class="ai-workshop-label" for="ai-workshop-prompt-edit-negative">画面约束</label><textarea id="ai-workshop-prompt-edit-negative" class="ai-workshop-input" rows="2" maxlength="1000"></textarea><button id="ai-workshop-prompt-edit-save" class="ai-workshop-button ai-workshop-button-secondary" type="submit" disabled>保存为新的待复核版本</button></form></details>
-            <form id="ai-workshop-asset-image-form" class="ai-workshop-form ai-workshop-upload-form" novalidate>
-              <div class="ai-workshop-asset-form-grid"><div><label class="ai-workshop-label" for="ai-workshop-asset-image-file">导入概念图（PNG / JPEG / WEBP，≤10MB）</label><input id="ai-workshop-asset-image-file" class="ai-workshop-input" type="file" accept="image/png,image/jpeg,image/webp"></div><div><label class="ai-workshop-label" for="ai-workshop-asset-image-provenance">图片来源</label><select id="ai-workshop-asset-image-provenance" class="ai-workshop-input"><option value="manual_image">授权图片导入</option><option value="imported_ai_image">外部AI工具生成后导入</option></select></div></div>
-              <label class="ai-workshop-label" for="ai-workshop-asset-image-license">来源工具 / 作者 / 使用许可</label><textarea id="ai-workshop-asset-image-license" class="ai-workshop-input" rows="2" maxlength="1000" placeholder="填写实际出处和许可；外部AI图片不能标记为本平台API生成"></textarea>
-              <label class="ai-workshop-checkbox"><input id="ai-workshop-asset-image-rights" type="checkbox">我确认有权导入并用于上述用途，且已如实填写来源。</label>
-              <button class="ai-workshop-button" type="submit" disabled>保存实际概念图</button>
-              <p class="ai-workshop-description">图像生成尚未开放。导入图片会保存来源、许可、文件Hash与确认记录。</p>
-            </form>
-          </section>
-          <div class="ai-workshop-model-layout">
-            <div class="ai-workshop-viewer-card">
-              <label class="ai-workshop-label" for="ai-workshop-style-model-select">当前角色风格的3D资产</label><select id="ai-workshop-style-model-select" class="ai-workshop-input"><option value="">当前风格尚未生成3D模型</option></select>
-              <details class="ai-workshop-test-model-picker"><summary>其他已登记素材</summary><label class="ai-workshop-label" for="ai-workshop-model-select">独立校验素材（非角色资产）</label><select id="ai-workshop-model-select" class="ai-workshop-input"><option value="">请选择已有合法GLB测试模型</option></select><small>这里的测试素材仅用于交互校验，不属于当前角色或其风格版本。</small></details>
+          <p id="ai-workshop-asset-feedback" class="ai-workshop-feedback ai-workshop-asset-feedback" role="status" aria-live="polite">正在读取已有数字资产。</p>
+          <div class="ai-workshop-asset-workbench">
+            <aside class="ai-workshop-workbench-tools" aria-label="概念图与模型设置">
+              <section class="ai-workshop-workbench-group ai-workshop-workbench-concept" aria-labelledby="ai-workshop-asset-concept-heading">
+                <h3 id="ai-workshop-asset-concept-heading">概念图</h3>
+                <div id="ai-workshop-asset-image-preview" class="ai-workshop-placeholder ai-workshop-image-preview"><p>选择资产后展示对应概念图。</p></div>
+                <button id="ai-workshop-image-accept" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>核查并接受此概念图</button>
+                <details class="ai-workshop-workbench-disclosure"><summary>上传有使用权的概念图</summary>
+                  <form id="ai-workshop-asset-image-form" class="ai-workshop-form ai-workshop-upload-form" novalidate>
+                    <label class="ai-workshop-label" for="ai-workshop-asset-image-file">图片文件</label><input id="ai-workshop-asset-image-file" class="ai-workshop-input" type="file" accept="image/png,image/jpeg,image/webp">
+                    <p class="ai-workshop-description">PNG / JPEG / WEBP，最多10MB。</p>
+                    <label class="ai-workshop-label" for="ai-workshop-asset-image-provenance">图片来源</label><select id="ai-workshop-asset-image-provenance" class="ai-workshop-input"><option value="manual_image">授权图片导入</option><option value="imported_ai_image">外部AI工具生成后导入</option></select>
+                    <label class="ai-workshop-label" for="ai-workshop-asset-image-license">作者、出处与使用许可</label><textarea id="ai-workshop-asset-image-license" class="ai-workshop-input" rows="3" maxlength="1000" placeholder="填写真实来源与许可范围"></textarea>
+                    <label class="ai-workshop-checkbox"><input id="ai-workshop-asset-image-rights" type="checkbox">我确认有权导入并用于所填用途。</label>
+                    <button class="ai-workshop-button ai-workshop-button-secondary" type="submit" disabled>保存实际概念图</button>
+                    <p class="ai-workshop-description">先选择已确认角色并接受视觉Prompt。上传只保存图片，不生成图像或模型。</p>
+                  </form>
+                </details>
+              </section>
+              <section class="ai-workshop-workbench-group ai-workshop-asset-registration" aria-labelledby="ai-workshop-asset-heading">
+                <h3 id="ai-workshop-asset-heading">模型风格与角色</h3>
+                <form id="ai-workshop-asset-form" class="ai-workshop-form" novalidate>
+                  <label class="ai-workshop-label" for="ai-workshop-asset-style">视觉风格</label><select id="ai-workshop-asset-style" class="ai-workshop-input"><option value="chibi">Q版卡通</option><option value="realistic" selected>写实国风</option></select>
+                  <p id="ai-workshop-style-state" class="ai-workshop-feedback" role="status" aria-live="polite">选择已有资产后读取对应风格；切换不会生成模型。</p>
+                  <details class="ai-workshop-workbench-disclosure"><summary>角色来源与应用方向</summary>
+                    <label class="ai-workshop-label" for="ai-workshop-asset-source-task">已确认角色任务ID</label><input id="ai-workshop-asset-source-task" class="ai-workshop-input" maxlength="128" placeholder="从角色任务带入，或填写已确认任务ID" autocomplete="off">
+                    <label class="ai-workshop-label" for="ai-workshop-asset-mode">应用模式</label><select id="ai-workshop-asset-mode" class="ai-workshop-input"><option value="personal">个人 · 京剧文化体验</option><option value="enterprise">企业 · 游戏IP / 文旅创作</option></select>
+                    <label class="ai-workshop-label" for="ai-workshop-asset-purpose">资产用途</label><input id="ai-workshop-asset-purpose" class="ai-workshop-input" maxlength="240" value="京剧文化体验与比赛演示" placeholder="填写具体用途">
+                    <div id="ai-workshop-enterprise-fields" class="ai-workshop-enterprise-fields" hidden>
+                      <p class="ai-workshop-description">面向游戏、动漫IP与文旅的需求入口。当前没有真实企业交付案例；商业授权及交付规格需另行核查。</p>
+                      <label class="ai-workshop-label" for="ai-workshop-enterprise-type">机构类型</label><select id="ai-workshop-enterprise-type" class="ai-workshop-input" data-ai-workshop-enterprise="organizationType"><option value="game">游戏公司</option><option value="tourism">文旅机构</option><option value="ip_design">IP设计服务</option></select>
+                      <label class="ai-workshop-label" for="ai-workshop-enterprise-audience">目标受众</label><input id="ai-workshop-enterprise-audience" class="ai-workshop-input" maxlength="160" data-ai-workshop-enterprise="audience" placeholder="例如：青年文化体验者">
+                      <label class="ai-workshop-label" for="ai-workshop-enterprise-use">使用场景</label><input id="ai-workshop-enterprise-use" class="ai-workshop-input" maxlength="240" data-ai-workshop-enterprise="useCase" placeholder="例如：数字文旅角色展示">
+                      <label class="ai-workshop-label" for="ai-workshop-enterprise-goal">设计目标</label><input id="ai-workshop-enterprise-goal" class="ai-workshop-input" maxlength="240" data-ai-workshop-enterprise="designGoal" placeholder="例如：原创国风角色">
+                      <label class="ai-workshop-label" for="ai-workshop-enterprise-culture">文化边界</label><input id="ai-workshop-enterprise-culture" class="ai-workshop-input" maxlength="240" data-ai-workshop-enterprise="culturalBoundaries" placeholder="区分资料依据与原创演绎">
+                      <label class="ai-workshop-label" for="ai-workshop-enterprise-delivery">交付范围</label><input id="ai-workshop-enterprise-delivery" class="ai-workshop-input" maxlength="240" data-ai-workshop-enterprise="deliveryScope" value="角色方案、来源说明与网页3D展示">
+                      <label class="ai-workshop-label" for="ai-workshop-enterprise-license">授权状态</label><select id="ai-workshop-enterprise-license" class="ai-workshop-input" data-ai-workshop-enterprise="licenseStatus"><option value="unverified">演示用途，商业授权待核查</option><option value="user_authorized">用户确认自有授权，供应商许可待核查</option></select>
+                      <button id="ai-workshop-enterprise-to-agent" class="ai-workshop-text-link" type="button">带入角色创作，不自动提交 →</button>
+                    </div>
+                    <div class="ai-workshop-form-footer"><button class="ai-workshop-button" type="submit">核验并登记角色资产</button></div>
+                    <button id="ai-workshop-style-query" class="ai-workshop-text-link" type="button">读取此角色的已登记风格</button>
+                    <p class="ai-workshop-description">只接受已审校且人工确认的角色。Q版与写实分别保存，不因切换覆盖另一版本。</p>
+                  </details>
+                </form>
+                <details class="ai-workshop-workbench-disclosure"><summary>角色方案、文化依据与版本</summary>
+                  <div id="ai-workshop-asset-summary" class="ai-workshop-asset-summary"><p>尚未读取正式角色。角色方案、保存的角色JSON和真实模型分别管理，仅展示已有的真实关联。</p></div>
+                  <label class="ai-workshop-label" for="ai-workshop-style-version-select">已保存风格版本</label><select id="ai-workshop-style-version-select" class="ai-workshop-input"><option value="">尚无已登记版本</option></select>
+                  <ol class="ai-workshop-asset-flow" aria-label="可追溯数字IP流程"><li>任务规划</li><li>文化研究</li><li>角色设计</li><li>审校与人审</li><li>概念图确认</li><li>3D资产查看</li></ol>
+                </details>
+              </section>
+              <details class="ai-workshop-workbench-disclosure ai-workshop-workbench-group"><summary>视觉Prompt与确认</summary>
+                <pre id="ai-workshop-asset-prompt" class="ai-workshop-draft">选择正式角色资产后展示视觉Prompt。</pre>
+                <button id="ai-workshop-visual-accept" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>核查并确认此视觉Prompt</button>
+                <details class="ai-workshop-details"><summary>编辑并保存新版本</summary>
+                  <p class="ai-workshop-description">编辑版本保留原图片和模型，但需重新文化审校及人工确认。</p>
+                  <form id="ai-workshop-prompt-edit-form" class="ai-workshop-form" novalidate><label class="ai-workshop-label" for="ai-workshop-prompt-edit-text">视觉Prompt</label><textarea id="ai-workshop-prompt-edit-text" class="ai-workshop-input" rows="7" maxlength="3000"></textarea><label class="ai-workshop-label" for="ai-workshop-prompt-edit-negative">画面约束</label><textarea id="ai-workshop-prompt-edit-negative" class="ai-workshop-input" rows="2" maxlength="1000"></textarea><button id="ai-workshop-prompt-edit-save" class="ai-workshop-button ai-workshop-button-secondary" type="submit" disabled>保存为新的待复核版本</button></form>
+                </details>
+              </details>
+              <section class="ai-workshop-workbench-group ai-workshop-generation-card" aria-label="建模状态">
+                <span class="ai-workshop-badge ai-workshop-badge-unavailable">真实建模已关闭 · 第三次取消</span>
+                <p id="ai-workshop-model-status" class="ai-workshop-feedback">两个已有模型可继续查看。用户已取消第三次建模，当前不开放新建模型。</p>
+                <button id="ai-workshop-model-submit" class="ai-workshop-button" type="button" disabled aria-describedby="ai-workshop-model-status">新增建模已关闭</button>
+                <details class="ai-workshop-workbench-disclosure"><summary>生成参数与额度记录</summary><p id="ai-workshop-asset-quota" class="ai-workshop-feedback">正在读取全局建模台账；新增建模保持关闭。</p><div id="ai-workshop-model-approval-summary"></div><button id="ai-workshop-asset-refresh" class="ai-workshop-text-link" type="button">刷新本地状态</button></details>
+              </section>
+              <details class="ai-workshop-workbench-disclosure ai-workshop-workbench-group"><summary>导入已有合法GLB</summary>
+                <form id="ai-workshop-model-import-form" class="ai-workshop-form" novalidate><label class="ai-workshop-label" for="ai-workshop-model-import-file">GLB文件（最多50MB）</label><input id="ai-workshop-model-import-file" class="ai-workshop-input" type="file" accept=".glb,model/gltf-binary"><label class="ai-workshop-label" for="ai-workshop-model-import-license">模型来源与许可</label><textarea id="ai-workshop-model-import-license" class="ai-workshop-input" rows="3" maxlength="1000" placeholder="填写真实来源和许可"></textarea><button class="ai-workshop-button ai-workshop-button-secondary" type="submit" disabled>检查并登记合法模型</button></form>
+              </details>
+            </aside>
+            <section class="ai-workshop-viewer-card ai-workshop-workbench-viewer" aria-labelledby="ai-workshop-selected-model-title">
+              <div class="ai-workshop-workbench-viewer-heading"><h3 id="ai-workshop-selected-model-title">已有数字资产</h3><span class="ai-workshop-badge">交互3D</span></div>
+              <p id="ai-workshop-selected-model-subtitle" class="ai-workshop-description">从右侧选择已保存的真实模型。</p>
               <div id="ai-workshop-viewer-host" class="ai-workshop-model-viewport" role="region" aria-label="实时3D模型查看器" aria-busy="false" data-viewer-state="idle"></div>
               <p id="ai-workshop-viewer-status" class="ai-workshop-feedback" role="status" aria-live="polite">选择一个已登记的GLB模型开始查看</p>
               <p id="ai-workshop-viewer-error" class="ai-workshop-feedback ai-workshop-feedback-error" role="alert" hidden></p>
               <div class="ai-workshop-viewer-controls" aria-label="3D相机控制"><button id="ai-workshop-viewer-zoom-in" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>放大 ＋</button><button id="ai-workshop-viewer-zoom-out" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>缩小 −</button><button id="ai-workshop-viewer-reset" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>重置视角</button><button id="ai-workshop-viewer-touch" class="ai-workshop-button ai-workshop-button-secondary" type="button" aria-pressed="false" disabled>进入触摸交互</button><button id="ai-workshop-viewer-reload" class="ai-workshop-text-link" type="button" hidden>重新加载原模型</button></div>
-              <p id="ai-workshop-viewer-help" class="ai-workshop-description">桌面拖拽旋转、滚轮缩放；手机点击“进入触摸交互”后可自由拖拽和双指缩放。</p>
-              <p id="ai-workshop-model-info" class="ai-workshop-citation-meta">模型加载后显示其真实来源与使用范围。</p>
-              <a id="ai-workshop-model-download" class="ai-workshop-text-link" href="#ai-workshop-model" download hidden>下载当前已登记模型 ↓</a>
-              <details class="ai-workshop-details"><summary>导入有使用权的已有GLB</summary><form id="ai-workshop-model-import-form" class="ai-workshop-form" novalidate><label class="ai-workshop-label" for="ai-workshop-model-import-file">GLB文件（≤50MB）</label><input id="ai-workshop-model-import-file" class="ai-workshop-input" type="file" accept=".glb,model/gltf-binary"><label class="ai-workshop-label" for="ai-workshop-model-import-license">模型来源与许可</label><textarea id="ai-workshop-model-import-license" class="ai-workshop-input" rows="2" maxlength="1000" placeholder="填写模型真实来源和使用许可"></textarea><button class="ai-workshop-button ai-workshop-button-secondary" type="submit" disabled>检查并登记合法模型</button></form></details>
-            </div>
-            <aside class="ai-workshop-card ai-workshop-generation-card">
-              <details><summary>模型使用范围与服务状态</summary>
-              <span class="ai-workshop-badge ai-workshop-badge-unavailable">真实建模已关闭 · 第三次取消</span><h3>已有成果，只读展示</h3>
-              <p id="ai-workshop-asset-quota" class="ai-workshop-feedback">全项目最多3次新建模型HTTP提交尝试，未知或失败不自动返还次数。</p>
-              <div id="ai-workshop-model-approval-summary"></div>
-              <p id="ai-workshop-model-status" class="ai-workshop-feedback">两个历史真实模型已验收；第三次由用户决定不执行，剩余次数不等于继续调用授权。当前仅查看已有资源，新增建模保持关闭。</p>
-              <button id="ai-workshop-model-submit" class="ai-workshop-button" type="button" disabled aria-describedby="ai-workshop-model-status">新增建模已关闭</button>
-              <p class="ai-workshop-description">Agent、页面加载、刷新、测试和模型重载均不会提交Neural4D任务。所有真实创建必须经过后端鉴权、人工批准和SQLite原子配额保护。</p>
-              </details>
+              <p id="ai-workshop-viewer-help" class="ai-workshop-description">鼠标拖拽旋转、滚轮缩放；手机开启触摸交互后可拖拽和双指缩放。</p>
+              <details class="ai-workshop-workbench-disclosure"><summary>模型来源与使用范围</summary><p id="ai-workshop-model-info" class="ai-workshop-citation-meta">加载后显示真实来源与使用范围。</p><a id="ai-workshop-model-download" class="ai-workshop-text-link" href="#ai-workshop-model" download hidden>下载当前已登记模型 ↓</a></details>
+              <details class="ai-workshop-workbench-disclosure ai-workshop-workbench-legacy"><summary>当前风格版本与其他已登记素材</summary><label class="ai-workshop-label" for="ai-workshop-style-model-select">当前角色风格模型</label><select id="ai-workshop-style-model-select" class="ai-workshop-input"><option value="">当前风格尚未生成3D模型</option></select><details class="ai-workshop-test-model-picker"><summary>独立校验素材</summary><label class="ai-workshop-label" for="ai-workshop-model-select">已有合法GLB</label><select id="ai-workshop-model-select" class="ai-workshop-input"><option value="">请选择已有合法GLB测试模型</option></select><small>独立校验素材不属于当前角色或风格版本。</small></details></details>
+            </section>
+            <aside class="ai-workshop-workbench-library" aria-labelledby="ai-workshop-library-heading">
+              <div class="ai-workshop-workbench-library-heading"><h3 id="ai-workshop-library-heading">数字资产库</h3><button id="ai-workshop-library-refresh" class="ai-workshop-text-link" type="button">刷新</button></div>
+              <p id="ai-workshop-library-status" class="ai-workshop-feedback" role="status" aria-live="polite">正在读取已保存的资产。</p>
+              <p id="ai-workshop-library-selection-status" class="ai-workshop-feedback" role="status" aria-live="polite"></p>
+              <div id="ai-workshop-asset-library" class="ai-workshop-asset-library" aria-label="选择真实数字资产"></div>
+              <p class="ai-workshop-library-note">选择与重载只读取已有文件。内部技术资产保留其使用范围，不作为正式角色交付。</p>
             </aside>
           </div>
         </section>

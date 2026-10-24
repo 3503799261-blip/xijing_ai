@@ -304,6 +304,23 @@ export async function acceptAssetImage(imageId, imageHash) {
 }
 
 export async function listAssetModels() { return assetRequest('models', jsonGet, validateModelList); }
+/** Explicit local-only discovery; the server retains all internal asset guards. */
+export async function listWorkbenchModels({ includeInternal = false } = {}) {
+  if (typeof includeInternal !== 'boolean') throw new ServiceError('INVALID_ASSET_QUERY', '资产读取选项无效。');
+  return assetRequest(`models${includeInternal ? '?includeInternal=true' : ''}`, jsonGet, (body) => ({
+    models: validateModelList(body),
+    internalIncluded: body.internalIncluded === true,
+  }));
+}
+export async function getConceptCandidate(candidateId) {
+  const id = assetIdentifier(candidateId);
+  return assetRequest(`candidates/${id}`, jsonGet, (body) => {
+    if (body?.candidateId !== id || !['chibi', 'realistic'].includes(body.styleMode)
+      || typeof body.filesAvailable !== 'boolean'
+      || (body.filesAvailable && (!/^[a-f0-9]{64}$/.test(body.hash || '') || !/^[a-f0-9]{64}$/.test(body.sourceHash || '')))) throw new TypeError('Invalid concept candidate');
+    return Object.freeze(body);
+  });
+}
 export async function getAssetUsage() { return assetRequest('usage', jsonGet, validateAssetUsage); }
 
 export async function importLicensedModel({ assetId, file, licenseNote }) {

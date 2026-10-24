@@ -1,0 +1,135 @@
+/* Scoped asset workbench: reuse the site's wine red, gold, cream and Chinese typography. */
+.ai-workshop[data-active-panel="model"] > .ai-workshop-shell { width: min(1640px, 96%); }
+#ai-workshop-model .ai-workshop-workbench-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 12px; }
+#ai-workshop-model .ai-workshop-workbench-heading .ai-workshop-heading { margin: 0 0 6px; font-size: clamp(1.35rem, 2vw, 1.8rem); letter-spacing: .035em; }
+#ai-workshop-model .ai-workshop-workbench-heading .ai-workshop-description { margin: 0; }
+#ai-workshop-model .ai-workshop-workbench-heading > a { flex: 0 0 auto; margin: 0 0 3px; font-size: .9rem; }
+#ai-workshop-model > .ai-workshop-asset-feedback { margin: 0 0 16px; padding: 9px 12px; font-size: .9rem; line-height: 1.7; }
+.ai-workshop-asset-workbench { display: grid; grid-template-columns: 250px minmax(0, 1fr) 220px; align-items: stretch; min-width: 0; border: 1px solid var(--ai-workshop-border); border-radius: 10px; background: var(--paper, #fffaf0); overflow: hidden; }
+.ai-workshop-workbench-tools,
+.ai-workshop-workbench-library { min-width: 0; padding: 18px; background: #f1e7d7; }
+.ai-workshop-workbench-tools { border-right: 1px solid var(--ai-workshop-border); max-height: 960px; overflow-y: auto; scrollbar-width: thin; }
+.ai-workshop-workbench-library { border-left: 1px solid var(--ai-workshop-border); }
+.ai-workshop-asset-workbench h3 { margin: 0 0 12px; color: var(--red, #8d1820); font-size: 1rem; line-height: 1.6; }
+.ai-workshop-workbench-group { margin: 0; padding: 17px 0; border: 0; border-bottom: 1px solid rgba(151,91,36,.18); border-radius: 0; background: transparent; box-shadow: none; }
+.ai-workshop-workbench-group:first-child { padding-top: 0; }
+.ai-workshop-workbench-group:last-child { border-bottom: 0; padding-bottom: 0; }
+.ai-workshop-workbench-tools .ai-workshop-description,
+.ai-workshop-workbench-tools .ai-workshop-feedback,
+.ai-workshop-workbench-library .ai-workshop-feedback,
+.ai-workshop-library-note { font-size: .84rem; line-height: 1.75; }
+.ai-workshop-workbench-tools .ai-workshop-feedback { margin: 8px 0; }
+.ai-workshop-workbench-tools .ai-workshop-label { margin: 10px 0 6px; font-size: .88rem; }
+.ai-workshop-workbench-tools .ai-workshop-form { gap: 10px; }
+.ai-workshop-workbench-tools .ai-workshop-form-footer { display: block; margin-top: 12px; }
+.ai-workshop-workbench-tools .ai-workshop-button { width: 100%; min-width: 0; min-height: 40px; padding: 8px 10px; font-size: .86rem; line-height: 1.65; }
+.ai-workshop-workbench-tools .ai-workshop-input { min-width: 0; width: 100%; padding: 9px 10px; font-size: .87rem; line-height: 1.6; }
+.ai-workshop-workbench-tools .ai-workshop-input[type="file"] { padding: 8px; font-size: .8rem; }
+.ai-workshop-workbench-tools .ai-workshop-input[type="file"]::file-selector-button { max-width: 100%; margin: 0 5px 4px 0; padding: 4px 6px; color: var(--red, #8d1820); background: var(--paper, #fffaf0); border: 1px solid var(--ai-workshop-border); border-radius: 4px; font: inherit; }
+.ai-workshop-workbench-tools .ai-workshop-checkbox { gap: 7px; font-size: .82rem; }
+.ai-workshop-workbench-tools .ai-workshop-checkbox input { width: 18px; height: 18px; }
+.ai-workshop-workbench-tools .ai-workshop-text-link { margin-top: 10px; font-size: .86rem; }
+.ai-workshop-workbench-tools .ai-workshop-badge { padding: 4px 7px; font-size: .76rem; }
+.ai-workshop-workbench-tools .ai-workshop-generation-card > .ai-workshop-button { margin: 8px 0 4px; }
+.ai-workshop-workbench-disclosure { min-width: 0; margin-top: 13px; }
+.ai-workshop-workbench-disclosure > summary { cursor: pointer; color: var(--red, #8d1820); font-size: .88rem; line-height: 1.8; }
+.ai-workshop-workbench-disclosure[open] > summary { margin-bottom: 12px; }
+.ai-workshop-workbench-tools > .ai-workshop-workbench-disclosure { margin-top: 0; }
+.ai-workshop-workbench-tools .ai-workshop-upload-form { margin-top: 0; padding-top: 0; border-top: 0; }
+.ai-workshop-workbench-tools .ai-workshop-image-preview { min-height: 220px; margin: 0 0 10px; padding: 10px; gap: 10px; border: 1px solid rgba(151,91,36,.18); border-radius: 7px; background: var(--paper, #fffaf0); }
+.ai-workshop-workbench-tools .ai-workshop-image-preview > p { font-size: .84rem; }
+.ai-workshop-workbench-tools .ai-workshop-concept-image { height: 235px; max-height: 270px; border-radius: 3px; object-fit: contain; }
+.ai-workshop-workbench-tools .ai-workshop-image-preview .ai-workshop-citation-meta { max-height: 160px; overflow-y: auto; font-size: .75rem; text-align: left; }
+.ai-workshop-workbench-tools .ai-workshop-asset-summary { margin-top: 0; padding-top: 0; border-top: 0; }
+.ai-workshop-workbench-tools .ai-workshop-asset-summary h3 { margin-top: 10px; }
+.ai-workshop-workbench-tools .ai-workshop-asset-summary .ai-workshop-badge { white-space: normal; }
+.ai-workshop-workbench-tools .ai-workshop-draft { max-height: 240px; overflow-y: auto; padding: 10px; font-size: .78rem; line-height: 1.8; overflow-wrap: anywhere; white-space: pre-wrap; }
+.ai-workshop-workbench-tools .ai-workshop-enterprise-fields { margin-top: 14px; padding: 10px; border-radius: 6px; }
+.ai-workshop-workbench-tools .ai-workshop-asset-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; margin-top: 14px; font-size: .76rem; }
+.ai-workshop-workbench-tools .ai-workshop-asset-flow li { padding: 6px; border-radius: 4px; }
+.ai-workshop-workbench-tools .ai-workshop-approval-info > div { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+.ai-workshop-workbench-tools .ai-workshop-approval-info dd { font-size: .8rem; }
+.ai-workshop-workbench-tools .ai-workshop-approval-image { max-height: 150px; }
+.ai-workshop-workbench-viewer.ai-workshop-viewer-card { min-width: 0; padding: 20px; border: 0; border-radius: 0; background: var(--paper, #fffaf0); box-shadow: none; }
+.ai-workshop-workbench-viewer-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; }
+.ai-workshop-workbench-viewer-heading h3 { margin: 0; font-size: 1.2rem; }
+.ai-workshop-workbench-viewer-heading .ai-workshop-badge { font-size: .76rem; padding: 3px 8px; background: transparent; }
+#ai-workshop-selected-model-subtitle { min-height: 24px; margin: 7px 0 0; font-size: .86rem; line-height: 1.7; }
+.ai-workshop-workbench-viewer.ai-workshop-viewer-card .ai-workshop-model-viewport { height: clamp(500px, 59dvh, 720px); min-height: 0; margin: 15px 0 12px; padding: 0; color: var(--muted, #705d57); background: #f4ecde; border: 1px solid rgba(151,91,36,.13); border-radius: 7px; box-shadow: none; }
+.ai-workshop-workbench-viewer .ai-workshop-model-viewport::before { display: none; }
+.ai-workshop-workbench-viewer .ai-workshop-model-viewport::after { color: var(--muted, #705d57); font-size: .95rem; }
+.ai-workshop-workbench-viewer .ai-workshop-viewer-controls { gap: 8px; margin: 11px 0; }
+.ai-workshop-workbench-viewer .ai-workshop-viewer-controls .ai-workshop-button { min-height: 40px; padding: 8px 12px; font-size: .86rem; }
+.ai-workshop-workbench-viewer > .ai-workshop-feedback { margin: 8px 0; font-size: .9rem; }
+.ai-workshop-workbench-viewer > .ai-workshop-description { margin: 7px 0; font-size: .84rem; }
+.ai-workshop-workbench-viewer > .ai-workshop-workbench-disclosure { padding-top: 12px; border-top: 1px solid rgba(151,91,36,.15); }
+.ai-workshop-workbench-viewer .ai-workshop-workbench-disclosure > summary { color: var(--muted, #705d57); font-size: .84rem; }
+.ai-workshop-workbench-viewer .ai-workshop-citation-meta { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .83rem; }
+.ai-workshop-workbench-viewer .ai-workshop-test-model-picker { margin-top: 10px; padding: 12px; border-style: solid; }
+.ai-workshop-workbench-library-heading { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+.ai-workshop-workbench-library-heading h3 { margin: 0; }
+.ai-workshop-workbench-library-heading .ai-workshop-text-link { margin: 0; font-size: .84rem; }
+.ai-workshop-workbench-library #ai-workshop-library-status { margin: 9px 0 14px; }
+.ai-workshop-asset-library { display: grid; gap: 12px; max-height: 760px; overflow-y: auto; padding: 2px; scrollbar-width: thin; }
+.ai-workshop-asset-library button { display: block; min-width: 0; width: 100%; padding: 0; overflow: hidden; border: 1px solid rgba(151,91,36,.22); border-radius: 7px; color: var(--ink, #241918); background: var(--paper, #fffaf0); font: inherit; text-align: left; cursor: pointer; }
+.ai-workshop-asset-library button:hover { border-color: var(--gold, #c99b45); }
+.ai-workshop-asset-library button[aria-pressed="true"],
+.ai-workshop-asset-library button[aria-current="true"],
+.ai-workshop-asset-library .ai-workshop-is-active { border-color: var(--red, #8d1820); box-shadow: 0 0 0 1px var(--red, #8d1820); }
+.ai-workshop-asset-library button:disabled { cursor: default; opacity: .65; }
+.ai-workshop-asset-library button img { width: 100%; height: 155px; padding: 8px; background: #eee3d1; object-fit: contain; }
+.ai-workshop-library-item-copy { display: block; padding: 10px; }
+.ai-workshop-asset-library strong { display: block; margin-bottom: 4px; color: #604132; font-size: .92rem; font-weight: 600; line-height: 1.6; }
+.ai-workshop-asset-library small { display: block; color: var(--muted, #705d57); font-size: .78rem; line-height: 1.65; }
+.ai-workshop-library-note { margin: 16px 0 0; padding-top: 12px; border-top: 1px solid rgba(151,91,36,.18); color: var(--muted, #705d57); }
+.ai-workshop-library-empty,
+.ai-workshop-library-pending { margin: 8px 0; color: var(--muted, #705d57); font-size: .84rem; line-height: 1.8; }
+@media (max-width: 1250px) and (min-width: 851px) {
+  .ai-workshop-asset-workbench { grid-template-columns: 220px minmax(0, 1fr) 185px; }
+  .ai-workshop-workbench-tools,
+  .ai-workshop-workbench-library { padding: 14px; }
+  .ai-workshop-workbench-viewer.ai-workshop-viewer-card { padding: 16px; }
+  .ai-workshop-workbench-viewer.ai-workshop-viewer-card .ai-workshop-model-viewport { height: 530px; }
+  .ai-workshop-asset-library button img { height: 135px; }
+  .ai-workshop-workbench-viewer .ai-workshop-viewer-controls .ai-workshop-button { padding: 8px 9px; }
+}
+@media (max-width: 850px) and (min-width: 601px) {
+  .ai-workshop-asset-workbench { grid-template-columns: 210px minmax(0, 1fr); }
+  .ai-workshop-workbench-tools { grid-column: 1; grid-row: 1; }
+  .ai-workshop-workbench-viewer { grid-column: 2; grid-row: 1; }
+  .ai-workshop-workbench-library { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--ai-workshop-border); }
+  .ai-workshop-asset-library { grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: 330px; }
+  .ai-workshop-asset-library button { display: grid; grid-template-columns: 95px minmax(0, 1fr); align-items: center; }
+  .ai-workshop-asset-library button img { height: 130px; }
+  .ai-workshop-workbench-viewer.ai-workshop-viewer-card { padding: 16px; }
+  .ai-workshop-workbench-viewer.ai-workshop-viewer-card .ai-workshop-model-viewport { height: 500px; }
+}
+@media (max-width: 600px) {
+  .ai-workshop[data-active-panel="model"] > .ai-workshop-shell { width: 94%; }
+  #ai-workshop-model .ai-workshop-workbench-heading { display: block; }
+  #ai-workshop-model .ai-workshop-workbench-heading .ai-workshop-heading { font-size: 1.35rem; }
+  #ai-workshop-model .ai-workshop-workbench-heading .ai-workshop-description { font-size: .86rem; }
+  #ai-workshop-model .ai-workshop-workbench-heading > a { margin-top: 8px; }
+  .ai-workshop-asset-workbench { grid-template-columns: minmax(0, 1fr); }
+  .ai-workshop-workbench-viewer { grid-column: 1; grid-row: 1; }
+  .ai-workshop-workbench-library { grid-column: 1; grid-row: 2; border: 0; border-top: 1px solid var(--ai-workshop-border); }
+  .ai-workshop-workbench-tools { grid-column: 1; grid-row: 3; max-height: none; overflow: visible; border: 0; border-top: 1px solid var(--ai-workshop-border); }
+  .ai-workshop-workbench-tools,
+  .ai-workshop-workbench-library { padding: 16px; }
+  .ai-workshop-workbench-viewer.ai-workshop-viewer-card { padding: 15px; }
+  .ai-workshop-workbench-viewer.ai-workshop-viewer-card .ai-workshop-model-viewport { height: 420px; margin: 10px 0; }
+  .ai-workshop-workbench-viewer-heading h3 { font-size: 1.08rem; }
+  .ai-workshop-workbench-viewer .ai-workshop-viewer-controls .ai-workshop-button { flex: 1 1 105px; }
+  .ai-workshop-asset-library { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-height: 390px; }
+  .ai-workshop-asset-library button img { height: 145px; }
+  .ai-workshop-library-item-copy { padding: 8px; }
+  .ai-workshop-asset-library strong { font-size: .84rem; }
+  .ai-workshop-asset-library small { font-size: .74rem; }
+  .ai-workshop-workbench-tools .ai-workshop-concept-image { height: 260px; }
+}
+
+.ai-workshop-library-thumbnail { position: relative; display: block; min-height: 110px; background: #eee3d1; }
+.ai-workshop-library-thumbnail > .ai-workshop-library-empty { display: grid; place-items: center; min-height: 130px; margin: 0; padding: 12px; text-align: center; }
+.ai-workshop-library-thumbnail-label { position: absolute; right: 7px; bottom: 7px; padding: 1px 6px; border-radius: 3px; color: #624c3b; background: rgba(255,250,240,.92); font-size: .7rem; line-height: 1.7; }
+.ai-workshop-asset-library .ai-workshop-library-internal { margin-top: 5px; color: var(--red, #8d1820); font-size: .73rem; }
+#ai-workshop-library-selection-status:empty { display: none; }
