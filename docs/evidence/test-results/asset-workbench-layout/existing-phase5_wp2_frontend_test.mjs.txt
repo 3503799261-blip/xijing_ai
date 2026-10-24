@@ -1,0 +1,145 @@
+{
+  "scope": "WP2 offline contract/DOM/Fetch doubles; not browser or paid API validation",
+  "timestamp": "2026-10-24T12:17:49.625Z",
+  "passed": 34,
+  "failed": 0,
+  "skipped": 0,
+  "checks": [
+    {
+      "name": "valid persisted list and public detail accept real integer artifact versions",
+      "passed": true
+    },
+    {
+      "name": "missing persisted step/output remains null without synthesizing a state",
+      "passed": true
+    },
+    {
+      "name": "explicitly incomplete malformed event is visible without inferred timestamp",
+      "passed": true
+    },
+    {
+      "name": "wrong source, invalid pagination and invented task type are rejected",
+      "passed": true
+    },
+    {
+      "name": "duplicate task and unknown Agent identifiers are rejected",
+      "passed": true
+    },
+    {
+      "name": "malformed output and human confirmation metadata do not silently become confirmed",
+      "passed": true
+    },
+    {
+      "name": "asset viewer links must match exact saved asset and same local origin",
+      "passed": true
+    },
+    {
+      "name": "source URLs reject scripts, credentials and signed secret query parameters",
+      "passed": true
+    },
+    {
+      "name": "list uses one GET with encoded exact filters, no payload and no cache",
+      "passed": true
+    },
+    {
+      "name": "detail uses one bounded GET and checks response task identity",
+      "passed": true
+    },
+    {
+      "name": "invalid history IDs and local query parameters never send requests",
+      "passed": true
+    },
+    {
+      "name": "API failure never reflects server exception paths or secrets into the UI",
+      "passed": true
+    },
+    {
+      "name": "404 is a clear history missing error with no automatic task recreation",
+      "passed": true
+    },
+    {
+      "name": "network error makes only one request and permits explicit later recovery",
+      "passed": true
+    },
+    {
+      "name": "invalid JSON and structurally invalid responses are reported accurately",
+      "passed": true
+    },
+    {
+      "name": "timeout cancels the local read and does not retry or call execution routes",
+      "passed": true
+    },
+    {
+      "name": "history initializes idle without automatic reads or active workflow restoration",
+      "passed": true
+    },
+    {
+      "name": "manual form lists persisted task and populates only actual saved state choices",
+      "passed": true
+    },
+    {
+      "name": "list pagination keeps committed filters and remains a separate manual read",
+      "passed": true
+    },
+    {
+      "name": "empty history state does not synthesize demo records",
+      "passed": true
+    },
+    {
+      "name": "manual list error can be recovered by another user query",
+      "passed": true
+    },
+    {
+      "name": "detail displays real saved JSON, citations, review and human record without accept controls",
+      "passed": true
+    },
+    {
+      "name": "running record is explicitly a non-live snapshot without fake progress",
+      "passed": true
+    },
+    {
+      "name": "untrusted markup stays literal text and no executable nodes are created",
+      "passed": true
+    },
+    {
+      "name": "very long saved output is folded and bounded with an explicit non-mutating truncation note",
+      "passed": true
+    },
+    {
+      "name": "asset links refer only to exact saved realistic asset and never pretend another style model exists",
+      "passed": true
+    },
+    {
+      "name": "unlinked history never invents a role or GLB relationship",
+      "passed": true
+    },
+    {
+      "name": "model provenance labels distinguish saved real generation from local fixtures and unknown imports",
+      "passed": true
+    },
+    {
+      "name": "missing detail displays explicit failure and manual read recovery action",
+      "passed": true
+    },
+    {
+      "name": "older list response cannot overwrite the latest user query",
+      "passed": true
+    },
+    {
+      "name": "older selected detail cannot overwrite another task or reappear after new list query",
+      "passed": true
+    },
+    {
+      "name": "event pagination is user initiated and keeps selected historical task",
+      "passed": true
+    },
+    {
+      "name": "history HTML entry and main initialization preserve old module chain and 8-page navigation",
+      "passed": true
+    },
+    {
+      "name": "history module source contains no mutation methods, timers, SSE, local storage or HTML injection",
+      "passed": true
+    }
+  ]
+}

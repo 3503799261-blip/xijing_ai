@@ -1,0 +1,95 @@
+{
+  "kind": "OFFLINE_EXPLICIT_DOM_AND_FETCH_TEST_DOUBLES",
+  "disclaimer": "These tests do not call real servers/providers or load GLB; actual browser GLB evidence is recorded separately.",
+  "executedAt": "2026-10-24T12:03:37.891Z",
+  "nodeVersion": "v24.22.1",
+  "command": "node scripts/asset_workbench_frontend_test.mjs --output D:\\京剧\\.runtime\\asset-workbench-frontend-target.json",
+  "results": [
+    {
+      "name": "candidate URL uses the controlled same-origin candidate file path",
+      "passed": true
+    },
+    {
+      "name": "candidate path traversal, query, fragment and invalid identifiers are rejected locally",
+      "passed": true
+    },
+    {
+      "name": "candidate URL rejects credentials, signed-query, fragment and non-HTTP API configuration",
+      "passed": true
+    },
+    {
+      "name": "explicit separate backend origin is preserved without arbitrary resource URLs",
+      "passed": true
+    },
+    {
+      "name": "default workbench service performs a single GET and leaves internal discovery disabled",
+      "passed": true
+    },
+    {
+      "name": "local internal option is explicitly encoded and true marker is read without changing identities",
+      "passed": true
+    },
+    {
+      "name": "non-boolean internal query never sends a request",
+      "passed": true
+    },
+    {
+      "name": "invalid model schemas cannot appear in the asset library",
+      "passed": true
+    },
+    {
+      "name": "candidate service enforces requested identity, supported style and available-file hashes",
+      "passed": true
+    },
+    {
+      "name": "unavailable candidate files remain unavailable instead of fabricating a thumbnail hash",
+      "passed": true
+    },
+    {
+      "name": "network failure sends one read-only request with no automatic retry",
+      "passed": true
+    },
+    {
+      "name": "library discovers two distinct real-model records and a real pending role; default prefers formal model",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n2 !== 3\n"
+    },
+    {
+      "name": "selecting internal Q model preserves null character association and exact candidate image",
+      "passed": true
+    },
+    {
+      "name": "pending role selection has no model and cannot masquerade as an existing GLB",
+      "passed": false,
+      "error": "Cannot read properties of undefined (reading 'fire')"
+    },
+    {
+      "name": "candidate hash mismatch omits the thumbnail while retaining the original GLB identity",
+      "passed": true
+    },
+    {
+      "name": "legal test fixtures are not listed as real generated role assets",
+      "passed": true
+    },
+    {
+      "name": "failed refresh retains explicit stale snapshot and does not silently rerun selection",
+      "passed": true
+    },
+    {
+      "name": "empty history is a true empty state without model selection or generation",
+      "passed": true
+    },
+    {
+      "name": "three-column HTML retains all business selectors and creation is visibly disabled",
+      "passed": true
+    },
+    {
+      "name": "workbench styling preserves theme variables and library code has no provider/create/polling or fabricated model IDs",
+      "passed": true
+    }
+  ],
+  "passed": 18,
+  "failed": 2,
+  "externalApiCalls": 0,
+  "neural4dCalls": 0
+}

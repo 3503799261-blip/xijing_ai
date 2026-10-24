@@ -1,0 +1,769 @@
+{
+  "checkedAtUtc": "2026-10-24T12:26:40.899010+00:00",
+  "scope": "Current README and this task report, Prompt Markdown and test report; local file links only",
+  "markdownFiles": 5,
+  "localLinks": 102,
+  "missingLinks": [],
+  "externalLinksNotFetched": 20,
+  "linkResults": [
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-04-final-acceptance.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-05-work-package-01.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-05-work-package-02.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-05-work-package-03.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/frontend-productization.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/local-run-setup.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/asset-workbench-layout.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-05-work-package-04.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-05-wp4-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-05-wp4-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/architecture/knowledge-provenance.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/architecture/phase-02-rag.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/architecture/ai-workshop-contracts.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-04-final-acceptance.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-02.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-05-work-package-02.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-03/browser-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/architecture/phase-03-agents.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-03/real-cases-summary.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-04-real-modeling-plan.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-04-final-acceptance.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase4-browser-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-05-wp1-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase4-windows-file-race.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-cached-reproduction-final-hybrid.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-ingest-initial.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-real-lifecycle.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-provider-probe-success.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-frontend-unit.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-final-unit-regression.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-retrieval-final-entity-metadata-same20-comparison.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-answers-rag20-final-hybrid.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-answers-rag20-final-hybrid-assistant-review.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-direct-vs-rag-five.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-browser-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-02-api-usage.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/evidence/test-results/phase-03/api-usage-final.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-01.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-04-first-internal-modeling.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-04-realistic-preparation.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-04-second-model-approval.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/prompts/phase-04/realistic-model-v1.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-04-second-model-execution.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-01.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-02.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-03.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-04-final-acceptance.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-05-project-audit.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-05-work-package-01.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-05-work-package-02.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reports/phase-05-work-package-03.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/prompts/phase-01/README.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/prompts/phase-02/README.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/prompts/phase-03/README.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/prompts/phase-04/README.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/prompts/phase-05/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/asset-workbench-layout.md",
+      "target": "../evidence/test-results/asset-workbench-layout/test-report.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/asset-workbench-layout.md",
+      "target": "../evidence/test-results/asset-workbench-layout/screenshots/before-realistic-1920.png",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/asset-workbench-layout.md",
+      "target": "../evidence/test-results/asset-workbench-layout/screenshots/workbench-1920-privacy-masked.png",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/asset-workbench-layout.md",
+      "target": "../evidence/test-results/asset-workbench-layout/screenshots/workbench-390-privacy-masked.png",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/asset-workbench-layout.md",
+      "target": "../evidence/test-results/asset-workbench-layout/final-document-validation.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/asset-workbench-layout.md",
+      "target": "../evidence/test-results/asset-workbench-layout/final-secrets-scan.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/asset-workbench-layout/README.md",
+      "target": "user-request.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/asset-workbench-layout/README.md",
+      "target": "request-metadata.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/asset-workbench-layout/README.md",
+      "target": "public-progress-snapshot.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/asset-workbench-layout/README.md",
+      "target": "../../reports/asset-workbench-layout.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/asset-workbench-layout/README.md",
+      "target": "../../evidence/test-results/asset-workbench-layout/test-report.md",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "../../../reports/asset-workbench-layout.md",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "summary.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "browser-final.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "cdp-touch-real-glbs.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "readonly-test-server-stop.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "existing-user-server-final.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "backend-full-isolation.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "backend-full-junit.xml",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "backend-full-output.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "backend-workbench-12-isolation.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "backend-workbench-12-junit.xml",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "frontend-existing-final.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "frontend-workbench-22.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "browser-final.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "local-preview-library-final.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "cdp-touch-real-glbs.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "eight-pages-three-viewports.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "secondary-final.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "real-glb-http-bytes.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "before-load-buffer-failure.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "before-layout.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "browser-first-attempt.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "missing-style-wait-diagnostic.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "secondary-before-enterprise-fix.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "frontend-workbench-initial-fixture-failure.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "frontend-workbench-fixture-review-failure.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "protected-invariants.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "screenshots/before-realistic-1920.png",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "screenshots/workbench-1920-privacy-masked.png",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "screenshots/workbench-1024-privacy-masked.png",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "screenshots/workbench-390-privacy-masked.png",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "screenshots/privacy-manifest.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/asset-workbench-layout/test-report.md",
+      "target": "private-screenshot-manifest.json",
+      "exists": true
+    }
+  ],
+  "evidenceManifestEntries": 37,
+  "evidenceManifest": [
+    {
+      "file": "backend-full-isolation.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "backend-full-junit.xml",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "backend-full-output.txt",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "backend-workbench-12-isolation.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "backend-workbench-12-junit.xml",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "backend-workbench-12-output.txt",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "before-layout.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "before-load-buffer-failure.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "browser-final.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "browser-first-attempt.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "cdp-touch-real-glbs.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "eight-pages-three-viewports.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "existing-phase2_frontend_test.mjs.txt",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "existing-phase3_frontend_test.mjs.txt",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "existing-phase4_frontend_test.mjs.txt",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "existing-phase5_wp2_frontend_test.mjs.txt",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "existing-phase5_wp3_frontend_test.mjs.txt",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "existing-user-server-final.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "final-secrets-scan.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "frontend-existing-final.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "frontend-workbench-22.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "frontend-workbench-fixture-review-failure.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "frontend-workbench-initial-fixture-failure.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "local-preview-library-final.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "missing-style-wait-diagnostic.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "private-screenshot-manifest.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "protected-invariants.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "readonly-test-server-stop.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "real-glb-http-bytes.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "screenshots/before-realistic-1920.png",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "screenshots/privacy-manifest.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "screenshots/workbench-1024-privacy-masked.png",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "screenshots/workbench-1920-privacy-masked.png",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "screenshots/workbench-390-privacy-masked.png",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "secondary-before-enterprise-fix.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "secondary-final.json",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    },
+    {
+      "file": "test-report.md",
+      "exists": true,
+      "hashMatches": true,
+      "bytesMatch": true
+    }
+  ],
+  "otherCultureHtml": [
+    "facial.html",
+    "gallery.html",
+    "history.html",
+    "index.html",
+    "music.html",
+    "roles.html",
+    "video.html"
+  ],
+  "otherCultureHtmlUnchanged": true,
+  "sourceChanges": [
+    "README.md",
+    "about.html",
+    "backend/app/api/assets.py",
+    "backend/app/assets/service.py",
+    "backend/tests/test_asset_workbench.py",
+    "css/ai-workshop-assets.css",
+    "js/ai-workshop/asset-library.js",
+    "js/ai-workshop/demo-guide.js",
+    "js/ai-workshop/digital-assets.js",
+    "js/ai-workshop/services.js",
+    "scripts/asset_workbench_frontend_test.mjs"
+  ],
+  "success": true
+}

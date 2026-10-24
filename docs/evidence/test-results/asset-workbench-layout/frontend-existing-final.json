@@ -1,0 +1,32 @@
+[
+  {
+    "script": "phase2_frontend_test.mjs",
+    "exitCode": 0,
+    "stdoutTail": "k and overlong questions do not send; Enter sends while Shift+Enter and IME composition do not\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"chat transport rejects invalid identities locally; list/create/detail routes stay separate from Agent history\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"HTML bindings, safe text rendering and module chain remain complete (static)\",\n      \"passed\": true\n    }\n  ],\n  \"passed\": 32,\n  \"failed\": 0\n}\n",
+    "stderrTail": ""
+  },
+  {
+    "script": "phase3_frontend_test.mjs",
+    "exitCode": 0,
+    "stdoutTail": "ts ID\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"cancel request preserves real running stage until backend marks task cancelled\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"automatic status polling is bounded and ends without inventing a task failure\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"HTML binding/version chain and only safe text construction (static)\",\n      \"passed\": true\n    }\n  ],\n  \"passed\": 25,\n  \"failed\": 0\n}\n",
+    "stderrTail": ""
+  },
+  {
+    "script": "phase4_frontend_test.mjs",
+    "exitCode": 0,
+    "stdoutTail": "sing quota stays unknown instead of adopting the archival count\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"archival model closure text separates historic credits from unknown future prices and never grants creation rights\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"HTML retains all original sections and real-generation remains disabled; text-only untrusted rendering\",\n      \"passed\": true\n    }\n  ],\n  \"passed\": 42,\n  \"failed\": 0\n}\n",
+    "stderrTail": ""
+  },
+  {
+    "script": "phase5_wp2_frontend_test.mjs",
+    "exitCode": 0,
+    "stdoutTail": "ery\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"event pagination is user initiated and keeps selected historical task\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"history HTML entry and main initialization preserve old module chain and 8-page navigation\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"history module source contains no mutation methods, timers, SSE, local storage or HTML injection\",\n      \"passed\": true\n    }\n  ]\n}\n",
+    "stderrTail": ""
+  },
+  {
+    "script": "phase5_wp3_frontend_test.mjs",
+    "exitCode": 0,
+    "stdoutTail": "\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"all diagnostic text uses safe DOM nodes even for an injected test message\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"guide and status source do not mutate APIs, store modes, fake answers or install a global fetch override\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"new styling is isolated, responsive, keyboard visible and respects reduced motion\",\n      \"passed\": true\n    }\n  ]\n}\n",
+    "stderrTail": ""
+  }
+]

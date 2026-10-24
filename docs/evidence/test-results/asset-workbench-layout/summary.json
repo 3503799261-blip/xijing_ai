@@ -1,0 +1,333 @@
+{
+  "checkedAtUtc": "2026-10-24T12:21:20.889608+00:00",
+  "clientDate": "2026-10-24",
+  "scope": "Asset workbench layout, safe read-only existing model discovery and real GLB display. No external provider connectivity claim.",
+  "status": "PASS_WITH_RECORDED_LIMITATIONS",
+  "testGroups": {
+    "backendFull": {
+      "passed": 809,
+      "failed": 0,
+      "skipped": 0,
+      "kind": "isolated offline backend tests",
+      "includesAssetWorkbench12": true
+    },
+    "backendAssetWorkbenchSubset": {
+      "passed": 12,
+      "failed": 0,
+      "subsetOfBackendFull": true
+    },
+    "frontendExistingGroups": [
+      {
+        "script": "phase2_frontend_test.mjs",
+        "passed": 32,
+        "failed": 0
+      },
+      {
+        "script": "phase3_frontend_test.mjs",
+        "passed": 25,
+        "failed": 0
+      },
+      {
+        "script": "phase4_frontend_test.mjs",
+        "passed": 42,
+        "failed": 0
+      },
+      {
+        "script": "phase5_wp2_frontend_test.mjs",
+        "passed": 34,
+        "failed": 0
+      },
+      {
+        "script": "phase5_wp3_frontend_test.mjs",
+        "passed": 34,
+        "failed": 0
+      }
+    ],
+    "frontendWorkbench": {
+      "passed": 22,
+      "failed": 0,
+      "kind": "explicit DOM/Fetch doubles; not real GLB evidence"
+    },
+    "realBrowserWorkbench": {
+      "passed": 7,
+      "failed": 0
+    },
+    "realLibraryAndLocalPreview": {
+      "passed": 7,
+      "failed": 0
+    },
+    "realGlbMobileCdp": {
+      "passed": 2,
+      "failed": 0,
+      "physicalPhone": false
+    },
+    "eightPagesThreeViewports": {
+      "passed": 24,
+      "failed": 0
+    },
+    "secondaryEntries": {
+      "passed": 5,
+      "failed": 0
+    }
+  },
+  "statisticsRule": "Groups overlap in behavior and repeated attempts. Do not add them to claim a unique project test total. The 12 API cases are already included in 809.",
+  "modelInteractions": {
+    "mouse": [
+      {
+        "model": "realistic",
+        "continuousDegrees": 459.5,
+        "registeredHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5"
+      },
+      {
+        "model": "internal-chibi",
+        "continuousDegrees": 459.5,
+        "registeredHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a"
+      }
+    ],
+    "cdpTouch": [
+      {
+        "model": "realistic",
+        "continuousDegrees": 322.7,
+        "pinchZoomPassed": true,
+        "physicalPhone": false
+      },
+      {
+        "model": "internal-chibi",
+        "continuousDegrees": 322.7,
+        "pinchZoomPassed": true,
+        "physicalPhone": false
+      }
+    ]
+  },
+  "protection": {
+    "status": "PASS",
+    "businessTables": 18,
+    "tasks": 22,
+    "llmCallsBeforeAndAfter": 110,
+    "quotaUsed": 2,
+    "quotaRemaining": 1,
+    "protectedFilesUnchanged": 74,
+    "sharedNavigationAndMediaUnchanged": 67,
+    "chatJsonFilesUnchanged": 1,
+    "unreadableRuntimeLocks": 3,
+    "creationEnabled": false
+  },
+  "providerCalls": {
+    "deepseek": 0,
+    "neural4d": 0,
+    "otherPaid": 0
+  },
+  "limitations": [
+    "Physical phone and real multi-touch hardware not tested; Chrome CDP emulation only.",
+    "User-owned old API process on port8000/PID4020 was intentionally preserved; stop and restart the existing VS Code run configuration to load the new includeInternal read-only endpoint.",
+    "Q model remains internal/nonpublic; no formal role association was invented. Unmasked Q screenshots and concepts were not committed.",
+    "Health and historical LLM verification do not establish current paid provider connectivity.",
+    "Three existing runtime owner lock files cannot be hashed while held by the user process; database rows and persistent resources were compared separately."
+  ],
+  "priorFailures": [
+    {
+      "evidence": "before-load-buffer-failure.json",
+      "cause": "Chrome ERR_NO_BUFFER_SPACE while loading existing model on first pre-change attempt; second same-scope read-only attempt loaded real GLB in all three viewports."
+    },
+    {
+      "evidence": "browser-first-attempt.json",
+      "cause": "Test waited only for idle while async style lookup was still in flight; corrected test waits for final missing-style text. Product cleared old model ID/src immediately."
+    },
+    {
+      "evidence": "secondary-before-enterprise-fix.json",
+      "cause": "Actual guide integration regression: new disclosure hid existing enterprise select. User-clicked guide action now opens its nearest details before original scroll. Same five groups retested PASS."
+    },
+    {
+      "evidence": "frontend-workbench-initial-fixture-failure.json",
+      "cause": "Explicit test-double characters response failed the schema, leaving two models and no pending role. Fixture corrected; original 18-pass/2-fail result retained; final target 22 passed."
+    }
+  ],
+  "evidenceFilesVerifiedAtUtc": "2026-10-24T12:23:24.506373+00:00",
+  "archivalFiles": [
+    {
+      "file": "backend-full-isolation.json",
+      "bytes": 1065,
+      "sha256": "b6bf6022f8615e95860454b6693a63bf061582f32207699c28b3e9283e278d13"
+    },
+    {
+      "file": "backend-full-junit.xml",
+      "bytes": 144647,
+      "sha256": "a3157c9d572df790e1223cf94b5fc6fe32e71e78a17f9d7b46c1d9bb7e28aac0"
+    },
+    {
+      "file": "backend-full-output.txt",
+      "bytes": 1472,
+      "sha256": "81d5a1c4b3f86ac6cf05da776fc1865599277d6c62cc7b70bcdd49060cff6682"
+    },
+    {
+      "file": "backend-workbench-12-isolation.json",
+      "bytes": 1064,
+      "sha256": "ff1f2667f5b5febad73263fa74a99f0bf6477c50f3918c084139fde5db55405f"
+    },
+    {
+      "file": "backend-workbench-12-junit.xml",
+      "bytes": 2042,
+      "sha256": "fd63ed22b4ef248281f05ea7b33e6ef7fc42c4b28d07c4293d5b237c9b89f297"
+    },
+    {
+      "file": "backend-workbench-12-output.txt",
+      "bytes": 568,
+      "sha256": "0c9a5e8b4632699299456a22739c42607f4a0370c40d55915c02f3086c352838"
+    },
+    {
+      "file": "before-layout.json",
+      "bytes": 12271,
+      "sha256": "a697628bdafdad8b04e8d0c98c63827a3bc18dae9cb1709a044e9a24329f85ca"
+    },
+    {
+      "file": "before-load-buffer-failure.json",
+      "bytes": 573,
+      "sha256": "4fae330301865f9b38228807aa9a27e6855a84c3de9def7fc433f635938c3a38"
+    },
+    {
+      "file": "browser-final.json",
+      "bytes": 175328,
+      "sha256": "69821faf867bfbb840ce42bf0920c46bc13b54c96183e3377b3c1f796bd452c3"
+    },
+    {
+      "file": "browser-first-attempt.json",
+      "bytes": 174239,
+      "sha256": "fd9f465d7e67718a3a8b0297140ec36b9774a68432dfdb9ba11b0b470c29ba19"
+    },
+    {
+      "file": "cdp-touch-real-glbs.json",
+      "bytes": 28086,
+      "sha256": "0bc360079c3707a621fbb13a4b9926e5b654ccd0a414c269093204f028240a2d"
+    },
+    {
+      "file": "eight-pages-three-viewports.json",
+      "bytes": 62853,
+      "sha256": "9f2b64bd017e67c2580fb2b5ce6caadda144b50976a7c3170147ee71ad9f2897"
+    },
+    {
+      "file": "existing-phase2_frontend_test.mjs.txt",
+      "bytes": 4315,
+      "sha256": "39b37e79ca342cd19ae5134cb241f40860b5795e7f383ab0e0522750042b973f"
+    },
+    {
+      "file": "existing-phase3_frontend_test.mjs.txt",
+      "bytes": 3700,
+      "sha256": "4277d0660fe4937a8426b861da59a288e2ac17d52a7ba756d0096a8e5ac95616"
+    },
+    {
+      "file": "existing-phase4_frontend_test.mjs.txt",
+      "bytes": 6285,
+      "sha256": "d59e782d554bfc497109c20d58b63fdc76e5d424b9d3dbed4ab27f812e348667"
+    },
+    {
+      "file": "existing-phase5_wp2_frontend_test.mjs.txt",
+      "bytes": 4621,
+      "sha256": "f875af4cf5cae4d43b762e62560c63f8b7e35b58207656efdea4141a497c0088"
+    },
+    {
+      "file": "existing-phase5_wp3_frontend_test.mjs.txt",
+      "bytes": 5032,
+      "sha256": "5ce3ba17ca398ab0a4d2b2538ae3e482a464a16d2c255dc8d695325ad3e423a3"
+    },
+    {
+      "file": "existing-user-server-final.json",
+      "bytes": 1079,
+      "sha256": "7f1d54fdec0a9fc16b5b0c595823922c8f6a71af176ecce52911c1eaeea806bc"
+    },
+    {
+      "file": "final-secrets-scan.json",
+      "bytes": 156,
+      "sha256": "2887751aadb7cef6dcdabbd99bb86363cd64d9bf49e0babe4b3dacd1743e6c52"
+    },
+    {
+      "file": "frontend-existing-final.json",
+      "bytes": 3044,
+      "sha256": "4f93a0fd4a8fbaa47536ea48c7ce017c0b068cc5e72ec49319f841fd21601ef5"
+    },
+    {
+      "file": "frontend-workbench-22.json",
+      "bytes": 3380,
+      "sha256": "5754a175c96b4367bb2c2eb7647d33a0cfe40de17bfce53ff80832d5f44ba8b6"
+    },
+    {
+      "file": "frontend-workbench-fixture-review-failure.json",
+      "bytes": 3286,
+      "sha256": "8c7c35f755d844ccf157326208ac956f0b11db02093f05cd930cea5a6db07248"
+    },
+    {
+      "file": "frontend-workbench-initial-fixture-failure.json",
+      "bytes": 3286,
+      "sha256": "ede160314d6b5c67c9bd91eca5ff6c2366fe057fc81dec5092f8aee1839459a8"
+    },
+    {
+      "file": "local-preview-library-final.json",
+      "bytes": 16531,
+      "sha256": "67bf767a03d5ff5d3c30fc388acce9cafa8b9cd66bc3cacf7a8fb7000a2113b9"
+    },
+    {
+      "file": "missing-style-wait-diagnostic.json",
+      "bytes": 5042,
+      "sha256": "1ee34f1c944f7da8f678303d9a047992d55ca6fcd4a28676ec05713471f25bd2"
+    },
+    {
+      "file": "private-screenshot-manifest.json",
+      "bytes": 5916,
+      "sha256": "f1d975fa527655924827b8ec3e1f92275b6b1cd6d0d5d303f78f45dec95d62c4"
+    },
+    {
+      "file": "protected-invariants.json",
+      "bytes": 5529,
+      "sha256": "3a165b1c90c603433f9c993f26969ba3d9bf34c82d155a77a595fc4a4096b872"
+    },
+    {
+      "file": "readonly-test-server-stop.json",
+      "bytes": 296,
+      "sha256": "3102273ec03bb99fdfef255cd5257b96c489810e3aa733afab8fe34d30c468f5"
+    },
+    {
+      "file": "real-glb-http-bytes.json",
+      "bytes": 1107,
+      "sha256": "ed5a6b5166b54b16cab20382a7b071b27dbc7d9a936da8c851269c234003311a"
+    },
+    {
+      "file": "screenshots/before-realistic-1920.png",
+      "bytes": 172515,
+      "sha256": "826f07aefc6474afba5540fc964649165ac340878f59c3b0d49f21994f8099c5"
+    },
+    {
+      "file": "screenshots/privacy-manifest.json",
+      "bytes": 1052,
+      "sha256": "9ef68553ecce5d4dc5b3a4dcfd70212597c6296a111b92fe1b327ec1c6af1732"
+    },
+    {
+      "file": "screenshots/workbench-1024-privacy-masked.png",
+      "bytes": 275455,
+      "sha256": "8b62428d62cd643159fdca93afe97f54cdb81863764b6064fb5d0f51f90bed64"
+    },
+    {
+      "file": "screenshots/workbench-1920-privacy-masked.png",
+      "bytes": 469918,
+      "sha256": "8081cc04aac232591c09d03a030599aa9ac802462b080eea586cfe26a573a315"
+    },
+    {
+      "file": "screenshots/workbench-390-privacy-masked.png",
+      "bytes": 142033,
+      "sha256": "bda12f28ab7a7f49eb6a232b2850b2efce04682b90eaf092f4f2fa43a011bb71"
+    },
+    {
+      "file": "secondary-before-enterprise-fix.json",
+      "bytes": 23844,
+      "sha256": "f690c3c46dca06636d26ba12f2a300823e49bc5dc41fc2d05c8802a0c0649129"
+    },
+    {
+      "file": "secondary-final.json",
+      "bytes": 22619,
+      "sha256": "07b7cc64a5709c0b587f2879c33c2e806914c0d083ab51d8fc78c5c8ac4f1d16"
+    },
+    {
+      "file": "test-report.md",
+      "bytes": 10706,
+      "sha256": "310d66c455c833b1ff62d68ec3420bb66975ebe7080a573732d7d9070443a5a6"
+    }
+  ]
+}

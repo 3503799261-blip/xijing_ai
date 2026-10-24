@@ -1,0 +1,887 @@
+{
+  "kind": "REAL_LOCAL_SECONDARY_ENTRIES_READ_ONLY_BROWSER",
+  "startedAt": "2026-10-24T12:17:31.094Z",
+  "checks": [
+    {
+      "name": "secondary navigation reaches retained panels and closes dropdown without mutations",
+      "status": "PASS",
+      "details": {
+        "panels": [
+          "agents",
+          "create",
+          "model",
+          "overview"
+        ],
+        "writes": 0
+      }
+    },
+    {
+      "name": "six-step guide remains optional, preserves controls, supports next previous skip exit and refresh",
+      "status": "PASS",
+      "details": {
+        "titles": [
+          "1 / 6 · 认识戏境AI",
+          "2 / 6 · 京剧问答与资料引用",
+          "3 / 6 · 真实Agent历史",
+          "4 / 6 · 角色JSON、审校与人审",
+          "5 / 6 · 已有真实3D模型",
+          "6 / 6 · 企业应用方向与交付边界"
+        ],
+        "refreshExits": true
+      }
+    },
+    {
+      "name": "read-only backup guards new conversation and all paid controls while real history remains accessible",
+      "status": "PASS",
+      "details": {
+        "guards": [
+          {
+            "id": "new-conversation",
+            "exists": true,
+            "prevented": true
+          },
+          {
+            "id": "send",
+            "exists": true,
+            "prevented": true
+          },
+          {
+            "id": "retry-question",
+            "exists": true,
+            "prevented": true
+          },
+          {
+            "id": "agent-start",
+            "exists": true,
+            "prevented": true
+          },
+          {
+            "id": "agent-submit-retry",
+            "exists": true,
+            "prevented": true
+          },
+          {
+            "id": "agent-confirm",
+            "exists": true,
+            "prevented": true
+          },
+          {
+            "id": "agent-cancel",
+            "exists": true,
+            "prevented": true
+          },
+          {
+            "id": "visual-accept",
+            "exists": true,
+            "prevented": true
+          },
+          {
+            "id": "image-accept",
+            "exists": true,
+            "prevented": true
+          },
+          {
+            "id": "model-submit",
+            "exists": true,
+            "prevented": true
+          }
+        ],
+        "savedHistoryReadable": true
+      }
+    },
+    {
+      "name": "mobile guide can reach enterprise requirement entry without submitting a business task",
+      "status": "PASS",
+      "details": {
+        "viewport": "390x844",
+        "enterpriseIsExistingRequirementEntry": true,
+        "customerDeliveryClaimed": false
+      }
+    },
+    {
+      "name": "manual local condition check is four GETs and does not assert live DeepSeek connectivity",
+      "status": "PASS",
+      "details": {
+        "reads": [
+          {
+            "method": "GET",
+            "path": "/api/v1/health"
+          },
+          {
+            "method": "GET",
+            "path": "/api/v1/agent/history"
+          },
+          {
+            "method": "GET",
+            "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+          },
+          {
+            "method": "GET",
+            "path": "/api/v1/assets/usage"
+          }
+        ],
+        "scope": "本地后端与知识检索条件 · 可读取\n\n本地知识检索条件可用，资料12份、片段35条。此快照未记录正在执行的Agent任务。LLM配置及既有验证状态不代表今日DeepSeek网络连通性，本次未调用模型。\n\n已保存Agent历史记录 · 可读取\n\n可只读查询22条持久化历史。打开历史档案后仍需手动读取；这不是新Agent执行。\n\n已有写实模型登记信息 · 可读取\n\n“绛绣·戏韵”的历史真实GLB登记可读取。本项未下载或检查GLB渲染；实际加载与交互以Viewer当前状态为准。\n\nNeural4D额度台账与创建状态 · 可读取\n\n全局已用2/3、剩余1次未使用，真实创建关闭。用户已取消第三次建模；本次不提交任务、不修改次数。"
+      }
+    }
+  ],
+  "contexts": [
+    {
+      "mobile": false,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": []
+    },
+    {
+      "mobile": false,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file"
+        },
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": []
+    },
+    {
+      "mobile": false,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history/ca7007e7-e535-4b1f-a9b6-1932f10e20b4"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": []
+    },
+    {
+      "mobile": true,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": []
+    },
+    {
+      "mobile": false,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/health"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent/history"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": []
+    }
+  ],
+  "paidCalls": 0,
+  "neural4dCalls": 0,
+  "finishedAt": "2026-10-24T12:17:39.929Z",
+  "passed": 5,
+  "failed": 0,
+  "conclusion": "PASS"
+}

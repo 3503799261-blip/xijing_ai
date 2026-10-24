@@ -1,0 +1,384 @@
+{
+  "kind": "REAL_LIBRARY_THUMBNAILS_AND_LOCAL_PREVIEW_NO_SAVE",
+  "checks": [
+    {
+      "name": "both real model cards load registered concept thumbnails and retain concept labels",
+      "status": "PASS",
+      "details": {
+        "images": [
+          {
+            "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "text": "概念图绛绣·戏韵写实国风 · 已有3D",
+            "imagePath": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file",
+            "imageAlt": "绛绣·戏韵的已登记概念图",
+            "naturalWidth": 793
+          },
+          {
+            "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+            "text": "概念图内部非公开技术验证 · 非正式角色资产Q版卡通 · 已有3D内部技术验证 · 不公开分发",
+            "imagePath": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file",
+            "imageAlt": "内部非公开技术验证 · 非正式角色资产的已登记概念图",
+            "naturalWidth": 1049
+          }
+        ]
+      }
+    },
+    {
+      "name": "rapid real/chibi selection keeps model identity style preview and selection synchronized",
+      "status": "PASS",
+      "details": {
+        "selections": [
+          {
+            "model": {
+              "state": "ready",
+              "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+              "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 0,
+                "phi": 1.3089969389957472,
+                "radius": 3.5987347811727006
+              },
+              "eventCount": 0,
+              "userEventCount": 0,
+              "maxContinuousDegrees": 0,
+              "samples": []
+            },
+            "preview": "http://127.0.0.1:8877/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file",
+            "previewText": "历史技术验证输入 · 概念图，不是模型截图\nSHA-256：879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703",
+            "imageAccept": true,
+            "style": "chibi",
+            "selected": [
+              "3777a880-fc8c-4766-aade-948d20c6b8f0"
+            ]
+          },
+          {
+            "model": {
+              "state": "ready",
+              "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+              "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 0,
+                "phi": 1.3089969389957472,
+                "radius": 3.9898317468431963
+              },
+              "eventCount": 0,
+              "userEventCount": 0,
+              "maxContinuousDegrees": 0,
+              "samples": []
+            },
+            "preview": "http://127.0.0.1:8877/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file",
+            "previewText": "793×1400 · 授权图片导入 · 已接受\nSHA-256：7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45\n许可：用户声明来源为百度公开数据；已声明允许比赛公开展示、上传Neural4D及3D衍生处理。作者和原始URL未提供，属于用户权利声明而非独立版权审计；未取得商业销售或公开模型再分发许可。用于绛绣·戏韵第二次比赛主展示，原图Hash及批准证据另存。",
+            "imageAccept": true,
+            "style": "realistic",
+            "selected": [
+              "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+            ]
+          },
+          {
+            "model": {
+              "state": "ready",
+              "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+              "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 0,
+                "phi": 1.3089969389957472,
+                "radius": 3.5987347811727006
+              },
+              "eventCount": 0,
+              "userEventCount": 0,
+              "maxContinuousDegrees": 0,
+              "samples": []
+            },
+            "preview": "http://127.0.0.1:8877/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file",
+            "previewText": "历史技术验证输入 · 概念图，不是模型截图\nSHA-256：879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703",
+            "imageAccept": true,
+            "style": "chibi",
+            "selected": [
+              "3777a880-fc8c-4766-aade-948d20c6b8f0"
+            ]
+          },
+          {
+            "model": {
+              "state": "ready",
+              "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+              "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 0,
+                "phi": 1.3089969389957472,
+                "radius": 3.9898317468431963
+              },
+              "eventCount": 0,
+              "userEventCount": 0,
+              "maxContinuousDegrees": 0,
+              "samples": []
+            },
+            "preview": "http://127.0.0.1:8877/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file",
+            "previewText": "793×1400 · 授权图片导入 · 已接受\nSHA-256：7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45\n许可：用户声明来源为百度公开数据；已声明允许比赛公开展示、上传Neural4D及3D衍生处理。作者和原始URL未提供，属于用户权利声明而非独立版权审计；未取得商业销售或公开模型再分发许可。用于绛绣·戏韵第二次比赛主展示，原图Hash及批准证据另存。",
+            "imageAccept": true,
+            "style": "realistic",
+            "selected": [
+              "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+            ]
+          }
+        ],
+        "modelGenerationRequests": 0
+      }
+    },
+    {
+      "name": "local concept preview does not upload save approve or replace current GLB",
+      "status": "PASS",
+      "details": {
+        "testImage": "explicit 1x1 PNG browser fixture; not business asset",
+        "initial": {
+          "model": {
+            "state": "ready",
+            "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+            "touchEnabled": false,
+            "lastError": "",
+            "orbit": {
+              "theta": 0,
+              "phi": 1.3089969389957472,
+              "radius": 3.9898317468431963
+            },
+            "eventCount": 0,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "preview": "http://127.0.0.1:8877/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file",
+          "previewText": "793×1400 · 授权图片导入 · 已接受\nSHA-256：7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45\n许可：用户声明来源为百度公开数据；已声明允许比赛公开展示、上传Neural4D及3D衍生处理。作者和原始URL未提供，属于用户权利声明而非独立版权审计；未取得商业销售或公开模型再分发许可。用于绛绣·戏韵第二次比赛主展示，原图Hash及批准证据另存。",
+          "imageAccept": true,
+          "style": "realistic",
+          "selected": [
+            "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+          ]
+        },
+        "local": {
+          "model": {
+            "state": "ready",
+            "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+            "touchEnabled": false,
+            "lastError": "",
+            "orbit": {
+              "theta": 0,
+              "phi": 1.3089969389957472,
+              "radius": 3.9898317468431963
+            },
+            "eventCount": 0,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "preview": "blob:http://127.0.0.1:8877/4ccc66b5-3cb6-4169-b4ee-92baf2d8a0c1",
+          "previewText": "本地预览 · 尚未保存，当前3D仍为原资产。只有你明确保存后才会上传，不会调用图像生成或建模。",
+          "imageAccept": true,
+          "style": "realistic",
+          "selected": [
+            "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+          ]
+        },
+        "restored": {
+          "model": {
+            "state": "ready",
+            "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+            "touchEnabled": false,
+            "lastError": "",
+            "orbit": {
+              "theta": 0,
+              "phi": 1.3089969389957472,
+              "radius": 3.9898317468431963
+            },
+            "eventCount": 0,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "preview": "http://127.0.0.1:8877/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file",
+          "previewText": "793×1400 · 授权图片导入 · 已接受\nSHA-256：7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45\n许可：用户声明来源为百度公开数据；已声明允许比赛公开展示、上传Neural4D及3D衍生处理。作者和原始URL未提供，属于用户权利声明而非独立版权审计；未取得商业销售或公开模型再分发许可。用于绛绣·戏韵第二次比赛主展示，原图Hash及批准证据另存。",
+          "imageAccept": true,
+          "style": "realistic",
+          "selected": [
+            "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+          ]
+        }
+      }
+    },
+    {
+      "name": "unsubmitted image and rights draft resets across Q and realistic asset changes",
+      "status": "PASS",
+      "details": {
+        "beforeFiles": 1,
+        "transitions": [
+          {
+            "id": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+            "files": 0,
+            "rights": false,
+            "license": "",
+            "preview": "http://127.0.0.1:8877/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+          },
+          {
+            "id": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "files": 0,
+            "rights": false,
+            "license": "",
+            "preview": "http://127.0.0.1:8877/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+          }
+        ]
+      }
+    },
+    {
+      "name": "asset selection temporarily locks left style controls and resolves final shared identity",
+      "status": "PASS",
+      "details": {
+        "observedDisabledAttributeTransitions": [
+          {
+            "oldValue": null,
+            "disabled": true
+          },
+          {
+            "oldValue": "",
+            "disabled": true
+          },
+          {
+            "oldValue": "",
+            "disabled": true
+          },
+          {
+            "oldValue": "",
+            "disabled": false
+          }
+        ],
+        "state": {
+          "model": {
+            "state": "ready",
+            "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+            "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+            "touchEnabled": false,
+            "lastError": "",
+            "orbit": {
+              "theta": 0,
+              "phi": 1.3089969389957472,
+              "radius": 3.5987347811727006
+            },
+            "eventCount": 0,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "preview": "http://127.0.0.1:8877/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file",
+          "previewText": "历史技术验证输入 · 概念图，不是模型截图\nSHA-256：879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703",
+          "imageAccept": true,
+          "style": "chibi",
+          "selected": [
+            "3777a880-fc8c-4766-aade-948d20c6b8f0"
+          ]
+        }
+      }
+    },
+    {
+      "name": "return from question panel retains same real asset and repeated library selection succeeds",
+      "status": "PASS",
+      "details": {
+        "state": {
+          "model": {
+            "state": "ready",
+            "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+            "touchEnabled": false,
+            "lastError": "",
+            "orbit": {
+              "theta": 0,
+              "phi": 1.3089969389957472,
+              "radius": 3.9898317468431963
+            },
+            "eventCount": 2,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "preview": "http://127.0.0.1:8877/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file",
+          "previewText": "793×1400 · 授权图片导入 · 已接受\nSHA-256：7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45\n许可：用户声明来源为百度公开数据；已声明允许比赛公开展示、上传Neural4D及3D衍生处理。作者和原始URL未提供，属于用户权利声明而非独立版权审计；未取得商业销售或公开模型再分发许可。用于绛绣·戏韵第二次比赛主展示，原图Hash及批准证据另存。",
+          "imageAccept": true,
+          "style": "realistic",
+          "selected": [
+            "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+          ]
+        },
+        "selectionStatus": "当前查看：绛绣·戏韵"
+      }
+    },
+    {
+      "name": "pending character card remains real saved character without a fabricated model",
+      "status": "PASS",
+      "details": {
+        "pending": {
+          "model": {
+            "state": "idle",
+            "modelId": null,
+            "modelHash": null,
+            "touchEnabled": false,
+            "lastError": "",
+            "orbit": null,
+            "eventCount": 0,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "previewText": "尚无登记概念图；上传不会调用图像生成或3D建模API。",
+          "imageAccept": true,
+          "style": "realistic",
+          "selected": [
+            "ba26e5fb-4881-4754-8222-94305eb90109"
+          ]
+        },
+        "recovered": {
+          "model": {
+            "state": "ready",
+            "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+            "touchEnabled": false,
+            "lastError": "",
+            "orbit": {
+              "theta": 0,
+              "phi": 1.3089969389957472,
+              "radius": 3.9898317468431963
+            },
+            "eventCount": 0,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "preview": "http://127.0.0.1:8877/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file",
+          "previewText": "793×1400 · 授权图片导入 · 已接受\nSHA-256：7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45\n许可：用户声明来源为百度公开数据；已声明允许比赛公开展示、上传Neural4D及3D衍生处理。作者和原始URL未提供，属于用户权利声明而非独立版权审计；未取得商业销售或公开模型再分发许可。用于绛绣·戏韵第二次比赛主展示，原图Hash及批准证据另存。",
+          "imageAccept": true,
+          "style": "realistic",
+          "selected": [
+            "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+          ]
+        }
+      }
+    }
+  ],
+  "blockedWrites": [],
+  "blockedExternal": [],
+  "pageErrors": [],
+  "paidCalls": 0,
+  "neural4dCalls": 0,
+  "startedAt": "2026-10-24T12:12:58.729Z",
+  "screenshotPrivacy": "Only internal chibi concept thumbnail masked for repo evidence; original unmasked private screenshots retained separately. Mask is not a model output.",
+  "finishedAt": "2026-10-24T12:13:10.592Z",
+  "passed": 7,
+  "failed": 0,
+  "status": "PASS"
+}

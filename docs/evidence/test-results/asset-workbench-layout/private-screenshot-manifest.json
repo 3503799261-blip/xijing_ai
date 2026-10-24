@@ -1,0 +1,103 @@
+{
+  "createdAtUtc": "2026-10-24T12:15:42.971362+00:00",
+  "files": [
+    {
+      "privateRelativeRuntimePath": "asset-workbench-browser-before-02/before-realistic-1024.png",
+      "bytes": 108490,
+      "sha256": "71e58f06e0588cca2731842f6bf4050f5b9a0a814f462c3a364e2b78bb57023f",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-browser-before-02/before-realistic-1920.png",
+      "bytes": 172515,
+      "sha256": "826f07aefc6474afba5540fc964649165ac340878f59c3b0d49f21994f8099c5",
+      "publicCopy": "screenshots/before-realistic-1920.png",
+      "privacy": "Pre-change realistic workbench only, no internal Q thumbnail present.",
+      "publicCopyHashMatches": true
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-browser-before-02/before-realistic-390.png",
+      "bytes": 91452,
+      "sha256": "e058bdd8c3fbaabbac1baf731a29dddb02be8cc94feccfe2b43a002dbca49894",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-browser-final-01/after-realistic-1024.png",
+      "bytes": 353633,
+      "sha256": "2059125cdc5be5da5e701298114b24a7e710b4400e76242b080c3463b03da29e",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-browser-final-01/after-realistic-1920.png",
+      "bytes": 498319,
+      "sha256": "22bbf36c5bb65e76354175ba465713a85aadfe15c80d2895b0b7f6e4936eed3e",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-browser-final-01/after-realistic-390.png",
+      "bytes": 169114,
+      "sha256": "3e132f8c84aeb0b11506f43caff33a85495e5e066f60cab25a17a49b06696b0a",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-browser-final-01/internal-chibi-desktop-ready.png",
+      "bytes": 593870,
+      "sha256": "29ac1e5d2d2cdc20f9d9ec28a708168fd4c6000e4dc8107dd71d91d5aff01800",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-browser-final-01/realistic-desktop-ready.png",
+      "bytes": 502858,
+      "sha256": "4b22759d25d9de34263d02ada6d7c09e48aab87abff897a1aac739ce8059b673",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-browser-final-01/synthetic-error.png",
+      "bytes": 271984,
+      "sha256": "6c6c344f2f2176820b06fcd03561bb269c6f9f3c2349ca98cf19eeb4627d2aae",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-extras-final-02/realistic-workbench-public-privacy-mask.png",
+      "bytes": 497492,
+      "sha256": "c2eeae90bdad9687cf6fa24fb8ad2d8a763b09791ff70fa725b718b63d84f551",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-touch-01/internal-chibi-mobile-error.png",
+      "bytes": 76190,
+      "sha256": "e849db08dd147fa8e57785c7e89cda841f3a9b923bc5eac8f68c901b8288a933",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-touch-01/internal-chibi-mobile-ready.png",
+      "bytes": 146281,
+      "sha256": "a8abcf27a818fb42c0c5931b42f50296677adebd6e7d1c064b01822c767d7ed0",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-touch-01/internal-chibi-mobile-recovered.png",
+      "bytes": 150691,
+      "sha256": "f16787aec0fc625dca9434dbcd4121d5ace2889267788f737396a1dffc7f2da1",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-touch-01/realistic-mobile-error.png",
+      "bytes": 76190,
+      "sha256": "e849db08dd147fa8e57785c7e89cda841f3a9b923bc5eac8f68c901b8288a933",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-touch-01/realistic-mobile-ready.png",
+      "bytes": 143201,
+      "sha256": "4fac69eed7e10857f0f9028e0e9ebf55c60e1833a6d93ab18557672fe04a3870",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    },
+    {
+      "privateRelativeRuntimePath": "asset-workbench-touch-01/realistic-mobile-recovered.png",
+      "bytes": 148960,
+      "sha256": "3e603453ce6b0e9ab4c01b6db5b53a29b5fe9515a87aaf402291a9f8cc618a3a",
+      "notCopiedToGit": "Contains internal technical model, concept thumbnail or unrestricted local screenshot; retained only privately."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "checkedAtUtc": "2026-10-24T12:18:59.285678+00:00",
+  "kind": "FINAL_EXISTING_USER_SERVER_GET_ONLY",
+  "port8000OwnerNotStopped": 4020,
+  "paths": [
+    {
+      "path": "/api/v1/health",
+      "status": 200,
+      "bytes": 864,
+      "observed": {
+        "status": "ready",
+        "knowledge": true,
+        "budgetCalls": 110,
+        "agentDatabaseAvailable": true
+      }
+    },
+    {
+      "path": "/api/v1/assets/usage",
+      "status": 200,
+      "bytes": 941,
+      "observed": {
+        "used_calls": 2,
+        "remaining_calls": 1,
+        "realEnabled": false,
+        "creationHalted": false,
+        "haltCode": null,
+        "history_verified": true
+      }
+    },
+    {
+      "path": "/api/v1/agent/history?page=1&pageSize=1",
+      "status": 200,
+      "bytes": 1038
+    },
+    {
+      "path": "/api/v1/chat/conversations?limit=1",
+      "status": 200,
+      "bytes": 231
+    },
+    {
+      "path": "/about.html",
+      "status": 200,
+      "bytes": 50553
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0
+}

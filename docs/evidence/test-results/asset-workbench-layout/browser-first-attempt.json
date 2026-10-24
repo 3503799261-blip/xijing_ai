@@ -1,0 +1,5187 @@
+{
+  "kind": "ASSET_WORKBENCH_REAL_GLB_LOCAL_READ_ONLY_BROWSER",
+  "startedAt": "2026-10-24T12:00:34.129Z",
+  "checks": [
+    {
+      "name": "layout 1920",
+      "status": "PASS",
+      "details": {
+        "workbench": {
+          "x": 140,
+          "y": 282.0625,
+          "width": 1640,
+          "height": 1035.09375,
+          "background": "rgb(255, 250, 240)",
+          "color": "rgb(36, 25, 24)",
+          "display": "grid"
+        },
+        "tools": {
+          "x": 141,
+          "y": 283.0625,
+          "width": 250,
+          "height": 960,
+          "background": "rgb(241, 231, 215)",
+          "color": "rgb(36, 25, 24)",
+          "display": "block"
+        },
+        "viewer": {
+          "x": 391,
+          "y": 283.0625,
+          "width": 1168,
+          "height": 1033.09375,
+          "background": "rgb(255, 250, 240)",
+          "color": "rgb(36, 25, 24)",
+          "display": "block"
+        },
+        "library": {
+          "x": 1559,
+          "y": 283.0625,
+          "width": 220,
+          "height": 1033.09375,
+          "background": "rgb(241, 231, 215)",
+          "color": "rgb(36, 25, 24)",
+          "display": "block"
+        },
+        "host": {
+          "x": 411,
+          "y": 381.703125,
+          "width": 1128,
+          "height": 637.1875,
+          "background": "rgb(244, 236, 222)",
+          "color": "rgb(112, 93, 87)",
+          "display": "block"
+        },
+        "nav": {
+          "x": 885.203125,
+          "y": 13.8125,
+          "width": 634.796875,
+          "height": 54.359375,
+          "background": "rgba(20, 2, 4, 0.2)",
+          "color": "rgb(36, 25, 24)",
+          "display": "flex"
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "assetId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "text": "概念图绛绣·戏韵写实国风 · 已有3D",
+            "hasImage": true,
+            "imageLoaded": true
+          },
+          {
+            "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+            "assetId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+            "text": "概念图内部非公开技术验证 · 非正式角色资产Q版卡通 · 已有3D内部技术验证 · 不公开分发",
+            "hasImage": true,
+            "imageLoaded": true
+          },
+          {
+            "assetId": "ba26e5fb-4881-4754-8222-94305eb90109",
+            "text": "暂无概念图青旌将·霄羽写实国风 · 尚无模型",
+            "hasImage": false,
+            "imageLoaded": false
+          },
+          {
+            "assetId": "e9fd199c-65b6-4bb0-a930-9d03d749930a",
+            "text": "暂无概念图青旌将·霄羽Q版卡通 · 尚无模型",
+            "hasImage": false,
+            "imageLoaded": false
+          }
+        ],
+        "creationDisabled": true
+      }
+    },
+    {
+      "name": "layout 1024",
+      "status": "PASS",
+      "details": {
+        "workbench": {
+          "x": 20.484375,
+          "y": 142.90625,
+          "width": 983.03125,
+          "height": 1050.609375,
+          "background": "rgb(255, 250, 240)",
+          "color": "rgb(36, 25, 24)",
+          "display": "grid"
+        },
+        "tools": {
+          "x": 21.484375,
+          "y": 143.90625,
+          "width": 220,
+          "height": 960,
+          "background": "rgb(241, 231, 215)",
+          "color": "rgb(36, 25, 24)",
+          "display": "block"
+        },
+        "viewer": {
+          "x": 241.484375,
+          "y": 143.90625,
+          "width": 576.03125,
+          "height": 1048.609375,
+          "background": "rgb(255, 250, 240)",
+          "color": "rgb(36, 25, 24)",
+          "display": "block"
+        },
+        "library": {
+          "x": 817.515625,
+          "y": 143.90625,
+          "width": 185,
+          "height": 1048.609375,
+          "background": "rgb(241, 231, 215)",
+          "color": "rgb(36, 25, 24)",
+          "display": "block"
+        },
+        "host": {
+          "x": 257.484375,
+          "y": 238.546875,
+          "width": 544.03125,
+          "height": 530,
+          "background": "rgb(244, 236, 222)",
+          "color": "rgb(112, 93, 87)",
+          "display": "block"
+        },
+        "nav": {
+          "x": 348.234375,
+          "y": 13.8125,
+          "width": 634.796875,
+          "height": 54.359375,
+          "background": "rgba(20, 2, 4, 0.2)",
+          "color": "rgb(36, 25, 24)",
+          "display": "flex"
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "assetId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "text": "概念图绛绣·戏韵写实国风 · 已有3D",
+            "hasImage": true,
+            "imageLoaded": true
+          },
+          {
+            "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+            "assetId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+            "text": "概念图内部非公开技术验证 · 非正式角色资产Q版卡通 · 已有3D内部技术验证 · 不公开分发",
+            "hasImage": true,
+            "imageLoaded": true
+          },
+          {
+            "assetId": "ba26e5fb-4881-4754-8222-94305eb90109",
+            "text": "暂无概念图青旌将·霄羽写实国风 · 尚无模型",
+            "hasImage": false,
+            "imageLoaded": false
+          },
+          {
+            "assetId": "e9fd199c-65b6-4bb0-a930-9d03d749930a",
+            "text": "暂无概念图青旌将·霄羽Q版卡通 · 尚无模型",
+            "hasImage": false,
+            "imageLoaded": false
+          }
+        ],
+        "creationDisabled": true
+      }
+    },
+    {
+      "name": "layout 390",
+      "status": "PASS",
+      "details": {
+        "workbench": {
+          "x": 11.703125,
+          "y": 337.03125,
+          "width": 366.59375,
+          "height": 2721.390625,
+          "background": "rgb(255, 250, 240)",
+          "color": "rgb(36, 25, 24)",
+          "display": "grid"
+        },
+        "tools": {
+          "x": 12.703125,
+          "y": 1773.53125,
+          "width": 364.59375,
+          "height": 1283.890625,
+          "background": "rgb(241, 231, 215)",
+          "color": "rgb(36, 25, 24)",
+          "display": "block"
+        },
+        "viewer": {
+          "x": 12.703125,
+          "y": 338.03125,
+          "width": 364.59375,
+          "height": 822.4375,
+          "background": "rgb(255, 250, 240)",
+          "color": "rgb(36, 25, 24)",
+          "display": "block"
+        },
+        "library": {
+          "x": 12.703125,
+          "y": 1160.46875,
+          "width": 364.59375,
+          "height": 613.0625,
+          "background": "rgb(241, 231, 215)",
+          "color": "rgb(36, 25, 24)",
+          "display": "block"
+        },
+        "host": {
+          "x": 27.703125,
+          "y": 424.671875,
+          "width": 334.59375,
+          "height": 420,
+          "background": "rgb(244, 236, 222)",
+          "color": "rgb(112, 93, 87)",
+          "display": "block"
+        },
+        "nav": {
+          "x": 11.703125,
+          "y": 60.078125,
+          "width": 366.59375,
+          "height": 85.6875,
+          "background": "rgba(20, 2, 4, 0.2)",
+          "color": "rgb(36, 25, 24)",
+          "display": "flex"
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "assetId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+            "text": "概念图绛绣·戏韵写实国风 · 已有3D",
+            "hasImage": true,
+            "imageLoaded": true
+          },
+          {
+            "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+            "assetId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+            "text": "概念图内部非公开技术验证 · 非正式角色资产Q版卡通 · 已有3D内部技术验证 · 不公开分发",
+            "hasImage": true,
+            "imageLoaded": true
+          },
+          {
+            "assetId": "ba26e5fb-4881-4754-8222-94305eb90109",
+            "text": "暂无概念图青旌将·霄羽写实国风 · 尚无模型",
+            "hasImage": false,
+            "imageLoaded": false
+          },
+          {
+            "assetId": "e9fd199c-65b6-4bb0-a930-9d03d749930a",
+            "text": "暂无概念图青旌将·霄羽Q版卡通 · 尚无模型",
+            "hasImage": false,
+            "imageLoaded": false
+          }
+        ],
+        "creationDisabled": true
+      }
+    },
+    {
+      "name": "right library switches both genuine GLBs and mouse260 zoom reset",
+      "status": "PASS",
+      "details": {
+        "models": [
+          {
+            "model": "realistic",
+            "initial": {
+              "state": "ready",
+              "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+              "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 0,
+                "phi": 1.3089969389957472,
+                "radius": 3.9898317468431963
+              },
+              "eventCount": 0,
+              "userEventCount": 0,
+              "maxContinuousDegrees": 0,
+              "samples": [],
+              "observedDegrees": 0,
+              "stateHistory": "idle,loading,ready",
+              "src": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "绛绣·戏韵",
+              "style": "realistic",
+              "selectedCards": [
+                "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+              ]
+            },
+            "rotated": {
+              "state": "ready",
+              "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+              "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 8.019527790076053,
+                "phi": 1.3089969389957472,
+                "radius": 3.9898317468431963
+              },
+              "eventCount": 65,
+              "userEventCount": 65,
+              "maxContinuousDegrees": 459.4607147686966,
+              "samples": [
+                {
+                  "theta": 0.00042553379575890893,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.0016124936481424768,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.26384065162725917,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.3990901549843677,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.5324654435858809,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6652008871282777,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6654192040792156,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.797836674350976,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.9311884018146489,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.065421535368687,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.1981942174807503,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.3365879650126773,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.465217110379737,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5980348761202054,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5988025795899563,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.7308368751095826,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.8649114495273156,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.9990016513544409,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.132243014558274,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.2659261744107466,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.399553717879405,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.534035291914662,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.668067133052172,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.801730172633552,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.93505523173768,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.0697154894306147,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.2023536895240694,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.3367078238129246,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.470375442982324,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.604667075056065,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.7377001555472003,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.8710136094868988,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.005014589891386,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.138669573578422,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.272651693348794,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.4063141129383245,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.539980029896255,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.673631689993412,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.8069592262629035,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.940953063037489,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.0742847245544755,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.208263177261482,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.341933004296556,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.4800108980524405,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.609285737972158,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.609870454662683,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.743485495376735,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.87656718902216,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.014645842557042,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.14422027970706,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.278381622534503,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.414104492460728,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.546401367061539,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.6796077827004465,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.813023377938474,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.946685909332327,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.080075539195395,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.213456889807845,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.347112684733661,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.481047183780039,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.614138484231941,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.747460735217953,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.881439691801083,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.015685889012808,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.019527790076053,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                }
+              ],
+              "observedDegrees": 459.5,
+              "stateHistory": "idle,loading,ready",
+              "src": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "绛绣·戏韵",
+              "style": "realistic",
+              "selectedCards": [
+                "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+              ]
+            },
+            "zoomIn": {
+              "state": "ready",
+              "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+              "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 8.019527790076053,
+                "phi": 1.3089969389957472,
+                "radius": 3.191865397474557
+              },
+              "eventCount": 69,
+              "userEventCount": 65,
+              "maxContinuousDegrees": 459.4607147686966,
+              "samples": [
+                {
+                  "theta": 0.00042553379575890893,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.0016124936481424768,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.26384065162725917,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.3990901549843677,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.5324654435858809,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6652008871282777,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6654192040792156,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.797836674350976,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.9311884018146489,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.065421535368687,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.1981942174807503,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.3365879650126773,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.465217110379737,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5980348761202054,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5988025795899563,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.7308368751095826,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.8649114495273156,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.9990016513544409,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.132243014558274,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.2659261744107466,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.399553717879405,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.534035291914662,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.668067133052172,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.801730172633552,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.93505523173768,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.0697154894306147,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.2023536895240694,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.3367078238129246,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.470375442982324,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.604667075056065,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.7377001555472003,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.8710136094868988,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.005014589891386,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.138669573578422,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.272651693348794,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.4063141129383245,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.539980029896255,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.673631689993412,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.8069592262629035,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.940953063037489,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.0742847245544755,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.208263177261482,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.341933004296556,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.4800108980524405,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.609285737972158,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.609870454662683,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.743485495376735,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.87656718902216,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.014645842557042,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.14422027970706,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.278381622534503,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.414104492460728,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.546401367061539,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.6796077827004465,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.813023377938474,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.946685909332327,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.080075539195395,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.213456889807845,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.347112684733661,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.481047183780039,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.614138484231941,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.747460735217953,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.881439691801083,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.015685889012808,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.019527790076053,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                }
+              ],
+              "observedDegrees": 459.5,
+              "stateHistory": "idle,loading,ready",
+              "src": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "绛绣·戏韵",
+              "style": "realistic",
+              "selectedCards": [
+                "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+              ]
+            },
+            "zoomOut": {
+              "state": "ready",
+              "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+              "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 8.019527790076053,
+                "phi": 1.3089969389957472,
+                "radius": 3.9898317468431963
+              },
+              "eventCount": 72,
+              "userEventCount": 65,
+              "maxContinuousDegrees": 459.4607147686966,
+              "samples": [
+                {
+                  "theta": 0.00042553379575890893,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.0016124936481424768,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.26384065162725917,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.3990901549843677,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.5324654435858809,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6652008871282777,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6654192040792156,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.797836674350976,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.9311884018146489,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.065421535368687,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.1981942174807503,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.3365879650126773,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.465217110379737,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5980348761202054,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5988025795899563,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.7308368751095826,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.8649114495273156,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.9990016513544409,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.132243014558274,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.2659261744107466,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.399553717879405,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.534035291914662,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.668067133052172,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.801730172633552,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.93505523173768,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.0697154894306147,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.2023536895240694,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.3367078238129246,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.470375442982324,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.604667075056065,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.7377001555472003,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.8710136094868988,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.005014589891386,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.138669573578422,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.272651693348794,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.4063141129383245,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.539980029896255,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.673631689993412,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.8069592262629035,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.940953063037489,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.0742847245544755,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.208263177261482,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.341933004296556,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.4800108980524405,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.609285737972158,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.609870454662683,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.743485495376735,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.87656718902216,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.014645842557042,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.14422027970706,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.278381622534503,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.414104492460728,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.546401367061539,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.6796077827004465,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.813023377938474,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.946685909332327,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.080075539195395,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.213456889807845,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.347112684733661,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.481047183780039,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.614138484231941,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.747460735217953,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.881439691801083,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.015685889012808,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.019527790076053,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                }
+              ],
+              "observedDegrees": 459.5,
+              "stateHistory": "idle,loading,ready",
+              "src": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "绛绣·戏韵",
+              "style": "realistic",
+              "selectedCards": [
+                "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+              ]
+            },
+            "reset": {
+              "state": "ready",
+              "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+              "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 0,
+                "phi": 1.3089969389957472,
+                "radius": 3.9898317468431963
+              },
+              "eventCount": 73,
+              "userEventCount": 65,
+              "maxContinuousDegrees": 459.4607147686966,
+              "samples": [
+                {
+                  "theta": 0.00042553379575890893,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.0016124936481424768,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.26384065162725917,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.3990901549843677,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.5324654435858809,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6652008871282777,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6654192040792156,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.797836674350976,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.9311884018146489,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.065421535368687,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.1981942174807503,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.3365879650126773,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.465217110379737,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5980348761202054,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5988025795899563,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.7308368751095826,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.8649114495273156,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.9990016513544409,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.132243014558274,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.2659261744107466,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.399553717879405,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.534035291914662,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.668067133052172,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.801730172633552,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.93505523173768,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.0697154894306147,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.2023536895240694,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.3367078238129246,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.470375442982324,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.604667075056065,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.7377001555472003,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.8710136094868988,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.005014589891386,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.138669573578422,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.272651693348794,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.4063141129383245,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.539980029896255,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.673631689993412,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.8069592262629035,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.940953063037489,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.0742847245544755,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.208263177261482,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.341933004296556,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.4800108980524405,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.609285737972158,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.609870454662683,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.743485495376735,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.87656718902216,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.014645842557042,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.14422027970706,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.278381622534503,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.414104492460728,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.546401367061539,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.6796077827004465,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.813023377938474,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.946685909332327,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.080075539195395,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.213456889807845,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.347112684733661,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.481047183780039,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.614138484231941,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.747460735217953,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.881439691801083,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.015685889012808,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.019527790076053,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                }
+              ],
+              "observedDegrees": 459.5,
+              "stateHistory": "idle,loading,ready",
+              "src": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "绛绣·戏韵",
+              "style": "realistic",
+              "selectedCards": [
+                "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+              ]
+            },
+            "wheel": {
+              "state": "ready",
+              "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+              "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 0,
+                "phi": 1.3089969389957472,
+                "radius": 3.560262915442167
+              },
+              "eventCount": 76,
+              "userEventCount": 68,
+              "maxContinuousDegrees": 459.4607147686966,
+              "samples": [
+                {
+                  "theta": 0.00042553379575890893,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.0016124936481424768,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.26384065162725917,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.3990901549843677,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.5324654435858809,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6652008871282777,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6654192040792156,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.797836674350976,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.9311884018146489,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.065421535368687,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.1981942174807503,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.3365879650126773,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.465217110379737,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5980348761202054,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5988025795899563,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.7308368751095826,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.8649114495273156,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.9990016513544409,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.132243014558274,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.2659261744107466,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.399553717879405,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.534035291914662,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.668067133052172,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.801730172633552,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.93505523173768,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.0697154894306147,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.2023536895240694,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.3367078238129246,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.470375442982324,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.604667075056065,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.7377001555472003,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.8710136094868988,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.005014589891386,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.138669573578422,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.272651693348794,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.4063141129383245,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.539980029896255,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.673631689993412,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.8069592262629035,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.940953063037489,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.0742847245544755,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.208263177261482,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.341933004296556,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.4800108980524405,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.609285737972158,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.609870454662683,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.743485495376735,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.87656718902216,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.014645842557042,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.14422027970706,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.278381622534503,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.414104492460728,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.546401367061539,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.6796077827004465,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.813023377938474,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.946685909332327,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.080075539195395,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.213456889807845,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.347112684733661,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.481047183780039,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.614138484231941,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.747460735217953,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.881439691801083,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.015685889012808,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.019527790076053,
+                  "radius": 3.9898317468431963,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0,
+                  "radius": 3.571693314897908,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0,
+                  "radius": 3.5708901972627025,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0,
+                  "radius": 3.560262915442167,
+                  "source": "user-interaction"
+                }
+              ],
+              "observedDegrees": 459.5,
+              "stateHistory": "idle,loading,ready",
+              "src": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "绛绣·戏韵",
+              "style": "realistic",
+              "selectedCards": [
+                "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+              ]
+            }
+          },
+          {
+            "model": "internal-chibi",
+            "initial": {
+              "state": "ready",
+              "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+              "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 0,
+                "phi": 1.3089969389957472,
+                "radius": 3.5987347811727006
+              },
+              "eventCount": 0,
+              "userEventCount": 0,
+              "maxContinuousDegrees": 0,
+              "samples": [],
+              "observedDegrees": 0,
+              "stateHistory": "idle,loading,ready,idle,loading,ready",
+              "src": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "内部非公开技术验证 · 非正式角色资产",
+              "style": "chibi",
+              "selectedCards": [
+                "3777a880-fc8c-4766-aade-948d20c6b8f0"
+              ]
+            },
+            "rotated": {
+              "state": "ready",
+              "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+              "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 8.019527790076053,
+                "phi": 1.3089969389957472,
+                "radius": 3.5987347811727006
+              },
+              "eventCount": 69,
+              "userEventCount": 69,
+              "maxContinuousDegrees": 459.45954478724707,
+              "samples": [
+                {
+                  "theta": 0.00044595382424153507,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.0016498918666413565,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.11818753211015579,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.2731303483672688,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.41694720894573734,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.42337589280210197,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.5567444084352939,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6896603360770905,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.8231571541791679,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.956773112376009,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.0904211715703331,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.2240772854362647,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.4271184902719485,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.4322931542711497,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5182283313988307,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.6331752308180953,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.7669455501122924,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.889330037110935,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.0245273260105425,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.159019950751636,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.2932791273912665,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.4962584382286224,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.5039063539481217,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.5834555892578197,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.7006225089539675,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.841377590748171,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.97246888577225,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.110786703523287,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.2346959252624807,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.375991750015311,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.517761987564759,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.6489252563326793,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.781427636204836,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.909260572875873,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.046548836923357,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.1759506297629025,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.308099302360813,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.441174745792126,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.57480082910213,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.708327598756147,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.836177958478645,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.973860660859489,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.1088942783053755,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.2428221509912465,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.376677273383761,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.5102617453950025,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.649682733188846,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.779654130660002,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.911817847886863,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.045292482350869,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.178652386955309,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.378700226166443,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.383119287596261,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.469754149618479,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.586315454335,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.714940863999192,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.8530156691463375,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.982814937925421,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.114819769955501,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.248104435983524,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.387194024065272,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.517326466647852,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.649423237878057,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.7767019398413435,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.914204084351755,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.988581540889377,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.011011390539283,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.017499915822924,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.019527790076053,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                }
+              ],
+              "observedDegrees": 459.5,
+              "stateHistory": "idle,loading,ready,idle,loading,ready",
+              "src": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "内部非公开技术验证 · 非正式角色资产",
+              "style": "chibi",
+              "selectedCards": [
+                "3777a880-fc8c-4766-aade-948d20c6b8f0"
+              ]
+            },
+            "zoomIn": {
+              "state": "ready",
+              "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+              "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 8.019527790076053,
+                "phi": 1.3089969389957472,
+                "radius": 2.878987824938161
+              },
+              "eventCount": 78,
+              "userEventCount": 69,
+              "maxContinuousDegrees": 459.45954478724707,
+              "samples": [
+                {
+                  "theta": 0.00044595382424153507,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.0016498918666413565,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.11818753211015579,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.2731303483672688,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.41694720894573734,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.42337589280210197,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.5567444084352939,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6896603360770905,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.8231571541791679,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.956773112376009,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.0904211715703331,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.2240772854362647,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.4271184902719485,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.4322931542711497,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5182283313988307,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.6331752308180953,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.7669455501122924,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.889330037110935,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.0245273260105425,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.159019950751636,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.2932791273912665,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.4962584382286224,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.5039063539481217,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.5834555892578197,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.7006225089539675,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.841377590748171,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.97246888577225,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.110786703523287,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.2346959252624807,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.375991750015311,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.517761987564759,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.6489252563326793,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.781427636204836,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.909260572875873,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.046548836923357,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.1759506297629025,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.308099302360813,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.441174745792126,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.57480082910213,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.708327598756147,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.836177958478645,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.973860660859489,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.1088942783053755,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.2428221509912465,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.376677273383761,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.5102617453950025,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.649682733188846,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.779654130660002,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.911817847886863,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.045292482350869,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.178652386955309,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.378700226166443,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.383119287596261,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.469754149618479,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.586315454335,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.714940863999192,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.8530156691463375,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.982814937925421,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.114819769955501,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.248104435983524,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.387194024065272,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.517326466647852,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.649423237878057,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.7767019398413435,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.914204084351755,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.988581540889377,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.011011390539283,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.017499915822924,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.019527790076053,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                }
+              ],
+              "observedDegrees": 459.5,
+              "stateHistory": "idle,loading,ready,idle,loading,ready",
+              "src": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "内部非公开技术验证 · 非正式角色资产",
+              "style": "chibi",
+              "selectedCards": [
+                "3777a880-fc8c-4766-aade-948d20c6b8f0"
+              ]
+            },
+            "zoomOut": {
+              "state": "ready",
+              "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+              "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 8.019527790076053,
+                "phi": 1.3089969389957472,
+                "radius": 3.5987347811727006
+              },
+              "eventCount": 85,
+              "userEventCount": 69,
+              "maxContinuousDegrees": 459.45954478724707,
+              "samples": [
+                {
+                  "theta": 0.00044595382424153507,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.0016498918666413565,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.11818753211015579,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.2731303483672688,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.41694720894573734,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.42337589280210197,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.5567444084352939,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6896603360770905,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.8231571541791679,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.956773112376009,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.0904211715703331,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.2240772854362647,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.4271184902719485,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.4322931542711497,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5182283313988307,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.6331752308180953,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.7669455501122924,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.889330037110935,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.0245273260105425,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.159019950751636,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.2932791273912665,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.4962584382286224,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.5039063539481217,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.5834555892578197,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.7006225089539675,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.841377590748171,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.97246888577225,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.110786703523287,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.2346959252624807,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.375991750015311,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.517761987564759,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.6489252563326793,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.781427636204836,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.909260572875873,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.046548836923357,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.1759506297629025,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.308099302360813,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.441174745792126,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.57480082910213,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.708327598756147,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.836177958478645,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.973860660859489,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.1088942783053755,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.2428221509912465,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.376677273383761,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.5102617453950025,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.649682733188846,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.779654130660002,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.911817847886863,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.045292482350869,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.178652386955309,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.378700226166443,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.383119287596261,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.469754149618479,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.586315454335,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.714940863999192,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.8530156691463375,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.982814937925421,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.114819769955501,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.248104435983524,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.387194024065272,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.517326466647852,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.649423237878057,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.7767019398413435,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.914204084351755,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.988581540889377,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.011011390539283,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.017499915822924,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.019527790076053,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                }
+              ],
+              "observedDegrees": 459.5,
+              "stateHistory": "idle,loading,ready,idle,loading,ready",
+              "src": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "内部非公开技术验证 · 非正式角色资产",
+              "style": "chibi",
+              "selectedCards": [
+                "3777a880-fc8c-4766-aade-948d20c6b8f0"
+              ]
+            },
+            "reset": {
+              "state": "ready",
+              "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+              "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 0,
+                "phi": 1.3089969389957472,
+                "radius": 3.5987347811727006
+              },
+              "eventCount": 86,
+              "userEventCount": 69,
+              "maxContinuousDegrees": 459.45954478724707,
+              "samples": [
+                {
+                  "theta": 0.00044595382424153507,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.0016498918666413565,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.11818753211015579,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.2731303483672688,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.41694720894573734,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.42337589280210197,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.5567444084352939,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6896603360770905,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.8231571541791679,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.956773112376009,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.0904211715703331,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.2240772854362647,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.4271184902719485,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.4322931542711497,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5182283313988307,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.6331752308180953,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.7669455501122924,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.889330037110935,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.0245273260105425,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.159019950751636,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.2932791273912665,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.4962584382286224,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.5039063539481217,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.5834555892578197,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.7006225089539675,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.841377590748171,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.97246888577225,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.110786703523287,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.2346959252624807,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.375991750015311,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.517761987564759,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.6489252563326793,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.781427636204836,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.909260572875873,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.046548836923357,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.1759506297629025,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.308099302360813,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.441174745792126,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.57480082910213,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.708327598756147,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.836177958478645,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.973860660859489,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.1088942783053755,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.2428221509912465,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.376677273383761,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.5102617453950025,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.649682733188846,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.779654130660002,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.911817847886863,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.045292482350869,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.178652386955309,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.378700226166443,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.383119287596261,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.469754149618479,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.586315454335,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.714940863999192,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.8530156691463375,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.982814937925421,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.114819769955501,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.248104435983524,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.387194024065272,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.517326466647852,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.649423237878057,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.7767019398413435,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.914204084351755,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.988581540889377,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.011011390539283,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.017499915822924,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.019527790076053,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                }
+              ],
+              "observedDegrees": 459.5,
+              "stateHistory": "idle,loading,ready,idle,loading,ready",
+              "src": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "内部非公开技术验证 · 非正式角色资产",
+              "style": "chibi",
+              "selectedCards": [
+                "3777a880-fc8c-4766-aade-948d20c6b8f0"
+              ]
+            },
+            "wheel": {
+              "state": "ready",
+              "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+              "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+              "touchEnabled": false,
+              "lastError": "",
+              "orbit": {
+                "theta": 0,
+                "phi": 1.3089969389957472,
+                "radius": 3.2112737571097854
+              },
+              "eventCount": 94,
+              "userEventCount": 77,
+              "maxContinuousDegrees": 459.45954478724707,
+              "samples": [
+                {
+                  "theta": 0.00044595382424153507,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.0016498918666413565,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.11818753211015579,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.2731303483672688,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.41694720894573734,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.42337589280210197,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.5567444084352939,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.6896603360770905,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.8231571541791679,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.956773112376009,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.0904211715703331,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.2240772854362647,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.4271184902719485,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.4322931542711497,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.5182283313988307,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.6331752308180953,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.7669455501122924,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 1.889330037110935,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.0245273260105425,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.159019950751636,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.2932791273912665,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.4962584382286224,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.5039063539481217,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.5834555892578197,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.7006225089539675,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.841377590748171,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 2.97246888577225,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.110786703523287,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.2346959252624807,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.375991750015311,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.517761987564759,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.6489252563326793,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.781427636204836,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 3.909260572875873,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.046548836923357,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.1759506297629025,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.308099302360813,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.441174745792126,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.57480082910213,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.708327598756147,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.836177958478645,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 4.973860660859489,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.1088942783053755,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.2428221509912465,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.376677273383761,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.5102617453950025,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.649682733188846,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.779654130660002,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 5.911817847886863,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.045292482350869,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.178652386955309,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.378700226166443,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.383119287596261,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.469754149618479,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.586315454335,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.714940863999192,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.8530156691463375,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 6.982814937925421,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.114819769955501,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.248104435983524,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.387194024065272,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.517326466647852,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.649423237878057,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.7767019398413435,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.914204084351755,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 7.988581540889377,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.011011390539283,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.017499915822924,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 8.019527790076053,
+                  "radius": 3.5987347811727006,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0,
+                  "radius": 3.5974420103393863,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0,
+                  "radius": 3.5938424188892624,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0,
+                  "radius": 3.3683755556984023,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0,
+                  "radius": 3.2639251480815297,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0,
+                  "radius": 3.226937908175869,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0,
+                  "radius": 3.215642687779741,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0,
+                  "radius": 3.212355496316708,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0,
+                  "radius": 3.2112737571097854,
+                  "source": "user-interaction"
+                }
+              ],
+              "observedDegrees": 459.5,
+              "stateHistory": "idle,loading,ready,idle,loading,ready",
+              "src": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file",
+              "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+              "title": "内部非公开技术验证 · 非正式角色资产",
+              "style": "chibi",
+              "selectedCards": [
+                "3777a880-fc8c-4766-aade-948d20c6b8f0"
+              ]
+            }
+          }
+        ],
+        "readOnly": true
+      }
+    },
+    {
+      "name": "same character missing style does not masquerade as other model and recovers",
+      "status": "FAIL",
+      "error": "missing style not honest"
+    },
+    {
+      "name": "GLB synthetic503 reports Error and reloads original real GLB, no regeneration",
+      "status": "PASS",
+      "details": {
+        "faultType": "BROWSER_RESPONSE_DOUBLE_ONLY",
+        "error": {
+          "state": "error",
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+          "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "touchEnabled": false,
+          "lastError": "模型加载失败，请检查资源是否完整或浏览器是否支持WebGL。可重新加载原文件，不会提交建模。",
+          "orbit": {
+            "theta": 0,
+            "phi": 1.3089969389957472,
+            "radius": -2.2
+          },
+          "eventCount": 0,
+          "userEventCount": 0,
+          "maxContinuousDegrees": 0,
+          "samples": [],
+          "observedDegrees": 0,
+          "stateHistory": "idle,loading,error",
+          "src": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+          "status": "模型加载失败",
+          "title": "绛绣·戏韵",
+          "style": "realistic",
+          "selectedCards": [
+            "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+          ]
+        },
+        "recovered": {
+          "state": "ready",
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+          "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "touchEnabled": false,
+          "lastError": "",
+          "orbit": {
+            "theta": 0,
+            "phi": 1.3089969389957472,
+            "radius": 3.9898317468431963
+          },
+          "eventCount": 0,
+          "userEventCount": 0,
+          "maxContinuousDegrees": 0,
+          "samples": [],
+          "observedDegrees": 0,
+          "stateHistory": "idle,loading,error,loading,ready",
+          "src": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+          "status": "模型加载完成 · 拖拽旋转，滚轮缩放",
+          "title": "绛绣·戏韵",
+          "style": "realistic",
+          "selectedCards": [
+            "1fa0b519-caf4-4009-aec2-f20b0f9a3523"
+          ]
+        }
+      }
+    },
+    {
+      "name": "library refresh HTTP503 retains honest saved snapshot and manual recovery",
+      "status": "PASS",
+      "details": {
+        "faultType": "BROWSER_RESPONSE_DOUBLE_ONLY",
+        "failed": "知识服务暂时无法完成请求（HTTP 503），请检查后端后重试。 目前仅保留上次读取的快照。",
+        "recovered": "2个已有模型，另有待补充模型的角色。",
+        "count": 4
+      }
+    }
+  ],
+  "contexts": [
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "kl: fetch for \"/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file\" responded with 503: Service Unavailable\n    at /js/vendor/model-viewer/model-viewer.min.js:48:204423"
+      ],
+      "httpErrors": [
+        {
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file",
+          "status": 503
+        }
+      ],
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ],
+      "httpErrors": [
+        {
+          "path": "/api/v1/assets/models",
+          "status": 503
+        }
+      ],
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        }
+      ]
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "physicalPhone": "NOT_TESTED",
+  "serverScope": "8877 asset-only FastAPI uses real catalog and models without startup recovery; non-asset GET proxied to existing user 8000",
+  "chromeVersion": "155.0.8059.86",
+  "finishedAt": "2026-10-24T12:01:30.950Z",
+  "passed": 6,
+  "failed": 1,
+  "status": "FAIL"
+}

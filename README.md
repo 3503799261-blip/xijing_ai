@@ -18,6 +18,12 @@
 
 [本次改造与实际测试](docs/reports/frontend-productization.md)。本轮只执行免费隔离测试与已有资产检查；新增上下文的真实DeepSeek联测仍需单独授权，不把Mock结果描述为真实AI回答。一键运行入口与私有配置继续沿用[既有配置](docs/reports/local-run-setup.md)。
 
+## 数字资产与3D工作台（2026-10-24）
+
+[工作台](http://127.0.0.1:8000/about.html#ai-workshop-model)现为左操作栏、中间真实Viewer、右侧已有资产库；保持酒红/金/米白，手机纵向排列。右库可选择原写实模型和仅本机内部查看的Q版技术模型，缩略图明确为各自登记概念图。二者不是同一角色的两个风格；没有对应模型的角色仍显示空态。
+
+新增内部列表是原`GET /assets/models?includeInternal=true`的受本机守卫保护选项，默认公开列表仍隐藏Q；文件及创建门禁不变。若当前VS Code服务在改造前已启动，先停止再运行“戏境 AI：一键运行”加载新后端，不需要安装或初始化资源。本轮仅本地免费验证、没有新建模或付费生成；[实际报告与证据](docs/reports/asset-workbench-layout.md)。
+
 ## WP4实际启动与恢复结果
 
 [WP4报告](docs/reports/phase-05-work-package-04.md) · [本次测试与命令](docs/evidence/test-results/phase-05-wp4-test-report.md)。2026-10-20～21重新验证，而非仅引用旧报告：

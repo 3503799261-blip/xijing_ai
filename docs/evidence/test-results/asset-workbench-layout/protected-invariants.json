@@ -1,0 +1,164 @@
+{
+  "checkedAtUtc": "2026-10-24T12:16:31.351261+00:00",
+  "kind": "PROTECTED_BUSINESS_AND_FILE_INVARIANTS",
+  "status": "PASS",
+  "canonical18TablesUnchanged": true,
+  "businessRows": {
+    "agents": {
+      "agent_artifacts": 59,
+      "agent_events": 194,
+      "agent_steps": 88,
+      "agent_tasks": 22
+    },
+    "catalog": {
+      "asset_images": 1,
+      "asset_models": 4,
+      "character_assets": 3,
+      "concept_candidates": 3,
+      "neural4d_frozen_approvals": 2,
+      "neural4d_query_limits": 2
+    },
+    "neural4dUsage": {
+      "neural4d_attempt_events": 17,
+      "neural4d_creation_attempts": 2,
+      "neural4d_model_approvals": 2,
+      "neural4d_operational_requests": 18,
+      "neural4d_usage_policy": 1
+    },
+    "llmBudget": {
+      "budget_scopes": 1,
+      "call_scopes": 48,
+      "calls": 110
+    }
+  },
+  "tasks": 22,
+  "taskIdsAndEventsUnchanged": true,
+  "llmRecordedCallsBeforeAndAfter": 110,
+  "quota": {
+    "maxAttempts": 3,
+    "externalHistoricalUsed": 0,
+    "used": 2,
+    "remaining": 1,
+    "attemptStates": [
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ],
+    "attemptCanonicalSha256": "a4623f255d409efcf78cb3e734dbc03fd266ad7219d1b63c4418c09cba03ca0a",
+    "policyCanonicalSha256": "b355fd10cb861dca9765e1a36180e25f484217eb7390d830ad66655aa6bd00d2",
+    "unconsumedApprovals": 0,
+    "operationalRequestCount": 18,
+    "recordedCredits": 60.0
+  },
+  "protectedFiles": {
+    "compared": 74,
+    "changed": [],
+    "added": [],
+    "unreadableRuntimeOwnerLocks": [
+      {
+        "relative": ".runtime/xijing-ai/agent-tasks-owner.lock",
+        "state": "UNREADABLE"
+      },
+      {
+        "relative": ".runtime/xijing-ai/generations/gen-20261010T104704-f628d57b/qdrant/.lock",
+        "state": "UNREADABLE_EXCLUSIVE_RUNTIME_LOCK"
+      },
+      {
+        "relative": ".runtime/xijing-ai/index-owner.lock",
+        "state": "UNREADABLE"
+      }
+    ]
+  },
+  "chatJsonFiles": [
+    {
+      "runtimeRelativePath": ".runtime/xijing-ai/chat-conversations/b43f84d6-91a0-419b-b49f-ac65491b966b.json",
+      "sha256": "cb442c6d0d380df5d46eeecb18a9c29370e62134ac30da2ffb06444df84a3a33",
+      "unchanged": true
+    }
+  ],
+  "envFile": "SHA-256 compared unchanged; no contents published",
+  "sharedNavigationAndCultureMedia": {
+    "files": 67,
+    "supplementalBaselineAt": "2026-10-24T12:03:56.370714+00:00",
+    "allUnchanged": true
+  },
+  "cultureHtmlSevenUnchanged": true,
+  "models": [
+    {
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "contentSha256": "b6b033c2b369a928e4e8859e54869c6b8809ca7fe52acef97b23dc9e587becc1",
+      "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+      "origin": "neural4d",
+      "styleMode": "realistic",
+      "internalUseOnly": null,
+      "publicationAllowed": null,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5.glb",
+          "exists": true,
+          "sha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "sizeBytes": 15158668,
+          "glbHeaderMatches": true
+        }
+      ]
+    },
+    {
+      "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+      "assetId": null,
+      "contentSha256": "e4c338c7930093f21523e08ee8ea88543377efda7565ad86ec012615b3c757fc",
+      "providerTaskId": "bb074c31-1905-45b6-b763-22d065ddc616",
+      "origin": "neural4d_technical_test",
+      "styleMode": "chibi",
+      "internalUseOnly": true,
+      "publicationAllowed": false,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a.glb",
+          "exists": true,
+          "sha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+          "sizeBytes": 8827324,
+          "glbHeaderMatches": true
+        }
+      ]
+    },
+    {
+      "modelId": "3e8a0a55-f124-42a5-8265-7a7bb9b4d9d8",
+      "assetId": null,
+      "contentSha256": "b80be3fc269f5570a666035d2ffc55e800e92da27e5b543f44a9bf431100943d",
+      "providerTaskId": null,
+      "origin": "local_test_fixture",
+      "styleMode": null,
+      "internalUseOnly": null,
+      "publicationAllowed": null,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5.glb",
+          "exists": true,
+          "sha256": "65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5",
+          "sizeBytes": 120484,
+          "glbHeaderMatches": true
+        }
+      ]
+    },
+    {
+      "modelId": "5ac8ea03-8bcd-4da8-bad5-af6da78269bf",
+      "assetId": null,
+      "contentSha256": "c5bcadb3e5c8cedcbf8b01bd000b0711ee95be7bc0387dc923b0b1e6dd10eac9",
+      "providerTaskId": null,
+      "origin": "local_test_fixture",
+      "styleMode": null,
+      "internalUseOnly": null,
+      "publicationAllowed": null,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df.glb",
+          "exists": true,
+          "sha256": "782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df",
+          "sizeBytes": 120556,
+          "glbHeaderMatches": true
+        }
+      ]
+    }
+  ],
+  "supplierOrBusinessWrites": 0
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "PUBLIC_SCREENSHOTS_INTERNAL_THUMBNAIL_MASKED",
+  "screenshots": [
+    {
+      "name": "workbench-1920-privacy-masked.png",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "internalChibiThumbnail": "MASKED_FOR_PUBLIC_EVIDENCE",
+      "realisticModel": "ACTUAL_REGISTERED_GLB_RENDER",
+      "scroll": "model panel top below sticky header"
+    },
+    {
+      "name": "workbench-1024-privacy-masked.png",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "internalChibiThumbnail": "MASKED_FOR_PUBLIC_EVIDENCE",
+      "realisticModel": "ACTUAL_REGISTERED_GLB_RENDER",
+      "scroll": "model panel top below sticky header"
+    },
+    {
+      "name": "workbench-390-privacy-masked.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "internalChibiThumbnail": "MASKED_FOR_PUBLIC_EVIDENCE",
+      "realisticModel": "ACTUAL_REGISTERED_GLB_RENDER",
+      "scroll": "model panel top below sticky header"
+    }
+  ],
+  "paidCalls": 0,
+  "neural4dCalls": 0
+}

@@ -1,0 +1,980 @@
+{
+  "startedAt": "2026-10-24T12:05:21.800Z",
+  "scope": "ASSET_WORKBENCH_REAL_GLB_CDP_TOUCH_WHEEL_ZOOM_RESET_AND_SYNTHETIC_FILE_FAILURE_RECOVERY",
+  "physicalPhone": "NOT_TESTED",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "tests": [
+    {
+      "name": "realistic",
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "status": "PASS",
+      "startedAt": "2026-10-24T12:05:22.243Z",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        },
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters/9e2b42e1-bbad-4a2f-ab1b-aeda18015dee"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "kl: fetch for \"http://127.0.0.1:8877/api/v1/assets/models/1fa0b519-caf4-4009-aec2-f20b0f9a3523/file\" responded with 503: Service Unavailable\n    at http://127.0.0.1:8877/js/vendor/model-viewer/model-viewer.min.js:48:204423"
+      ],
+      "fileRequests": [
+        {
+          "syntheticFailure": false
+        },
+        {
+          "syntheticFailure": true
+        },
+        {
+          "syntheticFailure": false
+        }
+      ],
+      "stateHistory": [
+        "idle",
+        "loading",
+        "ready",
+        "idle",
+        "loading",
+        "error",
+        "loading",
+        "ready"
+      ],
+      "initial": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "degrees": 0,
+        "userEventCount": 0,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "sweeps": [
+        {
+          "state": "ready",
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+          "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "degrees": 161.4,
+          "userEventCount": 62,
+          "touchEnabled": "true",
+          "orbit": {
+            "theta": 2.816497903420333,
+            "phi": 1.3089969389957472,
+            "radius": 3.9898317468431963
+          },
+          "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+        },
+        {
+          "state": "ready",
+          "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+          "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "degrees": 322.7,
+          "userEventCount": 123,
+          "touchEnabled": "true",
+          "orbit": {
+            "theta": 5.632995806840662,
+            "phi": 1.3089969389957472,
+            "radius": 3.9898317468431963
+          },
+          "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+        }
+      ],
+      "rotated": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "degrees": 322.7,
+        "userEventCount": 123,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 5.632995806840662,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "pinched": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "degrees": 322.7,
+        "userEventCount": 187,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 5.632995806840662,
+          "phi": 1.3089969389957472,
+          "radius": 2.791521396577929
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "reset": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "degrees": 322.7,
+        "userEventCount": 187,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "wheelZoom": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "degrees": 322.7,
+        "userEventCount": 192,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.517306032302064
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "buttonZoomIn": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "degrees": 322.7,
+        "userEventCount": 192,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.191865397474557
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "buttonZoomOut": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "degrees": 322.7,
+        "userEventCount": 192,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "stateHistoryBeforeReload": [
+        "idle",
+        "loading",
+        "ready"
+      ],
+      "error": {
+        "state": "error",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "degrees": 0,
+        "userEventCount": 0,
+        "touchEnabled": "false",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": -2.2
+        },
+        "status": "模型加载失败"
+      },
+      "recovered": {
+        "state": "ready",
+        "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+        "modelHash": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+        "degrees": 0,
+        "userEventCount": 0,
+        "touchEnabled": "false",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.9898317468431963
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "assertions": {
+        "exactRealModel": true,
+        "touchEnabled": true,
+        "continuousTouch260": true,
+        "pinchZoomIn": true,
+        "reset": true,
+        "wheelZoomIn": true,
+        "zoomButtons": true,
+        "loadingReadyErrorObserved": true,
+        "failedOriginalFileRecovered": true,
+        "noWritesExternalOrPageErrors": true
+      },
+      "finishedAt": "2026-10-24T12:06:24.255Z",
+      "elapsedMs": 62012
+    },
+    {
+      "name": "internal-chibi",
+      "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+      "status": "PASS",
+      "startedAt": "2026-10-24T12:06:24.263Z",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        },
+        {
+          "method": "GET",
+          "path": "/about.html"
+        },
+        {
+          "method": "GET",
+          "path": "/css/style.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-history.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-demo.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-chat.css"
+        },
+        {
+          "method": "GET",
+          "path": "/css/ai-workshop-assets.css"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/main.js"
+        },
+        {
+          "method": "GET",
+          "path": "/images/about.jpg"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-controller.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-workflow.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/chat-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-guide.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/agent-history.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/digital-assets.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/demo-status.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/chat/conversations/b43f84d6-91a0-419b-b49f-ac65491b966b"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/model-viewer-adapter.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/asset-library.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-contracts.js"
+        },
+        {
+          "method": "GET",
+          "path": "/js/ai-workshop/history-services.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/usage"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/models"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/characters"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e"
+        },
+        {
+          "method": "GET",
+          "path": "/js/vendor/model-viewer/model-viewer.min.js"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/candidates/fa0cd555-1daf-44a3-8825-ee6f5eb8b79e/file"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/assets/images/0e1e8d8d-9ab9-43bf-9d36-a4d3c7c1414d/file"
+        }
+      ],
+      "blockedWrites": [],
+      "blockedExternal": [],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "kl: fetch for \"http://127.0.0.1:8877/api/v1/assets/models/3777a880-fc8c-4766-aade-948d20c6b8f0/file\" responded with 503: Service Unavailable\n    at http://127.0.0.1:8877/js/vendor/model-viewer/model-viewer.min.js:48:204423"
+      ],
+      "fileRequests": [
+        {
+          "syntheticFailure": false
+        },
+        {
+          "syntheticFailure": true
+        },
+        {
+          "syntheticFailure": false
+        }
+      ],
+      "stateHistory": [
+        "idle",
+        "loading",
+        "ready",
+        "idle",
+        "loading",
+        "error",
+        "loading",
+        "ready"
+      ],
+      "initial": {
+        "state": "ready",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "degrees": 0,
+        "userEventCount": 0,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.5987347811727006
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "sweeps": [
+        {
+          "state": "ready",
+          "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+          "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+          "degrees": 161.4,
+          "userEventCount": 68,
+          "touchEnabled": "true",
+          "orbit": {
+            "theta": 2.816497903420333,
+            "phi": 1.3089969389957472,
+            "radius": 3.5987347811727006
+          },
+          "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+        },
+        {
+          "state": "ready",
+          "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+          "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+          "degrees": 322.7,
+          "userEventCount": 131,
+          "touchEnabled": "true",
+          "orbit": {
+            "theta": 5.632995806840662,
+            "phi": 1.3089969389957472,
+            "radius": 3.5987347811727006
+          },
+          "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+        }
+      ],
+      "rotated": {
+        "state": "ready",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "degrees": 322.7,
+        "userEventCount": 131,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 5.632995806840662,
+          "phi": 1.3089969389957472,
+          "radius": 3.5987347811727006
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "pinched": {
+        "state": "ready",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "degrees": 322.7,
+        "userEventCount": 220,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 5.632995806840662,
+          "phi": 1.3089969389957472,
+          "radius": 2.5238601025596448
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "reset": {
+        "state": "ready",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "degrees": 322.7,
+        "userEventCount": 220,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.5987347811727006
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "wheelZoom": {
+        "state": "ready",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "degrees": 322.7,
+        "userEventCount": 230,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.1725276547034937
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "buttonZoomIn": {
+        "state": "ready",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "degrees": 322.7,
+        "userEventCount": 230,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 2.878987824938161
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "buttonZoomOut": {
+        "state": "ready",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "degrees": 322.7,
+        "userEventCount": 230,
+        "touchEnabled": "true",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.5987347811727006
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "stateHistoryBeforeReload": [
+        "idle",
+        "loading",
+        "ready"
+      ],
+      "error": {
+        "state": "error",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "degrees": 0,
+        "userEventCount": 0,
+        "touchEnabled": "false",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": -2.2
+        },
+        "status": "模型加载失败"
+      },
+      "recovered": {
+        "state": "ready",
+        "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+        "modelHash": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+        "degrees": 0,
+        "userEventCount": 0,
+        "touchEnabled": "false",
+        "orbit": {
+          "theta": 0,
+          "phi": 1.3089969389957472,
+          "radius": 3.5987347811727006
+        },
+        "status": "模型加载完成 · 拖拽旋转，滚轮缩放"
+      },
+      "assertions": {
+        "exactRealModel": true,
+        "touchEnabled": true,
+        "continuousTouch260": true,
+        "pinchZoomIn": true,
+        "reset": true,
+        "wheelZoomIn": true,
+        "zoomButtons": true,
+        "loadingReadyErrorObserved": true,
+        "failedOriginalFileRecovered": true,
+        "noWritesExternalOrPageErrors": true
+      },
+      "finishedAt": "2026-10-24T12:06:48.131Z",
+      "elapsedMs": 23867
+    }
+  ],
+  "paidRequests": 0,
+  "supplierRequests": 0,
+  "chromeVersion": "155.0.8059.86",
+  "nodeVersion": "v24.22.1",
+  "finishedAt": "2026-10-24T12:06:48.389Z",
+  "passed": 2,
+  "failed": 0,
+  "skipped": 0,
+  "blockedWrites": 0,
+  "blockedExternal": 0,
+  "status": "PASS"
+}
