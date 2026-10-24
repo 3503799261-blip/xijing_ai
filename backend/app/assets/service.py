@@ -358,11 +358,11 @@ class AssetService:
     def get_model(self, model_id):
         return self.public_model(self.store.file('model', model_id))
 
-    def list_models(self, asset_id=None):
+    def list_models(self, asset_id=None, include_internal=False):
         if asset_id is not None:
             self.store.get(asset_id)
         return [self.public_model(item) for item in self.store.files('model', asset_id)
-                if item.get('visibility') != 'internal' and item.get('internalUseOnly') is not True]
+                if include_internal or (item.get('visibility') != 'internal' and item.get('internalUseOnly') is not True)]
 
     def file_path(self, kind, file_id):
         item = self.store.file(kind, file_id)

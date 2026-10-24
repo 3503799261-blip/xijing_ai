@@ -1,5 +1,5 @@
 """Bounded raw uploads and ID-only private asset serving."""
-from fastapi import APIRouter, Query, Request
+from fastapi import APIRouter, Query, Request, Response
 from fastapi.responses import FileResponse, HTMLResponse
 from starlette.concurrency import run_in_threadpool
 from ..errors import ServiceError
@@ -125,8 +125,21 @@ def register_assets(app, service):
         return response(await run_in_threadpool(service.import_model, assetId, raw, licenseNote), request)
 
     @router.get('/models')
-    async def models(request: Request, assetId: str | None = None):
-        return response({'models': service.list_models(assetId)}, request)
+    async def models(request: Request, http_response: Response, assetId: str | None = None,
+                     includeInternal: bool = False):
+        # The local workbench may discover an existing private technical model,
+        # without changing its identity or making it a public character asset.
+        # Ordinary callers retain the original public-list behaviour.
+        if includeInternal:
+            require_local_internal_access(request)
+            http_response.headers['Cache-Control'] = 'private, no-store'
+            values = service.list_models(assetId, include_internal=True)
+        else:
+            values = service.list_models(assetId)
+        result = {'models': values}
+        if includeInternal:
+            result['internalIncluded'] = True
+        return response(result, request)
 
     @router.get('/models/{model_id}')
     async def model(model_id: str, request: Request):
