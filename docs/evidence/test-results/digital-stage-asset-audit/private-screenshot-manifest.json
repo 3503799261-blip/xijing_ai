@@ -1,0 +1,18 @@
+{
+  "files": [
+    {
+      "privateRelativeAuditPath": "browser-original-02/original-a-ready.png",
+      "bytes": 362852,
+      "sha256": "c8cce5f4f999f639a239d8f18f243e4c8b77134cf093ff366b28692d19287f68",
+      "copiedToGit": false,
+      "reason": "Source model permissions not yet verified; rendering screenshot is kept locally only."
+    },
+    {
+      "privateRelativeAuditPath": "browser-original-02/original-b-ready.png",
+      "bytes": 470596,
+      "sha256": "194c2de0163eac7a52f38eb0863f11393d2e4859d4b6c272b70faf186c8b17b7",
+      "copiedToGit": false,
+      "reason": "Source model permissions not yet verified; rendering screenshot is kept locally only."
+    }
+  ]
+}

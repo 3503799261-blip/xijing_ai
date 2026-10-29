@@ -1,0 +1,23 @@
+{
+  "kind": "PRIVATE_ORIGINAL_USER_GLB_BROWSER_READ_ONLY",
+  "startedAt": "2026-10-29T10:15:43.588Z",
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "backendDbAccess": false,
+  "sourceFilesModified": false,
+  "results": [],
+  "requests": [],
+  "blockedExternal": [],
+  "blockedWrites": [],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "port": 8879,
+  "browserVersion": "156.0.8078.73",
+  "fatalError": {
+    "name": "Error",
+    "message": "page.goto: net::ERR_NETWORK_ACCESS_DENIED at http://127.0.0.1:8879/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8879/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  "ownServerClosed": true,
+  "finishedAt": "2026-10-29T10:15:49.426Z",
+  "conclusion": "BLOCKED"
+}

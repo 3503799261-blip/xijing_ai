@@ -1,0 +1,886 @@
+{
+  "checkedAtUtc": "2026-10-29T10:12:59.147837+00:00",
+  "kind": "READ_ONLY_STAGE_SOURCE_AUDIT",
+  "sourceDirectory": "中式古戏台SU模型",
+  "elapsedSeconds": 3.603,
+  "fileCount": 33,
+  "totalBytes": 545423223,
+  "files": [
+    {
+      "relative": "tex/_16.jpg",
+      "bytes": 18256,
+      "sha256": "f34164023d9236a0183979729bda18c5df6d03d77ea65342da9905fcd9739ae8",
+      "image": {
+        "format": "JPEG",
+        "width": 160,
+        "height": 448,
+        "mode": "RGB",
+        "pixelCount": 71680
+      }
+    },
+    {
+      "relative": "tex/_26.jpg",
+      "bytes": 47524975,
+      "sha256": "1ed36d87dcaad81dc2fc6ba0038509109b3c271013d0b649f4bdcf8b53f111e8",
+      "image": {
+        "format": "JPEG",
+        "width": 10335,
+        "height": 4035,
+        "mode": "CMYK",
+        "pixelCount": 41701725
+      }
+    },
+    {
+      "relative": "tex/_61.jpg",
+      "bytes": 179687,
+      "sha256": "5c6d04dca7865800b444ed682203b3b7c1224e4f571675f55efb8ade4289f784",
+      "image": {
+        "format": "JPEG",
+        "width": 500,
+        "height": 422,
+        "mode": "RGB",
+        "pixelCount": 211000
+      }
+    },
+    {
+      "relative": "tex/__11.jpg",
+      "bytes": 359746,
+      "sha256": "13af53941f7080e3afb173408e867e2d238dfc58ff59550159d804b507e7936f",
+      "image": {
+        "format": "JPEG",
+        "width": 1975,
+        "height": 135,
+        "mode": "RGB",
+        "pixelCount": 266625
+      }
+    },
+    {
+      "relative": "tex/__3.jpg",
+      "bytes": 127768,
+      "sha256": "eaa305f4b52787f7ddb28b8571e82e91991a4aec3f837090b589fc658e25fb3a",
+      "image": {
+        "format": "JPEG",
+        "width": 398,
+        "height": 179,
+        "mode": "RGB",
+        "pixelCount": 71242
+      }
+    },
+    {
+      "relative": "tex/__4.jpg",
+      "bytes": 88118,
+      "sha256": "d815853f91cc5d65ce9c76dc6c5ca6a16ed48b36207be3e5a564fbc32222d775",
+      "image": {
+        "format": "JPEG",
+        "width": 324,
+        "height": 121,
+        "mode": "RGB",
+        "pixelCount": 39204
+      }
+    },
+    {
+      "relative": "tex/__7.jpg",
+      "bytes": 190705,
+      "sha256": "9a1eb0f702a0508fc21f5020877a63fb8ab5835b166eccf32d8735bbf2463961",
+      "image": {
+        "format": "JPEG",
+        "width": 1301,
+        "height": 112,
+        "mode": "RGB",
+        "pixelCount": 145712
+      }
+    },
+    {
+      "relative": "tex/__7_1.jpg",
+      "bytes": 40735,
+      "sha256": "610cdc2703f81ec5b1d65f4a0584cfd709b91eb277efc63bf781c3d621c3c690",
+      "image": {
+        "format": "JPEG",
+        "width": 1301,
+        "height": 25,
+        "mode": "RGB",
+        "pixelCount": 32525
+      }
+    },
+    {
+      "relative": "tex/__7_2.jpg",
+      "bytes": 134231,
+      "sha256": "22ad7c4458df5adc2405f14644b6801fb57f28ba6fc177cc550e7f3068bab0fd",
+      "image": {
+        "format": "JPEG",
+        "width": 1301,
+        "height": 81,
+        "mode": "RGB",
+        "pixelCount": 105381
+      }
+    },
+    {
+      "relative": "tex/__7_3.jpg",
+      "bytes": 44612,
+      "sha256": "ee10355077f4951e2d91d57c99a8ff873be6e1575e0232ce6c1c9337416b9e03",
+      "image": {
+        "format": "JPEG",
+        "width": 1301,
+        "height": 25,
+        "mode": "RGB",
+        "pixelCount": 32525
+      }
+    },
+    {
+      "relative": "tex/__8.jpg",
+      "bytes": 50975,
+      "sha256": "adac671a01ae94e3f4c644724d260bc62fd745b37ad588212e07a69f5e70ed3c",
+      "image": {
+        "format": "JPEG",
+        "width": 278,
+        "height": 112,
+        "mode": "RGB",
+        "pixelCount": 31136
+      }
+    },
+    {
+      "relative": "tex/_Color_A06_3.png",
+      "bytes": 155668,
+      "sha256": "28a2bf03d7ea10441145c6773f6fe25164ca7587e1b6bf66f8a992212034ed57",
+      "image": {
+        "format": "PNG",
+        "width": 288,
+        "height": 288,
+        "mode": "RGB",
+        "pixelCount": 82944
+      }
+    },
+    {
+      "relative": "tex/_Color_H03_1.jpg",
+      "bytes": 46036,
+      "sha256": "6fee9452322c45624ba2309f3ee92698a7f0c47e6a1111e3887958c7a1ddd2e5",
+      "image": {
+        "format": "JPEG",
+        "width": 474,
+        "height": 84,
+        "mode": "RGB",
+        "pixelCount": 39816
+      }
+    },
+    {
+      "relative": "tex/_Color_H20_1.jpg",
+      "bytes": 37159,
+      "sha256": "6e9e7f71edd7b225888fac89b8f4aab511934913df156579bf162f9bb0f38504",
+      "image": {
+        "format": "JPEG",
+        "width": 800,
+        "height": 533,
+        "mode": "RGB",
+        "pixelCount": 426400
+      }
+    },
+    {
+      "relative": "tex/_Safety_Glass_.jpg",
+      "bytes": 6008,
+      "sha256": "bbb288f5c2be0666e2ff3175803e80ab9cf5bfc2b487b99bca6ee2f1816f0f4e",
+      "image": {
+        "format": "JPEG",
+        "width": 150,
+        "height": 151,
+        "mode": "RGB",
+        "pixelCount": 22650
+      }
+    },
+    {
+      "relative": "tex/_Stone_Masonry_Multi_2.jpg",
+      "bytes": 9917,
+      "sha256": "f7d7ba596213b0589383e8f7ed40c431cd9f0f7e9d8329960a67e2957f2d0042",
+      "image": {
+        "format": "JPEG",
+        "width": 366,
+        "height": 256,
+        "mode": "RGB",
+        "pixelCount": 93696
+      }
+    },
+    {
+      "relative": "tex/_Wood_cherry_.jpg",
+      "bytes": 10294,
+      "sha256": "6e3bbe69e0d99af013000cba499f3fc33098f7ad69748e44ce7769132838d98c",
+      "image": {
+        "format": "JPEG",
+        "width": 256,
+        "height": 256,
+        "mode": "RGB",
+        "pixelCount": 65536
+      }
+    },
+    {
+      "relative": "tex/Color_006.jpg",
+      "bytes": 46036,
+      "sha256": "6fee9452322c45624ba2309f3ee92698a7f0c47e6a1111e3887958c7a1ddd2e5",
+      "image": {
+        "format": "JPEG",
+        "width": 474,
+        "height": 84,
+        "mode": "RGB",
+        "pixelCount": 39816
+      }
+    },
+    {
+      "relative": "tex/Color_C16.jpg",
+      "bytes": 5623,
+      "sha256": "caf1c83ad42af1de333709d179b115d76b3c4a5c0f9562538ffeda1ddc90290c",
+      "image": {
+        "format": "JPEG",
+        "width": 500,
+        "height": 500,
+        "mode": "RGB",
+        "pixelCount": 250000
+      }
+    },
+    {
+      "relative": "tex/DSDFSF.jpg",
+      "bytes": 506964,
+      "sha256": "f861259e085b807d6755fae9d79839638800c0b455d15260ccb470d9ee67f4b3",
+      "image": {
+        "format": "JPEG",
+        "width": 3087,
+        "height": 302,
+        "mode": "RGB",
+        "pixelCount": 932274
+      }
+    },
+    {
+      "relative": "tex/M_0046_Gold.jpg",
+      "bytes": 100320,
+      "sha256": "8ac2ec186abcf31763e6d279e0d8b91fb6e0b22e195cdd318ade4918d7dd511a",
+      "image": {
+        "format": "JPEG",
+        "width": 498,
+        "height": 720,
+        "mode": "RGB",
+        "pixelCount": 358560
+      }
+    },
+    {
+      "relative": "tex/M_11111.jpg",
+      "bytes": 4605388,
+      "sha256": "6dfb416f5f7570ae0be9e2a7e80849632b15057aba6f96018fb26367c55a7739",
+      "image": {
+        "format": "JPEG",
+        "width": 4724,
+        "height": 7098,
+        "mode": "RGB",
+        "pixelCount": 33530952
+      }
+    },
+    {
+      "relative": "tex/M_1759b0f202cafbc.jpg",
+      "bytes": 680258,
+      "sha256": "0b69f3071743e1a00046259f33cfa0e6a63d429c7822875e04f4a636d67cf670",
+      "image": {
+        "format": "JPEG",
+        "width": 740,
+        "height": 739,
+        "mode": "RGB",
+        "pixelCount": 546860
+      }
+    },
+    {
+      "relative": "tex/M_200852810250781_2.jpg",
+      "bytes": 246953,
+      "sha256": "2cc44900c721b10807e34aa79a179903a98828a30baddea8a5d7d79ca55e64a8",
+      "image": {
+        "format": "JPEG",
+        "width": 1024,
+        "height": 573,
+        "mode": "RGB",
+        "pixelCount": 586752
+      }
+    },
+    {
+      "relative": "tex/M_6.jpg",
+      "bytes": 81789,
+      "sha256": "9ad86634d4a06bf5299be27b36331b42d2d617bd37932191c7d2d17a50b931f9",
+      "image": {
+        "format": "JPEG",
+        "width": 94,
+        "height": 734,
+        "mode": "RGB",
+        "pixelCount": 68996
+      }
+    },
+    {
+      "relative": "tex/M_8.jpg",
+      "bytes": 77433,
+      "sha256": "f0817cd135e63bdea925501efcb42b0953aa2e50a3c01733d31ecb1e8dd06726",
+      "image": {
+        "format": "JPEG",
+        "width": 96,
+        "height": 740,
+        "mode": "RGB",
+        "pixelCount": 71040
+      }
+    },
+    {
+      "relative": "tex/M_8be746e283c12ea6f51f1f2a249c940e.jpg",
+      "bytes": 60731,
+      "sha256": "23e15da0e1d2230592ee8016d5c98678ef4f64f64daca439f69e4652e8e83203",
+      "image": {
+        "format": "JPEG",
+        "width": 600,
+        "height": 591,
+        "mode": "RGB",
+        "pixelCount": 354600
+      }
+    },
+    {
+      "relative": "戏台.c4d",
+      "bytes": 79205755,
+      "sha256": "7d1da8e48d99ff38bb9299d42583a7e96d596844931a68aa5127f6c0a6cce5db",
+      "headerHex": "51433444433444360000659e00010001adeb00000000010001adc8000000020f",
+      "headerText": "QC4DC4D6\u0000\u0000e�\u0000\u0001\u0000\u0001��\u0000\u0000\u0000\u0000\u0001\u0000\u0001��\u0000\u0000\u0000\u0002\u000f"
+    },
+    {
+      "relative": "戏台.fbx",
+      "bytes": 228674221,
+      "sha256": "c8b313bfe26f3374a3ebb1ea3e891ff7b053a9e7824df99198e982c897d6daca",
+      "headerHex": "3b2046425820372e352e302070726f6a6563742066696c650a3b20436f707972",
+      "headerText": "; FBX 7.5.0 project file\n; Copyr"
+    },
+    {
+      "relative": "戏台.jpg",
+      "bytes": 300577,
+      "sha256": "7ff86603049ab23e0428f7f5976cdc7319cdffaa97c5b18635ba3f5489b571e4",
+      "image": {
+        "format": "JPEG",
+        "width": 1280,
+        "height": 800,
+        "mode": "RGB",
+        "pixelCount": 1024000
+      }
+    },
+    {
+      "relative": "戏台.mtl",
+      "bytes": 5316,
+      "sha256": "23f1942ace6566876f23459611ffa1c61e18699aed3f005ac2def40f1e584739"
+    },
+    {
+      "relative": "戏台.obj",
+      "bytes": 114112843,
+      "sha256": "9255305d490671605a46ce143267604dc01cc2ec7f3fd06f1847b57af9a200f7"
+    },
+    {
+      "relative": "戏台.skp",
+      "bytes": 67688126,
+      "sha256": "a456e56abf85f7bb67f14c91ac56344caf15cb170f1fd7fef6b5145c39bceac1",
+      "headerHex": "fffeff0e53006b0065007400630068005500700020004d006f00640065006c00",
+      "headerText": "���\u000eS\u0000k\u0000e\u0000t\u0000c\u0000h\u0000U\u0000p\u0000 \u0000M\u0000o\u0000d\u0000e\u0000l\u0000"
+    }
+  ],
+  "obj": {
+    "vertices": 658470,
+    "normals": 441938,
+    "uvs": 89959,
+    "objects": 1845,
+    "faces": 706829,
+    "fanTriangulationEstimate": 1199716,
+    "faceArityHistogram": {
+      "4": 306545,
+      "16": 8,
+      "6": 5036,
+      "5": 2259,
+      "14": 21,
+      "11": 92,
+      "19": 6,
+      "3": 389636,
+      "7": 241,
+      "12": 29,
+      "8": 424,
+      "21": 17,
+      "9": 306,
+      "25": 17,
+      "10": 141,
+      "24": 233,
+      "918": 56,
+      "26": 96,
+      "27": 250,
+      "211": 24,
+      "15": 44,
+      "63": 8,
+      "62": 8,
+      "50": 8,
+      "18": 164,
+      "23": 4,
+      "20": 8,
+      "77": 38,
+      "47": 16,
+      "41": 4,
+      "43": 4,
+      "74": 12,
+      "42": 4,
+      "40": 12,
+      "30": 24,
+      "79": 4,
+      "48": 10,
+      "49": 4,
+      "34": 48,
+      "51": 8,
+      "75": 12,
+      "31": 28,
+      "73": 118,
+      "37": 10,
+      "95": 40,
+      "80": 40,
+      "29": 4,
+      "138": 8,
+      "148": 16,
+      "69": 4,
+      "22": 4,
+      "150": 8,
+      "13": 44,
+      "35": 24,
+      "145": 8,
+      "64": 4,
+      "65": 4,
+      "57": 4,
+      "68": 8,
+      "67": 8,
+      "142": 8,
+      "58": 420,
+      "17": 8,
+      "141": 8,
+      "54": 4,
+      "112": 24,
+      "45": 12,
+      "33": 12,
+      "44": 12,
+      "248": 4,
+      "119": 2,
+      "544": 16,
+      "32": 16,
+      "628": 16,
+      "28": 2
+    },
+    "bounds": {
+      "min": [
+        375.934814453125,
+        -6.14e-12,
+        -14383.7001953125
+      ],
+      "max": [
+        10830.1982421875,
+        9735.6416015625,
+        -193.74078369140625
+      ],
+      "size": [
+        10454.263427734375,
+        9735.641601562505,
+        14189.959411621094
+      ]
+    },
+    "usedMaterials": [
+      "Color_001",
+      "Color_006",
+      "Color_007",
+      "Color_008",
+      "Color_C16",
+      "Color_H08",
+      "Color_M00",
+      "DSDFSF",
+      "FrontColor",
+      "M_0046_Gold",
+      "M_11111",
+      "M_1759b0f202cafbc",
+      "M_200852810250781_2",
+      "M_6",
+      "M_8",
+      "M_8be746e283c12ea6f51f1f2a249c940e",
+      "_11",
+      "_16",
+      "_17",
+      "_26",
+      "_5",
+      "_61",
+      "_Black_1",
+      "_Blue_Glass_",
+      "_Charcoal_",
+      "_Color_006_1",
+      "_Color_A06_3",
+      "_Color_A06_4",
+      "_Color_A06_6",
+      "_Color_H03_1",
+      "_Color_H20_1",
+      "_CoolGray8_",
+      "_Gainsboro_",
+      "_Gray4_",
+      "_Redwood_",
+      "_Safety_Glass_",
+      "_Stone_Masonry_Multi_2",
+      "_Wood_cherry_",
+      "__11",
+      "__3",
+      "__4",
+      "__7",
+      "__7_1",
+      "__7_2",
+      "__7_3",
+      "__8"
+    ],
+    "distinctObjectNames": 1845,
+    "mtllib": [
+      "./戏台.mtl"
+    ],
+    "minVertexIndex": 1,
+    "maxVertexIndex": 658470,
+    "negativeIndexTerms": 0,
+    "invalidVertexLines": 0
+  },
+  "mtl": {
+    "materialCount": 46,
+    "declaredMaterials": [
+      "M_11111",
+      "_61",
+      "_Wood_cherry_",
+      "M_200852810250781_2",
+      "_17",
+      "FrontColor",
+      "_11",
+      "_5",
+      "_16",
+      "Color_C16",
+      "_Color_H03_1",
+      "__8",
+      "Color_006",
+      "_Stone_Masonry_Multi_2",
+      "Color_M00",
+      "_Color_A06_4",
+      "_Color_A06_6",
+      "__11",
+      "__7",
+      "__7_1",
+      "__7_2",
+      "__7_3",
+      "_Color_H20_1",
+      "Color_001",
+      "Color_H08",
+      "_CoolGray8_",
+      "_Charcoal_",
+      "_Safety_Glass_",
+      "_Blue_Glass_",
+      "_Black_1",
+      "_Gray4_",
+      "Color_007",
+      "_Gainsboro_",
+      "Color_008",
+      "M_0046_Gold",
+      "_Color_A06_3",
+      "_26",
+      "_Color_006_1",
+      "M_6",
+      "M_8",
+      "DSDFSF",
+      "M_8be746e283c12ea6f51f1f2a249c940e",
+      "M_1759b0f202cafbc",
+      "__3",
+      "__4",
+      "_Redwood_"
+    ],
+    "unknownUsedMaterials": [],
+    "unusedMaterials": [],
+    "textureReferences": [
+      {
+        "line": 5,
+        "material": "M_11111",
+        "directive": "map_Kd",
+        "value": "M_11111.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 12,
+        "material": "_61",
+        "directive": "map_Kd",
+        "value": "_61.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 19,
+        "material": "_Wood_cherry_",
+        "directive": "map_Kd",
+        "value": "_Wood_cherry_.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 26,
+        "material": "M_200852810250781_2",
+        "directive": "map_Kd",
+        "value": "M_200852810250781_2.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 59,
+        "material": "_16",
+        "directive": "map_Kd",
+        "value": "_16.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 66,
+        "material": "Color_C16",
+        "directive": "map_Kd",
+        "value": "Color_C16.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 73,
+        "material": "_Color_H03_1",
+        "directive": "map_Kd",
+        "value": "_Color_H03_1.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 80,
+        "material": "__8",
+        "directive": "map_Kd",
+        "value": "__8.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 87,
+        "material": "Color_006",
+        "directive": "map_Kd",
+        "value": "Color_006.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 94,
+        "material": "_Stone_Masonry_Multi_2",
+        "directive": "map_Kd",
+        "value": "_Stone_Masonry_Multi_2.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 119,
+        "material": "__11",
+        "directive": "map_Kd",
+        "value": "__11.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 126,
+        "material": "__7",
+        "directive": "map_Kd",
+        "value": "__7.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 133,
+        "material": "__7_1",
+        "directive": "map_Kd",
+        "value": "__7_1.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 140,
+        "material": "__7_2",
+        "directive": "map_Kd",
+        "value": "__7_2.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 147,
+        "material": "__7_3",
+        "directive": "map_Kd",
+        "value": "__7_3.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 154,
+        "material": "_Color_H20_1",
+        "directive": "map_Kd",
+        "value": "_Color_H20_1.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 185,
+        "material": "_Safety_Glass_",
+        "directive": "map_Kd",
+        "value": "_Safety_Glass_.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 232,
+        "material": "M_0046_Gold",
+        "directive": "map_Kd",
+        "value": "M_0046_Gold.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 239,
+        "material": "_Color_A06_3",
+        "directive": "map_Kd",
+        "value": "_Color_A06_3.png",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 246,
+        "material": "_26",
+        "directive": "map_Kd",
+        "value": "_26.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 259,
+        "material": "M_6",
+        "directive": "map_Kd",
+        "value": "M_6.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 266,
+        "material": "M_8",
+        "directive": "map_Kd",
+        "value": "M_8.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 273,
+        "material": "DSDFSF",
+        "directive": "map_Kd",
+        "value": "DSDFSF.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 280,
+        "material": "M_8be746e283c12ea6f51f1f2a249c940e",
+        "directive": "map_Kd",
+        "value": "M_8be746e283c12ea6f51f1f2a249c940e.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 287,
+        "material": "M_1759b0f202cafbc",
+        "directive": "map_Kd",
+        "value": "M_1759b0f202cafbc.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 294,
+        "material": "__3",
+        "directive": "map_Kd",
+        "value": "__3.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      },
+      {
+        "line": 301,
+        "material": "__4",
+        "directive": "map_Kd",
+        "value": "__4.jpg",
+        "directRelativeExists": false,
+        "texFallbackExists": true,
+        "externalUrl": false,
+        "absoluteOrTraversal": false
+      }
+    ],
+    "missingRelativeReferences": 27,
+    "missingEvenWithTexFallback": 0,
+    "externalOrUnsafeReferences": 0
+  },
+  "licenseOrReadmeFiles": [],
+  "modifiedSourceFiles": false,
+  "externalRequests": 0,
+  "paidApiCalls": 0,
+  "licenseStatus": "NOT_VERIFIED: no author, license, source-page or permission evidence present in this directory; user supplied files is not a permission grant.",
+  "validationBoundaries": {
+    "geometry": "OBJ textual structural counts and bounds only; no rendered scene or topology/UV visual verification; n-gon triangle number is sum(n-2), not proof of valid triangulation.",
+    "textures": "Image headers/dimensions/color modes only; no full pixel decoding or web material validation.",
+    "c4dSketchup": "Signatures and hashes recorded only; proprietary scene structure not opened.",
+    "originalSourceFiles": "Read only, no conversion/relink/reduction performed."
+  },
+  "executionNotes": [
+    {
+      "status": "FAIL",
+      "stage": "First shell wrapper",
+      "detail": "PowerShell syntax omitted & before quoted Python executable after pipeline; ParserError occurred before Python or audit source processing. No files or models changed."
+    },
+    {
+      "status": "PASS",
+      "stage": "Corrected shell wrapper",
+      "detail": "PowerShell here-string piped to & 'D:\\京剧\\京剧\\.venv\\Scripts\\python.exe' -B -; actual read-only scanner completed and generated this report."
+    }
+  ]
+}

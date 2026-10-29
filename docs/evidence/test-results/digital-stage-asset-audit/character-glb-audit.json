@@ -1,0 +1,642 @@
+{
+  "createdAtUtc": "2026-10-29T10:13:07.258199+00:00",
+  "kind": "READ_ONLY_USER_CHARACTER_GLB_AUDIT",
+  "sourceDirectory": "3D人物模型",
+  "sourceFilesModified": false,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "reports": [
+    {
+      "filename": "周瑜.glb",
+      "sizeBytes": 29808748,
+      "sha256": "67904d1a85c12c2026998052af86fbbe43ca1d680dda1e7b59bbe77019cdd22e",
+      "issues": [
+        "Embedded JPEG is declared image/jpg instead of glTF core image/jpeg; compatibility normalization in a derived copy may be needed.",
+        "No NORMAL attribute; renderer will need generated normals or derive normals before final scene integration."
+      ],
+      "header": {
+        "magic": "glTF",
+        "version": 2,
+        "declaredLength": 29808748,
+        "matchesActual": true
+      },
+      "chunks": [
+        {
+          "offset": 12,
+          "type": "0x4e4f534a",
+          "length": 1748,
+          "withinFile": true,
+          "aligned4": true
+        },
+        {
+          "offset": 1768,
+          "type": "0x4e4942",
+          "length": 29806972,
+          "withinFile": true,
+          "aligned4": true
+        }
+      ],
+      "asset": {
+        "generator": "pygltflib@v1.16.2",
+        "version": "2.0"
+      },
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "counts": {
+        "scenes": 1,
+        "nodes": 1,
+        "meshes": 1,
+        "materials": 1,
+        "textures": 2,
+        "images": 2,
+        "accessors": 3,
+        "bufferViews": 5,
+        "buffers": 1,
+        "skins": 0,
+        "animations": 0,
+        "cameras": 0
+      },
+      "buffers": [
+        {
+          "byteLength": 29806972
+        }
+      ],
+      "externalUris": [],
+      "geometry": {
+        "verticesPerPrimitiveSummed": 581015,
+        "trianglesPerPrimitiveSummed": 999984,
+        "primitives": 1,
+        "decodedAttributesAndIndicesSha256": "5e77bc7b92ed6c138e5ac2e74603af706dca277a4ef69c26ac55445138862cf0",
+        "meshes": [
+          {
+            "mesh": 0,
+            "name": null,
+            "primitives": [
+              {
+                "mode": "TRIANGLES",
+                "vertices": 581015,
+                "indices": 2999952,
+                "triangles": 999984,
+                "material": 0,
+                "attributes": [
+                  "POSITION",
+                  "TEXCOORD_0"
+                ],
+                "positionBounds": {
+                  "min": [
+                    -0.5260297656059265,
+                    -1.0,
+                    -0.4076273441314697
+                  ],
+                  "max": [
+                    0.5260297656059265,
+                    1.0,
+                    0.4076273441314697
+                  ]
+                },
+                "morphTargets": 0,
+                "extensions": {}
+              }
+            ]
+          }
+        ]
+      },
+      "sceneBounds": [
+        {
+          "scene": 0,
+          "name": null,
+          "min": [
+            -0.5260297656059265,
+            -1.0,
+            -0.4076273441314697
+          ],
+          "max": [
+            0.5260297656059265,
+            1.0,
+            0.4076273441314697
+          ],
+          "dimensions": [
+            1.052059531211853,
+            2.0,
+            0.8152546882629395
+          ],
+          "skinnedCaveat": null
+        }
+      ],
+      "meshNodeInstances": [
+        {
+          "scene": 0,
+          "node": 0,
+          "name": null,
+          "mesh": 0,
+          "skin": null,
+          "localTransform": {},
+          "worldBounds": {
+            "min": [
+              -0.5260297656059265,
+              -1.0,
+              -0.4076273441314697
+            ],
+            "max": [
+              0.5260297656059265,
+              1.0,
+              0.4076273441314697
+            ]
+          }
+        }
+      ],
+      "images": [
+        {
+          "image": 0,
+          "name": null,
+          "mimeType": "image/jpg",
+          "embedded": true,
+          "bytes": 3766738,
+          "sha256": "8dd3d44e5353263217e199692a851ec6f442bee3a2520aaf88b0a4a218d70bfd",
+          "uri": null
+        },
+        {
+          "image": 1,
+          "name": null,
+          "mimeType": "image/jpg",
+          "embedded": true,
+          "bytes": 2420123,
+          "sha256": "41d72cb627d17eca570c95ecbfe6bc2797dff6a703a5980565a89674e36b542d",
+          "uri": null
+        }
+      ],
+      "materials": [
+        {
+          "material": 0,
+          "name": null,
+          "alphaMode": "OPAQUE",
+          "doubleSided": true,
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "metallicFactor": 1.0,
+            "roughnessFactor": 1.0,
+            "baseColorTexture": {
+              "index": 0,
+              "texCoord": 0
+            },
+            "metallicRoughnessTexture": {
+              "index": 1,
+              "texCoord": 0
+            }
+          },
+          "normalTexture": null,
+          "occlusionTexture": null,
+          "emissiveTexture": null,
+          "extensions": {}
+        }
+      ],
+      "animationSummary": [],
+      "skinSummary": [],
+      "baseColorTextureExtract": {
+        "imageIndex": 0,
+        "path": "D:\\京剧\\.runtime\\stage-asset-audit-20261029\\character-67904d1a85c12c20-basecolor.jpg",
+        "sha256": "8dd3d44e5353263217e199692a851ec6f442bee3a2520aaf88b0a4a218d70bfd",
+        "bytes": 3766738,
+        "kind": "RAW_EMBEDDED_TEXTURE_NOT_3D_RENDER",
+        "originalDeclaredMimeType": "image/jpg",
+        "detectedMimeType": "image/jpeg",
+        "width": 4096,
+        "height": 4096,
+        "mode": "RGB"
+      },
+      "warnings": [
+        "Approximately one million triangles per model; multi-character mobile scene requires measured rendering/performance checks.",
+        "Embedded base-color texture is 4096x4096; decoded GPU memory exceeds JPEG file size."
+      ],
+      "sourceHashRecheckedUnchanged": true
+    },
+    {
+      "filename": "杜丽娘.glb",
+      "sizeBytes": 29808748,
+      "sha256": "67904d1a85c12c2026998052af86fbbe43ca1d680dda1e7b59bbe77019cdd22e",
+      "issues": [
+        "Embedded JPEG is declared image/jpg instead of glTF core image/jpeg; compatibility normalization in a derived copy may be needed.",
+        "No NORMAL attribute; renderer will need generated normals or derive normals before final scene integration."
+      ],
+      "header": {
+        "magic": "glTF",
+        "version": 2,
+        "declaredLength": 29808748,
+        "matchesActual": true
+      },
+      "chunks": [
+        {
+          "offset": 12,
+          "type": "0x4e4f534a",
+          "length": 1748,
+          "withinFile": true,
+          "aligned4": true
+        },
+        {
+          "offset": 1768,
+          "type": "0x4e4942",
+          "length": 29806972,
+          "withinFile": true,
+          "aligned4": true
+        }
+      ],
+      "asset": {
+        "generator": "pygltflib@v1.16.2",
+        "version": "2.0"
+      },
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "counts": {
+        "scenes": 1,
+        "nodes": 1,
+        "meshes": 1,
+        "materials": 1,
+        "textures": 2,
+        "images": 2,
+        "accessors": 3,
+        "bufferViews": 5,
+        "buffers": 1,
+        "skins": 0,
+        "animations": 0,
+        "cameras": 0
+      },
+      "buffers": [
+        {
+          "byteLength": 29806972
+        }
+      ],
+      "externalUris": [],
+      "geometry": {
+        "verticesPerPrimitiveSummed": 581015,
+        "trianglesPerPrimitiveSummed": 999984,
+        "primitives": 1,
+        "decodedAttributesAndIndicesSha256": "5e77bc7b92ed6c138e5ac2e74603af706dca277a4ef69c26ac55445138862cf0",
+        "meshes": [
+          {
+            "mesh": 0,
+            "name": null,
+            "primitives": [
+              {
+                "mode": "TRIANGLES",
+                "vertices": 581015,
+                "indices": 2999952,
+                "triangles": 999984,
+                "material": 0,
+                "attributes": [
+                  "POSITION",
+                  "TEXCOORD_0"
+                ],
+                "positionBounds": {
+                  "min": [
+                    -0.5260297656059265,
+                    -1.0,
+                    -0.4076273441314697
+                  ],
+                  "max": [
+                    0.5260297656059265,
+                    1.0,
+                    0.4076273441314697
+                  ]
+                },
+                "morphTargets": 0,
+                "extensions": {}
+              }
+            ]
+          }
+        ]
+      },
+      "sceneBounds": [
+        {
+          "scene": 0,
+          "name": null,
+          "min": [
+            -0.5260297656059265,
+            -1.0,
+            -0.4076273441314697
+          ],
+          "max": [
+            0.5260297656059265,
+            1.0,
+            0.4076273441314697
+          ],
+          "dimensions": [
+            1.052059531211853,
+            2.0,
+            0.8152546882629395
+          ],
+          "skinnedCaveat": null
+        }
+      ],
+      "meshNodeInstances": [
+        {
+          "scene": 0,
+          "node": 0,
+          "name": null,
+          "mesh": 0,
+          "skin": null,
+          "localTransform": {},
+          "worldBounds": {
+            "min": [
+              -0.5260297656059265,
+              -1.0,
+              -0.4076273441314697
+            ],
+            "max": [
+              0.5260297656059265,
+              1.0,
+              0.4076273441314697
+            ]
+          }
+        }
+      ],
+      "images": [
+        {
+          "image": 0,
+          "name": null,
+          "mimeType": "image/jpg",
+          "embedded": true,
+          "bytes": 3766738,
+          "sha256": "8dd3d44e5353263217e199692a851ec6f442bee3a2520aaf88b0a4a218d70bfd",
+          "uri": null
+        },
+        {
+          "image": 1,
+          "name": null,
+          "mimeType": "image/jpg",
+          "embedded": true,
+          "bytes": 2420123,
+          "sha256": "41d72cb627d17eca570c95ecbfe6bc2797dff6a703a5980565a89674e36b542d",
+          "uri": null
+        }
+      ],
+      "materials": [
+        {
+          "material": 0,
+          "name": null,
+          "alphaMode": "OPAQUE",
+          "doubleSided": true,
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "metallicFactor": 1.0,
+            "roughnessFactor": 1.0,
+            "baseColorTexture": {
+              "index": 0,
+              "texCoord": 0
+            },
+            "metallicRoughnessTexture": {
+              "index": 1,
+              "texCoord": 0
+            }
+          },
+          "normalTexture": null,
+          "occlusionTexture": null,
+          "emissiveTexture": null,
+          "extensions": {}
+        }
+      ],
+      "animationSummary": [],
+      "skinSummary": [],
+      "baseColorTextureExtract": {
+        "imageIndex": 0,
+        "path": "D:\\京剧\\.runtime\\stage-asset-audit-20261029\\character-67904d1a85c12c20-basecolor.jpg",
+        "sha256": "8dd3d44e5353263217e199692a851ec6f442bee3a2520aaf88b0a4a218d70bfd",
+        "bytes": 3766738,
+        "kind": "RAW_EMBEDDED_TEXTURE_NOT_3D_RENDER",
+        "originalDeclaredMimeType": "image/jpg",
+        "detectedMimeType": "image/jpeg",
+        "width": 4096,
+        "height": 4096,
+        "mode": "RGB"
+      },
+      "warnings": [
+        "Approximately one million triangles per model; multi-character mobile scene requires measured rendering/performance checks.",
+        "Embedded base-color texture is 4096x4096; decoded GPU memory exceeds JPEG file size."
+      ],
+      "sourceHashRecheckedUnchanged": true
+    },
+    {
+      "filename": "穆桂英.glb",
+      "sizeBytes": 28671944,
+      "sha256": "7d8e9c8c6f814b4bb804235c97ce0c81e32ed8a70edb886e0ee81f88ff2b4727",
+      "issues": [
+        "Embedded JPEG is declared image/jpg instead of glTF core image/jpeg; compatibility normalization in a derived copy may be needed.",
+        "No NORMAL attribute; renderer will need generated normals or derive normals before final scene integration."
+      ],
+      "header": {
+        "magic": "glTF",
+        "version": 2,
+        "declaredLength": 28671944,
+        "matchesActual": true
+      },
+      "chunks": [
+        {
+          "offset": 12,
+          "type": "0x4e4f534a",
+          "length": 1512,
+          "withinFile": true,
+          "aligned4": true
+        },
+        {
+          "offset": 1532,
+          "type": "0x4e4942",
+          "length": 28670404,
+          "withinFile": true,
+          "aligned4": true
+        }
+      ],
+      "asset": {
+        "generator": "pygltflib@v1.16.2",
+        "version": "2.0"
+      },
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "counts": {
+        "scenes": 1,
+        "nodes": 1,
+        "meshes": 1,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "accessors": 3,
+        "bufferViews": 4,
+        "buffers": 1,
+        "skins": 0,
+        "animations": 0,
+        "cameras": 0
+      },
+      "buffers": [
+        {
+          "byteLength": 28670404
+        }
+      ],
+      "externalUris": [],
+      "geometry": {
+        "verticesPerPrimitiveSummed": 608294,
+        "trianglesPerPrimitiveSummed": 999912,
+        "primitives": 1,
+        "decodedAttributesAndIndicesSha256": "2f9a58aab37460308318c9aa9846d7713123e77a2443509e0efa6d664d7c5d59",
+        "meshes": [
+          {
+            "mesh": 0,
+            "name": null,
+            "primitives": [
+              {
+                "mode": "TRIANGLES",
+                "vertices": 608294,
+                "indices": 2999736,
+                "triangles": 999912,
+                "material": 0,
+                "attributes": [
+                  "POSITION",
+                  "TEXCOORD_0"
+                ],
+                "positionBounds": {
+                  "min": [
+                    -0.6851361989974976,
+                    -1.0,
+                    -0.5819360613822937
+                  ],
+                  "max": [
+                    0.6851361989974976,
+                    1.0,
+                    0.5819360613822937
+                  ]
+                },
+                "morphTargets": 0,
+                "extensions": {}
+              }
+            ]
+          }
+        ]
+      },
+      "sceneBounds": [
+        {
+          "scene": 0,
+          "name": null,
+          "min": [
+            -0.6851361989974976,
+            -1.0,
+            -0.5819360613822937
+          ],
+          "max": [
+            0.6851361989974976,
+            1.0,
+            0.5819360613822937
+          ],
+          "dimensions": [
+            1.3702723979949951,
+            2.0,
+            1.1638721227645874
+          ],
+          "skinnedCaveat": null
+        }
+      ],
+      "meshNodeInstances": [
+        {
+          "scene": 0,
+          "node": 0,
+          "name": null,
+          "mesh": 0,
+          "skin": null,
+          "localTransform": {},
+          "worldBounds": {
+            "min": [
+              -0.6851361989974976,
+              -1.0,
+              -0.5819360613822937
+            ],
+            "max": [
+              0.6851361989974976,
+              1.0,
+              0.5819360613822937
+            ]
+          }
+        }
+      ],
+      "images": [
+        {
+          "image": 0,
+          "name": null,
+          "mimeType": "image/jpg",
+          "embedded": true,
+          "bytes": 4505580,
+          "sha256": "7254262a76b0de94692388f7caf6b6571af652798fe332cdcb45022923aa12cf",
+          "uri": null
+        }
+      ],
+      "materials": [
+        {
+          "material": 0,
+          "name": null,
+          "alphaMode": "OPAQUE",
+          "doubleSided": true,
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "metallicFactor": 0.1,
+            "roughnessFactor": 0.8,
+            "baseColorTexture": {
+              "index": 0,
+              "texCoord": 0
+            }
+          },
+          "normalTexture": null,
+          "occlusionTexture": null,
+          "emissiveTexture": null,
+          "extensions": {}
+        }
+      ],
+      "animationSummary": [],
+      "skinSummary": [],
+      "baseColorTextureExtract": {
+        "imageIndex": 0,
+        "path": "D:\\京剧\\.runtime\\stage-asset-audit-20261029\\character-7d8e9c8c6f814b4b-basecolor.jpg",
+        "sha256": "7254262a76b0de94692388f7caf6b6571af652798fe332cdcb45022923aa12cf",
+        "bytes": 4505580,
+        "kind": "RAW_EMBEDDED_TEXTURE_NOT_3D_RENDER",
+        "originalDeclaredMimeType": "image/jpg",
+        "detectedMimeType": "image/jpeg",
+        "width": 4096,
+        "height": 4096,
+        "mode": "RGB"
+      },
+      "warnings": [
+        "Approximately one million triangles per model; multi-character mobile scene requires measured rendering/performance checks.",
+        "Embedded base-color texture is 4096x4096; decoded GPU memory exceeds JPEG file size."
+      ],
+      "sourceHashRecheckedUnchanged": true
+    }
+  ],
+  "identicalFiles": [
+    [
+      "周瑜.glb",
+      "杜丽娘.glb"
+    ]
+  ],
+  "identicalDecodedGeometry": [
+    [
+      "周瑜.glb",
+      "杜丽娘.glb"
+    ]
+  ],
+  "finalNotes": [
+    "Two filenames are byte-for-byte identical; they are one unique model, not independently verified Du Liniang and Zhou Yu identities.",
+    "No cultural identity or opera attribution was asserted from filename alone.",
+    "Read-only container/accessor/texture checks are not browser rendering evidence.",
+    "No source file, business database, environment config or generation ledger was changed."
+  ]
+}

@@ -225,3 +225,14 @@
 材料提交已实际形成：`2472284b220b65b56b29aa280516a38021d13a8e`（`docs(phase5): prepare competition materials and traceable evidence index`）。核查与Prompt/总结另行归档，自身最终Hash以实际Git和最后回复为准，不预造。
 
 本轮付费API0、真实外部AI0、Neural4D所有请求0；无生产数据写入、无模型/额度变化。保留2/3已用、剩1未使用、第三用户取消、创建关闭。文档核查后状态`PHASE_5_WP5_WAITING_ACCEPTANCE`，等待人工验收，不自动公开资产、推送或创建新工作包。正式规则、公开许可、成片/PDF等交付条件仍待确认，不宣称全部参赛要求满足。
+
+## 13. 2026-10-29提交要求截图与新素材检查增补
+
+用户新提供舞台/人物目录，并要求所有工作遵循其提交要求截图。此次只是后续数字戏台的素材检查及材料要求校准，不重写WP1～WP5当时结果，不新增工作包，不宣称舞台组合已完成。
+
+- [本轮直接输入与实际执行记录](../digital-stage-assets/README.md)。
+- [素材审查报告](../../reports/digital-stage-asset-audit.md)：实际两个唯一人物GLB、本机加载、重复文件、舞台转换与性能风险。
+- [提交要求截图及Hash](../../evidence/submission-requirements/2026-10-29-source.json)：原图原样保留；规格按要求映射第5节与提交检查表第6节执行，完整官方通知/截止时间仍待补。
+- [要求映射增补](../../reports/phase-05-requirements-evidence-map.md#5-2026-10-29用户提供的提交要求截图)、[提交检查表增补](../../reports/phase-05-submission-checklist.md#6-2026-10-29截图要求增补)和[新增素材许可范围](../../reports/phase-05-asset-provenance-and-permissions.md#2026-10-29新增外部舞台与人物素材)。
+
+本次无付费/Neural4D请求、DB或原模型写入，用户新素材仍未跟踪；不把导入模型说成平台AI生成。视频/PDF成品与正式提交尚未完成，未知许可不升级为公开。实际本地Commit由最终Git核对，不虚构自引用Hash。

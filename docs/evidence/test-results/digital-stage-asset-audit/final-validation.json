@@ -1,0 +1,932 @@
+{
+  "atUtc": "2026-10-29T10:25:02.978131+00:00",
+  "kind": "FREE_READ_ONLY_ASSET_AND_DOCUMENT_VALIDATION",
+  "command": ".venv/Scripts/python.exe -B docs/evidence/test-results/digital-stage-asset-audit/helpers/validate-archive.py",
+  "sourceFiles": [
+    {
+      "file": "中式古戏台SU模型/tex/_16.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/_26.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/_61.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/__11.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/__3.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/__4.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/__7.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/__7_1.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/__7_2.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/__7_3.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/__8.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/_Color_A06_3.png",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/_Color_H03_1.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/_Color_H20_1.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/_Safety_Glass_.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/_Stone_Masonry_Multi_2.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/_Wood_cherry_.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/Color_006.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/Color_C16.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/DSDFSF.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/M_0046_Gold.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/M_11111.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/M_1759b0f202cafbc.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/M_200852810250781_2.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/M_6.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/M_8.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/tex/M_8be746e283c12ea6f51f1f2a249c940e.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/戏台.c4d",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/戏台.fbx",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/戏台.jpg",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/戏台.mtl",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/戏台.obj",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "中式古戏台SU模型/戏台.skp",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "3D人物模型/周瑜.glb",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "3D人物模型/杜丽娘.glb",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    },
+    {
+      "file": "3D人物模型/穆桂英.glb",
+      "hashUnchanged": true,
+      "sizeUnchanged": true
+    }
+  ],
+  "sourceFileCount": 36,
+  "oldAcceptedGlbs": [
+    {
+      "sha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "exists": true,
+      "matchesPriorAcceptedHash": true
+    },
+    {
+      "sha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "exists": true,
+      "matchesPriorAcceptedHash": true
+    }
+  ],
+  "requirementScreenshotHashMatches": true,
+  "trackedChangesOnlyDocs": true,
+  "pythonHelpersSyntaxCheckedNotExecuted": [
+    "01-read-only-glb-parse.py",
+    "02-read-only-texture-inspection.py",
+    "03-audit-notes-and-source-recheck.py",
+    "audit-stage-source.py",
+    "supplement-stage-audit.py",
+    "validate-archive.py"
+  ],
+  "localMarkdownLinks": 142,
+  "externalLinksNotFetched": 0,
+  "missingLinks": [],
+  "links": [
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "../prompts/phase-01/00-original-user-request.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "../prompts/phase-05/18-wp5-delivery-user-request.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "phase-05-submission-checklist.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "../prompts/phase-01/00-original-user-request.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "phase-05-evidence-index.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "../prompts/phase-02/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "../prompts/phase-03/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "../prompts/phase-04/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "phase-05-project-facts.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "phase-05-evidence-index.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "../../README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "phase-05-deployment-and-recovery.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "phase-05-demo-script.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "phase-05-competition-submission-brief.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "phase-05-asset-provenance-and-permissions.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "phase-05-work-package-04.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "../evidence/submission-requirements/2026-10-29-user-provided.png",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "../evidence/submission-requirements/2026-10-29-source.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-requirements-evidence-map.md",
+      "target": "digital-stage-asset-audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "phase-05-project-facts.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "phase-05-competition-submission-brief.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "phase-05-requirements-evidence-map.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "phase-05-demo-script.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "phase-05-evidence-index.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "phase-05-deployment-and-recovery.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "phase-05-asset-provenance-and-permissions.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "phase-05-work-package-05.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "../evidence/test-results/phase-05-wp5-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "../prompts/phase-05/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "../../README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "../evidence/test-results/phase-05-wp5-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "../evidence/submission-requirements/2026-10-29-user-provided.png",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "phase-05-requirements-evidence-map.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-submission-checklist.md",
+      "target": "digital-stage-asset-audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "digital-stage-asset-audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../knowledge/documents",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../knowledge/sources.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../architecture/knowledge-provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../knowledge/review/source-checks.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../knowledge/evaluation/questions.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../knowledge/evaluation/assistant-review-decisions.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../backend/scripts/ingest.py",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "project-audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "phase-01.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "project-audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../prompts/phase-04/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../prompts/phase-04/10-internal-history-and-image-permission-reply.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "phase-04-first-internal-modeling.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../prompts/phase-04/19-second-image-permission-and-agent-reply.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "phase-04-second-model-execution.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "phase-04-final-acceptance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../evidence/phase-04/final-acceptance/asset-ledger-readback.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../evidence/phase-04/modeling/01-chibi/recovery-08-local-texture-conversion.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "phase-04-second-model-execution.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../css/style.css",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../css/ai-workshop.css",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../js/vendor/model-viewer/LICENSE",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../backend/tests/fixtures/phase4/manifest.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../backend/tests/fixtures/phase4/Duck-README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../backend/tests/fixtures/phase4/SCEA-LICENSE.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../backend/tests/fixtures/phase4/manifest.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../backend/scripts/download_model.py",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../../backend/requirements.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../evidence/test-results/phase-05-wp4/cold-env-attempt03-runtime-verification.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "../evidence/test-results/phase-05-wp4-db-repair/screenshot-manifest.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+      "target": "phase-05-submission-checklist.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "00-original-user-request.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "01-checkpoint-a-public-conversation.jsonl",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "02-export-metadata.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-project-audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-implementation-proposal.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-demo-plan.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../phase-01/00-original-user-request.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-02.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-03.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-04-final-acceptance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "03-wp1-approved-user-request.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "04-wp1-public-conversation.jsonl",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "05-wp1-export-metadata.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-work-package-01.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../evidence/test-results/phase-05-wp1-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "06-wp2-approved-user-request.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "07-wp2-public-conversation.jsonl",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "08-wp2-export-metadata.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-work-package-02.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../evidence/test-results/phase-05-wp2-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "09-wp3-approved-user-request.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "10-wp3-public-conversation.jsonl",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "11-wp3-export-metadata.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-work-package-03.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../evidence/test-results/phase-05-wp3-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "12-wp4-approved-user-request.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "13-wp4-public-conversation.jsonl",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "14-wp4-export-metadata.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-work-package-04.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../evidence/test-results/phase-05-wp4-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "15-wp4-database-repair-user-request.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "16-wp4-database-repair-public-conversation.jsonl",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "17-wp4-database-repair-export-metadata.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-work-package-04.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../evidence/test-results/phase-05-wp4-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../evidence/test-results/phase-05-wp4-db-repair/archive-manifest.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "18-wp5-delivery-user-request.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "19-wp5-delivery-public-conversation.jsonl",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "20-wp5-delivery-export-metadata.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-work-package-05.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-project-facts.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-evidence-index.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../evidence/test-results/phase-05-wp5-test-report.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../digital-stage-assets/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/digital-stage-asset-audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../evidence/submission-requirements/2026-10-29-source.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-requirements-evidence-map.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-submission-checklist.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/phase-05/README.md",
+      "target": "../../reports/phase-05-asset-provenance-and-permissions.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../../中式古戏台SU模型",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../evidence/test-results/digital-stage-asset-audit/stage-source-audit.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../../3D人物模型",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../evidence/test-results/digital-stage-asset-audit/character-glb-audit.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../evidence/test-results/digital-stage-asset-audit/browser-final.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../evidence/test-results/digital-stage-asset-audit/browser-first-blocked.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../evidence/test-results/digital-stage-asset-audit/private-screenshot-manifest.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../evidence/test-results/digital-stage-asset-audit/character-browser-source-invariants.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../prompts/digital-stage-assets/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../evidence/submission-requirements/2026-10-29-user-provided.png",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../evidence/submission-requirements/2026-10-29-source.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "phase-05-requirements-evidence-map.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "phase-05-submission-checklist.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reports/digital-stage-asset-audit.md",
+      "target": "../evidence/test-results/digital-stage-asset-audit/final-validation.json",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/digital-stage-assets/README.md",
+      "target": "../../evidence/submission-requirements/2026-10-29-user-provided.png",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/digital-stage-assets/README.md",
+      "target": "../../reports/digital-stage-asset-audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/digital-stage-assets/README.md",
+      "target": "../../evidence/test-results/digital-stage-asset-audit/",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/digital-stage-assets/README.md",
+      "target": "../../reports/phase-05-requirements-evidence-map.md",
+      "exists": true
+    },
+    {
+      "file": "docs/prompts/digital-stage-assets/README.md",
+      "target": "../../reports/phase-05-submission-checklist.md",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/digital-stage-asset-audit/README.md",
+      "target": "stage-source-audit.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/digital-stage-asset-audit/README.md",
+      "target": "character-glb-audit.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/digital-stage-asset-audit/README.md",
+      "target": "browser-first-blocked.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/digital-stage-asset-audit/README.md",
+      "target": "browser-final.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/digital-stage-asset-audit/README.md",
+      "target": "character-browser-source-invariants.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/digital-stage-asset-audit/README.md",
+      "target": "private-screenshot-manifest.json",
+      "exists": true
+    },
+    {
+      "file": "docs/evidence/test-results/digital-stage-asset-audit/README.md",
+      "target": "../../submission-requirements/2026-10-29-user-provided.png",
+      "exists": true
+    }
+  ],
+  "textFilesSecretScanned": 21,
+  "secretFindings": [],
+  "scope": "Source invariants and documentation only; not backend, paid API, final video/PDF or scene acceptance",
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "databaseAccess": false,
+  "pass": true
+}

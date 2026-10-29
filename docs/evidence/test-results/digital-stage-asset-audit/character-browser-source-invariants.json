@@ -1,0 +1,32 @@
+{
+  "checkedAtUtc": "2026-10-29T10:17:16.312030+00:00",
+  "kind": "SOURCE_HASH_AFTER_PRIVATE_BROWSER_READ_ONLY",
+  "sourceFiles": [
+    {
+      "filename": "周瑜.glb",
+      "sha256": "67904d1a85c12c2026998052af86fbbe43ca1d680dda1e7b59bbe77019cdd22e",
+      "expectedSha256": "67904d1a85c12c2026998052af86fbbe43ca1d680dda1e7b59bbe77019cdd22e",
+      "unchanged": true,
+      "bytes": 29808748
+    },
+    {
+      "filename": "杜丽娘.glb",
+      "sha256": "67904d1a85c12c2026998052af86fbbe43ca1d680dda1e7b59bbe77019cdd22e",
+      "expectedSha256": "67904d1a85c12c2026998052af86fbbe43ca1d680dda1e7b59bbe77019cdd22e",
+      "unchanged": true,
+      "bytes": 29808748
+    },
+    {
+      "filename": "穆桂英.glb",
+      "sha256": "7d8e9c8c6f814b4bb804235c97ce0c81e32ed8a70edb886e0ee81f88ff2b4727",
+      "expectedSha256": "7d8e9c8c6f814b4bb804235c97ce0c81e32ed8a70edb886e0ee81f88ff2b4727",
+      "unchanged": true,
+      "bytes": 28671944
+    }
+  ],
+  "allUnchanged": true,
+  "dbAccess": false,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "privateScreenshotsOnly": true
+}

@@ -1,0 +1,103 @@
+{
+  "kind": "PRIVATE_ORIGINAL_USER_GLB_BROWSER_READ_ONLY",
+  "startedAt": "2026-10-29T10:16:32.498Z",
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "backendDbAccess": false,
+  "sourceFilesModified": false,
+  "results": [
+    {
+      "id": "a",
+      "name": "杜丽娘与周瑜同一文件",
+      "sha256": "67904d1a85c12c2026998052af86fbbe43ca1d680dda1e7b59bbe77019cdd22e",
+      "status": "READY",
+      "elapsedMs": 3836,
+      "error": null,
+      "screenshot": "original-a-ready.png",
+      "loaded": true,
+      "dimensions": {
+        "x": 1.052059531211853,
+        "y": 2,
+        "z": 0.8152546882629395
+      },
+      "center": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 4.372474208825946
+      },
+      "states": [
+        "load"
+      ],
+      "errors": [],
+      "modelMaterialNames": [
+        ""
+      ],
+      "visibility": true
+    },
+    {
+      "id": "b",
+      "name": "穆桂英",
+      "sha256": "7d8e9c8c6f814b4bb804235c97ce0c81e32ed8a70edb886e0ee81f88ff2b4727",
+      "status": "READY",
+      "elapsedMs": 1597,
+      "error": null,
+      "screenshot": "original-b-ready.png",
+      "loaded": true,
+      "dimensions": {
+        "x": 1.3702723979949951,
+        "y": 2,
+        "z": 1.1638721227645874
+      },
+      "center": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 4.5088394308476065
+      },
+      "states": [
+        "load"
+      ],
+      "errors": [],
+      "modelMaterialNames": [
+        ""
+      ],
+      "visibility": true
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/viewer.js"
+    },
+    {
+      "method": "GET",
+      "path": "/model-a.glb"
+    },
+    {
+      "method": "GET",
+      "path": "/model-b.glb"
+    }
+  ],
+  "blockedExternal": [],
+  "blockedWrites": [],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "port": 8879,
+  "browserVersion": "156.0.8078.73",
+  "ownServerClosed": true,
+  "finishedAt": "2026-10-29T10:16:39.298Z",
+  "conclusion": "PASS"
+}
