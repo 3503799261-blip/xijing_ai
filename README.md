@@ -1,5 +1,15 @@
 # 戏境 AI
 
+## 当前查看与比赛文件（2026-10-29）
+
+主工坊现只突出 **京剧问答、数字戏台**；旧Agent、历史、创作、原模型和企业入口在“更多工具”。VS Code“运行和调试”选择 **戏境 AI：一键运行**，点击绿色三角。查看[数字戏台](http://127.0.0.1:8000/about.html#ai-workshop-stage)或[问答](http://127.0.0.1:8000/about.html#ai-workshop-qa)。全站底部输入“武生”“脸谱”“周瑜”等后回车可直达；未知内容可带到问答框，不自动发送。
+
+舞台与杜丽娘/穆桂英/周瑜是用户提供的比赛限定素材，已适配GLB、按剧目分类，可点选、旋转、缩放和重置。杜丽娘标昆曲，人物不表演，不代表新调用Neural4D。原两个生成模型与历史保持不变。派生资源在仓库外`../.runtime/digital-stage/assets/`，源码克隆不自带这些模型。
+
+[交付与测试](docs/reports/digital-stage-delivery.md) · [分类和手动检查](docs/reports/submission-manual-check.md) · [证据索引](docs/evidence/test-results/digital-stage-delivery/README.md)。技术PDF在`output/pdf/xijing-ai-technical-report.pdf`（9页）；分类副本在`output/competition-submission/2026-10-29/`。**录像由用户自行录制，当前没有视频成片。** 输出与原模型不进Git，不含真实密钥。
+
+当前已知参与者：陈雯雯（用户提供的Git提交姓名）；其他团队/报名信息由用户核对，不虚构成员。本轮无付费/新建模；Neural4D仍2/3、余1但第三取消，创建关闭。实体手机、当天API与跨机恢复未测。下文历史按日期阅读，以本节为最新界面状态。
+
 在原有「梨园风华」8页京剧文化网站上建设AI戏韵工坊。前端保留HTML/CSS/原生ES Module与酒红、金色、米白视觉；Phase 2提供真实RAG问答，Phase 3加入规划、文化研究、角色设计、文化审校的真实协作与人工确认。Phase 4提供双风格资产与真实GLB查看器，已逐次批准并实际提交Q版技术模型与写实主展示模型各一次；平台图像生成仍未接入。
 
 当前状态（2026-10-22）：Phase 1～3、Phase 4两模型范围及Phase 5 WP1～4已获用户验收。**WP5已完成比赛材料底稿、证据索引和交付一致性核查，等待人工验收（PHASE_5_WP5_WAITING_ACCEPTANCE）；正式规则和素材公开许可仍有待确认事项，不代表全部参赛要求已满足。** 分支feature/phase5-competition-delivery保留原历史，未合并main、未推送；不能假设远端克隆已包含最新本地成果。

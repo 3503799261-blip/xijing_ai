@@ -1,5 +1,7 @@
 # Phase 5 WP5 · 比赛证据索引
 
+2026-10-29新增：[数字戏台/全站内容直达真实证据](../evidence/test-results/digital-stage-delivery/README.md)与[交付解释](digital-stage-delivery.md)。后端838包含新29；前端32/25/42/34/34/23及25/32；真实戏台14组、全站/旧功能46项、转换10组。各组口径独立，不与旧754相加。9页PDF已实检，视频由用户后续录制。后文仍为WP5当时材料审查，不伪装成当天重测。
+
 核对日期：2026-10-22（Asia/Shanghai）；源码基线 `61064b0842e5f3789c01b107dd0b2a3f45c55adb`，分支 `feature/phase5-competition-delivery`。本文件把具体能力、原始记录、范围和真实提交关联起来；**WP5进行材料与证据核对，没有重新执行754项后端、真实问答、Agent生成或建模。** 本轮文档验证单独见[WP5测试报告](../evidence/test-results/phase-05-wp5-test-report.md)。
 
 建议核查顺序：先看[统一事实表](phase-05-project-facts.md)，再按下表打开原始JSON/XML，最后以对应日期的报告解释失败、恢复和边界。旧报告中的“未接入”“待批准”“712项”等是当时快照，不能脱离时间直接作为当前结论。
