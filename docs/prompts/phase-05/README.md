@@ -236,3 +236,5 @@
 - [要求映射增补](../../reports/phase-05-requirements-evidence-map.md#5-2026-10-29用户提供的提交要求截图)、[提交检查表增补](../../reports/phase-05-submission-checklist.md#6-2026-10-29截图要求增补)和[新增素材许可范围](../../reports/phase-05-asset-provenance-and-permissions.md#2026-10-29新增外部舞台与人物素材)。
 
 本次无付费/Neural4D请求、DB或原模型写入，用户新素材仍未跟踪；不把导入模型说成平台AI生成。视频/PDF成品与正式提交尚未完成，未知许可不升级为公开。实际本地Commit由最终Git核对，不虚构自引用Hash。
+
+同日后续用户自行替换周瑜并说明“公开资源，仅供比赛，不做商用，不用再问了”。已在独立[第二轮记录](../../evidence/test-results/digital-stage-asset-audit/revision-02/README.md)重新计算三个模型Hash和检查新周瑜真实浏览器Ready，原重复问题解决，首轮历史不改。用途声明已记录、不再重复索取，不擅自分发源文件或调用新建模。

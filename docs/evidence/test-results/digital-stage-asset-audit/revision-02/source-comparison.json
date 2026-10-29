@@ -1,0 +1,282 @@
+{
+  "createdAtUtc": "2026-10-29T10:33:41.113076+00:00",
+  "kind": "REVISION2_USER_REPLACED_ZHOU_GLB_READ_ONLY_REAUDIT",
+  "previousReportSha256Before": "78f0ef77b8d4817c98c71927fc8b61dfe93ef3d0b6fdc8091115c33d8d66598b",
+  "previousReportSha256After": "78f0ef77b8d4817c98c71927fc8b61dfe93ef3d0b6fdc8091115c33d8d66598b",
+  "previousReportUnchanged": true,
+  "sourceHashBaselineAtThisRun": {
+    "周瑜.glb": {
+      "sha256": "ec9c0fe0445ff8b8b57b7519ed98d1a768b4c2d57f914d1bae640342dd21d9e2",
+      "sizeBytes": 30963320
+    },
+    "杜丽娘.glb": {
+      "sha256": "67904d1a85c12c2026998052af86fbbe43ca1d680dda1e7b59bbe77019cdd22e",
+      "sizeBytes": 29808748
+    },
+    "穆桂英.glb": {
+      "sha256": "7d8e9c8c6f814b4bb804235c97ce0c81e32ed8a70edb886e0ee81f88ff2b4727",
+      "sizeBytes": 28671944
+    }
+  },
+  "onlyZhouChangedSincePriorAudit": true,
+  "identicalFiles": [],
+  "identicalDecodedGeometry": [],
+  "models": [
+    {
+      "filename": "周瑜.glb",
+      "oldSha256": "67904d1a85c12c2026998052af86fbbe43ca1d680dda1e7b59bbe77019cdd22e",
+      "newSha256": "ec9c0fe0445ff8b8b57b7519ed98d1a768b4c2d57f914d1bae640342dd21d9e2",
+      "oldBytes": 29808748,
+      "newBytes": 30963320,
+      "changed": true,
+      "sourceUnchangedDuringAudit": true,
+      "triangles": 999996,
+      "vertices": 564688,
+      "counts": {
+        "scenes": 1,
+        "nodes": 1,
+        "meshes": 1,
+        "materials": 1,
+        "textures": 2,
+        "images": 2,
+        "accessors": 3,
+        "bufferViews": 5,
+        "buffers": 1,
+        "skins": 0,
+        "animations": 0,
+        "cameras": 0
+      },
+      "sceneBounds": [
+        {
+          "scene": 0,
+          "name": null,
+          "min": [
+            -0.56982421875,
+            -1.0,
+            -0.42333984375
+          ],
+          "max": [
+            0.56982421875,
+            1.0,
+            0.42333984375
+          ],
+          "dimensions": [
+            1.1396484375,
+            2.0,
+            0.8466796875
+          ],
+          "skinnedCaveat": null
+        }
+      ],
+      "geometrySha256": "2ddb8b1978e89f73e03ac340a78a439d582bee239c7455b8578de7fb41afad9a",
+      "externalUris": [],
+      "extensionsRequired": [],
+      "issues": [
+        "Embedded JPEG is declared image/jpg instead of glTF core image/jpeg; compatibility normalization in a derived copy may be needed.",
+        "No NORMAL attribute; renderer will need generated normals or derive normals before final scene integration."
+      ],
+      "textureExtract": {
+        "imageIndex": 0,
+        "path": "D:\\京剧\\.runtime\\stage-asset-audit-20261029-revision2\\character-ec9c0fe0445ff8b8-basecolor.jpg",
+        "sha256": "8816fcfdb906e2644293b86cfa1a54fc9cbb41026bef96155a6555bc16a8d6ca",
+        "bytes": 4817102,
+        "kind": "RAW_EMBEDDED_TEXTURE_NOT_3D_RENDER",
+        "originalDeclaredMimeType": "image/jpg",
+        "detectedMimeType": "image/jpeg",
+        "width": 4096,
+        "height": 4096,
+        "mode": "RGB"
+      }
+    },
+    {
+      "filename": "杜丽娘.glb",
+      "oldSha256": "67904d1a85c12c2026998052af86fbbe43ca1d680dda1e7b59bbe77019cdd22e",
+      "newSha256": "67904d1a85c12c2026998052af86fbbe43ca1d680dda1e7b59bbe77019cdd22e",
+      "oldBytes": 29808748,
+      "newBytes": 29808748,
+      "changed": false,
+      "sourceUnchangedDuringAudit": true,
+      "triangles": 999984,
+      "vertices": 581015,
+      "counts": {
+        "scenes": 1,
+        "nodes": 1,
+        "meshes": 1,
+        "materials": 1,
+        "textures": 2,
+        "images": 2,
+        "accessors": 3,
+        "bufferViews": 5,
+        "buffers": 1,
+        "skins": 0,
+        "animations": 0,
+        "cameras": 0
+      },
+      "sceneBounds": [
+        {
+          "scene": 0,
+          "name": null,
+          "min": [
+            -0.5260297656059265,
+            -1.0,
+            -0.4076273441314697
+          ],
+          "max": [
+            0.5260297656059265,
+            1.0,
+            0.4076273441314697
+          ],
+          "dimensions": [
+            1.052059531211853,
+            2.0,
+            0.8152546882629395
+          ],
+          "skinnedCaveat": null
+        }
+      ],
+      "geometrySha256": "5e77bc7b92ed6c138e5ac2e74603af706dca277a4ef69c26ac55445138862cf0",
+      "externalUris": [],
+      "extensionsRequired": [],
+      "issues": [
+        "Embedded JPEG is declared image/jpg instead of glTF core image/jpeg; compatibility normalization in a derived copy may be needed.",
+        "No NORMAL attribute; renderer will need generated normals or derive normals before final scene integration."
+      ],
+      "textureExtract": {
+        "imageIndex": 0,
+        "path": "D:\\京剧\\.runtime\\stage-asset-audit-20261029-revision2\\character-67904d1a85c12c20-basecolor.jpg",
+        "sha256": "8dd3d44e5353263217e199692a851ec6f442bee3a2520aaf88b0a4a218d70bfd",
+        "bytes": 3766738,
+        "kind": "RAW_EMBEDDED_TEXTURE_NOT_3D_RENDER",
+        "originalDeclaredMimeType": "image/jpg",
+        "detectedMimeType": "image/jpeg",
+        "width": 4096,
+        "height": 4096,
+        "mode": "RGB"
+      }
+    },
+    {
+      "filename": "穆桂英.glb",
+      "oldSha256": "7d8e9c8c6f814b4bb804235c97ce0c81e32ed8a70edb886e0ee81f88ff2b4727",
+      "newSha256": "7d8e9c8c6f814b4bb804235c97ce0c81e32ed8a70edb886e0ee81f88ff2b4727",
+      "oldBytes": 28671944,
+      "newBytes": 28671944,
+      "changed": false,
+      "sourceUnchangedDuringAudit": true,
+      "triangles": 999912,
+      "vertices": 608294,
+      "counts": {
+        "scenes": 1,
+        "nodes": 1,
+        "meshes": 1,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "accessors": 3,
+        "bufferViews": 4,
+        "buffers": 1,
+        "skins": 0,
+        "animations": 0,
+        "cameras": 0
+      },
+      "sceneBounds": [
+        {
+          "scene": 0,
+          "name": null,
+          "min": [
+            -0.6851361989974976,
+            -1.0,
+            -0.5819360613822937
+          ],
+          "max": [
+            0.6851361989974976,
+            1.0,
+            0.5819360613822937
+          ],
+          "dimensions": [
+            1.3702723979949951,
+            2.0,
+            1.1638721227645874
+          ],
+          "skinnedCaveat": null
+        }
+      ],
+      "geometrySha256": "2f9a58aab37460308318c9aa9846d7713123e77a2443509e0efa6d664d7c5d59",
+      "externalUris": [],
+      "extensionsRequired": [],
+      "issues": [
+        "Embedded JPEG is declared image/jpg instead of glTF core image/jpeg; compatibility normalization in a derived copy may be needed.",
+        "No NORMAL attribute; renderer will need generated normals or derive normals before final scene integration."
+      ],
+      "textureExtract": {
+        "imageIndex": 0,
+        "path": "D:\\京剧\\.runtime\\stage-asset-audit-20261029-revision2\\character-7d8e9c8c6f814b4b-basecolor.jpg",
+        "sha256": "7254262a76b0de94692388f7caf6b6571af652798fe332cdcb45022923aa12cf",
+        "bytes": 4505580,
+        "kind": "RAW_EMBEDDED_TEXTURE_NOT_3D_RENDER",
+        "originalDeclaredMimeType": "image/jpg",
+        "detectedMimeType": "image/jpeg",
+        "width": 4096,
+        "height": 4096,
+        "mode": "RGB"
+      }
+    }
+  ],
+  "actualExecutions": [
+    {
+      "script": "01-read-only-glb-parse.py",
+      "scriptSha256": "5c6fb31b1a44a516556690ffbca8bf533d16ecde553894382cfdfd90c3c193a1",
+      "startedFromPreviousActualScript": true,
+      "change": "Only private audit output directory changed to revision2; source paths remain unchanged.",
+      "command": [
+        "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\京剧\\.runtime\\stage-asset-audit-20261029-revision2\\01-read-only-glb-parse.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "script": "02-read-only-texture-inspection.py",
+      "scriptSha256": "7a3cfb0596e93b5d32ddb0a4a3efd69f02ef08846d3718d7f032c7027a88f085",
+      "startedFromPreviousActualScript": true,
+      "change": "Only private audit output directory changed to revision2; source paths remain unchanged.",
+      "command": [
+        "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\京剧\\.runtime\\stage-asset-audit-20261029-revision2\\02-read-only-texture-inspection.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "script": "03-audit-notes-and-source-recheck.py",
+      "scriptSha256": "a3441bce1bef6c257678d2163c513d92b99f7dc65744a8f756f09179d668fec6",
+      "startedFromPreviousActualScript": true,
+      "change": "Only private audit output directory changed to revision2; source paths remain unchanged.",
+      "command": [
+        "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\京剧\\.runtime\\stage-asset-audit-20261029-revision2\\03-audit-notes-and-source-recheck.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "script": "04-revision2-note-correction.py",
+      "scriptSha256": "8a183b2174718bbaf37746809fae023b0932f6ce8fc73f12e5c86a9738b574b8",
+      "command": [
+        "D:\\京剧\\京剧\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\京剧\\.runtime\\stage-asset-audit-20261029-revision2\\04-revision2-note-correction.py"
+      ],
+      "exitCode": 0,
+      "change": "Correct revision2 finalNotes inherited from prior generic notes script; machine-computed hashes and duplicate arrays were already correct."
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "sourceFilesModified": false,
+  "permissionStatement": "User states public resources used for competition only, non-commercial. This is recorded as user statement and does not imply commercial or public source-file redistribution rights.",
+  "auxiliaryProtectionNotes": [
+    "Directory-creation exist_ok=False guard detected parent browser work in shared new directory; no files were changed by that failed attempt. Continued only after checking non-conflicting filenames.",
+    "Reused step03 had stale prose referring to first-round duplicate filenames; step04 updated only revision2 finalNotes. All machine-computed duplicate and comparison fields were correct throughout."
+  ],
+  "finalAuditReportSha256": "520f5c1a914b2ed60686c7694bb34b6cb84c23d5e6e77fe035e91d39b30f0061"
+}

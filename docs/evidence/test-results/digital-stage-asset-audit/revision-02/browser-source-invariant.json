@@ -1,0 +1,13 @@
+{
+  "checkedAtUtc": "2026-10-29T10:33:40.291464+00:00",
+  "kind": "REVISION2_ZHOUYU_BROWSER_SOURCE_INVARIANT",
+  "sizeBytes": 30963320,
+  "sha256": "ec9c0fe0445ff8b8b57b7519ed98d1a768b4c2d57f914d1bae640342dd21d9e2",
+  "matchesPreBrowserSha256": true,
+  "sourceModified": false,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "databaseAccess": false,
+  "ownTemporaryServerClosed": true,
+  "port": 8879
+}

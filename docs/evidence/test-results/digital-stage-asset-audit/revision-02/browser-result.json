@@ -1,0 +1,66 @@
+{
+  "kind": "PRIVATE_REVISION2_ORIGINAL_USER_GLB_BROWSER_READ_ONLY",
+  "startedAt": "2026-10-29T10:33:13.203Z",
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "backendDbAccess": false,
+  "sourceFilesModified": false,
+  "results": [
+    {
+      "id": "zhouyu-v2",
+      "name": "周瑜（用户替换版本，身份仍按用户命名）",
+      "sha256": "ec9c0fe0445ff8b8b57b7519ed98d1a768b4c2d57f914d1bae640342dd21d9e2",
+      "status": "READY",
+      "elapsedMs": 3870,
+      "error": null,
+      "screenshot": "original-zhouyu-v2-ready.png",
+      "loaded": true,
+      "dimensions": {
+        "x": 1.1396484375,
+        "y": 2,
+        "z": 0.8466796875
+      },
+      "center": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orbit": {
+        "theta": 0,
+        "phi": 1.3089969389957472,
+        "radius": 4.448145840034756
+      },
+      "states": [
+        "load"
+      ],
+      "errors": [],
+      "modelMaterialNames": [
+        ""
+      ],
+      "visibility": true
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/viewer.js"
+    },
+    {
+      "method": "GET",
+      "path": "/model-zhouyu-v2.glb"
+    }
+  ],
+  "blockedExternal": [],
+  "blockedWrites": [],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "port": 8879,
+  "browserVersion": "156.0.8078.73",
+  "ownServerClosed": true,
+  "finishedAt": "2026-10-29T10:33:18.512Z",
+  "conclusion": "PASS"
+}
