@@ -1,0 +1,22 @@
+{
+  "checkedAtUtc": "2026-10-29T15:10:10.572595+00:00",
+  "clientDate": "2026-10-29",
+  "repository": "https://github.com/3503799261-blip/xijing_ai",
+  "visibility": "public",
+  "defaultBranchBefore": "feature/ai-workshop-phase1",
+  "defaultBranchAfter": "feature/phase5-competition-delivery",
+  "localHead": "a4798d5b89a7dd2f8c45639daba16fa987053e49",
+  "remoteBranchHead": "a4798d5b89a7dd2f8c45639daba16fa987053e49",
+  "remoteDefaultHead": "a4798d5b89a7dd2f8c45639daba16fa987053e49",
+  "exactShaMatch": true,
+  "publicReadmeHttpStatus": 200,
+  "readmeByteIdentical": true,
+  "readmeSha256": "5b8ff1273869a659c5c47ba928497b8b73bcda4f1657c26b9ce3be706f4df834",
+  "description": "戏境 AI：京剧私有知识库RAG、多Agent角色设计与交互式数字戏台（比赛作品）",
+  "anonymousRepoAndReadmeVerified": true,
+  "mergePerformed": false,
+  "forcePush": false,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "credentialStorage": "Existing GCM; memory only, no values logged or saved"
+}

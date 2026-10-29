@@ -98,7 +98,7 @@ git clone -b {branch} xijing-ai-history.bundle xijing-ai
 ```
 
 不要解压覆盖当前原项目。源码不包含私有数据库、BGE/Qdrant缓存、.env和成品GLB。
-本地打包不是推送，官方仓库Public/评委访问权限及最终远端版本仍需用户核对。
+本脚本仅打包，不执行推送；已经完成的Public仓库、默认分支与远端版本核验见交付根目录GitHub上传校验.json。
 ''')
     cp('output/pdf/xijing-ai-technical-report.pdf',pdf/'戏境AI-技术文档-9页.pdf')
     cp('docs/evidence/test-results/digital-stage-delivery/pdf-validation.json',pdf/'PDF校验记录.json')

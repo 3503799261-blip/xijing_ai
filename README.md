@@ -1,6 +1,6 @@
 # 戏境 AI
 
-**比赛代码入口：** [GitHub项目](https://github.com/3503799261-blip/xijing_ai) · [当前交付分支](https://github.com/3503799261-blip/xijing_ai/tree/feature/phase5-competition-delivery)。本地完成版本按真实Git历史上传，不合并或改写main；平台复核见[代码托管检查](docs/reports/submission-platform-check.md)。最终分类副本使用`output/competition-submission/最终提交版-2026-10-29/`，旧日期目录保留为先前快照。源码/环境/技术文档由项目整理，录像由用户自行完成。
+**比赛代码入口：** [GitHub项目](https://github.com/3503799261-blip/xijing_ai) · [当前交付分支](https://github.com/3503799261-blip/xijing_ai/tree/feature/phase5-competition-delivery)。**已按用户授权上传完整历史，仓库Public，默认分支已切换到本交付分支，匿名读取与SHA一致性实测通过**；未合并或改写main。见[代码托管检查](docs/reports/submission-platform-check.md)。最终分类副本使用`output/competition-submission/最终提交版-2026-10-29/`，旧日期目录保留为先前快照。源码/环境/技术文档由项目整理，录像由用户自行完成。下文旧报告中的“未推送”是当时事实，不代表本节最新托管状态。
 
 ## 团队信息
 
