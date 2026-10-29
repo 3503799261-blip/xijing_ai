@@ -1,5 +1,13 @@
 # 戏境 AI
 
+**比赛代码入口：** [GitHub项目](https://github.com/3503799261-blip/xijing_ai) · [当前交付分支](https://github.com/3503799261-blip/xijing_ai/tree/feature/phase5-competition-delivery)。本地完成版本按真实Git历史上传，不合并或改写main；平台复核见[代码托管检查](docs/reports/submission-platform-check.md)。最终分类副本使用`output/competition-submission/最终提交版-2026-10-29/`，旧日期目录保留为先前快照。源码/环境/技术文档由项目整理，录像由用户自行完成。
+
+## 团队信息
+
+项目名称：**戏境 AI**。已确认成员：**陈雯雯**，Git维护者。其他真实分工、成员及报名资料以本人核实的信息为准，不补写未经确认的职责或经历。
+
+站点运行依赖见下文及[后端依赖清单](backend/requirements.txt)；素材转换、PDF生成和浏览器验证的可选工具见[工具环境与安装说明](tools/README.md)。
+
 ## 当前查看与比赛文件（2026-10-29）
 
 主工坊现只突出 **京剧问答、数字戏台**；旧Agent、历史、创作、原模型和企业入口在“更多工具”。VS Code“运行和调试”选择 **戏境 AI：一键运行**，点击绿色三角。查看[数字戏台](http://127.0.0.1:8000/about.html#ai-workshop-stage)或[问答](http://127.0.0.1:8000/about.html#ai-workshop-qa)。全站底部输入“武生”“脸谱”“周瑜”等后回车可直达；未知内容可带到问答框，不自动发送。

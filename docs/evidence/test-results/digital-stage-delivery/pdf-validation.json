@@ -5,9 +5,11 @@
   "font": "Embedded SimSun TrueType subset",
   "createdBy": "local ReportLab; no paid API",
   "video": "USER_WILL_RECORD; no MP4 generated",
-  "sha256": "2a7247694ab513f7b9f3815b8eb099adefc245a737053c3a2fe7dedcb9a8b8a6",
-  "bytes": 908352,
+  "sha256": "51a30087aa6df02c5191fb91067f330748b185d7bc81d7dbb3bdd7ff8fedc6c8",
+  "bytes": 912736,
   "visualReview": "All 9 Poppler-rendered pages inspected; Chinese text, tables, screenshot and footer readable without clipping.",
   "pixelEvidence": "private workspace .runtime/digital-stage-implementation-20261029/pdf-render/page-{1..9}.png",
-  "notTracked": "Output PDF is ignored; authoring script tracked. Video explicitly left to user."
+  "notTracked": "Output PDF is ignored; authoring script tracked. Video explicitly left to user.",
+  "previousPdfSha256": "2a7247694ab513f7b9f3815b8eb099adefc245a737053c3a2fe7dedcb9a8b8a6",
+  "revision": "Added evidenced AI selection/integration/optimization paragraphs; remains 9 pages; changed page 4 rendered and visually checked; other pages unchanged."
 }

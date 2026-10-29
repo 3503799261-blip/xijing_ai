@@ -1,0 +1,5 @@
+# Optional PDF authoring tools; separate from backend/requirements.txt.
+# Versions observed in the verified local authoring environment.
+reportlab==4.4.9
+pypdf==6.10.0
+Pillow==12.3.0
