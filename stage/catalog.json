@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "version": "digital-stage-v1",
+  "purpose": "competition_only_noncommercial",
+  "stage": {
+    "id": "stage-main",
+    "name": "中式古戏台",
+    "file": "stage.glb",
+    "description": "用户提供的古戏台数字场景，用于人物展示，不认定为某一历史剧场复原。",
+    "rotationY": 1.5707963267948966,
+    "camera": { "position": [7.5, 6.3, 17.5], "target": [0, 3.8, 0.5] }
+  },
+  "groups": [
+    { "id": "mudanting", "name": "牡丹亭 · 昆曲", "description": "杜丽娘的故事与昆曲《牡丹亭》相联系。本区以人物关联剧目分类，数字造型不指定演出版本。" },
+    { "id": "muguiying", "name": "穆桂英挂帅 · 京剧", "description": "以穆桂英人物关联剧目为索引，查看巾帼英雄的数字造型。" },
+    { "id": "qunyinghui", "name": "群英会 · 京剧", "description": "从三国题材中的周瑜认识《群英会》。当前造型按用户提供名称登记。" }
+  ],
+  "characters": [
+    {
+      "id": "duliniang", "name": "杜丽娘", "file": "duliniang.glb", "groupId": "mudanting",
+      "description": "杜丽娘是《牡丹亭》的主要人物，与柳梦梅的爱情故事构成剧作主线。这里展示昆曲题材，与京剧分类区分。数字造型用于人物展示，不代表某一院团或演出版本。",
+      "question": "杜丽娘与《牡丹亭》有什么关系？请区分昆曲与京剧，并说明资料依据；知识库没有覆盖时请明确说明。",
+      "position": [0, 0.880664, 1.8], "scale": 1.075, "rotationY": 0,
+      "citations": [{ "id": "stage-mct-mudanting", "title": "文化和旅游部：上海昆剧团昆剧全本《牡丹亭》", "url": "https://www.mct.gov.cn/ggfw/zyjzzt/yanchu/yanchuwqhg/202311/t20231117_949778.html", "excerpt": "事实摘要：该昆剧演出介绍以杜丽娘与柳梦梅的故事为主线。这里为本项目简述，非来源逐字引文。" }]
+    },
+    {
+      "id": "muguiying", "name": "穆桂英", "file": "muguiying.glb", "groupId": "muguiying",
+      "description": "京剧《穆桂英挂帅》讲述穆桂英以大局为重、挂帅出征的故事。舞台上的人物既有家庭身份，也有统兵出征的将帅身份。数字造型按用户提供名称展示，不等同于某个指定流派的标准扮相。",
+      "question": "京剧《穆桂英挂帅》讲述了什么故事？请依据知识库资料回答并提供来源。",
+      "position": [0, 0.880664, 1.8], "scale": 1.075, "rotationY": 0,
+      "citations": [{ "id": "stage-cnpoc-muguiying", "title": "国家京剧院：《穆桂英挂帅》讲了怎样的故事？", "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/1f3f34ac62da46e991b43cd4990c0fe0.shtml", "excerpt": "事实摘要：穆桂英最终以国家大局为重，率领杨家将出征。这里为本项目简述，非来源逐字引文。" }]
+    },
+    {
+      "id": "zhouyu", "name": "周瑜", "file": "zhouyu.glb", "groupId": "qunyinghui",
+      "description": "京剧《群英会》取材于三国故事。周瑜设宴应对蒋干，并与诸葛亮等人物共同构成赤壁战事前的谋略情节。人物介绍针对戏曲故事，不将舞台情节直接当作历史考证。",
+      "question": "周瑜在京剧《群英会》中有哪些主要情节？请区分戏曲故事与历史事实，并说明资料依据。",
+      "position": [0, 0.880664, 1.8], "scale": 1.075, "rotationY": 0,
+      "citations": [{ "id": "stage-cnpoc-qunyinghui", "title": "国家京剧院：《群英会》讲了怎样的故事？", "url": "https://www.cnpoc.cn/cnpoc/gjkt/200902/512246e869864cd9bfb5178e27f2b7fb.shtml", "excerpt": "事实摘要：剧中周瑜借蒋干盗书实施计谋，故事围绕孙刘联军抗曹展开。这里为本项目简述，非来源逐字引文。" }]
+    }
+  ]
+}

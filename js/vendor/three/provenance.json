@@ -1,0 +1,50 @@
+{
+  "version": "0.180.0",
+  "tag": "r180",
+  "license": "MIT",
+  "files": [
+    {
+      "file": "three.module.js",
+      "sourceUrl": "https://raw.githubusercontent.com/mrdoob/three.js/r180/build/three.module.js",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "bytes": 603113,
+      "localImportRewrite": false
+    },
+    {
+      "file": "three.core.js",
+      "sourceUrl": "https://raw.githubusercontent.com/mrdoob/three.js/r180/build/three.core.js",
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "bytes": 1403455,
+      "localImportRewrite": false
+    },
+    {
+      "file": "GLTFLoader.js",
+      "sourceUrl": "https://raw.githubusercontent.com/mrdoob/three.js/r180/examples/jsm/loaders/GLTFLoader.js",
+      "sha256": "2904f2823e23d5bc1d64512bf4c0d777ac44d728d47c34a9e3d48ce8ef6b761d",
+      "bytes": 114744,
+      "localImportRewrite": true
+    },
+    {
+      "file": "OrbitControls.js",
+      "sourceUrl": "https://raw.githubusercontent.com/mrdoob/three.js/r180/examples/jsm/controls/OrbitControls.js",
+      "sha256": "06864a0fcb647730bfbc690b6c25a121199d716a3e299a40158509cbd247c3bf",
+      "bytes": 38715,
+      "localImportRewrite": true
+    },
+    {
+      "file": "BufferGeometryUtils.js",
+      "sourceUrl": "https://raw.githubusercontent.com/mrdoob/three.js/r180/examples/jsm/utils/BufferGeometryUtils.js",
+      "sha256": "248b3e8420bd3de805ca01845c1b0cc62aa2766f3c56bdcead265e306f8e715c",
+      "bytes": 35551,
+      "localImportRewrite": true
+    },
+    {
+      "file": "LICENSE",
+      "sourceUrl": "https://raw.githubusercontent.com/mrdoob/three.js/r180/LICENSE",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "bytes": 1081,
+      "localImportRewrite": false
+    }
+  ],
+  "note": "Pinned offline vendor. Import specifiers rewritten to local paths only; no npm install or runtime CDN."
+}

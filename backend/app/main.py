@@ -24,6 +24,7 @@ from .assets.service import AssetService
 from .assets.usage import UsageManager
 from .assets.neural_service import ModelService
 from .api.assets import register_assets
+from .stage_assets import register_stage
 
 logger = logging.getLogger('xijing.requests')
 USAGE_LEDGER_PATH = WORKSPACE_ROOT / '.runtime' / 'neural4d-usage.sqlite3'
@@ -176,6 +177,8 @@ def create_app(settings=None, *, assets_usage_override=None):
         @app.api_route('/api/v1/assets/{path:path}', methods=['GET', 'POST'])
         async def unavailable_assets(path: str):
             raise ServiceError('ASSET_SERVICE_UNAVAILABLE', '资产服务未就绪，文化网页与知识问答仍可使用。', 503)
+
+    register_stage(app, WORKSPACE_ROOT / '.runtime' / 'digital-stage' / 'assets')
 
     @app.get('/{path:path}')
     async def frontend(path: str):

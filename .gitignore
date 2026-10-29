@@ -25,3 +25,7 @@ Thumbs.db
 .vscode/*
 !.vscode/launch.json
 .idea/
+# User-supplied competition-only source models and local delivery artifacts.
+/3D人物模型/
+/中式古戏台SU模型/
+/output/
