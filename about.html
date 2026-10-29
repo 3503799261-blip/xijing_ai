@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="在戏境AI戏韵工坊探索京剧知识，查阅资料来源，继续你的对话，也可进入角色创作与数字资产展示。">
+    <meta name="description" content="在戏境AI戏韵工坊探索京剧知识，走进数字戏台，点击戏中人物了解戏曲文化。">
     <meta name="ai-workshop-api-base" content="/api/v1">
     <title>
       AI戏韵工坊｜梨园风华
@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/ai-workshop-demo.css?v=phase5-wp3-1">
     <link rel="stylesheet" href="css/ai-workshop-chat.css?v=product-1">
     <link rel="stylesheet" href="css/ai-workshop-assets.css?v=workbench-1">
+    <link rel="stylesheet" href="css/ai-workshop-stage.css?v=stage-1">
+    <link rel="stylesheet" href="css/site-navigator.css?v=1">
   </head>
   <body>
     <header class="site-header">
@@ -57,8 +59,8 @@
           <div class="ai-workshop-hero-copy">
             <span class="ai-workshop-kicker">戏境 AI · 京剧文化</span>
             <h1 id="ai-workshop-title" class="ai-workshop-title">AI戏韵工坊</h1>
-            <p class="ai-workshop-subtitle">聊聊京剧，循着资料认识行当、脸谱与戏曲之美。</p>
-            <details class="ai-workshop-product-service"><summary>服务说明</summary><p id="ai-workshop-hero-service-note" class="ai-workshop-hero-note">正在检查知识服务。已有角色与数字资产可从次级入口查看。</p><button id="ai-workshop-refresh-service" class="ai-workshop-text-link" type="button">重新检查服务</button></details>
+            <p class="ai-workshop-subtitle">问一段京剧，走进一方戏台。</p>
+            <details class="ai-workshop-product-service"><summary>服务说明</summary><p id="ai-workshop-hero-service-note" class="ai-workshop-hero-note">正在检查知识服务。数字戏台可查看本机已准备的舞台与人物。</p><button id="ai-workshop-refresh-service" class="ai-workshop-text-link" type="button">重新检查服务</button></details>
           </div>
         </div>
       </section>
@@ -66,13 +68,14 @@
       <div class="ai-workshop-shell">
         <nav class="ai-workshop-nav ai-workshop-product-nav" aria-label="AI戏韵工坊内部导航">
           <a href="#ai-workshop-qa" data-ai-workshop-target="qa" aria-current="true">京剧问答</a>
-          <details class="ai-workshop-secondary-nav"><summary>创作与数字资产</summary><div>
+          <a href="#ai-workshop-stage" data-ai-workshop-target="stage">数字戏台</a>
+          <details class="ai-workshop-secondary-nav"><summary>更多工具</summary><div>
             <a href="#ai-workshop-create" data-ai-workshop-target="create">角色创作</a>
             <a href="#ai-workshop-agents" data-ai-workshop-target="agents">协作与任务档案</a>
-            <a href="#ai-workshop-model" data-ai-workshop-target="model">已有3D与企业需求</a>
+            <a href="#ai-workshop-model" data-ai-workshop-target="model">资产管理与企业需求</a>
             <a href="#ai-workshop-overview" data-ai-workshop-target="overview">了解工坊</a>
+            <a href="#ai-workshop-demo">演示导览与服务说明</a>
           </div></details>
-          <a class="ai-workshop-guide-link" href="#ai-workshop-demo">演示导览</a>
         </nav>
         <noscript><p class="ai-workshop-feedback">请启用JavaScript使用问答、历史档案及3D交互；下方仍可阅读静态功能说明。静态说明不代表服务已经连通。</p></noscript>
         <p id="ai-workshop-notice" class="ai-workshop-notice" role="status" aria-live="polite" hidden></p>
@@ -307,6 +310,39 @@
           </div>
         </section>
 
+        <section id="ai-workshop-stage" class="ai-workshop-panel" data-ai-workshop-panel="stage" aria-labelledby="ai-workshop-stage-heading" hidden>
+          <div class="ai-workshop-stage-heading">
+            <div><span class="ai-workshop-kicker">一方戏台 · 一身戏韵</span><h2 id="ai-workshop-stage-heading" class="ai-workshop-heading" tabindex="-1">数字戏台</h2><p class="ai-workshop-description">选择剧目，走近戏中人。拖动查看舞台，点击人物了解更多。</p></div>
+            <button id="ai-workshop-stage-refresh" class="ai-workshop-text-link" type="button">重新读取戏台</button>
+          </div>
+          <div class="ai-workshop-stage-layout">
+            <aside class="ai-workshop-stage-library" aria-labelledby="ai-workshop-stage-library-heading">
+              <h3 id="ai-workshop-stage-library-heading">戏中人物</h3>
+              <label class="ai-workshop-label" for="ai-workshop-stage-group">剧目与分类</label>
+              <select id="ai-workshop-stage-group" class="ai-workshop-input" disabled><option value="">正在读取分类……</option></select>
+              <p id="ai-workshop-stage-group-description" class="ai-workshop-stage-muted"></p>
+              <div id="ai-workshop-stage-characters" class="ai-workshop-stage-characters" aria-label="选择舞台人物"><p class="ai-workshop-stage-muted">进入戏台后读取已有模型。</p></div>
+              <p class="ai-workshop-stage-library-note">人物保持静态造型。切换与查看只读取已有文件，不会生成新模型。</p>
+            </aside>
+            <div class="ai-workshop-stage-center">
+              <div class="ai-workshop-stage-viewer-heading"><h3 id="ai-workshop-stage-viewer-title">走进数字戏台</h3><span id="ai-workshop-stage-state" class="ai-workshop-stage-state">尚未加载</span></div>
+              <div id="ai-workshop-stage-host" class="ai-workshop-stage-host" role="region" aria-label="可拖动旋转和点选人物的实时3D戏台" aria-busy="false" data-stage-state="idle" tabindex="0"><p class="ai-workshop-stage-placeholder">舞台与人物准备就绪后，将在这里显示真实3D场景。</p></div>
+              <p id="ai-workshop-stage-status" class="ai-workshop-stage-status" role="status" aria-live="polite">进入戏台后开始加载。</p>
+              <p id="ai-workshop-stage-error" class="ai-workshop-feedback ai-workshop-feedback-error" role="alert" hidden></p>
+              <div class="ai-workshop-stage-controls" aria-label="数字戏台视角控制"><button id="ai-workshop-stage-zoom-in" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>放大 ＋</button><button id="ai-workshop-stage-zoom-out" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>缩小 −</button><button id="ai-workshop-stage-reset" class="ai-workshop-button ai-workshop-button-secondary" type="button" disabled>重置视角</button><button id="ai-workshop-stage-reload" class="ai-workshop-text-link" type="button" hidden>重新加载已有场景</button></div>
+              <p class="ai-workshop-stage-help">鼠标拖动旋转、滚轮缩放；手机可单指拖动、双指缩放。点击人物或左侧姓名查看介绍。</p>
+            </div>
+            <aside class="ai-workshop-stage-detail" aria-labelledby="ai-workshop-stage-character-name">
+              <span class="ai-workshop-kicker">走近戏中人</span><h3 id="ai-workshop-stage-character-name">选择一位人物</h3>
+              <p id="ai-workshop-stage-character-group" class="ai-workshop-stage-character-group"></p>
+              <p id="ai-workshop-stage-character-description" class="ai-workshop-stage-character-description">从左侧选择人物，也可直接点击舞台上的人物。</p>
+              <button id="ai-workshop-stage-ask" class="ai-workshop-button" type="button" disabled>问问这个人物 →</button>
+              <p id="ai-workshop-stage-question-note" class="ai-workshop-stage-muted">将问题填入京剧问答，由你确认后发送。</p>
+              <details class="ai-workshop-stage-sources"><summary>资料来源与展示说明</summary><div id="ai-workshop-stage-citations"><p class="ai-workshop-stage-muted">选择人物后显示已登记的资料来源。</p></div><p class="ai-workshop-stage-muted">舞台与人物为用户提供的展示素材，限比赛使用、非商用。造型展示不代表特定演出版本的精确复原。</p></details>
+            </aside>
+          </div>
+        </section>
+
         <section id="ai-workshop-model" class="ai-workshop-panel" data-ai-workshop-panel="model" aria-labelledby="ai-workshop-model-heading">
           <div class="ai-workshop-section-head ai-workshop-workbench-heading">
             <div><h2 id="ai-workshop-model-heading" class="ai-workshop-heading" tabindex="-1">数字资产与3D工作台</h2><p class="ai-workshop-description">选择已有资产，近看一身戏韵。概念图、角色方案与真实模型分别保留，不会自动生成。</p></div>
@@ -443,5 +479,6 @@
       </div>
     </footer>
     <script type="module" src="js/ai-workshop/main.js?v=phase4-1"></script>
+    <script type="module" src="js/site-navigator.js?v=1"></script>
   </body>
 </html>

@@ -2,7 +2,7 @@ import { getServiceCapabilities, loadServiceCapabilities, requiresCapabilityRech
 import { initializeChat } from './chat-controller.js?v=product-1';
 import { initializeAgentWorkflow } from './agent-workflow.js?v=phase4-1';
 
-const PANEL_NAMES = ['overview', 'qa', 'agents', 'create', 'model'];
+const PANEL_NAMES = ['overview', 'qa', 'agents', 'create', 'model', 'stage'];
 const MAX_BRIEF_LENGTH = 1200;
 
 function initializeWorkshop() {
@@ -43,6 +43,7 @@ function initializeWorkshop() {
   let capabilityRefreshId = 0;
   let agentController = null;
   let assetController = null;
+  let stageController = null;
 
   function updateScrollOffset() {
     const header = document.querySelector('.site-header');
@@ -54,7 +55,7 @@ function initializeWorkshop() {
   const panelFromHash = () => {
     if (window.location.hash === '#ai-workshop-history') return 'agents';
     if (window.location.hash === '#ai-workshop-demo') { const guide = root.querySelector('#ai-workshop-demo-disclosure'); if (guide) guide.open = true; return 'qa'; }
-    const match = window.location.hash.match(/^#ai-workshop-(overview|qa|agents|create|model)$/);
+    const match = window.location.hash.match(/^#ai-workshop-(overview|qa|agents|create|model|stage)$/);
     if (match) return match[1];
     if (!window.location.hash || window.location.hash === '#ai-workshop') return 'qa';
     return null;
@@ -76,6 +77,7 @@ function initializeWorkshop() {
     const secondaryNavigation = root.querySelector('.ai-workshop-secondary-nav');
     if (secondaryNavigation) secondaryNavigation.open = false;
     void assetController?.setVisible(name === 'model');
+    void stageController?.setVisible(name === 'stage');
     if (focusHeading) panels.find((panel) => panel.name === name).heading.focus();
     if (name === 'qa' && !getServiceCapabilities().questionAnswering) void refreshCapabilities();
   }
@@ -138,7 +140,7 @@ function initializeWorkshop() {
       badge.classList.toggle('ai-workshop-badge-unavailable', !capability.questionAnswering);
       badge.classList.toggle('ai-workshop-badge-ready', capability.questionAnswering);
     });
-    heroServiceNote.textContent = capability.questionAnswering ? '以京剧资料为依据，让每一次探索有迹可循。' : '京剧知识、角色创作与数字资产，汇聚于此。';
+    heroServiceNote.textContent = capability.questionAnswering ? '以京剧资料为依据，让每一次探索有迹可循。' : '问一段京剧，或在数字戏台走近戏中人。';
     agentController?.setCapability(capability);
   }
 
@@ -174,6 +176,17 @@ function initializeWorkshop() {
   chatController = initializeChat({ root, setServiceState, onServiceFailure(error) {
     if (requiresCapabilityRecheck(error)) { displayCapabilityState(getServiceCapabilities()); void refreshCapabilities({ afterRequestFailure: true }); }
   } });
+  function prefillQuestion(question) {
+    if (!chatController.prefill(question)) { notice.textContent = '当前回答仍在进行，请等它完成后再带入问题。'; notice.hidden = false; return false; }
+    selectPanel('qa', true);
+    if (window.location.hash !== '#ai-workshop-qa') window.history.pushState(null, '', '#ai-workshop-qa');
+    return true;
+  }
+  const pendingNavigationKey = 'xijing.pending-navigation-question.v1';
+  window.addEventListener('xijing:prefill-question', (event) => {
+    if (prefillQuestion(event.detail?.question)) { try { sessionStorage.removeItem(pendingNavigationKey); } catch { /* Optional draft only. */ } }
+  });
+  try { const pending = sessionStorage.getItem(pendingNavigationKey); if (pending && prefillQuestion(pending)) sessionStorage.removeItem(pendingNavigationKey); } catch { /* Navigation must not depend on browser storage. */ }
   refreshServiceButton.addEventListener('click', () => { void refreshCapabilities(); void chatController.refresh(); });
   window.addEventListener('online', () => void refreshCapabilities());
 
@@ -248,6 +261,16 @@ function initializeWorkshop() {
   }).catch(() => {
     const assetFeedback = root.querySelector('#ai-workshop-asset-feedback');
     if (assetFeedback) { assetFeedback.textContent = '数字资产界面暂时无法初始化，请刷新后重试。京剧问答和Agent工作台仍可使用。'; assetFeedback.classList.add('ai-workshop-feedback-error'); }
+  });
+  // Digital-stage reads and render failures never start a chat, Agent or model task.
+  void import('./digital-stage.js?v=stage-1').then(({ initializeDigitalStage }) => {
+    stageController = initializeDigitalStage({ root, onAskQuestion(question) {
+      prefillQuestion(question);
+    } });
+    return stageController?.setVisible(activePanel === 'stage');
+  }).catch(() => {
+    const error = root.querySelector('#ai-workshop-stage-error');
+    if (error) { error.textContent = '数字戏台暂时无法初始化，请刷新后重试。京剧问答与已有档案仍可使用。'; error.hidden = false; }
   });
   void refreshCapabilities();
 }

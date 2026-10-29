@@ -1,0 +1,91 @@
+/* Digital stage only. The site's shared navigation and cultural pages stay unchanged. */
+.ai-workshop[data-active-panel="stage"] > .ai-workshop-shell { width: min(1680px, 96%); }
+.ai-workshop-stage-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin: 0 0 20px; }
+.ai-workshop-stage-heading .ai-workshop-heading { margin: 6px 0 8px; font-size: clamp(1.55rem, 2.5vw, 2.1rem); }
+.ai-workshop-stage-heading .ai-workshop-description { margin: 0; }
+.ai-workshop-stage-heading > button { flex: 0 0 auto; font-size: .9rem; }
+.ai-workshop-stage-layout { display: grid; grid-template-columns: 215px minmax(0, 1fr) 255px; align-items: stretch; min-width: 0; border: 1px solid var(--ai-workshop-border, #ddc6a1); border-radius: 9px; background: var(--paper, #fffaf0); overflow: hidden; }
+.ai-workshop-stage-library, .ai-workshop-stage-detail { min-width: 0; padding: 22px 18px; background: #f4ecdf; }
+.ai-workshop-stage-library { border-right: 1px solid var(--ai-workshop-border, #ddc6a1); }
+.ai-workshop-stage-detail { border-left: 1px solid var(--ai-workshop-border, #ddc6a1); }
+.ai-workshop-stage-layout h3 { margin: 0 0 18px; color: var(--red, #8d1820); font-size: 1.05rem; line-height: 1.6; }
+.ai-workshop-stage-library .ai-workshop-label { margin: 15px 0 7px; font-size: .86rem; }
+.ai-workshop-stage-library .ai-workshop-input { width: 100%; min-width: 0; padding: 9px; font-size: .88rem; background: var(--paper, #fffaf0); }
+.ai-workshop-stage-muted, .ai-workshop-stage-library-note { color: var(--muted, #705d57); font-size: .83rem; line-height: 1.85; overflow-wrap: anywhere; }
+.ai-workshop-stage-library-note { margin: 20px 0 0; padding-top: 15px; border-top: 1px solid var(--ai-workshop-border, #ddc6a1); }
+.ai-workshop-stage-characters { display: grid; gap: 8px; max-height: 420px; overflow-y: auto; margin-top: 18px; padding: 2px; scrollbar-width: thin; }
+.ai-workshop-stage-character { display: flex; align-items: center; gap: 10px; width: 100%; padding: 12px 10px; border: 1px solid transparent; border-radius: 6px; background: transparent; color: var(--ink, #241918); font: inherit; text-align: left; cursor: pointer; }
+.ai-workshop-stage-character:hover { background: #ede0cb; }
+.ai-workshop-stage-character[aria-pressed="true"] { border-color: #a64d37; background: #fff8e9; }
+.ai-workshop-stage-character:disabled { cursor: default; opacity: .65; }
+.ai-workshop-stage-character > span:first-child { display: grid; place-items: center; flex: 0 0 32px; width: 32px; height: 38px; color: var(--red, #8d1820); border: 1px solid #d5b788; border-radius: 14px 14px 3px 3px; font-family: var(--serif, "Noto Serif SC", "Microsoft YaHei", serif); }
+.ai-workshop-stage-character strong, .ai-workshop-stage-character small { display: block; }
+.ai-workshop-stage-character strong { font-size: .96rem; font-weight: 600; line-height: 1.6; }
+.ai-workshop-stage-character small { margin-top: 3px; color: var(--muted, #705d57); font-size: .76rem; line-height: 1.6; }
+.ai-workshop-stage-center { min-width: 0; padding: 20px; background: var(--paper, #fffaf0); }
+.ai-workshop-stage-viewer-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; }
+.ai-workshop-stage-viewer-heading h3 { margin: 0; font-size: 1.15rem; }
+.ai-workshop-stage-state { padding: 3px 9px; border: 1px solid #d5c4a8; border-radius: 20px; color: var(--muted, #705d57); font-size: .78rem; white-space: nowrap; }
+.ai-workshop-stage-state[data-state="ready"] { color: #456348; border-color: #b7c7ad; }
+.ai-workshop-stage-state[data-state="error"] { color: var(--red, #8d1820); border-color: #cfa79a; }
+.ai-workshop-stage-host { position: relative; width: 100%; height: clamp(480px, 62dvh, 740px); margin-top: 16px; overflow: hidden; background: #e9dfce; border: 1px solid #e1d1b8; border-radius: 5px; outline-offset: 3px; }
+.ai-workshop-stage-host canvas { display: block; width: 100%; height: 100%; }
+.ai-workshop-stage-host[data-stage-state="loading"]::after, .ai-workshop-stage-host[data-stage-state="error"]::after { content: "正在加载真实3D场景……"; position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; color: var(--muted, #705d57); text-align: center; pointer-events: none; }
+.ai-workshop-stage-host[data-stage-state="error"]::after { content: "场景暂未加载，请在下方手动重试。"; }
+.ai-workshop-stage-host[data-stage-state="loading"] canvas, .ai-workshop-stage-host[data-stage-state="error"] canvas { visibility: hidden; }
+.ai-workshop-stage-placeholder { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 30px; text-align: center; color: var(--muted, #705d57); line-height: 1.9; }
+.ai-workshop-stage-host[data-stage-state="ready"] .ai-workshop-stage-placeholder { display: none; }
+.ai-workshop-stage-host:not([data-stage-state="ready"]) canvas { visibility: hidden; }
+.ai-workshop-stage-status { min-height: 26px; margin: 12px 0 7px; color: #705d57; font-size: .88rem; line-height: 1.8; }
+.ai-workshop-stage-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; }
+.ai-workshop-stage-controls .ai-workshop-button { min-height: 40px; padding: 8px 13px; font-size: .85rem; }
+.ai-workshop-stage-controls .ai-workshop-text-link { margin-left: 6px; font-size: .85rem; }
+.ai-workshop-stage-help { margin: 12px 0 0; color: var(--muted, #705d57); font-size: .8rem; line-height: 1.85; }
+.ai-workshop-stage-detail .ai-workshop-kicker { font-size: .75rem; letter-spacing: .12em; }
+.ai-workshop-stage-detail h3 { margin: 12px 0 7px; font-size: 1.45rem; }
+.ai-workshop-stage-character-group { color: #96733d; font-size: .88rem; line-height: 1.7; }
+.ai-workshop-stage-character-description { min-height: 100px; margin: 18px 0 22px; font-size: .91rem; line-height: 1.95; white-space: pre-line; overflow-wrap: anywhere; }
+.ai-workshop-stage-detail > .ai-workshop-button { width: 100%; padding: 10px 8px; font-size: .88rem; }
+.ai-workshop-stage-sources { margin-top: 24px; padding-top: 17px; border-top: 1px solid var(--ai-workshop-border, #ddc6a1); }
+.ai-workshop-stage-sources > summary { color: var(--red, #8d1820); font-size: .84rem; cursor: pointer; line-height: 1.8; }
+.ai-workshop-stage-source { margin: 14px 0; padding-bottom: 12px; border-bottom: 1px solid #dfd1bc; font-size: .8rem; line-height: 1.85; overflow-wrap: anywhere; }
+.ai-workshop-stage-source strong { color: #604132; font-weight: 600; }
+.ai-workshop-stage-source p { margin: 7px 0; }
+.ai-workshop-stage-source a { color: var(--red, #8d1820); text-underline-offset: 3px; }
+@media (max-width: 1250px) and (min-width: 851px) {
+  .ai-workshop-stage-layout { grid-template-columns: 170px minmax(0, 1fr) 210px; }
+  .ai-workshop-stage-library, .ai-workshop-stage-detail { padding: 18px 13px; }
+  .ai-workshop-stage-center { padding: 16px; }
+  .ai-workshop-stage-host { height: 520px; }
+}
+@media (max-width: 850px) and (min-width: 601px) {
+  .ai-workshop-stage-layout { grid-template-columns: 180px minmax(0, 1fr); }
+  .ai-workshop-stage-library { grid-column: 1; grid-row: 1; }
+  .ai-workshop-stage-center { grid-column: 2; grid-row: 1; padding: 15px; }
+  .ai-workshop-stage-host { height: 480px; }
+  .ai-workshop-stage-detail { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--ai-workshop-border, #ddc6a1); }
+  .ai-workshop-stage-character-description { min-height: 0; }
+}
+@media (max-width: 600px) {
+  .ai-workshop-stage-heading { align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+  .ai-workshop-stage-heading > button { max-width: 85px; padding: 0; font-size: .8rem; }
+  .ai-workshop-stage-heading .ai-workshop-heading { font-size: 1.5rem; }
+  .ai-workshop-stage-layout { display: flex; flex-direction: column; border-radius: 7px; }
+  .ai-workshop-stage-library { padding: 16px; border-right: 0; border-bottom: 1px solid var(--ai-workshop-border, #ddc6a1); }
+  .ai-workshop-stage-library h3 { margin-bottom: 10px; }
+  .ai-workshop-stage-library .ai-workshop-label { margin-top: 8px; }
+  .ai-workshop-stage-characters { display: flex; overflow-x: auto; margin-top: 12px; gap: 7px; }
+  .ai-workshop-stage-character { flex: 0 0 155px; padding: 9px; }
+  .ai-workshop-stage-library-note { margin-top: 12px; padding-top: 10px; font-size: .75rem; }
+  .ai-workshop-stage-center { padding: 15px 10px; }
+  .ai-workshop-stage-host { height: clamp(370px, 62dvh, 510px); min-height: 0; }
+  .ai-workshop-stage-viewer-heading h3 { font-size: 1rem; }
+  .ai-workshop-stage-state { font-size: .72rem; }
+  .ai-workshop-stage-controls { gap: 6px; }
+  .ai-workshop-stage-controls .ai-workshop-button { padding: 8px 10px; font-size: .8rem; }
+  .ai-workshop-stage-detail { padding: 20px 16px; border-left: 0; border-top: 1px solid var(--ai-workshop-border, #ddc6a1); }
+  .ai-workshop-stage-character-description { min-height: 0; margin: 12px 0 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ai-workshop-stage-layout *, .ai-workshop-stage-host * { scroll-behavior: auto; animation: none; transition: none; }
+}
