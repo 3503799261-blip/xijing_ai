@@ -1,0 +1,11 @@
+{
+  "documentLinksChecked": 268,
+  "missingLinks": [],
+  "historicalSecretScan": {
+    "textVersionsChecked": 1373,
+    "findings": [],
+    "scope": "All reachable text blobs at HEAD; pattern scan only, no secret values printed or saved."
+  },
+  "pythonSyntax": "PASS",
+  "networkCalls": 0
+}

@@ -1,0 +1,211 @@
+{
+  "at": "2026-10-29T10:56:23.195Z",
+  "status": "FAIL",
+  "error": "Unsupported verification accessor",
+  "checks": [
+    {
+      "name": "stage GLB lengths/accessors/images",
+      "passed": true,
+      "details": {
+        "file": "stage.glb",
+        "bytes": 75654176,
+        "sha256": "af91737e0f3e1e94c858169de09a8b99ec14b2123e9615e2e53d6d9f87548742",
+        "triangles": 1199710,
+        "images": [
+          {
+            "mimeType": "image/jpeg",
+            "width": 1363,
+            "height": 2048,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 500,
+            "height": 422,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 256,
+            "height": 256,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1024,
+            "height": 573,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 160,
+            "height": 448,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 500,
+            "height": 500,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 474,
+            "height": 84,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 278,
+            "height": 112,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 474,
+            "height": 84,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 366,
+            "height": 256,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1975,
+            "height": 135,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1301,
+            "height": 112,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1301,
+            "height": 25,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1301,
+            "height": 81,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1301,
+            "height": 25,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 800,
+            "height": 533,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 150,
+            "height": 151,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 498,
+            "height": 720,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 288,
+            "height": 288,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 2048,
+            "height": 799,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 94,
+            "height": 734,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 96,
+            "height": 740,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 2048,
+            "height": 200,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 600,
+            "height": 591,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 740,
+            "height": 739,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 398,
+            "height": 179,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 324,
+            "height": 121,
+            "channels": 3,
+            "fullyDecoded": true
+          }
+        ]
+      }
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "databaseAccess": false
+}

@@ -1,0 +1,10 @@
+{
+  "command": "python -B run-isolated.py -> pytest --noconftest -p no:cacheprovider -q backend/tests/test_stage_assets.py",
+  "exitCode": 0,
+  "elapsedSeconds": 1.643,
+  "databaseConnections": 0,
+  "guardViolations": [],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "sourceWriteAllowed": false
+}

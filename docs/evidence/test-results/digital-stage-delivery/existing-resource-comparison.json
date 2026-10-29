@@ -1,0 +1,373 @@
+{
+  "scope": "Comparison against preserved 2026-10-21 resource baseline, not a fabricated same-day before snapshot",
+  "files": [
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/.gitignore",
+      "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+      "expectedSha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/CACHEDIR.TAG",
+      "sha256": "e8893e2dcb3f4545ef67a0a5b7b769113d38eef1aa61c7c7ba14659b02af955f",
+      "expectedSha256": "e8893e2dcb3f4545ef67a0a5b7b769113d38eef1aa61c7c7ba14659b02af955f",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/download/1_Pooling/config.json.metadata",
+      "sha256": "eb60db243664376bc81667b66d46eb48ef72e5cfc7b127496e50d7f97824fe47",
+      "expectedSha256": "eb60db243664376bc81667b66d46eb48ef72e5cfc7b127496e50d7f97824fe47",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/download/config.json.metadata",
+      "sha256": "85ccae2ee62ebc7330c64d8e18bce677fb95a096c66b5b013e6e2c33f9dc5107",
+      "expectedSha256": "85ccae2ee62ebc7330c64d8e18bce677fb95a096c66b5b013e6e2c33f9dc5107",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/download/config_sentence_transformers.json.metadata",
+      "sha256": "101eee65266e795078d5b4c84278d33c2bccb5cf77e0b40e7807e210658dfd51",
+      "expectedSha256": "101eee65266e795078d5b4c84278d33c2bccb5cf77e0b40e7807e210658dfd51",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/download/model.safetensors.metadata",
+      "sha256": "1a6164905bb3ebf2d0e47088a1b7969e1ed92236f393f068edfa78025a20e59a",
+      "expectedSha256": "1a6164905bb3ebf2d0e47088a1b7969e1ed92236f393f068edfa78025a20e59a",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/download/modules.json.metadata",
+      "sha256": "e3023bfd7fa3444d7b043950280c4f6a64eed0f686b6286e806b4ecb1de3e838",
+      "expectedSha256": "e3023bfd7fa3444d7b043950280c4f6a64eed0f686b6286e806b4ecb1de3e838",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/download/README.md.metadata",
+      "sha256": "8832e007179b1acc1ab46fa9b236ad7a2470f85a55b7dd51716bcf191496ec0c",
+      "expectedSha256": "8832e007179b1acc1ab46fa9b236ad7a2470f85a55b7dd51716bcf191496ec0c",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/download/sentence_bert_config.json.metadata",
+      "sha256": "9d6c68a9008bb35347f48258bf09aff9886e956bbca1eb8a3188c5f3ab8f270e",
+      "expectedSha256": "9d6c68a9008bb35347f48258bf09aff9886e956bbca1eb8a3188c5f3ab8f270e",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/download/special_tokens_map.json.metadata",
+      "sha256": "fa8f162af44ae0d5c0e5ead74b44cae3faf6d1b171a23c77bfcc72bdbf9ad36b",
+      "expectedSha256": "fa8f162af44ae0d5c0e5ead74b44cae3faf6d1b171a23c77bfcc72bdbf9ad36b",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/download/tokenizer.json.metadata",
+      "sha256": "6507c049a32a82e5543514375823e0b8d756726c28825373b6fefc9db43d971c",
+      "expectedSha256": "6507c049a32a82e5543514375823e0b8d756726c28825373b6fefc9db43d971c",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/download/tokenizer_config.json.metadata",
+      "sha256": "a23722c68921d0b26998ff4739c61ca85bd6908c4f02a437604e6a38f7cf56a6",
+      "expectedSha256": "a23722c68921d0b26998ff4739c61ca85bd6908c4f02a437604e6a38f7cf56a6",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/download/vocab.txt.metadata",
+      "sha256": "0ff03539bf47c45615402b5eeb7cf6a218cb66e163badb0440a83d19a7c59751",
+      "expectedSha256": "0ff03539bf47c45615402b5eeb7cf6a218cb66e163badb0440a83d19a7c59751",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": ".cache/huggingface/trees/7999e1d3359715c523056ef9478215996d62a620.json",
+      "sha256": "2346229ecde3983842cb8e070285e8aae7d6680819af7d7aa17e56bc0f48cbc9",
+      "expectedSha256": "2346229ecde3983842cb8e070285e8aae7d6680819af7d7aa17e56bc0f48cbc9",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "1_Pooling/config.json",
+      "sha256": "aaa8861589f80c961a03cc86c7eeaef7605c1676b9ab55329d33a304738769c6",
+      "expectedSha256": "aaa8861589f80c961a03cc86c7eeaef7605c1676b9ab55329d33a304738769c6",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "config.json",
+      "sha256": "3853a7979202c348751b753e36f579c41d8da7d36af617d3d907e1fc9b441f2a",
+      "expectedSha256": "3853a7979202c348751b753e36f579c41d8da7d36af617d3d907e1fc9b441f2a",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "config_sentence_transformers.json",
+      "sha256": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56",
+      "expectedSha256": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "model-manifest.json",
+      "sha256": "0ef63ff29c06fc727a4f985c96a9210cedb09b5f06b1b8adf188da284bdc66e1",
+      "expectedSha256": "0ef63ff29c06fc727a4f985c96a9210cedb09b5f06b1b8adf188da284bdc66e1",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "model.safetensors",
+      "sha256": "354763b9b1357bc9c44f62c6be2276321081ed2567773608c0d0785b61d5a026",
+      "expectedSha256": "354763b9b1357bc9c44f62c6be2276321081ed2567773608c0d0785b61d5a026",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "modules.json",
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "expectedSha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "README.md",
+      "sha256": "c48a4eeea77f6b1d38b48ec1c5b8d4f86d5550cc43fa345a0db1b2ca1d082369",
+      "expectedSha256": "c48a4eeea77f6b1d38b48ec1c5b8d4f86d5550cc43fa345a0db1b2ca1d082369",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "sentence_bert_config.json",
+      "sha256": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf",
+      "expectedSha256": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "special_tokens_map.json",
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "expectedSha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "tokenizer.json",
+      "sha256": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26",
+      "expectedSha256": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "tokenizer_config.json",
+      "sha256": "e6f3b96db926a37d4039995fbf5ad17de158dfb8f6343d607e4dbaad18d75f5a",
+      "expectedSha256": "e6f3b96db926a37d4039995fbf5ad17de158dfb8f6343d607e4dbaad18d75f5a",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "BGE",
+      "relative": "vocab.txt",
+      "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c",
+      "expectedSha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "activeKnowledgeAndQdrant",
+      "relative": "knowledge.sqlite3",
+      "sha256": "1be91060970461a0f216bced4ada8a1977e2a11bbbd704388a54f9d5e2a4e0f2",
+      "expectedSha256": "1be91060970461a0f216bced4ada8a1977e2a11bbbd704388a54f9d5e2a4e0f2",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "activeKnowledgeAndQdrant",
+      "relative": "manifest.json",
+      "sha256": "73a20943a88a63abb995e076db84e66e6bca3dfa1fb0978d9914925a26ffba65",
+      "expectedSha256": "73a20943a88a63abb995e076db84e66e6bca3dfa1fb0978d9914925a26ffba65",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "activeKnowledgeAndQdrant",
+      "relative": "qdrant/.lock",
+      "sha256": "67a987c432005e3afcc13a871b3ddabaeee0f4504058da65b0769016d3083b44",
+      "expectedSha256": "67a987c432005e3afcc13a871b3ddabaeee0f4504058da65b0769016d3083b44",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "activeKnowledgeAndQdrant",
+      "relative": "qdrant/collection/opera_chunks/storage.sqlite",
+      "sha256": "0750cab013d6222b3c7ae06e6dbfdff3853c743b04885c12eba9565af3d18547",
+      "expectedSha256": "0750cab013d6222b3c7ae06e6dbfdff3853c743b04885c12eba9565af3d18547",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "activeKnowledgeAndQdrant",
+      "relative": "qdrant/meta.json",
+      "sha256": "3d81e98a040aaba9d8bcc7ae33b191dbd7b4fb3c426db2b5c7d2b63704202f24",
+      "expectedSha256": "3d81e98a040aaba9d8bcc7ae33b191dbd7b4fb3c426db2b5c7d2b63704202f24",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "candidate-images/7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45.png",
+      "sha256": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+      "expectedSha256": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "candidate-images/879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703.png",
+      "sha256": "879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703",
+      "expectedSha256": "879e5daa99ce26fd77ea6d28f4049e45cd414e9416c731b7ecbbbfeedeeec703",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "candidate-originals/0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095.upload",
+      "sha256": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+      "expectedSha256": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "candidate-originals/9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f.upload",
+      "sha256": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+      "expectedSha256": "9c737011a237de9fb589743e22b385a0c9611d33189c79b5940f8e1386047f0f",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "catalog.sqlite3",
+      "sha256": "9a7a795c75d33ff2957051b88ff677be3965faf9cc9e2ee493c392abe3d28eff",
+      "expectedSha256": "9a7a795c75d33ff2957051b88ff677be3965faf9cc9e2ee493c392abe3d28eff",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "images/7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45.png",
+      "sha256": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+      "expectedSha256": "7b8fb1a42bf79d0210c1571e65ae92d856fa73761d42d9cd044836764aad4d45",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "models/5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5.glb",
+      "sha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "expectedSha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "models/65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5.glb",
+      "sha256": "65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5",
+      "expectedSha256": "65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "models/782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df.glb",
+      "sha256": "782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df",
+      "expectedSha256": "782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "models/bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a.glb",
+      "sha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "expectedSha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "original-images/0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095.upload",
+      "sha256": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+      "expectedSha256": "0170077ef813f95b2e0da4666f0a7919078d0a811ac04d61613e69a31a621095",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "recovery-provenance/0934dbe65254eab9e7ade199a17fc1cb16f51e2fbecb66eff1bbfd9c1469999e.json",
+      "sha256": "0934dbe65254eab9e7ade199a17fc1cb16f51e2fbecb66eff1bbfd9c1469999e",
+      "expectedSha256": "0934dbe65254eab9e7ade199a17fc1cb16f51e2fbecb66eff1bbfd9c1469999e",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "recovery-quarantine/51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e.bin",
+      "sha256": "51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e",
+      "expectedSha256": "51fc687e0bde5fdb9074ba4560601057e17e9239f111fd2bc9e0d6601c26260e",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "existingAssets",
+      "relative": "recovery-quarantine/8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885.bin",
+      "sha256": "8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885",
+      "expectedSha256": "8ef5de8a2f96fbbee9eea66737187e4a2087f88867830891a41464a473d47885",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    },
+    {
+      "kind": "activeManifest",
+      "relative": "xijing-ai/active.json",
+      "sha256": "73a20943a88a63abb995e076db84e66e6bca3dfa1fb0978d9914925a26ffba65",
+      "unchanged": true,
+      "baselineDate": "2026-10-21"
+    }
+  ],
+  "allUnchanged": true
+}

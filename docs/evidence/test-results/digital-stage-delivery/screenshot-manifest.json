@@ -1,0 +1,71 @@
+{
+  "files": [
+    {
+      "file": "digital-stage-browser-final/desktop-duliniang-ready.png",
+      "sha256": "49b46920b811099e38b7d828951e07fa23e5005916b7df2a5dd68740accd6220",
+      "bytes": 1266238,
+      "archivedPixels": true
+    },
+    {
+      "file": "digital-stage-browser-final/desktop-muguiying-ready.png",
+      "sha256": "7e044c870b6e0d1717907c8f3e46b49c15848bb1a6eac2558bd616d1f38b40d7",
+      "bytes": 1285123,
+      "archivedPixels": true
+    },
+    {
+      "file": "digital-stage-browser-final/desktop-zhouyu-ready.png",
+      "sha256": "5e1b305f673f97517927126a788a010c098c2fb7c7d7d556fd5a917f96a3512d",
+      "bytes": 1269590,
+      "archivedPixels": true
+    },
+    {
+      "file": "digital-stage-browser-final/mobile-duliniang-ready.png",
+      "sha256": "d6cb315e27ccae614c0b05f3aba650b6a6d0189eec21f2f687fa97db8c3a5330",
+      "bytes": 260396,
+      "archivedPixels": true
+    },
+    {
+      "file": "digital-stage-browser-final/mobile-muguiying-ready.png",
+      "sha256": "de812a50ca35c09c5a3cc0f649bdbf80c9d25de0c6ad9f8572324be0ca03c80b",
+      "bytes": 260928,
+      "archivedPixels": true
+    },
+    {
+      "file": "digital-stage-browser-final/mobile-zhouyu-ready.png",
+      "sha256": "522264bc5c0b82da341985d487e8ad05d794fa41f5f392510f20140f77b49f49",
+      "bytes": 260056,
+      "archivedPixels": true
+    },
+    {
+      "file": "digital-stage-browser-final/stage-1024.png",
+      "sha256": "1277325769adfa4cc38ac10dd2e840da489d7788f197b8f72121561eeee10ab8",
+      "bytes": 376660,
+      "archivedPixels": true
+    },
+    {
+      "file": "digital-stage-browser-final/stage-1920.png",
+      "sha256": "e65401968df856ac24699bb9dd6ca710002dda36e2005c490436edd07beb9594",
+      "bytes": 600850,
+      "archivedPixels": true
+    },
+    {
+      "file": "digital-stage-browser-final/stage-390.png",
+      "sha256": "1652e129a06cbfc89072ec3824c373417c905cc75c9384424b3be768e4545994",
+      "bytes": 260054,
+      "archivedPixels": true
+    },
+    {
+      "file": "digital-stage-browser-final/stage-synthetic-error.png",
+      "sha256": "e13984b916e257151d65ac3f1cf1f33a7dee27855b6c9038e998922d1c84543b",
+      "bytes": 387158,
+      "archivedPixels": true
+    },
+    {
+      "file": "site-navigation-browser-final2/stage-with-content-finder.png",
+      "sha256": "b2e4574aa61ea77e171b47fc7e128d010a311cc4d5e80e0ee0959b9e7e698cd9",
+      "bytes": 577953,
+      "archivedPixels": true
+    }
+  ],
+  "scope": "Only newly supplied competition-use stage/characters are copied. Screens showing old internal Q assets stay private; hashes are not publication permission."
+}

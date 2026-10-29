@@ -1,0 +1,26 @@
+{
+  "pages": {
+    "index.html": {
+      "onlyNavigatorReferencesAdded": true
+    },
+    "history.html": {
+      "onlyNavigatorReferencesAdded": true
+    },
+    "roles.html": {
+      "onlyNavigatorReferencesAdded": true
+    },
+    "facial.html": {
+      "onlyNavigatorReferencesAdded": true
+    },
+    "music.html": {
+      "onlyNavigatorReferencesAdded": true
+    },
+    "gallery.html": {
+      "onlyNavigatorReferencesAdded": true
+    },
+    "video.html": {
+      "onlyNavigatorReferencesAdded": true
+    }
+  },
+  "commonCssUnchanged": true
+}

@@ -1,0 +1,112 @@
+{
+  "kind": "OFFLINE_DIGITAL_STAGE_DOM_FETCH_RENDERER_DOUBLES",
+  "disclaimer": "Not evidence of real GLB loading, browser raycasting or physical touch; those require separate browser tests.",
+  "at": "2026-10-29T13:34:22.073Z",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "stage file URLs only use controlled ID endpoints",
+      "status": "PASS"
+    },
+    {
+      "name": "path traversal, external URL, credentials and signed query are rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "explicit safe API origin is honored without accepting arbitrary model hosts",
+      "status": "PASS"
+    },
+    {
+      "name": "unsafe API base configuration cannot create model resource URLs",
+      "status": "PASS"
+    },
+    {
+      "name": "valid current catalog preserves identities and transforms with safe file URLs",
+      "status": "PASS"
+    },
+    {
+      "name": "identifiers must be actual strings instead of coerced arrays or objects",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate characters and unknown groups cannot masquerade as separate valid records",
+      "status": "PASS"
+    },
+    {
+      "name": "unavailable resources remain unavailable; ready resources require a safe URL",
+      "status": "PASS"
+    },
+    {
+      "name": "source links are sanitized and dangerous URLs never render as links",
+      "status": "PASS"
+    },
+    {
+      "name": "catalog loader sends exactly one local GET with no automatic retry or credentials",
+      "status": "PASS"
+    },
+    {
+      "name": "network failure and resource-unavailable errors stay errors without generation fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid JSON is handled without declaring readiness",
+      "status": "PASS"
+    },
+    {
+      "name": "hidden stage is lazy and performs no catalog or renderer work",
+      "status": "PASS"
+    },
+    {
+      "name": "first visible stage loads one real category at a time and shows source details",
+      "status": "PASS"
+    },
+    {
+      "name": "group switching reloads the appropriate character with no identity mixing",
+      "status": "PASS"
+    },
+    {
+      "name": "renderer character picking updates details without a new load or API request",
+      "status": "PASS"
+    },
+    {
+      "name": "ask action hands off a question only and does not create or submit a conversation",
+      "status": "PASS"
+    },
+    {
+      "name": "zoom and reset use the existing renderer without model creation",
+      "status": "PASS"
+    },
+    {
+      "name": "hiding and returning to a ready stage does not reload or poll",
+      "status": "PASS"
+    },
+    {
+      "name": "missing stage resources show an honest error without starting a renderer",
+      "status": "PASS"
+    },
+    {
+      "name": "catalog failure stops busy state and retains a manual retry",
+      "status": "PASS"
+    },
+    {
+      "name": "an empty category does not reuse another character or fake a GLB",
+      "status": "PASS"
+    },
+    {
+      "name": "loading locks scene controls while another render is pending",
+      "status": "PASS"
+    },
+    {
+      "name": "new primary entry and old business selectors remain in the HTML",
+      "status": "PASS"
+    },
+    {
+      "name": "UI uses no unsafe HTML, timers, provider calls or automatic task submission",
+      "status": "PASS"
+    }
+  ],
+  "passed": 25,
+  "failed": 0,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0
+}

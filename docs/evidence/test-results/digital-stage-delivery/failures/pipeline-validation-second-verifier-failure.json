@@ -1,0 +1,303 @@
+{
+  "at": "2026-10-29T10:57:17.881Z",
+  "status": "FAIL",
+  "error": "Missing triangle data",
+  "checks": [
+    {
+      "name": "stage GLB lengths/accessors/images",
+      "passed": true,
+      "details": {
+        "file": "stage.glb",
+        "bytes": 75654176,
+        "sha256": "af91737e0f3e1e94c858169de09a8b99ec14b2123e9615e2e53d6d9f87548742",
+        "triangles": 1199710,
+        "images": [
+          {
+            "mimeType": "image/jpeg",
+            "width": 1363,
+            "height": 2048,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 500,
+            "height": 422,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 256,
+            "height": 256,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1024,
+            "height": 573,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 160,
+            "height": 448,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 500,
+            "height": 500,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 474,
+            "height": 84,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 278,
+            "height": 112,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 474,
+            "height": 84,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 366,
+            "height": 256,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1975,
+            "height": 135,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1301,
+            "height": 112,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1301,
+            "height": 25,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1301,
+            "height": 81,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 1301,
+            "height": 25,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 800,
+            "height": 533,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 150,
+            "height": 151,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 498,
+            "height": 720,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 288,
+            "height": 288,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 2048,
+            "height": 799,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 94,
+            "height": 734,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 96,
+            "height": 740,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 2048,
+            "height": 200,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 600,
+            "height": 591,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 740,
+            "height": 739,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 398,
+            "height": 179,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 324,
+            "height": 121,
+            "channels": 3,
+            "fullyDecoded": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "duliniang GLB lengths/accessors/images",
+      "passed": true,
+      "details": {
+        "file": "duliniang.glb",
+        "bytes": 25480096,
+        "sha256": "868fb6e6e6dab37e167baae8995b25790a36833f79ed9ce9acf5eca7349a7f53",
+        "triangles": 999984,
+        "images": [
+          {
+            "mimeType": "image/jpeg",
+            "width": 2048,
+            "height": 2048,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 2048,
+            "height": 2048,
+            "channels": 3,
+            "fullyDecoded": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "duliniang original geometry preserved",
+      "passed": true,
+      "details": {
+        "geometryBufferViews": 3
+      }
+    },
+    {
+      "name": "muguiying GLB lengths/accessors/images",
+      "passed": true,
+      "details": {
+        "file": "muguiying.glb",
+        "bytes": 25452940,
+        "sha256": "8852fab8d2096f9021daaafef5918bb1af0ee68f637f8200808bd04e9eaaec2f",
+        "triangles": 999912,
+        "images": [
+          {
+            "mimeType": "image/jpeg",
+            "width": 2048,
+            "height": 2048,
+            "channels": 3,
+            "fullyDecoded": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "muguiying original geometry preserved",
+      "passed": true,
+      "details": {
+        "geometryBufferViews": 3
+      }
+    },
+    {
+      "name": "zhouyu GLB lengths/accessors/images",
+      "passed": true,
+      "details": {
+        "file": "zhouyu.glb",
+        "bytes": 25580372,
+        "sha256": "22e4157c8570db3d53766c00db928a40040dd2905f9742e25eeb258f351b3d0c",
+        "triangles": 999996,
+        "images": [
+          {
+            "mimeType": "image/jpeg",
+            "width": 2048,
+            "height": 2048,
+            "channels": 3,
+            "fullyDecoded": true
+          },
+          {
+            "mimeType": "image/jpeg",
+            "width": 2048,
+            "height": 2048,
+            "channels": 3,
+            "fullyDecoded": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "zhouyu original geometry preserved",
+      "passed": true,
+      "details": {
+        "geometryBufferViews": 3
+      }
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "databaseAccess": false
+}

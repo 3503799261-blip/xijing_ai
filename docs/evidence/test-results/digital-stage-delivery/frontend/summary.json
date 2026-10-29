@@ -1,0 +1,46 @@
+{
+  "groups": [
+    {
+      "script": "phase2_frontend_test.mjs",
+      "exitCode": 0,
+      "output": "phase2_frontend_test.mjs.txt"
+    },
+    {
+      "script": "phase3_frontend_test.mjs",
+      "exitCode": 0,
+      "output": "phase3_frontend_test.mjs.txt"
+    },
+    {
+      "script": "phase4_frontend_test.mjs",
+      "exitCode": 0,
+      "output": "phase4_frontend_test.mjs.txt"
+    },
+    {
+      "script": "phase5_wp2_frontend_test.mjs",
+      "exitCode": 0,
+      "output": "phase5_wp2_frontend_test.mjs.txt"
+    },
+    {
+      "script": "phase5_wp3_frontend_test.mjs",
+      "exitCode": 0,
+      "output": "phase5_wp3_frontend_test.mjs.txt"
+    },
+    {
+      "script": "asset_workbench_frontend_test.mjs",
+      "exitCode": 0,
+      "output": "asset_workbench_frontend_test.mjs.txt"
+    },
+    {
+      "script": "digital_stage_frontend_test.mjs",
+      "exitCode": 0,
+      "output": "digital_stage_frontend_test.mjs.txt"
+    },
+    {
+      "script": "site_navigator_test.mjs",
+      "exitCode": 0,
+      "output": "site_navigator_test.mjs.txt"
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0
+}

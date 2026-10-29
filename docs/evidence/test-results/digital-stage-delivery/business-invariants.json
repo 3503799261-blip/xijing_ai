@@ -1,0 +1,463 @@
+{
+  "checkedAtUtc": "2026-10-29T14:00:17.112224+00:00",
+  "baselineAtUtc": "2026-10-29T10:43:17.202896+00:00",
+  "method": "SQLite mode=ro/query_only; all table schemas and canonical rows; no application imports or HTTP",
+  "comparison": {
+    "beforeFile": "business-before.json",
+    "protectedFields": {
+      "databases": true,
+      "tasks": true,
+      "taskIds": true,
+      "taskStates": true,
+      "liveTaskIds": true,
+      "models": true,
+      "quota": true,
+      "llmCalls": true
+    },
+    "allProtectedUnchanged": true,
+    "htmlChanged": [
+      "index.html",
+      "history.html",
+      "roles.html",
+      "facial.html",
+      "music.html",
+      "gallery.html",
+      "video.html",
+      "about.html"
+    ]
+  },
+  "databases": {
+    "agents": {
+      "relativeRuntimeDatabase": "xijing-ai/agent-tasks.sqlite3",
+      "tables": {
+        "agent_artifacts": {
+          "count": 59,
+          "canonicalSha256": "b89cc38db598d96d606600f8a8a17db28382e4bfcd2bbeec63a9c331dc399b26",
+          "schemaSha256": "8628b2ac22cc5c07d16a3656d7272eddf62493ba74a415f926b191364c0f566f",
+          "columns": [
+            "task_id",
+            "agent_id",
+            "version",
+            "content_json",
+            "content_hash",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "task_id",
+            "agent_id",
+            "version"
+          ]
+        },
+        "agent_events": {
+          "count": 194,
+          "canonicalSha256": "5d0dce9e1d9061f4999636705c820ae4b95f7045947b8880e637c34f92821d68",
+          "schemaSha256": "d9aa4894dea210d16b750bdc9ba103230a2e383915c2e9e15ea5dff1859d4b37",
+          "columns": [
+            "task_id",
+            "sequence",
+            "payload_json"
+          ],
+          "primaryKeyColumns": [
+            "task_id",
+            "sequence"
+          ]
+        },
+        "agent_steps": {
+          "count": 88,
+          "canonicalSha256": "7a311605a4f640e4baddda826afdf6c60467d7b697e375818d1b2e158b6d5b19",
+          "schemaSha256": "e1be5eea27bbad12d72234f151f31ff8d7d5c101d248a5783f45a2d5460f7a29",
+          "columns": [
+            "task_id",
+            "agent_id",
+            "state",
+            "summary",
+            "started_at",
+            "finished_at",
+            "error_code"
+          ],
+          "primaryKeyColumns": [
+            "task_id",
+            "agent_id"
+          ]
+        },
+        "agent_tasks": {
+          "count": 22,
+          "canonicalSha256": "8e5dc92743b968de5436c48e439a56649b6bbc73b6307be531cba9f11fc159bb",
+          "schemaSha256": "c8de06926ece4dee8830ce78d5cd0b934ee95126afad9cf8440e4f3ac80eae4c",
+          "columns": [
+            "task_id",
+            "idempotency_key",
+            "signature",
+            "brief_json",
+            "state",
+            "sequence",
+            "current_agent",
+            "confirmation_json",
+            "result_json",
+            "cancel_requested",
+            "created_at",
+            "updated_at"
+          ],
+          "primaryKeyColumns": [
+            "task_id"
+          ]
+        }
+      },
+      "databaseCanonicalSha256": "7c6e7deb90a252f2f1f4e363b63a7ccaab2f7c3bcb6a7392cff5eae5b194725e",
+      "mode": "ro",
+      "queryOnly": true
+    },
+    "catalog": {
+      "relativeRuntimeDatabase": "xijing-ai/assets/catalog.sqlite3",
+      "tables": {
+        "asset_images": {
+          "count": 1,
+          "canonicalSha256": "349bc59ec5cc0ecede47da576bc12cffc1ba64f591ce859deec067805712bc91",
+          "schemaSha256": "0ce983c09fd876bd5c392d4cceb04e929464d3ac4644a3c289fb363454041e1d",
+          "columns": [
+            "image_id",
+            "asset_id",
+            "content_json",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "image_id"
+          ]
+        },
+        "asset_models": {
+          "count": 4,
+          "canonicalSha256": "957e63e6dffaac3c82c22fbf5065a9736330983a3719744cbe43ccfefa3c5cf0",
+          "schemaSha256": "dfb48cf75761e7fb6dc9964be206ed5ff0fafb66a98b0e2ea8dd226b8a504a37",
+          "columns": [
+            "model_id",
+            "asset_id",
+            "content_json",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "model_id"
+          ]
+        },
+        "character_assets": {
+          "count": 3,
+          "canonicalSha256": "5f14b68b257744eb13acf70527faeefcd083e7bb14e13f0c216ac2d50aab6573",
+          "schemaSha256": "eb69f2fc0be24c76f3d5f7ce1623e4f93815024b0cbc739959c334c2736a25d6",
+          "columns": [
+            "asset_id",
+            "signature",
+            "content_json",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "asset_id"
+          ]
+        },
+        "concept_candidates": {
+          "count": 3,
+          "canonicalSha256": "4b258b61ff72431cceadd2e8a5731fcadfa619cd2745bd1e006e0a50942aaf3b",
+          "schemaSha256": "d7a27a702fafbdb89d471493dbde1c660bb416bea7fd29101e928fe12e4efb32",
+          "columns": [
+            "candidate_id",
+            "scope",
+            "version",
+            "signature",
+            "content_json",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "candidate_id"
+          ]
+        },
+        "neural4d_frozen_approvals": {
+          "count": 2,
+          "canonicalSha256": "b02bbbe0b5698a6f779bb979b86a9f4d2688cc21e1fd19bf11f1ac867b5dc3ec",
+          "schemaSha256": "e9be2ac9a6c97d565fb329bd3a3fdc2e37288a841f329804de83573dec675c6a",
+          "columns": [
+            "approval_id",
+            "payload_json"
+          ],
+          "primaryKeyColumns": [
+            "approval_id"
+          ]
+        },
+        "neural4d_query_limits": {
+          "count": 2,
+          "canonicalSha256": "675a8f043a701aeddc0e177ee8de3a9464ed887e1e782ac7ca801f90504430ad",
+          "schemaSha256": "17735dd7f91f2b4033ccaad01f4d286187b18a73b8bcdd637d568e3388580bef",
+          "columns": [
+            "job_id",
+            "last_query",
+            "series_start",
+            "series_count",
+            "total_count"
+          ],
+          "primaryKeyColumns": [
+            "job_id"
+          ]
+        }
+      },
+      "databaseCanonicalSha256": "6cd781985de61c2b330bc0a24abe7ea170addf989603d0599873b810e097a962",
+      "mode": "ro",
+      "queryOnly": true
+    },
+    "neural4dUsage": {
+      "relativeRuntimeDatabase": "neural4d-usage.sqlite3",
+      "tables": {
+        "neural4d_attempt_events": {
+          "count": 17,
+          "canonicalSha256": "428facec2ab2738f5fec62b85158fb5902d74beae1b1aa88d58fb7e7d703c7ed",
+          "schemaSha256": "ba24a59834e969ec324193e08aa14a66d716cbd2ce05407201f7c3f645222b0c",
+          "columns": [
+            "sequence",
+            "attempt_id",
+            "state",
+            "recorded_at",
+            "provider_task_id",
+            "error_code",
+            "http_status"
+          ],
+          "primaryKeyColumns": [
+            "sequence"
+          ]
+        },
+        "neural4d_creation_attempts": {
+          "count": 2,
+          "canonicalSha256": "3aa7bcdf3f30e797670b3f64beb482fa59a7de4c67e17bfd7f93027507feaca8",
+          "schemaSha256": "fd4817045bbad4af30ad9b425479204ec3cdd214f7d79f34962f9c85baa076cb",
+          "columns": [
+            "attempt_id",
+            "project_id",
+            "idempotency_key",
+            "approval_id",
+            "payload_hash",
+            "payload_json",
+            "purpose",
+            "estimated_credits",
+            "state",
+            "reserved_at",
+            "started_at",
+            "updated_at",
+            "provider_task_id",
+            "error_code",
+            "http_status"
+          ],
+          "primaryKeyColumns": [
+            "attempt_id"
+          ]
+        },
+        "neural4d_model_approvals": {
+          "count": 2,
+          "canonicalSha256": "276bb538d4a72c2de34d12837adb5b49b8ccdd2569bfb2ac1893face3affe701",
+          "schemaSha256": "0671019a48a9cc825cf540d45b6a3f944744594994e93e3129c1953e47d18529",
+          "columns": [
+            "approval_id",
+            "payload_hash",
+            "purpose",
+            "estimated_credits",
+            "confirmed_at",
+            "expires_at",
+            "consumed_attempt_id"
+          ],
+          "primaryKeyColumns": [
+            "approval_id"
+          ]
+        },
+        "neural4d_operational_requests": {
+          "count": 18,
+          "canonicalSha256": "6bb8a39fe23942d6cbca6f35748da0dc0fd9957ed3435e345e5859639793c487",
+          "schemaSha256": "7902936be9ade38d1c4452233184743afefbef961a16c329ccf5baf480f89fa9",
+          "columns": [
+            "request_id",
+            "operation",
+            "attempt_id",
+            "is_mock",
+            "recorded_at",
+            "http_status",
+            "duration_ms",
+            "actual_credits",
+            "error_code"
+          ],
+          "primaryKeyColumns": [
+            "request_id"
+          ]
+        },
+        "neural4d_usage_policy": {
+          "count": 1,
+          "canonicalSha256": "b355fd10cb861dca9765e1a36180e25f484217eb7390d830ad66655aa6bd00d2",
+          "schemaSha256": "334031efcea910887f888a8a23a69dfca3baca520529292adfee25213626aa9d",
+          "columns": [
+            "project_id",
+            "policy_version",
+            "max_attempts",
+            "historical_used",
+            "historical_note",
+            "historical_verified_at",
+            "creation_halted",
+            "halt_code",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "project_id"
+          ]
+        }
+      },
+      "databaseCanonicalSha256": "35e980b5c6c3b0fdeeb1ffa9e44fe068a63ecb768670b787a713208438fd81ad",
+      "mode": "ro",
+      "queryOnly": true
+    },
+    "llmBudget": {
+      "relativeRuntimeDatabase": "xijing-ai/api-budget.sqlite3",
+      "tables": {
+        "budget_scopes": {
+          "count": 1,
+          "canonicalSha256": "8dfedfcd2fd8edb350b440f6a42d4646de2a816b087c030575199bd650b72cbf",
+          "schemaSha256": "1078f71d5b895291e2ec3fdd6d29de631d30aed6c2b5e07ad2cd2cfe98f3ca4d",
+          "columns": [
+            "name",
+            "budget_cny",
+            "created_at"
+          ],
+          "primaryKeyColumns": [
+            "name"
+          ]
+        },
+        "call_scopes": {
+          "count": 48,
+          "canonicalSha256": "af01e35e4a5b01d851d899d05daa5eb214530041c1c60dfdc7ce5ff3e0104e34",
+          "schemaSha256": "3b2e4b06a6f3d685f94d50a5db24f4c3aecbeab00268b9d520387c728de0327c",
+          "columns": [
+            "request_id",
+            "scope"
+          ],
+          "primaryKeyColumns": [
+            "request_id"
+          ]
+        },
+        "calls": {
+          "count": 110,
+          "canonicalSha256": "94519d2440c477a1deaf1759f0790460a3bf85faaaf914f29a50acaa023951ee",
+          "schemaSha256": "38be5703cf90a8a57068f3895e8a3c8367d26f919c1ca3e7eaab29db8b028ca5",
+          "columns": [
+            "request_id",
+            "created_at",
+            "status",
+            "reserved",
+            "cost",
+            "usage_json"
+          ],
+          "primaryKeyColumns": [
+            "request_id"
+          ]
+        }
+      },
+      "databaseCanonicalSha256": "7176aa7f39db9087a3ec28c131977d6b53bfe6a5d80292c136177610562173fc",
+      "mode": "ro",
+      "queryOnly": true
+    }
+  },
+  "taskCount": 22,
+  "taskIdsUnchanged": true,
+  "taskStates": {
+    "completed": 2,
+    "awaiting_confirmation": 15,
+    "cancelled": 2,
+    "failed": 3
+  },
+  "quota": {
+    "maxAttempts": 3,
+    "externalHistoricalUsed": 0,
+    "used": 2,
+    "remaining": 1,
+    "attemptStates": [
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ],
+    "attemptCanonicalSha256": "a4623f255d409efcf78cb3e734dbc03fd266ad7219d1b63c4418c09cba03ca0a",
+    "policyCanonicalSha256": "b355fd10cb861dca9765e1a36180e25f484217eb7390d830ad66655aa6bd00d2",
+    "unconsumedApprovals": 0,
+    "operationalRequestCount": 18,
+    "recordedCredits": 60.0
+  },
+  "llmCallsBefore": 110,
+  "llmCallsAfter": 110,
+  "models": [
+    {
+      "modelId": "1fa0b519-caf4-4009-aec2-f20b0f9a3523",
+      "assetId": "9e2b42e1-bbad-4a2f-ab1b-aeda18015dee",
+      "contentSha256": "b6b033c2b369a928e4e8859e54869c6b8809ca7fe52acef97b23dc9e587becc1",
+      "providerTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+      "origin": "neural4d",
+      "styleMode": "realistic",
+      "internalUseOnly": null,
+      "publicationAllowed": null,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5.glb",
+          "exists": true,
+          "sha256": "5a021ac6338009615e6ea232c5b9001eef6f4cc91d9d87c3eeeb5307526bdfd5",
+          "sizeBytes": 15158668,
+          "glbHeaderMatches": true
+        }
+      ]
+    },
+    {
+      "modelId": "3777a880-fc8c-4766-aade-948d20c6b8f0",
+      "assetId": null,
+      "contentSha256": "e4c338c7930093f21523e08ee8ea88543377efda7565ad86ec012615b3c757fc",
+      "providerTaskId": "bb074c31-1905-45b6-b763-22d065ddc616",
+      "origin": "neural4d_technical_test",
+      "styleMode": "chibi",
+      "internalUseOnly": true,
+      "publicationAllowed": false,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a.glb",
+          "exists": true,
+          "sha256": "bf9c808c15dbf5464ee67df1cdb3f64f9b2c6b3cd4ee41ecb8a6470a0554654a",
+          "sizeBytes": 8827324,
+          "glbHeaderMatches": true
+        }
+      ]
+    },
+    {
+      "modelId": "3e8a0a55-f124-42a5-8265-7a7bb9b4d9d8",
+      "assetId": null,
+      "contentSha256": "b80be3fc269f5570a666035d2ffc55e800e92da27e5b543f44a9bf431100943d",
+      "providerTaskId": null,
+      "origin": "local_test_fixture",
+      "styleMode": null,
+      "internalUseOnly": null,
+      "publicationAllowed": null,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5.glb",
+          "exists": true,
+          "sha256": "65bf938f54d6073e619e76e007820bbf980cdc3dc0daec0d94830ffc4ae54ab5",
+          "sizeBytes": 120484,
+          "glbHeaderMatches": true
+        }
+      ]
+    },
+    {
+      "modelId": "5ac8ea03-8bcd-4da8-bad5-af6da78269bf",
+      "assetId": null,
+      "contentSha256": "c5bcadb3e5c8cedcbf8b01bd000b0711ee95be7bc0387dc923b0b1e6dd10eac9",
+      "providerTaskId": null,
+      "origin": "local_test_fixture",
+      "styleMode": null,
+      "internalUseOnly": null,
+      "publicationAllowed": null,
+      "files": [
+        {
+          "relativeRuntimeAsset": "xijing-ai/assets/models/782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df.glb",
+          "exists": true,
+          "sha256": "782e30557f2e958ff6e29594c011cf3eb3a20ad84835f7a5840b6e7b531512df",
+          "sizeBytes": 120556,
+          "glbHeaderMatches": true
+        }
+      ]
+    }
+  ],
+  "privateDetailedSnapshots": "workspace .runtime/digital-stage-implementation-20261029/business-{before,after}.json",
+  "clientDateNote": "Reused WP4 collector has a historical clientDate constant; actual UTC timestamps above identify this run."
+}
