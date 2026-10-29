@@ -121,7 +121,9 @@ export function initializeAssetLibrary({ root, onSelect, onPendingSelected }) {
       if (results[1].status === 'rejected') notices.push('角色资料暂不可读，模型仍按实际记录显示。');
       if (prepared.some((result) => result.status === 'rejected')) notices.push('部分概念图未能读取，不影响选择原GLB。');
       setStatus(`${models.length}个已有模型${assets.filter((asset) => !asset.models.length).length ? '，另有待补充模型的角色' : ''}。${notices.join(' ')}`);
-      if (selectDefault && !initialSelectionDone && !selectedId) {
+      let explicitModel = null;
+      try { explicitModel = new URLSearchParams(globalThis.location?.search || '').get('modelId'); } catch { /* Optional deep link only. */ }
+      if (selectDefault && !initialSelectionDone && (!selectedId || explicitModel)) {
         let linkedModel = null, linkedAsset = preferredAssetId, remembered = null;
         try { const query = new URLSearchParams(globalThis.location?.search || ''); linkedModel = query.get('modelId'); linkedAsset = query.get('assetId') || linkedAsset; remembered = globalThis.sessionStorage?.getItem(STORAGE_KEY); } catch { /* No hidden fallback creation. */ }
         const chosen = items.find((item) => item.model?.modelId === linkedModel)

@@ -18,6 +18,7 @@ export function initializeChat({ root, setServiceState, onServiceFailure }) {
   const newButton = byId('new-conversation'), heading = byId('current-conversation'), references = byId('citations');
   const suggestions = root.querySelector('.ai-workshop-suggestions');
   let current = null, busy = false, historyBusy = false, failedTurn = null, offset = 0, generation = 0;
+  let startupComplete = false, pendingPrefill = null;
   const drafts = new Map();
   function remember(id) { try { localStorage.setItem(SELECTED_KEY, id); } catch { /* Optional preference only. */ } }
   function selected() { try { return localStorage.getItem(SELECTED_KEY); } catch { return null; } }
@@ -25,6 +26,15 @@ export function initializeChat({ root, setServiceState, onServiceFailure }) {
     errorBox.textContent = error instanceof ServiceError ? error.message : '请求暂时未能完成，请手动重试。'; errorBox.hidden = false;
   }
   function updateInput() { count.textContent = `${input.value.length} / 600 字`; }
+  function flushPrefill() {
+    if (!startupComplete || busy || historyBusy || pendingPrefill === null) return;
+    input.value = pendingPrefill; pendingPrefill = null;
+    input.dispatchEvent(new Event('input', { bubbles: true })); input.focus();
+  }
+  function prefill(value) {
+    if (typeof value !== 'string' || !value.trim() || value.length > 600 || busy) return false;
+    pendingPrefill = value; flushPrefill(); return true;
+  }
   function controls() {
     const locked = busy || historyBusy;
     send.disabled = locked; newButton.disabled = locked; more.disabled = locked;
@@ -100,7 +110,7 @@ export function initializeChat({ root, setServiceState, onServiceFailure }) {
       renderConversation(value); listStatus.textContent = '会话已恢复';
       setServiceState('history', '会话已恢复。实时回复以当前服务状态为准。');
     } catch (error) { feedback(error); listStatus.textContent = '会话读取失败，请重新选择。'; }
-    finally { historyBusy = false; controls(); }
+    finally { historyBusy = false; controls(); flushPrefill(); }
   }
   function row(item) {
     const button = node('button', 'ai-workshop-conversation'); button.type = 'button'; button.dataset.conversationId = item.id;
@@ -122,7 +132,7 @@ export function initializeChat({ root, setServiceState, onServiceFailure }) {
       more.textContent = '更多会话';
       return result;
     } catch (error) { listStatus.textContent = '暂时无法读取历史会话。'; feedback(error); more.hidden = false; more.textContent = '重新读取'; }
-    finally { historyBusy = false; controls(); }
+    finally { historyBusy = false; controls(); flushPrefill(); }
   }
   async function fresh() {
     if (busy || historyBusy) return;
@@ -130,7 +140,7 @@ export function initializeChat({ root, setServiceState, onServiceFailure }) {
     historyBusy = true; controls(); clearFeedback();
     try { renderConversation(await createConversation()); }
     catch (error) { feedback(error); }
-    finally { historyBusy = false; controls(); }
+    finally { historyBusy = false; controls(); flushPrefill(); }
     await loadList(); input.focus();
   }
   async function sendTurn(turn) {
@@ -179,6 +189,6 @@ export function initializeChat({ root, setServiceState, onServiceFailure }) {
   void loadList().then(async (result) => {
     if (!result?.items.length) return;
     const preferred = selected(); const id = result.items.find((item) => item.id === preferred)?.id || result.items[0].id; await choose(id);
-  });
-  return { isBusy: () => busy || historyBusy, isGenerating: () => busy, hasError: () => !errorBox.hidden, refresh: () => loadList() };
+  }).finally(() => { startupComplete = true; flushPrefill(); });
+  return { isBusy: () => busy || historyBusy, isGenerating: () => busy, hasError: () => !errorBox.hidden, refresh: () => loadList(), prefill };
 }

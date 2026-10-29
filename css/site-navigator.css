@@ -1,0 +1,16 @@
+/* A fixed local content finder; never changes the shared navigation width. */
+body.xijing-has-direct-nav { padding-bottom: 76px; }
+.xijing-direct-nav { position: fixed; inset: auto 0 0; z-index: 90; padding: 10px max(16px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)); border-top: 1px solid #d6bd91; background: rgba(255,250,240,.98); box-shadow: 0 -4px 18px rgba(76,35,20,.07); color: #3b2923; font-family: "Microsoft YaHei",sans-serif; }
+.xijing-direct-form { display: flex; align-items: center; gap: 12px; width: min(790px, 100%); margin: auto; }
+.xijing-direct-form label { flex: 0 0 auto; color: #8d1820; font-size: .9rem; font-weight: 600; }
+.xijing-direct-form input { min-width: 0; flex: 1; height: 42px; border: 1px solid #d5b98e; border-radius: 7px; padding: 8px 12px; background: #fffdf8; color: #30201b; font: inherit; font-size: .9rem; }
+.xijing-direct-form input:focus { outline: 2px solid #c99b45; outline-offset: 2px; }
+.xijing-direct-form > button { min-height: 42px; padding: 8px 20px; border: 1px solid #8d1820; border-radius: 7px; color: #fff9ee; background: #8d1820; font: inherit; cursor: pointer; }
+.xijing-direct-feedback { position: absolute; right: max(16px, calc((100vw - 790px)/2)); bottom: calc(100% + 8px); width: min(540px, calc(100vw - 32px)); padding: 15px 18px; border: 1px solid #d5b98e; border-radius: 8px; background: #fffaf0; box-shadow: 0 8px 28px #3b201323; font-size: .88rem; line-height: 1.8; }
+.xijing-direct-feedback[hidden] { display: none; }
+.xijing-direct-feedback p { margin: 0 0 8px; }
+.xijing-direct-alternatives { display: flex; flex-wrap: wrap; gap: 8px; }
+.xijing-direct-alternatives button { padding: 7px 11px; border: 1px solid #cdb28a; border-radius: 5px; background: #fffdf7; color: #8d1820; font: inherit; cursor: pointer; }
+.xijing-navigation-target { scroll-margin-top: calc(var(--xijing-header-height, 82px) + 18px); }
+.xijing-direct-nav button:focus-visible { outline: 2px solid #c99b45; outline-offset: 3px; }
+@media(max-width:600px) { body.xijing-has-direct-nav { padding-bottom: 70px; } .xijing-direct-form { gap: 7px; } .xijing-direct-form label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } .xijing-direct-form input { font-size: 16px; } .xijing-direct-form > button { padding: 8px 13px; } }
