@@ -1,0 +1,197 @@
+{
+  "checks": [
+    {
+      "name": "held pointer cancelled by actual group loading",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "muguiying",
+        "pickCount": 0,
+        "readyCharacters": [
+          "muguiying"
+        ],
+        "camera": [
+          7.5,
+          6.300000000000001,
+          17.499999999999996
+        ],
+        "target": [
+          0,
+          3.7999999999999994,
+          0.49999999999999994
+        ],
+        "distance": 18.74833325925267,
+        "orbit": {
+          "eventCount": 0,
+          "userEventCount": 0,
+          "maxContinuousDegrees": 0,
+          "samples": []
+        },
+        "rendererTriangles": 2207670,
+        "characterPoints": [
+          {
+            "id": "muguiying",
+            "x": 643.1420070532897,
+            "y": 408.2795916243805
+          }
+        ],
+        "focused": ""
+      }
+    },
+    {
+      "name": "held pointer cancelled when panel hidden then restored",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "muguiying",
+        "pickCount": 0,
+        "readyCharacters": [
+          "muguiying"
+        ],
+        "camera": [
+          7.5,
+          6.300000000000001,
+          17.499999999999996
+        ],
+        "target": [
+          0,
+          3.7999999999999994,
+          0.49999999999999994
+        ],
+        "distance": 18.74833325925267,
+        "orbit": {
+          "eventCount": 0,
+          "userEventCount": 0,
+          "maxContinuousDegrees": 0,
+          "samples": []
+        },
+        "rendererTriangles": 2207670,
+        "characterPoints": [
+          {
+            "id": "muguiying",
+            "x": 643.1420070532897,
+            "y": 408.2795916243805
+          }
+        ],
+        "focused": ""
+      }
+    },
+    {
+      "name": "hotspot layout and input remain usable 1920",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "label": [
+          {
+            "text": "穆桂英 · 近看",
+            "width": 121.328125,
+            "hidden": false
+          }
+        ],
+        "input": 605.59375
+      }
+    },
+    {
+      "name": "hotspot layout and input remain usable 1024",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "label": [
+          {
+            "text": "穆桂英 · 近看",
+            "width": 121.328125,
+            "hidden": false
+          }
+        ],
+        "input": 605.59375
+      }
+    },
+    {
+      "name": "hotspot layout and input remain usable 390",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "label": [
+          {
+            "text": "穆桂英 · 近看",
+            "width": 121.328125,
+            "hidden": false
+          }
+        ],
+        "input": 291
+      }
+    },
+    {
+      "name": "existing page HTTP / navigation index.html",
+      "status": "PASS",
+      "details": {
+        "status": 200,
+        "bytes": 12387
+      }
+    },
+    {
+      "name": "existing page HTTP / navigation history.html",
+      "status": "PASS",
+      "details": {
+        "status": 200,
+        "bytes": 13137
+      }
+    },
+    {
+      "name": "existing page HTTP / navigation roles.html",
+      "status": "PASS",
+      "details": {
+        "status": 200,
+        "bytes": 9344
+      }
+    },
+    {
+      "name": "existing page HTTP / navigation facial.html",
+      "status": "PASS",
+      "details": {
+        "status": 200,
+        "bytes": 9390
+      }
+    },
+    {
+      "name": "existing page HTTP / navigation music.html",
+      "status": "PASS",
+      "details": {
+        "status": 200,
+        "bytes": 8491
+      }
+    },
+    {
+      "name": "existing page HTTP / navigation video.html",
+      "status": "PASS",
+      "details": {
+        "status": 200,
+        "bytes": 7288
+      }
+    },
+    {
+      "name": "existing page HTTP / navigation gallery.html",
+      "status": "PASS",
+      "details": {
+        "status": 200,
+        "bytes": 12818
+      }
+    },
+    {
+      "name": "existing page HTTP / navigation about.html",
+      "status": "PASS",
+      "details": {
+        "status": 200,
+        "bytes": 55380
+      }
+    }
+  ],
+  "writes": [],
+  "external": [],
+  "errors": [],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "passed": 13,
+  "failed": 0,
+  "status": "PASS"
+}

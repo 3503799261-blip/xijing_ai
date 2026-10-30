@@ -1,5 +1,7 @@
 # 戏境 AI
 
+**2026-10-30人物交互修复：** 点击3D人物、人物上方“姓名 · 近看”或左侧人物卡片会切到人物近景，重置回戏台；鼠标/触摸点选与拖拽已区分。浏览器Ctrl+F5读取最新版本。[修复与实测](docs/reports/stage-character-click-fix.md)。本轮26项真实3D点击/触摸与13项补测通过，模型和业务数据不变，无付费调用。最新完整分类副本为`output/competition-submission/最终提交版-2026-10-30/`，旧日期目录保留为历史快照。
+
 **比赛代码入口：** [GitHub项目](https://github.com/3503799261-blip/xijing_ai) · [当前交付分支](https://github.com/3503799261-blip/xijing_ai/tree/feature/phase5-competition-delivery)。**已按用户授权上传完整历史，仓库Public，默认分支已切换到本交付分支，匿名读取与SHA一致性实测通过**；未合并或改写main。见[代码托管检查](docs/reports/submission-platform-check.md)。最终分类副本使用`output/competition-submission/最终提交版-2026-10-29/`，旧日期目录保留为先前快照。源码/环境/技术文档由项目整理，录像由用户自行完成。下文旧报告中的“未推送”是当时事实，不代表本节最新托管状态。
 
 ## 团队信息

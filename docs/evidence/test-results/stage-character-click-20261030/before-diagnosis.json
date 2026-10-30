@@ -1,0 +1,715 @@
+{
+  "checks": [
+    {
+      "id": "duliniang",
+      "initial": {
+        "state": "ready",
+        "selected": "duliniang",
+        "pickCount": 0,
+        "readyCharacters": [
+          "duliniang"
+        ],
+        "camera": [
+          7.5,
+          6.300000000000001,
+          17.499999999999996
+        ],
+        "target": [
+          0,
+          3.7999999999999994,
+          0.49999999999999994
+        ],
+        "distance": 18.74833325925267,
+        "orbit": {
+          "eventCount": 1,
+          "userEventCount": 0,
+          "maxContinuousDegrees": 0,
+          "samples": []
+        },
+        "rendererTriangles": 2207742,
+        "characterPoints": [
+          {
+            "id": "duliniang",
+            "x": 643.1420070532897,
+            "y": 413.2795916243805
+          }
+        ]
+      },
+      "results": [
+        {
+          "dx": 0,
+          "dy": 0,
+          "x": 643.1420070532897,
+          "y": 413.2795916243805,
+          "picked": true,
+          "before": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 0,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              7.5,
+              6.300000000000001,
+              17.499999999999996
+            ],
+            "target": [
+              0,
+              3.7999999999999994,
+              0.49999999999999994
+            ],
+            "distance": 18.74833325925267,
+            "orbit": {
+              "eventCount": 1,
+              "userEventCount": 0,
+              "maxContinuousDegrees": 0,
+              "samples": []
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 643.1420070532897,
+                "y": 413.2795916243805
+              }
+            ]
+          },
+          "after": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 1,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              1.3000000000000003,
+              2.755676388460765,
+              7.000000000000001
+            ],
+            "target": [
+              0,
+              1.955676388460766,
+              1.8
+            ],
+            "distance": 5.419409561935692,
+            "orbit": {
+              "eventCount": 2,
+              "userEventCount": 1,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 662.4921875,
+                "y": 340.0624999999999
+              }
+            ]
+          }
+        },
+        {
+          "dx": 0,
+          "dy": -25,
+          "x": 643.1420070532897,
+          "y": 388.2795916243805,
+          "picked": true,
+          "before": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 1,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              7.5,
+              6.300000000000001,
+              17.499999999999996
+            ],
+            "target": [
+              0,
+              3.7999999999999994,
+              0.49999999999999994
+            ],
+            "distance": 18.74833325925267,
+            "orbit": {
+              "eventCount": 3,
+              "userEventCount": 1,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 643.1420070532897,
+                "y": 413.2795916243805
+              }
+            ]
+          },
+          "after": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 2,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              1.3000000000000003,
+              2.755676388460765,
+              7.000000000000001
+            ],
+            "target": [
+              0,
+              1.955676388460766,
+              1.8
+            ],
+            "distance": 5.419409561935692,
+            "orbit": {
+              "eventCount": 4,
+              "userEventCount": 2,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 662.4921875,
+                "y": 340.0624999999999
+              }
+            ]
+          }
+        },
+        {
+          "dx": 15,
+          "dy": 0,
+          "x": 658.1420070532897,
+          "y": 413.2795916243805,
+          "picked": false,
+          "before": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 2,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              7.5,
+              6.300000000000001,
+              17.499999999999996
+            ],
+            "target": [
+              0,
+              3.7999999999999994,
+              0.49999999999999994
+            ],
+            "distance": 18.74833325925267,
+            "orbit": {
+              "eventCount": 5,
+              "userEventCount": 2,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 643.1420070532897,
+                "y": 413.2795916243805
+              }
+            ]
+          },
+          "after": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 2,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              7.5,
+              6.300000000000001,
+              17.499999999999996
+            ],
+            "target": [
+              0,
+              3.7999999999999994,
+              0.49999999999999994
+            ],
+            "distance": 18.74833325925267,
+            "orbit": {
+              "eventCount": 5,
+              "userEventCount": 2,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 643.1420070532897,
+                "y": 413.2795916243805
+              }
+            ]
+          }
+        },
+        {
+          "dx": -15,
+          "dy": 0,
+          "x": 628.1420070532897,
+          "y": 413.2795916243805,
+          "picked": false,
+          "before": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 2,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              7.5,
+              6.300000000000001,
+              17.499999999999996
+            ],
+            "target": [
+              0,
+              3.7999999999999994,
+              0.49999999999999994
+            ],
+            "distance": 18.74833325925267,
+            "orbit": {
+              "eventCount": 5,
+              "userEventCount": 2,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 643.1420070532897,
+                "y": 413.2795916243805
+              }
+            ]
+          },
+          "after": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 2,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              7.5,
+              6.300000000000001,
+              17.499999999999996
+            ],
+            "target": [
+              0,
+              3.7999999999999994,
+              0.49999999999999994
+            ],
+            "distance": 18.74833325925267,
+            "orbit": {
+              "eventCount": 5,
+              "userEventCount": 2,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 643.1420070532897,
+                "y": 413.2795916243805
+              }
+            ]
+          }
+        },
+        {
+          "dx": 0,
+          "dy": 25,
+          "x": 643.1420070532897,
+          "y": 438.2795916243805,
+          "picked": true,
+          "before": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 2,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              7.5,
+              6.300000000000001,
+              17.499999999999996
+            ],
+            "target": [
+              0,
+              3.7999999999999994,
+              0.49999999999999994
+            ],
+            "distance": 18.74833325925267,
+            "orbit": {
+              "eventCount": 5,
+              "userEventCount": 2,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 643.1420070532897,
+                "y": 413.2795916243805
+              }
+            ]
+          },
+          "after": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 3,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              1.3000000000000003,
+              2.755676388460765,
+              7.000000000000001
+            ],
+            "target": [
+              0,
+              1.955676388460766,
+              1.8
+            ],
+            "distance": 5.419409561935692,
+            "orbit": {
+              "eventCount": 6,
+              "userEventCount": 3,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 662.4921875,
+                "y": 340.0624999999999
+              }
+            ]
+          }
+        },
+        {
+          "dx": 0,
+          "dy": -45,
+          "x": 643.1420070532897,
+          "y": 368.2795916243805,
+          "picked": false,
+          "before": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 3,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              7.5,
+              6.300000000000001,
+              17.499999999999996
+            ],
+            "target": [
+              0,
+              3.7999999999999994,
+              0.49999999999999994
+            ],
+            "distance": 18.74833325925267,
+            "orbit": {
+              "eventCount": 7,
+              "userEventCount": 3,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 643.1420070532897,
+                "y": 413.2795916243805
+              }
+            ]
+          },
+          "after": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 3,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              7.5,
+              6.300000000000001,
+              17.499999999999996
+            ],
+            "target": [
+              0,
+              3.7999999999999994,
+              0.49999999999999994
+            ],
+            "distance": 18.74833325925267,
+            "orbit": {
+              "eventCount": 7,
+              "userEventCount": 3,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 643.1420070532897,
+                "y": 413.2795916243805
+              }
+            ]
+          }
+        },
+        {
+          "dx": 0,
+          "dy": 45,
+          "x": 643.1420070532897,
+          "y": 458.2795916243805,
+          "picked": false,
+          "before": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 3,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              7.5,
+              6.300000000000001,
+              17.499999999999996
+            ],
+            "target": [
+              0,
+              3.7999999999999994,
+              0.49999999999999994
+            ],
+            "distance": 18.74833325925267,
+            "orbit": {
+              "eventCount": 7,
+              "userEventCount": 3,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 643.1420070532897,
+                "y": 413.2795916243805
+              }
+            ]
+          },
+          "after": {
+            "state": "ready",
+            "selected": "duliniang",
+            "pickCount": 3,
+            "readyCharacters": [
+              "duliniang"
+            ],
+            "camera": [
+              7.5,
+              6.300000000000001,
+              17.499999999999996
+            ],
+            "target": [
+              0,
+              3.7999999999999994,
+              0.49999999999999994
+            ],
+            "distance": 18.74833325925267,
+            "orbit": {
+              "eventCount": 7,
+              "userEventCount": 3,
+              "maxContinuousDegrees": 0,
+              "samples": [
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                },
+                {
+                  "theta": 0.24497866312686414,
+                  "radius": 5.419409561935692,
+                  "source": "user-interaction"
+                }
+              ]
+            },
+            "rendererTriangles": 2207742,
+            "characterPoints": [
+              {
+                "id": "duliniang",
+                "x": 643.1420070532897,
+                "y": 413.2795916243805
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "writes": [],
+  "external": [],
+  "pageErrors": [],
+  "fatal": "page.waitForFunction: Timeout 120000ms exceeded."
+}

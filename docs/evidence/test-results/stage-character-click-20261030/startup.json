@@ -1,0 +1,6 @@
+{
+  "pid": 19120,
+  "ready": true,
+  "port": 8012,
+  "scope": "Actual stage resource route and frontend only; no business app, DB or provider"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "REAL_GLBS_SINGLE_CLICK_AND_TOUCH_REGRESSION",
+  "checks": [],
+  "writes": [],
+  "external": [],
+  "pageErrors": [],
+  "physicalPhone": "NOT_TESTED",
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "chrome": "156.0.8078.73",
+  "fatal": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8000/about.html?stageGroup=mudanting#ai-workshop-stage\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8000/about.html?stageGroup=mudanting#ai-workshop-stage\", waiting until \"domcontentloaded\"\u001b[22m\n",
+  "passed": 0,
+  "failed": 0,
+  "status": "FAIL"
+}

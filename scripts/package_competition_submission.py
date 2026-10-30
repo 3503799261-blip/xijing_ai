@@ -11,7 +11,7 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -58,9 +58,10 @@ def check_history():
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--output', type=Path, default=ROOT/'output/competition-submission/2026-10-29')
+    parser.add_argument('--client-date', default=datetime.now(timezone(timedelta(hours=8))).date().isoformat())
+    parser.add_argument('--output', type=Path)
     args = parser.parse_args()
-    output = args.output.resolve()
+    output = (args.output or ROOT/'output/competition-submission'/('最终提交版-'+args.client_date)).resolve()
     if not output.is_relative_to(ROOT/'output'):
         raise SystemExit('交付目录必须位于本项目output中。')
     if output.exists():
@@ -159,7 +160,7 @@ Neural4D真实额度台账：{ROOT.parent / '.runtime/neural4d-usage.sqlite3'}
             if bad: raise SystemExit('ZIP包含不应打包的本机资源，已停止。')
     files=[{'file':path.relative_to(output).as_posix(),'bytes':path.stat().st_size,'sha256':digest(path)}
            for path in sorted(output.rglob('*')) if path.is_file()]
-    manifest={'createdAtUtc':datetime.now(timezone.utc).isoformat(),'clientDate':'2026-10-29',
+    manifest={'createdAtUtc':datetime.now(timezone.utc).isoformat(),'clientDate':args.client_date,
               'branch':branch,'head':head,'workingTreeBefore':'clean','workingTreeAfter':git('status','--porcelain').decode('utf-8'),
               'gitLog':git('log','-8','--format=%H %s').decode('utf-8').splitlines(),
               'historyCredentialPatternScan':history,'gitBundleVerify':bundle_check,

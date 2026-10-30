@@ -1,0 +1,138 @@
+{
+  "at": "2026-10-30T04:08:04.228Z",
+  "kind": "OFFLINE_LOCAL_NAVIGATION_ROUTING",
+  "results": [
+    {
+      "name": "想了解京剧脸谱的含义 -> facial",
+      "pass": true
+    },
+    {
+      "name": "我想了解京剧历史 -> history",
+      "pass": true
+    },
+    {
+      "name": "四大徽班 -> origin",
+      "pass": true
+    },
+    {
+      "name": "梅兰芳 -> mei",
+      "pass": true
+    },
+    {
+      "name": "程砚秋 -> cheng",
+      "pass": true
+    },
+    {
+      "name": "谭鑫培 -> tan",
+      "pass": true
+    },
+    {
+      "name": "生旦净丑有什么区别 -> roles",
+      "pass": true
+    },
+    {
+      "name": "武生 -> sheng",
+      "pass": true
+    },
+    {
+      "name": "青衣 -> dan",
+      "pass": true
+    },
+    {
+      "name": "净角 -> jing",
+      "pass": true
+    },
+    {
+      "name": "小花脸 -> chou",
+      "pass": true
+    },
+    {
+      "name": "我想听西皮 -> xipi",
+      "pass": true
+    },
+    {
+      "name": "二黄 -> erhuang",
+      "pass": true
+    },
+    {
+      "name": "看看京胡 -> jinghu",
+      "pass": true
+    },
+    {
+      "name": "锣鼓经 -> percussion",
+      "pass": true
+    },
+    {
+      "name": "听唱段 -> audio",
+      "pass": true
+    },
+    {
+      "name": "演出录像 -> video",
+      "pass": true
+    },
+    {
+      "name": "戏服 -> costume",
+      "pass": true
+    },
+    {
+      "name": "演员照片 -> photos",
+      "pass": true
+    },
+    {
+      "name": "数字戏台 -> stage",
+      "pass": true
+    },
+    {
+      "name": "我想看３Ｄ模型 -> stage",
+      "pass": true
+    },
+    {
+      "name": "看周瑜的模型 -> zhouyu",
+      "pass": true
+    },
+    {
+      "name": "杜丽娘 -> duliniang",
+      "pass": true
+    },
+    {
+      "name": "穆桂英 -> muguiying",
+      "pass": true
+    },
+    {
+      "name": "智能问答 -> qa",
+      "pass": true
+    },
+    {
+      "name": "京剧 -> home",
+      "pass": true
+    },
+    {
+      "name": "empty and unsupported query do not invent destinations",
+      "pass": true
+    },
+    {
+      "name": "multiple equally specific topics remain explicit choices",
+      "pass": true
+    },
+    {
+      "name": "single role characters cannot match arbitrary unrelated words",
+      "pass": true
+    },
+    {
+      "name": "all destinations are fixed local pages with unique topic IDs",
+      "pass": true
+    },
+    {
+      "name": "every destination page and all eight integration links exist",
+      "pass": true
+    },
+    {
+      "name": "navigator has no external or paid business call path",
+      "pass": true
+    }
+  ],
+  "passed": 32,
+  "failed": 0,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0
+}

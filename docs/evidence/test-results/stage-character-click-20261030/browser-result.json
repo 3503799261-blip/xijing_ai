@@ -1,0 +1,3003 @@
+{
+  "kind": "REAL_GLBS_SINGLE_CLICK_AND_TOUCH_REGRESSION",
+  "checks": [
+    {
+      "name": "single name button / keyboard and real focus duliniang",
+      "status": "PASS",
+      "details": {
+        "before": {
+          "state": "ready",
+          "selected": "duliniang",
+          "pickCount": 0,
+          "readyCharacters": [
+            "duliniang"
+          ],
+          "camera": [
+            7.5,
+            6.300000000000001,
+            17.499999999999996
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.49999999999999994
+          ],
+          "distance": 18.74833325925267,
+          "orbit": {
+            "eventCount": 1,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207742,
+          "characterPoints": [
+            {
+              "id": "duliniang",
+              "x": 643.1420070532897,
+              "y": 408.2795916243805
+            }
+          ],
+          "focused": "",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "duliniang",
+              "hidden": false,
+              "text": "杜丽娘 · 近看"
+            }
+          ]
+        },
+        "after": {
+          "state": "ready",
+          "selected": "duliniang",
+          "pickCount": 0,
+          "readyCharacters": [
+            "duliniang"
+          ],
+          "camera": [
+            1.3000000000000003,
+            2.755676388460765,
+            7.000000000000001
+          ],
+          "target": [
+            0,
+            1.955676388460766,
+            1.8
+          ],
+          "distance": 5.419409561935692,
+          "orbit": {
+            "eventCount": 2,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207742,
+          "characterPoints": [
+            {
+              "id": "duliniang",
+              "x": 662.4921875,
+              "y": 335.0624999999999
+            }
+          ],
+          "focused": "duliniang",
+          "source": "name-button",
+          "status": "近看杜丽娘 · 拖拽观察，重置视角返回戏台",
+          "hotspots": [
+            {
+              "id": "duliniang",
+              "hidden": false,
+              "text": "杜丽娘 · 近看"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "left card single click visibly focuses duliniang",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "duliniang",
+        "pickCount": 0,
+        "readyCharacters": [
+          "duliniang"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 6,
+          "userEventCount": 0,
+          "maxContinuousDegrees": 0,
+          "samples": []
+        },
+        "rendererTriangles": 2207742,
+        "characterPoints": [
+          {
+            "id": "duliniang",
+            "x": 662.4921875,
+            "y": 335.0624999999999
+          }
+        ],
+        "focused": "duliniang",
+        "source": "name-button",
+        "status": "近看杜丽娘 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "duliniang",
+            "hidden": false,
+            "text": "杜丽娘 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "one direct real body click duliniang",
+      "status": "PASS",
+      "details": {
+        "point": {
+          "id": "duliniang",
+          "x": 643.1420070532897,
+          "y": 408.2795916243805
+        },
+        "before": {
+          "state": "ready",
+          "selected": "duliniang",
+          "pickCount": 0,
+          "readyCharacters": [
+            "duliniang"
+          ],
+          "camera": [
+            7.5,
+            6.300000000000001,
+            17.499999999999996
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.49999999999999994
+          ],
+          "distance": 18.74833325925267,
+          "orbit": {
+            "eventCount": 7,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207742,
+          "characterPoints": [
+            {
+              "id": "duliniang",
+              "x": 643.1420070532897,
+              "y": 408.2795916243805
+            }
+          ],
+          "focused": "",
+          "source": "name-button",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "duliniang",
+              "hidden": false,
+              "text": "杜丽娘 · 近看"
+            }
+          ]
+        },
+        "after": {
+          "state": "ready",
+          "selected": "duliniang",
+          "pickCount": 1,
+          "readyCharacters": [
+            "duliniang"
+          ],
+          "camera": [
+            1.3000000000000003,
+            2.755676388460765,
+            7.000000000000001
+          ],
+          "target": [
+            0,
+            1.955676388460766,
+            1.8
+          ],
+          "distance": 5.419409561935692,
+          "orbit": {
+            "eventCount": 8,
+            "userEventCount": 1,
+            "maxContinuousDegrees": 0,
+            "samples": [
+              {
+                "theta": 0.24497866312686414,
+                "radius": 5.419409561935692,
+                "source": "user-interaction"
+              }
+            ]
+          },
+          "rendererTriangles": 2207742,
+          "characterPoints": [
+            {
+              "id": "duliniang",
+              "x": 662.4921875,
+              "y": 335.0624999999999
+            }
+          ],
+          "focused": "duliniang",
+          "source": "geometry",
+          "status": "近看杜丽娘 · 拖拽观察，重置视角返回戏台",
+          "hotspots": [
+            {
+              "id": "duliniang",
+              "hidden": false,
+              "text": "杜丽娘 · 近看"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "small mouse jitter preserves intended person duliniang",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "duliniang",
+        "pickCount": 2,
+        "readyCharacters": [
+          "duliniang"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 11,
+          "userEventCount": 3,
+          "maxContinuousDegrees": 7.359658209527059,
+          "samples": [
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.37342893070454203,
+              "radius": 18.74833325925267,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207742,
+        "characterPoints": [
+          {
+            "id": "duliniang",
+            "x": 662.4921875,
+            "y": 335.0624999999999
+          }
+        ],
+        "focused": "duliniang",
+        "source": "geometry",
+        "status": "近看杜丽娘 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "duliniang",
+            "hidden": false,
+            "text": "杜丽娘 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "drag away and back does not select duliniang",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "duliniang",
+        "pickCount": 2,
+        "readyCharacters": [
+          "duliniang"
+        ],
+        "camera": [
+          7.499999999999992,
+          6.299999999999997,
+          17.499999999999975
+        ],
+        "target": [
+          0,
+          3.7999999999999994,
+          0.4999999999999999
+        ],
+        "distance": 18.74833325925265,
+        "orbit": {
+          "eventCount": 28,
+          "userEventCount": 19,
+          "maxContinuousDegrees": 42.17573221757321,
+          "samples": [
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.37342893070454203,
+              "radius": 18.74833325925267,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.32347892198637795,
+              "radius": 18.74833325925267,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.2314657480318652,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.13945257407735245,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.04743940012283969,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.044573773831673075,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.13658694778618582,
+              "radius": 18.748333259252664,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.2286001217406986,
+              "radius": 18.748333259252664,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.32061329569521135,
+              "radius": 18.74833325925266,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.2286001217406986,
+              "radius": 18.748333259252657,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.1365869477861858,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.04457377383167303,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.04743940012283973,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.1394525740773525,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.23146574803186526,
+              "radius": 18.74833325925265,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.323478921986378,
+              "radius": 18.74833325925265,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 18.74833325925265,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207742,
+        "characterPoints": [
+          {
+            "id": "duliniang",
+            "x": 643.1420070532897,
+            "y": 408.27959162438066
+          }
+        ],
+        "focused": "",
+        "source": "geometry",
+        "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+        "hotspots": [
+          {
+            "id": "duliniang",
+            "hidden": false,
+            "text": "杜丽娘 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "single name button / keyboard and real focus muguiying",
+      "status": "PASS",
+      "details": {
+        "before": {
+          "state": "ready",
+          "selected": "muguiying",
+          "pickCount": 0,
+          "readyCharacters": [
+            "muguiying"
+          ],
+          "camera": [
+            7.5,
+            6.300000000000001,
+            17.499999999999996
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.49999999999999994
+          ],
+          "distance": 18.74833325925267,
+          "orbit": {
+            "eventCount": 1,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207670,
+          "characterPoints": [
+            {
+              "id": "muguiying",
+              "x": 643.1420070532897,
+              "y": 408.2795916243805
+            }
+          ],
+          "focused": "",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "muguiying",
+              "hidden": false,
+              "text": "穆桂英 · 近看"
+            }
+          ]
+        },
+        "after": {
+          "state": "ready",
+          "selected": "muguiying",
+          "pickCount": 0,
+          "readyCharacters": [
+            "muguiying"
+          ],
+          "camera": [
+            1.3000000000000003,
+            2.755676388460765,
+            7.000000000000001
+          ],
+          "target": [
+            0,
+            1.955676388460766,
+            1.8
+          ],
+          "distance": 5.419409561935692,
+          "orbit": {
+            "eventCount": 2,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207670,
+          "characterPoints": [
+            {
+              "id": "muguiying",
+              "x": 662.4921875,
+              "y": 335.0624999999999
+            }
+          ],
+          "focused": "muguiying",
+          "source": "name-button",
+          "status": "近看穆桂英 · 拖拽观察，重置视角返回戏台",
+          "hotspots": [
+            {
+              "id": "muguiying",
+              "hidden": false,
+              "text": "穆桂英 · 近看"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "left card single click visibly focuses muguiying",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "muguiying",
+        "pickCount": 0,
+        "readyCharacters": [
+          "muguiying"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 4,
+          "userEventCount": 0,
+          "maxContinuousDegrees": 0,
+          "samples": []
+        },
+        "rendererTriangles": 2207670,
+        "characterPoints": [
+          {
+            "id": "muguiying",
+            "x": 662.4921875,
+            "y": 335.0624999999999
+          }
+        ],
+        "focused": "muguiying",
+        "source": "name-button",
+        "status": "近看穆桂英 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "muguiying",
+            "hidden": false,
+            "text": "穆桂英 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "one direct real body click muguiying",
+      "status": "PASS",
+      "details": {
+        "point": {
+          "id": "muguiying",
+          "x": 643.1420070532897,
+          "y": 408.2795916243805
+        },
+        "before": {
+          "state": "ready",
+          "selected": "muguiying",
+          "pickCount": 0,
+          "readyCharacters": [
+            "muguiying"
+          ],
+          "camera": [
+            7.5,
+            6.300000000000001,
+            17.499999999999996
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.49999999999999994
+          ],
+          "distance": 18.74833325925267,
+          "orbit": {
+            "eventCount": 5,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207670,
+          "characterPoints": [
+            {
+              "id": "muguiying",
+              "x": 643.1420070532897,
+              "y": 408.2795916243805
+            }
+          ],
+          "focused": "",
+          "source": "name-button",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "muguiying",
+              "hidden": false,
+              "text": "穆桂英 · 近看"
+            }
+          ]
+        },
+        "after": {
+          "state": "ready",
+          "selected": "muguiying",
+          "pickCount": 1,
+          "readyCharacters": [
+            "muguiying"
+          ],
+          "camera": [
+            1.3000000000000003,
+            2.755676388460765,
+            7.000000000000001
+          ],
+          "target": [
+            0,
+            1.955676388460766,
+            1.8
+          ],
+          "distance": 5.419409561935692,
+          "orbit": {
+            "eventCount": 6,
+            "userEventCount": 1,
+            "maxContinuousDegrees": 0,
+            "samples": [
+              {
+                "theta": 0.24497866312686414,
+                "radius": 5.419409561935692,
+                "source": "user-interaction"
+              }
+            ]
+          },
+          "rendererTriangles": 2207670,
+          "characterPoints": [
+            {
+              "id": "muguiying",
+              "x": 662.4921875,
+              "y": 335.0624999999999
+            }
+          ],
+          "focused": "muguiying",
+          "source": "geometry",
+          "status": "近看穆桂英 · 拖拽观察，重置视角返回戏台",
+          "hotspots": [
+            {
+              "id": "muguiying",
+              "hidden": false,
+              "text": "穆桂英 · 近看"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "small mouse jitter preserves intended person muguiying",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "muguiying",
+        "pickCount": 2,
+        "readyCharacters": [
+          "muguiying"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 9,
+          "userEventCount": 3,
+          "maxContinuousDegrees": 7.359658209527059,
+          "samples": [
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.37342893070454203,
+              "radius": 18.74833325925267,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207670,
+        "characterPoints": [
+          {
+            "id": "muguiying",
+            "x": 662.4921875,
+            "y": 335.0624999999999
+          }
+        ],
+        "focused": "muguiying",
+        "source": "geometry",
+        "status": "近看穆桂英 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "muguiying",
+            "hidden": false,
+            "text": "穆桂英 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "drag away and back does not select muguiying",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "muguiying",
+        "pickCount": 2,
+        "readyCharacters": [
+          "muguiying"
+        ],
+        "camera": [
+          7.499999999999992,
+          6.299999999999997,
+          17.499999999999975
+        ],
+        "target": [
+          0,
+          3.7999999999999994,
+          0.4999999999999999
+        ],
+        "distance": 18.74833325925265,
+        "orbit": {
+          "eventCount": 26,
+          "userEventCount": 19,
+          "maxContinuousDegrees": 42.17573221757321,
+          "samples": [
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.37342893070454203,
+              "radius": 18.74833325925267,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.32347892198637795,
+              "radius": 18.74833325925267,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.2314657480318652,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.13945257407735245,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.04743940012283969,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.044573773831673075,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.13658694778618582,
+              "radius": 18.748333259252664,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.2286001217406986,
+              "radius": 18.748333259252664,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.32061329569521135,
+              "radius": 18.74833325925266,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.2286001217406986,
+              "radius": 18.748333259252657,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.1365869477861858,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.04457377383167303,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.04743940012283973,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.1394525740773525,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.23146574803186526,
+              "radius": 18.74833325925265,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.323478921986378,
+              "radius": 18.74833325925265,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 18.74833325925265,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207670,
+        "characterPoints": [
+          {
+            "id": "muguiying",
+            "x": 643.1420070532897,
+            "y": 408.27959162438066
+          }
+        ],
+        "focused": "",
+        "source": "geometry",
+        "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+        "hotspots": [
+          {
+            "id": "muguiying",
+            "hidden": false,
+            "text": "穆桂英 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "single name button / keyboard and real focus zhouyu",
+      "status": "PASS",
+      "details": {
+        "before": {
+          "state": "ready",
+          "selected": "zhouyu",
+          "pickCount": 0,
+          "readyCharacters": [
+            "zhouyu"
+          ],
+          "camera": [
+            7.5,
+            6.300000000000001,
+            17.499999999999996
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.49999999999999994
+          ],
+          "distance": 18.74833325925267,
+          "orbit": {
+            "eventCount": 1,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207754,
+          "characterPoints": [
+            {
+              "id": "zhouyu",
+              "x": 643.1420070532897,
+              "y": 408.2795916243805
+            }
+          ],
+          "focused": "",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "zhouyu",
+              "hidden": false,
+              "text": "周瑜 · 近看"
+            }
+          ]
+        },
+        "after": {
+          "state": "ready",
+          "selected": "zhouyu",
+          "pickCount": 0,
+          "readyCharacters": [
+            "zhouyu"
+          ],
+          "camera": [
+            1.3000000000000003,
+            2.755676388460765,
+            7.000000000000001
+          ],
+          "target": [
+            0,
+            1.955676388460766,
+            1.8
+          ],
+          "distance": 5.419409561935692,
+          "orbit": {
+            "eventCount": 2,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207754,
+          "characterPoints": [
+            {
+              "id": "zhouyu",
+              "x": 662.4921875,
+              "y": 335.0624999999999
+            }
+          ],
+          "focused": "zhouyu",
+          "source": "name-button",
+          "status": "近看周瑜 · 拖拽观察，重置视角返回戏台",
+          "hotspots": [
+            {
+              "id": "zhouyu",
+              "hidden": false,
+              "text": "周瑜 · 近看"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "left card single click visibly focuses zhouyu",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "zhouyu",
+        "pickCount": 0,
+        "readyCharacters": [
+          "zhouyu"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 4,
+          "userEventCount": 0,
+          "maxContinuousDegrees": 0,
+          "samples": []
+        },
+        "rendererTriangles": 2207754,
+        "characterPoints": [
+          {
+            "id": "zhouyu",
+            "x": 662.4921875,
+            "y": 335.0624999999999
+          }
+        ],
+        "focused": "zhouyu",
+        "source": "name-button",
+        "status": "近看周瑜 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "zhouyu",
+            "hidden": false,
+            "text": "周瑜 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "one direct real body click zhouyu",
+      "status": "PASS",
+      "details": {
+        "point": {
+          "id": "zhouyu",
+          "x": 643.1420070532897,
+          "y": 408.2795916243805
+        },
+        "before": {
+          "state": "ready",
+          "selected": "zhouyu",
+          "pickCount": 0,
+          "readyCharacters": [
+            "zhouyu"
+          ],
+          "camera": [
+            7.5,
+            6.300000000000001,
+            17.499999999999996
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.49999999999999994
+          ],
+          "distance": 18.74833325925267,
+          "orbit": {
+            "eventCount": 5,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207754,
+          "characterPoints": [
+            {
+              "id": "zhouyu",
+              "x": 643.1420070532897,
+              "y": 408.2795916243805
+            }
+          ],
+          "focused": "",
+          "source": "name-button",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "zhouyu",
+              "hidden": false,
+              "text": "周瑜 · 近看"
+            }
+          ]
+        },
+        "after": {
+          "state": "ready",
+          "selected": "zhouyu",
+          "pickCount": 1,
+          "readyCharacters": [
+            "zhouyu"
+          ],
+          "camera": [
+            1.3000000000000003,
+            2.755676388460765,
+            7.000000000000001
+          ],
+          "target": [
+            0,
+            1.955676388460766,
+            1.8
+          ],
+          "distance": 5.419409561935692,
+          "orbit": {
+            "eventCount": 6,
+            "userEventCount": 1,
+            "maxContinuousDegrees": 0,
+            "samples": [
+              {
+                "theta": 0.24497866312686414,
+                "radius": 5.419409561935692,
+                "source": "user-interaction"
+              }
+            ]
+          },
+          "rendererTriangles": 2207754,
+          "characterPoints": [
+            {
+              "id": "zhouyu",
+              "x": 662.4921875,
+              "y": 335.0624999999999
+            }
+          ],
+          "focused": "zhouyu",
+          "source": "geometry",
+          "status": "近看周瑜 · 拖拽观察，重置视角返回戏台",
+          "hotspots": [
+            {
+              "id": "zhouyu",
+              "hidden": false,
+              "text": "周瑜 · 近看"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "small mouse jitter preserves intended person zhouyu",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "zhouyu",
+        "pickCount": 2,
+        "readyCharacters": [
+          "zhouyu"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 9,
+          "userEventCount": 3,
+          "maxContinuousDegrees": 7.359658209527059,
+          "samples": [
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.37342893070454203,
+              "radius": 18.74833325925267,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207754,
+        "characterPoints": [
+          {
+            "id": "zhouyu",
+            "x": 662.4921875,
+            "y": 335.0624999999999
+          }
+        ],
+        "focused": "zhouyu",
+        "source": "geometry",
+        "status": "近看周瑜 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "zhouyu",
+            "hidden": false,
+            "text": "周瑜 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "drag away and back does not select zhouyu",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "zhouyu",
+        "pickCount": 2,
+        "readyCharacters": [
+          "zhouyu"
+        ],
+        "camera": [
+          7.499999999999992,
+          6.299999999999997,
+          17.499999999999975
+        ],
+        "target": [
+          0,
+          3.7999999999999994,
+          0.4999999999999999
+        ],
+        "distance": 18.74833325925265,
+        "orbit": {
+          "eventCount": 26,
+          "userEventCount": 19,
+          "maxContinuousDegrees": 42.17573221757321,
+          "samples": [
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.37342893070454203,
+              "radius": 18.74833325925267,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.32347892198637795,
+              "radius": 18.74833325925267,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.2314657480318652,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.13945257407735245,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.04743940012283969,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.044573773831673075,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.13658694778618582,
+              "radius": 18.748333259252664,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.2286001217406986,
+              "radius": 18.748333259252664,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.32061329569521135,
+              "radius": 18.74833325925266,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.2286001217406986,
+              "radius": 18.748333259252657,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.1365869477861858,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": -0.04457377383167303,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.04743940012283973,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.1394525740773525,
+              "radius": 18.748333259252654,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.23146574803186526,
+              "radius": 18.74833325925265,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.323478921986378,
+              "radius": 18.74833325925265,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 18.74833325925265,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207754,
+        "characterPoints": [
+          {
+            "id": "zhouyu",
+            "x": 643.1420070532897,
+            "y": 408.27959162438066
+          }
+        ],
+        "focused": "",
+        "source": "geometry",
+        "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+        "hotspots": [
+          {
+            "id": "zhouyu",
+            "hidden": false,
+            "text": "周瑜 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "actual group switching keeps correct person and hotspot",
+      "status": "PASS",
+      "details": [
+        {
+          "state": "ready",
+          "selected": "duliniang",
+          "pickCount": 2,
+          "readyCharacters": [
+            "duliniang"
+          ],
+          "camera": [
+            7.5,
+            6.300000000000001,
+            17.499999999999996
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.49999999999999994
+          ],
+          "distance": 18.74833325925267,
+          "orbit": {
+            "eventCount": 0,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207742,
+          "characterPoints": [
+            {
+              "id": "duliniang",
+              "x": 643.1420070532897,
+              "y": 408.2795916243805
+            }
+          ],
+          "focused": "",
+          "source": "geometry",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "duliniang",
+              "hidden": false,
+              "text": "杜丽娘 · 近看"
+            }
+          ]
+        },
+        {
+          "state": "ready",
+          "selected": "muguiying",
+          "pickCount": 2,
+          "readyCharacters": [
+            "muguiying"
+          ],
+          "camera": [
+            7.5,
+            6.300000000000001,
+            17.499999999999996
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.49999999999999994
+          ],
+          "distance": 18.74833325925267,
+          "orbit": {
+            "eventCount": 0,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207670,
+          "characterPoints": [
+            {
+              "id": "muguiying",
+              "x": 643.1420070532897,
+              "y": 408.2795916243805
+            }
+          ],
+          "focused": "",
+          "source": "geometry",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "muguiying",
+              "hidden": false,
+              "text": "穆桂英 · 近看"
+            }
+          ]
+        },
+        {
+          "state": "ready",
+          "selected": "zhouyu",
+          "pickCount": 2,
+          "readyCharacters": [
+            "zhouyu"
+          ],
+          "camera": [
+            7.5,
+            6.300000000000001,
+            17.499999999999996
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.49999999999999994
+          ],
+          "distance": 18.74833325925267,
+          "orbit": {
+            "eventCount": 0,
+            "userEventCount": 0,
+            "maxContinuousDegrees": 0,
+            "samples": []
+          },
+          "rendererTriangles": 2207754,
+          "characterPoints": [
+            {
+              "id": "zhouyu",
+              "x": 643.1420070532897,
+              "y": 408.2795916243805
+            }
+          ],
+          "focused": "",
+          "source": "geometry",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "zhouyu",
+              "hidden": false,
+              "text": "周瑜 · 近看"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rotation260 zoom reset and empty canvas remain usable",
+      "status": "PASS",
+      "details": {
+        "rotated": {
+          "state": "ready",
+          "selected": "zhouyu",
+          "pickCount": 2,
+          "readyCharacters": [
+            "zhouyu"
+          ],
+          "camera": [
+            -0.10069081451357509,
+            6.2999999999999945,
+            19.080631349872668
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.4999999999999999
+          ],
+          "distance": 18.74833325925263,
+          "orbit": {
+            "eventCount": 35,
+            "userEventCount": 35,
+            "maxContinuousDegrees": 326.28690303020403,
+            "samples": [
+              {
+                "theta": 0.5829854684879303,
+                "radius": 18.748333259252668,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 0.7504788410349701,
+                "radius": 18.748333259252664,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 0.9179722135820096,
+                "radius": 18.74833325925266,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.0854662279620149,
+                "radius": 18.748333259252657,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.2529596005090546,
+                "radius": 18.748333259252654,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.4204529730560944,
+                "radius": 18.74833325925265,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.5879469874360996,
+                "radius": 18.74833325925265,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.7554403599831394,
+                "radius": 18.74833325925265,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.9229337325301792,
+                "radius": 18.748333259252647,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.090427105077219,
+                "radius": 18.748333259252647,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.257921119457224,
+                "radius": 18.748333259252647,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.425414492004264,
+                "radius": 18.748333259252643,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.5929078645513037,
+                "radius": 18.74833325925264,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.760401878931309,
+                "radius": 18.74833325925264,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.9278952514783487,
+                "radius": 18.748333259252636,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 3.0953886240253885,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 3.2628819965724283,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.852809296227153,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.6853159236801134,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.5178225511330736,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.350329178586034,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.1828351642060286,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.015341791658989,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.847848419111949,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.6803544047319439,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.512861032184904,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.3453676596378643,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.1778739661743418,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.010380593627302,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.8428869001637795,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.675393206700257,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.5078998341532174,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.3404061406896949,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.17291276814265522,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.005419074679132718,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              }
+            ]
+          },
+          "rendererTriangles": 2207754,
+          "characterPoints": [
+            {
+              "id": "zhouyu",
+              "x": 662.7535803017838,
+              "y": 409.2796966323969
+            }
+          ],
+          "focused": "",
+          "source": "geometry",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "zhouyu",
+              "hidden": false,
+              "text": "周瑜 · 近看"
+            }
+          ]
+        },
+        "z": {
+          "state": "ready",
+          "selected": "zhouyu",
+          "pickCount": 2,
+          "readyCharacters": [
+            "zhouyu"
+          ],
+          "camera": [
+            -0.08055265161086006,
+            5.799999999999995,
+            15.364505079898134
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.4999999999999999
+          ],
+          "distance": 14.998666607402104,
+          "orbit": {
+            "eventCount": 36,
+            "userEventCount": 35,
+            "maxContinuousDegrees": 326.28690303020403,
+            "samples": [
+              {
+                "theta": 0.5829854684879303,
+                "radius": 18.748333259252668,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 0.7504788410349701,
+                "radius": 18.748333259252664,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 0.9179722135820096,
+                "radius": 18.74833325925266,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.0854662279620149,
+                "radius": 18.748333259252657,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.2529596005090546,
+                "radius": 18.748333259252654,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.4204529730560944,
+                "radius": 18.74833325925265,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.5879469874360996,
+                "radius": 18.74833325925265,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.7554403599831394,
+                "radius": 18.74833325925265,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.9229337325301792,
+                "radius": 18.748333259252647,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.090427105077219,
+                "radius": 18.748333259252647,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.257921119457224,
+                "radius": 18.748333259252647,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.425414492004264,
+                "radius": 18.748333259252643,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.5929078645513037,
+                "radius": 18.74833325925264,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.760401878931309,
+                "radius": 18.74833325925264,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.9278952514783487,
+                "radius": 18.748333259252636,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 3.0953886240253885,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 3.2628819965724283,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.852809296227153,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.6853159236801134,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.5178225511330736,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.350329178586034,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.1828351642060286,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.015341791658989,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.847848419111949,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.6803544047319439,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.512861032184904,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.3453676596378643,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.1778739661743418,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.010380593627302,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.8428869001637795,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.675393206700257,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.5078998341532174,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.3404061406896949,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.17291276814265522,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.005419074679132718,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              }
+            ]
+          },
+          "rendererTriangles": 2207754,
+          "characterPoints": [
+            {
+              "id": "zhouyu",
+              "x": 662.8238095905788,
+              "y": 429.2198820555321
+            }
+          ],
+          "focused": "",
+          "source": "geometry",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "zhouyu",
+              "hidden": false,
+              "text": "周瑜 · 近看"
+            }
+          ]
+        },
+        "reset": {
+          "state": "ready",
+          "selected": "zhouyu",
+          "pickCount": 2,
+          "readyCharacters": [
+            "zhouyu"
+          ],
+          "camera": [
+            7.5,
+            6.300000000000001,
+            17.499999999999996
+          ],
+          "target": [
+            0,
+            3.7999999999999994,
+            0.49999999999999994
+          ],
+          "distance": 18.74833325925267,
+          "orbit": {
+            "eventCount": 37,
+            "userEventCount": 35,
+            "maxContinuousDegrees": 326.28690303020403,
+            "samples": [
+              {
+                "theta": 0.5829854684879303,
+                "radius": 18.748333259252668,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 0.7504788410349701,
+                "radius": 18.748333259252664,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 0.9179722135820096,
+                "radius": 18.74833325925266,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.0854662279620149,
+                "radius": 18.748333259252657,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.2529596005090546,
+                "radius": 18.748333259252654,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.4204529730560944,
+                "radius": 18.74833325925265,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.5879469874360996,
+                "radius": 18.74833325925265,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.7554403599831394,
+                "radius": 18.74833325925265,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 1.9229337325301792,
+                "radius": 18.748333259252647,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.090427105077219,
+                "radius": 18.748333259252647,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.257921119457224,
+                "radius": 18.748333259252647,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.425414492004264,
+                "radius": 18.748333259252643,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.5929078645513037,
+                "radius": 18.74833325925264,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.760401878931309,
+                "radius": 18.74833325925264,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 2.9278952514783487,
+                "radius": 18.748333259252636,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 3.0953886240253885,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": 3.2628819965724283,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.852809296227153,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.6853159236801134,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.5178225511330736,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.350329178586034,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.1828351642060286,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -2.015341791658989,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.847848419111949,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.6803544047319439,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.512861032184904,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.3453676596378643,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.1778739661743418,
+                "radius": 18.748333259252632,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -1.010380593627302,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.8428869001637795,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.675393206700257,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.5078998341532174,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.3404061406896949,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.17291276814265522,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              },
+              {
+                "theta": -0.005419074679132718,
+                "radius": 18.74833325925263,
+                "source": "user-interaction"
+              }
+            ]
+          },
+          "rendererTriangles": 2207754,
+          "characterPoints": [
+            {
+              "id": "zhouyu",
+              "x": 643.1420070532897,
+              "y": 408.2795916243805
+            }
+          ],
+          "focused": "",
+          "source": "geometry",
+          "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+          "hotspots": [
+            {
+              "id": "zhouyu",
+              "hidden": false,
+              "text": "周瑜 · 近看"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "mobile name tap real model duliniang",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "duliniang",
+        "pickCount": 0,
+        "readyCharacters": [
+          "duliniang"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 2,
+          "userEventCount": 0,
+          "maxContinuousDegrees": 0,
+          "samples": []
+        },
+        "rendererTriangles": 2207742,
+        "characterPoints": [
+          {
+            "id": "duliniang",
+            "x": 194.9921875,
+            "y": 350.4687499999999
+          }
+        ],
+        "focused": "duliniang",
+        "source": "name-button",
+        "status": "近看杜丽娘 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "duliniang",
+            "hidden": false,
+            "text": "杜丽娘 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile direct body tap with finger jitter duliniang",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "duliniang",
+        "pickCount": 1,
+        "readyCharacters": [
+          "duliniang"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 5,
+          "userEventCount": 2,
+          "maxContinuousDegrees": 5.234266979665101,
+          "samples": [
+            {
+              "theta": 0.33633385585043923,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207742,
+        "characterPoints": [
+          {
+            "id": "duliniang",
+            "x": 194.9921875,
+            "y": 350.4687499999999
+          }
+        ],
+        "focused": "duliniang",
+        "source": "geometry",
+        "status": "近看杜丽娘 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "duliniang",
+            "hidden": false,
+            "text": "杜丽娘 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile pinch never clicks and reset restores duliniang",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "duliniang",
+        "pickCount": 1,
+        "readyCharacters": [
+          "duliniang"
+        ],
+        "camera": [
+          3.991380385107584,
+          5.130460128369194,
+          9.54712887291052
+        ],
+        "target": [
+          0,
+          3.7999999999999994,
+          0.4999999999999999
+        ],
+        "distance": 9.977563949925498,
+        "orbit": {
+          "eventCount": 30,
+          "userEventCount": 26,
+          "maxContinuousDegrees": 5.234266979665101,
+          "samples": [
+            {
+              "theta": 0.33633385585043923,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958426,
+              "radius": 18.030643449436166,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 17.3719478338615,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 16.76503221912599,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 16.20382961340119,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 15.68319904082963,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 15.198753897307673,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 14.74672732158801,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 14.323865558320026,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 13.927342725520976,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 13.55469211777763,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 13.203750405687861,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 12.872611982105472,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 12.55959135769453,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 12.263191990978576,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 11.982080299023437,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4154920959408908,
+              "radius": 11.715063867353932,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295844,
+              "radius": 11.46107308518033,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089087,
+              "radius": 11.21914559130573,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 10.98841303934078,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 10.76808978691986,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 10.557463189008732,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 10.355885234952686,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 10.162765316254983,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 9.977563949925498,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207742,
+        "characterPoints": [
+          {
+            "id": "duliniang",
+            "x": 154.46049617466994,
+            "y": 503.73651295504953
+          }
+        ],
+        "focused": "",
+        "source": "geometry",
+        "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+        "hotspots": [
+          {
+            "id": "duliniang",
+            "hidden": false,
+            "text": "杜丽娘 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile name tap real model muguiying",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "muguiying",
+        "pickCount": 0,
+        "readyCharacters": [
+          "muguiying"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 2,
+          "userEventCount": 0,
+          "maxContinuousDegrees": 0,
+          "samples": []
+        },
+        "rendererTriangles": 2207670,
+        "characterPoints": [
+          {
+            "id": "muguiying",
+            "x": 194.9921875,
+            "y": 350.4687499999999
+          }
+        ],
+        "focused": "muguiying",
+        "source": "name-button",
+        "status": "近看穆桂英 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "muguiying",
+            "hidden": false,
+            "text": "穆桂英 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile direct body tap with finger jitter muguiying",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "muguiying",
+        "pickCount": 1,
+        "readyCharacters": [
+          "muguiying"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 5,
+          "userEventCount": 2,
+          "maxContinuousDegrees": 5.234266979665101,
+          "samples": [
+            {
+              "theta": 0.33633385585043923,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207670,
+        "characterPoints": [
+          {
+            "id": "muguiying",
+            "x": 194.9921875,
+            "y": 350.4687499999999
+          }
+        ],
+        "focused": "muguiying",
+        "source": "geometry",
+        "status": "近看穆桂英 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "muguiying",
+            "hidden": false,
+            "text": "穆桂英 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile pinch never clicks and reset restores muguiying",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "muguiying",
+        "pickCount": 1,
+        "readyCharacters": [
+          "muguiying"
+        ],
+        "camera": [
+          3.991380385107584,
+          5.130460128369194,
+          9.54712887291052
+        ],
+        "target": [
+          0,
+          3.7999999999999994,
+          0.4999999999999999
+        ],
+        "distance": 9.977563949925498,
+        "orbit": {
+          "eventCount": 30,
+          "userEventCount": 26,
+          "maxContinuousDegrees": 5.234266979665101,
+          "samples": [
+            {
+              "theta": 0.33633385585043923,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958426,
+              "radius": 18.030643449436166,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 17.3719478338615,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 16.76503221912599,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 16.20382961340119,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 15.68319904082963,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 15.198753897307673,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 14.74672732158801,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 14.323865558320026,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 13.927342725520976,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 13.55469211777763,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 13.203750405687861,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 12.872611982105472,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 12.55959135769453,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 12.263191990978576,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 11.982080299023437,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4154920959408908,
+              "radius": 11.715063867353932,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295844,
+              "radius": 11.46107308518033,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089087,
+              "radius": 11.21914559130573,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 10.98841303934078,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 10.76808978691986,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 10.557463189008732,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 10.355885234952686,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 10.162765316254983,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 9.977563949925498,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207670,
+        "characterPoints": [
+          {
+            "id": "muguiying",
+            "x": 154.46049617466994,
+            "y": 503.73651295504953
+          }
+        ],
+        "focused": "",
+        "source": "geometry",
+        "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+        "hotspots": [
+          {
+            "id": "muguiying",
+            "hidden": false,
+            "text": "穆桂英 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile name tap real model zhouyu",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "zhouyu",
+        "pickCount": 0,
+        "readyCharacters": [
+          "zhouyu"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 2,
+          "userEventCount": 0,
+          "maxContinuousDegrees": 0,
+          "samples": []
+        },
+        "rendererTriangles": 2207754,
+        "characterPoints": [
+          {
+            "id": "zhouyu",
+            "x": 194.9921875,
+            "y": 350.4687499999999
+          }
+        ],
+        "focused": "zhouyu",
+        "source": "name-button",
+        "status": "近看周瑜 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "zhouyu",
+            "hidden": false,
+            "text": "周瑜 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile direct body tap with finger jitter zhouyu",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "zhouyu",
+        "pickCount": 1,
+        "readyCharacters": [
+          "zhouyu"
+        ],
+        "camera": [
+          1.3000000000000003,
+          2.755676388460765,
+          7.000000000000001
+        ],
+        "target": [
+          0,
+          1.955676388460766,
+          1.8
+        ],
+        "distance": 5.419409561935692,
+        "orbit": {
+          "eventCount": 5,
+          "userEventCount": 2,
+          "maxContinuousDegrees": 5.234266979665101,
+          "samples": [
+            {
+              "theta": 0.33633385585043923,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207754,
+        "characterPoints": [
+          {
+            "id": "zhouyu",
+            "x": 194.9921875,
+            "y": 350.4687499999999
+          }
+        ],
+        "focused": "zhouyu",
+        "source": "geometry",
+        "status": "近看周瑜 · 拖拽观察，重置视角返回戏台",
+        "hotspots": [
+          {
+            "id": "zhouyu",
+            "hidden": false,
+            "text": "周瑜 · 近看"
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile pinch never clicks and reset restores zhouyu",
+      "status": "PASS",
+      "details": {
+        "state": "ready",
+        "selected": "zhouyu",
+        "pickCount": 1,
+        "readyCharacters": [
+          "zhouyu"
+        ],
+        "camera": [
+          3.991380385107584,
+          5.130460128369194,
+          9.54712887291052
+        ],
+        "target": [
+          0,
+          3.7999999999999994,
+          0.4999999999999999
+        ],
+        "distance": 9.977563949925498,
+        "orbit": {
+          "eventCount": 30,
+          "userEventCount": 26,
+          "maxContinuousDegrees": 5.234266979665101,
+          "samples": [
+            {
+              "theta": 0.33633385585043923,
+              "radius": 18.748333259252668,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.24497866312686414,
+              "radius": 5.419409561935692,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958426,
+              "radius": 18.030643449436166,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 17.3719478338615,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 16.76503221912599,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 16.20382961340119,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 15.68319904082963,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 15.198753897307673,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 14.74672732158801,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 14.323865558320026,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 13.927342725520976,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 13.55469211777763,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 13.203750405687861,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 12.872611982105472,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 12.55959135769453,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 12.263191990978576,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 11.982080299023437,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4154920959408908,
+              "radius": 11.715063867353932,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295844,
+              "radius": 11.46107308518033,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089087,
+              "radius": 11.21914559130573,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.40559731592958437,
+              "radius": 10.98841303934078,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 10.76808978691986,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 10.557463189008732,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 10.355885234952686,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.4055973159295843,
+              "radius": 10.162765316254983,
+              "source": "user-interaction"
+            },
+            {
+              "theta": 0.41549209594089076,
+              "radius": 9.977563949925498,
+              "source": "user-interaction"
+            }
+          ]
+        },
+        "rendererTriangles": 2207754,
+        "characterPoints": [
+          {
+            "id": "zhouyu",
+            "x": 154.46049617466994,
+            "y": 503.73651295504953
+          }
+        ],
+        "focused": "",
+        "source": "geometry",
+        "status": "戏台已就绪 · 点击人物、姓名或左侧卡片近看",
+        "hotspots": [
+          {
+            "id": "zhouyu",
+            "hidden": false,
+            "text": "周瑜 · 近看"
+          }
+        ]
+      }
+    }
+  ],
+  "writes": [],
+  "external": [],
+  "pageErrors": [],
+  "physicalPhone": "NOT_TESTED",
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "chrome": "156.0.8078.73",
+  "passed": 26,
+  "failed": 0,
+  "status": "PASS"
+}

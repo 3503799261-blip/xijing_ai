@@ -1,0 +1,34 @@
+[
+  {
+    "script": "phase2_frontend_test.mjs",
+    "exitCode": 0
+  },
+  {
+    "script": "phase3_frontend_test.mjs",
+    "exitCode": 0
+  },
+  {
+    "script": "phase4_frontend_test.mjs",
+    "exitCode": 0
+  },
+  {
+    "script": "phase5_wp2_frontend_test.mjs",
+    "exitCode": 0
+  },
+  {
+    "script": "phase5_wp3_frontend_test.mjs",
+    "exitCode": 0
+  },
+  {
+    "script": "asset_workbench_frontend_test.mjs",
+    "exitCode": 0
+  },
+  {
+    "script": "digital_stage_frontend_test.mjs",
+    "exitCode": 0
+  },
+  {
+    "script": "site_navigator_test.mjs",
+    "exitCode": 0
+  }
+]
