@@ -1,0 +1,298 @@
+{
+  "date": "2026-10-30",
+  "createdAtUtc": "2026-10-30T06:18:44.821935+00:00",
+  "revision": "culture-guide-v3",
+  "result": "PASS",
+  "scope": "Narration, documents, existing page text and source verification; not fresh runtime/API/browser tests",
+  "partSeconds": [
+    240,
+    150,
+    80
+  ],
+  "plannedSeconds": 470,
+  "timeline": [
+    {
+      "start": 0,
+      "end": 15,
+      "title": "整体：请您走进线上梨园"
+    },
+    {
+      "start": 15,
+      "end": 45,
+      "title": "首页：一桌二椅，戏里有人间"
+    },
+    {
+      "start": 45,
+      "end": 65,
+      "title": "发展历史：从徽班进京到流派纷呈"
+    },
+    {
+      "start": 65,
+      "end": 85,
+      "title": "行当介绍：先认生旦净丑，再看人物风骨"
+    },
+    {
+      "start": 85,
+      "end": 105,
+      "title": "脸谱艺术：颜色与纹样里的性格"
+    },
+    {
+      "start": 105,
+      "end": 125,
+      "title": "唱腔乐器：在西皮二黄里听见情绪"
+    },
+    {
+      "start": 125,
+      "end": 140,
+      "title": "视频欣赏：从图文认识走向一段好戏"
+    },
+    {
+      "start": 140,
+      "end": 160,
+      "title": "艺术画廊：戏落幕，扮相仍可细看"
+    },
+    {
+      "start": 160,
+      "end": 170,
+      "title": "内容直达：让好奇心带路"
+    },
+    {
+      "start": 170,
+      "end": 185,
+      "title": "AI工坊：把看戏变成继续探索"
+    },
+    {
+      "start": 185,
+      "end": 210,
+      "title": "京剧问答：带着人物故事找依据"
+    },
+    {
+      "start": 210,
+      "end": 235,
+      "title": "数字戏台：走近《群英会》里的周瑜"
+    },
+    {
+      "start": 235,
+      "end": 240,
+      "title": "衔接：带着疑问继续问戏"
+    },
+    {
+      "start": 240,
+      "end": 275,
+      "title": "人的要求，如何变成DeepSeek后端代码（35秒）"
+    },
+    {
+      "start": 275,
+      "end": 305,
+      "title": "不是只接一个聊天界面：展示真实调用与引用校验（30秒）"
+    },
+    {
+      "start": 305,
+      "end": 350,
+      "title": "Neural4D：人的批准与受控异步建模（45秒）"
+    },
+    {
+      "start": 350,
+      "end": 390,
+      "title": "真实反馈如何推动AI修复和验证（40秒）"
+    },
+    {
+      "start": 390,
+      "end": 415,
+      "title": "E．应用对象与试点任务（25秒）"
+    },
+    {
+      "start": 415,
+      "end": 445,
+      "title": "F．三项已有实现支持的整合特色（30秒）"
+    },
+    {
+      "start": 445,
+      "end": 465,
+      "title": "G．商业路径与可交付的工程基础（20秒）"
+    },
+    {
+      "start": 465,
+      "end": 470,
+      "title": "结束（5秒）"
+    }
+  ],
+  "timelineContinuous": true,
+  "hanByPart": [
+    889,
+    381,
+    250
+  ],
+  "narrationParagraphs": 21,
+  "narrationMatches": true,
+  "linksChecked": 43,
+  "missingLinks": [],
+  "culturePageBasis": [
+    {
+      "source": "index.html",
+      "terms": [
+        "一桌二椅，演尽人间",
+        "唱念做打",
+        "霸王别姬"
+      ],
+      "sha256": "e2cde74bae1308273799bcb4a877b9a134cec5c279e8ffe94d557d7eda615310",
+      "result": "PASS"
+    },
+    {
+      "source": "history.html",
+      "terms": [
+        "徽班进京",
+        "流派纷呈",
+        "谭鑫培",
+        "梅兰芳",
+        "程砚秋"
+      ],
+      "sha256": "b8589bf71e9a312f557783835938b4b1ad2e186c69e77a4133ca957db73a83bf",
+      "result": "PASS"
+    },
+    {
+      "source": "roles.html",
+      "terms": [
+        "生角一门",
+        "老生、小生、武生",
+        "旦角一门",
+        "净角一门",
+        "丑角一门"
+      ],
+      "sha256": "18640631952f36d535369b191f25b5c26e41b9b4649374ceddad835eb0689570",
+      "result": "PASS"
+    },
+    {
+      "source": "facial.html",
+      "terms": [
+        "忠勇",
+        "刚正",
+        "四步勾出人物精神"
+      ],
+      "sha256": "7a45f6f9614173bf29056a28903673ceccc5c7e044afe65dc05cbf63d7fe419d",
+      "result": "PASS"
+    },
+    {
+      "source": "music.html",
+      "terms": [
+        "旋律活泼明朗",
+        "旋律平稳深沉",
+        "京胡",
+        "锣鼓经"
+      ],
+      "sha256": "f5e9d01ec55c9932e41e6de174c5f36ab0e6fb28cedc9011dd249e273a13e480",
+      "result": "PASS"
+    },
+    {
+      "source": "video.html",
+      "terms": [
+        "唱段",
+        "亮相",
+        "翻打"
+      ],
+      "sha256": "c6ffed5ef536ffa278f22d3a8b7328ad1284906f59a5a731543c8bda9ef86c26",
+      "result": "PASS"
+    },
+    {
+      "source": "gallery.html",
+      "terms": [
+        "演员风采",
+        "脸谱图鉴",
+        "戏服道具",
+        "好戏定格"
+      ],
+      "sha256": "f7f29835abc91e3b84ff09e86b0218520517c876045366080493431ef8ff5767",
+      "result": "PASS"
+    }
+  ],
+  "historicalCodeExcerpts": [
+    {
+      "source": "backend/app/providers/llm.py",
+      "sha256": "f46e62fa85dbde51692892c1240e483f43f63e710158aaed68d76467f24cf993",
+      "unchanged": true
+    },
+    {
+      "source": "backend/app/providers/llm.py",
+      "sha256": "f46e62fa85dbde51692892c1240e483f43f63e710158aaed68d76467f24cf993",
+      "unchanged": true
+    },
+    {
+      "source": "backend/app/services/chat.py",
+      "sha256": "2446a662e013b5ced6071d78f44d1357da62864fef9f0a9984cce22dfb775975",
+      "unchanged": true
+    },
+    {
+      "source": "backend/app/assets/usage.py",
+      "sha256": "fe1c0619ae1408c5f7b2b434c6163752a2c91682ba82895eccd98434277af06d",
+      "unchanged": true
+    },
+    {
+      "source": "backend/app/providers/neural4d.py",
+      "sha256": "9d0a89aeb8a955f7ec0cf4cb69baf5cc098e7d99c74a90930bbb148b9dfb504d",
+      "unchanged": true
+    },
+    {
+      "source": "js/ai-workshop/digital-stage.js",
+      "sha256": "e7edabce57b4352d5e4bbf242b4d0b1653930715337c73cd3ceecf1c4c517d57",
+      "unchanged": true
+    }
+  ],
+  "externalCultureReference": {
+    "url": "https://www.ccf.gov.hk/media/2025/03/CCF_CNP_HseProg-1.pdf",
+    "status": "READ_PDF_TEXT",
+    "pagesUsed": [
+      3,
+      9
+    ],
+    "scope": "Basic singing/reciting/acting/combat, role categories, music accompaniment and Zhou Yu repertoire cross-check; not a new knowledge-base ingestion"
+  },
+  "unusableReferenceChecks": [
+    {
+      "url": "https://ich.unesco.org/en/RL/peking-opera-00418",
+      "status": "DIRECT_ACCESS_BLOCKED"
+    },
+    {
+      "url": "https://www.cof.gov.hk/2013/2013/reading/brochure_tianjin_selectable.pdf",
+      "status": "REDIRECTED_TO_UNRELATED_CURRENT_INDEX"
+    }
+  ],
+  "files": [
+    {
+      "file": "docs/reports/video-script-part1-layout.md",
+      "sha256": "1e603fc19fe141533da5f934a5df7af513089ce0e4846e2f1276b0a2777f0942"
+    },
+    {
+      "file": "docs/reports/video-script-final-three-parts.md",
+      "sha256": "84cd7a915bb2a565a50950296300d596f5453025430997edbf7c9093fe617bc0"
+    },
+    {
+      "file": "docs/reports/video-script-final-three-parts-voice.txt",
+      "sha256": "1975a105a6739f7f618f0d3c2fb39b7727e88343e5c85a4d070041dbd6762fa7"
+    },
+    {
+      "file": "docs/reports/video-script-part3-value.md",
+      "sha256": "008d6cc9726b813b97eac14bbcee1057e9292d707862c8111ebb19f0aaba894a"
+    },
+    {
+      "file": "docs/prompts/video-script-final/README.md",
+      "sha256": "072919315badf12c8eb2b3609bd42437fd1b1271a3f98140b762a626152c547b"
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "businessCodeChanged": false,
+  "modelAndDatabaseWritesByThisTask": 0,
+  "newBrowserTests": "NOT_TESTED",
+  "actualNarrationTiming": "NOT_TESTED",
+  "userExperienceStudy": "NOT_TESTED; effect descriptions are design intent",
+  "recordingProduced": false,
+  "priorChecks": "Earlier JSON reports remain generation-time snapshots; current hashes are in this file",
+  "branch": "feature/phase5-competition-delivery",
+  "headBeforeRevision": "519c4eb19bc9916d7942af0b7b6497a3f35e9f51",
+  "secretPatternScan": {
+    "success": true,
+    "textFilesChecked": 1165,
+    "findings": [],
+    "scope": "Actual current public UTF-8 pattern scan; no values logged"
+  }
+}
