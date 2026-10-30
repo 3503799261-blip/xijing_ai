@@ -37,7 +37,21 @@ $env:XIJING_SHARP_PACKAGE = (Resolve-Path -LiteralPath 'tools/node_modules/sharp
 
 Three.js r180、GLTFLoader和OrbitControls已随仓库保留在`js/vendor/three/`，包含MIT许可与来源记录，不需要运行时CDN或另装Three。
 
-## PDF：中文字体与截图
+## 当前28页技术PDF：正文、字体与复核
+
+正式比赛文档现为完整28页，含封面和目录，全文提取约1.9万汉字（含标题和页眉页脚）。可编辑内容在[technical-report-28.json](../docs/reports/technical-report-28.json)，生成器为[scripts/build_technical_report_28.py](../scripts/build_technical_report_28.py)，完整说明与核验见[文档记录](../docs/reports/technical-report-28.md)。生成器只读取文档、指定截图和字体，不导入应用、不访问数据库或外部API。
+
+已准备上述独立PDF工具环境后，可在仓库根执行：
+
+```powershell
+..\.runtime\tooling\.venv-docs\Scripts\python.exe scripts/build_technical_report_28.py
+```
+
+该命令是复现说明，不会自动安装依赖。默认读取仓库内两张已登记的数字戏台历史截图，以及合法可用的Windows字体SimSun、SimHei、Consolas；其他系统可分别用`--font`、`--heading-font`、`--mono-font`指定字体。默认生成`output/pdf/xijing-ai-technical-report-28.pdf`和`tmp/pdfs/technical-report-28/layout-metrics.json`。先输出临时PDF，只有精确28页且排版未溢出才替换目标文件；这不等于已经完成目视检查。
+
+新环境重建后，需用Poppler渲染全部28页，逐页核对文字、表格、架构图和截图，再检查书签、目录跳转、字体嵌入与缺字。正文改动或字体改变均可能影响排版，不能把本机既往检查直接套用到新生成的文件。本轮使用Codex已有独立PDF运行环境，没有改后端venv或安装依赖。
+
+## 历史9页PDF生成器：中文字体与截图
 
 `scripts/build_competition_pdf.py`使用ReportLab、pypdf及Pillow。默认字体为Windows的`C:/Windows/Fonts/simsun.ttc`；目标机器必须已有合法可用的相应中文TrueType字体，或通过`--font`提供经验证可嵌入的字体文件。仓库不分发系统字体。更换字体、系统或排版环境后须重新检查中文、分页与表格，不能仅凭脚本退出成功判定PDF合格。
 

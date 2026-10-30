@@ -1,0 +1,263 @@
+{
+  "pages": 28,
+  "bodyFontSize": 10.7,
+  "file": "output/pdf/xijing-ai-technical-report-28.pdf",
+  "sha256": "186007a2410be13ebd2ede6f9c4bcc2a18c77c4fb802cdea21ab888158af14b0",
+  "pageMetrics": [
+    {
+      "page": 1,
+      "title": "戏境 AI\n文化有据，数字入戏",
+      "usedPoints": 590.51,
+      "availablePoints": 630.69,
+      "fillRatio": 0.9363,
+      "bodyBottom": 111.38,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 2,
+      "title": "阅读地图与证据口径",
+      "usedPoints": 651.11,
+      "availablePoints": 658.69,
+      "fillRatio": 0.9885,
+      "bodyBottom": 78.78,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 3,
+      "title": "问题定义与用户需求",
+      "usedPoints": 557.96,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8471,
+      "bodyBottom": 171.93,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 4,
+      "title": "京剧内容体系与文化边界",
+      "usedPoints": 568.69,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8634,
+      "bodyBottom": 161.2,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 5,
+      "title": "信息架构与端到端体验",
+      "usedPoints": 584.5,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8874,
+      "bodyBottom": 145.39,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 6,
+      "title": "八页布局与视觉产品化",
+      "usedPoints": 593.42,
+      "availablePoints": 658.69,
+      "fillRatio": 0.9009,
+      "bodyBottom": 136.47,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 7,
+      "title": "连续问答与历史会话",
+      "usedPoints": 591.87,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8986,
+      "bodyBottom": 138.02,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 8,
+      "title": "总体架构与技术取舍",
+      "usedPoints": 560.02,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8502,
+      "bodyBottom": 169.87,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 9,
+      "title": "数据模型与版本谱系",
+      "usedPoints": 577.76,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8771,
+      "bodyBottom": 152.13,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 10,
+      "title": "知识资料与来源管理",
+      "usedPoints": 587.27,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8916,
+      "bodyBottom": 142.62,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 11,
+      "title": "清洗分块与幂等入库",
+      "usedPoints": 568.37,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8629,
+      "bodyBottom": 161.52,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 12,
+      "title": "中文Embedding与向量持久化",
+      "usedPoints": 636.04,
+      "availablePoints": 658.69,
+      "fillRatio": 0.9656,
+      "bodyBottom": 93.85,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 13,
+      "title": "混合检索与资料不足判断",
+      "usedPoints": 574.0,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8714,
+      "bodyBottom": 155.89,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 14,
+      "title": "RAG Prompt与可信引用",
+      "usedPoints": 602.45,
+      "availablePoints": 658.69,
+      "fillRatio": 0.9146,
+      "bodyBottom": 127.44,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 15,
+      "title": "DeepSeek真实接入与费用保护",
+      "usedPoints": 583.0,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8851,
+      "bodyBottom": 146.89,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 16,
+      "title": "四Agent有限工作流",
+      "usedPoints": 591.71,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8983,
+      "bodyBottom": 138.18,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 17,
+      "title": "人审、角色JSON与只读历史",
+      "usedPoints": 625.87,
+      "availablePoints": 658.69,
+      "fillRatio": 0.9502,
+      "bodyBottom": 104.02,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 18,
+      "title": "Neural4D历史链路与三次硬限制",
+      "usedPoints": 583.44,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8858,
+      "bodyBottom": 146.45,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 19,
+      "title": "用户模型导入与GLB适配",
+      "usedPoints": 584.7,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8877,
+      "bodyBottom": 145.19,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 20,
+      "title": "实时数字戏台与观察交互",
+      "usedPoints": 631.71,
+      "availablePoints": 658.69,
+      "fillRatio": 0.959,
+      "bodyBottom": 98.18,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 21,
+      "title": "人物点选、触摸与异步修复",
+      "usedPoints": 586.0,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8896,
+      "bodyBottom": 143.89,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 22,
+      "title": "内容自动定位与备用导览",
+      "usedPoints": 600.71,
+      "availablePoints": 658.69,
+      "fillRatio": 0.912,
+      "bodyBottom": 129.18,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 23,
+      "title": "数据库安全与故障隔离",
+      "usedPoints": 616.9,
+      "availablePoints": 658.69,
+      "fillRatio": 0.9366,
+      "bodyBottom": 112.99,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 24,
+      "title": "测试设计与原始结果口径",
+      "usedPoints": 606.43,
+      "availablePoints": 658.69,
+      "fillRatio": 0.9207,
+      "bodyBottom": 123.46,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 25,
+      "title": "实验、失败案例与Prompt演进",
+      "usedPoints": 586.57,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8905,
+      "bodyBottom": 143.32,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 26,
+      "title": "安装启动、资源恢复与现场运行",
+      "usedPoints": 608.3,
+      "availablePoints": 658.69,
+      "fillRatio": 0.9235,
+      "bodyBottom": 121.59,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 27,
+      "title": "创新、应用价值与后续工作",
+      "usedPoints": 566.7,
+      "availablePoints": 658.69,
+      "fillRatio": 0.8603,
+      "bodyBottom": 163.19,
+      "allowedBottom": 71.2
+    },
+    {
+      "page": 28,
+      "title": "证据索引与交付核对",
+      "usedPoints": 592.8,
+      "availablePoints": 658.69,
+      "fillRatio": 0.9,
+      "bodyBottom": 137.09,
+      "allowedBottom": 71.2
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "visualInspection": "PASS; 28 PNG pages individually inspected"
+}

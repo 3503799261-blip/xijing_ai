@@ -1,0 +1,458 @@
+{
+  "date": "2026-10-30",
+  "status": "PASS",
+  "pdfSha256": "186007a2410be13ebd2ede6f9c4bcc2a18c77c4fb802cdea21ab888158af14b0",
+  "pages": 28,
+  "structuralChecks": 20,
+  "visualPages": 28,
+  "localMarkdownLinks": [
+    {
+      "document": "README.md",
+      "target": "docs/reports/technical-report-28.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/technical-report-28.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "scripts/build_technical_report_28.py",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/stage-character-click-fix.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/submission-platform-check.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "backend/requirements.txt",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "tools/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/digital-stage-delivery.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/submission-manual-check.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/digital-stage-delivery/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-04-final-acceptance.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-05-work-package-01.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-05-work-package-02.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-05-work-package-03.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/frontend-productization.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/local-run-setup.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/asset-workbench-layout.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-05-work-package-04.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-05-wp4-test-report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-05-wp4-test-report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-05-wp3-test-report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/architecture/knowledge-provenance.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/architecture/phase-02-rag.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/architecture/ai-workshop-contracts.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-04-final-acceptance.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-02.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-05-work-package-02.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-03/browser-test-report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/architecture/phase-03-agents.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-03/real-cases-summary.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-04-real-modeling-plan.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-04-final-acceptance.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase4-browser-test-report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-05-wp1-test-report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase4-windows-file-race.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-cached-reproduction-final-hybrid.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-ingest-initial.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-real-lifecycle.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-provider-probe-success.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-frontend-unit.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-final-unit-regression.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-retrieval-final-entity-metadata-same20-comparison.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-answers-rag20-final-hybrid.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-answers-rag20-final-hybrid-assistant-review.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-direct-vs-rag-five.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-browser-test-report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-02-api-usage.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/evidence/test-results/phase-03/api-usage-final.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-01.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-04-first-internal-modeling.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-04-realistic-preparation.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-04-second-model-approval.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/prompts/phase-04/realistic-model-v1.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-04-second-model-execution.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-01.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-02.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-03.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-04-final-acceptance.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-05-project-audit.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-05-work-package-01.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-05-work-package-02.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/reports/phase-05-work-package-03.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/prompts/phase-01/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/prompts/phase-02/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/prompts/phase-03/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/prompts/phase-04/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/prompts/phase-05/README.md",
+      "exists": true
+    },
+    {
+      "document": "tools/README.md",
+      "target": "../backend/requirements.txt",
+      "exists": true
+    },
+    {
+      "document": "tools/README.md",
+      "target": "../docs/reports/digital-stage-delivery.md",
+      "exists": true
+    },
+    {
+      "document": "tools/README.md",
+      "target": "../docs/reports/technical-report-28.json",
+      "exists": true
+    },
+    {
+      "document": "tools/README.md",
+      "target": "../scripts/build_technical_report_28.py",
+      "exists": true
+    },
+    {
+      "document": "tools/README.md",
+      "target": "../docs/reports/technical-report-28.md",
+      "exists": true
+    },
+    {
+      "document": "tools/README.md",
+      "target": "../docs/reports/local-run-setup.md",
+      "exists": true
+    },
+    {
+      "document": "tools/README.md",
+      "target": "../docs/reports/phase-05-deployment-and-recovery.md",
+      "exists": true
+    },
+    {
+      "document": "docs/reports/technical-report-28.md",
+      "target": "technical-report-28.json",
+      "exists": true
+    },
+    {
+      "document": "docs/reports/technical-report-28.md",
+      "target": "../../scripts/build_technical_report_28.py",
+      "exists": true
+    },
+    {
+      "document": "docs/reports/technical-report-28.md",
+      "target": "../../tools/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/reports/technical-report-28.md",
+      "target": "../evidence/test-results/technical-report-28/structural-qa.json",
+      "exists": true
+    },
+    {
+      "document": "docs/reports/technical-report-28.md",
+      "target": "../evidence/test-results/technical-report-28/visual-review.json",
+      "exists": true
+    },
+    {
+      "document": "docs/reports/technical-report-28.md",
+      "target": "../evidence/test-results/technical-report-28/layout-metrics.json",
+      "exists": true
+    },
+    {
+      "document": "docs/reports/technical-report-28.md",
+      "target": "../evidence/test-results/technical-report-28/structural-qa-before-glyph-fix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/prompts/technical-report-28/README.md",
+      "target": "../../reports/technical-report-28.md",
+      "exists": true
+    },
+    {
+      "document": "docs/prompts/technical-report-28/README.md",
+      "target": "../../reports/technical-report-28.json",
+      "exists": true
+    },
+    {
+      "document": "docs/prompts/technical-report-28/README.md",
+      "target": "../../evidence/test-results/technical-report-28/structural-qa.json",
+      "exists": true
+    },
+    {
+      "document": "docs/prompts/technical-report-28/README.md",
+      "target": "../../evidence/test-results/technical-report-28/visual-review.json",
+      "exists": true
+    },
+    {
+      "document": "docs/prompts/technical-report-28/README.md",
+      "target": "../../evidence/test-results/technical-report-28/structural-qa-before-glyph-fix.json",
+      "exists": true
+    }
+  ],
+  "pythonAstFiles": 2,
+  "oldNinePageBackupVerified": true,
+  "userVideoByteHashUnchanged": true,
+  "businessTestsThisTask": "NOT_TESTED; only existing raw evidence reviewed",
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "commands": [
+    "bundled Python scripts/build_technical_report_28.py",
+    "pdftoppm -r 110 -png output/pdf/xijing-ai-technical-report-28.pdf tmp/pdfs/technical-report-28/render/page",
+    "PowerShell Parser static input + inline Python archived as check_structure.py",
+    "bundled Python tmp/pdfs/technical-report-28/validate_delivery_docs.py",
+    ".venv/Scripts/python.exe -B scripts/check_public_secrets.py --output docs/evidence/test-results/technical-report-28/secret-scan.json"
+  ]
+}

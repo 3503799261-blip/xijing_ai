@@ -1,0 +1,235 @@
+{
+  "date": "2026-10-30",
+  "pdfSha256": "186007a2410be13ebd2ede6f9c4bcc2a18c77c4fb802cdea21ab888158af14b0",
+  "pagesReviewed": 28,
+  "status": "PASS",
+  "method": "110dpi Poppler PNG逐页目视；不是仅依据文本抽取或拼图判断",
+  "pages": [
+    {
+      "page": 1,
+      "status": "PASS",
+      "renderSha256": "18fd2c094b61126e02916c44ac1ceb1ad8c384b364d2424690c62f3b8bd7fce1",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.9363,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 2,
+      "status": "PASS",
+      "renderSha256": "950c1e680db32a1a714cab6ae3d172d79c39695b52951beee573c5f2fc02f41e",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.9885,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 3,
+      "status": "PASS",
+      "renderSha256": "2b494523bb004963b9a04d7b18dc3f548dd2083cd51efbffac0c5764be8758ee",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.8471,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 4,
+      "status": "PASS",
+      "renderSha256": "ed424f256b159c12a698bf435c8200a378d6196783111ed2fc7a656ff57f2210",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.8634,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 5,
+      "status": "PASS",
+      "renderSha256": "e1ac928aa8b1f4b40baef9864b0339d3d32ca8da940c18dcfd589f59492b4bcb",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.8874,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 6,
+      "status": "PASS",
+      "renderSha256": "b5f7fa397e57adb05718988ab41b044861da9531e038f2957531eaafd7f5a377",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.9009,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 7,
+      "status": "PASS",
+      "renderSha256": "ae016e6f637c045ce228357dd507bda2f7a7cdf43196b7d9cc0ae8d8754a75db",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.8986,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 8,
+      "status": "PASS",
+      "renderSha256": "9e3ca720b54c74164b7e8ad64611e8879bc137e1cadcc6ee67c88301a8574215",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.8502,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 9,
+      "status": "PASS",
+      "renderSha256": "d1ad33a590ef8c50777836a44f8f20569ff65a9a4be4ede61d22515518075616",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.8771,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 10,
+      "status": "PASS",
+      "renderSha256": "82c7d12046600041be150c4c2d01b58b1a7c68f6fd05c71ffa6283b804c1f389",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.8916,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 11,
+      "status": "PASS",
+      "renderSha256": "1d35155142105f72ec012e21953abf111971bbcc886f018855b03ba94fd9c2e1",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.8629,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 12,
+      "status": "PASS",
+      "renderSha256": "5c5420b324e2856d5544dec5c9bab7c548b7a2e0488e4a3296b65cb565a263cd",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.9656,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 13,
+      "status": "PASS",
+      "renderSha256": "fd41d04064d819394504217c537eb657aea62b2eac0149c0c3f65ebce765d416",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.8714,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 14,
+      "status": "PASS",
+      "renderSha256": "787bb3445f427677a38645d097b0bbd9207d88f5d3e9a0f40c638762936d6597",
+      "visualMethod": "Agent逐页view_image检查；与最后渲染PNG的SHA-256完全相同",
+      "fillRatio": 0.9146,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 15,
+      "status": "PASS",
+      "renderSha256": "1bcd93d2db30a3184d58aa3afe0fb7220d3f742d6de7c128699da6fe585baeaf",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.8851,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 16,
+      "status": "PASS",
+      "renderSha256": "b2f2ae863a759979a26394dcb5ddb8b0e979bac1aa316db6a5610b5c3a4f1204",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.8983,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 17,
+      "status": "PASS",
+      "renderSha256": "57165e89d4d35d138e0ea9edafb108f591fb92358259e6fc603562bd144c5709",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.9502,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 18,
+      "status": "PASS",
+      "renderSha256": "9f6d8978cae91d3c923883bde7b731187f7ba43e9220068596fb3eb7bc1e087a",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.8858,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 19,
+      "status": "PASS",
+      "renderSha256": "ad808d4b55be77a4411f0e79bccf64e85b4ab575e20297921915ffe1af700004",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.8877,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 20,
+      "status": "PASS",
+      "renderSha256": "dc05fafc40e8228dd5a4b522329e922ae1859b13cf13d2189d3d7057f314bb4f",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.959,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 21,
+      "status": "PASS",
+      "renderSha256": "ee4e701583e999d509361da2f1ab8ed7e542f0f7909ca4f1adfd783f149603a2",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.8896,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 22,
+      "status": "PASS",
+      "renderSha256": "1bef4f2083dcafb8e5f2f1a1bbdc25b96659d9165c92743f1d0faa76e51a4cca",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.912,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 23,
+      "status": "PASS",
+      "renderSha256": "ff27263756b8cdd0b28a610c771cff7b236f96cba90451f30a965d8d5f712f04",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.9366,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 24,
+      "status": "PASS",
+      "renderSha256": "cb5bcf2d67e0399d61ee24faa7c04ddf689fa2a507754b9f1b8a4c6f942a398a",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.9207,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 25,
+      "status": "PASS",
+      "renderSha256": "82199bfcf2089c2d2428950089f19ac1f08d2f48a6af73f7c03ec9359ad9a6da",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.8905,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 26,
+      "status": "PASS",
+      "renderSha256": "6a83ce1afe07c8e5789b86ec4f73b6bcc8d1e6887f5b5cb3496b2f75dc9a7300",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.9235,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 27,
+      "status": "PASS",
+      "renderSha256": "1aa741ac03f912a741572c8a9c7a72b087575ec3ec205b0da9a3b5e3824a69ed",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.8603,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    },
+    {
+      "page": 28,
+      "status": "PASS",
+      "renderSha256": "8ef288bb6dd5f395496cf103177a9287c33e47fcfcd9cbe5a4090e088dcfb2d6",
+      "visualMethod": "主工程代理逐页view_image检查；4/9改写引号断行、19修正缺字后再次目视",
+      "fillRatio": 0.9,
+      "checks": "中文可见、段落/图表无裁切重叠、图片说明一致、无空白凑页"
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0
+}

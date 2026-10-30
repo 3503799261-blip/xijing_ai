@@ -1,8 +1,10 @@
 # 戏境 AI
 
+**28页比赛技术文档（2026-10-30）：** 已按当前代码与原始证据扩写，覆盖京剧内容、连续问答、RAG、四Agent与人审、两次历史建模、当前数字戏台、人物点选、内容定位、数据库安全、测试与部署。正式PDF位于本机`output/competition-submission/最终提交版-2026-10-30/02-技术文档/戏境AI-技术文档-28页.pdf`；[可编辑正文](docs/reports/technical-report-28.json)、[生成与核验说明](docs/reports/technical-report-28.md)、[生成器](scripts/build_technical_report_28.py)随源码保留。28页含封面和目录，旧9页PDF已另行归档；PDF与私有素材不随Git分发。
+
 **2026-10-30人物交互修复：** 点击3D人物、人物上方“姓名 · 近看”或左侧人物卡片会切到人物近景，重置回戏台；鼠标/触摸点选与拖拽已区分。浏览器Ctrl+F5读取最新版本。[修复与实测](docs/reports/stage-character-click-fix.md)。本轮26项真实3D点击/触摸与13项补测通过，模型和业务数据不变，无付费调用。最新完整分类副本为`output/competition-submission/最终提交版-2026-10-30/`，旧日期目录保留为历史快照。
 
-**比赛代码入口：** [GitHub项目](https://github.com/3503799261-blip/xijing_ai) · [当前交付分支](https://github.com/3503799261-blip/xijing_ai/tree/feature/phase5-competition-delivery)。**已按用户授权上传完整历史，仓库Public，默认分支已切换到本交付分支，匿名读取与SHA一致性实测通过**；未合并或改写main。见[代码托管检查](docs/reports/submission-platform-check.md)。最终分类副本使用`output/competition-submission/最终提交版-2026-10-29/`，旧日期目录保留为先前快照。源码/环境/技术文档由项目整理，录像由用户自行完成。下文旧报告中的“未推送”是当时事实，不代表本节最新托管状态。
+**比赛代码入口：** [GitHub项目](https://github.com/3503799261-blip/xijing_ai) · [当前交付分支](https://github.com/3503799261-blip/xijing_ai/tree/feature/phase5-competition-delivery)。**已按用户授权上传完整历史，仓库Public，默认分支已切换到本交付分支，匿名读取与SHA一致性实测通过**；未合并或改写main。见[代码托管检查](docs/reports/submission-platform-check.md)。最终分类副本使用`output/competition-submission/最终提交版-2026-10-30/`，旧日期目录保留为先前快照。源码/环境/技术文档由项目整理，录像由用户自行完成。下文旧报告中的“未推送”是当时事实，不代表本节最新托管状态。
 
 ## 团队信息
 
@@ -10,13 +12,13 @@
 
 站点运行依赖见下文及[后端依赖清单](backend/requirements.txt)；素材转换、PDF生成和浏览器验证的可选工具见[工具环境与安装说明](tools/README.md)。
 
-## 当前查看与比赛文件（2026-10-29）
+## 当前查看与比赛文件（2026-10-30）
 
 主工坊现只突出 **京剧问答、数字戏台**；旧Agent、历史、创作、原模型和企业入口在“更多工具”。VS Code“运行和调试”选择 **戏境 AI：一键运行**，点击绿色三角。查看[数字戏台](http://127.0.0.1:8000/about.html#ai-workshop-stage)或[问答](http://127.0.0.1:8000/about.html#ai-workshop-qa)。全站底部输入“武生”“脸谱”“周瑜”等后回车可直达；未知内容可带到问答框，不自动发送。
 
 舞台与杜丽娘/穆桂英/周瑜是用户提供的比赛限定素材，已适配GLB、按剧目分类，可点选、旋转、缩放和重置。杜丽娘标昆曲，人物不表演，不代表新调用Neural4D。原两个生成模型与历史保持不变。派生资源在仓库外`../.runtime/digital-stage/assets/`，源码克隆不自带这些模型。
 
-[交付与测试](docs/reports/digital-stage-delivery.md) · [分类和手动检查](docs/reports/submission-manual-check.md) · [证据索引](docs/evidence/test-results/digital-stage-delivery/README.md)。技术PDF在`output/pdf/xijing-ai-technical-report.pdf`（9页）；分类副本在`output/competition-submission/2026-10-29/`。**录像由用户自行录制，当前没有视频成片。** 输出与原模型不进Git，不含真实密钥。
+[交付与测试](docs/reports/digital-stage-delivery.md) · [分类和手动检查](docs/reports/submission-manual-check.md) · [证据索引](docs/evidence/test-results/digital-stage-delivery/README.md)。技术PDF为`output/pdf/xijing-ai-technical-report-28.pdf`（28页）；最终分类副本在`output/competition-submission/最终提交版-2026-10-30/`。**用户已提供视频成片，未由助手录制或改动。** 已核对时长7分51.972秒、1796×1080；标准1920×1080画幅、完整普通话及敏感画面检查仍待用户最终确认。输出与原模型不进Git，不含真实密钥。
 
 当前已知参与者：陈雯雯（用户提供的Git提交姓名）；其他团队/报名信息由用户核对，不虚构成员。本轮无付费/新建模；Neural4D仍2/3、余1但第三取消，创建关闭。实体手机、当天API与跨机恢复未测。下文历史按日期阅读，以本节为最新界面状态。
 

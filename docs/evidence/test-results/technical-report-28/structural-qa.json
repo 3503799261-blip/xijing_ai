@@ -1,0 +1,2590 @@
+{
+  "kind": "OFFLINE_FINAL_PDF_STRUCTURAL_QA",
+  "checkedAtUtc": "2026-10-30T13:41:40.506798+00:00",
+  "pdf": "D:\\京剧\\京剧\\output\\pdf\\xijing-ai-technical-report-28.pdf",
+  "sourceJson": "D:\\京剧\\京剧\\docs\\reports\\technical-report-28.json",
+  "output": "D:\\京剧\\京剧\\tmp\\pdfs\\technical-report-28\\structural-qa.json",
+  "pdfBytes": 2628079,
+  "pdfSha256": "186007a2410be13ebd2ede6f9c4bcc2a18c77c4fb802cdea21ab888158af14b0",
+  "jsonSha256": "efba135aaf35b76f9a1d15b4bb47db75e1c1765cacf13e3863274e2632d34dec",
+  "runtime": {
+    "python": "C:\\Users\\35037\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "pypdf": "6.10.0",
+    "pdfplumber": "0.11.9"
+  },
+  "scope": "Read PDF/JSON, PDF font/text/link structures and evidence path existence only. No app import/start, business/API/browser tests, database/model writes, or startup snippet execution. Prior structural QA is preserved before this rerun.",
+  "limitations": [
+    "Text extraction and glyph-coordinate checks cannot replace final visual review or prove correctness of screenshot pixels.",
+    "CJK coverage compares extracted characters per source page, not cultural or semantic correctness.",
+    "Evidence-path existence is not a re-execution or correctness audit of the referenced historical runs."
+  ],
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "exact_page_count",
+      "status": "PASS",
+      "details": {
+        "pdf": 28,
+        "jsonPageCount": 28,
+        "jsonPages": 28
+      }
+    },
+    {
+      "name": "ordered_json_pages",
+      "status": "PASS",
+      "details": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "name": "expected_final_pdf_size",
+      "status": "PASS",
+      "details": {
+        "actualBytes": 2628079,
+        "expectedBytes": 2628079
+      }
+    },
+    {
+      "name": "bookmarks_28_valid_targets",
+      "status": "PASS",
+      "details": [
+        {
+          "title": "戏境 AI\n文化有据，数字入戏",
+          "targetPage": 1,
+          "depth": 0
+        },
+        {
+          "title": "阅读地图与证据口径",
+          "targetPage": 2,
+          "depth": 0
+        },
+        {
+          "title": "问题定义与用户需求",
+          "targetPage": 3,
+          "depth": 0
+        },
+        {
+          "title": "京剧内容体系与文化边界",
+          "targetPage": 4,
+          "depth": 0
+        },
+        {
+          "title": "信息架构与端到端体验",
+          "targetPage": 5,
+          "depth": 0
+        },
+        {
+          "title": "八页布局与视觉产品化",
+          "targetPage": 6,
+          "depth": 0
+        },
+        {
+          "title": "连续问答与历史会话",
+          "targetPage": 7,
+          "depth": 0
+        },
+        {
+          "title": "总体架构与技术取舍",
+          "targetPage": 8,
+          "depth": 0
+        },
+        {
+          "title": "数据模型与版本谱系",
+          "targetPage": 9,
+          "depth": 0
+        },
+        {
+          "title": "知识资料与来源管理",
+          "targetPage": 10,
+          "depth": 0
+        },
+        {
+          "title": "清洗分块与幂等入库",
+          "targetPage": 11,
+          "depth": 0
+        },
+        {
+          "title": "中文Embedding与向量持久化",
+          "targetPage": 12,
+          "depth": 0
+        },
+        {
+          "title": "混合检索与资料不足判断",
+          "targetPage": 13,
+          "depth": 0
+        },
+        {
+          "title": "RAG Prompt与可信引用",
+          "targetPage": 14,
+          "depth": 0
+        },
+        {
+          "title": "DeepSeek真实接入与费用保护",
+          "targetPage": 15,
+          "depth": 0
+        },
+        {
+          "title": "四Agent有限工作流",
+          "targetPage": 16,
+          "depth": 0
+        },
+        {
+          "title": "人审、角色JSON与只读历史",
+          "targetPage": 17,
+          "depth": 0
+        },
+        {
+          "title": "Neural4D历史链路与三次硬限制",
+          "targetPage": 18,
+          "depth": 0
+        },
+        {
+          "title": "用户模型导入与GLB适配",
+          "targetPage": 19,
+          "depth": 0
+        },
+        {
+          "title": "实时数字戏台与观察交互",
+          "targetPage": 20,
+          "depth": 0
+        },
+        {
+          "title": "人物点选、触摸与异步修复",
+          "targetPage": 21,
+          "depth": 0
+        },
+        {
+          "title": "内容自动定位与备用导览",
+          "targetPage": 22,
+          "depth": 0
+        },
+        {
+          "title": "数据库安全与故障隔离",
+          "targetPage": 23,
+          "depth": 0
+        },
+        {
+          "title": "测试设计与原始结果口径",
+          "targetPage": 24,
+          "depth": 0
+        },
+        {
+          "title": "实验、失败案例与Prompt演进",
+          "targetPage": 25,
+          "depth": 0
+        },
+        {
+          "title": "安装启动、资源恢复与现场运行",
+          "targetPage": 26,
+          "depth": 0
+        },
+        {
+          "title": "创新、应用价值与后续工作",
+          "targetPage": 27,
+          "depth": 0
+        },
+        {
+          "title": "证据索引与交付核对",
+          "targetPage": 28,
+          "depth": 0
+        }
+      ]
+    },
+    {
+      "name": "toc_26_internal_links",
+      "status": "PASS",
+      "details": {
+        "internalCount": 26,
+        "targets": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ],
+        "invalid": [],
+        "allLinks": [
+          {
+            "sourcePage": 2,
+            "targetPage": 3,
+            "uri": null,
+            "rect": [
+              44.0,
+              649.6898,
+              285.6378,
+              671.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 4,
+            "uri": null,
+            "rect": [
+              44.0,
+              625.6898,
+              285.6378,
+              647.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 5,
+            "uri": null,
+            "rect": [
+              44.0,
+              601.6898,
+              285.6378,
+              623.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 6,
+            "uri": null,
+            "rect": [
+              44.0,
+              577.6898,
+              285.6378,
+              599.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 7,
+            "uri": null,
+            "rect": [
+              44.0,
+              553.6898,
+              285.6378,
+              575.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 8,
+            "uri": null,
+            "rect": [
+              44.0,
+              529.6898,
+              285.6378,
+              551.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 9,
+            "uri": null,
+            "rect": [
+              44.0,
+              505.6898,
+              285.6378,
+              527.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 10,
+            "uri": null,
+            "rect": [
+              44.0,
+              481.6898,
+              285.6378,
+              503.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 11,
+            "uri": null,
+            "rect": [
+              44.0,
+              457.6898,
+              285.6378,
+              479.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 12,
+            "uri": null,
+            "rect": [
+              44.0,
+              433.6898,
+              285.6378,
+              455.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 13,
+            "uri": null,
+            "rect": [
+              44.0,
+              409.6898,
+              285.6378,
+              431.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 14,
+            "uri": null,
+            "rect": [
+              44.0,
+              385.6898,
+              285.6378,
+              407.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 15,
+            "uri": null,
+            "rect": [
+              44.0,
+              361.6898,
+              285.6378,
+              383.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 16,
+            "uri": null,
+            "rect": [
+              305.6378,
+              649.6898,
+              547.2756,
+              671.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 17,
+            "uri": null,
+            "rect": [
+              305.6378,
+              625.6898,
+              547.2756,
+              647.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 18,
+            "uri": null,
+            "rect": [
+              305.6378,
+              601.6898,
+              547.2756,
+              623.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 19,
+            "uri": null,
+            "rect": [
+              305.6378,
+              577.6898,
+              547.2756,
+              599.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 20,
+            "uri": null,
+            "rect": [
+              305.6378,
+              553.6898,
+              547.2756,
+              575.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 21,
+            "uri": null,
+            "rect": [
+              305.6378,
+              529.6898,
+              547.2756,
+              551.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 22,
+            "uri": null,
+            "rect": [
+              305.6378,
+              505.6898,
+              547.2756,
+              527.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 23,
+            "uri": null,
+            "rect": [
+              305.6378,
+              481.6898,
+              547.2756,
+              503.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 24,
+            "uri": null,
+            "rect": [
+              305.6378,
+              457.6898,
+              547.2756,
+              479.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 25,
+            "uri": null,
+            "rect": [
+              305.6378,
+              433.6898,
+              547.2756,
+              455.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 26,
+            "uri": null,
+            "rect": [
+              305.6378,
+              409.6898,
+              547.2756,
+              431.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 27,
+            "uri": null,
+            "rect": [
+              305.6378,
+              385.6898,
+              547.2756,
+              407.6898
+            ],
+            "internal": true
+          },
+          {
+            "sourcePage": 2,
+            "targetPage": 28,
+            "uri": null,
+            "rect": [
+              305.6378,
+              361.6898,
+              547.2756,
+              383.6898
+            ],
+            "internal": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "pdfplumber_page_count_agrees",
+      "status": "PASS",
+      "details": 28
+    },
+    {
+      "name": "all_28_pages_A4_unrotated",
+      "status": "PASS",
+      "details": [
+        {
+          "page": 1,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 2,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 3,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 4,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 5,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 6,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 7,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 8,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 9,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 10,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 11,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 12,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 13,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 14,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 15,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 16,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 17,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 18,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 19,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 20,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 21,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 22,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 23,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 24,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 25,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 26,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 27,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        },
+        {
+          "page": 28,
+          "widthPt": 595.2756,
+          "heightPt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "name": "no_text_glyph_outside_paper",
+      "status": "PASS",
+      "details": []
+    },
+    {
+      "name": "right_margin_only_single_CJK_hanging_punctuation",
+      "status": "PASS",
+      "details": {
+        "violations": [],
+        "allowed": [
+          {
+            "page": 5,
+            "text": "。",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 546.9,
+            "x1": 557.6,
+            "top": 179.574,
+            "bottom": 190.274
+          },
+          {
+            "page": 7,
+            "text": "，",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 541.55,
+            "x1": 552.25,
+            "top": 179.574,
+            "bottom": 190.274
+          },
+          {
+            "page": 10,
+            "text": "”",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 541.55,
+            "x1": 552.25,
+            "top": 522.426,
+            "bottom": 533.126
+          },
+          {
+            "page": 13,
+            "text": "，",
+            "font": "AAAAAA+SimSun-0",
+            "size": 11.3,
+            "x0": 541.2,
+            "x1": 552.5,
+            "top": 113.589,
+            "bottom": 124.889
+          },
+          {
+            "page": 13,
+            "text": "，",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 546.9,
+            "x1": 557.6,
+            "top": 313.657,
+            "bottom": 324.357
+          },
+          {
+            "page": 14,
+            "text": "。",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 546.9,
+            "x1": 557.6,
+            "top": 260.05,
+            "bottom": 270.75
+          },
+          {
+            "page": 14,
+            "text": "、",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 541.55,
+            "x1": 552.25,
+            "top": 313.657,
+            "bottom": 324.357
+          },
+          {
+            "page": 14,
+            "text": "，",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 546.9,
+            "x1": 557.6,
+            "top": 436.395,
+            "bottom": 447.095
+          },
+          {
+            "page": 15,
+            "text": "。",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 541.55,
+            "x1": 552.25,
+            "top": 161.705,
+            "bottom": 172.405
+          },
+          {
+            "page": 15,
+            "text": "。",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 546.9,
+            "x1": 557.6,
+            "top": 313.657,
+            "bottom": 324.357
+          },
+          {
+            "page": 15,
+            "text": "。",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 546.9,
+            "x1": 557.6,
+            "top": 568.902,
+            "bottom": 579.602
+          },
+          {
+            "page": 15,
+            "text": "、",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 541.55,
+            "x1": 552.25,
+            "top": 595.771,
+            "bottom": 606.471
+          },
+          {
+            "page": 16,
+            "text": "，",
+            "font": "AAAAAA+SimSun-0",
+            "size": 11.3,
+            "x0": 541.2,
+            "x1": 552.5,
+            "top": 113.589,
+            "bottom": 124.889
+          },
+          {
+            "page": 18,
+            "text": "，",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 541.55,
+            "x1": 552.25,
+            "top": 454.988,
+            "bottom": 465.688
+          },
+          {
+            "page": 19,
+            "text": "，",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 541.55,
+            "x1": 552.25,
+            "top": 438.388,
+            "bottom": 449.088
+          },
+          {
+            "page": 22,
+            "text": "，",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 541.55,
+            "x1": 552.25,
+            "top": 260.05,
+            "bottom": 270.75
+          },
+          {
+            "page": 23,
+            "text": "。",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 541.55,
+            "x1": 552.25,
+            "top": 331.526,
+            "bottom": 342.226
+          },
+          {
+            "page": 23,
+            "text": "、",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 546.9,
+            "x1": 557.6,
+            "top": 576.064,
+            "bottom": 586.764
+          },
+          {
+            "page": 25,
+            "text": "，",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 546.9,
+            "x1": 557.6,
+            "top": 368.643,
+            "bottom": 379.343
+          },
+          {
+            "page": 25,
+            "text": "，",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 546.9,
+            "x1": 557.6,
+            "top": 456.25,
+            "bottom": 466.95
+          }
+        ],
+        "policy": "44pt right margin; one CJK punctuation glyph per line may hang inside page"
+      }
+    },
+    {
+      "name": "no_replacement_or_suspicious_extracted_glyphs",
+      "status": "PASS",
+      "details": []
+    },
+    {
+      "name": "all_source_CJK_characters_represented_per_page",
+      "status": "PASS",
+      "details": []
+    },
+    {
+      "name": "all_pages_have_substantial_extractable_text",
+      "status": "PASS",
+      "details": {
+        "minimumChinese": 318,
+        "minimumNonWhitespace": 578
+      }
+    },
+    {
+      "name": "all_actually_used_text_fonts_embedded",
+      "status": "PASS",
+      "details": {
+        "usedFonts": [
+          "AAAAAA+Consolas",
+          "AAAAAA+SimHei",
+          "AAAAAA+SimSun-0",
+          "AAAAAB+SimHei",
+          "AAAAAB+SimSun-0",
+          "AAAAAC+SimSun-0",
+          "AAAAAD+SimSun-0",
+          "AAAAAE+SimSun-0"
+        ],
+        "missingOrUnembedded": [],
+        "fonts": [
+          {
+            "baseFont": "Helvetica",
+            "subtype": "/Type1",
+            "embedded": false,
+            "toUnicode": false,
+            "resourceAliases": [
+              "/F1"
+            ],
+            "usedInExtractedText": false
+          },
+          {
+            "baseFont": "AAAAAA+SimHei",
+            "subtype": "/TrueType",
+            "embedded": true,
+            "toUnicode": true,
+            "resourceAliases": [
+              "/F2+0"
+            ],
+            "usedInExtractedText": true
+          },
+          {
+            "baseFont": "AAAAAB+SimHei",
+            "subtype": "/TrueType",
+            "embedded": true,
+            "toUnicode": true,
+            "resourceAliases": [
+              "/F2+1"
+            ],
+            "usedInExtractedText": true
+          },
+          {
+            "baseFont": "AAAAAA+SimSun-0",
+            "subtype": "/TrueType",
+            "embedded": true,
+            "toUnicode": true,
+            "resourceAliases": [
+              "/F3+0"
+            ],
+            "usedInExtractedText": true
+          },
+          {
+            "baseFont": "AAAAAB+SimSun-0",
+            "subtype": "/TrueType",
+            "embedded": true,
+            "toUnicode": true,
+            "resourceAliases": [
+              "/F3+1"
+            ],
+            "usedInExtractedText": true
+          },
+          {
+            "baseFont": "AAAAAC+SimSun-0",
+            "subtype": "/TrueType",
+            "embedded": true,
+            "toUnicode": true,
+            "resourceAliases": [
+              "/F3+2"
+            ],
+            "usedInExtractedText": true
+          },
+          {
+            "baseFont": "AAAAAD+SimSun-0",
+            "subtype": "/TrueType",
+            "embedded": true,
+            "toUnicode": true,
+            "resourceAliases": [
+              "/F3+3"
+            ],
+            "usedInExtractedText": true
+          },
+          {
+            "baseFont": "AAAAAE+SimSun-0",
+            "subtype": "/TrueType",
+            "embedded": true,
+            "toUnicode": true,
+            "resourceAliases": [
+              "/F3+4"
+            ],
+            "usedInExtractedText": true
+          },
+          {
+            "baseFont": "AAAAAA+Consolas",
+            "subtype": "/TrueType",
+            "embedded": true,
+            "toUnicode": true,
+            "resourceAliases": [
+              "/F4+0"
+            ],
+            "usedInExtractedText": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "all_reference_index_paths_exist",
+      "status": "PASS",
+      "details": [
+        {
+          "sourceId": "R01",
+          "path": "README.md",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R01",
+          "path": "tools/README.md",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R02",
+          "path": "index.html",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R02",
+          "path": "history.html",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R02",
+          "path": "css/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R03",
+          "path": "knowledge/sources.json",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R03",
+          "path": "knowledge/documents/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R03",
+          "path": "knowledge/review/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R04",
+          "path": "backend/app/knowledge/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R04",
+          "path": "backend/app/services/search.py",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R04",
+          "path": "docs/reports/phase-02.md",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R05",
+          "path": "backend/app/services/conversations.py",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R05",
+          "path": "docs/reports/frontend-productization.md",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R06",
+          "path": "backend/app/agents/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R06",
+          "path": "docs/reports/phase-03.md",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R07",
+          "path": "backend/app/assets/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R07",
+          "path": "docs/reports/phase-04-final-acceptance.md",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R08",
+          "path": "js/ai-workshop/stage-viewer.js",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R08",
+          "path": "backend/app/stage_assets.py",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R08",
+          "path": "scripts/prepare_digital_stage.mjs",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R09",
+          "path": "js/site-navigator.js",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R09",
+          "path": "css/site-navigator.css",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R10",
+          "path": "backend/app/database.py",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R10",
+          "path": "scripts/run_local.py",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R10",
+          "path": "backend/scripts/initialize_business_databases.py",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R11",
+          "path": "docs/evidence/test-results/phase-05-wp4-test-report.md",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R11",
+          "path": "docs/evidence/test-results/phase-05-wp4-db-repair/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R12",
+          "path": "docs/reports/digital-stage-delivery.md",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R12",
+          "path": "docs/evidence/test-results/digital-stage-delivery/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R13",
+          "path": "docs/reports/stage-character-click-fix.md",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R13",
+          "path": "docs/evidence/test-results/stage-character-click-20261030/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R14",
+          "path": "docs/prompts/phase-02/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R15",
+          "path": "docs/prompts/phase-03/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R16",
+          "path": "docs/prompts/phase-04/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R17",
+          "path": "docs/prompts/phase-05/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R17",
+          "path": "docs/prompts/stage-character-click-fix/",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "sourceId": "R18",
+          "path": "docs/reports/phase-05-asset-provenance-and-permissions.md",
+          "exists": true,
+          "kind": "file"
+        },
+        {
+          "sourceId": "R18",
+          "path": "docs/reports/phase-05-deployment-and-recovery.md",
+          "exists": true,
+          "kind": "file"
+        }
+      ]
+    },
+    {
+      "name": "reference_ids_resolve",
+      "status": "PASS",
+      "details": {
+        "undefinedPageSourceIds": [],
+        "undefinedInlineSourceIds": [],
+        "definedIds": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18"
+        ]
+      }
+    },
+    {
+      "name": "all_source_image_paths_exist",
+      "status": "PASS",
+      "details": [
+        {
+          "page": 1,
+          "path": "docs/evidence/test-results/stage-character-click-20261030/screenshots/zhouyu-focused.png",
+          "exists": true
+        },
+        {
+          "page": 20,
+          "path": "docs/evidence/test-results/stage-character-click-20261030/screenshots/muguiying-focused.png",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "name": "startup_snippet_PowerShell_static_parse_only",
+      "status": "PASS",
+      "details": {
+        "kind": "PowerShellParserStaticOnly",
+        "startupSnippetCount": 1,
+        "snippet": "$appPython = '.\\.venv\\Scripts\\python.exe'\n& $appPython -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --workers 1",
+        "errors": [],
+        "errorCount": 0,
+        "executed": false
+      }
+    },
+    {
+      "name": "crop_boxes_match_A4_media_boxes",
+      "status": "PASS",
+      "details": [
+        {
+          "page": 1,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 2,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 3,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 4,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 5,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 6,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 7,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 8,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 9,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 10,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 11,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 12,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 13,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 14,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 15,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 16,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 17,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 18,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 19,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 20,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 21,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 22,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 23,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 24,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 25,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 26,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 27,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        },
+        {
+          "page": 28,
+          "mediaBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropBox": [
+            0.0,
+            0.0,
+            595.2756,
+            841.8898
+          ],
+          "cropMatchesPaper": true
+        }
+      ]
+    },
+    {
+      "name": "previous_page19_missing_minus_resolved",
+      "status": "PASS",
+      "details": {
+        "priorResult": "D:\\京剧\\京剧\\tmp\\pdfs\\technical-report-28\\structural-qa-before-glyph-fix.json",
+        "priorResultSha256": "be0bb2ebfa4210c3bcb6a38e7b423e48ac52577caeb58c85e1bf20a72d0c57bf",
+        "priorStatus": "FAIL",
+        "priorPdfBytes": 2628082,
+        "priorPdfSha256": "f1eace391660822455032e4d0164d1e51737cff18674a74a4be16b8f8b0f22fd",
+        "priorErrors": [
+          {
+            "check": "no_replacement_or_suspicious_extracted_glyphs",
+            "details": [
+              {
+                "page": 19,
+                "text": "\u0000",
+                "font": "AAAAAA+SimSun-0",
+                "size": 10.7,
+                "x0": 252.65,
+                "x1": 263.35,
+                "top": 197.443,
+                "bottom": 208.143
+              }
+            ]
+          }
+        ],
+        "priorDiagnosis": {
+          "page": 19,
+          "sourceBlockIndex": 1,
+          "sourceContext": "不能把简单扇形切分或“每面n−2”的估算直接当作最终渲染结果。",
+          "sourceCharacter": "−",
+          "sourceCodePoint": "U+2212 MATHEMATICAL MINUS SIGN",
+          "pdfExtractedCodePoint": "U+0000",
+          "confirmedBy": [
+            "pypdf",
+            "pdfplumber"
+          ],
+          "font": "AAAAAA+SimSun-0",
+          "coordinatesPt": {
+            "x0": 252.65,
+            "x1": 263.35,
+            "top": 197.443,
+            "bottom": 208.143
+          },
+          "requiredAction": "Replace source mathematical minus with supported ASCII hyphen/minus or use a font that supports U+2212; regenerate and recheck. No source/PDF changes were performed by this QA."
+        },
+        "currentSourceContainsAsciiNMinus2": true,
+        "currentSourceContainsUnsupportedMathematicalMinus": false,
+        "pdfplumberExtractsAsciiNMinus2": true,
+        "pypdfExtractsAsciiNMinus2": true,
+        "currentPage19NullCount": 0,
+        "sourceOrPdfModifiedByThisQa": false
+      }
+    },
+    {
+      "name": "source_and_PDF_unchanged_during_readonly_QA",
+      "status": "PASS",
+      "details": {
+        "pdfSha256": "186007a2410be13ebd2ede6f9c4bcc2a18c77c4fb802cdea21ab888158af14b0",
+        "jsonSha256": "efba135aaf35b76f9a1d15b4bb47db75e1c1765cacf13e3863274e2632d34dec"
+      }
+    }
+  ],
+  "errors": [],
+  "notes": [
+    {
+      "kind": "unused_default_font_resources",
+      "fonts": [
+        "Helvetica"
+      ],
+      "meaning": "No extracted text glyph uses these resource-only fonts; not an embedding failure."
+    }
+  ],
+  "previousFailureAndResolution": {
+    "priorResult": "D:\\京剧\\京剧\\tmp\\pdfs\\technical-report-28\\structural-qa-before-glyph-fix.json",
+    "priorResultSha256": "be0bb2ebfa4210c3bcb6a38e7b423e48ac52577caeb58c85e1bf20a72d0c57bf",
+    "priorStatus": "FAIL",
+    "priorPdfBytes": 2628082,
+    "priorPdfSha256": "f1eace391660822455032e4d0164d1e51737cff18674a74a4be16b8f8b0f22fd",
+    "priorErrors": [
+      {
+        "check": "no_replacement_or_suspicious_extracted_glyphs",
+        "details": [
+          {
+            "page": 19,
+            "text": "\u0000",
+            "font": "AAAAAA+SimSun-0",
+            "size": 10.7,
+            "x0": 252.65,
+            "x1": 263.35,
+            "top": 197.443,
+            "bottom": 208.143
+          }
+        ]
+      }
+    ],
+    "priorDiagnosis": {
+      "page": 19,
+      "sourceBlockIndex": 1,
+      "sourceContext": "不能把简单扇形切分或“每面n−2”的估算直接当作最终渲染结果。",
+      "sourceCharacter": "−",
+      "sourceCodePoint": "U+2212 MATHEMATICAL MINUS SIGN",
+      "pdfExtractedCodePoint": "U+0000",
+      "confirmedBy": [
+        "pypdf",
+        "pdfplumber"
+      ],
+      "font": "AAAAAA+SimSun-0",
+      "coordinatesPt": {
+        "x0": 252.65,
+        "x1": 263.35,
+        "top": 197.443,
+        "bottom": 208.143
+      },
+      "requiredAction": "Replace source mathematical minus with supported ASCII hyphen/minus or use a font that supports U+2212; regenerate and recheck. No source/PDF changes were performed by this QA."
+    },
+    "currentSourceContainsAsciiNMinus2": true,
+    "currentSourceContainsUnsupportedMathematicalMinus": false,
+    "pdfplumberExtractsAsciiNMinus2": true,
+    "pypdfExtractsAsciiNMinus2": true,
+    "currentPage19NullCount": 0,
+    "sourceOrPdfModifiedByThisQa": false
+  },
+  "totals": {
+    "pages": 28,
+    "extractedCharacters": 32917,
+    "nonWhitespaceCharacters": 30910,
+    "chineseCharacters": 19154,
+    "bookmarks": 28,
+    "internalLinks": 26,
+    "actuallyUsedFonts": 8,
+    "referencePaths": 38,
+    "sourceImages": 2,
+    "allowedHangingPunctuationGlyphs": 20,
+    "replacementCharacterGlyphs": 0,
+    "nullCodePointGlyphs": 0
+  },
+  "pages": [
+    {
+      "page": 1,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 618,
+      "nonWhitespaceCharacters": 578,
+      "chineseCharacters": 400,
+      "glyphCount": 599,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 354,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 2,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 791,
+      "nonWhitespaceCharacters": 695,
+      "chineseCharacters": 512,
+      "glyphCount": 722,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 313,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 3,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 914,
+      "nonWhitespaceCharacters": 863,
+      "chineseCharacters": 733,
+      "glyphCount": 878,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 687,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 4,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 934,
+      "nonWhitespaceCharacters": 879,
+      "chineseCharacters": 750,
+      "glyphCount": 895,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 704,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 5,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 929,
+      "nonWhitespaceCharacters": 874,
+      "chineseCharacters": 683,
+      "glyphCount": 891,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 557.6,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 1,
+      "expectedSourceCjkCount": 637,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 6,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 982,
+      "nonWhitespaceCharacters": 921,
+      "chineseCharacters": 744,
+      "glyphCount": 937,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 698,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 7,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1203,
+      "nonWhitespaceCharacters": 1124,
+      "chineseCharacters": 735,
+      "glyphCount": 1165,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 552.25,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 1,
+      "expectedSourceCjkCount": 689,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 8,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 976,
+      "nonWhitespaceCharacters": 914,
+      "chineseCharacters": 566,
+      "glyphCount": 946,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 421,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 9,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1193,
+      "nonWhitespaceCharacters": 1116,
+      "chineseCharacters": 552,
+      "glyphCount": 1148,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 506,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 10,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1334,
+      "nonWhitespaceCharacters": 1250,
+      "chineseCharacters": 668,
+      "glyphCount": 1293,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 552.25,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 1,
+      "expectedSourceCjkCount": 622,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 11,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1163,
+      "nonWhitespaceCharacters": 1066,
+      "chineseCharacters": 622,
+      "glyphCount": 1125,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 576,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 12,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1335,
+      "nonWhitespaceCharacters": 1240,
+      "chineseCharacters": 621,
+      "glyphCount": 1293,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 575,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 13,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1334,
+      "nonWhitespaceCharacters": 1240,
+      "chineseCharacters": 713,
+      "glyphCount": 1297,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 557.6,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 2,
+      "expectedSourceCjkCount": 667,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 14,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1364,
+      "nonWhitespaceCharacters": 1276,
+      "chineseCharacters": 834,
+      "glyphCount": 1335,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 557.6,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 3,
+      "expectedSourceCjkCount": 788,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 15,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1450,
+      "nonWhitespaceCharacters": 1344,
+      "chineseCharacters": 791,
+      "glyphCount": 1412,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 557.6,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 4,
+      "expectedSourceCjkCount": 745,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 16,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1405,
+      "nonWhitespaceCharacters": 1310,
+      "chineseCharacters": 706,
+      "glyphCount": 1371,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 552.5,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 1,
+      "expectedSourceCjkCount": 660,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 17,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1273,
+      "nonWhitespaceCharacters": 1202,
+      "chineseCharacters": 796,
+      "glyphCount": 1234,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 750,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 18,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1258,
+      "nonWhitespaceCharacters": 1200,
+      "chineseCharacters": 728,
+      "glyphCount": 1222,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 552.25,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 1,
+      "expectedSourceCjkCount": 682,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 19,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1242,
+      "nonWhitespaceCharacters": 1186,
+      "chineseCharacters": 716,
+      "glyphCount": 1205,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 552.25,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 1,
+      "expectedSourceCjkCount": 670,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 20,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 762,
+      "nonWhitespaceCharacters": 713,
+      "chineseCharacters": 489,
+      "glyphCount": 735,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 443,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 21,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1179,
+      "nonWhitespaceCharacters": 1121,
+      "chineseCharacters": 837,
+      "glyphCount": 1140,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 791,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 22,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1205,
+      "nonWhitespaceCharacters": 1148,
+      "chineseCharacters": 814,
+      "glyphCount": 1171,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 552.25,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 1,
+      "expectedSourceCjkCount": 768,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 23,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1395,
+      "nonWhitespaceCharacters": 1335,
+      "chineseCharacters": 827,
+      "glyphCount": 1355,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 557.6,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 2,
+      "expectedSourceCjkCount": 781,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 24,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1203,
+      "nonWhitespaceCharacters": 1133,
+      "chineseCharacters": 768,
+      "glyphCount": 1160,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 722,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 25,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1228,
+      "nonWhitespaceCharacters": 1154,
+      "chineseCharacters": 772,
+      "glyphCount": 1191,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 557.6,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 2,
+      "expectedSourceCjkCount": 726,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 26,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1419,
+      "nonWhitespaceCharacters": 1338,
+      "chineseCharacters": 697,
+      "glyphCount": 1376,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 651,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 27,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 966,
+      "nonWhitespaceCharacters": 915,
+      "chineseCharacters": 762,
+      "glyphCount": 932,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 716,
+      "missingSourceCjkCount": 0
+    },
+    {
+      "page": 28,
+      "widthPt": 595.2756,
+      "heightPt": 841.8898,
+      "rotation": 0,
+      "a4": true,
+      "extractedCharacters": 1862,
+      "nonWhitespaceCharacters": 1775,
+      "chineseCharacters": 318,
+      "glyphCount": 1792,
+      "bounds": {
+        "x0": 44.0,
+        "x1": 551.276,
+        "top": 20.352,
+        "bottom": 818.948
+      },
+      "outsidePaperCount": 0,
+      "disallowedRightMarginCount": 0,
+      "allowedHangingPunctuationCount": 0,
+      "expectedSourceCjkCount": 272,
+      "missingSourceCjkCount": 0
+    }
+  ]
+}
