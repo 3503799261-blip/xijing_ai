@@ -1,0 +1,45 @@
+{
+  "clientDate": "2026-10-30",
+  "part1Seconds": 300,
+  "part2SegmentsSeconds": [
+    35,
+    30,
+    45,
+    40,
+    10
+  ],
+  "part2Seconds": 160,
+  "combinedSeconds": 460,
+  "combinedPlanned": "7:40",
+  "firstPartHanCharacters": 946,
+  "secondPartHanCharacters": 452,
+  "realDurationMeasured": false,
+  "recordingProduced": false,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "functionalCodeModified": false,
+  "files": [
+    {
+      "file": "docs/reports/video-script-part2-technical-collaboration.md",
+      "sha256": "07fdd75c1f7e55749554867c8ed8bc38150b3f8acc655d9d0daf702188bffb32"
+    },
+    {
+      "file": "docs/reports/video-part2-technical-evidence.md",
+      "sha256": "590cd3ec78b0448dd011aa6050c9623a0e03c8cce9d0b1dca8bca565d207db5c"
+    },
+    {
+      "file": "docs/reports/video-script-full-7m40.md",
+      "sha256": "08bf25092952069685ed918c9b3eea873e3ef32d71e3dc17d4b673ab03627a9c"
+    },
+    {
+      "file": "docs/reports/video-script-full-7m40-voice.txt",
+      "sha256": "0b135b71f56e82e121eb73a35cd06805ad319a0dfb51e75a746f2fe1dae07f80"
+    },
+    {
+      "file": "docs/reports/video-script-part2-voice.txt",
+      "sha256": "e38e70ae13bc62e9d9a04fe3f1f88e21fa70631179247543e64e3fad06679aa4"
+    }
+  ],
+  "localLinksChecked": 28,
+  "missingLinks": []
+}

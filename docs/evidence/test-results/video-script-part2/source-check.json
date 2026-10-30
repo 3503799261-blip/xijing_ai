@@ -1,0 +1,61 @@
+{
+  "clientDate": "2026-10-30",
+  "scope": "Read-only extraction of code and saved historical evidence; no API execution",
+  "sourceExcerpts": [
+    {
+      "source": "backend/app/providers/llm.py",
+      "firstLine": 69,
+      "lastLine": 70,
+      "sha256": "f46e62fa85dbde51692892c1240e483f43f63e710158aaed68d76467f24cf993"
+    },
+    {
+      "source": "backend/app/providers/llm.py",
+      "firstLine": 75,
+      "lastLine": 76,
+      "sha256": "f46e62fa85dbde51692892c1240e483f43f63e710158aaed68d76467f24cf993"
+    },
+    {
+      "source": "backend/app/services/chat.py",
+      "firstLine": 59,
+      "lastLine": 61,
+      "sha256": "2446a662e013b5ced6071d78f44d1357da62864fef9f0a9984cce22dfb775975"
+    },
+    {
+      "source": "backend/app/assets/usage.py",
+      "firstLine": 364,
+      "lastLine": 372,
+      "sha256": "fe1c0619ae1408c5f7b2b434c6163752a2c91682ba82895eccd98434277af06d"
+    },
+    {
+      "source": "backend/app/providers/neural4d.py",
+      "firstLine": 133,
+      "lastLine": 138,
+      "sha256": "9d0a89aeb8a955f7ec0cf4cb69baf5cc098e7d99c74a90930bbb148b9dfb504d"
+    },
+    {
+      "source": "js/ai-workshop/digital-stage.js",
+      "firstLine": 129,
+      "lastLine": 133,
+      "sha256": "e7edabce57b4352d5e4bbf242b4d0b1653930715337c73cd3ceecf1c4c517d57"
+    }
+  ],
+  "deepseekProbeSuccess": true,
+  "deepseekProbeTokens": 14,
+  "neuralTaskId": "8735f32e-097e-488c-962f-f11e64af7741",
+  "neuralCreditsHistoricalSecondModel": 30,
+  "creationResponseState": "SUBMITTED",
+  "laterModelSuccessValidated": true,
+  "realBrowserChecks": 26,
+  "guardChecks": 13,
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "screenRecordingCreated": false,
+  "guideSha256": "590cd3ec78b0448dd011aa6050c9623a0e03c8cce9d0b1dca8bca565d207db5c",
+  "publicAssistantExcerpt": {
+    "source": "docs/prompts/phase-02/01-checkpoint-a-public-conversation.jsonl",
+    "sourceLine": 1182,
+    "timestamp": "2026-10-09T15:23:50.531Z",
+    "quoteExactSubstring": true,
+    "sourceSha256": "82d8bcb6d5a53b1521772e2d3d3e3205dc6fe17403deda889e5e869ce893c6a7"
+  }
+}
