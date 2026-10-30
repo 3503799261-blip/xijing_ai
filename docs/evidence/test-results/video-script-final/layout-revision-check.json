@@ -1,0 +1,266 @@
+{
+  "date": "2026-10-30",
+  "createdAtUtc": "2026-10-30T05:57:09.294134+00:00",
+  "result": "PASS",
+  "scope": "Document, HTML/CSS and saved-source checks only; no new runtime, browser or external API test",
+  "revision": "layout-explanation-v2",
+  "partSeconds": [
+    240,
+    150,
+    80
+  ],
+  "totalPlannedSeconds": 470,
+  "hanCharactersByPart": [
+    892,
+    411,
+    236
+  ],
+  "narrationParagraphs": 21,
+  "narrationMatches": true,
+  "timelineSegments": [
+    {
+      "start": 0,
+      "end": 15,
+      "title": "整体：统一框架与纵向阅读"
+    },
+    {
+      "start": 15,
+      "end": 45,
+      "title": "首页：大画面引入，错落网格分配注意力"
+    },
+    {
+      "start": 45,
+      "end": 65,
+      "title": "发展历史：纵向时间线与交错图文"
+    },
+    {
+      "start": 65,
+      "end": 85,
+      "title": "行当：四列总览与两列细读"
+    },
+    {
+      "start": 85,
+      "end": 105,
+      "title": "脸谱：五列图谱与四步流程"
+    },
+    {
+      "start": 105,
+      "end": 125,
+      "title": "唱腔乐器：双列比较与四列节拍"
+    },
+    {
+      "start": 125,
+      "end": 140,
+      "title": "视频：宽画面与窄解说交替"
+    },
+    {
+      "start": 140,
+      "end": 160,
+      "title": "画廊：四列瀑布流与自主停留"
+    },
+    {
+      "start": 160,
+      "end": 170,
+      "title": "持续输入框：为有目标的用户缩短路径"
+    },
+    {
+      "start": 170,
+      "end": 185,
+      "title": "工坊：主次分层，而不是铺满工具"
+    },
+    {
+      "start": 185,
+      "end": 210,
+      "title": "问答：窄会话栏与宽阅读区"
+    },
+    {
+      "start": 210,
+      "end": 235,
+      "title": "数字戏台：把最大空间留给人物与舞台"
+    },
+    {
+      "start": 235,
+      "end": 240,
+      "title": "从观察进入提问"
+    },
+    {
+      "start": 240,
+      "end": 275,
+      "title": "人的要求，如何变成DeepSeek后端代码（35秒）"
+    },
+    {
+      "start": 275,
+      "end": 305,
+      "title": "不是只接一个聊天界面：展示真实调用与引用校验（30秒）"
+    },
+    {
+      "start": 305,
+      "end": 350,
+      "title": "Neural4D：人的批准与受控异步建模（45秒）"
+    },
+    {
+      "start": 350,
+      "end": 390,
+      "title": "真实反馈如何推动AI修复和验证（40秒）"
+    },
+    {
+      "start": 390,
+      "end": 415,
+      "title": "E．应用对象与试点任务（25秒）"
+    },
+    {
+      "start": 415,
+      "end": 445,
+      "title": "F．三项已有实现支持的整合特色（30秒）"
+    },
+    {
+      "start": 445,
+      "end": 465,
+      "title": "G．商业路径与可交付的工程基础（20秒）"
+    },
+    {
+      "start": 465,
+      "end": 470,
+      "title": "结束（5秒）"
+    }
+  ],
+  "timelineContinuous": true,
+  "linksChecked": 95,
+  "missingLinks": [],
+  "cssSourceChecks": [
+    {
+      "file": "css/index.css",
+      "check": "home_12_track_grid",
+      "pass": true
+    },
+    {
+      "file": "css/roles.css",
+      "check": "roles_4_columns",
+      "pass": true
+    },
+    {
+      "file": "css/roles.css",
+      "check": "role_comparison_4_columns",
+      "pass": true
+    },
+    {
+      "file": "css/facial.css",
+      "check": "facial_5_color_columns",
+      "pass": true
+    },
+    {
+      "file": "css/facial.css",
+      "check": "facial_4_steps",
+      "pass": true
+    },
+    {
+      "file": "css/music.css",
+      "check": "music_2_compare_columns",
+      "pass": true
+    },
+    {
+      "file": "css/music.css",
+      "check": "music_4_beat_columns",
+      "pass": true
+    },
+    {
+      "file": "css/video.css",
+      "check": "video_wide_narrow_columns",
+      "pass": true
+    },
+    {
+      "file": "css/gallery.css",
+      "check": "gallery_4_css_columns",
+      "pass": true
+    },
+    {
+      "file": "css/ai-workshop-chat.css",
+      "check": "chat_narrow_history_wide_messages",
+      "pass": true
+    },
+    {
+      "file": "css/ai-workshop-stage.css",
+      "check": "stage_narrow_wide_narrow",
+      "pass": true
+    },
+    {
+      "file": "css/ai-workshop-assets.css",
+      "check": "assets_3_columns",
+      "pass": true
+    }
+  ],
+  "unchangedHistoricalCodeExcerpts": [
+    {
+      "file": "backend/app/providers/llm.py",
+      "sha256": "f46e62fa85dbde51692892c1240e483f43f63e710158aaed68d76467f24cf993"
+    },
+    {
+      "file": "backend/app/providers/llm.py",
+      "sha256": "f46e62fa85dbde51692892c1240e483f43f63e710158aaed68d76467f24cf993"
+    },
+    {
+      "file": "backend/app/services/chat.py",
+      "sha256": "2446a662e013b5ced6071d78f44d1357da62864fef9f0a9984cce22dfb775975"
+    },
+    {
+      "file": "backend/app/assets/usage.py",
+      "sha256": "fe1c0619ae1408c5f7b2b434c6163752a2c91682ba82895eccd98434277af06d"
+    },
+    {
+      "file": "backend/app/providers/neural4d.py",
+      "sha256": "9d0a89aeb8a955f7ec0cf4cb69baf5cc098e7d99c74a90930bbb148b9dfb504d"
+    },
+    {
+      "file": "js/ai-workshop/digital-stage.js",
+      "sha256": "e7edabce57b4352d5e4bbf242b4d0b1653930715337c73cd3ceecf1c4c517d57"
+    }
+  ],
+  "files": [
+    {
+      "file": "docs/reports/video-script-part1-layout.md",
+      "sha256": "ec45a75fcec61750bd7c3b4bcd186767171c1997cbe786a76b0cf83aeda20924"
+    },
+    {
+      "file": "docs/reports/video-script-final-three-parts.md",
+      "sha256": "88cc332908ee9e9836a611a19b88feb96eff1411fed8d8d3323716da68b9ce50"
+    },
+    {
+      "file": "docs/reports/video-script-final-three-parts-voice.txt",
+      "sha256": "04262711c47749d596347838ccbd20244e357316c66dd3eb5da575f6d7da8642"
+    },
+    {
+      "file": "docs/reports/video-script-part3-value.md",
+      "sha256": "788a771c884bc76bdd5efb83816c27ac5e8c525e2d39932f4d6c49e98a0a250a"
+    },
+    {
+      "file": "docs/reports/video-value-and-innovation.md",
+      "sha256": "e728b1a1153a98fc848084c60cc4d4ad9e15ab6b21a7e7342cdd077974545ee7"
+    },
+    {
+      "file": "docs/reports/video-recording-evidence-guide.md",
+      "sha256": "88bbcad219355d8aedfe7fe107ed24c1ff9f523811c50c128d9137ec0880448d"
+    },
+    {
+      "file": "docs/prompts/video-script-final/README.md",
+      "sha256": "5fe69ab3d339f3e4b450d8f8fd54c0fd6435a29a142ccfdb9b7738a1ad49eddb"
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "businessCodeChanged": false,
+  "databaseAndModelWrites": 0,
+  "actualNarrationTiming": "NOT_TESTED",
+  "newBrowserMeasurements": "NOT_TESTED; desktop columns verified from current HTML/CSS",
+  "userExperienceStudy": "NOT_TESTED; feeling and benefit descriptions are design intent",
+  "recordingProduced": false,
+  "oldCheckFile": "script-check.json remains the prior generation-time snapshot, not the current file-hash reference",
+  "executionNote": "One patch context mismatch corrected via unique paragraph prefix; no business fault.",
+  "branch": "feature/phase5-competition-delivery",
+  "headBeforeRevision": "40b69b7529fcf5d94f2ee2c046c3fafcdf02095d",
+  "secretPatternScan": {
+    "success": true,
+    "textFilesChecked": 1164,
+    "findings": [],
+    "scope": "Actual tracked/nonignored UTF-8 pattern scan; no values logged"
+  }
+}

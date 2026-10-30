@@ -4,7 +4,7 @@
 
 推荐在VS Code按Ctrl+Shift+V打开本文预览，Ctrl+B收起侧栏、Ctrl+J收起终端。录制时从A到G依次滚动，无需运行命令、填密钥或点击生成。
 
-## A．人的要求 → DeepSeek服务端实现（03:40—04:15）
+## A．人的要求 → DeepSeek服务端实现（04:00—04:35）
 
 需求要点整理：真实知识库检索、真实API、可追溯引用、密钥仅后端保存。原始完整要求：[docs/prompts/phase-02/00-original-user-request.md](../../docs/prompts/phase-02/00-original-user-request.md)；批准开发版本：[docs/prompts/phase-02/03-approved-development-v3.md](../../docs/prompts/phase-02/03-approved-development-v3.md)。这是需求摘要，不冒充逐字AI对话。
 
@@ -35,7 +35,7 @@ async with httpx.AsyncClient(timeout=self.settings.deepseek_timeout_seconds, tra
 ```
 来源：[backend/app/providers/llm.py](../../backend/app/providers/llm.py)。`limit`为服务端受控输出上限，不把它当作下方首探实际输出Token数。
 
-## B．真实首探 → 检索证据与引用校验（04:15—04:45）
+## B．真实首探 → 检索证据与引用校验（04:35—05:05）
 
 以下为**2026-10-10历史小请求**字段节选；仅证明当时连通和真实用量，不代表今天新调用，也不代表完整RAG质量评价。
 ```json
@@ -70,7 +70,7 @@ canonical_content = generated.model_dump_json()
 ```
 来源：[backend/app/services/chat.py](../../backend/app/services/chat.py)。Prompt和检索调优的真实演进见[docs/prompts/phase-02/04-development-evolution.md](../../docs/prompts/phase-02/04-development-evolution.md)，不把一次连通探测当作所有答案正确的证明。
 
-## C．人工批准 → Neural4D异步任务与安全额度（04:45—05:30）
+## C．人工批准 → Neural4D异步任务与安全额度（05:05—05:50）
 
 用户当时批准原话：
 
@@ -127,7 +127,7 @@ try:
 
 `SUBMITTED`仅是提交成功；完成由后续恢复/验收记录支持。30积分为当时第二次实际扣费，不是今日报价。第二次模型是“绛绣·戏韵”，**不是第一部分戏台里的杜丽娘、穆桂英或周瑜**；后者为用户提供素材。这里不展示内部Q版图片。
 
-## D．人的反馈 → AI修复 → 实测 → Git（05:30—06:10）
+## D．人的反馈 → AI修复 → 实测 → Git（05:50—06:30）
 
 真实用户反馈：
 
@@ -173,7 +173,7 @@ button.addEventListener('click', () => {
 
 ---
 
-## E．应用对象与现有功能基础（06:10—06:40）
+## E．应用对象与现有功能基础（06:30—06:55）
 
 | 应用对象 | 现有功能基础 | 可开展的试点任务 |
 |---|---|---|
@@ -185,7 +185,7 @@ button.addEventListener('click', () => {
 
 依据：[首页主题入口](../../index.html)、[工坊界面](../../about.html)、[问答与会话实现](frontend-productization.md)、[戏台交付记录](digital-stage-delivery.md)。
 
-## F．三项有据的整合特色（06:40—07:15）
+## F．三项有据的整合特色（06:55—07:25）
 
 | 整合特色 | 已实现的具体行为 | 代码或报告证据 |
 |---|---|---|
@@ -195,7 +195,7 @@ button.addEventListener('click', () => {
 
 **工程依据：** 人工确认、失败记录、实际测试与Git版本支持核对和持续修订。以上按本项目已实现的整合特色表述。底部导航使用本地匹配；三维人物保持静态，镜头观察不等于人物表演。
 
-## G．商业路径方案、工程基础与落地待办（07:15—07:50）
+## G．商业路径方案、工程基础与落地待办（07:25—07:50）
 
 | 商业路径（方案） | 已完成工程基础 | 正式落地待办 |
 |---|---|---|
