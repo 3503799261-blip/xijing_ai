@@ -1,0 +1,234 @@
+{
+  "clientDate": "2026-10-30",
+  "createdAtUtc": "2026-10-30T05:36:12.572444+00:00",
+  "result": "PASS",
+  "scope": "Documents and saved-source verification only; not new runtime/browser/API tests",
+  "partSeconds": [
+    220,
+    150,
+    100
+  ],
+  "totalPlannedSeconds": 470,
+  "plannedDuration": "7:50",
+  "timeSegments": [
+    {
+      "startSeconds": 0,
+      "endSeconds": 25,
+      "seconds": 25,
+      "title": "首页：先让评委看懂全站结构"
+    },
+    {
+      "startSeconds": 25,
+      "endSeconds": 40,
+      "seconds": 15,
+      "title": "发展历史：用时间组织内容"
+    },
+    {
+      "startSeconds": 40,
+      "endSeconds": 55,
+      "seconds": 15,
+      "title": "行当介绍：分类入口与图文对照"
+    },
+    {
+      "startSeconds": 55,
+      "endSeconds": 70,
+      "seconds": 15,
+      "title": "脸谱艺术：从颜色到绘制过程"
+    },
+    {
+      "startSeconds": 70,
+      "endSeconds": 85,
+      "seconds": 15,
+      "title": "唱腔乐器：比较、结构与听觉入口"
+    },
+    {
+      "startSeconds": 85,
+      "endSeconds": 95,
+      "seconds": 10,
+      "title": "视频欣赏：一段影像配一段解释"
+    },
+    {
+      "startSeconds": 95,
+      "endSeconds": 110,
+      "seconds": 15,
+      "title": "艺术画廊：图片分类浏览"
+    },
+    {
+      "startSeconds": 110,
+      "endSeconds": 125,
+      "seconds": 15,
+      "title": "全站持续输入框：直接定位内容"
+    },
+    {
+      "startSeconds": 125,
+      "endSeconds": 150,
+      "seconds": 25,
+      "title": "工坊：主要功能与次级工具布局"
+    },
+    {
+      "startSeconds": 150,
+      "endSeconds": 175,
+      "seconds": 25,
+      "title": "问答布局：左侧会话，右侧消息，底部输入"
+    },
+    {
+      "startSeconds": 175,
+      "endSeconds": 210,
+      "seconds": 35,
+      "title": "数字戏台：左分类、中场景、右人物说明"
+    },
+    {
+      "startSeconds": 210,
+      "endSeconds": 220,
+      "seconds": 10,
+      "title": "从人物观察回到问答"
+    },
+    {
+      "startSeconds": 220,
+      "endSeconds": 255,
+      "seconds": 35,
+      "title": "人的要求，如何变成DeepSeek后端代码（35秒）"
+    },
+    {
+      "startSeconds": 255,
+      "endSeconds": 285,
+      "seconds": 30,
+      "title": "不是只接一个聊天界面：展示真实调用与引用校验（30秒）"
+    },
+    {
+      "startSeconds": 285,
+      "endSeconds": 330,
+      "seconds": 45,
+      "title": "Neural4D：人的批准与受控异步建模（45秒）"
+    },
+    {
+      "startSeconds": 330,
+      "endSeconds": 370,
+      "seconds": 40,
+      "title": "真实反馈如何推动AI修复和验证（40秒）"
+    },
+    {
+      "startSeconds": 370,
+      "endSeconds": 400,
+      "seconds": 30,
+      "title": "E．应用对象与试点任务（30秒）"
+    },
+    {
+      "startSeconds": 400,
+      "endSeconds": 435,
+      "seconds": 35,
+      "title": "F．三项已有实现支持的整合特色（35秒）"
+    },
+    {
+      "startSeconds": 435,
+      "endSeconds": 465,
+      "seconds": 30,
+      "title": "G．商业路径与可交付的工程基础（30秒）"
+    },
+    {
+      "startSeconds": 465,
+      "endSeconds": 470,
+      "seconds": 5,
+      "title": "结束（5秒）"
+    }
+  ],
+  "timelineContiguous": true,
+  "hanCharactersByPart": [
+    736,
+    411,
+    315
+  ],
+  "hanCharactersTotal": 1462,
+  "narrationMatchesScript": true,
+  "localLinksChecked": 81,
+  "missingLinks": [],
+  "sourceCodeExcerpts": [
+    {
+      "file": "backend/app/providers/llm.py",
+      "sha256": "f46e62fa85dbde51692892c1240e483f43f63e710158aaed68d76467f24cf993",
+      "sameAsHistoricalExtract": true
+    },
+    {
+      "file": "backend/app/providers/llm.py",
+      "sha256": "f46e62fa85dbde51692892c1240e483f43f63e710158aaed68d76467f24cf993",
+      "sameAsHistoricalExtract": true
+    },
+    {
+      "file": "backend/app/services/chat.py",
+      "sha256": "2446a662e013b5ced6071d78f44d1357da62864fef9f0a9984cce22dfb775975",
+      "sameAsHistoricalExtract": true
+    },
+    {
+      "file": "backend/app/assets/usage.py",
+      "sha256": "fe1c0619ae1408c5f7b2b434c6163752a2c91682ba82895eccd98434277af06d",
+      "sameAsHistoricalExtract": true
+    },
+    {
+      "file": "backend/app/providers/neural4d.py",
+      "sha256": "9d0a89aeb8a955f7ec0cf4cb69baf5cc098e7d99c74a90930bbb148b9dfb504d",
+      "sameAsHistoricalExtract": true
+    },
+    {
+      "file": "js/ai-workshop/digital-stage.js",
+      "sha256": "e7edabce57b4352d5e4bbf242b4d0b1653930715337c73cd3ceecf1c4c517d57",
+      "sameAsHistoricalExtract": true
+    }
+  ],
+  "files": [
+    {
+      "file": "docs/reports/video-script-final-three-parts.md",
+      "bytes": 19739,
+      "sha256": "23224ea360a7f70c45f9c9486ef9d43dbe74e462ecd4622e2a8efcd5069ad198"
+    },
+    {
+      "file": "docs/reports/video-script-final-three-parts-voice.txt",
+      "bytes": 6443,
+      "sha256": "765176c109b99626aed1ac205147810d894ed939679af71aa2dc21d5979e00d6"
+    },
+    {
+      "file": "docs/reports/video-script-part1-layout.md",
+      "bytes": 10915,
+      "sha256": "d504a8eb4b3b8533bfb83ce32f5e6408062377536562b23daecba18a3410088a"
+    },
+    {
+      "file": "docs/reports/video-recording-evidence-guide.md",
+      "bytes": 14014,
+      "sha256": "467a9468a0b9ee878cc277924420c66e806c7417bf31e8b07a1a17d38a3b47af"
+    },
+    {
+      "file": "docs/reports/video-script-part3-value.md",
+      "bytes": 4626,
+      "sha256": "467971b3e57a721b715f8123e6701607f24e70bccbf1ca8cbd749afe9d2cea23"
+    },
+    {
+      "file": "docs/reports/video-value-and-innovation.md",
+      "bytes": 4119,
+      "sha256": "d456d46fbc842cc402f2b648163bbed4cabb6a91988bc96eff95ccc245d61a3a"
+    },
+    {
+      "file": "docs/prompts/video-script-final/README.md",
+      "bytes": 3918,
+      "sha256": "907d053d8b6dca9c4f1cc47c731e2d70ca74265afc99a9269d18d75fdc214108"
+    }
+  ],
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "businessCodeChanged": false,
+  "newBrowserTests": "NOT_TESTED; historical evidence only",
+  "actualNarrationTiming": "NOT_TESTED; user will record",
+  "recordingProduced": false,
+  "historicalDraftChecks": "Preserved generation-time snapshots; draft notices added later. Current hashes intentionally recorded separately.",
+  "executionCorrections": [
+    "Patch context order mismatch: read current content and corrected patch; no business fault.",
+    "First static check failed because its own output file did not yet exist when README links were checked; allocated output then reran all checks.",
+    "Independent review requested secondary workshop layout narration; added creation/Agent/archive/asset layouts without showing restricted asset thumbnails."
+  ],
+  "gitBranch": "feature/phase5-competition-delivery",
+  "headBeforeDocumentationCommits": "4bf16a65aee148bac145a32d5d707f8173fdb3ac",
+  "secretPatternScan": {
+    "success": true,
+    "textFilesChecked": 1163,
+    "findings": [],
+    "scope": "Actual current tracked and nonignored UTF-8 pattern scan; no values logged"
+  }
+}
