@@ -30,11 +30,12 @@ function fixture() {
 const flush = async () => { for (let index = 0; index < 8; index++) await new Promise((resolve) => setImmediate(resolve)); };
 function ui(body = fixture(), { fail = false, held = null } = {}) {
   reset(); const names = ['host', 'group', 'group-description', 'characters', 'viewer-title', 'state', 'status', 'error', 'refresh', 'reload', 'zoom-in', 'zoom-out', 'reset', 'character-name', 'character-group', 'character-description', 'ask', 'question-note', 'citations'];
+  globalThis.fetch = async (url, options = {}) => { calls.push({ url, options }); throw new Error('Unexpected fetch from isolated UI test'); };
   const elements = Object.fromEntries(names.map((name) => [name, new Element()]));
   const root = { querySelector: (selector) => elements[selector.replace('#ai-workshop-stage-', '')] || null };
-  let loads = 0, viewerLoads = 0, callbacks; const scenes = [], selections = [], visible = [], questions = [], zoom = []; let resets = 0;
-  const controller = initializeDigitalStage({ root, onAskQuestion: (question) => questions.push(question), catalogLoader: async () => { loads++; if (fail) throw new Error('明确的离线服务不可用'); return validateStageCatalog(body); }, viewerLoader: async () => ({ initializeStageViewer(options) { viewerLoads++; callbacks = options; return { setVisible(value) { visible.push(value); }, selectCharacter(id) { selections.push(id); }, zoom(value) { zoom.push(value); }, reset() { resets++; }, async loadScene(options) { scenes.push(options); callbacks.onState('loading', '离线渲染器替身加载'); if (held) await held; callbacks.onState('ready', '离线渲染器替身就绪'); } }; } }) });
-  return { controller, elements, scenes, selections, visible, questions, zoom, get loads() { return loads; }, get viewerLoads() { return viewerLoads; }, get callbacks() { return callbacks; }, get resets() { return resets; } };
+  let loads = 0, viewerLoads = 0, callbacks; const scenes = [], selections = [], focuses = [], visible = [], questions = [], zoom = []; let resets = 0;
+  const controller = initializeDigitalStage({ root, onAskQuestion: (question) => questions.push(question), catalogLoader: async () => { loads++; if (fail) throw new Error('明确的离线服务不可用'); return validateStageCatalog(body); }, viewerLoader: async () => ({ initializeStageViewer(options) { viewerLoads++; callbacks = options; return { setVisible(value) { visible.push(value); }, selectCharacter(id) { selections.push(id); }, focusCharacter(id) { focuses.push(id); }, zoom(value) { zoom.push(value); }, reset() { resets++; }, async loadScene(options) { scenes.push(options); callbacks.onState('loading', '离线渲染器替身加载'); if (held) await held; callbacks.onState('ready', '离线渲染器替身就绪'); } }; } }) });
+  return { controller, elements, scenes, selections, focuses, visible, questions, zoom, get loads() { return loads; }, get viewerLoads() { return viewerLoads; }, get callbacks() { return callbacks; }, get resets() { return resets; } };
 }
 try {
   reset();
@@ -56,6 +57,39 @@ try {
   await test('hidden stage is lazy and performs no catalog or renderer work', async () => { const f = ui(); await f.controller.setVisible(false); assert.equal(f.loads, 0); assert.equal(f.viewerLoads, 0); });
   await test('first visible stage loads one real category at a time and shows source details', async () => { const f = ui(); await f.controller.setVisible(true); assert.equal(f.loads, 1); assert.equal(f.viewerLoads, 1); assert.equal(f.scenes.length, 1); assert.deepEqual(f.scenes[0].characters.map((item) => item.id), ['actor-a']); assert.equal(f.elements['character-name'].textContent, '离线人物甲'); assert.equal(f.elements.host.dataset.stageState, 'ready'); assert.equal(f.elements.citations.children.length, 1); });
   await test('group switching reloads the appropriate character with no identity mixing', async () => { const f = ui(); await f.controller.setVisible(true); f.elements.group.value = 'group-b'; f.elements.group.fire('change'); await flush(); assert.equal(f.scenes.length, 2); assert.equal(f.scenes[1].characters[0].id, 'actor-b'); assert.equal(f.elements['character-name'].textContent, '离线人物乙'); assert.equal(f.elements.host.dataset.stageState, 'ready'); });
+  await test('an explicit ready character card selects and focuses that character without network requests or scene reloads', async () => {
+    const body = fixture(); body.characters[1].groupId = 'group-a';
+    const f = ui(body); await f.controller.setVisible(true);
+    const cards = f.elements.characters.querySelectorAll('button');
+    assert.equal(cards[0].attributes['aria-pressed'], 'true');
+    cards[1].fire('click');
+    assert.equal(f.elements['character-name'].textContent, '离线人物乙');
+    assert.equal(cards[0].attributes['aria-pressed'], 'false');
+    assert.equal(cards[1].attributes['aria-pressed'], 'true');
+    assert.equal(f.selections.at(-1), 'actor-b');
+    assert.deepEqual(f.focuses, ['actor-b']);
+    assert.equal(f.loads, 1); assert.equal(f.scenes.length, 1); assert.equal(calls.length, 0);
+  });
+  await test('initial loading, automatic category selection and a manual scene retry preserve the overview without focusing', async () => {
+    const f = ui(); await f.controller.setVisible(true);
+    assert.deepEqual(f.focuses, []);
+    f.elements.group.value = 'group-b'; f.elements.group.fire('change'); await flush();
+    assert.equal(f.elements['character-name'].textContent, '离线人物乙');
+    assert.deepEqual(f.focuses, []);
+    f.callbacks.onState('error', '明确的离线渲染错误'); f.elements.reload.fire('click'); await flush();
+    assert.equal(f.scenes.length, 3); assert.equal(f.elements.host.dataset.stageState, 'ready');
+    assert.deepEqual(f.focuses, []); assert.equal(calls.length, 0);
+  });
+  await test('a character card in Error updates its saved details without focusing the renderer or sending requests', async () => {
+    const body = fixture(); body.characters[1].groupId = 'group-a';
+    const f = ui(body); await f.controller.setVisible(true);
+    f.callbacks.onState('error', '明确的离线渲染错误');
+    const card = f.elements.characters.querySelectorAll('button')[1]; assert.equal(card.disabled, false); card.fire('click');
+    assert.equal(f.elements['character-name'].textContent, '离线人物乙');
+    assert.equal(card.attributes['aria-pressed'], 'true');
+    assert.equal(f.elements.host.dataset.stageState, 'error');
+    assert.deepEqual(f.focuses, []); assert.equal(f.scenes.length, 1); assert.equal(calls.length, 0);
+  });
   await test('renderer character picking updates details without a new load or API request', async () => { const f = ui(); await f.controller.setVisible(true); const count = f.scenes.length; f.callbacks.onCharacterPick('actor-a'); assert.equal(f.elements['character-name'].textContent, '离线人物甲'); assert.equal(f.scenes.length, count); });
   await test('ask action hands off a question only and does not create or submit a conversation', async () => { const f = ui(); await f.controller.setVisible(true); f.elements.ask.fire('click'); assert.deepEqual(f.questions, ['离线人物甲的问题']); assert.equal(f.loads, 1); assert.equal(f.scenes.length, 1); });
   await test('zoom and reset use the existing renderer without model creation', async () => { const f = ui(); await f.controller.setVisible(true); f.elements['zoom-in'].fire('click'); f.elements['zoom-out'].fire('click'); f.elements.reset.fire('click'); assert.deepEqual(f.zoom, [0.8, 1.25]); assert.equal(f.resets, 1); assert.equal(f.scenes.length, 1); });

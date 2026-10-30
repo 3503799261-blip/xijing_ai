@@ -263,7 +263,7 @@ function initializeWorkshop() {
     if (assetFeedback) { assetFeedback.textContent = '数字资产界面暂时无法初始化，请刷新后重试。京剧问答和Agent工作台仍可使用。'; assetFeedback.classList.add('ai-workshop-feedback-error'); }
   });
   // Digital-stage reads and render failures never start a chat, Agent or model task.
-  void import('./digital-stage.js?v=stage-1').then(({ initializeDigitalStage }) => {
+  void import('./digital-stage.js?v=stage-pick-2').then(({ initializeDigitalStage }) => {
     stageController = initializeDigitalStage({ root, onAskQuestion(question) {
       prefillQuestion(question);
     } });

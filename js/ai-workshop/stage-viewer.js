@@ -46,6 +46,8 @@ export function initializeStageViewer({ host, onState = () => {}, onCharacterPic
   canvas.className = 'ai-workshop-stage-canvas'; canvas.tabIndex = 0;
   canvas.setAttribute('aria-label', '数字戏台：拖拽旋转，滚轮或双指缩放，轻点人物查看介绍');
   host.append(canvas);
+  const hotspots = document.createElement('div'); hotspots.className = 'ai-workshop-stage-hotspots';
+  hotspots.setAttribute('aria-label', '人物近看入口'); hotspots.hidden = true; host.append(hotspots);
   const scene = new THREE.Scene(); scene.background = new THREE.Color('#eee4d3');
   const camera = new THREE.PerspectiveCamera(40, 1, 0.02, 300);
   const controls = new OrbitControls(camera, canvas);
@@ -63,13 +65,38 @@ export function initializeStageViewer({ host, onState = () => {}, onCharacterPic
   const pointer = new THREE.Vector2();
   const loader = new GLTFLoader();
   const objects = new Map();
+  const hotspotButtons = new Map();
   let stageObject = null, stageKey = '', stagePending = null, requestGeneration = 0, selected = null;
   let visible = true, disposed = false, state = 'idle', interacting = false;
   let frame = null, tracker = createOrbitTracker(), metadata = null, pointerDown = null, pickCount = 0;
+  const activePointers = new Set();
   host.dataset.pickCount = '0';
   const activeFetches = new Set();
-  const setState = (next, text) => { state = next; host.dataset.stageState = next; onState(next, text); };
-  const render = () => { if (!disposed && visible) renderer.render(scene, camera); };
+  const setState = (next, text) => { state = next; if (next !== 'ready') pointerDown = null; host.dataset.stageState = next; hotspots.hidden = next !== 'ready'; onState(next, text); };
+  const render = () => { if (!disposed && visible) { renderer.render(scene, camera); positionHotspots(); } };
+  function positionHotspots() {
+    for (const [id, button] of hotspotButtons) {
+      const object = objects.get(id); if (!object) { button.hidden = true; continue; }
+      const bounds = new THREE.Box3().setFromObject(object), point = bounds.getCenter(new THREE.Vector3());
+      point.y = bounds.max.y + 0.1; point.project(camera);
+      button.hidden = point.z < -1 || point.z > 1 || Math.abs(point.x) > 1 || Math.abs(point.y) > 1;
+      button.style.left = `${Math.max(65, Math.min(host.clientWidth - 65, (point.x + 1) / 2 * host.clientWidth))}px`;
+      button.style.top = `${Math.max(8, (1 - point.y) / 2 * host.clientHeight - 42)}px`;
+    }
+  }
+  function syncHotspots() {
+    for (const [id, button] of hotspotButtons) if (!objects.has(id)) { button.remove(); hotspotButtons.delete(id); }
+    for (const [id, object] of objects) {
+      if (hotspotButtons.has(id)) continue;
+      const button = document.createElement('button'); button.type = 'button';
+      button.className = 'ai-workshop-stage-person-hotspot'; button.dataset.stagePerson = id;
+      button.textContent = `${object.userData.characterName} · 近看`;
+      button.setAttribute('aria-label', `近看${object.userData.characterName}`);
+      // This is an explicit accessible selector, not a geometry/raycast hit.
+      button.addEventListener('click', () => { if (state === 'ready') activateCharacter(id, 'name-button'); });
+      hotspotButtons.set(id, button); hotspots.append(button);
+    }
+  }
   function resize() {
     if (disposed) return;
     const width = Math.max(1, host.clientWidth), height = Math.max(1, host.clientHeight);
@@ -117,7 +144,7 @@ export function initializeStageViewer({ host, onState = () => {}, onCharacterPic
     object.position.set(-center.x, -initial.min.y, -center.z);
     const wrapper = new THREE.Group(); wrapper.add(object); wrapper.scale.setScalar(scale);
     wrapper.rotation.y = entry.rotationY || 0; wrapper.position.fromArray(entry.position || [0, floor, 1.6]);
-    wrapper.userData.characterId = entry.id; wrapper.userData.sourceSha = entry.sha256; wrapper.userData.defaultScale = scale;
+    wrapper.userData.characterId = entry.id; wrapper.userData.characterName = entry.name; wrapper.userData.sourceSha = entry.sha256; wrapper.userData.defaultScale = scale;
     object.traverse((node) => { if (node.isMesh) node.userData.characterId = entry.id; });
     const ring = new THREE.Mesh(new THREE.RingGeometry(0.56, 0.61, 64), new THREE.MeshBasicMaterial({ color: '#bb8b34', side: THREE.DoubleSide, transparent: true, opacity: 0.9, depthWrite: false }));
     ring.rotation.x = -Math.PI / 2; ring.position.set(0, 0.012 / scale, 0); ring.name = 'selection-ring'; ring.visible = false; wrapper.add(ring);
@@ -127,6 +154,8 @@ export function initializeStageViewer({ host, onState = () => {}, onCharacterPic
     const target = metadata?.cameraTarget || metadata?.camera?.target || [0, 3.1, 0];
     const position = metadata?.cameraPosition || metadata?.camera?.position || [11.5, 7.5, 17.5];
     camera.position.fromArray(position); controls.target.fromArray(target); controls.update(); render();
+    host.dataset.focusedCharacter = '';
+    if (state === 'ready') setState('ready', '戏台已就绪 · 点击人物、姓名或左侧卡片近看');
   }
   function selectCharacter(id) {
     if (!objects.has(id)) return false;
@@ -139,6 +168,13 @@ export function initializeStageViewer({ host, onState = () => {}, onCharacterPic
     if (!object || state !== 'ready') return;
     const box = new THREE.Box3().setFromObject(object), center = box.getCenter(new THREE.Vector3());
     controls.target.copy(center); camera.position.copy(center).add(new THREE.Vector3(1.3, 0.8, 5.2)); controls.update(); render();
+    host.dataset.focusedCharacter = id;
+    setState('ready', `近看${object.userData.characterName} · 拖拽观察，重置视角返回戏台`);
+  }
+  function activateCharacter(id, source) {
+    if (state !== 'ready' || !visible || !objects.has(id)) return;
+    host.dataset.lastActivationSource = source;
+    selectCharacter(id); focusCharacter(id); onCharacterPick(id);
   }
   async function loadScene({ stage, characters }) {
     const ticket = ++requestGeneration; metadata = stage;
@@ -171,9 +207,10 @@ export function initializeStageViewer({ host, onState = () => {}, onCharacterPic
       for (const [id, object] of objects) if (next.get(id) !== object) { scene.remove(object); free(object); }
       objects.clear(); for (const [id, object] of next) { objects.set(id, object); scene.add(object); }
       created.clear();
+      syncHotspots();
       tracker = createOrbitTracker(); host.dataset.continuousDegrees = '0'; reset(); resize();
       host.dataset.readyCharacters = JSON.stringify([...objects.keys()]);
-      setState('ready', '戏台已就绪 · 拖拽环顾，轻点人物'); render(); return true;
+      setState('ready', '戏台已就绪 · 点击人物、姓名或左侧卡片近看'); render(); return true;
     } catch (error) {
       releaseCreated();
       if (ticket !== requestGeneration || disposed) return false;
@@ -182,29 +219,44 @@ export function initializeStageViewer({ host, onState = () => {}, onCharacterPic
       return false;
     }
   }
-  canvas.addEventListener('pointerdown', (event) => { pointerDown = { x: event.clientX, y: event.clientY, id: event.pointerId }; });
-  canvas.addEventListener('pointerup', (event) => {
-    const down = pointerDown; pointerDown = null;
-    if (state !== 'ready' || !down || down.id !== event.pointerId || Math.hypot(event.clientX - down.x, event.clientY - down.y) > 7) return;
-    const box = canvas.getBoundingClientRect(); pointer.set((event.clientX - box.left) / box.width * 2 - 1, -(event.clientY - box.top) / box.height * 2 + 1);
+  function characterAt(x, y) {
+    if (state !== 'ready') return null;
+    camera.updateMatrixWorld();
+    const box = canvas.getBoundingClientRect(); pointer.set((x - box.left) / box.width * 2 - 1, -(y - box.top) / box.height * 2 + 1);
     raycaster.setFromCamera(pointer, camera);
     const meshes = []; for (const object of objects.values()) object.traverse((node) => { if (node.isMesh && node.userData.characterId) meshes.push(node); });
     const hit = raycaster.intersectObjects(meshes, false)[0];
     const obstruction = hit && stageObject ? raycaster.intersectObject(stageObject, true)[0] : null;
-    if (hit && (!obstruction || obstruction.distance >= hit.distance - 0.025)) { const id = hit.object.userData.characterId; pickCount++; host.dataset.pickCount = String(pickCount); host.dataset.pickedCharacter = id; selectCharacter(id); focusCharacter(id); onCharacterPick(id); }
+    return hit && (!obstruction || obstruction.distance >= hit.distance - 0.025) ? hit.object.userData.characterId : null;
+  }
+  canvas.addEventListener('pointerdown', (event) => {
+    activePointers.add(event.pointerId);
+    if (activePointers.size !== 1 || event.button !== 0) { pointerDown = null; return; }
+    // Resolve before OrbitControls moves the camera during a small finger jitter.
+    pointerDown = { x: event.clientX, y: event.clientY, id: event.pointerId, limit: event.pointerType === 'touch' ? 12 : 7, hit: characterAt(event.clientX, event.clientY) };
   });
-  canvas.addEventListener('pointercancel', () => { pointerDown = null; });
+  canvas.addEventListener('pointermove', (event) => {
+    if (pointerDown?.id === event.pointerId && Math.hypot(event.clientX - pointerDown.x, event.clientY - pointerDown.y) > pointerDown.limit) pointerDown = null;
+  });
+  canvas.addEventListener('pointerup', (event) => {
+    const down = pointerDown; pointerDown = null; activePointers.delete(event.pointerId);
+    if (state !== 'ready' || !down?.hit || down.id !== event.pointerId || activePointers.size || Math.hypot(event.clientX - down.x, event.clientY - down.y) > down.limit) return;
+    pickCount++; host.dataset.pickCount = String(pickCount); host.dataset.pickedCharacter = down.hit;
+    activateCharacter(down.hit, 'geometry');
+  });
+  canvas.addEventListener('pointercancel', (event) => { pointerDown = null; activePointers.delete(event.pointerId); });
+  canvas.addEventListener('lostpointercapture', (event) => { pointerDown = null; activePointers.delete(event.pointerId); });
   canvas.addEventListener('webglcontextlost', (event) => { event.preventDefault(); setState('error', '3D显示连接已中断，请刷新页面恢复；不会重新生成模型。'); });
   const api = {
     loadScene, selectCharacter, focusCharacter, reset,
     zoom(factor) { if (!Number.isFinite(factor) || factor <= 0 || state !== 'ready') return; const vector = camera.position.clone().sub(controls.target); vector.setLength(THREE.MathUtils.clamp(vector.length() * factor, controls.minDistance, controls.maxDistance)); camera.position.copy(controls.target).add(vector); controls.update(); render(); },
-    setVisible(value) { visible = Boolean(value); if (visible) { cancelAnimationFrame(frame); frame = requestAnimationFrame(resize); } },
+    setVisible(value) { visible = Boolean(value); if (!visible) { pointerDown = null; activePointers.clear(); } if (visible) { cancelAnimationFrame(frame); frame = requestAnimationFrame(resize); } },
     snapshot() {
       const rect = canvas.getBoundingClientRect();
       return { state, selected, pickCount, readyCharacters: [...objects.keys()], camera: camera.position.toArray(), target: controls.target.toArray(), distance: controls.getDistance(), orbit: tracker.snapshot(), rendererTriangles: renderer.info.render.triangles,
         characterPoints: [...objects.entries()].map(([id, object]) => { const point = new THREE.Box3().setFromObject(object).getCenter(new THREE.Vector3()).project(camera); return { id, x: rect.left + (point.x + 1) / 2 * rect.width, y: rect.top + (1 - point.y) / 2 * rect.height }; }) };
     },
-    dispose() { disposed = true; requestGeneration++; observer.disconnect(); controls.dispose(); for (const value of activeFetches) value.abort(); for (const value of objects.values()) free(value); free(stageObject); free(ground); renderer.dispose(); canvas.remove(); cancelAnimationFrame(frame); },
+    dispose() { disposed = true; requestGeneration++; observer.disconnect(); controls.dispose(); for (const value of activeFetches) value.abort(); for (const value of objects.values()) free(value); free(stageObject); free(ground); renderer.dispose(); canvas.remove(); hotspots.remove(); hotspotButtons.clear(); cancelAnimationFrame(frame); },
   };
   host.stageViewer = api;
   resize(); return api;

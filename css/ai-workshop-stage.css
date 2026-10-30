@@ -30,6 +30,10 @@
 .ai-workshop-stage-state[data-state="error"] { color: var(--red, #8d1820); border-color: #cfa79a; }
 .ai-workshop-stage-host { position: relative; width: 100%; height: clamp(480px, 62dvh, 740px); margin-top: 16px; overflow: hidden; background: #e9dfce; border: 1px solid #e1d1b8; border-radius: 5px; outline-offset: 3px; }
 .ai-workshop-stage-host canvas { display: block; width: 100%; height: 100%; }
+.ai-workshop-stage-hotspots { position: absolute; inset: 0; pointer-events: none; }
+.ai-workshop-stage-hotspots[hidden], .ai-workshop-stage-person-hotspot[hidden] { display: none; }
+.ai-workshop-stage-person-hotspot { position: absolute; transform: translateX(-50%); min-height: 40px; padding: 7px 13px; border: 1px solid #b78c48; border-radius: 6px; background: #fff8e9; color: var(--red, #8d1820); font: inherit; font-size: .84rem; white-space: nowrap; pointer-events: auto; cursor: pointer; }
+.ai-workshop-stage-person-hotspot:hover, .ai-workshop-stage-person-hotspot:focus-visible { background: #f1e2c4; outline: 2px solid #a55d35; outline-offset: 2px; }
 .ai-workshop-stage-host[data-stage-state="loading"]::after, .ai-workshop-stage-host[data-stage-state="error"]::after { content: "正在加载真实3D场景……"; position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; color: var(--muted, #705d57); text-align: center; pointer-events: none; }
 .ai-workshop-stage-host[data-stage-state="error"]::after { content: "场景暂未加载，请在下方手动重试。"; }
 .ai-workshop-stage-host[data-stage-state="loading"] canvas, .ai-workshop-stage-host[data-stage-state="error"] canvas { visibility: hidden; }

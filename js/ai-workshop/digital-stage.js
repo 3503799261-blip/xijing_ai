@@ -71,7 +71,7 @@ export async function loadStageCatalog() {
 
 /** UI and renderer are isolated from chat and the existing asset-creation path. */
 export function initializeDigitalStage({ root, onAskQuestion, catalogLoader = loadStageCatalog,
-  viewerLoader = () => import('./stage-viewer.js?v=stage-1') }) {
+  viewerLoader = () => import('./stage-viewer.js?v=stage-pick-2') }) {
   const byId = (name) => root.querySelector(`#ai-workshop-stage-${name}`);
   const host = byId('host');
   if (!host) return null;
@@ -126,7 +126,11 @@ export function initializeDigitalStage({ root, onAskQuestion, catalogLoader = lo
       button.setAttribute('aria-pressed', String(selectedId === character.id));
       const copy = node('span', ''); copy.append(node('strong', '', character.name), node('small', '', character.available ? '已保存的3D人物' : '模型资源暂不可用'));
       button.append(node('span', '', character.name.slice(0, 1)), copy);
-      button.addEventListener('click', () => { showCharacter(character.id); if (!character.available) renderState('error', '这位人物的本地模型暂不可用，请恢复对应已有文件后重新读取。'); });
+      button.addEventListener('click', () => {
+        showCharacter(character.id);
+        if (state === 'ready' && character.available) renderer?.focusCharacter(character.id);
+        if (!character.available) renderState('error', '这位人物的本地模型暂不可用，请恢复对应已有文件后重新读取。');
+      });
       return button;
     }));
     if (!characters.length) elements.characters.append(node('p', 'ai-workshop-stage-muted', '此分类暂无已登记人物。'));
