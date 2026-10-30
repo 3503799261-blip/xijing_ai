@@ -1,0 +1,35 @@
+{
+  "clientDate": "2026-10-30",
+  "scope": "Written script and source/UI text check only; no recording or rehearsal",
+  "plannedSegmentsSeconds": [
+    25,
+    35,
+    75,
+    90,
+    40,
+    35
+  ],
+  "plannedTotalSeconds": 300,
+  "narrationHanCharacters": 948,
+  "narrationBlocks": 15,
+  "realDurationMeasured": false,
+  "mp4Produced": false,
+  "screenshotRequirements": {
+    "duration": "5-8 minutes",
+    "format": "MP4",
+    "minimumResolution": "1080p",
+    "language": "Mandarin",
+    "content": [
+      "project introduction",
+      "core functionality",
+      "AI highlights"
+    ]
+  },
+  "paidApiCalls": 0,
+  "neural4dCalls": 0,
+  "scriptSha256": "58a5901159f7d7fe4ee037789a2027dc2f21a5e0671b2eee501d4796b05ba4c7",
+  "narrationSha256": "58e205eebdc95814fde8142a40a1d5885da0c42ddb5a71c5f0b110f6dbc4ad6d",
+  "localScreenshotArchived": true,
+  "screenshotSha256": "c9aa523b45b38735e8502698ce4f051d5ca4a8c8e73ac5f6e9e6f2fc28d37dd2",
+  "independentSourceReview": "Buttons, routes, genre boundary and timing reviewed against current source; no hard factual errors found; no rehearsal performed."
+}
